@@ -53,7 +53,10 @@ You can adjust puppet-lint's configuration from within the Rakefile to disable a
 Puppet lint makes it easy to check your manifests against the common conventions for good Puppet code. The time you will save maintaining code is worth the effort of checking syntax and style as you work.  
 
 ### slide 15
-To complete this course, work through any exercises that are found immediately below this video, and take the quiz.
+To practice using puppet lint, click the Try It out launch button to access a virtual testing environment, Then you can complete the exercises that appear on this courses page. And then check your knowledge by completing the short quiz. There is also a link on the page to additional Puppet resources.
+
+### slide 16
+Thank you for completing this Puppet Labs Workshop course.
 
 
 ## Video
