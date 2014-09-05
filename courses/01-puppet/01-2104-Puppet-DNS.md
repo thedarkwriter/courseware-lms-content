@@ -61,7 +61,7 @@ Once resolve.conf is in place, the first thing you need to do is add the resolve
 
 The manual way to do this is to add the resolver class to your agents individually.
 
-The automated way to do this is to add resolver to the default node group, or create a new node group for this class).
+The automated way to do this is to add resolver to the default node group, or create a new node group for this class.
 
 Both of these methods require that the resolver class be added to the console, which can be done from the Add Classes panel. This is as simple as searching for the class by name, selecting the resolver class, and clicking “add classes”.
 
@@ -90,6 +90,8 @@ Now imagine a scenario where a member of your team changes the contents of /etc/
 
 The simple solution to this is to open the Control Puppet tab and click the runonce action. This will bring the node back to the desired state.
 
+To verify that Puppet has enforced the desired state, navigate to /etc/resolv.conf and see that the nameserver IP address is as specified in the Console. 
+
 
 ## Video ##
 
@@ -113,8 +115,8 @@ There are no exercises for this course.
 	b. **NTP::Install
 	c. **NTP::Config
 	d. NTP::Deploy
-4. True or False. The git get command will pull a copy of the master repository to your local workstation. **False**
-5. True or False. Puppet code is human-readable. **True**
+4. True or False. The NTP class can restrict access to the NTP server. **True**
+5. True or False. NTP can only be administrated at the agent level. **False**
 
 ## References ##
 * [Modules and Manifests](Modules and Manifests)
