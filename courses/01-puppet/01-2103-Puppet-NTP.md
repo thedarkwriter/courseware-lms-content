@@ -5,7 +5,7 @@ Your entire datacenter, from the network to the applications, depends on accurat
 
 
 ###Slide 2
-Using this guide, you will be given a conceptual overview of how to:
+In this lesson, we will give you a conceptual overview of how to:
 
 *use the PE console to install the NTP module 
 *use the PE console to  add classes from the NTP module to your agent 
