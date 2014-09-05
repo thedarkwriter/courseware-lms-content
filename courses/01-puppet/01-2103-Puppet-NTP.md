@@ -7,16 +7,16 @@ Your entire datacenter, from the network to the applications, depends on accurat
 ###Slide 2
 In this lesson, we will give you a conceptual overview of how to:
 
-*use the PE console to install the NTP module 
-*use the PE console to  add classes from the NTP module to your agent 
-*use the PE console event inspector to view changes made by the main NTP class
-*use the PE console to edit parameters of the main NTP class
+*use the Puppet Enterprise console to install the NTP module 
+*use the Puppet Enterprise console to  add classes from the NTP module to your agent 
+*use the Puppet Enterprise console event inspector to view changes made by the main NTP class
+*use the Puppet Enterprise console to edit parameters of the main NTP class
 
 
 ###Slide 3
 The Puppet Labs NTP module is part of the Puppet-supported modules program. These modules are supported, tested, and maintained by Puppet Labs. You can learn more about the Puppet Labs NTP module by visiting the Puppet Forge. 
 
-Being a module on the Forge, NTP can be installed by a simple command from the PE Master.
+Being a module on the Forge, NTP can be installed by a simple command from the Puppet Enterprise Master.
 
 
 ###Slide 4
@@ -48,7 +48,7 @@ To install the NTP classes, you only need to add the main class to the Puppet Ma
 
 
 ###Slide 8
-The PE console event inspector lets you view and research changes and other events. For example, after applying the `ntp` class, you can use event inspector to confirm that changes (or "events") were indeed made to your infrastructure. 
+The Puppet Enterprise console event inspector lets you view and research changes and other events. For example, after applying the `ntp` class, you can use event inspector to confirm that changes (or "events") were indeed made to your infrastructure. 
 
 In this image, you can see that one event, a successful change, has been recorded for Nodes: with events. 
 
