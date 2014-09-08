@@ -76,11 +76,11 @@ WARNING: ensure found on line but it's not the first attribute on line 40
 
 Edit the manifest to correct these issues:
 
-`vim ntplint/manifests/init.pp`
+`vim /etc/puppetlabs/puppet/modules/ntplint/manifests/init.pp`
 
 Run puppet-lint again to see the result:
 
-`puppet-lint ntplint/manifests/init.pp`
+`puppet-lint /etc/puppetlabs/puppet/modules/ntplint/manifests/init.pp`
 
 Continue editing and checking until there are no remaining warnings. 
 
