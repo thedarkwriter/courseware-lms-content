@@ -20,17 +20,17 @@ Because the NTP module is on the Puppet Forge, you can easily install it with a 
 
 
 ###Slide 4
-Before digging into how to install NTP, it might be valuable to see the Puppet code that's under the hood.
+Before digging into how to install NTP, it might be valuable to see the Puppet code itself.
 
 ###Slide 5
 Puppet code is written in short strings of human-readable language. This is a snippet of puppet code that defines the NTP class and its resources. You can see here that very little code is required to perform this critical task of configuring and deploying NTP. 
 
 In this particular code snippet, the keys are defined as follows:
 
-servers selects the servers to use for ntp peers.
-restrict sets the which servers are subject to the standard NTP restriction
-service_manage selects whether Puppet should manage the service.
-config_template determines which template Puppet should use for the ntp configuration.
+Servers selects the servers to use for ntp peers
+Restrict sets the which servers are able to connect to the NTP server
+Service_manage selects whether Puppet should manage the service
+Config_template determines which template Puppet should use for the ntp configuration.
 
 
 ###Slide 6
