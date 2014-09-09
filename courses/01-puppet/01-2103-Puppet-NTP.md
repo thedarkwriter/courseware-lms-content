@@ -1,22 +1,22 @@
 # Puppet NTP
 
 ###Slide 1
-Your entire datacenter, from the network to the applications, depends on accurate time for many different things, such as security services, certificate validation, and file sharing across nodes.
+Your entire datacenter, from the network to the applications, depends on consistent time for many different functions, such as security services, certificate validation, and file sharing across nodes.
 
 
 ###Slide 2
-In this lesson, we will give you a conceptual overview of how to:
+In this lesson, we give you an overview of how to use Puppet Enterprise to:
 
-*use the Puppet Enterprise console to install the NTP module 
-*use the Puppet Enterprise console to  add classes from the NTP module to your agent 
-*use the Puppet Enterprise console event inspector to view changes made by the main NTP class
-*use the Puppet Enterprise console to edit parameters of the main NTP class
+*to install the NTP module 
+*add classes from the NTP module to your agent 
+*view changes made by the main NTP class
+*edit parameters of the main NTP class
 
 
 ###Slide 3
-The Puppet Labs NTP module is part of the Puppet-supported modules program. These modules are supported, tested, and maintained by Puppet Labs. You can learn more about the Puppet Labs NTP module by visiting the Puppet Forge. 
+The Puppet Labs NTP module is a Puppet-supported module. These modules are supported, tested, and maintained by Puppet Labs. 
 
-Being a module on the Forge, NTP can be installed by a simple command from the Puppet Enterprise Master.
+Because the NTP module is on the Puppet Forge, you can easily install it with a simple command from the Puppet Enterprise Master.
 
 
 ###Slide 4
@@ -64,21 +64,21 @@ These changes can be viewed in the Summary pane.
 
 
 ###Slide 10
-You can drill down all the way to the exact piece of puppet code responsible for generating the event, as is called out here by the highlight box. 
+You can drill down all the way to the exact line of puppet code responsible for generating the event, as is called out here by the highlight box. 
 
-If there ihad been a problem applying this class, the Event Inspector would tell you exactly which piece of code you need to fix. In this of a successful install, event inspector simply lets you confirm that PE is now managing NTP.
+If you have a problem applying this class, the Event Inspector will tell you exactly which line of code you need to fix. In this of a successful install, event inspector will simply confirm that Puppet Enterprise is now managing NTP.
 
-In the upper right corner of the detail pane is a link to a run a report which contains information about the puppet run that made the change, including logs and metrics about the run. 
+To run a report which contains information about the puppet run that made the change, including logs and metrics about the run, click the link in the upper right corner of the detail pain. 
 
-For more information about using the PE console event inspector, check out the event inspector docs. 
+For more information about using the Puppet Enterprise console event inspector, check out the event inspector docs. 
 
 
 ###Slide 11
-With Puppet Enterprise you can edit or add class parameters directly in the PE console without needing to edit the module code directly. 
+You can edit or add class parameters in the PE console, largely eliminating the need to edit code directly in the module. 
 
 The NTP module, by default, uses public NTP servers. But what if your infrastructure runs an internal pool of NTP servers? 
 
-Changing the server parameter of the `ntp` class can be accomplished in only a few steps using the PE console. The servers field is highly visible and easility editable.
+You can use the Puppet Enterprise console to change the server parameter of the `ntp` class in only a few steps. The servers field is highly visible and easility editable.
 
 Remember to use the event inspector to be sure the changes were correctly applied to your nodes!
 
