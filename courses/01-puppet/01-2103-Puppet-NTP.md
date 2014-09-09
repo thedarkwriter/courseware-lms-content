@@ -28,7 +28,7 @@ Puppet code is written in short strings of human-readable language. This is a sn
 In this particular code snippet, the keys are defined as follows:
 
 Servers selects the servers to use for ntp peers
-Restrict sets the which servers are able to connect to the NTP server
+Restrict sets which servers are able to connect to the NTP server
 Service_manage selects whether Puppet should manage the service
 Config_template determines which template Puppet should use for the ntp configuration.
 
