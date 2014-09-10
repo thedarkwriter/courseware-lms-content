@@ -4,7 +4,7 @@ The exec resource can prove very useful in Puppet Manifests, allowing the writer
 
 This short course explains how to apply the exec resource appropriately, and how to ensure that the utilisation of this resource maintains idempotency of your containing Puppet manifests.  We recommend that you have already completed the Puppet Resources LMS module before commencing this course as the content is aimed at an intermediate level of Puppet knowledge.
 
-## Slide Content
+## Slide [1] Idempotency
 
 Idempotency refresher.
 [show idempotency explanation graphic]
@@ -16,7 +16,7 @@ Idempotency is...
 Puppet by nature is idempotent, however if used incorrectly, the exec resource can break idempotency, in this course we'll show you how to use the exec resource correctly, identify some common gotchas, and show you how you can mitigate against these.
 
 
-### slide content
+### Slide [2] Simple_Example
 Simple Exec Resource example.
 
 There are four main components of the exec resource:
@@ -45,7 +45,7 @@ The Path attribute contains the elements of the operating system path necessary 
 Lastly there is the command attribute, this specifies the executable binary or shell script, or windows batch file that the exec resource will attempt to run. 
 Note that while there is no Powershell provider for the core Puppet exec resource, there are a number of implementations of a Powershell provider available on the Puppet forge.   
 
-### slide content
+### Slide [3] Further_Attributes
 
 Further exec attributes.
 
@@ -72,32 +72,9 @@ However, if this file already exists then the exec will fail.  Therefore another
 
 This could be another exec resource, a script, or a cron job.  We could chain the exec resource to another like this:
 
-### slide
 
-Showing chained exec resources.
 
-exec { 'archivelogfiles':
-  provider => 'shell',
-  path     => '/bin',
-  cwd      => '/mnt/logs/',
-  command  => 'tar czvf archivedlogs.tar.gz /var/log/importantapp',
-  creates  => '/mnt/logs/archivedlogs.tar.gz',
-}
-
-exec { 'movearchivedlogfile':
-  path     => '/bin',
-  cwd      => '/mnt/logs',
-  command  => 'mv /mnt/logs/archivedlogs.tar.gz /ftp/dropdirectory',
-  require  => Exec['archivelogfiles'],
-}
-
-### commentary
-
-You can begin to see a problem emerging here, it's all too easy to fall into imperative programming, which is the opposite of Puppet's declarative model, by using too many exec resources.  What happens then, is that your Puppet code can begin to resemble bash script.
-
-Another way to implement this functionality would be to write a bash script and call that with an exec resource like so:
-
-### slide
+### Slide [4] Log_File_Processing
 
 Calling A Script To Process Log Files.
 
@@ -111,13 +88,16 @@ exec { 'processlogfiles':
 
 ### commentary
 
+Rather than chaining exec resources together, we can ensure all operating system level actions are provisioned in a script, and use exec to call that instead.
+This leads to a lack of visibility into what the script is doing, but the script can log output appropriately if that's included.
+
 In the case where you use an exec resource to call a Bash script, or a Windows bat file, or a powershell script to perform operating system level tasks on your nodes, you need to ensure that the script operates as idempotently as possible.  Specifically, given our log files example, this means that the script needs to check for a lockfile from a previous run, and exit appropriately if that hasn't been removed.  Then it needs to create the lockfile, if one wasn't found.  Next the log processing needs to occur, and the archived logfile needs to be moved.
 Finally, the lockfile needs to be removed and the script must exit with an appropriate exit code.  In this example, '0' indicates success, '1' indicates lockfile found, and '2' indicates archivelogfile not present.  
 
 ***Show Flowchart Graphic***
 
 
-### slide
+### slide [5] Exec Cron.allow example
 
 Adding the root user to the cron.allow file, and trapping the result with unless.
 
@@ -136,7 +116,7 @@ The exec resource makes the check whether the root user is already present in th
 
 An alternative to this exec would be the following Puppet file resource. 
 
-### slide
+### slide [6] Using the unless attribute
 
 Exec Resource Using Unless.
 
@@ -161,7 +141,7 @@ Both the exec resource and the file resource here achieve the same goals, but it
 
 
 
-### slide
+### slide [7] Using the onlyif attribute
 
 Exec Resource Using OnlyIf
 
@@ -177,7 +157,7 @@ In this example, the exec resource starts the postfix email service, but only if
 
 A better way to do this would be to use Puppet code to introspect the role of the server, and start the postfix service if the $role variable is set as a mail server.
 
-### slide
+### slide [8] Using exec onlyif attribute vs. variable introspection
 
 Exec Resource Using OnlyIf
 
@@ -200,7 +180,7 @@ if $role =~ /mail/ {
 
 ### Conclusion
 
-TBC
+When used carefully and appropriately, exec resources are your secret weapon in automating your infrastructure.  Exec resources can be utilised to achieve results where there is no native or module-contributed resource type.
 
 ### Quiz
 
