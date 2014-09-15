@@ -103,23 +103,20 @@ There are no exercises for this course.
 
 ## Quiz ##
 
-1. The NTP module is written in:
-	a. Markdown
-	b. **Puppet Code**
-	c. HTML	
-	d. Python
-2. Using Puppet Enterprise provides which advantages when deploying NTP:
-	a. The code is simple and brief
-	b. **Event inspector can be used to check status
-	c. **Automation
-	d. **Events can be traced to the code level
-3. Which of the following are classes within the NTP module?
-	a. **NTP
-	b. **NTP::Install
-	c. **NTP::Config
-	d. NTP::Deploy
-4. True or False. The NTP class can restrict access to the NTP server. **True**
-5. True or False. NTP can only be administrated at the agent level. **False**
+1. True or False. The directory in which you should edit your modules is /opt/puppet/share/puppet/modules **False**
+
+2. The name of the Puppet DNS template file is:
+	a. DNS.conf.pp
+	b. DNS.template.erb
+	c. **resolve.conf.erb**
+	d. resolve.template.pp
+3. Which of the following are classes within the DNS module?
+	a. DNS
+	b. DNS::Config
+	c. **Resolver
+	d. Resolve
+4. True or False. Resolver parameters should always be set in the resolver.conf file. **False**
+5. True or False. The local node copy of the nameserver file is the basis for desired state enforcement. **False**
 
 ## References ##
 * [Modules and Manifests](Modules and Manifests)
