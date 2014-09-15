@@ -1,16 +1,16 @@
 # Puppet DNS
 
 ###Slide 1
-In this lesson, you will see how to get started managing a simple DNS nameserver file with PE
+In this course, you will see how to get started managing a simple DNS nameserver file with PE
 
 
 ###Slide 2
 In this lesson, you will see:
 
 *sample resolver class code and resolver template code.
-*how to write a simple module that contains a class called resolver to manage a nameserver file called, /etc/resolv.conf.
+*how to write a simple resolver module
 *how to use the PE console to add the resolver class to your agent nodes.
-*How to change the contents of the nameserver file to see how PE enforces the desired state you specified in the PE console
+*How to enforce the desired state
 
 
 ###Slide 3
@@ -20,7 +20,7 @@ Sysadmins typically need to manage a nameserver file for internal resources that
 
 
 ###Slide 4
-However, there are several resources behind your company’s firewall that your employees need to access on a regular basis. In this case, you’d build a private nameserver, and then use PE to ensure all the servers in your infrastructure have access to it.
+However, there are several resources behind your company’s firewall that your employees need to access on a regular basis. In this case, you build a private nameserver, and then use Puppet Enterprise to ensure all the servers in your infrastructure have access to the nameserver.
 
 
 ###Slide 5
@@ -30,13 +30,14 @@ Follow the instructions in the NTP Quick Start Guide to have PE ensure time is i
 
 
 ###Slide 6
-Some modules can be large, complex, and require a significant amount of trial and error, while others, like PE-supported modules, often work “right out of the box”. This module will be a very simple module to write; it contains just one class and one template.
+This module will be a very simple module to write. It contains just one class and one template.
 
 ###Slide 7
-The first thing to know is that, by default, the modules you use to manage nodes are located in /etc/puppetlabs/puppet/modules—this includes modules installed by PE, those that you download from the Forge, and those you write yourself.
+The first thing to know is that the modules you use to manage nodes are located in /etc/puppetlabs/puppet/modules. This includes modules installed by PE, those that you download from the Forge, and those you write yourself.
 
 Note: PE also installs modules in /opt/puppet/share/puppet/modules, but don’t modify anything in this directory or add modules of your own to it.
-There are plenty of resources about modules and the creation of modules that you can reference. Check out Modules and Manifests, the Beginner’s Guide to Modules, and the Puppet Forge.
+
+There are plenty of resources about modules and the creation of modules that you can reference. Check out Modules and Manifests, the Beginner’s Guide to Modules, and the Puppet Forge. You will find links in the References section below
 
 
 
@@ -72,13 +73,15 @@ While the resolver class will now appear in your node’s list of classes, it ha
 
 ###Slide 12
 You can add class parameter values to the code in your module, but it’s easier to add those parameters to your classes using the PE console.
+
 To do this, navigate to your node. In edit mode, find the resolver list and edit its parameters. Add the IP address of the nameserver and click “done” to accept the changes.
+
 From the Live Management tab, run once, and you’re finished. The customer nameserver now appears in your resolv.conf.
 
 
 
 ###Slide 13
-The PE console event inspector lets you view and research changes. You can view changes by class, resource, or node. By viewing the details of changes to class, you will see that that the class created /etc/resolv.conf and set the contents per the module’s template.
+The PE console event inspector lets you view and research changes. You can view changes by class, resource, or node. By viewing the details of changes to class, you will see that that the class created /etc/resolv.conf and set the contents according to the module’s template.
 
 The further you drill down in event inspector, the more detail you’ll receive. If there had been a problem applying the resolver class, this information would tell you exactly where that problem occurred or which piece of code you need to fix.
 
