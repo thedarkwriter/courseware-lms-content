@@ -20,7 +20,7 @@ Because the NTP module is on the Puppet Forge, you can easily install it with a 
 
 
 ###Slide 4
-Before digging into how to install NTP, it might be valuable to see the Puppet code itself.
+Before digging into how to install the NTP module, it might be valuable to see the Puppet code itself.
 
 ###Slide 5
 Puppet code is written in short strings of human-readable language. This is a snippet of puppet code that defines the NTP class and its resources. You can see here that very little code is required to perform this critical task of configuring and deploying NTP. 
@@ -29,6 +29,7 @@ In this particular code snippet, the keys are defined as follows:
 
 Servers selects the servers to use for ntp peers
 Restrict sets which servers are able to connect to the NTP server
+UDLC allows the node to use its own local time if a connection cannot be established with the NTP server
 Service_manage selects whether Puppet should manage the service
 Config_template determines which template Puppet should use for the ntp configuration.
 
@@ -66,7 +67,7 @@ These changes can be viewed in the Summary pane.
 ###Slide 10
 You can drill down all the way to the exact line of puppet code responsible for generating the event, as is called out here by the highlight box. 
 
-If you have a problem applying this class, the Event Inspector will tell you exactly which line of code you need to fix. In this of a successful install, event inspector will simply confirm that Puppet Enterprise is now managing NTP.
+If you have a problem applying this class, the Event Inspector will tell you exactly which line of code you need to fix. If you have a problem applying this class, the Event Inspector will tell you exactly which line of code you need to fix. If this of a successful installation, event inspector will simply confirm that Puppet Enterprise is now managing NTP.
 
 To run a report which contains information about the puppet run that made the change, including logs and metrics about the run, click the link in the upper right corner of the detail pain. 
 
