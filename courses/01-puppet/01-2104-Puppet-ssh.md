@@ -14,11 +14,16 @@ This course is a quick look at how to use Puppet Enterprise to manage SSH key au
 
 
 ### slide 2
-We will see how to install an SSH module from the Puppet Forge create an ssh user group,  and set some parameters included in the downloaded module. 
+We'll look at how to install an SSH module from the Puppet Forge, add the ssh classes to a node group, and set some parameters included in the SSH module. 
 ### slide 3
 First -  a quick review of SSH. Secure Shell (SSH) is a protocol that enables encrypted connections between nodes on a network for secure data communication, remote command-line login, remote command execution, and other secure network services. Perhaps the most common application of the protocol is for access to shell accounts on Unix-like operating systems, but it can also be used in a similar fashion for accounts on Windows.  
 
-### slide 4SSH uses public-key cryptography to authenticate clients and servers.  During authentication, the client and server prove their identities to each other with private and public key pairs. On a linux system, the authorized_keys file lists the public keys that are permitted for logging in.  When the user logs in, the ssh program tells the server which key pair it would like to use for authentication.  The client proves that it has access to the private key and the server checks that the corresponding public key is authorized to accept the account. Key-based authentication is the most secure of several modes of authentication, including passwords. If you use public-key authentication, in order to access your system, an attacker needs a copy of a private key corresponding to a public key stored on the server. 
+### slide 4SSH uses public-key cryptography to authenticate clients and servers.  During authentication, the client and server prove their identities to each other by using private and public key pairs. These public and private key pairs work in concert. Something encrypted with the private key can be decrypted with the public key, and the reverse.
+
+On a Linux system, the authorized keys file lists the public keys that are permitted to log in.  When the user logs in, the ssh client presents, to the server, a secret computed using the private half of its key pair for the server to use for authentication. The server validates that secret by performing the same computation in reverse, using the public key stored in the authorized keys file.
+
+Key-based authentication is the most secure of several modes of authentication, including passwords. If you use public-key authentication, in order to access your system, an attacker needs a copy of a private key corresponding to a public key stored on the server.
+ 
 
 ### slide 5
 Typically, the first time you attempt to SSH into a host you’ve never connected to before, you receive a message similar to this one. If you select yes, the public key for that host is added to your SSH known_hosts file, and you won’t have to authenticate it again unless that host’s key changes.
