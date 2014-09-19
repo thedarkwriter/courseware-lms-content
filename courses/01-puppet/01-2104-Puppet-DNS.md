@@ -5,28 +5,28 @@ In this course, you will see how to get started managing a simple DNS nameserver
 
 
 ###Slide 2
-In it, you will see:
+We'll look at:
 
 *sample resolver class code and resolver template code.
 *a sample module that contains a class called resolver to manage a nameserver file called, /etc/resolv.conf.
 *an example of using the Puppet Enterprise console to add the resolver class to your agent nodes.
-*how Puppet Enteprise enforces the desired state you specified in the PE console
+*how Puppet Enteprise enforces the desired state you specified in the PE console.
 
 
 ###Slide 3
 A nameserver ensures that the “human-readable” names we type in our browsers, such as google.com, can be resolved to IP addresses that our computers can read.
 
-Sysadmins typically need to manage a nameserver file for internal resources that aren’t published in public nameservers. For example, let’s say you have several public-facing servers in your infrastructure, and the DNS network assigned to those servers use Google’s public nameserver.
+System administrators typically need to manage a nameserver file for internal resources that aren’t published on public nameservers. For example, let’s say you have several public-facing servers in your infrastructure, and the DNS network assigned to those servers uses Google’s public nameserver.
 
 
 ###Slide 4
-However, there are several resources behind your company’s firewall that your employees need to access on a regular basis. In this case, you’d build a private nameserver, and then use Puppet Enterprise to ensure all the servers in your infrastructure have access to it.
+However, there are several resources behind your company’s firewall that your employees need to access on a regular basis. In this case, you’d build a private nameserver, and then use Puppet Enterprise to ensure all the servers in your infrastructure have access to that nameserver.
 
 
 ###Slide 5
 Before we get deep into the DNS module, let's take care of some housekeeping.
 
-Make sure that you have Puppet Enterprise and NTP installed. You can follow the instructions in the NTP Quick Start Guide to allow Puppet Enterprise to ensure time is in sync across your deployment. You can find a link to the Quick Start Guide in the resources section of this lesson.
+Make sure that you have Puppet Enterprise and NTP installed. You can follow the instructions in the NTP Quick Start Guide to allow Puppet Enterprise to ensure time is synchronized across your deployment. You can find a link to the Quick Start Guide in the resources section of this course.
 
 
 ###Slide 6
@@ -34,7 +34,7 @@ It's also important to know that, by default, the modules you use to manage node
 
 Puppet Enterprise also installs modules in /opt/puppet/share/puppet/modules. It's important that you don't modify anything in this directory or add modules of your own to it.
 
-There are plenty of resources about modules and the creation of modules that you can reference. Check out Modules and Manifests, the Beginner’s Guide to Modules, and the Puppet Forge.
+There are plenty of resources about modules and the creation of modules that you can reference. Two good resources are Modules and Manifests, the Beginner’s Guide to Modules, and the Puppet Forge.
 
 
 
@@ -61,11 +61,11 @@ This is as simple as searching for the resolver class by name, selecting the res
 
 
 ###Slide 10
-While the resolver class appears in your node’s list of classes, it has not yet been fully configured. You still need to add the nameserver IP address parameter for the resolver class to use. You can do this by adding a parameter right in the console.
+While the resolver class appears in your node’s list of classes, it has not yet been fully configured. You still need to add the nameserver IP address parameter for the resolver class to use.
 
 
 ###Slide 11
-You can add class parameter values to the code in your module, but it’s easier to add those parameters to your classes using the PE console.
+You could add class parameter values to the code in your module, but it’s easier to add those parameters to your classes using the PE console.
 
 
 From the Live Management tab, run once, and you’re finished. The custom nameserver now appears in your resolv.conf.
