@@ -5,7 +5,7 @@ Your entire datacenter, from the network to the applications, depends on consist
 
 
 ###Slide 2
-In this lesson, we give you an overview of how to use Puppet Enterprise to:
+In this course, we give you an overview of how to use Puppet Enterprise to:
 
 *to install the NTP module 
 *add classes from the NTP module to your agent 
@@ -109,7 +109,7 @@ There are no exercises for this course.
 	b. **Puppet Code**
 	c. HTML	
 	d. Python
-2. Using Puppet Enterprise provides which advantages when deploying NTP:
+2. Using Puppet Enterprise console provides which advantages when deploying NTP:
 	a. The code is simple and brief
 	b. **Event inspector can be used to check status
 	c. **Automation
@@ -119,12 +119,12 @@ There are no exercises for this course.
 	b. **NTP::Install
 	c. **NTP::Config
 	d. NTP::Deploy
-4. True or False. The git get command will pull a copy of the master repository to your local workstation. **False**
+4. True or False. The NTP class can include a UDLC resource that allows local time to be used if an NTP server is unreachable. **True**
 5. True or False. Puppet code is human-readable. **True**
 
 ## References ##
 * [Puppet NTP Module](https://forge.puppetlabs.com/puppetlabs/ntp)
-* [NTP Installation Quick-Start](https://docs.puppetlabs.com/pe/latest/quick_start_ntp(.html)
+* [NTP Installation Quick-Start](https://docs.puppetlabs.com/pe/latest/quick_start_ntp.html)
 * [Event Inspector Docs](https://docs.puppetlabs.com/pe/latest/console_event-inspector.html)
 
 ##Bogus note

@@ -10,7 +10,7 @@ We'll look at:
 *sample resolver class code and resolver template code.
 *a sample module that contains a class called resolver to manage a nameserver file called, /etc/resolv.conf.
 *an example of using the Puppet Enterprise console to add the resolver class to your agent nodes.
-*how Puppet Enteprise enforces the desired state you specified in the PE console.
+*how Puppet Enteprise enforces the desired state you specified in the Puppet Enterprise console.
 
 
 ###Slide 3
@@ -26,7 +26,7 @@ However, there are several resources behind your company’s firewall that your 
 ###Slide 5
 Before we get deep into the DNS module, let's take care of some housekeeping.
 
-Make sure that you have Puppet Enterprise and NTP installed. You can follow the instructions in the NTP Quick Start Guide to allow Puppet Enterprise to ensure time is synchronized across your deployment. You can find a link to the Quick Start Guide in the resources section of this course.
+Make sure that you have Puppet Enterprise and NTP installed. You can follow the instructions in the NTP Quick Start Guide to allow Puppet Enterprise to ensure time is synchronized across your deployment. You can find a link to the NTP Quick Start Guide in the resources section of this course.
 
 
 ###Slide 6
@@ -47,7 +47,7 @@ This is your resolver init.pp, which contains the resolver class. The resolver c
 ###Slide 8
 The content of /etc/resolv.conf is then modified and managed by the template, resolv.conf.erb. 
 
-The code for your resolver template, which is called resolv.conf.erb, looks like this:
+The code for your resolver template looks like this:
 
 Note that other values can be added to the template as needed.
 
