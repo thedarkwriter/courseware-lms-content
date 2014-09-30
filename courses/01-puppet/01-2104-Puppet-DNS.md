@@ -53,28 +53,26 @@ Note that other values can be added to the template as needed.
 
 
 ###Slide 9
-Add the resolver Class in the Console 
+Once resolv.conf is in place, you need to add the resolver class to at least one agent node.
 
-Once resolve.conf is in place, you need to add the resolver class to at least one agent node.
-
-This is as simple as searching for the resolver class by name, selecting the resolver class from the list, and clicking “add classes”.  
+The simple way to do this is to search for the resolver class by name, select the resolver class from the list, and add it to the class.   
 
 
 ###Slide 10
-While the resolver class appears in your node’s list of classes, it has not yet been fully configured. You still need to add the nameserver IP address parameter for the resolver class to use.
+You then edit your node, then search again for and add the resolver class.
 
 
 ###Slide 11
-You could add class parameter values to the code in your module, but it’s easier to add those parameters to your classes using the PE console.
+You could add class parameter values to the code in your module, but it’s easier to add those parameters to your classes using the Puppet Enterprise console.
 
 
-From the Live Management tab, run once, and you’re finished. The custom nameserver now appears in your resolv.conf.
+From the Live Management tab, run once, and you’re finished.
 
 
 ###Slide 12
 If you have a problem applying this class, the Event Inspector will tell you exactly which line of code you need to fix. If this of a successful installation, event inspector will simply confirm that Puppet Enterprise is now managing DNS.
 
-To run a report which contains information about the puppet run that made the change, including logs and metrics about the run, click the link in the upper right corner of the detail pain. 
+To run a report which contains information about the puppet run that made the change, including logs and metrics about the run, click the link in the upper right corner of the detailne. 
 
 For more information about using the Puppet Enterprise console event inspector, check out the event inspector docs. 
 
@@ -84,13 +82,9 @@ Now imagine a scenario where a member of your team changes the contents of /etc/
 
 The simple solution to this is to open the Control Puppet tab and click the runonce action. This will bring the node back to the desired state.
 
-To verify that Puppet has enforced the desired state, navigate to /etc/resolv.conf and see that the nameserver IP address is as specified in the Console. 
-
 
 ###Slide 14
 In this course, we have shown you the key concepts to install and maintain the DNS module
-
-We hope that this brief introduction to NTP has shown you how easy it is to implement and verify DNS using Puppet.
 
 
 ###Slide 15
