@@ -53,20 +53,28 @@ Note that other values can be added to the template as needed.
 
 
 ###Slide 9
-Once resolv.conf is in place, you need to add the resolver class to at least one agent node.
+Once resolv.conf has been created, you need to add the resolver class to at least one agent node.
 
-The simple way to do this is to search for the resolver class by name, select the resolver class from the list, and add it to the class.   
+The simple way to do this is to search for the resolver class by name, then select the resolver class from the list of classes and add it to the console.
+
+Now that the resolver class is added to the console, you can use the Console to add the resolver class to a node or group.   
 
 
 ###Slide 10
-You then edit your node, then search again for and add the resolver class.
+To add resolver to the node, switch the Console to the node view. Select the node, then search for resolver in the list of classes. 
+
+Select resolver from the list and click "Update".
+
+Your node now contains the resolver class.
 
 
 ###Slide 11
-You could add class parameter values to the code in your module, but it’s easier to add those parameters to your classes using the Puppet Enterprise console.
+You've seen how to create a module from the command line, and you also can add class parameter values directly to that code using the same command line tools.  
 
+However, there's an easier and more efficient way to add those parameters to your classes, and that's by using the Puppet Enterprise console.
 
-From the Live Management tab, run once, and you’re finished.
+After you've updated the class parameters, you can enforce those changes to your nodes. To do this, open the Live Management tab, click run once, and you're finished. 
+
 
 
 ###Slide 12
@@ -85,6 +93,7 @@ The simple solution to this is to open the Control Puppet tab and click the runo
 
 ###Slide 14
 In this course, we have shown you the key concepts to install and maintain the DNS module
+
 
 
 ###Slide 15
