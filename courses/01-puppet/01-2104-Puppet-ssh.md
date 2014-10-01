@@ -81,17 +81,17 @@ Thank you for completing this Puppet Labs Workshop course.
 	a. **Configure a node as both an SSH client and an SSH server.**
 	b. Manage installation of SSH server hosts.
 	c. Install and configure SSH authentication keys.
-	d. Restrict access to SSH keys..
+	d. Restrict access to SSH keys.
 4. After you install the saz-ssh module, you need to:  
 	a. Install SSH keys on all nodes in your infrastructure.
-	b. Instruct all users to force a Puppet run on their individual nodes
-	c. Distribute public and private keys for all nodes, and add them to the hosts file.
-	d. **Add the SSH class to your environment, and apply the ssh class to a group of nodes.**.
+	b. Instruct all users to force a Puppet run on their individual nodes.
+	c. Distribute public and private keys for all nodes, and add the keys to the hosts file.
+	d. **Add the SSH class to your environment, and apply the SSH class to a group of nodes.**.
 5. True or False.
-	With Puppet Enterprise you can edit or add class parameters from the Puppet Enterprise console which means you don't have to edit the module code directly. 
+	With Puppet Enterprise you can edit and add class parameters from the Puppet Enterprise console. 
 	**True**
 
 ## References
-* [saz-ssh Module](http://https://forge.puppetlabs.com/saz/ssh)
-* [Puppet labs SSH Quick Start Guide](http://https://docs.puppetlabs.com/pe/latest/quick_start_ssh.html)
-* [Accessing the Puppet Enterprise Console](http://https://https://docs.puppetlabs.com/pe/latest/console_accessing.html)
+* [saz-ssh Module](https://forge.puppetlabs.com/saz/ssh)
+* [Puppet Labs SSH Quick Start Guide](https://docs.puppetlabs.com/pe/latest/quick_start_ssh.html)
+* [Accessing the Puppet Enterprise Console](https://docs.puppetlabs.com/pe/latest/console_accessing.html)
