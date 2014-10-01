@@ -7,7 +7,7 @@ Your entire datacenter, from the network to the applications, depends on consist
 ###Slide 2
 In this course, we give you an overview of how to use Puppet Enterprise to:
 
-*to install the NTP module 
+*install the NTP module 
 *add classes from the NTP module to your agent 
 *view changes made by the main NTP class
 *edit parameters of the main NTP class
@@ -23,9 +23,10 @@ Because the NTP module is on the Puppet Forge, you can easily install it with a 
 Before digging into how to install the NTP module, it might be valuable to see the Puppet code itself.
 
 ###Slide 5
+=======
 Puppet code is written in short strings of human-readable language. This is a snippet of puppet code that defines the NTP class and its resources. You can see here that very little code is required to perform this critical task of configuring and deploying NTP. 
 
-In this particular code snippet, the keys are defined as follows:
+In this particular code snippet, the parameters are defined as follows:
 
 Servers selects the servers to use for ntp peers
 Restrict sets which servers are able to connect to the NTP server
@@ -85,7 +86,7 @@ Remember to use the event inspector to be sure the changes were correctly applie
 
 
 ###Slide 12
-In this lesson, we have shown you the key concepts to install and maintain the NTP module
+In this course, we have shown you the key concepts to install and maintain the NTP module
 
 We hope that this brief introduction to NTP has shown you how easy it is to implement and verify NTP using Puppet.
 
@@ -126,5 +127,3 @@ There are no exercises for this course.
 * [Puppet NTP Module](https://forge.puppetlabs.com/puppetlabs/ntp)
 * [NTP Installation Quick-Start](https://docs.puppetlabs.com/pe/latest/quick_start_ntp.html)
 * [Event Inspector Docs](https://docs.puppetlabs.com/pe/latest/console_event-inspector.html)
-
-##Bogus note
