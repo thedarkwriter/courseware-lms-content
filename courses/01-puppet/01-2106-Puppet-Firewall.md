@@ -112,7 +112,7 @@ There are no exercises for this course.
 5. True or False. The local node copy of the nameserver file is the basis for desired state enforcement. **False**
 
 ## References ##
-* [Modules and Manifests](Modules and Manifests)
 * [Beginner’s Guide to Modules](https://docs.puppetlabs.com/pe/latest/guides/module_guides/bgtm.html)
+* [Firewall Quick Start Guide] (https://docs.puppetlabs.com/pe/latest/quick_start_firewall.html)
 * [The Puppet Forge](https://forge.puppetlabs.com/)
 * [Event inspector docs](https://docs.puppetlabs.com/pe/latest/console_event_inspector)
