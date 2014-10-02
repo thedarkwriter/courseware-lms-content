@@ -96,11 +96,20 @@ There are no exercises for this course.
 
 ## Quiz ##
 
-1. 
-2. 
-3. 
-4. 
-5. 
+1. True or False. The directory in which you should edit your modules is /opt/puppet/share/puppet/modules **False**
+
+2. The name of the Puppet DNS template file is:
+	a. DNS.conf.pp
+	b. DNS.template.erb
+	c. **resolve.conf.erb**
+	d. resolve.template.pp
+3. Which of the following are classes within the DNS module?
+	a. DNS
+	b. DNS::Config
+	c. **Resolver
+	d. Resolve
+4. True or False. Resolver parameters should always be set in the resolver.conf file. **False**
+5. True or False. The local node copy of the nameserver file is the basis for desired state enforcement. **False**
 
 ## References ##
 * [Beginner’s Guide to Modules](https://docs.puppetlabs.com/pe/latest/guides/module_guides/bgtm.html)
