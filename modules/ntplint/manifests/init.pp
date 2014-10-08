@@ -2,12 +2,12 @@
 
 class ntplint ($servers = undef, $enable = true, $ensure = running) {
 
-  case $::operatingsystem {
+  case $operatingsystem {
     centos, redhat: {
       $service_name    = 'ntpd'
       $conf_template   = 'ntp.conf.el.erb'
       $default_servers = [
-        '0.centos.pool.ntp.org',
+        "0.centos.pool.ntp.org",
         '1.centos.pool.ntp.org',
         ]
     }
@@ -35,9 +35,9 @@ class ntplint ($servers = undef, $enable = true, $ensure = running) {
     ensure => installed,
   }
 
-  service { 'ntp':
+  service { ntp:
+    name      => "${service_name}",
     ensure    => $ensure,
-    name      => $service_name,
     enable    => $enable,
     subscribe => File['ntp.conf'],
   }

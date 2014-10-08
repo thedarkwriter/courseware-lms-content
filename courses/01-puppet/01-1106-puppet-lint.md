@@ -62,7 +62,7 @@ To complete this course, work through any exercises that are found immediately b
 
 Run puppet-lint on the ntplint/manifests/init.pp file.
   
-`puppet-lint ntplint/manifests/init.pp`
+`puppet-lint /etc/puppetlabs/puppet/modules/ntplint/manifests/init.pp`
 
 Puppet-lint will return the following list of warnings:
 
