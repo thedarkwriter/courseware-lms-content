@@ -1,187 +1,105 @@
 # The Exec Resource
 
-The exec resource can prove very useful in Puppet Manifests, allowing the writer to access Operating System level commands, and execute scripts.  The exec resource is particularly useful where there is no available  Puppet Resource type to perform the necessary function.  However, the exec resource must be used with care.
+The exec resource is a powerful tools that allows you to access operating system commands and execute scripts from within your Puppet manifests. It is especially useful when there is no available  Puppet resource type to perform a function. 
 
-This short course explains how to apply the exec resource appropriately, and how to ensure that the utilisation of this resource maintains idempotency of your containing Puppet manifests.  We recommend that you have already completed the Puppet Resources LMS module before commencing this course as the content is aimed at an intermediate level of Puppet knowledge.
+After completing this course, you will be able to apply the exec resource appropriately and ensure that you maintain the idempotency of your Puppet manifests. 
 
-## Slide [1] Idempotency
+## Slide Content
 
-Idempotency refresher.
-[show idempotency explanation graphic]
+### Slide 1 - Title
+The Puppet exec resource type allows you to execute operating system commands from within your Puppet manifests. It is a particularly useful tool when there is no built-in Puppet resource type to perform a task.
 
-### commentary
+### Slide 2 - Objectives
 
-Idempotency is...
+In this course, we look at how to apply the Puppet exec resource appropriately to ensure that you maintain the idempotency of your Puppet manifests.  Before completing this intermediate level course, we recommend that you complete the Puppet Labs Workshop Resources course. 
 
-Puppet by nature is idempotent, however if used incorrectly, the exec resource can break idempotency, in this course we'll show you how to use the exec resource correctly, identify some common gotchas, and show you how you can mitigate against these.
+### Slide 3 - Idempotency
 
+The Puppet exec resource is sort of like a pocket knife that includes a variety of tools.  You can use it to perform many tasks. And yet it is not specially designed for any one of those tasks. Because it allows you to access the operating system to execute commands and run scripts, the exec resource is very powerful. However, it can be tricky to apply due to the interdependencies of many of the attributes, and you may find that your results are not what you had anticipated. Before using the exec resource, you may want to check out the Puppet Forge where there are many tried and tested modules, one of which may accomplish your task. 
 
-### Slide [2] Simple_Example
-Simple Exec Resource example.
 
-There are four main components of the exec resource:
+### Slide 4
+Now, before we look at the exec resource in detail -  let's do a brief review of idempotency and Puppet.  By design, Puppet resource types and providers are idempotent. They describe a desired final state rather than a series of steps to follow. So, a resource can be applied multiple times with the same outcome.  By default, every 30 minutes the Puppet Agent wakes up and makes sure that the node is configured properly. If the node is in the desired state, then the Agent simply reports that fact and goes back to sleep. Only if action is required will the Agent make configuration changes.
 
-exec { 'updatedb':
-  provider => shell,
-  path     => '/usr/sbin',
-  command  => 'updatedb',
-}
+Idempotency is core to Puppet's execution model.  The exec resource type is the only major exception to Puppet idempotency, and if used incorrectly, the exec resource can break idempotency and be the cause of unexpected behaviours and problems. In this course we'll look at how to use the exec resource correctly to maintain idempotency. 
 
+### Slide 5 
 
-### commentary
+Any command in an exec resource must be able to run multiple times without causing harm. There are three main ways for and exec resource to be idempotent.
 
-This simple exec resource to ensure the updatedb command gets applied to an agent node. On Linux and Unix systems, the updatedb command creates or updates the database of all files on the node.  On the first run of the command, the database is created, and on subsequent command runs the database is updated.  The database is referenced when the System Administator issues the locate command.
+The first way is that the command used in the resource is by nature idempotent, for example apt-get update. The second way that the exec resource can be idempotent is if it has an onlyif, unless, or creates attribute. All of these attibutes prevent Puppet from running a command unless a specific condition is met. And the third way is if the exec resource has the refreshonly=>true attribute and value, which only allows Puppet to run the command when some other resource is changed. 
 
-The first key component of this exec resource is the resource title: updatedb.  Exec resource definitions, in common with all other Puppet resource definitions, require a title.
+### Slide 6 
 
-Secondly there is the the Provider attribute.  The provider attribute can be one of: posix, shell, or windows.  The posix provider can be used on posix compliant Unix operating systems including: HP-UX, Solaris, AIX and Tru64.  
+Just like all Puppet resources, the exec resource has a title and one or more attributes with specified values. For more information about built-in Puppet resource tyes, you can access the Puppet Labs documentation.
 
-The shell provider can be used on Linux, or non-posix compliant Unix operating systems.
 
-The windows provider is used on versions of Microsoft Windows where the Puppet agent is supported.
+### slide 7 
 
-The Path attribute contains the elements of the operating system path necessary for the command, specified in the command attribute to run.  It is important to note that when Puppet runs the exec resource that all necessary path elements are provided by the Manifest author in the Path attribute otherwise the resource may fail.  The exec resource does not inherit a full path from the shell process in which the exec runs.  This is why specifying all necessary path elements is important.
+Let's look a simple example of the exec resource. As the title indicates, this resource applies the updatedb command to a Puppet Agent.  The update command ensures that the locate database is current. On Linux and Unix systems, the updatedb command creates or updates the database of all files on the node. On the first run of the command, the database is created, and on subsequent runs, the database is updated.  when the command concludes, the database is current. So this application of the exec resource is idempotent. In this example includes two attributes - path and command. Path is the search path used to execute the command. If you do not include the path, the command must be fully qualified because the exec resource does not inherit full paths. The second attribute in this example is command. The value of this attribute is the actual command or script that you want the exec resource to execute. If you don't specifiy the command attribute, the value for the command defaults to the resource's title. Because the name of the resource and the command are the same in this example, it is not actually necessary to include the command attribute.
 
-Lastly there is the command attribute, this specifies the executable binary or shell script, or windows batch file that the exec resource will attempt to run. 
-Note that while there is no Powershell provider for the core Puppet exec resource, there are a number of implementations of a Powershell provider available on the Puppet forge.   
+### Slide 8
 
-### Slide [3] Further_Attributes
+This next example shows an application of the exec resource that is not idempotent. Here the resource is executing the command to extract application files. However, there is indicator that tells Puppet to check to see whether the files have been extract already.  
 
-Further exec attributes.
+### Slide 9
 
+To make this use of the exec resource idempotent, we can add two attributes. The c w d attribute specifies the directory from which to execute the command. And the creates attribute tells Puppet to look to see if the files have been extracted. If the files do not exist, Puppet executes the command. If the files exist, Puppet does nothing.
 
 
-exec { 'archivelogfiles':
-  provider => 'shell',
-  path     => '/bin',
-  cwd      => '/mnt/logs/',
-  command  => 'tar czvf archivedlogs.tar.gz /var/log/importantapp',
-  creates  => '/mnt/logs/archivedlogs.tar.gz',
-}
+### slide 10
 
-### commentary
+Now let's take a look at an example that is a little more detailed. And with that detail comes some possible complications. Here we have an exec resource that generates a g zipped tar file of archived log files.  The creates attribute specifies that a file named archivedlogs.tar.gz will be generated in the /mnt/logs directory.  However, if the archive file already exists, the exec resource will see that there is a file by that name and will do nothing because the node will be in the desired state. And the log files will be archived only once, which is probably not the intended outcome. We could use another the exec resource to move the archive log file to a different location, once it is created, and chain together the exec resources. But using a collection of exec resources to manage tasks can be confusing. It works fine for simple tasks, but once your exec resource collection gets so complex that you have to work to understand what’s being accomplished, you should consider another solution.
 
 
-In this example, we have an exec resource to generate a gzipped tar file of archived log files.
+### slide 11
 
-The cwd attribute of the exec resource specifies the current working directory in which to perform the archive.
+Rather than chaining exec resources together, we can ensure all operating system level actions are provisioned in a script, and use the exec resource to call that script. When you call a script from the exec resource, you need to ensure that the script operates as idempotently as possible. In this example, the exec resource calls a script named 'processlogfiles' which could be written to archive log file and move the files to a storage location. Then the exec resource returns a status code to indicate success or failure.
 
-The creates attribute of the exec resource indicates that a file will be produced in the /mnt/logs directory called 'archivedlogs.tar.gz.'
+### Slide 12
 
-However, if this file already exists then the exec will fail.  Therefore another mechanism is needed to move the file once it is created to a different location.
+While you may have a situation where exec resource is your only or best option, most often it is better to use built-in Puppet resources to achieve the desired state because the idempotency iassured. As mentioned earlier in this course, one way to ensure that you preserve idempotency when you use the exec resource is to restrict the run conditions with the attribute onlyif.
 
-This could be another exec resource, a script, or a cron job.  We could chain the exec resource to another like this:
+In this example, the exec resource starts the postfix email service, but only if the result of the hostname command contains the text 'mail'. But why not use Puppet code to start the mail service if the node has the mail server role defined?   Both solutions achieve the same goal,  but the Puppet code version is easier to read, understand, and maintain.
 
+### Slide 13
 
+When used carefully and appropriately, exec resources are your secret weapon in automating your infrastructure. Exec resources can be utilised to achieve results where there is no native or module-contributed resource type.
 
-### Slide [4] Log_File_Processing
+### Slide 14
 
-Calling A Script To Process Log Files.
+To check your knowledge, click the link on the bottom of this course's page and complete the short quiz. There is also a link to additional learning resources.
 
-exec { 'processlogfiles':
-  provider => 'shell',
-  cwd      => '/usr/bin',
-  path     => '/usr/bin',
-  command  => 'processlogfiles.sh',
-  returns  => ['0','1','2'],
-}  
+### Slide 15
 
-### commentary
+Thank you for completing this Puppet Labs Workshop course.
 
-Rather than chaining exec resources together, we can ensure all operating system level actions are provisioned in a script, and use exec to call that instead.
-This leads to a lack of visibility into what the script is doing, but the script can log output appropriately if that's included.
 
-In the case where you use an exec resource to call a Bash script, or a Windows bat file, or a powershell script to perform operating system level tasks on your nodes, you need to ensure that the script operates as idempotently as possible.  Specifically, given our log files example, this means that the script needs to check for a lockfile from a previous run, and exit appropriately if that hasn't been removed.  Then it needs to create the lockfile, if one wasn't found.  Next the log processing needs to occur, and the archived logfile needs to be moved.
-Finally, the lockfile needs to be removed and the script must exit with an appropriate exit code.  In this example, '0' indicates success, '1' indicates lockfile found, and '2' indicates archivelogfile not present.  
+## Quiz
+1. True or **False**: Use the exec resource type instead of Puppet code whenever possible.
 
-***Show Flowchart Graphic***
+2. The Puppet exec resource allows you to:
+	a. Write modules that are inherently idempotent.
+	b. **Access the operating system to execute commands and run scripts.**
+	c. Disregard idempotency when you write Puppet modules.
+	d. Avoid using scripts to execute operating system commands.
+	
+3. **True** or False: When you call a script from the exec resource, you need to ensure that the script operates idempotently.  
 
+4. Any command in an exec resource must:
+	a. Use the onlyif attribute to restrict run conditions.
+	b. Call a script in order to run operating system commands.
+	c. Include the `path` attribute.
+	d. **Be able to run multiple times without causing harm.**
+	
+5. It is *not* a best practice to chain multiple exec resources together to accomplish a task because:
+	a. Multiple exec resources can not be idempotent.
+	b. Puppet only lets you use one resource to accomplish a task.
+	c. **Using a collection of exec resources can be complicated and confusing.**
+	d. the puppet module tool
 
-### slide [5] Exec Cron.allow example
 
-Adding the root user to the cron.allow file, and trapping the result with unless.
-
-Exec resource using Unless.
-
-  exec { "/bin/echo root >> /etc/cron.allow":
-          path   => ['/usr/bin','/usr/sbin','/bin'],
-          unless => "grep root /etc/cron.allow 2>/dev/null"
-  }
-
-### commentary 
-
-In this example, we are adding the root user to the cron.allow file, which controls which users have a crontab file, to which cron jobs may be added.
-
-The exec resource makes the check whether the root user is already present in the cron.allow file via a grep.  Note that the path attribute contains an array of path elements required by the command, enclosed by square brackets.  If the root user is already present in the file then the exec resource will not fire.
-
-An alternative to this exec would be the following Puppet file resource. 
-
-### slide [6] Using the unless attribute
-
-Exec Resource Using Unless.
-
- exec { "/bin/echo root >> /etc/cron.allow":
-          path   => ['/usr/bin','/usr/sbin','/bin'],
-          unless => "grep root /usr/lib/cron/cron.allow 2>/dev/null"
-  }
-  
- Puppet File Resource Alternative.
- 
- file { '/etc/cron.allow':
-   ensure  => file,
-   content => "root\n",
- }
- 
-
-### commentary
-
-Here is another example demonstrating how it is better to use native Puppet resources to achieve a desired state idempotently, rather than relying on exec resources.  Using the content attribute in the file resource, the content of the file can be populated as we desire.  Note the use of double quotes, which allow the \n control character to force a newline in the file after the root user text.
-
-Both the exec resource and the file resource here achieve the same goals, but it is clear that the Puppet file resource does this more elegantly than the exec resource shown.
-
-
-
-### slide [7] Using the onlyif attribute
-
-Exec Resource Using OnlyIf
-
-exec { 'enablemail':
-  path    => '/usr/sbin/postfix',
-  command => 'service postfix start',
-  onlyif  => 'hostname|grep -i mail',
-}
-
-### commentary
-
-In this example, the exec resource starts the postfix email service, but only if the result of the hostname command contains the text 'mail' or 'MAIL.'
-
-A better way to do this would be to use Puppet code to introspect the role of the server, and start the postfix service if the $role variable is set as a mail server.
-
-### slide [8] Using exec onlyif attribute vs. variable introspection
-
-Exec Resource Using OnlyIf
-
-exec { 'enablemail':
-  path    => '/usr/sbin/postfix',
-  command => 'service postfix start',
-  onlyif  => 'hostname|grep -i mail',
-}
-
-Puppet alternative via introspection of $role variable.
-
-if $role =~ /mail/ {
-  service { 'postfix':
-    enabled => true,
-    ensure  => 'running',
-    }
-}
-
-
-
-### Conclusion
-
-When used carefully and appropriately, exec resources are your secret weapon in automating your infrastructure.  Exec resources can be utilised to achieve results where there is no native or module-contributed resource type.
-
-### Quiz
-
-TBC
+## References
+* [Puppet Forge](http://forge.puppetlabs.com)
+* [Puppet Labs Docs - Type Reference](http://docs.puppetlabs.com/references/latest/type.html)
+* [Style Guide - Docs](http://docs.puppetlabs.com/guides/style_guide.html)
