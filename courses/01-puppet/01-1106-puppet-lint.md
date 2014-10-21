@@ -60,11 +60,11 @@ To complete this course, work through any exercises that are found immediately b
 
 ## Exercises
 
-Run puppet-lint on the ntplint/manifests/init.pp file.
+*  Run puppet-lint on the sample manifest file.
   
-`puppet-lint ntplint/manifests/init.pp`
+`puppet-lint /etc/puppetlabs/puppet/modules/ntplint/manifests/init.pp`
 
-Puppet-lint will return the following list of warnings:
+* Puppet-lint will return the following list of warnings:
 
 ```
 WARNING: top-scope variable being used without an explicit namespace on line 5
@@ -74,15 +74,15 @@ WARNING: unquoted resource title on line 38
 WARNING: ensure found on line but it's not the first attribute on line 40
 ```
 
-Edit the manifest to correct these issues:
+*  Edit the manifest to correct these issues:
 
 `vim /etc/puppetlabs/puppet/modules/ntplint/manifests/init.pp`
 
-Run puppet-lint again to see the result:
+*  Run puppet-lint again to see the result:
 
 `puppet-lint /etc/puppetlabs/puppet/modules/ntplint/manifests/init.pp`
 
-Continue editing and checking until there are no remaining warnings. 
+*  Continue editing and checking until there are no remaining warnings. 
 
 ## Example Solution
 
