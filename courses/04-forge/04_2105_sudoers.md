@@ -60,7 +60,7 @@ There are no exercises for this course.
 	
 3. **True** or False: Puppet can enforce a configuration, but *cannot*  report on or remediate any drift detected.  
 
-4. You can use the Puppet Enterprise console to add classes to which of the following ways? Select all that apply. 
+4. You can use the Puppet Enterprise console to add classes to which of the following? Select all that apply. 
 	a. **the default node group**
 	b. nodes outside of your Puppet deployment
 	c. **individual nodes**
@@ -71,5 +71,5 @@ There are no exercises for this course.
 
 ## References
 * [Puppet Forge](http://forge.puppetlabs.com)
-* [Puppet Labs Docs - Type Reference](http://docs.puppetlabs.com/references/latest/type.html)
+* [Puppet Labs Docs - Type Reference](http://docs.puppetlabs.com/pe/latest/quick_start.html)
 * [Style Guide - Docs](http://docs.puppetlabs.com/guides/style_guide.html)
