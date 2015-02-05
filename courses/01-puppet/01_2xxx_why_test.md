@@ -1,12 +1,12 @@
 # Why test your Puppet code?
 
-Understanding Resources is fundemantal to understanding how Puppet works. Resources are like building blocks (think Lego). They can be combined to model the expected state of the systems you manage.  
+Understanding ... systems you manage.  
 
 At the end of this course you will be able to:
 
-* explain what a Puppet resource is.
-* create a Puppet resource using proper syntax.
-* examine resources using the `puppet resource` tool.
+* explain 
+* create 
+* examine 
 
 ## Video
 
@@ -91,6 +91,4 @@ Acceptance tests are used to test high level behaviors of Puppet that deal with 
 ------
 
 ## References
-* [puppet-lint - GitHub](https://github.com/rodjek/puppet-lint)
-* [Verifying Puppet: Checking Syntax and Writing Automated Tests](http://puppetlabs.com/blog/verifying-puppet-checking-syntax-and-writing-automated-tests)
-* [Style Guide - Docs](http://docs.puppetlabs.com/guides/style_guide.html)
+
