@@ -8,26 +8,44 @@ At the end of this course you will be able to:
 * create 
 * examine 
 
-## Video
 
-## Exercises
 
-## Quiz
 
-## References
-
-# Slide Content
-## This is the content for the instructional video.
+## Slide Content
 
 ### slide 1
-(Course Title - no script) 
+"Testing is key to releasing high quality software. and automating your tests ensures that testing is repeatable, reliable, and fast.”
 
 ### slide 2 Introductory stuff
-"So, let's say that you have been writing Puppet modules for a while now. You know what they are supposed to do, and you know what they are not supposed to do. Your modules are working well, and they're doing exactly what you want them to do, exectly what you intended. 
+"So, let's say that you have been writing Puppet modules for a while now. You know what they are supposed to do, you know what they are not supposed to do. Your modules are working well, and they're doing exactly what you intended. 
+
+"Everything is great! Right? So why spend your valuable, limited time testing?"
+
+Now you must ensure that the module works in a variety of conditions, and that the options and parameters of your module work together to achieve an appropriate end result. 
+
+We, at Puppet, have several testing frameworks available to help you write unit and acceptance tests.
+
 (CAP: a module directory tree animated to build while the narrative runs.)
 
 ### slide 3
-Everything is great! Right? So why spend your valuable time testing? Well, for a few reasons."
+
+But first, let's take a few minutes to look a little more closely at software testing. 
+
+Add in here - why would a sys admin even care about software testing - and how might Puppet software tests be different fem other usual sys admin tests.
+
+
+### slide
+
+Well, for a few reasons. Testing your code lets you:
+
+* Confirm that code updates don't break anything.
+* Ensure that platform changes are accounted for.
+* Avoid committing broken code to your repository.
+* Helps maintain good programming practice.
+
+### slide
+
+
 
 ### slide 
 If you don't test, how will know know that changes you make don't affect the proper operation of existing code? This role of tests — to act as sensors and monitors throughout the code base — is probably the most compelling argument for their use.
@@ -70,6 +88,23 @@ Puppet in particular is really about automating the management of  IT infrastruc
 ### slide What and When
 So, what kind of testing should you do and when should you test?
 
+### slide
+Kinds of Tests
+
+Different stakeholders require different tests.
+Unit Tests
+Test the smallest unit of functionality.
+As simple as possible, easy to debug, reliable, etc.
+Prove that each part of your code works on its own.
+Integration Tests
+Combine units and test the entire system.
+Validate that all parts work together.
+Only test the whole system, not individual parts.
+Functional and Acceptance Tests
+Compare end result with specification.
+Only test end results, not intermediate state
+
+
 
 ### slide Testing at Puppet
 A brief introduction to testing in Puppet
@@ -80,15 +115,21 @@ Unit tests are used to test the individual components of Puppet to ensure that t
 
 Integration tests serve to test different units of code together to ensure that they interact correctly. While individual methods might perform correctly, when used with the rest of the system they might fail, so integration tests are a higher level version of unit tests that serve to check the behavior of individual subsystems.
 
-All of the unit and integration tests for Puppet are kept in the spec/ directory.
 
 Acceptance tests are used to test high level behaviors of Puppet that deal with a number of concerns and aren't easily tested with normal unit tests. Acceptance tests function by changing system state and checking the system after the fact to make sure that the intended behavior occurred. Because of this acceptance tests can be destructive, so the systems being tested should be throwaway systems.
 
 
+### slide
 
+A next steps and wrap up kind of slide.
+
+We have created a whole series of online Puppet Labs Workshop classes that you can work through to learn all about how to test your Puppet modules and projects. Although you can take the classes in any order you choose, we recommend completing them in this order.
 
 ------
 ------
+
+## Exercises
+
+## Quiz
 
 ## References
-
