@@ -17,11 +17,6 @@ So, let's say you have been writing Puppet modules for a while now. You know wha
 
 So, then, why should you spend your limited, valuable time writing and running tests?  Actually there are some very good reasons.
 
-### slide Humans
-
-Testing is necessary because ... well, we all make mistakes. Some mistakes are unimportant, but some are expensive or dangerous. We need to check  everything and anything we produce because errors are bound to happen. 
-
-
 ### slide Puppet Approved
 
 Essentially, testing is a basic element of writing a great Puppet module. Whether you are writing a module for internal use only, or for use by a broad audience. Every module should adhere to established standards for coding styles, functionality, and compatibility. 
@@ -64,7 +59,7 @@ So, what kind of testing should you do and when should you test? Puppet Labs rel
 
 ### slide Humans
 
-We all make mistakes. Some mistakes are unimportant, but some are expensive or dangerous. We need to check  everything and anything we produce because errors are bound to happen.  
+Humans make mistakes. Some mistakes are unimportant, but some are expensive or dangerous. We need to check everything and anything we produce because errors are bound to happen.  
 
 ### slide List of Testing Classes
 
