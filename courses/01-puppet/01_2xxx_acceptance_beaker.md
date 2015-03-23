@@ -1,6 +1,6 @@
 # Unit Testing with rspec
 
-Understanding Resources is fundemantal to understanding how Puppet works. Resources are like building blocks (think Lego). They can be combined to model the expected state of the systems you manage.  
+Understanding Resources is fundemental to understanding how Puppet works. Resources are like building blocks (think Lego). They can be combined to model the expected state of the systems you manage.  
 
 At the end of this course you will be able to:
 
