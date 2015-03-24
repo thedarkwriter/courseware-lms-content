@@ -5,19 +5,18 @@ Testing is key to releasing high quality software. And automating your tests ens
 At the end of this course you will be able to:
 
 * State reasons that you should test your Puppet code.
-* Identify testing methods  recommended by Puppet.
-
+* Identify testing methods recommended by Puppet.
 
 ## Slide Content
 
 ### slide 1 - Title
 
-Let's say you have been writing Puppet modules for a while now. You know what they are supposed to do and  what they're not supposed to do. Your modules work well, and you are getting the expected results, with no issues that you know of.  
+Let's say you have been writing Puppet modules for a while now. You know what they are supposed to do and what they're not supposed to do. Your modules work well, and you are getting the expected results, with no issues that you know of.  
 
 This is all very good, right?
 ### slide  Why test?
 
-So then why should you spend your limited, valuable time writing and running tests?  Actually there are some very good reasons.
+So then why should you spend your limited, valuable time writing and running tests? Actually there are some very good reasons.
 
 ### slide Puppet Approved
 
