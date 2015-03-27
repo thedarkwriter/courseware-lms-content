@@ -80,7 +80,7 @@ With Puppet Enterprise, the modules you use to manage nodes are located in the d
 
 And now a quick review of best practices for writing your Puppet modules. To write your modules, we strongly suggest that you run the command:  `puppet module generate <username>-<module name>`. When you run the command, the Puppet module tool runs a series of questions to gather metadata about your module, and creates a basic module structure for you, including your spec and tests directories and the appropriate files in those  directories.
 
-And remember, you can also easily install modules written by others users, including those from the Puppet Forge, with the `puppet module install` command.
+And remember, you can also easily install modules written by other users, including those from the Puppet Forge, with the `puppet module install` command.
 
 ### slide Example
 
