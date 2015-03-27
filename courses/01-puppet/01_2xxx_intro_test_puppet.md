@@ -67,7 +67,8 @@ First, a couple of reminders about Puppet structure. The core of the Puppet lang
 
 Modules are self-contained bundles of code and data. On disk, a module is a directory tree with a specific, predictable structure. The module name is the outermost directory’s name. 
 
-The manifests directory contains all of the manifests in the module. This directory should contain an `init.pp` manifest where the class name matches the module name. , 
+The manifests directory contains all of the manifests in the module. This directory should contain an `init.pp` manifest where the class name matches the module name. 
+
 
 There are also two directories you use for Puppet testing. The tests directory contains examples showing how to declare the module's classes and defined types.  Each class or type should have an example in the tests directory. The spec directory is where you put spec and server spec tests that you use to test plugins in the lib directory.
 
@@ -77,17 +78,18 @@ With Puppet Enterprise, the modules you use to manage nodes are located in the d
 
 ### slide Writing Puppet Modules
 
-And now a quick review of best practices for writing your Puppet modules. To write your modules, we strongly suggest that you run the command:  puppet, module, generate, the username for the author, a hyphen, and the module name. When you run the puppet module generate command, the Puppet module tool runs a series of questions to gather metadata about your module and creates a basic module structure for you, including your spec and tests directories and the appropriate files in those  directories.
+And now a quick review of best practices for writing your Puppet modules. To write your modules, we strongly suggest that you run the command:  `puppet module generate <username>-<module name>`. When you run the command, the Puppet module tool runs a series of questions to gather metadata about your module, and creates a basic module structure for you, including your spec and tests directories and the appropriate files in those  directories.
 
-And remember you can easily install modules written by others users, including those from the Puppet Forge, with the `puppet module install` command.
+And remember, you can also easily install modules written by others users, including those from the Puppet Forge, with the `puppet module install` command.
 
 ### slide Example
 
-This is an example of the messaging Puppet gives you after you run the puppet generate module command to create a module. 
+This is an example of the messaging Puppet gives you after you run the `puppet generate module` command to create a module. 
 
 ### slide Humans
 
-Humans make mistakes. Some mistakes are unimportant, but some are expensive or dangerous. We need to check everything and anything we produce because errors are bound to happen. So, all in all, it would help to have some tools to make sure you are writing valid code, that it does what it expects, and that if it doesn’t you catch it as soon as possible. 
+Humans make mistakes. Some mistakes are unimportant, but some are expensive or dangerous. We need to check everything and anything we produce because errors are bound to happen. So, all in all, it would help to have some tools to make sure you are writing valid code, that it does what it expects, and that if it doesn’t you errors as soon as possible. 
+
 
 ### slide List of Testing Classes
 
