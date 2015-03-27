@@ -84,7 +84,7 @@ And remember, you can also easily install modules written by others users, inclu
 
 ### slide Example
 
-This is an example of the output Puppet gives you after you run the `puppet generate module` command to create a module. 
+This is an example of the output Puppet gives you after you run the `puppet module generate` command to create a module. 
 
 ### slide Humans
 
