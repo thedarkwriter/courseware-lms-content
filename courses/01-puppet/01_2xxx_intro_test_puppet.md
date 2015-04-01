@@ -17,10 +17,9 @@ One of the issues that crops up when working with Puppet is ensuring that your m
 
 This is the first of a series of online courses that we have created to help you learn about how to test your Puppet modules and projects. You can take the courses in any order you choose. However, to get the greatest benefit, we recommend that you take them in the order listed here and in the in the online catalog.
 
-### slide  - 
+### slide  - Why test?
 
-Let's say you have been writing Puppet modules for a while now. You know what they are supposed to do and what they're not supposed to do. Your modules work well, and you are getting the expected results, with no issues that you know of.  This is all very good, right? 
-### slide  Why test?
+Let's say you have been writing Puppet modules for a while now. You know what they are supposed to do and what they're not supposed to do. Your modules work well, and you are getting the expected results, with no issues that you know of.  This is all very good, right? 
 
 So then why should you spend your limited, valuable time writing and running tests?  Actually there are some very good reasons.
 
