@@ -9,7 +9,15 @@ At the end of this course you will be able to:
 
 ## Slide Content
 
-### slide 1 - Title
+### slide - Title
+
+One of the issues that crops up when working with Puppet is ensuring that your manifests do what you expect. Errors are bound to happen. A missed brace can make a manifest not compile, or forgetting to include a module or set a variable may mean that running Puppet on the host fails to enforce the expected state. All in all, it would help to have some tools to make sure we’re writing valid code, that it does what it expects, and that if it doesn’t we identify errors as soon as possible.
+
+### slide - Automate It
+
+Puppet is about automating the management of your IT infrastructure, large or small, simple or complex. And Puppet is especially concerned with managing the entire life cycle of your infrastructure, fixing or updating configuration files and automatically restarting services. But all of this only works if your modules are written correctly, which proper testing can ensure. We have a number of tools and frameworks available to help you test your modules. But first, a brief review of Puppet's structure and some best practices for writing Puppet modules.
+
+### slide  - 
 
 Let's say you have been writing Puppet modules for a while now. You know what they are supposed to do and what they're not supposed to do. Your modules work well, and you are getting the expected results, with no issues that you know of.  This is all very good, right? 
 ### slide  Why test?
