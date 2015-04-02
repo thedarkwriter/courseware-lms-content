@@ -72,8 +72,7 @@ We have created a whole series of online Puppet Labs classes to help you learn a
 
 ### slide Next Steps
 
-To check your knowledge, click the link on the bottom of this course's page and complete the short quiz. There is also a link to additional learning resources.
-
+In the following testing courses, we will introduce tools for validating your puppet code and performing unit and acceptance tests. To check your knowledge of the information in this course, click the link on the bottom of this course's page and complete the short quiz. There is also a link to additional learning resources.
 
 ### slide Thank you
 
