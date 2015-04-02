@@ -103,8 +103,21 @@ Puppet lint is a quick and easy way to ensure that as you grow your collection o
 
 Puppet lint is a quick and easy way to ensure that as you grow your collection of modules, everybody is following a common set of conventions. For more information, you can view the puppet lint project on github and read more documentation at puppet lint dot com.
 
+### slide Next steps
+
+Now that you have some tools to check you Puppet code syntax and style guidelines, you are ready to begin testing your modules for expected behaviors. In the following lessons we introduce tools and techniques for unit and acceptance testing. 
+
+To check your knowledge, click the link on the bottom of this course's page and complete the short quiz. There is also a link to additional learning resources.
+
+
 ## Exercises
 
 ## Quiz
 
 ## References
+
+https://github.com/rodjek/puppet-lint
+
+http://puppet-lint.com
+
+https://docs.puppetlabs.com/references/3.4.0/man/parser.html
