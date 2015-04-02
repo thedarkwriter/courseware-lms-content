@@ -51,9 +51,21 @@ You also have the option of writing classes and defined types by hand and placin
 
 And remember, if you want to use modules written by others users, run the `puppet module install` command.
 
-For more informaiton about writing Puppet modules, you can refer to our online documentation at docs dot puppetlabs dot com., and the Puppet Forge, a repositiry of modules written by our community.
+For more information about writing Puppet modules, you can refer to our online documentation at docs dot puppetlabs dot com., and the Puppet Forge, a repository of modules written by our community.
 
+### slide Style Guide
 
+So, you have written a great module starting with the Puppet module tool. Next you can use the Puppet Language Style Guide to ensure that your modules work as expected and adhere to established standards. You can find the style guide on the Puppet Labs website.
+
+The purpose of this style guide is to promote consistent module formatting across Puppet Labs and the Puppet community, which gives users and developers of Puppet modules a common pattern and design to follow. Consistency in code and module structure makes continued development and contributions easier.
+
+### slide Guiding Principles
+
+We can never cover every possible circumstance you might run into when developing Puppet code or creating a module. Eventually, a judgement call will be necessary. When that happens, keep in mind some general principles:
+
+First, readability matters.If you have to choose between two equally effective alternatives, pick the more readable one. While this is subjective, if you can read your own code three months from now, it’s a great start. In particular, code that generates readable diffs is highly preferred.
+Next, scoping and simplicity are key.When in doubt, err on the side of simplicity. A module should contain related resources that enable it to accomplish a task. If you describe the function of your module and you find yourself using the word ‘and,’ it’s time to split the module at the ‘and.’ You should have one goal that all your classes and parameters focus on achieving.
+And third, your module is a piece of software. And you should treat it that way. When it comes to making decisions, choose the option that is cleanest and easiest to maintain for the long term.
 
 
 ## Exercises
