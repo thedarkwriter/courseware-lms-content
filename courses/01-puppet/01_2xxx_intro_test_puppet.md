@@ -59,8 +59,8 @@ However, by utilizing methods from the development world, you can simplify the t
 
 ### slide Primary Testing
 
-Puppet Labs relies heavily on automated testing to ensure that Puppet behaves as expected and that new features don't interfere with existing behavior.  Beyond code validation and smoke testing, there are three primary sets of tests that Puppet uses. Unit tests are used to test the individual components of Puppet to ensure that they function as expected in isolation. Integration tests are used to test different units of code together to ensure that they interact correctly.  And acceptance tests are used to test high level behaviors of Puppet that deal with a number of concerns and that aren't easily tested with normal unit tests.
-
+ Puppet Labs relies heavily on automated testing to ensure that Puppet behaves as expected and that new features don't interfere with existing behavior.  Beyond code validation and smoke testing, there are three primary sets of tests that Puppet uses. Unit tests are used to test the individual components of Puppet to ensure that they function as expected in isolation. Integration tests are used to test different units of code together to ensure that they interact correctly.  And acceptance tests are used to test high level behaviors of Puppet that deal with a number of concerns and that aren't easily tested with normal unit tests.
+ 
 ### slide Humans
 
 Humans make mistakes. Some mistakes are unimportant, but some are expensive or dangerous. We need to check everything and anything we produce because errors are bound to happen. So, it would help to have some tools to make sure you are writing valid code, that the code does what is expected, and that if it doesn’t behave as expected, you identify errors as soon as possible. 
