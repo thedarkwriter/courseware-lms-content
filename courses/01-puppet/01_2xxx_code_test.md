@@ -15,24 +15,15 @@ At the end of this course you will be able to:
 
 ### slide Title - Validating your Puppet Code
 
-Puppet is about automating the management of IT infrastructure. Puppet is especially concerned with managing the entire life cycle of your infrastructure, fixing or updating configuration files and automatically restarting services. But all this only works if your modules are written correctly, which proper testing can ensure. So, before looking more closely at techniques for testing Puppet, first a brief review of Puppet's structure.
+Before testing to see whether your manifest and modules are delivering the results that you expect, you need to validate your Puppet code syntax and check that you have followed established style conventions.  In this course we look at the first level of testing, validating your Puppet code, using the Puppet Language Style Guide, Puppet parser, and puppet lint.
 
-### slide
+### slide Automate
 
-### slide 
-"Before you can confirm that your Puppet module can produce the intended result, you need to complete the most basic level of testing - code validation. 
-
-”
-
-
+Puppet is about automating the management of your IT infrastructure, large or small, simple or complex. And Puppet is especially concerned with managing the entire life cycle of your infrastructure, fixing or updating configuration files and automatically restarting services. But all of this only works if your modules are written correctly, which proper testing can ensure. We have a number of tools and frameworks available to help you test your modules. But first, a brief review of Puppet's structure and some best practices for writing Puppet modules.
 
 ### slide 
-"Before you can confirm that your Puppet module can produce the intended result, you need to complete the most basic level of testing - code validation. 
 
-”
-
-
-
+### slide 
 
 
 ## Exercises
