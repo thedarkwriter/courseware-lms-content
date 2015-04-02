@@ -30,7 +30,7 @@ Testing your code can help you to:* Confirm that code updates don't break anyt
 
 ### slide Puppet Approved
 
-Essentially, testing is a basic element of writing a great Puppet module. Whether you are writing a module for internal use only, or for use by a broad audience. Every module should adhere to established standards for coding styles, functionality, and compatibility.  
+Essentially, testing is a basic element of writing a great Puppet module. Whether you are writing a module for internal use only, or for use by a broader audience, every module should adhere to established standards for coding styles, functionality, and compatibility.  
 ### slide Workflow
 
 Testing can help ensure that you are on the right path towards your project objectives and that every manifest and module you create adheres to the established standards. Testing while you develop allows for a steady flow of code from the development team out to the user base.
