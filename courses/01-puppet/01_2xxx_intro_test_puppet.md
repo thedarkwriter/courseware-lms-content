@@ -49,9 +49,9 @@ In the end, testing can actually save you time. Early, frequent testing helps yo
 
 So, testing is important. As a systems administrator, you probably already knew that. But how you test your Puppet code may look and feel a bit different from how you are used to testing changes to your systems.
 
-Typically your testing may include a 'stepping' process. You deploy the code to 2 production machines for a couple days, then 5 machines, and then 10 machines until you roll out the change to the entire set of servers. 
+Typically your testing may include a 'stepping' process. You deploy the code to 2 production machines for a couple days, then you deeply to 5 machines, and then 10 machines, and so on, until you roll out the change to the entire set of servers. 
 
-This "sysadmin" method of testing applied to Puppet manifests and modules would be very time consuming. You would have to write the code, build your modules, provision a test server, apply the manifests, and watch for errors. If you encountered errors, you would fix them, then redeploy a test server, and re-run the tests. And you still could not be certain that the module would run on other types servers. 
+This "sysadmin" method of testing applied to Puppet manifests and modules would be very time consuming. You would have to write the code, build your modules, provision a test server, apply the manifests, and watch for errors. If you encountered errors, you would fix them, then redeploy a test server, and re-run the tests. And you still could not be sure that the module would run on other types of servers.  
 
 ### slide Test Driven Development
 
