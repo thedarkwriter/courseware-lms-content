@@ -75,7 +75,33 @@ Puppet parser validates Puppet DSL syntax without compiling a catalog or syncing
 
 For example, let's say you left out a curly brace. If you run the command puppet parser validate, you would receive output that looks like this text. Puppet tells you what went wrong and which line contains the error so that you can easily find and correct the mistake in your manifest. If Puppet returns nothing after you run the command, no syntax errors were encountered.
 
+### slide puppet-lint
 
+The next level of testing you can perform is to check your manifest for deviations from the Puppet Language Style Guide. Puppet-lint is a third-party tool that you can use to compare your manifest to a checklist of coding conventions. Then, Puppet suggests changes to help you align your code with Puppet's style guide.
+
+### slide Install and Run puppet-lint
+
+puppet-lint is packaged as a Ruby Gem, so you can use the RubyGems tool to install it. Then you can test a single manifest by running puppet lint and the path to the file.
+
+### slide Fix a File
+
+Running puppet-lint against a manifest could produce something like this output. Puppet identifies deviations from the Puppet Language style guide and the lines they appear on. Then you can fix your code and re-run puppet-lint.
+
+Or, if you prefer, you can run puppet-lint --fix and Puppet fixes any errors as they are found.
+
+### slide puppet-lint require
+
+If you want to test your entire Puppet manifests directory, you can add require 'puppet-lint/tasks/puppet-lint' to your Rakefile. Then from your manifests directory run the command rake lint.
+
+Running puppet-lint against a manifest could produce something like this output. Puppet identifies deviations from the Puppet Language style guide and the lines they appear on. Then you can fix your code and re-run puppet-lint.
+
+Or, if you prefer, you can run puppet-lint --fix and Puppet fixes any errors as they are found.
+
+Puppet lint is a quick and easy way to ensure that as you grow your collection of modules, everybody is following a common set of conventions.
+
+### slide puppet-lint Conclusion
+
+Puppet lint is a quick and easy way to ensure that as you grow your collection of modules, everybody is following a common set of conventions. For more information, you can view the puppet lint project on github and read more documentation at puppet lint dot com.
 
 ## Exercises
 
