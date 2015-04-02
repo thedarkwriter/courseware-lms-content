@@ -1,15 +1,13 @@
 # Validating your Puppet Code
 
-Descriptive statement about the course.  
+Before testing to see whether your manifest and modules are delivering the results that you expect, you need to validate your Puppet code syntax and check that you have followed established style conventions.  In this course we look at the first level of testing, validating your Puppet code, using the Puppet Language Style Guide, Puppet parser, and puppet lint.
 
 At the end of this course you will be able to:
 
-* explain 
-* create 
-* examine 
-
-
-
+* Access the Puppet Language Style Guide. 
+* Use Puppet parser to validate Puppet code syntax.
+* Install puppet-lint.
+* Use puppet-lint to compare your manifests to established coding standards. 
 
 # Slide Content
 
