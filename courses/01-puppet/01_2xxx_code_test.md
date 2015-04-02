@@ -67,6 +67,15 @@ First, readability matters.If you have to choose between two equally effective
 Next, scoping and simplicity are key.When in doubt, err on the side of simplicity. A module should contain related resources that enable it to accomplish a task. If you describe the function of your module and you find yourself using the word ‘and,’ it’s time to split the module at the ‘and.’ You should have one goal that all your classes and parameters focus on achieving.
 And third, your module is a piece of software. And you should treat it that way. When it comes to making decisions, choose the option that is cleanest and easiest to maintain for the long term.
 
+### Puppet Parser
+
+So, after you have written your Puppet code, the first level of testing is syntax validation. Typos and errors are bound to creep into code. You can use Puppet parser to make sure that your manifest can be parsed before you commit your changes or deploy them to a live environment. 
+
+Puppet parser validates Puppet DSL syntax without compiling a catalog or syncing any resources. If no manifest files are provided, it validates the default site manifest.
+
+For example, let's say you left out a curly brace. If you run the command puppet parser validate, you would receive output that looks like this text. Puppet tells you what went wrong and which line contains the error so that you can easily find and correct the mistake in your manifest. If Puppet returns nothing after you run the command, no syntax errors were encountered.
+
+
 
 ## Exercises
 
