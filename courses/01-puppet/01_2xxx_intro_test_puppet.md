@@ -63,8 +63,7 @@ However, by utilizing methods from the development world, you can simplify the t
  
 ### slide Humans
 
-Humans make mistakes. Some mistakes are unimportant, but some are expensive or dangerous. We need to check everything and anything we produce because errors are bound to happen. So, it would help to have some tools to make sure you are writing valid code, that the code does what is expected, and that if it doesn’t behave as expected, you identify errors as soon as possible. 
-
+Humans make mistakes. Some mistakes are unimportant, but some are expensive or dangerous. We need to check everything and anything we produce because errors are bound to happen. 
 
 ### slide List of Testing Classes
 
