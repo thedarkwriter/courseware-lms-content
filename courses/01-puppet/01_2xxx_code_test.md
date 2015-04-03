@@ -55,7 +55,7 @@ For more information about writing Puppet modules, you can refer to our online d
 
 ### slide Style Guide
 
-So, you have written a great module starting with the Puppet module tool. Next you can use the Puppet Language Style Guide to ensure that your modules work as expected and adhere to established standards. You can find the style guide on the Puppet Labs website.
+So, you have written a great module starting with the Puppet module tool. Next you can use the Puppet Language Style Guide to ensure that your modules adhere to established standards. You can find the style guide on the Puppet Labs website.
 
 The purpose of this style guide is to promote consistent module formatting across Puppet Labs and the Puppet community, which gives users and developers of Puppet modules a common pattern and design to follow. Consistency in code and module structure makes continued development and contributions easier.
 
