@@ -21,7 +21,7 @@ This is the first of a series of online courses that we have created to help you
 
 Let's say you have been writing Puppet modules for a while now. You know what they are supposed to do and what they're not supposed to do. Your modules work well, and you are getting the expected results, with no issues that you know of.  This is all very good, right? 
 
-So then why should you spend your limited, valuable time writing and running tests?  Actually there are some very good reasons.
+So then why should you spend your limited, valuable time writing and running tests?  
 
 ### slide Reasons to test
 
@@ -99,6 +99,13 @@ In the following testing courses, we will introduce tools for validating your pu
 
 ## Exercises
 
+There are no exercises for this course.
+
 ## Quiz
 
+The quiz in contained in LearnDot.
+
 ## References
+
+* [Beginner's Guide to Modules](http://docs.puppetlabs.com/guides/module_guides/bgtm.html)
+* [Using & Writing Modules](http://docs.puppetlabs.com/puppet/3.7/reference/modules_fundamentals.html)
