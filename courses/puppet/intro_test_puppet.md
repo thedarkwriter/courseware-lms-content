@@ -59,30 +59,12 @@ This "sysadmin" method of testing applied to Puppet manifests and modules would 
 However, by utilizing methods from the development world, you can simplify the testing cycle, as well as automate and categorize it. You can even create multiple tests to validate the same set of manifests against different types of servers.
 
 ### slide Primary Testing
-=======
-Typically your testing may include a 'stepping' process. You deploy the code to 2 production machines for a couple days, then 5 machines, and then 10 machines until you roll out the change to the entire set of servers. 
-
-This "sysadmin" method of testing applied to Puppet manifests and modules would be very time consuming. You would have to write the code, build your modules, provision a test server, apply the manifests, and watch for errors. If you encountered errors, you would fix them, then redeploy a test server, and re-run the tests. And you still could not be certain that the module would run on other types servers. 
-
-### slide Test Driven Development
-
-However, by utilizing methods from the development world, you can simplify the testing cycle, as well as automate and categorize it. You can even create multiple tests to validate the same set of manifests against different types of servers.
-
-### slide Primary Testing
 
 Puppet Labs relies heavily on automated testing to ensure that Puppet behaves as expected and that new features don't interfere with existing behavior.  Beyond code validation and smoke testing, there are three primary sets of tests that Puppet uses. Unit tests are used to test the individual components of Puppet to ensure that they function as expected in isolation. Integration tests are used to test different units of code together to ensure that they interact correctly.  And acceptance tests are used to test high level behaviors of Puppet that deal with a number of concerns and that aren't easily tested with normal unit tests.
->>>>>>> pr/44
-
- Puppet Labs relies heavily on automated testing to ensure that Puppet behaves as expected and that new features don't interfere with existing behavior.  Beyond code validation and smoke testing, there are three primary sets of tests that Puppet uses. Unit tests are used to test the individual components of Puppet to ensure that they function as expected in isolation. Integration tests are used to test different units of code together to ensure that they interact correctly.  And acceptance tests are used to test high level behaviors of Puppet that deal with a number of concerns and that aren't easily tested with normal unit tests.
  
 ### slide Humans
 
-<<<<<<< HEAD
-Humans make mistakes. Some mistakes are unimportant, but some are expensive or dangerous. We need to check everything and anything we produce because errors are bound to happen. 
-=======
-Humans make mistakes. Some mistakes are unimportant, but some are expensive or dangerous. We need to check everything and anything we produce because errors are bound to happen. So, it would help to have some tools to make sure you are writing valid code, that the code does what is expected, and that if it doesn’t behave as expected, you identify errors as soon as possible. 
-
->>>>>>> pr/44
+Humans make mistakes. Some mistakes are unimportant, but some are expensive. We need to check everything and anything we produce because errors are bound to happen. So, it would help to have some tools to make sure you are writing valid code, that the code does what is expected, and that if it doesn’t behave as expected, you identify errors as soon as possible. 
 
 ### slide List of Testing Classes
 
