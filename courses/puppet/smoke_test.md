@@ -1,4 +1,32 @@
-# Puppet Smoke Tests
+# Puppet Module Smoke Testing
+
+Before testing to see whether your manifest and modules are delivering the results that you expect, you need to validate your Puppet code syntax and check that you have followed established style conventions.  In this course we look at the first level of testing, validating your Puppet code, using the Puppet Language Style Guide, Puppet parser, and puppet lint.
+
+At the end of this course you will be able to:
+
+* Access the Puppet Language Style Guide. 
+* Use Puppet parser to validate Puppet code syntax.
+* Install puppet-lint.
+* Use puppet-lint to compare your manifests to established coding standards. 
+
+# Slide Content
+
+## This is the content for the instructional video.
+
+### slide Title - Puppet Module Smoke Testing
+
+Smoke testing, in the context of software development, is a series of test cases that are run before the commencement of more rigorous tests. The goal of smoke testing is to verify that an application's main features work properly. A smoke test suite can be automated or a combination of manual and automated testing.
+
+After syntax validation - Preliminary testing to reveal simple failures - basically looking to see whether the code works. Also known as build verification.
+
+For Puppet, declaration validation or verification - checking that the classes have been dec;ares? 
+
+
+
+A preliminary test on a newly-constructed piece of electronic equipment, consisting simply of the application of electrical power, to make sure that no egregious wiring errors exist which would cause the circuitry to emit smoke, catch fire, explode, etc.
+By extension, such an initial test on some other (not necessarily electronic) system, such as a computer program, again, not to perform any exhaustive tests of functionality, but simply to make sure that the system will not catastrophically fail on activation.
+
+A test of new or repaired equipment by turning it on. If it smokes... it is not working! Originally coined when smoke was introduced to check for leaks in newly manufactured containers and pipes, the term also refers to testing a software application for the first time.
 
 Wkipedia
 
