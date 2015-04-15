@@ -13,13 +13,20 @@ At the end of this course you will be able to:
 
 ## This is the content for the instructional video.
 
+
+
 ### slide Title - Puppet Module Smoke Testing
+
+The term "smoke testing," originally was coined when smoke was introduced to check for leaks in newly manufactured containers and pipes. the term also refers to testing a software application for the first time.
+
+
 
 Smoke testing, in the context of software development, is a series of test cases that are run before the commencement of more rigorous tests. The goal of smoke testing is to verify that an application's main features work properly. A smoke test suite can be automated or a combination of manual and automated testing.
 
 After syntax validation - Preliminary testing to reveal simple failures - basically looking to see whether the code works. Also known as build verification.
 
-For Puppet, declaration validation or verification - checking that the classes have been dec;ares? 
+For Puppet, declaration validation or verification - checking that the classes have been declared? 
+
 
 
 
