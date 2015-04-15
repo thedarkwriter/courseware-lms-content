@@ -1,18 +1,17 @@
-# Puppet Module Smoke Testing
+# Puppet Smoke Testing
 
-Before testing to see whether your manifest and modules are delivering the results that you expect, you need to validate your Puppet code syntax and check that you have followed established style conventions.  In this course we look at the first level of testing, validating your Puppet code, using the Puppet Language Style Guide, Puppet parser, and puppet lint.
+After basic code validation, the next level of testing is smoke testing.
+The goal of smoke testing is to verify that your module runs and does what you want it to do.  
 
 At the end of this course you will be able to:
 
-* Access the Puppet Language Style Guide. 
-* Use Puppet parser to validate Puppet code syntax.
-* Install puppet-lint.
-* Use puppet-lint to compare your manifests to established coding standards. 
+* Set up dies 
+* Write smoke tests
+* Run smoke tests 
 
 # Slide Content
 
 ## This is the content for the instructional video.
-
 
 
 ### slide Title - Puppet Module Smoke Testing
@@ -27,19 +26,8 @@ After syntax validation - Preliminary testing to reveal simple failures - basica
 
 For Puppet, declaration validation or verification - checking that the classes have been declared? 
 
+For Puppet - smoke testing is also called declaration testing.
 
-
-
-A preliminary test on a newly-constructed piece of electronic equipment, consisting simply of the application of electrical power, to make sure that no egregious wiring errors exist which would cause the circuitry to emit smoke, catch fire, explode, etc.
-By extension, such an initial test on some other (not necessarily electronic) system, such as a computer program, again, not to perform any exhaustive tests of functionality, but simply to make sure that the system will not catastrophically fail on activation.
-
-A test of new or repaired equipment by turning it on. If it smokes... it is not working! Originally coined when smoke was introduced to check for leaks in newly manufactured containers and pipes, the term also refers to testing a software application for the first time.
-
-Wkipedia
-
-Smoke testing (software): trying the major functions of software before carrying out formal testing
-
-In computer programming and software testing, smoke testing (also confidence testing, sanity testing[1]) is preliminary testing to reveal simple failures severe enough to reject a prospective software release. A subset of test cases that cover the most important functionality of a component or system is selected and run, to ascertain if crucial functions of a program correctly work.[2][1]:37 When used to determine if a computer program should be subjected to further, more fine-grained testing, a smoke test may be called an intake test.[1]:25
 
 For example, a smoke test may ask basic questions like "Does the program run?", "Does it open a window?", or "Does clicking the main button do anything?" The process aims to determine whether the application is so badly broken as to make further immediate testing unnecessary. As the book "Lessons Learned in Software Testing" [3] puts it, "smoke tests broadly cover product features in a limited time ... if key features don't work or if key bugs haven't yet been fixed, your team won't waste further time installing or testing".[4]
 
