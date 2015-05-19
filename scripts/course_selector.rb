@@ -41,4 +41,4 @@ courses = [ "resources.pp",
             "code.pp",
             "default.pp" ]
 
-puts %x(puppet apply /etc/puppetlabs/puppet/modules/lms/tests/#{courses[ course_number.to_i - 1 ]})
+%x(puppet apply /etc/puppetlabs/puppet/modules/lms/tests/#{courses[ course_number.to_i - 1 ]})
