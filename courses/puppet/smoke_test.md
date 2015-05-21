@@ -16,20 +16,24 @@ At the end of this course you will be able to:
 
 ### slide Title - Puppet Module Smoke Testing
 
-The term "smoke testing," originally was coined when smoke was introduced to check for leaks in newly manufactured containers and pipes. the term also refers to testing a software application for the first time.
+Doing some basic “Has it exploded?” testing on your Puppet modules is very simple, has obvious benefits during development, and can serve as a condensed form of documentation.
+
+### slide Testing Flow
+
+In relation to your Puppet modules, and in the context of software development, smoke testing is the first testing you perform, before more rigorous tests, simply to verify that your module runs. 
+
+### Module Smoke testing
+
+The baseline for module testing used by Puppet Labs is that each manifest should have a corresponding test manifest that declares that class or defined type. So - when you perform smoke testing on your puppet modules, you are testing your class declarations.
+
+A well-formed Puppet module implements each of its classes or defined types in a separate file in its manifests directory.  In this example module directory tree structure,  s s h is the name of the module. There are two Puppet manifests, init and server. The init dot p p manifest defines the s s h class. The server manifest defines the s s h scope scope server class.
+
+A test for a class is just a manifest that declares the class. Often, this is as simple as shown in our example, one line - include s s h.  In the tests directory there is a test for each manifest in the manifests directory. The init dot pp test declares the s s h class. The server dot p p test declares the s s h scope scope server class.  As you can see, if you create a test for each class, you will have a tests directory that is a mirror image of the manifests directory. 
 
 
 
-Smoke testing, in the context of software development, is a series of test cases that are run before the commencement of more rigorous tests. The goal of smoke testing is to verify that an application's main features work properly. A smoke test suite can be automated or a combination of manual and automated testing.
-
-After syntax validation - Preliminary testing to reveal simple failures - basically looking to see whether the code works. Also known as build verification.
-
-For Puppet, declaration validation or verification - checking that the classes have been declared? 
-
-For Puppet - smoke testing is also called declaration testing.
 
 
-For example, a smoke test may ask basic questions like "Does the program run?", "Does it open a window?", or "Does clicking the main button do anything?" The process aims to determine whether the application is so badly broken as to make further immediate testing unnecessary. As the book "Lessons Learned in Software Testing" [3] puts it, "smoke tests broadly cover product features in a limited time ... if key features don't work or if key bugs haven't yet been fixed, your team won't waste further time installing or testing".[4]
 
 
 (from writing your first module)
@@ -90,3 +94,13 @@ Notice the caught error.
 serveralias is not a correct parameter, serveraliases is.
 
 Smoke Testing is a very low-cost form of testing and I highly recommend utilizing it.
+
+
+##Exercises
+
+- Use the Puppet module tool to create a module with the following metadata:
+    - puppet module generate <your_name>-ssh
+    - accept the default version
+    - accept default for name
+    - accept default for license
+    - describe the module: 
