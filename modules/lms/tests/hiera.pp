@@ -1,0 +1,1 @@
+class { 'lms': course => 'hiera' }
