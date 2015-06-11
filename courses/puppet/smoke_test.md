@@ -38,7 +38,7 @@ A Puppet module directory tree has a specific, predictable structure.  With Pupp
 
 ### slide 7 - Module Smoke testing
 
-The baseline for module testing used by Puppet Labs is that each manifest should have a corresponding test manifest, included in the examples directory,  that declares that class. As a best practice, Puppet recommends that you write your smoke test examples as you are developing your module. In this way you can complete ad hoc testing  as you develop. As you can see, if you create a test for each class, you will have an examples directory that is a mirror image of the manifests directory. 
+The baseline for module testing used by Puppet Labs is that each manifest should have a corresponding test manifest, included in the examples directory,  that declares that class. As a best practice, Puppet recommends that you write your smoke test examples as you are developing your module. In this way you can complete ad hoc testing  as you develop. As you can see, if you create a test for each class, you will have an examples directory that is a mirror image of the manifests directory.  
 
 
 ### slide 7 - Examples directory
