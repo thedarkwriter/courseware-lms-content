@@ -22,7 +22,7 @@ The term "smoke testing," was coined when smoke was introduced to check for leak
 
 ### slide 3 -  Testing Flow
 
-Smoke tests exist to check basic functionalities and should be a consistent part of your testing process. Doing some basic “Does it explode? Is there any smoke?” testing on your Puppet modules is very simple, has obvious benefits during development, and can serve as a condensed form of documentation. In the Validating your Puppet Code online course, we presented several tools to help you write and check your code - the Puppet Language Style Guide, Puppet parser, and puppet lint. For your Puppet modules, after code validation, smoke testing is the first level of testing that you perform, to simply verify that your module runs, before more rigorous functionality testing.
+Smoke tests exist to check basic functionalities and should be a consistent part of your testing process. Doing some basic “Does it explode? Is there any smoke?” testing on your Puppet modules is very simple, has obvious benefits during development, and can serve as a condensed form of documentation. In the Validating your Puppet Code online course, we presented several tools to help you write and check your code - the Puppet Language Style Guide, Puppet parser, and puppet lint. After code validation, Smoke testing is the first level of testing that you perform to simply verify that your module runs. You conduct these tests before more rigorous functionality testing.
 
 ### slide 4 - Review of Concepts
 
