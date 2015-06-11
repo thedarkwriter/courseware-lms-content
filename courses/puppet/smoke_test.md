@@ -66,7 +66,7 @@ If the output from puppet apply noop indicates that the convergence actions are 
 
 ### slide 12 - Summary
 
-Although smoke testing is only the most basic level of testing, it allows you to verify that your code compiles and cleanly applies to a node. If nothing blows up, then you are ready to proceed to more rigorous testing of your modules before placing them into production. The next course in this testing bundle introduces unit testing Puppet modules.
+Although smoke testing is only the most basic level of testing, it allows you to verify that your code compiles and cleanly applies to a node. If nothing blows up, then you are ready to proceed to more rigorous testing of your modules before placing them into production. The next course in this testing bundle introduces unit testing for your Puppet modules.
 
 ### slide 13 - Next steps
 
