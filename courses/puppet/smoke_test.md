@@ -30,7 +30,7 @@ Before talking more about testing modules, let's do a quick review of some Puppe
 
 ### slide 5 - Define vs. declare
 
-One last reminder about classes ... Defining a class is similar to defining a function in a language like Ruby, Python, or C. The function only ever has effect when it is invoked. Similarly, Puppet class definitions don't have any effect until we declare them. When you build a class like the one in this example, you are defining it. But defining a class does not automatically add it to a configuration. To use it, you need to declare it. Declaring the class instructs Puppet to enforce it. A class definition is only evaluated and enforced once it is included.   
+One last reminder about classes ... Defining a class is similar to defining a function in another language like Ruby. The function only has effect when it is invoked. Similarly, Puppet class definitions don't have any effect until we declare them. When you build a class, you are defining it. But defining a class does not automatically add it to a configuration. To use the class, you need to declare it, and one way to declare a class is with the include function. Declaring the class instructs Puppet to evaluate and enforce it.    
 
 ### slide 6 - Module directory review
 
