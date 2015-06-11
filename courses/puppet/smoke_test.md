@@ -62,7 +62,7 @@ So, to test the s s h class from our previous example, from within the s s h mod
 
 ### slide 11 - puppet apply output
 
-If the output from puppet apply noop indicates that the convergence actions are what you want, you can run puppet apply without noop to enforce the change in state. For our s s h modules example, you might receive output that looks something like this. In this example, the output infoms you that Puppet has compiled the catalog and executed the changes. Remember, when you apply a smoke test, you are enforcing the class in the manifest that you specify, locally and one time only. The changes will be overridden on the next agent run. 
+If the output from puppet apply noop indicates that the convergence actions are what you want, you can run puppet apply without noop to enforce the change in state. For our s s h modules example, you might receive output that looks something like this. In this example, the output informs you that Puppet has compiled the catalog and executed the changes. Remember, when you apply a smoke test, you are enforcing the class in the manifest that you specify, locally and one time only. The changes will be overridden on the next agent run.  
 
 ### slide 12 - Summary
 
