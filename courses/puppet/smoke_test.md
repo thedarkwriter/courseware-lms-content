@@ -47,19 +47,7 @@ The baseline for module testing used by Puppet Labs is that each manifest should
 
 ### slide 8 - Sample module tree
 
-As an example, in this module directory, s s h is the name of the module. There are two Puppet manifests, init and server. The init dot p p manifest defines the s s h class. The server manifest defines the s s h scope scope server class. In the examples directory there is a test for each manifest. The init dot pp test declares the s s h class. The server dot p p test declares the s s h scope scope server class. A test for a class is just a manifest that declares the class. So - when you perform smoke testing on your puppet modules, you are testing your class declarations. Often, this is as simple as, one line - include and the name of the class.
-
-
-.break text
-
-    @@@ Shell
-    [root@training ~]# tree /etc/puppetlabs/puppet/environments/production/modules/ssh
-    ├── manifests
-    │   ├── init.pp             ## class ssh { ... }
-    │   └── server.pp           ## class ssh::server { ... }
-    └── examples
-        ├── init.pp             ## include ssh
-        └── server.pp           ## include ssh::server
+In this sample module directory, s s h is the name of the module. There are two Puppet manifests in the manifests directory,  and in the examples directory there is a test for each manifest. The init dot p p manifest defines the s s h class; and the init.pp test declares it. The server manifest defines the s s h  server class; and the server.pp test declares it. A test for a class is really just a manifest that declares the class. So - when you perform smoke testing on your puppet modules, you are testing your class declarations. Often, this is as simple as shown in our example, one line that says include s s h.
 
 
 ### slide 9 - puppet apply and puppet apply --noop
