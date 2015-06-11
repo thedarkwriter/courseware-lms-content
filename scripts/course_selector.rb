@@ -50,4 +50,4 @@ courses = [ "resources.pp",
 
 %x(puppet apply /etc/puppetlabs/puppet/modules/lms/tests/#{courses[ course_number.to_i - 1 ]})
 # Re-initialize bash to pick up changes
-exec ( 'source ~/.bashrc' )
+exec ( 'bash' )
