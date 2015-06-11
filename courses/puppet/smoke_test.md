@@ -5,6 +5,9 @@ The goal of smoke testing is to verify that your module runs and does what you w
 
 At the end of this course you will be able to:
 
+<<<<<<< HEAD
+* Set up dies? 
+=======
 * Build a module directory for testing
 * Write smoke tests
 * Run smoke tests 
