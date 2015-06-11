@@ -26,7 +26,7 @@ Smoke tests exist to check basic functionalities and should be a consistent part
 
 ### slide 4 - Review of Concepts
 
-Before talking more about testing modules, here's a quick review of some Puppet concepts ... Puppet resources are building blocks. Each resource represents a single configuration item on the managed system, such as a package, a service, or a file. A class is a named block of code that includes and defines the state of a group of resources. Manifests are the files that include your Puppet code; they end in a .pp extension. A Puppet module contains all of the code and data required to manage a single aspect of your machines.  For example, you could have a module to configure and manage the IIS webserver, and a module to configure and manage a MySQL server or client. 
+Before talking more about testing modules, let's do a quick review of some Puppet concepts ... Puppet resources are building blocks. Each resource represents a single configuration item on the managed system, such as a package, a service, or a file. A class is a named block of code that includes and defines the state of a group of resources. Manifests are the files that include your Puppet code; they end in a .pp extension. And a Puppet module contains all of the code and data required to manage a single aspect of your machines.  For example, you could have a module to configure and manage the IIS webserver, and a module to configure and manage a MySQL server or client.  
 
 ### slide 5 - Define vs. declare
 
