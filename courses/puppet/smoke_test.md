@@ -58,7 +58,7 @@ You want to be sure to run puppet apply against the files in the examples direct
 
 ### slide 10 - puppet apply --noop output
 
-So, to test the s s h class from our previous example, from within the s s h modules directory, first enter the command puppet apply --noop examples forward slash init dot p p. And you would receive output that looks something like this. Puppet compiles the catalog. But then, instead of executing any changes, Puppet provides Notice of the state that should exist and of  changes that would have happened if you had run puppet apply without noop. You can also see that noop is indicated after the staged changes.
+So, to test the s s h class from our previous example, from within the s s h modules directory, first enter the command puppet apply --noop examples forward slash init dot p p. You receive output that looks something like this. Puppet compiles the catalog. But then, instead of executing any changes, Puppet provides Notice of the state that should exist and of  changes that would have happened if you had run puppet apply without noop. You can also see that noop is indicated after the staged changes.
 
 ### slide 11 - puppet apply output
 
