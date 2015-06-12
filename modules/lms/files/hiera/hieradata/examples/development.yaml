@@ -1,0 +1,8 @@
+---
+site_users:
+  jim: 
+    ensure: present
+    role: dev
+  bob: 
+    ensure: present
+    role: dev
