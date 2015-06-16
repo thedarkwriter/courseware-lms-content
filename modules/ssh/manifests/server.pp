@@ -17,7 +17,7 @@ class ssh::server {
   file { $sshd_config:
     ensure => file,
     mode   => '0600',
-    source => "puppet:///modules/ssh/${::osfamily}-server",
+    source => "puppet:///modules/ssh/server",
   }
 
   service { $service:
