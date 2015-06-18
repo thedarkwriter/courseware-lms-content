@@ -41,7 +41,7 @@ Although you may work independently at times, we all collaborate on common proje
 
 ### slide Quality
 
-In the end, testing can actually save you time. Early, frequent testing helps you catch defects early in the development cycle, preventing them from becoming expensive and endemic problems. Eliminating defects early in the process usually means you can avoid lengthy and tedious debugging later in the project. Testing is key to releasing high quality software. And by automating your tests, you ensure that testing is repeatable, reliable, and fast.    
+In the end, testing can actually save you time. Early, frequent testing helps you catch defects in the development cycle before they become expensive and endemic problems. Eliminating defects early in the process usually means you can avoid lengthy and tedious debugging later in the project. Testing is key to releasing high quality software. And by automating your tests, you ensure that testing is repeatable, reliable, and fast.    
  
 
 ### slide The "sysadmin" Way
