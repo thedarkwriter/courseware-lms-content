@@ -15,7 +15,7 @@ One of the issues that crops up when working with Puppet is ensuring that your m
 
 ### slide Test Courses
 
-This is the first of a series of online courses that we have created to help you learn about how to test your Puppet modules and projects. You can take the courses in any order you choose. However, to get the greatest benefit, we recommend that you take them in the order listed here and in the in the online catalog.
+This is the first of a series of online courses that we have created to help you learn about how to test your Puppet modules and projects. You can take the courses in any order you choose. However, to get the greatest benefit, we recommend that you take them in the order listed here and in the online catalog.
 
 ### slide  - Why test?
 
