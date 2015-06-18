@@ -39,7 +39,7 @@ One final note about Puppet structure -  with Puppet Enterprise, modules install
 
 ### slide Puppet Modules
 
-Next-  a quick review of best practices for writing your Puppet modules. To write your modules, we strongly suggest that you run the command puppet module generate, with your username, a hyphen, and a name for the module that you wwant to create. When you run this command, the Puppet module tool gathers metadata about your module, through a series of questions, and creates a basic module structure for you, including your spec and tests directories and the appropriate files in those directories. 
+Next -  a quick review of best practices for writing your Puppet modules. To write your modules, we strongly suggest that you run the command puppet module generate, with your username, a hyphen, and a name for the module that you want to create. When you run this command, the Puppet module tool gathers metadata about your module, through a series of questions, and creates a basic module structure for you, including directories for testing and the appropriate files in those directories.  
 
 ### slide Puppet Module Tool 
 
