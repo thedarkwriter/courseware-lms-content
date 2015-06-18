@@ -50,7 +50,7 @@ So, testing is important. As a systems administrator, you probably already knew 
 
 ### slide Test Driven Development
 
-However, by utilizing methods from the development world, you can simplify the testing cycle, as well as automate and categorize it. You can even create multiple tests to validate the same set of manifests against different types of servers.
+However, by utilizing methods from the development world, you can simplify the testing cycle. And you can create multiple tests to validate the same set of manifests against different types of servers.
 
 ### slide Primary Testing
 
