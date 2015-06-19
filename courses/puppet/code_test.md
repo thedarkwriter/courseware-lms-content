@@ -43,9 +43,7 @@ Next -  a quick review of best practices for writing your Puppet modules. To wri
 
 ### slide Puppet Module Tool 
 
-This is an example of the output from Puppet after you run the puppet generate module command. 
-
-You also have the option of writing classes and defined types by hand and placing them in properly named manifest files. If you decide to create the module manually, you must be sure that your metadata.json file is properly formatted or your module will not work. Why not use the automated Puppet module tool and avoid any possible complications?
+This is an example of the output from Puppet after you run the puppet generate module command. You can also write classes and defined types by hand, and place them in properly named manifest files. But, if you decide to create the module manually, you have to be sure that your metadata.json file is properly formatted or your module won't work. so, why not use the automated Puppet module tool and avoid possible complications?
 
 ### slide More about Puppet Modules
 
