@@ -2,6 +2,13 @@
 
 puts "Welcome to the PuppetLabs Learning System"
 puts "-----------------------------------------"
+puts "Press [enter] to continue:"
+gets()
+
+# Update courseware content
+%x(puppet apply /usr/src/courseware-lms-content/scripts/update.pp)
+
+puts "-----------------------------------------"
 puts " [1] Resources"
 puts " [2] Relationships"
 puts " [3] An Introduction to Hiera"
@@ -42,3 +49,5 @@ courses = [ "resources.pp",
             "default.pp" ]
 
 %x(puppet apply /etc/puppetlabs/puppet/modules/lms/tests/#{courses[ course_number.to_i - 1 ]})
+# Re-initialize bash to pick up changes
+exec ( 'bash' )

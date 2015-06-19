@@ -16,7 +16,7 @@ class ssh::client {
   file { $ssh_config:
     ensure => file,
     mode   => '0644',
-    source => "puppet:///modules/ssh/${::osfamily}-client",
+    source => "puppet:///modules/ssh/client",
   }
 
 }
