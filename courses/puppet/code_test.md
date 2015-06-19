@@ -33,10 +33,6 @@ The manifests directory contains all of the manifests in the module. This direct
 
 In the module directory there are two sub-directories that you use for Puppet testing. The tests directory contains examples showing how to declare the module's classes and defined types.  Each class or type should have an example in the tests directory. The spec directory is where you put spec and server spec tests that you use to test plugins in the lib directory.
 
-### slide Module Paths
-
-One final note about Puppet structure -  with Puppet Enterprise, modules installed by Puppet, modules you download from the Puppet Forge, and modules that you create to manage nodes are located in the directory /etc/puppetlabs/puppet/environments/production/modules. Puppet Enterprise also installs modules in the /opt/puppet/share/puppet/modules directory. You should not modify anything in or add any modules to this directory.
-
 ### slide Puppet Modules
 
 Next -  a quick review of best practices for writing your Puppet modules. To write your modules, we strongly suggest that you run the command puppet module generate, with your username, a hyphen, and a name for the module that you want to create. When you run this command, the Puppet module tool gathers metadata about your module, through a series of questions, and creates a basic module structure for you, including directories for testing and the appropriate files in those directories.  
