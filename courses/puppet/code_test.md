@@ -55,11 +55,7 @@ The purpose of this style guide is to promote consistent module formatting acros
 
 ### slide Guiding Principles
 
-We can never cover every possible circumstance you might run into when developing Puppet code or creating a module. Eventually, a judgement call will be necessary. When that happens, keep in mind some general principles:
-
-First, readability matters.If you have to choose between two equally effective alternatives, pick the more readable one. While this is subjective, if you can read your own code three months from now, it’s a great start. In particular, code that generates readable diffs is highly preferred.
-Next, scoping and simplicity are key.When in doubt, err on the side of simplicity. A module should contain related resources that enable it to accomplish a task. If you describe the function of your module and you find yourself using the word ‘and,’ it’s time to split the module at the ‘and.’ You should have one goal that all your classes and parameters focus on achieving.
-And third, your module is a piece of software. And you should treat it that way. When it comes to making decisions, choose the option that is cleanest and easiest to maintain for the long term.
+We can never cover every possible circumstance you might run into when developing Puppet code or creating a module. Eventually, a judgement call will be necessary. When that happens, keep in mind some general principles: First, readability matters.If you have to choose between two equally effective alternatives, pick the more readable one. While this is subjective, if you can read your own code three months from now, it’s a great start. In particular, code that generates readable diffs is highly preferred.Next, scoping and simplicity are key.When in doubt, err on the side of simplicity. A module should contain related resources that enable it to accomplish a task. If you describe the function of your module and you find yourself using the word ‘and,’ it’s time to split the module at the ‘and.’ You should have one goal that all your classes and parameters focus on achieving.And third, your module is a piece of software. So treat it that way. When it comes to making decisions, choose the option that is cleanest and easiest to maintain for the long term.
 
 ### Puppet Parser
 
