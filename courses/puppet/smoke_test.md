@@ -25,23 +25,23 @@ The term "smoke testing," was coined when smoke was introduced to check for leak
 
 ### slide 3 -  Testing Flow
 
-Smoke tests exist to check basic functionalities and should be a consistent part of your testing process. Doing some basic “Does it explode? Is there any smoke?” testing on your Puppet modules is very simple, has obvious benefits during development, and can serve as a condensed form of documentation. In the Validating your Puppet Code online course, we presented several tools to help you write and check your code - the Puppet Language Style Guide, Puppet parser, and puppet lint. For your Puppet modules, after code validation, smoke testing is the first level of testing that you perform, to simply verify that your module runs, before more rigorous functionality testing.
+Smoke tests exist to check basic functionalities and should be a consistent part of your testing process. Doing some basic “Does it explode? Is there any smoke?” testing on your Puppet modules is very simple, has obvious benefits during development, and can serve as a condensed form of documentation. In the Validating your Puppet Code online course, we presented several tools to help you write and check your code - the Puppet Language Style Guide, Puppet parser, and puppet lint. After code validation, Smoke testing is the first level of testing that you perform to simply verify that your module runs. You conduct these tests before more rigorous functionality testing.
 
 ### slide 4 - Review of Concepts
 
-Before talking more about testing modules, here's a quick review of some Puppet concepts ... Puppet resources are building blocks. Each resource represents a single configuration item on the managed system, such as a package, a service, or a file. A class is a named block of code that includes and defines the state of a group of resources. Manifests are the files that include your Puppet code; they end in a .pp extension. A Puppet module contains all of the code and data required to manage a single aspect of your machines.  For example, you could have a module to configure and manage the IIS webserver, and a module to configure and manage a MySQL server or client. 
+Before talking more about testing modules, let's do a quick review of some Puppet concepts ... Puppet resources are building blocks. Each resource represents a single configuration item on the managed system, such as a package, a service, or a file. A class is a named block of code that includes and defines the state of a group of resources. Manifests are the files that include your Puppet code; they end in a .pp extension. And a Puppet module contains all of the code and data required to manage a single aspect of your machines.  For example, you could have a module to configure and manage the IIS webserver, and a module to configure and manage a MySQL server or client.  
 
 ### slide 5 - Define vs. declare
 
-One last reminder about classes ... Defining a class is similar to defining a function in a language like Ruby, Python, or C. The function only ever has effect when it is invoked. Similarly, Puppet class definitions don't have any effect until we declare them. When you build a class like the one in this example, you are defining it. But defining a class does not automatically add it to a configuration. To use it, you need to declare it. Declaring the class instructs Puppet to enforce it. A class definition is only evaluated and enforced once it is included.   
+One last reminder about classes ... Defining a class is similar to defining a function in another language like Ruby. The function only has effect when it is invoked. Similarly, Puppet class definitions don't have any effect until we declare them. When you build a class, you are defining it. But defining a class does not automatically add it to a configuration. To use the class, you need to declare it, and one way to declare a class is with the include function. Declaring the class instructs Puppet to evaluate and enforce it. 
 
 ### slide 6 - Module directory review
 
-A Puppet module directory tree has a specific, predictable structure.  With Puppet Enterprise, the main module directory path for users is etc puppetlabs puppet modules. The module name is the outermost directory’s name. The manifests sub-directory contains all of the manifests in the module, including an init.pp manifest that should contain a definition for a class with the same name as the module. Other manifest file names map to the names of the classes they contain. A well-formed Puppet module implements each class in a separate file in the manifests directory. Although none of the directories in the module tree are mandatory, for the purposes of smoke testing, you should have an examples sub-directory that contains the test examples that you write for smoke testing your class declarations and defined types.  
+A Puppet module directory tree has a specific, predictable structure.  With Puppet Enterprise, the main module directory path for users is etc puppetlabs puppet modules. The module name is the outermost directory’s name. The module directory has a manifests sub-directory which contains all of the manifests in the module. The manifests subdirectory should include an init.pp manifest that contains a definition for a class with the same name as the module. Other manifest file names map to the names of the classes they contain. A well-formed Puppet module implements each class in a separate file in the manifests directory. Although none of the directories in the module tree are mandatory, for the purposes of smoke testing, you should have an examples sub-directory that contains the test examples that you write for smoke testing your class declarations and defined types. 
 
 ### slide 7 - Module Smoke testing
 
-The baseline for module testing used by Puppet Labs is that each manifest should have a corresponding test manifest, included in the examples directory,  that declares that class. As a best practice, Puppet recommends that you write your smoke test examples as you are developing your module. In this way you can complete ad hoc testing  as you develop. As you can see, if you create a test for each class, you will have an examples directory that is a mirror image of the manifests directory. 
+The baseline for module testing used by Puppet Labs is that each manifest should have a corresponding test manifest, included in the examples directory,  that declares that class. As a best practice, Puppet recommends that you write your smoke test examples as you are developing your module. In this way you can complete ad hoc testing  as you develop. As you can see, if you create a test for each class, you will have an examples directory that is a mirror image of the manifests directory.  
 
 
 ### slide 7 - Examples directory
@@ -50,38 +50,26 @@ The baseline for module testing used by Puppet Labs is that each manifest should
 
 ### slide 8 - Sample module tree
 
-As an example, in this module directory, s s h is the name of the module. There are two Puppet manifests, init and server. The init dot p p manifest defines the s s h class. The server manifest defines the s s h scope scope server class. In the examples directory there is a test for each manifest. The init dot pp test declares the s s h class. The server dot p p test declares the s s h scope scope server class. A test for a class is just a manifest that declares the class. So - when you perform smoke testing on your puppet modules, you are testing your class declarations. Often, this is as simple as, one line - include and the name of the class.
-
-
-.break text
-
-    @@@ Shell
-    [root@training ~]# tree /etc/puppetlabs/puppet/environments/production/modules/ssh
-    ├── manifests
-    │   ├── init.pp             ## class ssh { ... }
-    │   └── server.pp           ## class ssh::server { ... }
-    └── examples
-        ├── init.pp             ## include ssh
-        └── server.pp           ## include ssh::server
+In this sample module directory, s s h is the name of the module. There are two Puppet manifests in the manifests directory,  and in the examples directory there is a test for each manifest. The init dot p p manifest defines the s s h class; and the init.pp test declares it. The server manifest defines the s s h  server class; and the server.pp test declares it. A test for a class is really just a manifest that declares the class. So - when you perform smoke testing on your puppet modules, you are testing your class declarations. Often, this is as simple as shown in our example, one line that says include s s h.
 
 
 ### slide 9 - puppet apply and puppet apply --noop
 
-To smoke test your manifests, you can run puppet apply --noop and puppet apply against the files in the examples directory. The puppet apply command in --noop mode informs you of system drift and expected convergence actions that Puppet will make before actually executing the changes. Based on the output, you may want to edit your manifest or files before running puppet apply. The puppet apply command compiles a manifest and enforces it immediately. This is an ad hoc verification or proof of concept to see how the module will manage the system once you implement it. When you apply a smoke test, you are enforcing the class in the manifest that you specify, locally and one time only; the configuration isn't permanent. The changes will be overridden on the next agent run.
+To smoke test your manifests, you can run puppet apply --noop and puppet apply against the files in the examples directory. The puppet apply command in --noop mode informs you, before making any changes, of system drift and expected convergence actions that Puppet will make when you choose to execute them.  Based on the output, you may want to edit your manifest or files before running puppet apply. The puppet apply command compiles a manifest and enforces it immediately. This is an ad hoc verification or proof of concept to see how the module will manage the system once you implement it. When you apply a smoke test, you are enforcing the class in the manifest that you specify, locally and one time only; the configuration isn't permanent. The changes will be overridden on the next agent run. 
 
-You want to be sure to run puppet apply against the files in the examples directory, and not those in the manifests directory. Files in the manifests directory contain the classes with the resource definitions, but to implement the resources, you need to need declare the classes.  And the files in the examples directory contain the declarations, which will actually initiate action. There is no harm in running puppet apply against files in the manifests directory, but this will not apply any changes. 
+You want to be sure to run puppet apply against the files in the examples directory, and not those in the manifests directory. Files in the manifests directory contain the classes with the resource definitions, but to implement the resources, you need to declare the classes.  And the files in the examples directory contain the declarations, which will actually initiate action. There is no harm in running puppet apply against files in the manifests directory, but this will not apply any changes.
 
 ### slide 10 - puppet apply --noop output
 
-So, to test the s s h class from our previous example, from within the s s h modules directory, first enter the command puppet apply --noop examples forward slash init dot p p. And you would receive output that looks something like this. Puppet compiles the catalog. But then, instead of executing any changes, Puppet provides Notice of the state that should exist and of  changes that would have happened if you had run puppet apply without noop. You can also see that noop is indicated after the staged changes.
+So, to test the s s h class from our previous example, from within the s s h modules directory, first enter the command puppet apply --noop examples forward slash init dot p p. You receive output that looks something like this. Puppet compiles the catalog. But then, instead of executing any changes, Puppet provides Notice of the state that should exist and of  changes that would have happened if you had run puppet apply without noop. You can also see that noop is indicated after the staged changes.
 
 ### slide 11 - puppet apply output
 
-If the output from puppet apply noop indicates that the convergence actions are what you want, you can run puppet apply without noop to enforce the change in state. For our s s h modules example, you might receive output that looks something like this. In this example, the output infoms you that Puppet has compiled the catalog and executed the changes. Remember, when you apply a smoke test, you are enforcing the class in the manifest that you specify, locally and one time only. The changes will be overridden on the next agent run. 
+If the output from puppet apply noop indicates that the convergence actions are what you want, you can run puppet apply without noop to enforce the change in state. For our s s h modules example, you might receive output that looks something like this. In this example, the output informs you that Puppet has compiled the catalog and executed the changes. Remember, when you apply a smoke test, you are enforcing the class in the manifest that you specify, locally and one time only. The changes will be overridden on the next agent run.  
 
 ### slide 12 - Summary
 
-Although smoke testing is only the most basic level of testing, it allows you to verify that your code compiles and cleanly applies to a node. If nothing blows up, then you are ready to proceed to more rigorous testing of your modules before placing them into production. The next course in this testing bundle introduces unit testing Puppet modules.
+Although smoke testing is only the most basic level of testing, it allows you to verify that your code compiles and cleanly applies to a node. If nothing blows up, then you are ready to proceed to more rigorous testing of your modules before placing them into production. The next course in this testing bundle introduces unit testing for your Puppet modules.
 
 ### slide 13 - Next steps
 
