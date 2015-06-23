@@ -29,6 +29,7 @@ if course_number.to_i > 10
   puts "[11] Practical Hiera Usage"
   puts "[12] Writing Your First Module"
   puts "[13] Managing Puppet Code"
+  puts "[14] Infrastructure Design Using Puppet Modules"
   puts "Enter course code:"
   course_number = gets()
 end
@@ -46,6 +47,7 @@ courses = [ "resources.pp",
             "hiera.pp",
             "module.pp",
             "code.pp",
+            "infrastructure.pp",
             "default.pp" ]
 
 %x(puppet apply /etc/puppetlabs/puppet/modules/lms/tests/#{courses[ course_number.to_i - 1 ]})
