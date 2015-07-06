@@ -80,7 +80,7 @@ In this exercise, you can practice validating the puppet code in and applying sm
 
 1. Click on the Practice VM icon and log in to the virtual machine that we have set up for your practice session. The login and password display on the welcome screen.
 
-2. Move to the /etc/puppetlabs/puppet/modules ssh directory and list the contents to see the sub-directories it contains.
+2. Change directory to /etc/puppetlabs/puppet/modules/ssh directory and list the contents to see the sub-directories it contains.
 
 3. Run puppet parser on each of the files in the manifests directory. Edit the files to correct any errors, and then re-run the command. For example:
 
