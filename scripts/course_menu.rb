@@ -23,7 +23,7 @@ if course_number.to_i > 11
   puts "[13] Writing Your First Module"
   puts "[14] Managing Puppet Code"
   puts "[15] Infrastructure Design Using Puppet Modules"
-  puts "Enter course code:"
+  puts "Enter course number:"
   course_number = gets()
 end
 
