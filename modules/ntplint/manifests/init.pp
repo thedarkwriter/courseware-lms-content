@@ -1,6 +1,6 @@
 # An example ntp class for testing puppet-lint checks
 
-class ntplint ($servers = undef, $enable = true, $ensure = running) {
+class ntplint ($servers = undef, $enable = true, $ensure = running {
 
   case $operatingsystem {
     centos, redhat: {

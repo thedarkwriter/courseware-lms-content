@@ -33,19 +33,13 @@ The manifests directory contains all of the manifests in the module. This direct
 
 In the module directory there are two sub-directories that you use for Puppet testing. The tests directory contains examples showing how to declare the module's classes and defined types.  Each class or type should have an example in the tests directory. The spec directory is where you put spec and server spec tests that you use to test plugins in the lib directory.
 
-### slide Module Paths
-
-One final note about Puppet structure -  with Puppet Enterprise, modules installed by Puppet, modules you download from the Puppet Forge, and modules that you create to manage nodes are located in the directory /etc/puppetlabs/puppet/environments/production/modules. Puppet Enterprise also installs modules in the /opt/puppet/share/puppet/modules directory. You should not modify anything in or add any modules to this directory.
-
 ### slide Puppet Modules
 
-Next-  a quick review of best practices for writing your Puppet modules. To write your modules, we strongly suggest that you run the command puppet module generate, with your username, a hyphen, and a name for the module that you wwant to create. When you run this command, the Puppet module tool gathers metadata about your module, through a series of questions, and creates a basic module structure for you, including your spec and tests directories and the appropriate files in those directories. 
+Next -  a quick review of best practices for writing your Puppet modules. To write your modules, we strongly suggest that you run the command puppet module generate, with your username, a hyphen, and a name for the module that you want to create. When you run this command, the Puppet module tool gathers metadata about your module, through a series of questions, and creates a basic module structure for you, including directories for testing and the appropriate files in those directories.  
 
 ### slide Puppet Module Tool 
 
-This is an example of the output from Puppet after you run the puppet generate module command. 
-
-You also have the option of writing classes and defined types by hand and placing them in properly named manifest files. If you decide to create the module manually, you must be sure that your metadata.json file is properly formatted or your module will not work. Why not use the automated Puppet module tool and avoid any possible complications?
+This is an example of the output from Puppet after you run the puppet generate module command. You can also write classes and defined types by hand, and place them in properly named manifest files. But, if you decide to create the module manually, you have to be sure that your metadata.json file is properly formatted or your module won't work. so, why not use the automated Puppet module tool and avoid possible complications?
 
 ### slide More about Puppet Modules
 
@@ -61,11 +55,7 @@ The purpose of this style guide is to promote consistent module formatting acros
 
 ### slide Guiding Principles
 
-We can never cover every possible circumstance you might run into when developing Puppet code or creating a module. Eventually, a judgement call will be necessary. When that happens, keep in mind some general principles:
-
-First, readability matters.If you have to choose between two equally effective alternatives, pick the more readable one. While this is subjective, if you can read your own code three months from now, it’s a great start. In particular, code that generates readable diffs is highly preferred.
-Next, scoping and simplicity are key.When in doubt, err on the side of simplicity. A module should contain related resources that enable it to accomplish a task. If you describe the function of your module and you find yourself using the word ‘and,’ it’s time to split the module at the ‘and.’ You should have one goal that all your classes and parameters focus on achieving.
-And third, your module is a piece of software. And you should treat it that way. When it comes to making decisions, choose the option that is cleanest and easiest to maintain for the long term.
+We can never cover every possible circumstance you might run into when developing Puppet code or creating a module. Eventually, a judgement call will be necessary. When that happens, keep in mind some general principles: First, readability matters.If you have to choose between two equally effective alternatives, pick the more readable one. While this is subjective, if you can read your own code three months from now, it’s a great start. In particular, code that generates readable diffs is highly preferred.Next, scoping and simplicity are key.When in doubt, err on the side of simplicity. A module should contain related resources that enable it to accomplish a task. If you describe the function of your module and you find yourself using the word ‘and,’ it’s time to split the module at the ‘and.’ You should have one goal that all your classes and parameters focus on achieving.And third, your module is a piece of software. So treat it that way. When it comes to making decisions, choose the option that is cleanest and easiest to maintain for the long term.
 
 ### Puppet Parser
 
