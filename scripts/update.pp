@@ -15,3 +15,9 @@ file { '/usr/local/bin/course_selector':
   source  => '/usr/src/courseware-lms-content/scripts/course_selector.rb',
   require => Exec['update repo']
 }
+file { '/usr/local/bin/course_menu':
+  ensure  => present,
+  mode    => 755,
+  source  => '/usr/src/courseware-lms-content/scripts/course_menu.rb',
+  require => Exec['update repo']
+}
