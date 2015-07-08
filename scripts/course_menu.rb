@@ -18,7 +18,7 @@ puts "-----------------------------------------"
 puts "Enter course number:"
 course_number = gets()
 
-if course_number.to_i > 11
+if course_number.to_i > 12
   then
   puts "[13] Practical Hiera Usage"
   puts "[14] Writing Your First Module"
