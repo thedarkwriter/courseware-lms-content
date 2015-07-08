@@ -1,5 +1,28 @@
 #! /usr/bin/ruby
 
+self_paced = {
+               "1"  => "resources.pp",
+               "2"  => "relationships.pp",
+               "3"  => "hiera_intro.pp",
+               "4"  => "puppet_lint.pp",
+               "5"  => "inheritance.pp",
+               "6"  => "autoloading.pp",
+               "7"  => "facter_intro.pp",
+               "8"  => "vim_intro.pp",
+               "9"  => "cli_intro.pp",
+               "10" => "classes.pp",
+               "11" => "testing.pp",
+               "12" => "validating.pp",
+             }
+
+instructor_led = {
+                    "1" => "hiera.pp",
+                    "2" => "module.pp",
+                    "3" => "code.pp",
+                    "4" => "infrastructure.pp",
+                    "5" => "default.pp"
+                 }
+
 puts "-----------------------------------------"
 puts " [1] Resources"
 puts " [2] Relationships"
@@ -13,39 +36,28 @@ puts " [9] An Introduction to the Linux Command Line"
 puts "[10] Classes"
 puts "[11] Testing"
 puts "[12] Validating Puppet Code"
-puts "[13] Instructor Led Courses"
+puts " [I] Instructor Led Courses"
 puts "-----------------------------------------"
 puts "Enter course number:"
-course_number = gets()
+course_number = gets().chomp
 
-if course_number.to_i > 12
-  then
-  puts "[13] Practical Hiera Usage"
-  puts "[14] Writing Your First Module"
-  puts "[15] Managing Puppet Code"
-  puts "[16] Infrastructure Design Using Puppet Modules"
+if self_paced.has_key?(course_number)
+then
+  %x(puppet apply /etc/puppetlabs/puppet/modules/lms/tests/#{self_paced[course_number]})
+else
+  puts "[1] Practical Hiera Usage"
+  puts "[2] Writing Your First Module"
+  puts "[3] Managing Puppet Code"
+  puts "[4] Infrastructure Design Using Puppet Modules"
+  puts "[5] Other Courses"
   puts "Enter course number:"
-  course_number = gets()
+  course_number = gets().chomp
+  if instructor_led.has_key?(course_number)
+  then
+    %x(puppet apply /etc/puppetlabs/puppet/modules/lms/tests/#{instructor_led[course_number]})
+  end
 end
 
-courses = [ "resources.pp",
-            "relationships.pp",
-            "hiera_intro.pp",
-            "puppet_lint.pp",
-            "inheritance.pp",
-            "autoloading.pp",
-            "facter_intro.pp",
-            "vim_intro.pp",
-            "cli_intro.pp",
-            "classes.pp",
-            "testing.pp",
-            "validating.pp",
-            "hiera.pp",
-            "module.pp",
-            "code.pp",
-            "infrastructure.pp",
-            "default.pp" ]
 
-%x(puppet apply /etc/puppetlabs/puppet/modules/lms/tests/#{courses[ course_number.to_i - 1 ]})
 # Re-initialize bash to pick up changes
 exec ( 'bash' )
