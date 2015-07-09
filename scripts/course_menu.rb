@@ -1,52 +1,81 @@
-#! /usr/bin/ruby
+#! /opt/puppet/bin/ruby
+require "curses"
+include Curses
 
-self_paced = {
-  "A"  => { :name => "Resources", :file => "resources.pp"},
-  "B"  => { :name => "Relationships", :file => "relationships.pp"},
-  "C"  => { :name => "An Introduction to Hiera", :file => "hiera_intro.pp"},
-  "D"  => { :name => "Puppet Lint", :file => "puppet_lint.pp"},
-  "E"  => { :name => "Inheritance", :file => "inheritance.pp"},
-  "F"  => { :name => "Autoloading", :file => "autoloading.pp"},
-  "G"  => { :name => "An Introduction to Facter", :file => "facter_intro.pp"},
-  "H"  => { :name => "An Introduction to Vim", :file => "vim_intro.pp"},
-  "I"  => { :name => "An Introduction to the Linux Command Line", :file => "cli_intro.pp"},
-  "J" => { :name => "Classes", :file => "classes.pp"},
-  "K" => { :name => "Testing", :file => "testing.pp"},
-  "L" => { :name => "Validating Puppet Code", :file => "validating.pp"},
-}
+def draw_menu(courses, menu, active_index=nil)
+  menu.setpos(1, 15)
+  menu.attrset(A_UNDERLINE)
+  menu.addstr 'Please Choose a course:'
 
-instructor_led = {
-  "A" => { :name => "Practical Hiera Usage", :file => "hiera.pp"},
-  "B" => { :name => "Writing Your First Module", :file => "module.pp"},
-  "C" => { :name => "Managing Puppet Code", :file => "code.pp"},
-  "D" => { :name => "Infrastructure Design Using Puppet Modules", :file => "infrastructure.pp"},
-  "E" => { :name => "Other Courses", :file => "default.pp"},
-}
-
-puts "-----------------------------------------"
-self_paced.sort_by{|k,v|k}.each do |letter, course|
-  printf("[%s] %s\n", letter, course[:name])
-end
-puts "[Z] Instructor Led Courses"
-puts "-----------------------------------------"
-puts "Enter course letter:"
-course_letter = gets().chomp.upcase
-
-if self_paced.has_key?(course_letter)
-  then
-  %x(puppet apply /etc/puppetlabs/puppet/modules/lms/tests/#{self_paced[course_letter][:file]})
-else
-  instructor_led.sort_by{|k,v|k}.each do |letter, course|
-    printf("[%s] %s\n", letter, course[:name])
+  courses.each_with_index do | (course, manifest), index |
+    menu.setpos(index + 3, 4)
+    menu.attrset(index == active_index ? A_STANDOUT : A_NORMAL)
+    menu.addstr course
   end
-  puts "Enter course letter:"
-  course_number = gets().chomp.upcase
-  if instructor_led.has_key?(course_letter)
-    then
-    %x(puppet apply /etc/puppetlabs/puppet/modules/lms/tests/#{instructor_led[course_letter][:file]})
-  end
+
+  menu.setpos(courses.length + 4, 4)
+  menu.attrset(A_UNDERLINE)
+  menu.addstr 'Press X to exit'
 end
 
+def draw_info(menu, text)
+  menu.setpos(1, 50)
+  menu.attrset(A_NORMAL)
+  menu.addstr text
+end
 
-# Re-initialize bash to pick up changes
-exec ( 'bash' )
+courses = {
+  'Resources'                                  => 'resources.pp',
+  'Relationships'                              => 'relationships.pp',
+  'An Introduction to Hiera'                   => 'hiera_intro.pp',
+  'Puppet Lint'                                => 'puppet_lint.pp',
+  'Inheritance'                                => 'inheritance.pp',
+  'Autoloading'                                => 'autoloading.pp',
+  'An Introduction to Facter'                  => 'facter_intro.pp',
+  'An Introduction to Vim'                     => 'vim_intro.pp',
+  'An Introduction to the Linux Command Line'  => 'cli_intro.pp',
+  'Classes'                                    => 'classes.pp',
+  'Testing'                                    => 'testing.pp',
+  'Validating Puppet Code'                     => 'validating.pp',
+  'Practical Hiera Usage'                      => 'hiera.pp',
+  'Writing Your First Module'                  => 'module.pp',
+  'Managing Puppet Code'                       => 'code.pp',
+  'Infrastructure Design Using Puppet Modules' => 'infrastructure.pp',
+}
+courses = courses.sort_by{|k,v|k}
+
+begin
+  init_screen
+  noecho
+  nonl
+  cbreak
+
+  menu = Window.new(24,76,0,2)
+  menu.box('|','-')
+  menu.keypad = true
+
+  position = 0
+  draw_menu(courses, menu, position)
+  while ch = menu.getch
+    case ch
+    when KEY_UP, 'w','k'
+      position -= 1
+    when KEY_DOWN, 's','j'
+      position += 1
+    when KEY_ENTER, ' ', 13
+      close_screen
+      puts "Applying manifest #{courses[position][1]} for #{courses[position][0]}"
+      %x(puppet apply /etc/puppetlabs/puppet/modules/lms/tests/#{courses[position][1]})
+      exit
+    when 'x','X'
+      exit
+    end
+
+    position = courses.size - 1 if position < 0
+    position = 0 if position >= courses.size
+    draw_menu(courses, menu, position)
+  end
+
+ensure
+  close_screen
+end
