@@ -1,51 +1,81 @@
-#! /usr/bin/ruby
+#! /opt/puppet/bin/ruby
+require "curses"
+include Curses
 
-puts "-----------------------------------------"
-puts " [1] Resources"
-puts " [2] Relationships"
-puts " [3] An Introduction to Hiera"
-puts " [4] Puppet Lint"
-puts " [5] Inheritance"
-puts " [6] Autoloading"
-puts " [7] An Introduction to Facter"
-puts " [8] An Introduction to Vim"
-puts " [9] An Introduction to the Linux Command Line"
-puts "[10] Classes"
-puts "[11] Testing"
-puts "[12] Validating Puppet Code"
-puts "[13] Instructor Led Courses"
-puts "-----------------------------------------"
-puts "Enter course number:"
-course_number = gets()
+def draw_menu(courses, menu, active_index=nil)
+  menu.setpos(1, 15)
+  menu.attrset(A_UNDERLINE)
+  menu.addstr 'Please Choose a course:'
 
-if course_number.to_i > 11
-  then
-  puts "[13] Practical Hiera Usage"
-  puts "[14] Writing Your First Module"
-  puts "[15] Managing Puppet Code"
-  puts "[16] Infrastructure Design Using Puppet Modules"
-  puts "Enter course number:"
-  course_number = gets()
+  courses.each_with_index do | (course, manifest), index |
+    menu.setpos(index + 3, 4)
+    menu.attrset(index == active_index ? A_STANDOUT : A_NORMAL)
+    menu.addstr course
+  end
+
+  menu.setpos(courses.length + 4, 4)
+  menu.attrset(A_UNDERLINE)
+  menu.addstr 'Press X to exit'
 end
 
-courses = [ "resources.pp",
-            "relationships.pp",
-            "hiera_intro.pp",
-            "puppet_lint.pp",
-            "inheritance.pp",
-            "autoloading.pp",
-            "facter_intro.pp",
-            "vim_intro.pp",
-            "cli_intro.pp",
-            "classes.pp",
-            "testing.pp",
-            "validating.pp",
-            "hiera.pp",
-            "module.pp",
-            "code.pp",
-            "infrastructure.pp",
-            "default.pp" ]
+def draw_info(menu, text)
+  menu.setpos(1, 50)
+  menu.attrset(A_NORMAL)
+  menu.addstr text
+end
 
-%x(puppet apply /etc/puppetlabs/puppet/modules/lms/tests/#{courses[ course_number.to_i - 1 ]})
-# Re-initialize bash to pick up changes
-exec ( 'bash' )
+courses = {
+  'Resources'                                  => 'resources.pp',
+  'Relationships'                              => 'relationships.pp',
+  'An Introduction to Hiera'                   => 'hiera_intro.pp',
+  'Puppet Lint'                                => 'puppet_lint.pp',
+  'Inheritance'                                => 'inheritance.pp',
+  'Autoloading'                                => 'autoloading.pp',
+  'An Introduction to Facter'                  => 'facter_intro.pp',
+  'An Introduction to Vim'                     => 'vim_intro.pp',
+  'An Introduction to the Linux Command Line'  => 'cli_intro.pp',
+  'Classes'                                    => 'classes.pp',
+  'Testing'                                    => 'testing.pp',
+  'Validating Puppet Code'                     => 'validating.pp',
+  'Practical Hiera Usage'                      => 'hiera.pp',
+  'Writing Your First Module'                  => 'module.pp',
+  'Managing Puppet Code'                       => 'code.pp',
+  'Infrastructure Design Using Puppet Modules' => 'infrastructure.pp',
+}
+courses = courses.sort_by{|k,v|k}
+
+begin
+  init_screen
+  noecho
+  nonl
+  cbreak
+
+  menu = Window.new(24,76,0,2)
+  menu.box('|','-')
+  menu.keypad = true
+
+  position = 0
+  draw_menu(courses, menu, position)
+  while ch = menu.getch
+    case ch
+    when KEY_UP, 'w','k'
+      position -= 1
+    when KEY_DOWN, 's','j'
+      position += 1
+    when KEY_ENTER, ' ', 13
+      close_screen
+      puts "Applying manifest #{courses[position][1]} for #{courses[position][0]}"
+      %x(puppet apply /etc/puppetlabs/puppet/modules/lms/tests/#{courses[position][1]})
+      exit
+    when 'x','X'
+      exit
+    end
+
+    position = courses.size - 1 if position < 0
+    position = 0 if position >= courses.size
+    draw_menu(courses, menu, position)
+  end
+
+ensure
+  close_screen
+end
