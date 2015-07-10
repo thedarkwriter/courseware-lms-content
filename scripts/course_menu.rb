@@ -80,3 +80,5 @@ begin
 ensure
   close_screen
 end
+
+exec ('bash')
