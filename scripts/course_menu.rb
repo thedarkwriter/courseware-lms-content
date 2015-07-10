@@ -79,6 +79,6 @@ begin
 
 ensure
   close_screen
+  exec ('bash')
 end
 
-exec ('bash')
