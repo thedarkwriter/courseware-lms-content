@@ -1,0 +1,2 @@
+class{'lms': course => 'default'}
+
