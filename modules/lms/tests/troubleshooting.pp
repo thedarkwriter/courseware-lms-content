@@ -10,4 +10,7 @@ file {'/usr/local/bin/':
   source  => "puppet:///modules/lms/troubleshooting/scripts/",
   mode    => 755,
 }
+file {'/root/.bashrc.puppet':
+  ensure => absent,
+}
 
