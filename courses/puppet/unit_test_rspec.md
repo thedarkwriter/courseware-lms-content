@@ -23,7 +23,9 @@ At the end of this course you will be able to:
 (Course Title - no script) 
 
 ### slide 2 Introductory stuff
-"Puppet is written in Ruby. And so it works very well to test your Puppet modules with a Ruby tool. In the Ruby world, there are several testing libraries that you can use to test your Puppet modules. rspec is a popular one and one that we use extensively at Puppet Labs."  
+"Puppet is written in Ruby. And so it works very well to test your Puppet modules with a Ruby tool. In the Ruby world, there are several testing libraries that you can use to test your Puppet modules. rspec is a popular one and one that we use extensively at Puppet Labs."
+
+"Rspec-Puppet provides a unit-testing framework for Puppet. It extends RSpec to allow the testing framework to understand Puppet catalogs, the artifact it specializes in testing. You can write tests to test that aspects of your module work as intended."  
 
 
 ### slide The Basics
@@ -35,7 +37,7 @@ You can use rspec to encapsulate what your testing with the `describe` blockn an
 
 ### slide 
 
-
+Unit testing tests how your code behaves. In a later course we look at how (integration, acceptance) testing allows you to test what your code does when it is executed.
 
 ### slide 
 
