@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Make sure stdlib is installed
+puppet module install puppetlabs-stdlib --modulepath=/etc/puppetlabs/puppet/modules
+
 # Set up a wonky site.pp
 cat > /etc/puppetlabs/puppet/environments/production/manifests/site.pp << EOM
 filebucket { 'main':
@@ -18,5 +21,6 @@ node default {
 }
 EOM
 
+echo "Setting up capstone scenario, please stand by."
 # Hide all output from the puppet run
 puppet agent -t >/dev/null 2>/dev/null
