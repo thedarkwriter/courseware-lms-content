@@ -15,4 +15,4 @@ File { backup => 'main' }
 node default {
 }
 EOM
-
+sed -i 's/training.puppetlabs.vm/learning.puppetlabs.vm/' /etc/puppetlabs/puppet/puppet.conf
