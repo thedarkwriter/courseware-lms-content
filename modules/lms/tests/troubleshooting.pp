@@ -1,9 +1,4 @@
 class{'lms': course => 'default'}
-file {'/root/labs/':
-  ensure  => directory,
-  recurse => true,
-  source  => "puppet:///modules/lms/troubleshooting/labs",
-}
 file {'/usr/local/bin/':
   ensure  => directory,
   recurse => true,
