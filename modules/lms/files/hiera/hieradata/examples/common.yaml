@@ -1,0 +1,12 @@
+---
+message: This string is the value that is returned when hiera('message') is called.
+site_users:
+  jane: 
+    ensure: present
+    role: admin
+  jim:
+    ensure: present
+    role: admin
+  bob: 
+    ensure: present
+    role: user
