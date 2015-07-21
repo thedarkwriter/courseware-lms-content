@@ -31,6 +31,10 @@ This course is one in a series of courses that we have created to help you learn
 
 In this course we look at how to write unit tests for your Puppet modules using the rspec testing library. But first - a brief review of the structure of a Puppet module. 
 
+### slide 2 - Module Review
+
+Modules are self-contained bundles of code and data. On disk, a module is a directory tree with a specific, predictable structure. The module name is the outermost directory’s name. The manifests directory contains all of the manifests in the module, including an `init.pp` manifest where the class name matches the module name. Other manifest file names map to the names of the classes they contain. A well-formed Puppet module implements each class in a separate file in the manifests directory. Although none of the directories in the module tree are mandatory, for the purposes of testing, you should have an examples sub-directory that contains the test examples that you write for smoke testing your class declarations and defined types. And you should have a spec directory where you put spec and server spec tests, including unit tests, that you use to test plugins in the lib directory.
+
 
 
 ------
