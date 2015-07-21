@@ -23,7 +23,7 @@ At the end of this course you will be able to:
 
 ### slide 1 - Testing Puppet: Unit Tests
 
-Unit tests let you test parts of a complete configuration, in isolation from one another and in a controlled context, so that you can identify exactly what pieces may be not working and under what conditions.  Your unit tests should be as simple as possible and easy to debug. They should test the smallest unit of functionality and are intended to prove that each part of your code can work on its own as intended and independent of the other pieces.
+As your codebase grows in complexity, changing one part of the code without affecting other parts becomes exponentially more difficult. Unit tests are a method for ensuring that individual parts of your codebase continue to work as intended while other parts are improved and refactored as needed. 
 
 ### slide 2 - Testing Flow Diagram
 
@@ -84,7 +84,7 @@ So now let's say that you have used puppet module generate to create  your modul
 
 ### Slide 16 - Testing Directory Tree
 
-This is a recommended directory structure and naming convetions for purposes of testing your module. Although none of the sub-directories are required, if you use this structure, your examples will be placed in the correct groups automatically and will have access to the custom matchers. However, if you choose not to use this structure, you can force the examples into the required groups with syntax such as this to test a class.
+This is a recommended directory structure and naming conventions for purposes of testing your module. Although none of the sub-directories are required, these are some sample group directories. If you use this structure, your examples will be placed in the correct groups automatically and will have access to the custom matchers. However, if you choose not to use this structure, you can force the examples into the required groups with syntax such as this to test a class.
 
 
 
