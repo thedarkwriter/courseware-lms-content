@@ -46,6 +46,16 @@ Unit tests don't test the results of executing your manifest on a live system. W
 
 Puppet is written in Ruby. And so it works very well to test your Puppet modules with a Ruby tool. In the Ruby world, there are several testing libraries that you can use to test your Puppet modules. rspec is a popular one and one that we use extensively at Puppet Labs. Rspec-Puppet provides a unit-testing framework for Puppet. It extends RSpec to allow the testing framework to understand Puppet catalogs, the artifact it specializes in testing. With rspec-puppet, you can write tests to test that aspects of your module work as intended.
 
+### slide 7 - Simple Tests
+
+At first glance, it could appear that writing unit tests is nothing more than duplicating manifests in another language.  And that may be true for simple manifests. 
+
+### slide 8 - Template in the test
+
+However, when you start to write more complex modules, that include dynamic content from templates, support multiple operating systems, or that take different actions when passed parameters, unit tests are invaluable. And when you add new functionality to your modules, unit tests can help protect against regressions when refactoring or upgrading to a new Puppet release.
+
+
+
 ------
 ------
 
