@@ -38,6 +38,10 @@ Modules are self-contained bundles of code and data. On disk, a module is a dire
 
 Unit tests let you test parts of a complete configuration, in isolation from one another and in a controlled context, so that you can identify exactly what pieces may be not working and under what conditions.  Your unit tests should be as simple as possible and easy to debug. They should test the smallest unit of functionality and are intended to prove that each part of your code can work on its own as intended and independent of the other pieces.
 
+### slide 5 - Why unit tests?
+
+Unit tests don't test the results of executing your manifest on a live system. What they do test is the behaviour of Puppet when it compiles your resources into a catalogue. Your unit tests ensure that resources are included and that classes are declared. They also validate the resource attributes and evaluate results with different class parameters.
+
 ------
 ------
 
