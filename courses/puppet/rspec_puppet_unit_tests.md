@@ -78,6 +78,15 @@ You can also use matchers to validate that resources have relationships set. You
 
 You can also combine matchers. This example shows how you can use chaining to create shortcuts. 
 
+### slide 15 - Puppet Module Generate
+
+So now let's say that you have used puppet module generate to create  your module structure for you. Puppet creates the directories, and the appropriate files in those directories, that you need for testing . 
+
+### Slide 16 - Testing Directory Tree
+
+This is a recommended directory structure and naming convetions for purposes of testing your module. Although none of the sub-directories are required, if you use this structure, your examples will be placed in the correct groups automatically and will have access to the custom matchers. However, if you choose not to use this structure, you can force the examples into the required groups with syntax such as this to test a class.
+
+
 
 
 ------
