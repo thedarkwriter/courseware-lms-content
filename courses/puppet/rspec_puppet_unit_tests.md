@@ -54,6 +54,30 @@ At first glance, it could appear that writing unit tests is nothing more than du
 
 However, when you start to write more complex modules, that include dynamic content from templates, support multiple operating systems, or that take different actions when passed parameters, unit tests are invaluable. And when you add new functionality to your modules, unit tests can help protect against regressions when refactoring or upgrading to a new Puppet release.
 
+### slide 9 - rspec Matchers
+
+Next, and before we look at how to create tests with rspec-puppet, it is important to be familiar with rspec matchers. For the purpose of validating conditions, rspec matchers can match exact values, regular expresssions, or Ruby Procs. Let's look at some methods for validating some conditions.
+
+### slide 10 - Catalog compiles
+
+First you may want to test whether a catalog compiles cleanly; you can use the matcher "compile." And if you want to see raised error messages, you can use the should compile matcher with the and raise error extension and the error message that you want to see. In this example, we are checking for an error message that indicates that the apache module does not run on Windows.
+
+### slide 11 - Catalog Resources
+
+You'll also want to check that the catalog contains resources. To check whether a resource exists you use the contain matcher and the resource type for each resource type and helper that (you want to test for. This example  example is checking to see whether an s s h service has been declared.
+
+### slide 12 - Specified resources
+
+To validate that resources have specified attributes, you use the contain matcher and the resource type and add the with or without chains and the attribute that you want to check for. In the first example we are checking tfor a file with a specific owner, root. And in the second example we are checking for a file that has the mode attribute undefined.
+
+### slide 13 - Resource relationships
+
+You can also use matchers to validate that resources have relationships set. You can test the relationships between the resources in your catalog regardless of how the jrelationship is defined. IN otherwords, you can define relationships with the metaparameters require, before, notify, and subscrioe, or with chaining arrows. Once again you use the should contain type matcher and add the relationship matcher
+
+### slide 14 - Shortcuts
+
+You can also combine matchers. This example shows how you can use chaining to create shortcuts. 
+
 
 
 ------
