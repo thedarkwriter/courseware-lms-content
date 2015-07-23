@@ -94,8 +94,9 @@ rspec rspec-puppet needs three files in order to run your tests. If you use Pupp
 The ssh spec dot rb file is the test file for the ssh class. Describe tells us what we are testing - the ssh class. Do tells us the steps for the test. For both Redhat and Debian platforms, without any passed parameters and with the provided I P address, validate that the package is installed, that the appropriate configuration file is used - either server or client, and that the service is running.
 ### slide 23 - Test Passes
 To execute the test, from the top level of the module directory tree, run the command rake spec, with the path for Puppet's vendored Ruby. If the test is successful, you receive output that indicates the spec test has a status of green, indicated by the green dot. The system provides the run time, the number of tests run and the number of failures.
-
-## Exercises
+### slide 24 - Test Fails
+If the test fails, you receive output similar to what we have in this example. Instead of the green dot, you'll see an upper case lett ef. It is highlighted here in red. The system provides a description of the failures and where they are located in the tests. You can also see a list of the tests that failed.
+## Exercises
 
 ## Quiz
 
