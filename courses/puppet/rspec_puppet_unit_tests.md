@@ -8,18 +8,8 @@ At the end of this course you will be able to:
 * Describe methods for using spec-puppet to test.
 * Identify elements of Puppet Module spec tests.
 
-## Video
 
-## Exercises
-
-## Quiz
-
-## References
-
-# Slide Content
-## This is the content for the instructional video.
-
-
+## Slide Content - This is the content for the instructional video.
 
 ### slide 1 - Testing Puppet: Unit Tests
 
@@ -98,7 +88,12 @@ If you used the Puppet module generate to create your module, Puppet automatical
 
 rspec rspec-puppet needs three files in order to run your tests. If you use Puppet Module Generate to create your module, Puppet creates the Rakefile and the spec_helper file. .fixtures.yml is a file used exclusively by rspec to pull in dependencies required to successfully run unit tests. rspec compiles Puppet catalogs in a sandbox. It needs a minimal environment, including a module path. the fixture dot yml file creates the modulepath for the sandbox. You need to create the fixture dot yml file, and include in it  symlinks for all the modules that the module you are testing depends on. 
  
- 
+## Exercises
+
+## Quiz
+
+## References
+
 
 ------
 ------
