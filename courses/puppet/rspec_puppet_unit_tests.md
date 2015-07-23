@@ -97,7 +97,9 @@ rspec rspec-puppet needs three files in order to run your tests. If you use Pupp
 ### slide 24 - Test Fails
 If the test fails, you receive output similar to what we have in this example. Instead of the green dot, you'll see an upper case lett ef. It is highlighted here in red. The system provides a description of the failures and where they are located in the tests. You can also see a list of the tests that failed.
 ### slide 25 - Summary
-You use unit tests to validate each individual class in your module under controlled conditions. Units tests validate that the catalog compiles and includes all the resources as expected. Once you are confident that your Puppet module does what you expect it to do, independent of the rest of your code base, your are ready for acceptance testing which tests your module when it is executed and which we address in the next course.## Exercises
+You use unit tests to validate each individual class in your module under controlled conditions. Units tests validate that the catalog compiles and includes all the resources as expected. Once you are confident that your Puppet module does what you expect it to do, independent of the rest of your code base, your are ready for acceptance testing which tests your module when it is executed and which we address in the next course.
+### slide 26 - Next Steps
+You use unit tests to validate each individual class in your module under controlled conditions. Units tests validate that the catalog compiles and includes all the resources as expected. Once you are confident that your Puppet module does what you expect it to do, independent of the rest of your code base, your are ready for acceptance testing which tests your module when it is executed and which we address in the next course.### slide 27 - Thank You## Exercises
 
 ## Quiz
 
