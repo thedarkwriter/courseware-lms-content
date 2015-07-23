@@ -87,9 +87,9 @@ If you used the Puppet module generate to create your module, Puppet automatical
 ### slide 19 - Sandbox files
 
 rspec rspec-puppet needs three files in order to run your tests. If you use Puppet Module Generate to create your module, Puppet creates the Rakefile and the spec_helper file. .fixtures.yml is a file used exclusively by rspec to pull in dependencies required to successfully run unit tests. rspec compiles Puppet catalogs in a sandbox. It needs a minimal environment, including a module path. the fixture dot yml file creates the modulepath for the sandbox. You need to create the fixture dot yml file, and include in it  symlinks for all the modules that the module you are testing depends on. 
-### slide 20 - Structure of spec-puppet Tests
+### slide 20 - Structure of rspec-puppet Tests
 So, now that rspec-puppet is installed and we've looked at the basic rpec-puppet concepts, the recommended directory tree structure for testing your modules, and the required files, let's look more specifically at writing rspec-puppet tests. Regardless of whether you are testing classes, defined types, functions, or hosts, the basic structure of your test file is the same. You want to include the spec_helper  library of functions for running your tests. The basic structure of describing the thing you want to test  and what the test should do lets you easily express concepts in a conversational manner.
- 
+### slide 21 - Test Naming and PlacementHow you name your tests and where you place them is important.  Test files should always end in _spec.rb and the convention is that they are named for the thing that you are testing. In the recommended spec directory structure,there are sub-directories for the different unit tests. Class tests should be placed in spec/classes, defined type tests should go in spec/defines, and so on. 
 ## Exercises
 
 ## Quiz
