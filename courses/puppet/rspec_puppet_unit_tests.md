@@ -1,12 +1,12 @@
 # Testing Puppet: Unit Tests
 
-Understanding ....  
+As your codebase grows in complexity, changing one part of the code without affecting other parts becomes exponentially more difficult. Unit tests are a method for ensuring that individual parts of your codebase continue to work as intended while other parts are improved and refactored as needed.
 
 At the end of this course you will be able to:
 
-* explain 
-* create 
-* examine 
+* Explain the purpose of unit testing.
+* Describe methods for using spec-puppet to test.
+* Identify elements of Puppet Module spec tests.
 
 ## Video
 
@@ -54,40 +54,51 @@ At first glance, it could appear that writing unit tests is nothing more than du
 
 However, when you start to write more complex modules, that include dynamic content from templates, support multiple operating systems, or that take different actions when passed parameters, unit tests are invaluable. And when you add new functionality to your modules, unit tests can help protect against regressions when refactoring or upgrading to a new Puppet release.
 
-### slide 9 - rspec Matchers
+### slide 9 Test-Driven Development
+
+Before we look at how to create tests with rspec-puppet, there are some concepts that you should be familiar with. Test-Driven Development is a practice that involves writing tests before writing the code that you are going to test. You begin by writing a very small test for code that does not yet exist. You run the test, and of course it fails. Then you write just enough code to make the test pass.  rspec was created in 2005 by Steven Baker from the idea that with languages such as Ruby, he could more freely explore new test driven development frameworks that could encourage focus on behaviour instead of structure.  Although the syntax has changed over time, the basic premise remains the same. You can use rspec to write executable examples of the expected behavior of a small bit of code in a controlled context. In your environment, you likely already have modules written that you want to test. And for the purposes of this course, we use examples from tests and modules that are already written. 
+
+### slide 10 - rspec Matchers
 
 Next, and before we look at how to create tests with rspec-puppet, it is important to be familiar with rspec matchers. For the purpose of validating conditions, rspec matchers can match exact values, regular expresssions, or Ruby Procs. Let's look at some methods for validating some conditions.
 
-### slide 10 - Catalog compiles
+### slide 11 - Catalog compiles
 
 First you may want to test whether a catalog compiles cleanly; you can use the matcher "compile." And if you want to see raised error messages, you can use the should compile matcher with the and raise error extension and the error message that you want to see. In this example, we are checking for an error message that indicates that the apache module does not run on Windows.
 
-### slide 11 - Catalog Resources
+### slide 12 - Catalog Resources
 
 You'll also want to check that the catalog contains resources. To check whether a resource exists you use the contain matcher and the resource type for each resource type and helper that (you want to test for. This example  example is checking to see whether an s s h service has been declared.
 
-### slide 12 - Specified resources
+### slide 13 - Specified Resource Attributes
 
 To validate that resources have specified attributes, you use the contain matcher and the resource type and add the with or without chains and the attribute that you want to check for. In the first example we are checking tfor a file with a specific owner, root. And in the second example we are checking for a file that has the mode attribute undefined.
 
-### slide 13 - Resource relationships
+### slide 14 - Resource relationships
 
 You can also use matchers to validate that resources have relationships set. You can test the relationships between the resources in your catalog regardless of how the jrelationship is defined. IN otherwords, you can define relationships with the metaparameters require, before, notify, and subscrioe, or with chaining arrows. Once again you use the should contain type matcher and add the relationship matcher
 
-### slide 14 - Shortcuts
+### slide 15 - Matcher Shortcuts
 
 You can also combine matchers. This example shows how you can use chaining to create shortcuts. 
 
-### slide 15 - Puppet Module Generate
+### slide 16 - Puppet Module Generate
 
 So now let's say that you have used puppet module generate to create  your module structure for you. Puppet creates the directories, and the appropriate files in those directories, that you need for testing . 
 
-### Slide 16 - Testing Directory Tree
+### Slide 17 - Testing Directory Tree
 
 This is a recommended directory structure and naming conventions for purposes of testing your module. Although none of the sub-directories are required, these are some sample group directories. If you use this structure, your examples will be placed in the correct groups automatically and will have access to the custom matchers. However, if you choose not to use this structure, you can force the examples into the required groups with syntax such as this to test a class.
 
+### slide 18 - Install rspec-puppet
 
+If you used the Puppet module generate to create your module, Puppet automatically created spec directory for you. However, you still need to install the Ruby gems. To install the rspec-puppet gem, type the command `/opt/puppet/bin/gem install rspec-puppet`. Then, to set up tests, install the puppetlabs_spec_helper gem. Type the command `/opt/puppet/bin/gem install puppetlabs_spec_helper`. You may notice that we use Puppet's vendored Ruby, instead of the system Ruby, to install. Although not always the best practice, it happens to be the simplest method of making the proper libraries and gems available for rpsec-puppet to load. You should only install a gem into Puppet's vendoored path if that gem needs to work with Puppet in some way. 
 
+### slide 19 - Sandbox files
+
+rspec rspec-puppet needs three files in order to run your tests. If you use Puppet Module Generate to create your module, Puppet creates the Rakefile and the spec_helper file. .fixtures.yml is a file used exclusively by rspec to pull in dependencies required to successfully run unit tests. rspec compiles Puppet catalogs in a sandbox. It needs a minimal environment, including a module path. the fixture dot yml file creates the modulepath for the sandbox. You need to create the fixture dot yml file, and include in it  symlinks for all the modules that the module you are testing depends on. 
+ 
+ 
 
 ------
 ------
