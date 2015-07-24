@@ -22,9 +22,9 @@ class iteration::functions {
     }
   }
 
-  $published_sites = $websites.filter |$site_fqdn,$site_info| { $site_info['publish'] }
-  $users = $websites.map |$site_fqdn, $site_info| { $site_info['owner'] }
-  $user_list = $users.reduce |$memo, $user| { "${memo},${user}" }
+  $published_sites =
+  $users = 
+  $user_list =
 
   $users.each |$user| {
     file { "/var/www/${user}":
