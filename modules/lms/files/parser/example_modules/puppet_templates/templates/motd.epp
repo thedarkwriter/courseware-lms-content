@@ -1,1 +1,1 @@
-This is a training VM belonging to: <%= $student_name %>
+This is a training VM belonging to:
