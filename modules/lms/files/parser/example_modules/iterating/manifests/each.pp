@@ -1,16 +1,14 @@
 class iterating::each {
   $users = ['larry','moe','shemp','elvis']
 
-  $users.each |$user| {
-    file { "/var/www/${user}":
-      ensure => file,
-      owner  => $user,
-    }
-    file { "/home/${user}/www":
-      ensure  => link,
-      target  => "/var/www/${user}",
-      require => File["/var/www/${user}"],
-    }
+  file { "/var/www/larry":
+    ensure => file,
+    owner  => 'larry',
+  }
+  file { "/home/larry/www":
+    ensure  => link,
+    target  => "/var/www/larry",
+    require => File["/var/www/larry"],
   }
 
   $websites = {
@@ -32,11 +30,7 @@ class iterating::each {
     }
   }
 
-  $websites.each |$site_fqdn, $site_info| {
-    if $site_info["publish"] {
-      nginx::vhost { $key:
-        www_root => $site_info["docroot"]
-      }
-    }
+  nginx::vhost { "larrysblog.puppetlabs.vm":
+    www_root => "/var/www/larry"
   }
 }
