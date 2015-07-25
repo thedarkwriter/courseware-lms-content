@@ -41,10 +41,6 @@ A Puppet module directory tree has a specific, predictable structure.  With Pupp
 The baseline for module testing used by Puppet Labs is that each manifest should have a corresponding test manifest, included in the examples directory,  that declares that class. As a best practice, Puppet recommends that you write your smoke test examples as you are developing your module. In this way you can complete ad hoc testing  as you develop. As you can see, if you create a test for each class, you will have an examples directory that is a mirror image of the manifests directory.  
 
 
-### slide 7 - Examples directory
-
-The baseline for module testing used by Puppet Labs is that each manifest should have a corresponding test manifest, included in the examples directory,  that declares that class. As a best practice, Puppet recommends that you write your smoke test examples as you are developing your module. In this way you can complete ad hoc testing  as you develop. As you can see, if you create a test for each class, you will have an examples directory that is a mirror image of the manifests directory. 
-
 ### slide 8 - Sample module tree
 
 In this sample module directory, s s h is the name of the module. There are two Puppet manifests in the manifests directory,  and in the examples directory there is a test for each manifest. The init dot p p manifest defines the s s h class; and the init.pp test declares it. The server manifest defines the s s h  server class; and the server.pp test declares it. A test for a class is really just a manifest that declares the class. So - when you perform smoke testing on your puppet modules, you are testing your class declarations. Often, this is as simple as shown in our example, one line that says include s s h.
@@ -76,15 +72,37 @@ Before moving on to the next level of testing, check your knowledge of smoke tes
 
 
 
-##Exercises
+##Exercise
 
-- Use the Puppet module tool to create a module with the following metadata:
-    - puppet module generate <your_name>-ssh
-    - accept the default version
-    - accept default for name
-    - accept default for license
-    - describe the module: 
+When you smoke test your Puppet code, you are validating that the code compiles by enforcing a a class one time only, locally. You can run the puppet apply --noop and puppet apply commands against tests files in the examples directory to smoke test your puppet code.
+
+In this exercise, you can practice validating the puppet code in and applying smoke tests to the ssh module that we have created for you in /etc/puppetlabs/puppet/modules.
+
+1. Click on the Practice VM icon and log in to the virtual machine that we have set up for your practice session. The login and password display on the welcome screen.
+
+2. Change directory to /etc/puppetlabs/puppet/modules/ssh directory and list the contents to see the sub-directories it contains.
+
+3. Run puppet parser on each of the files in the manifests directory. Edit the files to correct any errors, and then re-run the command. For example:
+
+`puppet parser validate /etc/puppetlabs/puppet/modules/ssh/manifests/init.pp`
+
+4. Run puppet lint on the init.pp manifiest. Again, edit the manifest to correct any errors.
+
+puppet-lint /etc/puppetlabs/puppet/modules/ssh/manifests/init.pp
+
+5. After you have fixed any errors, you still may receive warnings, such as: 
+
+`WARNING: class inheriting from params class on line  6`
+
+This is a warning from puppet lint just to call out that you are inheriting parameterized classes. To ignore the warning, re-run puppet lint with the ignore flag.
+
+`puppet-lint --no-class_inherits_from_params_class-check examples/init.pp` 
+
+6. Run `puppet apply --noop` on each of the files in the examples directory. If you encounter any errors, correct them and then re-run the command.
+
+7. Run `puppet apply` on each of the files in the examples directory.
     
 
 ## Quiz    
-    
+   
+ Included in the online course file.

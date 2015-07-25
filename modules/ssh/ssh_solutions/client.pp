@@ -1,6 +1,6 @@
 # == Class: ssh::client
 #
-class ssh::client inherits ssh::params {
+class ssh::client {
   File {
     owner => 'root',
     group => 'root',

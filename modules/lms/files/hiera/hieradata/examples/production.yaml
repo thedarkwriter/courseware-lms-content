@@ -1,0 +1,6 @@
+---
+site_users:
+  jim: 
+    ensure: absent
+  bob:
+    ensure: absent

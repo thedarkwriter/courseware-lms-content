@@ -4,7 +4,7 @@ describe 'ssh', :type => :class do
   ['RedHat', 'Debian'].each do |osfamily|
     let(:node) { 'testhost.example.com' }
 
-    describe 'when called with no parameters on RedHat' do
+    describe "when called with no parameters on #{osfamily}" do
       let (:facts) {{
         :osfamily  => "#{osfamily}",
         :ipaddress => '127.0.0.1'

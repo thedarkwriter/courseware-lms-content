@@ -10,3 +10,6 @@ file { '/etc/profile.d/profile.sh':
 file { '/etc/bash.bash_logout':
   ensure => absent,
 }
+file { '/etc/puppetlabs/puppet/environments':
+  ensure => directory,
+}
