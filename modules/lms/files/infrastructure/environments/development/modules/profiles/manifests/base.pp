@@ -11,6 +11,7 @@ class profile::base {
 
   # Example of class declaration using include
   include logrotate::base
+  include classroom::agent::hosts
 
   # Example of resource-like class declaration
   class { 'ssh::client':

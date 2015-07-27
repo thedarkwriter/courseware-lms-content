@@ -1,6 +1,5 @@
 class role::appserver {
-
-  include profile::base
-  include profile::wordpress
-  include profile::mysqldb
+  # Include the profiles below
+  include 
+  include 
 }
