@@ -87,7 +87,7 @@ This is a recommended directory structure and naming conventions for purposes of
 
 ### slide 18 - Install rspec-puppet
 
-If you used the Puppet module generate to create your module, Puppet automatically created spec directory for you. However, you still need to install the Ruby gems. To install the rspec-puppet gem, type the command `/opt/puppetlabs/puppet/bin/gem install rspec-puppet`. Then, to set up tests, install the puppetlabs_spec_helper gem. Type the command `/opt/puppetlabs/puppet/bin/gem install puppetlabs_spec_helper`. You may notice that we use Puppet's vendored Ruby, instead of the system Ruby, to install. Although not always the best practice, it happens to be the simplest method of making the proper libraries and gems available for rpsec-puppet to load. You should only install a gem into Puppet's vendoored path if that gem needs to work with Puppet in some way. 
+If you used the Puppet module generate to create your module, Puppet automatically created spec directory for you. However, you still need to install the Ruby gems. To install the rspec-puppet gem, type the command `/opt/puppetlabs/puppet/bin/gem install rspec-puppet`. Then, to set up tests, install the puppetlabs_spec_helper gem. Type the command `/opt/puppetlabs/puppet/bin/gem install puppetlabs_spec_helper`. You may notice that we use Puppet's vendored Ruby, instead of the system Ruby, to install. Although not always the best practice, it happens to be the simplest method of making the proper libraries and gems available for rpsec-puppet to load. You should only install a gem into Puppet's vendored path if that gem needs to work with Puppet in some way. 
 
 ### slide 19 - Sandbox files
 
@@ -111,7 +111,7 @@ The ssh spec dot rb file is the test file for the ssh class. Describe tells us w
 
 ### slide 23 - Test Passes
 
-To execute the test, from the top level of the module directory tree, run the command rake spec, with the path for Puppet's vendored Ruby. If the test is successful, you receive output that indicates the spec test has a status of green, indicated by the green dot. The system provides the run time, the number of tests run and the number of failures.
+To execute the test, from the top level of the module directory tree, run the command rake spec, with the path for Puppet's vendored Ruby. If the test is successful, you receive output that the spec test has a status of green, indicated by the green dot. The system provides the run time, the number of tests run, and the number of failures.
 
 ### slide 24 - Test Fails
 
