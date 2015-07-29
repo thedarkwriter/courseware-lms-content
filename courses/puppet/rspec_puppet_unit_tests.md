@@ -71,7 +71,7 @@ To validate that resources have specified attributes, you use the contain matche
 
 ### slide 14 - Resource relationships
 
-You can also use matchers to validate that resources have relationships set. You can test the relationships between the resources in your catalog regardless of how the jrelationship is defined. IN otherwords, you can define relationships with the metaparameters require, before, notify, and subscrioe, or with chaining arrows. Once again you use the should contain type matcher and add the relationship matcher
+You can also use matchers to validate that resources relationships are set. You can test the relationships between the resources in your catalog regardless of how the relationship is defined. In other words, you can define relationships with the metaparameters require, before, notify, and subscribe, or with chaining arrows. Once again you use the contain matcher and you add a relationship metaparameter, as shown in this example. 
 
 ### slide 15 - Matcher Shortcuts
 
