@@ -51,7 +51,7 @@ Test-Driven Development involves writing tests before writing the code that you 
 
 ### slide 9.1 Test-Driven Development
 
-Before we look at how to create tests with rspec-puppet, there are some concepts that you should be familiar with. Test-Driven Development is a practice that involves writing tests before writing the code that you are going to test. You begin by writing a very small test for code that does not yet exist. You run the test, and of course it fails. Then you write just enough code to make the test pass.  rspec was created in 2005 by Steven Baker from the idea that with languages such as Ruby, he could more freely explore new test driven development frameworks that could encourage focus on behaviour instead of structure.  Although the syntax has changed over time, the basic premise remains the same. You can use rspec to write executable examples of the expected behavior of a small bit of code in a controlled context. In your environment, you likely already have modules written that you want to test. And for the purposes of this course, we use examples from tests and modules that are already written. 
+rspec was created in 2005 by Steven Baker from the idea that with languages such as Ruby, he could more freely explore new test driven development frameworks that could encourage focus on behaviour instead of structure.  Although the syntax has changed over time, the basic premise remains the same. You can use rspec to write executable examples of the expected behavior of a small bit of code in a controlled context. You likely already have modules written that you want to test. And for the purposes of this course, we use examples from tests and modules that are already written as well. 
 
 ### slide 10 - rspec Matchers
 
