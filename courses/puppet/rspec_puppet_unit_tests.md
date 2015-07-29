@@ -79,7 +79,7 @@ You can also combine matchers. This example shows how you can use chaining to cr
 
 ### slide 16 - Puppet Module Generate
 
-So now let's say that you have used puppet module generate to create  your module structure for you. Puppet creates the directories, and the appropriate files in those directories, that you need for testing . 
+Next let's look at a recommended structure for your testing directories. If you use puppet module generate to create your module,  Puppet creates the directories, and the appropriate files in those directories, that you need for testing . 
 
 ### Slide 17 - Testing Directory Tree
 
