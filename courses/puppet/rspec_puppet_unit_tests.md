@@ -6,7 +6,7 @@ At the end of this course you will be able to:
 
 * Explain the purpose of unit testing.
 * Describe methods for using rspec-puppet to test.
-* Identify elements of Puppet Module spec tests.
+* Identify elements of Puppet module unit spec tests.
 
 
 ## Slide Content - This is the content for the instructional video.
@@ -17,13 +17,13 @@ As your codebase grows in complexity, changing one part of the code without affe
 
 ### slide 2 - Testing Flow Diagram
 
-This course is one in a series of courses that we have created to help you learn more about testing Puppet code. Earlier course included topics focused on why testing is important, how to validate your Puppet code with puppet parser and puppet lint, and how to write basic smoke tests to verify that your code compiles and cleanly applies to a node.  In this course we move towards more rigorous testing of your Puppet code and modules. Unit testing allows you to check whether your code actually behaves in the manner that you expect. And once you have units working individually, you can move on to methods for testing your complete configuration, such an acceptance testing. 
+This course is one in a series of courses that we have created to help you learn more about testing Puppet code. Earlier courses included topics focused on why testing is important, how to validate your Puppet code with puppet parser and puppet lint, and how to write basic smoke tests to verify that your code compiles and cleanly applies to a node.  In this course we move towards more rigorous testing of your Puppet code and modules. Unit testing allows you to check whether your code actually behaves in the manner that you expect. And once you have units working individually, you can move on to methods for testing your complete configuration, such an acceptance testing. 
 
 In this course we look at how to write unit tests for your Puppet modules using the rspec testing library. But first - a brief review of the structure of a Puppet module. 
 
 ### slide 3 - Module Review
 
-Modules are self-contained bundles of code and data. On disk, a module is a directory tree with a specific, predictable structure. The module name is the outermost directory’s name. The manifests directory contains all of the manifests in the module, including an `init.pp` manifest where the class name matches the module name. Other manifest file names map to the names of the classes they contain. A well-formed Puppet module implements each class in a separate file in the manifests directory. Although none of the directories in the module tree are mandatory, for the purposes of testing, you should have an examples sub-directory that contains the test examples that you write for smoke testing your class declarations and defined types. And you should have a spec directory where you put spec and server spec tests, including unit tests, that you use to test plugins in the lib directory.
+Modules are self-contained bundles of code and data. On disk, a module is a directory tree with a specific, predictable structure. The module name is the outermost directory’s name. The manifests directory contains all of the manifests in the module, including an `init.pp` manifest where the class name matches the module name. Other manifest file names map to the names of the classes they contain. A well-formed Puppet module implements each class in a separate file in the manifests directory. Although these directories are not mandatory, for the purposes of testing, you should have an examples sub-directory that contains the test examples that you write for smoke testing your class declarations and defined types. And you should have a spec directory where you put spec and server spec tests, including unit tests, that you use to test plugins in the lib directory.
 
 ### slide 4 - Why unit tests?
 
@@ -35,7 +35,7 @@ Unit tests don't test the results of executing your manifest on a live system. W
 
 ### slide 6 - How to tests?
 
-Puppet is written in Ruby. And so it works very well to test your Puppet modules with a Ruby tool. In the Ruby world, there are several testing libraries that you can use to test your Puppet modules. rspec is a popular one and one that we use extensively at Puppet Labs. Rspec-Puppet provides a unit-testing framework for Puppet. It extends RSpec to allow the testing framework to understand Puppet catalogs, the artifact it specializes in testing. With rspec-puppet, you can write tests to test that aspects of your module work as intended.
+Puppet is written in Ruby. And so it works very well to test your Puppet modules with a Ruby tool. In the Ruby world, there are several testing libraries that you can use to test your Puppet modules. rspec is a popular one and one that we use extensively at Puppet Labs. Rspec-Puppet provides a unit-testing framework for Puppet. It extends rspec to allow the testing framework to understand Puppet catalogs, the artifact it specializes in testing. With rspec-puppet, you can write tests to test that aspects of your module work as intended.
 
 ### slide 7 - Simple Tests
 
@@ -47,27 +47,31 @@ However, when you start to write more complex modules, that include dynamic cont
 
 ### slide 9 Test-Driven Development
 
-Before we look at how to create tests with rspec-puppet, there are some concepts that you should be familiar with. Test-Driven Development is a practice that involves writing tests before writing the code that you are going to test. You begin by writing a very small test for code that does not yet exist. You run the test, and of course it fails. Then you write just enough code to make the test pass.  rspec was created in 2005 by Steven Baker from the idea that with languages such as Ruby, he could more freely explore new test driven development frameworks that could encourage focus on behaviour instead of structure.  Although the syntax has changed over time, the basic premise remains the same. You can use rspec to write executable examples of the expected behavior of a small bit of code in a controlled context. In your environment, you likely already have modules written that you want to test. And for the purposes of this course, we use examples from tests and modules that are already written. 
+Test-Driven Development involves writing tests before writing the code that you are going to test. You begin by writing a very small test for code that does not yet exist. You run the test, and of course it fails. Then you write just enough code to make the test pass.  
+
+### slide 9.1 Test-Driven Development
+
+rspec was created in 2005 by Steven Baker from the idea that with languages such as Ruby, he could more freely explore new test driven development frameworks that could encourage focus on behaviour instead of structure.  Although the syntax has changed over time, the basic premise remains the same. You can use rspec to write executable examples of the expected behavior of a small bit of code in a controlled context. You likely already have modules written that you want to test. And for the purposes of this course, we use examples from tests and modules that are already written as well. 
 
 ### slide 10 - rspec Matchers
 
-Next, and before we look at how to create tests with rspec-puppet, it is important to be familiar with rspec matchers. For the purpose of validating conditions, rspec matchers can match exact values, regular expresssions, or Ruby Procs. Let's look at some methods for validating some conditions.
+rspec includes a number of useful expression matchers. For the purpose of validating conditions, rspec matchers can match exact values, regular expresssions, or Ruby Procs. Let's look at some matchers and methods for validating some conditions.
 
 ### slide 11 - Catalog compiles
 
-First you may want to test whether a catalog compiles cleanly; you can use the matcher "compile." And if you want to see raised error messages, you can use the should compile matcher with the and raise error extension and the error message that you want to see. In this example, we are checking for an error message that indicates that the apache module does not run on Windows.
+First, to test whether a catalog compiles cleanly, you can use the compile matcher. And if you want to see the error messages that are raised, you can use the compile matcher with the method "and raise error" and the error message that you want to see. In this example, we are checking for an error message that indicates that the apache module does not run on Windows.
 
 ### slide 12 - Catalog Resources
 
-You'll also want to check that the catalog contains resources. To check whether a resource exists you use the contain matcher and the resource type for each resource type and helper that (you want to test for. This example  example is checking to see whether an s s h service has been declared.
+You'll also want to check that the catalog contains resources that you need. To check whether a resource exists you use the contain matcher, the type, and the resource  title that you want to check for. This example is checking to see whether an s s h service has been declared.
 
 ### slide 13 - Specified Resource Attributes
 
-To validate that resources have specified attributes, you use the contain matcher and the resource type and add the with or without chains and the attribute that you want to check for. In the first example we are checking tfor a file with a specific owner, root. And in the second example we are checking for a file that has the mode attribute undefined.
+To validate that resources have specified attributes, you use the contain matcher, and add a method,  either with or without, and the attribute with the value you are checking for. You can chain together as many methods as you want, as we have done in this example. We are checking that a service is present, that there is a file with a specific owner, root, and for a file that has the mode attribute undefined.
 
 ### slide 14 - Resource relationships
 
-You can also use matchers to validate that resources have relationships set. You can test the relationships between the resources in your catalog regardless of how the jrelationship is defined. IN otherwords, you can define relationships with the metaparameters require, before, notify, and subscrioe, or with chaining arrows. Once again you use the should contain type matcher and add the relationship matcher
+You can also use matchers to validate that resources relationships are set. You can test the relationships between the resources in your catalog regardless of how the relationship is defined. In other words, you can define relationships with the metaparameters require, before, notify, and subscribe, or with chaining arrows. Once again you use the contain matcher and you add a relationship metaparameter, as shown in this example. 
 
 ### slide 15 - Matcher Shortcuts
 
@@ -75,7 +79,7 @@ You can also combine matchers. This example shows how you can use chaining to cr
 
 ### slide 16 - Puppet Module Generate
 
-So now let's say that you have used puppet module generate to create  your module structure for you. Puppet creates the directories, and the appropriate files in those directories, that you need for testing . 
+Next let's look at a recommended structure for your testing directories. If you use puppet module generate to create your module,  Puppet creates the directories, and the appropriate files in those directories, that you need for testing . 
 
 ### Slide 17 - Testing Directory Tree
 
@@ -83,7 +87,7 @@ This is a recommended directory structure and naming conventions for purposes of
 
 ### slide 18 - Install rspec-puppet
 
-If you used the Puppet module generate to create your module, Puppet automatically created spec directory for you. However, you still need to install the Ruby gems. To install the rspec-puppet gem, type the command `/opt/puppet/bin/gem install rspec-puppet`. Then, to set up tests, install the puppetlabs_spec_helper gem. Type the command `/opt/puppet/bin/gem install puppetlabs_spec_helper`. You may notice that we use Puppet's vendored Ruby, instead of the system Ruby, to install. Although not always the best practice, it happens to be the simplest method of making the proper libraries and gems available for rpsec-puppet to load. You should only install a gem into Puppet's vendoored path if that gem needs to work with Puppet in some way. 
+If you used the Puppet module generate to create your module, Puppet automatically created spec directory for you. However, you still need to install the Ruby gems. To install the rspec-puppet gem, type the command `/opt/puppetlabs/puppet/bin/gem install rspec-puppet`. Then, to set up tests, install the puppetlabs_spec_helper gem. Type the command `/opt/puppetlabs/puppet/bin/gem install puppetlabs_spec_helper`. You may notice that we use Puppet's vendored Ruby, instead of the system Ruby, to install. Although not always the best practice, it happens to be the simplest method of making the proper libraries and gems available for rpsec-puppet to load. You should only install a gem into Puppet's vendored path if that gem needs to work with Puppet in some way. 
 
 ### slide 19 - Sandbox files
 
@@ -107,7 +111,7 @@ The ssh spec dot rb file is the test file for the ssh class. Describe tells us w
 
 ### slide 23 - Test Passes
 
-To execute the test, from the top level of the module directory tree, run the command rake spec, with the path for Puppet's vendored Ruby. If the test is successful, you receive output that indicates the spec test has a status of green, indicated by the green dot. The system provides the run time, the number of tests run and the number of failures.
+To execute the test, from the top level of the module directory tree, run the command rake spec, with the path for Puppet's vendored Ruby. If the test is successful, you receive output that the spec test has a status of green, indicated by the green dot. The system provides the run time, the number of tests run, and the number of failures.
 
 ### slide 24 - Test Fails
 
