@@ -59,7 +59,7 @@ rspec includes a number of useful expression matchers. For the purpose of valida
 
 ### slide 11 - Catalog compiles
 
-First you may want to test whether a catalog compiles cleanly; you can use the matcher "compile." And if you want to see raised error messages, you can use the should compile matcher with the and raise error extension and the error message that you want to see. In this example, we are checking for an error message that indicates that the apache module does not run on Windows.
+First, to test whether a catalog compiles cleanly, you can use the compile matcher. And if you want to see the error messages that are raised, you can use the compile matcher with the method "and raise error" and the error message that you want to see. In this example, we are checking for an error message that indicates that the apache module does not run on Windows.
 
 ### slide 12 - Catalog Resources
 
