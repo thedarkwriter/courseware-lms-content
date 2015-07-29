@@ -5,7 +5,7 @@ As your codebase grows in complexity, changing one part of the code without affe
 At the end of this course you will be able to:
 
 * Explain the purpose of unit testing.
-* Describe methods for using spec-puppet to test.
+* Describe methods for using rspec-puppet to test.
 * Identify elements of Puppet Module spec tests.
 
 
@@ -23,7 +23,8 @@ In this course we look at how to write unit tests for your Puppet modules using 
 
 ### slide 3 - Module Review
 
-Modules are self-contained bundles of code and data. On disk, a module is a directory tree with a specific, predictable structure. The module name is the outermost directory’s name. The manifests directory contains all of the manifests in the module, including an `init.pp` manifest where the class name matches the module name. Other manifest file names map to the names of the classes they contain. A well-formed Puppet module implements each class in a separate file in the manifests directory. Although none of the directories in the module tree are mandatory, for the purposes of testing, you should have an examples sub-directory that contains the test examples that you write for smoke testing your class declarations and defined types. And you should have a spec directory where you put spec and server spec tests, including unit tests, that you use to test plugins in the lib directory.
+Modules are self-contained bundles of code and data. On disk, a module is a directory tree with a specific, predictable structure. The module name is the outermost directory’s name. The manifests directory contains all of the manifests in the module, including an `init.pp` manifest where the class name matches the module name. Other manifest file names map to the names of the classes they contain. A well-formed Puppet module implements each class in a separate file in the manifests directory. Although none of the directories in the module tree are mandatory, for the purposes of testing, you should have an examples sub-directory that contains the test examples that you write for smoke testing your class declarations and defined types. And you should have a spec directory where you put spec and server spec tests, including unit tests, that you use to test plugins in the lib directory.
+
 ### slide 4 - Why unit tests?
 
 Unit tests let you test parts of a complete configuration, in isolation from one another and in a controlled context, so that you can identify exactly what pieces may be not working and under what conditions.  Your unit tests should be as simple as possible and easy to debug. They should test the smallest unit of functionality and are intended to prove that each part of your code can work on its own as intended and independent of the other pieces.
@@ -86,20 +87,45 @@ If you used the Puppet module generate to create your module, Puppet automatical
 
 ### slide 19 - Sandbox files
 
-rspec rspec-puppet needs three files in order to run your tests. If you use Puppet Module Generate to create your module, Puppet creates the Rakefile and the spec_helper file. .fixtures.yml is a file used exclusively by rspec to pull in dependencies required to successfully run unit tests. rspec compiles Puppet catalogs in a sandbox. It needs a minimal environment, including a module path. the fixture dot yml file creates the modulepath for the sandbox. You need to create the fixture dot yml file, and include in it  symlinks for all the modules that the module you are testing depends on. 
-### slide 20 - Structure of rspec-puppet Tests
-So, now that rspec-puppet is installed and we've looked at the basic rpec-puppet concepts, the recommended directory tree structure for testing your modules, and the required files, let's look more specifically at writing rspec-puppet tests. Regardless of whether you are testing classes, defined types, functions, or hosts, the basic structure of your test file is the same. You want to include the spec_helper  library of functions for running your tests. The basic structure of describing the thing you want to test  and what the test should do lets you easily express concepts in a conversational manner.
-### slide 21 - Test Naming and PlacementHow you name your tests and where you place them is important.  Test files should always end in _spec.rb and the convention is that they are named for the thing that you are testing. In the recommended spec directory structure,there are sub-directories for the different unit tests. Class tests should be placed in spec/classes, defined type tests should go in spec/defines, and so on. ### slide 22 - spec-puppet Test Example
-Let's look at a simple module that includes examples of some of the concepts and topics presented in this course. This simple module is named "ssh" and its purpose is to  install, manage, and start an ssh client and server on Redhat and Debian platforms. 
-The ssh spec dot rb file is the test file for the ssh class. Describe tells us what we are testing - the ssh class. Do tells us the steps for the test. For both Redhat and Debian platforms, without any passed parameters and with the provided I P address, validate that the package is installed, that the appropriate configuration file is used - either server or client, and that the service is running.
-### slide 23 - Test Passes
-To execute the test, from the top level of the module directory tree, run the command rake spec, with the path for Puppet's vendored Ruby. If the test is successful, you receive output that indicates the spec test has a status of green, indicated by the green dot. The system provides the run time, the number of tests run and the number of failures.
-### slide 24 - Test Fails
-If the test fails, you receive output similar to what we have in this example. Instead of the green dot, you'll see an upper case lett ef. It is highlighted here in red. The system provides a description of the failures and where they are located in the tests. You can also see a list of the tests that failed.
-### slide 25 - Summary
-You use unit tests to validate each individual class in your module under controlled conditions. Units tests validate that the catalog compiles and includes all the resources as expected. Once you are confident that your Puppet module does what you expect it to do, independent of the rest of your code base, your are ready for acceptance testing which tests your module when it is executed and which we address in the next course.
-### slide 26 - Next Steps
-You use unit tests to validate each individual class in your module under controlled conditions. Units tests validate that the catalog compiles and includes all the resources as expected. Once you are confident that your Puppet module does what you expect it to do, independent of the rest of your code base, your are ready for acceptance testing which tests your module when it is executed and which we address in the next course.### slide 27 - Thank You## Exercises
+rspec rspec-puppet needs three files in order to run your tests. If you use Puppet Module Generate to create your module, Puppet creates the Rakefile and the spec_helper file. .fixtures.yml is a file used exclusively by rspec to pull in dependencies required to successfully run unit tests.
+ rspec compiles Puppet catalogs in a sandbox. It needs a minimal environment, including a module path. the fixture dot yml file creates the modulepath for the sandbox. You need to create the fixture dot yml file, and include in it  symlinks for all the modules that the module you are testing depends on. 
+
+### slide 20 - Structure of rspec-puppet Tests
+
+So, now that rspec-puppet is installed and we've looked at the basic rpec-puppet concepts, the recommended directory tree structure for testing your modules, and the required files, let's look more specifically at writing rspec-puppet tests. Regardless of whether you are testing classes, defined types, functions, or hosts, the basic structure of your test file is the same. You want to include the spec_helper  library of functions for running your tests. The basic structure of describing the thing you want to test  and what the test should do lets you easily express concepts in a conversational manner.
+
+
+### slide 21 - Test Naming and Placement
+
+How you name your tests and where you place them is important.  Test files should always end in _spec.rb and the convention is that they are named for the thing that you are testing. In the recommended spec directory structure,there are sub-directories for the different unit tests. Class tests should be placed in spec/classes, defined type tests should go in spec/defines, and so on. 
+
+### slide 22 - spec-puppet Test Example
+
+Let's look at a simple module that includes examples of some of the concepts and topics presented in this course. This simple module is named "ssh" and its purpose is to  install, manage, and start an ssh client and server on Redhat and Debian platforms. 
+
+The ssh spec dot rb file is the test file for the ssh class. Describe tells us what we are testing - the ssh class. Do tells us the steps for the test. For both Redhat and Debian platforms, without any passed parameters and with the provided I P address, validate that the package is installed, that the appropriate configuration file is used - either server or client, and that the service is running.
+
+### slide 23 - Test Passes
+
+To execute the test, from the top level of the module directory tree, run the command rake spec, with the path for Puppet's vendored Ruby. If the test is successful, you receive output that indicates the spec test has a status of green, indicated by the green dot. The system provides the run time, the number of tests run and the number of failures.
+
+### slide 24 - Test Fails
+
+If the test fails, you receive output similar to what we have in this example. Instead of the green dot, you'll see an upper case lett ef. It is highlighted here in red. The system provides a description of the failures and where they are located in the tests. You can also see a list of the tests that failed.
+
+### slide 25 - Summary
+
+You use unit tests to validate each individual class in your module under controlled conditions. Units tests validate that the catalog compiles and includes all the resources as expected. Once you are confident that your Puppet module does what you expect it to do, independent of the rest of your code base, your are ready for acceptance testing which tests your module when it is executed and which we address in the next course.
+
+### slide 26 - Next Steps
+
+You use unit tests to validate each individual class in your module under controlled conditions. Units tests validate that the catalog compiles and includes all the resources as expected.
+ Once you are confident that your Puppet module does what you expect it to do, independent of the rest of your code base, your are ready for acceptance testing which tests your module when it is executed and which we address in the next course.
+
+### slide 27 - Thank You
+
+
+## Exercises
 
 ## Quiz
 
