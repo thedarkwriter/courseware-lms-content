@@ -87,7 +87,7 @@ This is a recommended directory structure and naming conventions for purposes of
 
 ### slide 18 - Install rspec-puppet
 
-If you used the Puppet module generate to create your module, Puppet automatically created spec directory for you. However, you still need to install the Ruby gems. To install the rspec-puppet gem, type the command `/opt/puppet/bin/gem install rspec-puppet`. Then, to set up tests, install the puppetlabs_spec_helper gem. Type the command `/opt/puppet/bin/gem install puppetlabs_spec_helper`. You may notice that we use Puppet's vendored Ruby, instead of the system Ruby, to install. Although not always the best practice, it happens to be the simplest method of making the proper libraries and gems available for rpsec-puppet to load. You should only install a gem into Puppet's vendoored path if that gem needs to work with Puppet in some way. 
+If you used the Puppet module generate to create your module, Puppet automatically created spec directory for you. However, you still need to install the Ruby gems. To install the rspec-puppet gem, type the command `/opt/puppetlabs/puppet/bin/gem install rspec-puppet`. Then, to set up tests, install the puppetlabs_spec_helper gem. Type the command `/opt/puppetlabs/puppet/bin/gem install puppetlabs_spec_helper`. You may notice that we use Puppet's vendored Ruby, instead of the system Ruby, to install. Although not always the best practice, it happens to be the simplest method of making the proper libraries and gems available for rpsec-puppet to load. You should only install a gem into Puppet's vendoored path if that gem needs to work with Puppet in some way. 
 
 ### slide 19 - Sandbox files
 
