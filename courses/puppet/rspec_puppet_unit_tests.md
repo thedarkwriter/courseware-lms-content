@@ -55,7 +55,7 @@ rspec was created in 2005 by Steven Baker from the idea that with languages such
 
 ### slide 10 - rspec Matchers
 
-Next, and before we look at how to create tests with rspec-puppet, it is important to be familiar with rspec matchers. For the purpose of validating conditions, rspec matchers can match exact values, regular expresssions, or Ruby Procs. Let's look at some methods for validating some conditions.
+rspec includes a number of useful expression matchers. For the purpose of validating conditions, rspec matchers can match exact values, regular expresssions, or Ruby Procs. Let's look at some matchers and methods for validating some conditions.
 
 ### slide 11 - Catalog compiles
 
