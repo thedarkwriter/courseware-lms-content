@@ -63,7 +63,7 @@ First, to test whether a catalog compiles cleanly, you can use the compile match
 
 ### slide 12 - Catalog Resources
 
-You'll also want to check that the catalog contains resources. To check whether a resource exists you use the contain matcher and the resource type for each resource type and helper that (you want to test for. This example  example is checking to see whether an s s h service has been declared.
+You'll also want to check that the catalog contains resources that you need. To check whether a resource exists you use the contain matcher, the type, and the resource  title that you want to check for. This example is checking to see whether an s s h service has been declared.
 
 ### slide 13 - Specified Resource Attributes
 
