@@ -67,7 +67,7 @@ You'll also want to check that the catalog contains resources that you need. To 
 
 ### slide 13 - Specified Resource Attributes
 
-To validate that resources have specified attributes, you use the contain matcher and the resource type and add the with or without chains and the attribute that you want to check for. In the first example we are checking tfor a file with a specific owner, root. And in the second example we are checking for a file that has the mode attribute undefined.
+To validate that resources have specified attributes, you use the contain matcher, and add a method,  either with or without, and the attribute with the value you are checking for. You can chain together as many methods as you want, as we have done in this example. We are checking that a service is present, that there is a file with a specific owner, root, and for a file that has the mode attribute undefined.
 
 ### slide 14 - Resource relationships
 
