@@ -11,7 +11,7 @@ class lms::course::hiera {
   file { '/etc/bash.bash_logout':
     ensure => absent,
   }
-  file { '/etc/puppetlabs/puppet/environments':
+  file { "${lms::codedir}/environments":
     ensure => directory,
   }
 }
