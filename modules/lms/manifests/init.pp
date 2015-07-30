@@ -1,12 +1,7 @@
 class lms ($course = 'default') {
-  file { '/etc/puppetlabs/puppet/hiera.yaml':
-    ensure => present,
-    source => "puppet:///modules/lms/${course}/hiera.yaml",
+  $codedir = versioncmp('4.0.0',$puppetversion) ? {
+    1       => '/etc/puppetlabs/puppet',
+    default => '/etc/puppetlabs/code'
   }
-  file { '/etc/puppetlabs/puppet/hieradata/':
-    ensure  => directory,
-    recurse => true,
-    purge   => true,
-    source  => "puppet:///modules/lms/${course}/hieradata",
-  }
+  include lms::hiera_files
 }
