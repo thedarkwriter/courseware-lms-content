@@ -5,6 +5,10 @@ $codedir = versioncmp('4.0.0',$puppetversion) ? {
   1       => '/etc/puppetlabs/puppet',
   default => '/etc/puppetlabs/code'
 }
+$puppet_base_dir = versioncmp('4.0.0',$puppetversion) ? {
+  1       => '/opt/puppet',
+  default => '/opt/puppetlabs/puppet'
+}
 
 exec { 'update repo':
   command => 'git pull',
@@ -26,6 +30,6 @@ file { '/usr/local/bin/course_selector':
 file { '/usr/local/bin/course_menu':
   ensure  => file,
   mode    => '0755',
-  source  => '/usr/src/courseware-lms-content/scripts/course_menu.rb',
+  content  => template('/usr/src/courseware-lms-content/scripts/course_menu.rb.erb'),
   require => Exec['update repo']
 }
