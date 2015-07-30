@@ -5,9 +5,9 @@ $codedir = versioncmp('4.0.0',$puppetversion) ? {
   1       => '/etc/puppetlabs/puppet',
   default => '/etc/puppetlabs/code'
 }
-$puppet_base_dir = versioncmp('4.0.0',$puppetversion) ? {
-  1       => '/opt/puppet',
-  default => '/opt/puppetlabs/puppet'
+$ruby_binary = versioncmp('4.0.0',$puppetversion) ? {
+  1       => '/opt/puppet/bin/ruby',
+  default => '/bin/ruby'
 }
 
 exec { 'update repo':
