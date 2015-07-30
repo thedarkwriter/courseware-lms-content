@@ -1,1 +1,1 @@
-class { 'lms': course => 'default' }
+include lms::course::testing

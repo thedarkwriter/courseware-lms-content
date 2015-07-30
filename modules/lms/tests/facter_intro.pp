@@ -1,1 +1,1 @@
-class { 'lms': course => 'default' }
+include lms::course::facter_intro
