@@ -6,6 +6,6 @@ class lms::course::parser {
     source  => 'puppet:///modules/lms/parser/example_modules',
   }
   exec {"puppet module install jfryman-nginx --modulepath=$settings::codedir/modules":
-    path => '/usr/local/bin'
+    path => '/usr/local/bin:/bin'
   }
 }
