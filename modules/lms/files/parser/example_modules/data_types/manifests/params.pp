@@ -1,7 +1,11 @@
 class data_types::params {
-    $example_string = "This is a string"
-    $example_integer = 42
+    $example_string = "This is the message of the day"
+    $example_integer = 2
     $example_bool = true
-    $example_array = [1,2,3]
-    $example_hash = {'one' => 'two'}
+    $example_array = ['zip','zap','zop']
+    $example_hash = {'fortune' => { 
+        ensure => present,
+      }
+    }
 }
+
