@@ -47,6 +47,6 @@ class iterating::functions {
 
   file { "/var/www/user_list.txt":
     ensure  => file,
-    content => $user_list,
+    content => "The following users have websites: ${user_list}",
   }
 }
