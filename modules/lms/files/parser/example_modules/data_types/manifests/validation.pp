@@ -18,7 +18,7 @@ class data_types::validation (
     }
     user { $example_array:
       ensure      => present,
-      manage_home => false,
+      managehome => false,
     }
     create_resources(package, $example_hash)
   }
