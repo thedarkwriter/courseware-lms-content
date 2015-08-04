@@ -31,6 +31,6 @@ class iterating::each {
   }
 
   nginx::vhost { "larrysblog.puppetlabs.vm":
-    www_root => "/var/www/larry"
+    www_root => $websites["larrysblog.puppetlabs.vm"]["docroot"],
   }
 }
