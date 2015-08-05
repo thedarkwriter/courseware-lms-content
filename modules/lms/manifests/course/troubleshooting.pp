@@ -13,4 +13,9 @@ class lms::course::troubleshooting {
   file {'/root/.tmux.conf':
     ensure => absent,
   }
+  file {"${settings::codedir}/modules":
+    ensure  => directory,
+    recurse => true,
+    source  => 'puppet:///modules/lms/troubleshooting/example_modules/',
+  }
 }
