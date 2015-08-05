@@ -1,4 +1,4 @@
-#! /opt/puppet/bin/ruby
+#! <%= @ruby_binary %>
 require "curses"
 include Curses
 
@@ -66,7 +66,7 @@ begin
     when KEY_ENTER, ' ', 13
       close_screen
       puts "Applying manifest #{courses[position][1]} for #{courses[position][0]}"
-      %x(puppet apply /etc/puppetlabs/puppet/modules/lms/tests/#{courses[position][1]})
+      %x(puppet apply <%= @codedir %>/modules/lms/tests/#{courses[position][1]})
       exit
     when 'x','X'
       exit
