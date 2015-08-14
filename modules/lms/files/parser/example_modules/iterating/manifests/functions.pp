@@ -1,4 +1,4 @@
-class iteration::functions {
+class iterating::functions {
   $websites = {
     'larrysblog.puppetlabs.vm' => {
       'owner' => 'larry',
@@ -22,14 +22,14 @@ class iteration::functions {
     }
   }
 
-  $published_sites =
-  $users = 
-  $user_list =
+  $published_sites = $websites.filter |$site_fqdn, $site_info| { #Your code goes here }
+  $users = $websites.map |$site_fqdn, $site_info| { #Your code goes here } 
+  $user_list = $users.reduce |$memo, $user| { #Your code goes here }
 
   $users.each |$user| {
     file { "/var/www/${user}":
       ensure => file,
-      owner  => ${user},
+      owner  => $user,
     }
     file { "/home/${user}/www":
       ensure  => link,
@@ -38,14 +38,15 @@ class iteration::functions {
     }
   }
   
+  include nginx
   $published_sites.each |$site_fqdn, $site_info| {
-    nginx::vhost { $site_fqdn:
+    nginx::resource::vhost { $site_fqdn:
       www_root => $site_info["docroot"],
     }
   }
 
   file { "/var/www/user_list.txt":
     ensure  => file,
-    content => $user_list,
+    content => "The following users have websites: ${user_list}",
   }
 }

@@ -1,6 +1,10 @@
 class iterating::each {
   $users = ['larry','moe','shemp','elvis']
 
+  user { "larry":
+    ensure     => present,
+    managehome => true,
+  }
   file { "/var/www/larry":
     ensure => file,
     owner  => 'larry',
@@ -30,7 +34,8 @@ class iterating::each {
     }
   }
 
-  nginx::vhost { "larrysblog.puppetlabs.vm":
-    www_root => "/var/www/larry"
+  include nginx
+  nginx::resource::vhost { "larrysblog.puppetlabs.vm":
+    www_root => $websites["larrysblog.puppetlabs.vm"]["docroot"],
   }
 }
