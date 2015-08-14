@@ -1,0 +1,14 @@
+HOSTS:
+  centos6-64:
+    roles:
+      - agent
+    platform: el-6-x86_64
+    image: centos:6.6
+    hypervisor: docker
+    docker_image_commands:
+      - 'yum -y install tar'
+CONFIG:
+  type: foss
+ssh:
+  password: root
+  auth_methods: ["password"]
