@@ -1,4 +1,5 @@
 class iteration::each (
+  $users    = $iteration::each_data::users
   $websites = $iteration::each_data::websites
 ) inherits iteration::each_data {
 
