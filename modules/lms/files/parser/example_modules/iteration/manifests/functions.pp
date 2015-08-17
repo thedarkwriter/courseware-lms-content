@@ -1,26 +1,6 @@
-class iteration::functions {
-  $websites = {
-    'larrysblog.puppetlabs.vm' => {
-      'owner' => 'larry',
-      'docroot' => '/var/www/larry/',
-      'publish' => true
-    },
-    'notcurly.puppetlabs.vm' => {
-      'owner' => 'shemp',
-      'docroot' => '/var/www/shemp/public/',
-      'publish' => false
-    },
-    'moe.puppetlabs.vm' => {
-      'owner' => 'moe',
-      'docroot' => '/var/www/moe/blog/',
-      'publish' => true
-    },
-    'theking.puppetlabs.vm' => {
-      'owner' => 'elvis',
-      'docroot' => '/var/www/elvis/',
-      'publish' => false
-    }
-  }
+class iteration::functions (
+  $websites = $iteration::functions_data::websites
+) inherits iteration::functions_data {
 
   $published_sites = $websites.filter |$site_fqdn, $site_info| { #Your code goes here }
   $users = $websites.map |$site_fqdn, $site_info| { #Your code goes here } 
