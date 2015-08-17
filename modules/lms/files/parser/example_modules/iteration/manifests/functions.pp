@@ -1,4 +1,4 @@
-class iterating::functions {
+class iteration::functions {
   $websites = {
     'larrysblog.puppetlabs.vm' => {
       'owner' => 'larry',

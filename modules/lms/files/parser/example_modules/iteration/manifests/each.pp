@@ -1,4 +1,4 @@
-class iterating::each {
+class iteration::each {
   $users = ['larry','moe','shemp','elvis']
 
   user { "larry":
