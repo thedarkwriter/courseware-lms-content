@@ -1,10 +1,13 @@
 class iteration::each (
-  $users    = $iteration::each_data::users
+  $users    = $iteration::each_data::users,
   $websites = $iteration::each_data::websites
 ) inherits iteration::each_data {
 
   include nginx
   
+  file { '/var/www':
+    ensure => directory
+  }
   user { "larry":
     ensure     => present,
     managehome => true,

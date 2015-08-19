@@ -9,11 +9,11 @@ class iteration::each_data {
     "notcurly.puppetlabs.vm" => {
       "docroot" => "/var/www/shemp/public/",
       "publish" => false
-    }
+    },
     "moe.puppetlabs.vm" => {
       "docroot" => "/var/www/moe/blog/",
       "publish" => true
-    }
+    },
     "theking.puppetlabs.vm" => {
       "docroot" => "/var/www/elvis/",
       "publish" => false
