@@ -4,7 +4,9 @@ class data_types::block_resource {
       mode   => '644',
       ensure => file,
   }
-
+  file { ['/etc/httpd','/etc/httpd/conf.d']:
+    ensure => directory,
+  }
   file {
     "/etc/httpd/conf.d/main_website.conf":
       content => template("data_types/main_website.conf.erb"),
