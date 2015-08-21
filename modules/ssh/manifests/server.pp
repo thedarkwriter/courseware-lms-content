@@ -7,7 +7,7 @@ class ssh::server inherits ssh::params {
   }
 
   $package     = $ssh::params::ssh_server_package
-  $service     = $ssh::params::ssh_service
+  sservice     = $ssh::params::ssh_service
   $sshd_config = $ssh::params::sshd_config
 
   package { $package:
