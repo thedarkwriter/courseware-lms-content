@@ -5,7 +5,7 @@ class data_types::validation (
   $example_array = $data_types::params::example_array,
   $example_hash = $data_types::params::example_hash,
 ) inherits data_types::params {
-  if ! $example_bool {
+  if $example_bool {
     file {'/etc/motd':
       ensure  => file,
       content => $example_string
