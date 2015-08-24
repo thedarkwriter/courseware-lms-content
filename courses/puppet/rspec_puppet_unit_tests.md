@@ -133,6 +133,31 @@ You use unit tests to validate each individual class in your module under contro
 
 ## Quiz
 
+1. True or **False**: Unit tests are a method for ensuring that entire your codebase and configuration work as expected.
+2. Unit tests are intended to:
+    a. Test your complete configuration.
+    b. Test the result of executing your manifests on a live system.
+   **c. Prove that each part of your code can work on its own as intended and independent of the other pieces.**
+    d. Evaluate the structure of your code.
+3. **True** or False: True or False: You can use rspec, a popular Ruby testing library, to test your Puppet modules.
+4. True or **False**: Writing unit tests is simply writing manifests in another language in order to test the functionality of a module.
+5. ​For the purpose of validating conditions, rspec matchers can match:
+    a. Ruby Procs
+    b. Exact values
+    c. **Exact values, regular expresssions, or Ruby Procs**
+    d. Exact values, regular expressions, or Puppet code
+6. rspec-puppet needs which files in order to run your unit tests?
+    a. .fixtures.yml and spec_helper.rb
+    b. .fixtures.yml
+    c. spec_helper.rb
+    d. **.fixtures.yml and spec_helper.rb and Rakefile**
+7. Regardless of whether you are testing classes, defined types, functions, or hosts, the basic structure of your test file describes: 
+    a. what the module should contain
+    b. **the thing you want to test and what the test should do**
+    c. the expected outcome based on your environment
+    d. recommended changes to the infrastructure
+    
+    
 ## References
 
 
