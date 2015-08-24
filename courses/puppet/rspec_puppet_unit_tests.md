@@ -129,8 +129,6 @@ You use unit tests to validate each individual class in your module under contro
 ### slide 27 - Thank You
 
 
-## Exercises
-
 ## Quiz
 
 1. True or **False**: Unit tests are a method for ensuring that entire your codebase and configuration work as expected.
@@ -157,6 +155,13 @@ You use unit tests to validate each individual class in your module under contro
     c. the expected outcome based on your environment
     d. recommended changes to the infrastructure
     
+## Exercises
+
+Unit testing allows you to check whether your code actually behaves in the manner that you expect. With unit tests, you can test parts of a complete configuration, in isolation from one another and in a controlled context, so that you can identify exactly what pieces may be not working and under what conditions. 
+
+IN this exercise you can practice installing spec-puppet and running a unit test on the ssh module that we have created for you in /etc/puppetlabs/code/modules.
+    
+1.     
     
 ## References
 
