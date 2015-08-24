@@ -8,6 +8,9 @@ gets()
 puts
 puts "Updating course content, please stand by."
 
+# Pull latest files
+%x(cd /usr/src/courseware-lms-content && git pull)
+
 # Update courseware content
 %x(puppet apply /usr/src/courseware-lms-content/scripts/update.pp)
 
