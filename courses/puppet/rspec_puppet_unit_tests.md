@@ -159,9 +159,34 @@ You use unit tests to validate each individual class in your module under contro
 
 Unit testing allows you to check whether your code actually behaves in the manner that you expect. With unit tests, you can test parts of a complete configuration, in isolation from one another and in a controlled context, so that you can identify exactly what pieces may be not working and under what conditions. 
 
-IN this exercise you can practice installing spec-puppet and running a unit test on the ssh module that we have created for you in /etc/puppetlabs/code/modules.
+In this exercise you can practice installing spec-puppet and running a unit test on the ssh module that we have created for you in /etc/puppetlabs/code/modules.
     
-1.     
+1. Click on the Practice VM icon to log in to the virtual machine that we have set up for your practice session. Follow the prompts to select your course and to update the content.
+
+2. Install rspec-puppet:
+
+`/opt/puppetlabs/puppet/bin/gem install rspec-puppet`
+
+3. Install puppetlabs_spec_helper:
+
+`/opt/puppetlabs/puppet/bin/gem install puppetlabs_spec_helper`
+
+4. Change directory to `/etc/puppetlabs/code/modules/ssh`, and list the contents to see the sub-directories.
+
+5. We have created the `Rakefile` for you. View the contents of the file:
+
+`cat Rakefile`
+
+6. We have created the `.fixtures.yml` file for you. View the contents of the file:
+
+`cat .fixtures.yml`
+
+7. Run the unit test:
+
+`$PATH=/opt/puppetlabs/puppet/bin rake spec`
+
+8. If the test does not pass, find and correct any errors in module manifests. If you want, you can find the correct manifests in the `/etc/puppetlabs/code/modules/ssh/ssh_solutions` directory.
+
     
 ## References
 
