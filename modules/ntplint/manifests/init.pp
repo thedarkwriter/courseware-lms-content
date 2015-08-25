@@ -44,7 +44,7 @@ class ntplint ($servers = undef, $enable = true, $ensure = running {
 
   file { 'ntp.conf':
     ensure  => file,
-    path    => '/etc/ntp.conf',
+    path    => /etc/ntp.conf,
     require => Package['ntp'],
     content => template("ntp/${conf_template}"),
   }
