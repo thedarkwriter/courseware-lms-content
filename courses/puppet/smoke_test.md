@@ -76,15 +76,15 @@ Before moving on to the next level of testing, check your knowledge of smoke tes
 
 When you smoke test your Puppet code, you are validating that the code compiles by enforcing a a class one time only, locally. You can run the puppet apply --noop and puppet apply commands against tests files in the examples directory to smoke test your puppet code.
 
-In this exercise, you can practice validating the puppet code in and applying smoke tests to the ssh module that we have created for you in /etc/puppetlabs/puppet/modules.
+In this exercise, you can practice validating the puppet code in and applying smoke tests to the ssh module that we have created for you in /etc/puppetlabs/code/modules.
 
 1. Click on the Practice VM icon and log in to the virtual machine that we have set up for your practice session. The login and password display on the welcome screen.
 
-2. Change directory to /etc/puppetlabs/puppet/modules/ssh directory and list the contents to see the sub-directories it contains.
+2. Change directory to `/etc/puppetlabs/code/modules/ssh` directory and list the contents to see the sub-directories it contains.
 
 3. Run puppet parser on each of the files in the manifests directory. Edit the files to correct any errors, and then re-run the command. For example:
 
-`puppet parser validate /etc/puppetlabs/puppet/modules/ssh/manifests/init.pp`
+`puppet parser validate /etc/puppetlabs/code/modules/ssh/manifests/init.pp`
 
 4. Run puppet lint on the init.pp manifiest. Again, edit the manifest to correct any errors.
 
