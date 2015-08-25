@@ -6,7 +6,7 @@ class lms::course::unit_test {
     source  => 'puppet:///modules/lms/unit_test/problem_modules',
   }
   # Students install these packages during the course, so remove them here
-  package { ['rspec-puppet','puppetlabs_spec_helper']
+  package { ['rspec-puppet','puppetlabs_spec_helper']:
     ensure => absent,
   }
 }
