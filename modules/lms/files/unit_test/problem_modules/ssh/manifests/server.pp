@@ -7,7 +7,7 @@ class ssh::server inherits ssh::params {
   }
 
   $package     = $ssh::params::ssh_server_package
-  sservice     = $ssh::params::ssh_service
+  $service     = $ssh::params::ssh_service
   $sshd_config = $ssh::params::sshd_config
 
   package { $package:
@@ -17,7 +17,7 @@ class ssh::server inherits ssh::params {
   file { $sshd_config:
     ensure => file,
     mode   => '0600',
-    source => "puppet:///modules/ssh/server",
+    source => "puppet:///modules",
   }
 
   service { $service:

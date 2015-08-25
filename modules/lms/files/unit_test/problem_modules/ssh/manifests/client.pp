@@ -1,4 +1,4 @@
-# == Class: ssh::cleint
+# == Class: ssh::client
 #
 class ssh::client inherits ssh::params {
   File {
