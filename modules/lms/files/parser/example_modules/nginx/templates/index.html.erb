@@ -1,0 +1,13 @@
+<html>
+  <head>
+    <title>Dynamically generated content from Puppet</title>
+  </head>
+  <body>
+    <h1>This is the default webpage</h1>
+    <h2>Welcome to <%= @hostname %></h2>
+    <p>My IP Address is: <%= @ipaddress %></p>
+    <p>My uptime is <%= @uptime_seconds %> seconds.</p>
+    <p>This is a <%= @osfamily %> system.</p>
+  </body>
+</html>
+
