@@ -82,7 +82,7 @@ begin
 
 ensure
   close_screen
-  File.open('/root/.bashrc', 'a') do |file|
+  File.open('/etc/profile.d/profile.sh', 'a') do |file|
     file.puts 'export PATH=$PATH:/opt/puppetlabs/puppet/bin'
   end
   exec ('bash')
