@@ -48,9 +48,54 @@ At the end of this course you will be able to:
 "To complete this course, complete the short quiz and work through any exercises that are found immediately below this video."
 
 ## Exercises ##
-Assuming you have a working Puppet installation:
+1.  Execute the `puppet resource` command to query the `user`s on your system.
 
-1. Execute the `puppet resource` command to query the `users` on your system. (Use the Learning VM or your own personal puppet installation.)
+    <pre><code>[root@training modules]# puppet resource user
+    user { 'abrt':
+      ensure           => 'present',
+      gid              => '173',
+      home             => '/etc/abrt',
+      password         => '!!',
+      password_max_age => '-1',
+      password_min_age => '-1',
+      shell            => '/sbin/nologin',
+      uid              => '173',
+    }
+    user { 'adm':
+      ensure           => 'present',
+      comment          => 'adm',
+      gid              => '4',
+      groups           => ['sys', 'adm'],
+      home             => '/var/adm',
+      password         => '*',
+      password_max_age => '99999',
+      password_min_age => '0',
+      shell            => '/sbin/nologin',
+      uid              => '3',
+    }
+    [...]
+        </pre>
+
+2.  Execute the `puppet resource user root` command to query the system about the state of the `root` user.
+
+    <pre><code>[root@training modules]# puppet resource user root
+    user { 'root':
+      ensure           => 'present',
+      comment          => 'root',
+      gid              => '0',
+      home             => '/root',
+      password         => '$1$jr...IxvDLjw1M/',
+      password_max_age => '99999',
+      password_min_age => '0',
+      shell            => '/bin/bash',
+      uid              => '0',
+    }
+        </pre>
+
+3.  Execute puppet resource commands to query the system for the state of packages and host records.
+
+    *   `[root@training ~]# puppet resource package`
+    *   `[root@training ~]# puppet resource host`
 
 ## Quiz ##
 
@@ -63,17 +108,17 @@ Assuming you have a working Puppet installation:
 	d. values
 3. Using the following resource declaration, what is the **title** of the resource?
 	`file { '/etc/passwd':
-		ensure => file,
-		owner  => 'root',
-		group  => 'root',
-		mode   => '0600',  
-    	}`
+		  ensure => file,
+  		owner  => 'root',
+  		group  => 'root',
+  		mode   => '0600',  
+   }`
 
 	a. `file`
 	b. **`/etc/passwd`**
 	c. `owner`
 	d. `group`
-4. Puppet uses the Resource Abstraction Layer (RAL) to split **types** (high-level models) and:
+4. Puppet uses the Resource Abstraction Layer (RAL) to absract **types** (high-level models) from the low level implementation, or:
 	a. classes
 	b. functions
 	c. **providers**
