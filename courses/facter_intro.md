@@ -10,10 +10,44 @@ At the end of this course you will be able to:
 [Link to Video](https://github.com/puppetlabs/courseware-lms/blob/master/03-Technologies/4101/03-4101-Facter_Intro.mp4)
 
 ## Exercises
-Assuming you have a working Puppet installation:
+1. Run facter to gather a list of all known facts
 
-1. Run the following command on your command line:
-`$> facter -p`
+`facter`
+
+2. Run facter to determine the fqdn, the network interfaces, and the IP address for eth0
+
+*   `facter fqdn`
+*   `facter interfaces`
+*   `facter ipaddress_eth0`
+
+3. The `/etc/motd` file is presented to users each time they log in. We would like to customize this login message to contain information about the current host.
+
+Change your current working directory to your modulepath with
+
+`cd /etc/puppetlabs/puppet/modules`
+
+4. Examine the directory structure of the example motd module.
+
+<pre>[root@training modules]# tree motd/
+motd/
+├── manifests
+│   └── init.pp
+├── Modulefile
+├── README
+├── spec
+│   └── spec_helper.rb
+└── tests
+    └── init.pp
+</pre>
+
+Update the motd module’s main class manifest file to set the content of your `/etc/motd` file to a message that includes the node’s `hostname` and `operatingsystem`. **Remember****:** Strings must use double quotes in order for variables to be interpolated.
+
+`vim motd/manifests/init.pp`
+
+5. Validate your syntax and enforce your class. and apply the class. Your `/etc/motd` file should contain the facts you specified.
+
+*   `puppet parser validate motd/manifests/init.pp`
+*   `puppet apply motd/tests/init.pp`
 
 ## Quiz
 1. True or False. Facter stores information about the Puppet Master for your system. (False)
