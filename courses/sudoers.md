@@ -58,16 +58,12 @@ There are no exercises for this course.
 	c. a default node group 
 	d. a user group resource
 	
-3. **True** or False: Puppet can enforce a configuration, but *cannot*  report on or remediate any drift detected.  
+3. True or **False**: Puppet can enforce a configuration, but *cannot*  report on or remediate any drift detected.  
 
-4. You can use the Puppet Enterprise console to add classes to which of the following? Select all that apply. 
-	a. **the default node group**
-	b. nodes outside of your Puppet deployment
-	c. **individual nodes**
-	d. **node groups that you define**
-	e. all nodes, *except* the Puppet Master
-	
+4. **True** or False: You can use the Puppet Enterprise console to add classes to the default node group.
+
 5. **True** or False: You can use the runonce option to enforce a configuration across your Puppet Enterprise-managed infrastructure.
+
 
 ## References
 * [Puppet Forge](http://forge.puppetlabs.com)
