@@ -3,9 +3,9 @@ Classes define a collection of resources that are managed together as a single u
 
 At the end of this course you will be able to:
 
-* describe Puppet Resources & Classes.
-* create a class using proper syntax.
-* differentiate between defining and declaring classes.
+* Describe Puppet Resources & Classes.
+* Create a class using proper syntax.
+* Cifferentiate between defining and declaring classes.
 
 ## Video ##
 
@@ -32,9 +32,43 @@ At the end of this course you will be able to:
 
 
 ## Exercises ##
-Assuming you have a working Puppet installation:
+1\. Create a new manifest file called motd.pp:
 
-1. Execute the `puppet resource` command to query the `users` on your system. (Use the Learning VM or your own personal puppet installation.)
+`vim motd.pp`
+
+2\. In that file create a class named motd that will manage the `/etc/motd` file in a given state.
+
+3\. The file resource that your class contains might look similar to:
+
+<pre>file { '/etc/motd':
+  ensure  => file,
+  owner   => 'root',
+  group   => 'root',
+  content => 'Hello world! Puppet is awesome.',
+}
+</pre>
+
+4\. Run `puppet parser validate motd.pp` to validate your syntax.
+
+5\. Apply your manifest with `puppet apply motd.pp`. Notice that no changes were made. Why is that?
+
+6.Add the line `include motd` to the end of your manifest and apply it again. Can you explain why you saw the results you did?
+
+## Solution ##
+
+<pre>
+class motd {
+   file { '/etc/motd':
+     ensure  => file,
+     owner   => 'root',
+     group   => 'root',
+     content => 'Hello world! Puppet is awesome.',
+   }
+ }
+
+ # notice that no changes are made until we include the class
+ include motd
+</pre>
 
 ## Quiz ##
 
@@ -46,12 +80,48 @@ Assuming you have a working Puppet installation:
 
 3. Using the following example, how many resources are being defined?
 
-`class ssh {	  package  { 'openssh-clients':	    ensure => present,	  }	  file { '/etc/ssh/ssh_config':	    ensure  => file,			owner   => 'root',	    group   => 'root',	    source  => 'puppet:///modules/ssh/ssh_config',	  }	  service { 'sshd':	    ensure => running,	    enable => true,	  }	}`a. 1
+<pre>
+class ssh {
+  package  { 'openssh-clients':
+    ensure => present,
+  }
+  file { '/etc/ssh/ssh_config':
+    ensure  => file,
+    owner   => 'root',
+    group   => 'root',
+    source  => 'puppet:///modules/ssh/ssh_config',
+  }
+  service { 'sshd':
+    ensure => running,
+    enable => true,
+  }
+}
+</pre>
+
+a. 1
 b. 2
 c. **3**
-d. 44. Using the following example, what is the title of the class?
+d. 4
 
-`class ssh {	  package  { 'openssh-clients':	    ensure => present,	  }	  file { '/etc/ssh/ssh_config':	    ensure  => file,			owner   => 'root',	    group   => 'root',	    source  => 'puppet:///modules/ssh/ssh_config',	  }	  service { 'sshd':	    ensure => running,	    enable => true,	  }	}`
+4. Using the following example, what is the title of the class?
+
+<pre>
+class ssh {
+  package  { 'openssh-clients':
+    ensure => present,
+  }
+  file { '/etc/ssh/ssh_config':
+    ensure  => file,
+    owner   => 'root',
+    group   => 'root',
+    source  => 'puppet:///modules/ssh/ssh_config',
+  }
+  service { 'sshd':
+    ensure => running,
+    enable => true,
+  }
+}
+</pre>
 
 a. **ssh**
 b. openssh-clients
