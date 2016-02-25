@@ -31,4 +31,21 @@ a. before b. after (a)
 5. True or False. In the following example, the resource `file` will be applied *before* the target resource `Service` AND the target resource will refresh if the notifying resource changes. (True)
 
 ## Resources ##
-* [Language Relationships](http://docs.puppetlabs.com/puppet/2.7/reference/lang_relationships.html)
+* [Language Relationships](http://docs.puppetlabs.com/puppet/2.7/reference/lang_relationships.html)    # /etc/puppetlabs/code/modules/zsh/manifests/init.pp
+    class zsh {
+      package { ‘zsh’:
+        ensure => present,
+        before => File[‘/etc/zshrc’],
+      }
+      file { ‘/etc/zshrc’:
+        ensure  => file,
+        owner   => ‘root’,
+        group   => ‘root’,
+        # The relationship could also be expressed with
+        #require => Package['zsh'],
+        source  => ‘puppet:///modules/zsh/zshrc’,
+      }
+
+      # The relationship could also be expressed with
+      #Package[‘zsh’] -> File[‘/etc/zshrc’]
+    }
