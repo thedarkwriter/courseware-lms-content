@@ -1,6 +1,6 @@
 # Managing SSH Keys
 
-This course demonstrates how to use a Puppet Module to manage SSH client and server keys in your environment.  
+Secure Shell (SSH) is a protocol that enables encrypted connections between nodes on a network. This course demonstrates how to use a Puppet Module to manage SSH client and server keys in your environment.  
 
 At the end of this course you will be able to:
 
@@ -88,7 +88,7 @@ Thank you for completing this Puppet Labs Workshop course.
 	c. Distribute public and private keys for all nodes, and add the keys to the hosts file.
 	d. **Add the SSH class to your environment, and apply the SSH class to a group of nodes.**.
 5. True or False.
-	With Puppet Enterprise you can edit and add class parameters from the Puppet Enterprise console. 
+	With Puppet Enterprise, you can edit and add class parameters from the Puppet Enterprise console. 
 	**True**
 
 ## References
