@@ -9,6 +9,55 @@ At the end of this course you will be able to:
 ## Video
 [Link to Video](https://github.com/puppetlabs/courseware-lms/blob/master/03-Technologies/4101/03-4101-Facter_Intro.mp4)
 
+## Transcript
+
+## Slide 0
+
+
+
+## Slide 1
+
+
+                      
+
+## Slide 2
+
+It discovers and reports per-node facts, which are available in your Puppet manifests as variables.
+
+## Slide 3
+
+
+
+## Slide 4
+
+To see the actual available facts (including plugins) and their values on any of your systems, run facter -p at the command line. If you are using Puppet Enterprise, you can view all of the facts for any node on the node’s page in the console.
+
+## Slide 5
+
+Facts appear in Puppet as normal top-scope variables. This means you can access any fact for a node in your manifests with $<fact name>. (E.g. $osfamily, $memorysize, etc.)
+
+    When using facts in a puppet manifest, preface with $:: to explicitly specify top scope.
+
+## Slide 6
+
+You can add new facts by writing a snippet of Ruby code on the Puppet master. We then use Plugins In Modules to distribute our facts to the client.
+
+More information in the Custom Facts course.
+
+## Slide 7
+
+External facts are available only in Facter 1.7 and later.
+What are external facts?
+External facts provide a way to use arbitrary executables or scripts as facts, or set facts statically with structured data. If you’ve ever wanted to write a custom fact in Perl, C, or a one-line text file, this is how.
+
+More information in the External Facts course.
+
+## Slide 8
+
+
+
+
+
 ## Exercises
 1. Run facter to gather a list of all known facts
 

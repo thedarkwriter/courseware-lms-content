@@ -9,6 +9,70 @@ At the end of this course you will be able to:
 ## Video ##
 [Autoloading](http://d.pr/v/9JFD)
 
+## Transcript ##
+
+## Slide 0
+
+
+
+## Slide 1
+
+Classes
+
+Classes define a collection of RESOURCES that are managed together as a single unit.
+
+## Slide 2
+
+Classes
+
+Classes define a collection of RESOURCES that are managed together as a single unit.
+
+## Slide 3
+
+MODULES are self-contained bundles of code and data. 
+On disk, a module is simply a directory that contains the files for a given configuration. Because of the pre-defined structure that I just covered you receive the following benefits:
+* auto-loading of classes
+* file serving (of templates & files)
+* auto delivery of extensions
+* easy sharing
+
+
+## Slide 4
+
+On disk, a module is simply a directory tree with a specific, predictable structure:
+module-name — This outermost directory’s name matches the name of the module.
+  • manifests/ — Contains all of the manifests in the module.
+  • init.pp — Contains a class definition. This class’s name must match the module’s name.
+  •templates/ — Contains templates, which the module’s manifests can use. See “Templates” for more details.
+  • files/ — Contains static files, which managed nodes can download.
+  • service.conf — This file’s URL would be puppet:///modules/my_module/service.conf.
+  • lib/ — Contains plugins, like custom facts and custom resource types. See “Using Plugins” for more details.
+  • tests/ — Contains examples showing how to declare the module’s classes and defined types.
+  • spec/ — Contains spec tests for any plugins in the lib directory.
+
+## Slide 5
+
+Puppet searches a specific directory structure to automatically find your classes. This is called the `modulepath`.
+
+## Slide 6
+
+Puppet searches a specific directory structure to automatically find your classes. This is called the `modulepath`.
+
+## Slide 7
+
+
+
+## Slide 8
+
+It works like this:
+    Modules are just directories with files, arranged in a specific, predictable structure. The manifest files within a module have to obey certain naming restrictions.
+    Puppet looks for modules in a specific place (or list of places). This set of directories is known as themodulepath, which is a configurable setting.
+    If a class is defined in a module, you can declare that class by name in any manifest. Puppet will automatically find and load the manifest that contains the class definition.
+
+## Slide 9
+
+
+
 ## Exercises ##
 1. Login shells are the programs that users interact with. They interpret commands typed at the command line. We would like to ensure that our system allows users to use the shells we have installed, by listing them in `/etc/shells`.
 

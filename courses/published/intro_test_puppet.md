@@ -13,6 +13,7 @@ At the end of this course you will be able to:
 
 One of the issues that crops up when working with Puppet is ensuring that your manifests do what you expect. Errors are bound to happen. A missed brace can make a manifest not compile. Forgetting to include a module or to set a variable may mean that running Puppet on the host fails to enforce the expected state. All in all, it would help to have some tools to make sure that you are writing valid code, that it does what you expect, and that if it doesn’t you can identify errors as soon as possible.
 
+
 ### slide Test Courses
 
 This is the first of a series of online courses that we have created to help you learn about how to test your Puppet modules and projects. You can take the courses in any order you choose. However, to get the greatest benefit, we recommend that you take them in the order listed here and in the online catalog.
@@ -23,7 +24,12 @@ OK - so let's say you have been writing Puppet modules for a while now. You know
 
 ### slide Reasons to test
 
-Testing your code can help you to:* Confirm that code updates don't break anything, * Ensure platform changes are accounted for,* Avoid committing broken code to your repository, * And help you to maintain good programming practice.
+Testing your code can help you to:
+
+* Confirm that code updates don't break anything, 
+* Ensure platform changes are accounted for,
+* Avoid committing broken code to your repository, 
+* And help you to maintain good programming practice.
 
 
 ### slide Puppet Approved
@@ -46,7 +52,11 @@ In the end, testing can actually save you time. Early, frequent testing helps yo
 
 ### slide The "sysadmin" Way
 
-So, testing is important. As a systems administrator, you probably already knew that. But how you test your Puppet code may look and feel a bit different from how you are used to testing changes to your systems.Typically your testing may include a 'stepping' process. You deploy the code to 2 production machines for a of couple days, then you deploy to 5 machines, and then 10 machines, and so on, until you roll out the change to the entire set of servers.This "sysadmin" method of testing applied to Puppet manifests and modules would be very time consuming. You would have to write the code, build your modules, provision a test server, apply the manifests, and watch for errors. If you encountered errors, you would fix them, then redeploy a test server, and re-run the tests. And you still could not be sure that the module would run on other types of servers.   
+So, testing is important. As a systems administrator, you probably already knew that. But how you test your Puppet code may look and feel a bit different from how you are used to testing changes to your systems.
+
+Typically your testing may include a 'stepping' process. You deploy the code to 2 production machines for a of couple days, then you deploy to 5 machines, and then 10 machines, and so on, until you roll out the change to the entire set of servers.
+
+This "sysadmin" method of testing applied to Puppet manifests and modules would be very time consuming. You would have to write the code, build your modules, provision a test server, apply the manifests, and watch for errors. If you encountered errors, you would fix them, then redeploy a test server, and re-run the tests. And you still could not be sure that the module would run on other types of servers.   
 
 ### slide Test Driven Development
 

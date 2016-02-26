@@ -9,6 +9,89 @@ At the end of this course you will be able to: 
 ## Video
 [Link to Video](http://linktovideo)
 
+## Transcript
+
+## Slide 0
+
+
+
+## Slide 1
+
+Hiera is a key/value lookup tool for configuration data, built to make Puppet better and let you set node-specific data without repeating yourself.
+
+## Slide 2
+
+Hiera makes Puppet better by keeping site-specific data out of your manifests. Puppet classes can request whatever data they need, and your Hiera data will act like a site-wide config file.
+
+## Slide 3
+
+This makes it:
+    Easier to configure your own nodes: default data with multiple levels of overrides is finally easy.
+    Easier to re-use public Puppet modules: don’t edit the code, just put the necessary data in Hiera.
+    Easier to publish your own modules for collaboration: no need to worry about cleaning out your data before showing it around, and no more clashing variable names.
+
+## Slide 4
+
+With Hiera, you can:
+    Write common data for most nodes
+    Override some values for machines located at a particular facility…
+    …and override some of those values for one or two unique nodes.
+This way, you only have to write down the differences between nodes. When each node asks for a piece of data, it will get the specific value it needs.
+
+## Slide 5
+
+To get started with Hiera, you’ll need to do the following:
+    Install Hiera, if it isn’t already installed.
+    Make a hiera.yaml config file.
+    Arrange a hierarchy that fits your site and data.
+    Write data sources.
+    Use your Hiera data in Puppet (or any other tool).
+
+## Slide 6
+
+This is a sample hiera.yaml configuration file for Hiera. Use this file to configure the hierarchy, which backend(s) to use, and settings for each backend.
+
+Hiera’s config file must be a YAML hash. The file must be valid YAML, but may contain no data.
+
+Hiera will fail with an error if the config file can’t be found, although an empty config file is allowed.
+
+
+:backends
+Must be a string or an array of strings, where each string is the name of an available Hiera backend. The built-in backends are yaml and json; an additional puppet backend is available when using Hiera with Puppet. Additional backends are available as add-ons.
+The list of backends is processed in order: in the example above, Hiera would check the entire hierarchy in the yaml backend before starting again with the json backend.
+Default value: "yaml"
+
+:hierarchy
+Must be a string or an array of strings, where each string is the name of a static or dynamic data source. (A dynamic source is simply one that contains a %{variable} interpolation token. See “Creating Hierarchies” for more details.)
+The data sources in the hierarchy are checked in order, top to bottom.
+Default value: "common" (i.e. a single-element hierarchy whose only level is named “common.”)
+
+## Slide 7
+
+Using the previous configuration we have created a data directory called dev.yaml. In this file we have 2 key/value pairs. One for ntpserver and an array for dnsservers.
+
+## Slide 8
+
+Hiera will search for key value pairs, for example the ntpserver key/value pair from our dev.yaml file, in the following order: 1. /etc/puppet/hieradata/hosts/agent.puppetlabs.vm.yaml
+2. /etc/puppet/hieradata/env/dev.yaml 
+3. /etc/puppet/hieradata/common.yaml
+
+## Slide 9
+
+While this has been a short and simple introduction to Hiera, you can hopefully see the advantages of separting your common configuration data from your modules.
+
+Remember, with Hiera, you can:
+    Write common data for most nodes
+    Override some values for machines located at a particular facility…
+    …and override some of those values for one or two unique nodes.
+This way, you only have to write down the differences between nodes. When each node asks for a piece of data, it will get the specific value it needs.
+
+## Slide 10
+
+
+
+
+
 ## Exercises
 1. The `/etc/motd` file is presented to users each time they log in. We would like to allow non-admins to easily customize this login message.
 

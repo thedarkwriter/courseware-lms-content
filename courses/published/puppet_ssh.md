@@ -16,11 +16,17 @@ This course is a quick look at how to use Puppet Enterprise to manage SSH key au
 
 ### slide 2
 We'll look at how to install an SSH module from the Puppet Forge, add the ssh classes to a node group, and set ssh class parameters.  
-### slide 3
+
+
+
+### slide 3
 First - a quick review of SSH. Secure Shell (SSH) is a protocol that enables encrypted connections between nodes on a network for secure data communication, remote command-line login, remote command execution, and other secure network services. Perhaps the most common application of the protocol is for access to shell accounts on Unix-like operating systems, but it can also be used in a similar fashion for accounts on Windows.    
 
-### slide 4SSH uses public-key cryptography to authenticate clients and servers.  During authentication, the client and server prove their identities to each other by using private and public key pairs that work in concert. Information encrypted with the private key can be decrypted with the public key, and vice versa.
-
+### slide 4
+SSH uses public-key cryptography to authenticate clients and servers.  During authentication, the client and server prove their identities to each other by using private and public key pairs that work in concert. Information encrypted with the private key can be decrypted with the public key, and vice versa.
+
+
+
 ### slide 5
 On a Linux system, the authorized keys file lists the public keys that are permitted to log in.  When the user logs in, the ssh client uses the private half of its key pair to create an encrypted message, which it sends to the server for authentication. The server validates the encrypted message, using the public key stored in the authorized keys file. 
 

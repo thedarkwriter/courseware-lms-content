@@ -12,6 +12,95 @@ At the end of this course you will be able to:
 ## Video ##
 [Link to Video](http://linktovideo)
 
+## Transcript
+
+## Slide 0
+
+
+
+## Slide 1
+
+Classes can be derived from other classes using the inherits keyword.
+
+This allows you to make special-case classes that extend the functionality of a more general “base” class.
+
+## Slide 2
+
+Inheritance causes three things to happen:
+    When a derived class is declared, its base class is automatically declared first (if it wasn’t already declared elsewhere).
+
+    The base class becomes the parent scope of the derived class, so that the new class receives a copy of all of the base class’s variables and resource defaults.
+
+    Code in the derived class is given special permission to override any resource attributes that were set in the base class.
+
+## Slide 3
+
+Class inheritance allows for specialization.
+
+## Slide 4
+
+
+                      
+
+## Slide 5
+
+Override resource attributes to provide alternate configuration
+Adding resources and attributes
+
+## Slide 6
+
+
+                      
+
+## Slide 7
+
+A class contains all of its resources. This means any relationships formed with the class as a whole will be extended to every resource in the class.
+
+The general form of a class definition is:
+    The class keyword
+    The name of the class
+    An optional set of parameters, which consists of:
+    An opening parenthesis
+    A comma-separated list of parameters, each of which consists of:
+    A new variable name, including the $ prefix
+    An optional equals (=) sign and default value (any data type)
+    An optional trailing comma after the last parameter
+    A closing parenthesis
+    Optionally, the inherits keyword followed by a single class name
+    An opening curly brace
+    A block of arbitrary Puppet code, which generally contains at least one resource declaration
+    A closing curly brace
+
+## Slide 8
+
+
+                      
+
+## Slide 9
+
+
+                      
+
+## Slide 10
+
+Class inheritance should be used very sparingly, as it can create unnecessary complexity.
+
+Class inheritance is only useful for overriding resource attributes; any other use case is better accomplished with other methods.
+
+If you just need to override relationship metaparameters, you should use a single class with conditional relationship declarations instead of inheritance.
+
+In many cases, even other attributes (e.g. ensure and enable) may have their behavior changed with variables and conditional logic instead of inheritance.
+
+
+
+
+
+## Slide 11
+
+
+
+
+
 ## Exercises ##
 
 Login shells are the programs that users interact with. They interpret commands typed at the command line. We would like to provide a new shell for our users, and we’ll customize the configuration file a bit for all of our users. We would also like to customize this default configuration file for a subset of our users to provide handy shortcuts and aliases that are useful for software developers.
