@@ -1,6 +1,8 @@
 # An Introduction to puppet-lint
 Puppet-lint is a static analysis tool you can use to verify that your Puppet code is free of common errors and ensure that it matches conventions described in the Puppet Labs Style Guide.
 
+In this course you will see how to install puppet-lint, use puppet-lint to check a manifest, customize puppet-lint's configuration, and integrate puppet-lint into a Rakefile.
+
 At the end of this course you will be able to:
 
 * Check for common syntactical and stylistic errors in your manifest code.
@@ -63,33 +65,33 @@ Thank you for completing this Puppet Labs Workshop course.
 
 ## Exercises
 
-*  Run puppet-lint on the sample manifest file.
-  
-`puppet-lint /etc/puppetlabs/puppet/modules/ntplint/manifests/init.pp`
+Run puppet-lint on the sample manifest file.
 
-* Puppet-lint will return the following list of warnings:
+<pre>puppet-lint /etc/puppetlabs/puppet/modules/ntplint/manifests/init.pp`
+</pre>
 
+Puppet-lint will return the following list of warnings:
 
-    WARNING: top-scope variable being used without an explicit namespace on line 5
-    WARNING: double quoted string containing no variables on line 10
-    WARNING: string containing only a variable on line 39
-    WARNING: unquoted resource title on line 38
-    WARNING: ensure found on line but it's not the first attribute on line 40
+<pre>   WARNING: top-scope variable being used without an explicit namespace on line 5
+   WARNING: double quoted string containing no variables on line 10
+   WARNING: string containing only a variable on line 39
+   WARNING: unquoted resource title on line 38
+   WARNING: ensure found on line but it's not the first attribute on line 40
+</pre>
 
+Edit the manifest to correct these issues:
 
-*  Edit the manifest to correct these issues:
+<pre>vim /etc/puppetlabs/puppet/modules/ntplint/manifests/init.pp</pre>
 
-`vim /etc/puppetlabs/puppet/modules/ntplint/manifests/init.pp`
+Run puppet-lint again to see the result:
 
-*  Run puppet-lint again to see the result:
+<pre>puppet-lint /etc/puppetlabs/puppet/modules/ntplint/manifests/init.pp</pre>
 
-`puppet-lint /etc/puppetlabs/puppet/modules/ntplint/manifests/init.pp`
-
-*  Continue editing and checking until there are no remaining warnings. 
+Continue editing and checking until there are no remaining warnings.
 
 ## Example Solution
 
-```
+<pre>
 # An example ntp class for testing puppet-lint checks
 
 class ntplint ($servers = undef, $enable = true, $ensure = running) {
@@ -142,7 +144,8 @@ class ntplint ($servers = undef, $enable = true, $ensure = running) {
   }
 
 }
-```
+
+</pre>
 
 ## Quiz
 1. True or **False**: As long as your code is syntactically valid, some stylistic variation within your manifests is desirable.
