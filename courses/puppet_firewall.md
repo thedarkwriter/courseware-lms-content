@@ -1,4 +1,11 @@
 # Puppet Firewall
+In this course, we look at how to:
+
+*   Write a simple firewall module.
+*   Use the Puppet Enterprise console to add a class named "my firewall" to your agent nodes.
+*   Write a class to open ports for the Puppet master.
+*   Enforce the desired state of the "my firewall" class.
+
 
 ###Slide 1
 In this course, you will see how to get started managing firewall rules with Puppet Enterprise.
@@ -96,20 +103,26 @@ There are no exercises for this course.
 
 ## Quiz ##
 
-1. True or False. The directory in which you should edit your modules is /opt/puppet/share/puppet/modules **False**
+1. The firewall rules are prioritized in which order? Select the single best answer. (c)
+a. Pre, post
+b. Service rule, pre, post
+c. Pre, service rules, post
+d. Pre, my_master, post
 
-2. The name of the Puppet DNS template file is:
-	a. DNS.conf.pp
-	b. DNS.template.erb
-	c. **resolve.conf.erb**
-	d. resolve.template.pp
-3. Which of the following are classes within the DNS module?
-	a. DNS
-	b. DNS::Config
-	c. **Resolver
-	d. Resolve
-4. True or False. Resolver parameters should always be set in the resolver.conf file. **False**
-5. True or False. The local node copy of the nameserver file is the basis for desired state enforcement. **False**
+2. True or False. The local firewall rules may override group rules under certain circumstances. (False)
+
+3. What is the purpose of the post rule? (a)
+a. It closes any ports that are left open and drops all packets not explicitly allowed by higher level rules.
+b. It open ports for special cases that are closed by higher level rules.
+c. It drops all packets and closes all ports.
+
+4. True or False. The Puppet Master is exempt from firewall rules. **False**
+
+5. If they are present, which of the following rules are included in the firewall policy? Select all that apply.
+(a). Pre
+(b). Post
+c. My_firewall
+(d.) Any service rule
 
 ## References ##
 * [Beginner’s Guide to Modules](https://docs.puppetlabs.com/pe/latest/guides/module_guides/bgtm.html)
