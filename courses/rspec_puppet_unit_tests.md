@@ -139,7 +139,7 @@ You use unit tests to validate each individual class in your module under contro
     d. Evaluate the structure of your code.
 3. **True** or False: True or False: You can use rspec, a popular Ruby testing library, to test your Puppet modules.
 4. True or **False**: Writing unit tests is simply writing manifests in another language in order to test the functionality of a module.
-5. ​For the purpose of validating conditions, rspec matchers can match:
+5. For the purpose of validating conditions, rspec matchers can match:
     a. Ruby Procs
     b. Exact values
     c. **Exact values, regular expresssions, or Ruby Procs**
