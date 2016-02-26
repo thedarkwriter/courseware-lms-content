@@ -1,9 +1,11 @@
 # Event Inspector
-The Event Inspector, part of the Puppet Enterprise (PE) Console, is a reporting tool that provides data for investigating the current state of your infrastructure. Its focus is on correlating information and presenting it from multiple perspectives, in order to reveal common causes behind related events.
+The Event Inspector, part of the Puppet Enterprise Console, is a reporting tool that provides data for investigating the current state of your infrastructure. Its focus is on correlating information and presenting it from multiple perspectives, in order to reveal common causes behind related events.
 
 At the end of this course you will be able to:
 
-* 
+* List the three perspectives you can use to view your infrastructure.
+* Define an event.
+* Explain the four types of events found in Event Inspector.
 
 ## Video
 
@@ -13,17 +15,21 @@ There are no exercises for this course. However, you can download Puppet Enterpr
 
 ## Quiz
 1. **True** or False.  At its core, Event Inspector is a reporting tool available in the Puppet Enterprise Console.
-2. There are four (4) types of Events in Event Inspector. Which of the following is not an Event?
+
+2. There are four types of Events in Event Inspector. Which of the following is not an Event?
 	a. Change
 	b. Failure
 	c. Noop
 	d. **Apply**
-3. Event Inspector offers 3 **perspectives** to look at your infratstructure. They are: CLASSES, NODES, and what?
-	a. MODULES
-	b. MANIFESTS
-	c. **RESOURCES**
-	d. EVENTS
+
+3. Event Inspector offers three perspectives to look at your infratstructure. They are Classes, Nodes, and which of the following items?
+	a. Modules
+	b. Manifests
+	c. **Resources**
+	d. Events
+
 4. True or **False**. It is advisable to use the *Back* button while navigating through Event Inspector.
+
 5. True or **False**. WIth Event Inspector you can accomplish 142 *important* tasks.
 
 ## References
