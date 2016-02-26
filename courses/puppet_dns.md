@@ -1,5 +1,12 @@
 # Puppet DNS
 
+In this course, you will see how to get started managing a simple DNS  file with Puppet Enterprise. We'll look at:
+
+*   Sample resolver class code and resolver template code.
+*   A sample module that contains a class called resolver to manage a nameserver file called, /etc/resolv.conf.
+*   An example of using the Puppet Enterprise console to add the resolver class to your agent nodes.
+*   An example of how Puppet Enteprise enforces the desired state you specified in the PE console.
+
 ###Slide 1
 In this course, you will see how to get started managing a simple DNS nameserver file with Puppet Enterprise.
 
@@ -113,12 +120,9 @@ There are no exercises for this course.
 	b. DNS.template.erb
 	c. **resolve.conf.erb**
 	d. resolve.template.pp
-3. Which of the following are classes within the DNS module?
-	a. DNS
-	b. DNS::Config
-	c. **Resolver
-	d. Resolve
+
 4. True or False. Resolver parameters should always be set in the resolver.conf file. **False**
+
 5. True or False. The local node copy of the nameserver file is the basis for desired state enforcement. **False**
 
 ## References ##
