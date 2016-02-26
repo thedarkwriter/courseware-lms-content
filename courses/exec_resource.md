@@ -1,6 +1,6 @@
 # The Exec Resource
 
-The exec resource is a powerful tools that allows you to access operating system commands and execute scripts from within your Puppet manifests. It is especially useful when there is no available  Puppet resource type to perform a function. 
+The exec resource is a powerful tool that allows you to access operating system commands and execute scripts from within your Puppet manifests. It is especially useful when there is no available  Puppet resource type to perform a function. 
 
 After completing this course, you will be able to apply the exec resource appropriately and ensure that you maintain the idempotency of your Puppet manifests. 
 
@@ -92,12 +92,6 @@ Thank you for completing this Puppet Labs Workshop course.
 	c. Include the `path` attribute.
 	d. **Be able to run multiple times without causing harm.**
 	
-5. It is *not* a best practice to chain multiple exec resources together to accomplish a task because:
-	a. Multiple exec resources can not be idempotent.
-	b. Puppet only lets you use one resource to accomplish a task.
-	c. **Using a collection of exec resources can be complicated and confusing.**
-	d. the puppet module tool
-
 
 ## References
 * [Puppet Forge](http://forge.puppetlabs.com)
