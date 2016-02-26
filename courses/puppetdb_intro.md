@@ -20,7 +20,7 @@ where `<node>` is the name of an acutal node that Puppet is managing.
 ## Quiz
 1. True or False. PuppetDB is a database that can replace your MySQL or PostgreSQL databases in your current configuration. (False)
 2. PuppetDB stores all of the following, except:
-a. most recent facts from every node b. hiera values calculated for every node c. most recent catalog for every node d. seven days of event reports for every node (b)
+a. Most recent facts from every node b. Hiera values calculated for every node c. Most recent catalog for every node d. Seven days of event reports for every node (b)
 3. Which of the following are not used to get data from PuppetDB?
 a. Puppet's Inventory Service b. PuppetDB's query API c. virtual resources d. exported resources
 4. True or False. Declaring an exported resource causes that resource to be added to the catalog and marked with an “exported” flag, which prevents puppet agent from managing the resource (unless it was collected). When PuppetDB receives the catalog, it also takes note of this flag. (True)
