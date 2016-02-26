@@ -1,20 +1,9 @@
 # An Introduction to the Console
-The Puppet Enterprise Console is a web-based graphical user interface for your infrastructure. This is a high level overview of the Console. Each main area will be given its own course (i.e. Event Inspector, Live Management, etc.) in the near future.
+The Puppet Enterprise Console is a web-based graphical user interface for your infrastructure. This course is a high level overview of the Console covering the main functional areas.
 
-With the console you can:
+At the end of this course you will be able to: 
 
-* manage node requests to join the Puppet deployment.
-* assign Puppet classes to nodes and groups.
-* view reports and activity graphs.
-* trigger Puppet runs on demand.
-* browse and compare resources on your nodes.
-* view inventory data.
-* invoke orchestration actions on your nodes.
-* manage console users and their access privileges.
-
-At the end of this course you will be able to:
-
-* describe the general layout and functional areas of the PE console.
+* Describe the general layout and functional areas of the PE console.
 
 ## Video
 
