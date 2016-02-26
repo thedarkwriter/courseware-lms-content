@@ -1,5 +1,16 @@
 # Puppet NTP
 
+Your entire datacenter, from the network to the applications, depends on consistent time for many different functions, such as security services, certificate validation, and file sharing across nodes.
+
+In this course, we give you an overview of how to use Puppet Enterprise to:
+
+*   Install the NTP module.
+*   Add classes from the NTP module to your agent.
+*   View changes made by the main NTP class.
+*   Edit parameters of the main NTP class.
+
+
+
 ###Slide 1
 Your entire datacenter, from the network to the applications, depends on consistent time for many different functions, such as security services, certificate validation, and file sharing across nodes.
 
@@ -110,17 +121,17 @@ There are no exercises for this course.
 	b. **Puppet Code**
 	c. HTML	
 	d. Python
-2. Using Puppet Enterprise console provides which advantages when deploying NTP:
-	a. The code is simple and brief
-	b. **Event inspector can be used to check status
-	c. **Automation
-	d. **Events can be traced to the code level
-3. Which of the following are classes within the NTP module?
-	a. **NTP
-	b. **NTP::Install
+
+2. True or False. Using Puppet Enterprise console to deploy NTP lets you trace events to the code level. **True**
+
+3. Which of the following is a class within the NTP module?
+	a. Config
+	b. Config::NTP
 	c. **NTP::Config
 	d. NTP::Deploy
+
 4. True or False. The NTP class can include a UDLC resource that allows local time to be used if an NTP server is unreachable. **True**
+
 5. True or False. Puppet code is human-readable. **True**
 
 ## References ##
