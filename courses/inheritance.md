@@ -13,11 +13,50 @@ At the end of this course you will be able to:
 [Link to Video](http://linktovideo)
 
 ## Exercises ##
-Assuming you have a working Puppet installation:
 
-1. Execute, etc.
-2. Execute, etc.
-3. Execute, etc.
+Login shells are the programs that users interact with. They interpret commands typed at the command line. We would like to provide a new shell for our users, and we’ll customize the configuration file a bit for all of our users. We would also like to customize this default configuration file for a subset of our users to provide handy shortcuts and aliases that are useful for software developers.
+
+Change your current working directory to your modulepath with
+
+`cd /etc/puppetlabs/puppet/modules`
+
+Examine the directory structure of the example zsh module.
+
+<pre><code>[root@training modules]# tree zsh/
+zsh/
+├── files
+│   ├── zshrc
+│   └── zshrc.dev
+├── manifests
+│   └── init.pp
+├── Modulefile
+├── README
+├── spec
+│   └── spec_helper.rb
+└── tests
+    └── init.pp</code></pre>
+
+We will start with this zsh module that manages the shell. Create a new class called `zsh::developer` that inherits from the `zsh` class and overrides the `File['/etc/zshrc']` resource to change the location that the file is sourced from to `puppet:///modules/zsh/zshrc.dev`
+
+*   `cd /etc/puppetlabs/puppet/modules`
+*   `vim zsh/manifests/developer.pp`
+
+Also create a test manifest in order to verify your code.
+
+`vim zsh/tests/developer.pp`
+
+Finally, incorporate the ordering from the [Relationships](https://dev.puppetlabs.com/learn/relationships) lesson to ensure that the configuration file is written out after the package is installed. To do so, edit the main `zsh` class:
+
+`vim zsh/manifests/init.pp`
+
+and add a `before` attribute to the `Package['zsh']` resource
+
+`before => File['/etc/zshrc'],`
+
+Test and enforce your test manifest.
+
+*   `puppet parser validate zsh/manifests/developer.pp`
+*   `puppet apply zsh/tests/developer.pp`
 
 ## Quiz ##
 1. The Puppet keyword used to extend the functionality of a class is called:
