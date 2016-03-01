@@ -468,7 +468,7 @@ motd/
 	c. **Hiera makes it easier to configure your Puppet Master during installation.**
 	d. Hiera makes it easier to publish your own modules.
 
-3. True or False. Hiera allows for PostgreSQL backends. (True)
+3. True or False. YAML and JSON are the only Hiera backends. (True)
 
 4. When searching the data backends Hiera will:
 	a. **Begin with the first backend listed.**
