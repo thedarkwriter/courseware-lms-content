@@ -219,6 +219,11 @@ Bob is a little more territorial, so `nodes/bob.puppetlabs.vm.yaml` looks like t
 message: "This is Bob's development server. Don't touch anything, or else!"
 </pre>
 
+Since you can't log in to the actual machines, you can test out hiera's response to different certnames by passing in "certname" as a variable to the hiera command line tool:
+<pre>
+hiera message certname=jane.puppetlabs.vm
+</pre>
+
 This isn't limited to a single directory, you can have multiple subdirectories. You can even use have more complex levels of the hierarchy. For example, if you have multiple datacenters each with a development and production environment, you could use a custom fact of "datacenter" to have something like this:
 <pre>
 ---
@@ -231,7 +236,87 @@ This isn't limited to a single directory, you can have multiple subdirectories. 
     - "common"
 </pre>
 
-If this is starting to seem overwhelming, don't worry. Hierachies of more than a few levels are unusual in practice, so don't add complexity if you don't need it.
+To give a more complex configuration a try you can pass multiple parameters to the hiera command line tool.  For example, to find out the MOTD on the development servers in the Portland datacenter, you would use this command:
+<pre>
+hiera message environment=development datacenter=portland
+</pre>
+
+We've set up a complex hierarchy, explore a bit, add some keys/value pairs, and see if you can get a sense of how hiera behaves. What happens if you use a certname that doesn't have a corresponding yaml file? How about an environment that doesn't exist? What if you set up conflicting values? 
+
+If this is starting to seem overwhelming, don't worry. Hierachies of more than a few levels are unusual in practice, so don't add complexity if you don't need it. Even this example is probably more complexity then most users will ever need.
+
+## Exercise 4
+
+Complex hierarchies
+
+
+## Getting started with Hiera - Part 5
+
+Now that we've seens what possible with complex hierarchies, let's take a look at some other ways of interacting with hiera data. What if you want to combine data from multiple levels of the hierarchy?
+
+For example, you have a list of software packages that you want installed on every server and some that depend on the environment. If you had to specify that at every level of the hierarchy it would lead to a lot of duplicate data.
+
+Thankfully, hiera is more intelligent than that. Let's look at how this could play out in a hierarchy with three levels. At the top, we have the per-node configuration. Let's just set one up for Bob's dev server in 'nodes/bob.puppetlabs.vm.yaml':
+<pre>
+---
+package_list:
+  - emacs
+</pre>
+
+All of the other developers use vim, so let's make sure the development.yaml has that package along with some other useful things:
+<pre>
+---
+package_list:
+  - vim
+  - gcc
+  - cowsay
+</pre>
+
+But in production, we don't want anything extra, so instead of vim we'll just have vi and leave out the other packages:
+<pre>
+---
+package_list:
+  - vi
+</pre>
+
+Finally, at the bottom of the hierarchy we have a few packages that should be installed on every machine in common.yaml:
+<pre>
+---
+package_list:
+  - dig
+  - ssh
+  - fortune
+</pre>
+
+Unfortunately, using the `hiera()` function will only return the result from a single level in the hierarchy. To correctly merge across multiple levels of the hierarchy, we'll need to use `hiera_array()`:
+
+<pre>
+$packages = hiera_array('package_list')
+package { $packages:
+  ensure => present,
+}
+</pre>
+
+The best way to understand `hiera_array()` is to just dig in and try it out. It's pretty easy to test by using the command line hiera tool, just use the `-a` argument. For example to see what packages are installed on Bob's dev machine you would use this command:
+<pre>
+hiera -a package_list environment=development certname=bob.puppetlabs.vm.yaml
+</pre>
+
+and the result would be:
+<pre>
+["fortune","dig","ssh","vim","gcc","cowsay","emacs"]
+</pre> 
+
+
+We've set up these example files and a few more on the practice machine, try a few permutations until you have a feel for how hiera_array() works.
+
+## Exercise 5
+
+hiera_array() examples.
+
+## Getting started with Hiera - Part 6
+
+We're going to cover one more powerful feature of hiera, the `hiera_hash()` function.
 
 
 # An Introduction to Hiera
