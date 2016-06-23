@@ -1,0 +1,98 @@
+/* Get all of the LDE divs out of the way */
+
+
+#consumption-content {
+   margin: 0;
+}
+
+#user-content .content.container-fluid .row .col-xs-12 {
+    /* Viewable hight minus header and footer */
+    height: calc(100vh - 171px);
+    padding: 0 10px;
+    margin: 0px;
+}
+.content.container-fluid, 
+.content.container-fluid .row, 
+#consumption-content, 
+.main-content,
+.content.section, 
+#video,
+#terminal,
+#instructions {
+    height:inherit;
+}
+
+/* Begin Actual Syling */
+
+iframe {
+    height: inherit;
+    border: 0px;
+}
+
+/* Amber section headers for instructions */
+.instruction-header {
+    font-size: 16px;
+    background: #ffd86e;
+    min-height: 40px;
+    padding: 10px;
+}
+
+/* Add some margin around the icons */
+.instruction-header .fa {
+    margin: 2px 8px 0px 8px;
+}
+
+.instruction-content {
+    margin: 20px 20px;
+}
+
+.content.section, #lesson {
+    display: flex;
+    flex: 1 1 auto;
+    height: inherit;
+}
+
+#terminal iframe {
+    background-image: url("https://try.puppet.com/images/Puppet-Logo-Amber-sm.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #222222;
+    flex: 1 1 auto
+}
+
+#instructions, #terminal, #video {
+    margin: 0px;
+    border: 0px;
+    padding: 0px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: inherit;
+}
+
+#instructions {
+    overflow-y: scroll;
+    background-color: #f7f7f7;
+}
+
+@media (max-width: 970px) {
+   /* clear flexbox for smaller screens */
+   .content.section, #lesson {
+        display: block;
+    }
+
+    #user-content .content.container-fluid .row .col-xs-12, 
+    .content.container-fluid, 
+    .content.container-fluid .row, 
+    #consumption-content, 
+    #consumption-content div, 
+    .main-content ,
+    .main-content div, 
+    .content.section {
+        height: inherit;
+    }
+
+    iframe {
+        height: 480px;
+    }
+}
