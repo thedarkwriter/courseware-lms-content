@@ -1,9 +1,11 @@
+<link rel="stylesheet" href="css/selfpaced.css" markdown="1">
+
 <div id="lesson" markdown="1">
 
 <div id="instructions" markdown="1">
 
-<div class="instruction-header">
-<i class="fa fa-graduation-cap"></i>
+<div class="instruction-header" markdown="1">
+<i class="fa fa-graduation-cap" markdown="1"></i>
 Lesson
 </div>
 
@@ -72,7 +74,7 @@ message: "Welcome to $::hostname. Don't break anything!"
 
 </div>
 
-<div class="instruction-header">
+<div class="instruction-header" markdown="1">
 <i class="fa fa-desktop"></i>
 Practice
 </div>
@@ -86,7 +88,7 @@ the page to get a fresh machine.
 
 </div>
 
-<div class="instruction-header">
+<div class="instruction-header" markdown="1">
 <i class="fa fa-square-check-o"></i>
 Instructions
 </div>
@@ -100,7 +102,7 @@ Add a second key by editing `/etc/puppetlabs/code/hieradata/common.yaml`
 
 </div>
 
-<div class="instruction-header">
+<div class="instruction-header" markdown="1">
 <i class="fa fa-pencil"></i>
 Notes
 </div>
@@ -119,7 +121,7 @@ editor, take a look at those courses before proceeding.
 
 </div>
 
-<div id="terminal">
+<div id="terminal" markdown="1">
   <iframe name="terminal"></iframe>
 </div>
 

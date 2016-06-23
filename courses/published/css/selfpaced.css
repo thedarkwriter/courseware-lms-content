@@ -16,7 +16,9 @@
 #consumption-content, 
 .main-content,
 .content.section, 
-#video {
+#video,
+#terminal,
+#instructions {
     height:inherit;
 }
 
