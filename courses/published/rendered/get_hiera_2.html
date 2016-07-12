@@ -1,0 +1,122 @@
+<link rel="stylesheet" href="/static/selfpaced/selfpaced.css" />
+
+<div id="lesson">
+
+  <div id="instructions">
+
+    <div class="instruction-header">
+<i class="fa fa-graduation-cap"></i>
+Lesson
+</div>
+
+    <div class="instruction-content">
+
+      <p>Hiera is pretty handy for keeping all of your data in one place, when you add a
+level of hierarchy it becomes a lot more powerful.</p>
+
+      <p>Let&#8217;s imagine you have two webservers, one is in your &#8220;production&#8221; environment
+and one is in your &#8220;development&#8221; environment.  They are mostly the same, but
+they need to use different DNS servers.</p>
+
+      <p>Without Hiera, your code might look like this:</p>
+      <pre>
+case $environment {
+  'production': {
+    $dns_server = 'proddns.puppetlabs.vm'
+  }
+  'development': {
+    $dns_server = 'devdns.puppetlabs.vm'
+  }
+}
+profile::dns_server {
+  dns_server =&gt; $dns_server,
+}
+</pre>
+
+      <p>This is simple enough for two servers. What if you add developer workstations
+or another pre-production test environment? What if there are more
+configuration differences between environments? The code can quickly get out of
+control.</p>
+
+      <p>Let&#8217;s look at how the code would appear in using Hiera:</p>
+      <pre>
+$dns_server = hiera('$dns_server')
+profile::dns_server {
+  dns_server =&gt; $dns_server,
+}
+</pre>
+
+      <p>So what happened to the details? Now they&#8217;re in two separate files, one for
+each environment. They go in the same directory as <code>common.yaml</code></p>
+
+      <p>Here&#8217;s the production environment, we&#8217;ll call it <code>production.yaml</code></p>
+      <pre>
+---
+dns_server: 'proddns.puppetlabs.vm'
+</pre>
+
+      <p>And here&#8217;s the dev environment, we&#8217;ll call it <code>development.yaml</code></p>
+      <pre>
+---
+dns_server: 'devdns.puppetlabs.vm'
+</pre>
+
+      <p>There&#8217;s one place you need to change things, that&#8217;s in your <code>hiera.yaml</code>.
+You&#8217;ll have to add another level to the hierarchy, above &#8220;common&#8221;. Since we
+want to use the value of the environment and not just the word &#8220;environment&#8221;,
+we&#8217;ll need to add some special syntax.</p>
+
+      <p>Here&#8217;s what the <code>hiera.yaml</code> needs to look like:</p>
+      <pre>
+---
+:backends: "yaml"
+:yaml:
+  :datadir: "/etc/puppetlabs/code/hieradata"
+  :hierarchy:
+    - "%{environment}"
+    - "common"
+</pre>
+
+    </div>
+
+    <div class="instruction-header">
+<i class="fa fa-desktop"></i>
+Practice
+</div>
+
+    <div class="instruction-content">
+
+      <p>Before we go further, why not try out what you&#8217;ve just learned? To tell the
+command line <code>hiera</code> tool what value to use for <code>environment</code> just add it after
+the key.</p>
+
+      <p>For example, to check the <code>dns_server</code> in the <code>production</code> environment, you
+would use this command:</p>
+
+      <pre>
+hiera dns_server environment=production
+</pre>
+
+    </div>
+
+    <div class="instruction-header">
+<i class="fa fa-square-check-o"></i>
+Instructions
+</div>
+
+    <div class="instruction-content">
+
+      <p>Try adding another environment called &#8220;qa&#8221;, or even another level in the
+hierarchy that&#8217;s based on the <code>hostname</code> fact instead of <code>environment</code>.</p>
+
+    </div>
+
+    <p><a href="https://try.puppet.com/sandbox/?course=get_hiera2" class="btn btn-default" target="terminal">Start Practice Session</a></p>
+
+  </div>
+
+  <div id="terminal">
+  <iframe name="terminal"></iframe>
+</div>
+
+</div>

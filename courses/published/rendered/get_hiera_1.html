@@ -1,58 +1,56 @@
-<link rel="stylesheet" href="css/selfpaced.css" />
+<link rel="stylesheet" href="/static/selfpaced/selfpaced.css" />
 
-<div id="user-content">
+<div id="lesson">
 
-  <div id="lesson">
+  <div id="instructions">
 
-    <div id="instructions">
-
-      <div class="instruction-header">
-        <p><i class="fa fa-graduation-cap"></i>
+    <div class="instruction-header">
+      <p><i class="fa fa-graduation-cap"></i>
 Lesson</p>
-      </div>
+    </div>
 
-      <div class="instruction-content">
-        <p>When you first start using Puppet, you might include configuration details in
+    <div class="instruction-content">
+      <p>When you first start using Puppet, you might include configuration details in
 your Puppet code.  For example, when setting up a database server, you might
 hard-code the hostname of the server in the Puppet manifest. As your puppet
 implementation grows, this can become unmanageable. Making a small change to an
 system might mean making changes across multiple parts of your Puppet code.
 Hiera offers a robust and straightforward way to separate data from code.</p>
 
-        <p>The name &#8216;Hiera&#8217; stands for hierarchy, but the most basic functional Hiera
+      <p>The name &#8216;Hiera&#8217; stands for hierarchy, but the most basic functional Hiera
 config doesn&#8217;t have to be hierachical.  Let&#8217;s set up a simple flat lookup using
 Hiera.</p>
 
-        <p>Imagine you want to set a default message of the day on your servers.  You
+      <p>Imagine you want to set a default message of the day on your servers.  You
 could do this with the following Puppet code:</p>
 
-        <pre>
+      <pre>
 $message = "Welcome to $::hostname. Don't break anything!"
 file { '/etc/motd':
   content =&gt; $message
 }
 </pre>
 
-        <p>This works just fine, but the more you hard-code data into your Puppet code,
+      <p>This works just fine, but the more you hard-code data into your Puppet code,
 the harder it is to maintain.  What if you wanted to share that code with
 someone outside your company? You&#8217;d have to remember to go in and clean out any
 potentially sensitive data across your entire codebase.</p>
 
-        <p>Even with the simplest configuration Hiera offers a robust way to separate that
+      <p>Even with the simplest configuration Hiera offers a robust way to separate that
 data from your code.</p>
 
-        <p>Using Hiera, the code would look this this:</p>
-        <pre>
+      <p>Using Hiera, the code would look this this:</p>
+      <pre>
 $message = hiera("message")
 file { '/etc/motd':
   content =&gt; $message
 }
 </pre>
 
-        <p>You&#8217;ll need to tell Hiera where to find the data, you can do this by creating a
+      <p>You&#8217;ll need to tell Hiera where to find the data, you can do this by creating a
 file called <code>/etc/puppetlabs/code/hiera.yaml</code>:</p>
 
-        <pre>
+      <pre>
 ---
 :backends: "yaml"
 :yaml:
@@ -61,71 +59,70 @@ file called <code>/etc/puppetlabs/code/hiera.yaml</code>:</p>
     - "common"
 </pre>
 
-        <p>Since this is a simple example, our hierarchy only has one level, &#8220;common&#8221;. In
+      <p>Since this is a simple example, our hierarchy only has one level, &#8220;common&#8221;. In
 future lessons, we&#8217;ll add some more levels. We&#8217;ll keep &#8220;common&#8221; as the base of
 the hierarchy as a place to hold global defaults.</p>
 
-        <p>We still need to add the actual data. Do this by creating a file called
+      <p>We still need to add the actual data. Do this by creating a file called
 <code>common.yaml</code> in the <code>datadir</code> that&#8217;s listed in <code>hiera.yaml</code></p>
 
-        <p><code>common.yaml</code> looks like this:</p>
-        <pre>
+      <p><code>common.yaml</code> looks like this:</p>
+      <pre>
 ---
 message: "Welcome to $::hostname. Don't break anything!"
 </pre>
 
-      </div>
+    </div>
 
-      <div class="instruction-header">
-        <p><i class="fa fa-desktop"></i>
+    <div class="instruction-header">
+      <p><i class="fa fa-desktop"></i>
 Practice</p>
-      </div>
+    </div>
 
-      <div class="instruction-content">
+    <div class="instruction-content">
 
-        <p>Now that you have a sense of the basic config, try adding another key/value
+      <p>Now that you have a sense of the basic config, try adding another key/value
 pair to the <code>common.yaml</code> on the practice VM. Experiment with changing things
 to see what results you get. Don&#8217;t worry if you break something, just reload
 the page to get a fresh machine.</p>
 
-      </div>
+    </div>
 
-      <div class="instruction-header">
-        <p><i class="fa fa-square-check-o"></i>
+    <div class="instruction-header">
+      <p><i class="fa fa-square-check-o"></i>
 Instructions</p>
-      </div>
+    </div>
 
-      <div class="instruction-content">
+    <div class="instruction-content">
 
-        <p>To test out Hiera, you can use the <code>hiera</code> command line tool.  For example, to
+      <p>To test out Hiera, you can use the <code>hiera</code> command line tool.  For example, to
 lookup the value of &#8220;message&#8221;, type <code>hiera message</code>.</p>
 
-        <p>Add a second key by editing <code>/etc/puppetlabs/code/hieradata/common.yaml</code></p>
+      <p>Add a second key by editing <code>/etc/puppetlabs/code/hieradata/common.yaml</code></p>
 
-      </div>
+    </div>
 
-      <div class="instruction-header">
-        <p><i class="fa fa-pencil"></i>
+    <div class="instruction-header">
+      <p><i class="fa fa-pencil"></i>
 Notes</p>
-      </div>
+    </div>
 
-      <div class="instruction-content">
+    <div class="instruction-content">
 
-        <p>When you&#8217;re ready to move on, just click to the next section, the practice
+      <p>When you&#8217;re ready to move on, just click to the next section, the practice
 machine will shut down automatically when you&#8217;re done.</p>
 
-        <p>If you need a refresher in the Linux command line or in using the vim text
+      <p>If you need a refresher in the Linux command line or in using the vim text
 editor, take a look at those courses before proceeding.</p>
 
-      </div>
-
-      <p><a href="https://try.puppet.com/sandbox/?get_hiera1" class="btn btn-default" target="terminal">Start Practice Session</a></p>
-
     </div>
 
-    <div id="terminal">
-      <iframe name="terminal"></iframe>
-    </div>
+    <p><a href="https://try.puppet.com/sandbox/?course=get_hiera1" class="btn btn-default" target="terminal">Start Practice Session</a></p>
 
   </div>
+
+  <div id="terminal">
+    <iframe name="terminal"></iframe>
+  </div>
+
 </div>

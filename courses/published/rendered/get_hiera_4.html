@@ -1,0 +1,116 @@
+<link rel="stylesheet" href="/static/selfpaced/selfpaced.css" />
+
+<div id="lesson">
+
+  <div id="instructions">
+
+    <div class="instruction-header">
+<i class="fa fa-graduation-cap"></i>
+</div>
+
+    <div class="instruction-content">
+
+      <p>Before we move on to other ways of using Hiera data, let&#8217;s take a look at few
+of the configuration options in <code>hiera.yaml</code> So far, all of our Hiera data
+files have been in a single directory. Depending on the complexity of your
+data, this might be fine, but chances are you&#8217;ll want to split things up.</p>
+
+      <p>For example, what if you have some configuration that only applies to
+individual nodes? It isn&#8217;t best practice, but sometimes you need to have a
+couple of unique snowflakes in your infrastructure.</p>
+
+      <p>To support per-node configuration in Hiera, it&#8217;s best to use the <code>clientcert</code>
+fact.  By default this is the hostname of the node when the certificate was
+generated and it&#8217;s the unique name that the master knows the node by.  It&#8217;s
+more secure than using the hostname since a compromised node could report a
+false hostname but can&#8217;t fake another node&#8217;s certificate.</p>
+
+      <p>In order to keep all those yaml files from cluttering up our hieradata folder,
+we&#8217;ll put them in a subfolder called &#8220;nodes&#8221; and add that level to the top of
+our hierarchy in hiera.yaml:</p>
+
+      <pre>
+---
+:backends: "yaml"
+:yaml:
+  :datadir: "/etc/puppetlabs/code/hieradata"
+  :hierarchy:
+    - "nodes/%{clientcert}"
+    - "%{environment}"
+    - "common"
+</pre>
+
+      <p>Let&#8217;s go back to the message of the day example to try this one out. Imagine
+you&#8217;ve got two developers, Jane and Bob. They each have a development server
+for testing out their code.</p>
+
+      <p>Jane wants to see some useful information when she logs in, so
+<code>nodes/jane.puppetlabs.vm.yaml</code> looks like this:</p>
+      <pre>
+---
+message: "Welcome to ${hostname}. ${osfamily} - ${memorysize}"
+</pre>
+
+      <p>Bob is more territorial, so <code>nodes/bob.puppetlabs.vm.yaml</code> looks like this:</p>
+      <pre>
+---
+message: "This is Bob's development server. Don't touch anything, or else!"
+</pre>
+
+      <p>Since you can&#8217;t log in to the actual machines, you can test out Hiera&#8217;s
+response to different certnames by passing in &#8220;certname&#8221; as a variable to the
+<code>hiera</code> command line tool:</p>
+      <pre>
+hiera message certname=jane.puppetlabs.vm
+</pre>
+
+      <p>This isn&#8217;t limited to a single directory, you can have multiple subdirectories.
+You can even use have more complex levels of the hierarchy. For example, if you
+have multiple datacenters each with a development and production environment,
+you could use a custom fact of &#8220;datacenter&#8221; to have something like this:</p>
+      <pre>
+---
+:backends: "yaml"
+:yaml:
+  :datadir: "/etc/puppetlabs/code/hieradata"
+  :hierarchy:
+    - "nodes/%{clientcert}"
+    - "%{datacenter}/%{environment}"
+    - "common"
+</pre>
+
+      <p>To give a more complex configuration a try you can pass multiple parameters to
+the <code>hiera</code> command line tool.  For example, to find out the MOTD on the
+development servers in the Portland datacenter, you would use this command:</p>
+      <pre>
+hiera message environment=development datacenter=portland
+</pre>
+
+    </div>
+
+    <div class="instruction-header">
+<i class="fa fa-desktop"></i>
+Practice
+</div>
+
+    <div class="instruction-content">
+
+      <p>We&#8217;ve set up a complex hierarchy, explore a bit, add some keys/value pairs, and
+see if you can get a sense of how Hiera behaves. What happens if you use a
+certname that doesn&#8217;t have a corresponding yaml file? How about an environment
+that doesn&#8217;t exist? What if you set up conflicting values?</p>
+
+      <p>If this is starting to seem overwhelming, don&#8217;t worry. Hierachies of more than
+a few levels are unusual in practice, so don&#8217;t add complexity if you don&#8217;t need
+it. Even this example is probably more complexity then most users will ever
+need.</p>
+
+    </div>
+
+    <p><a href="https://try.puppet.com/sandbox/?course=get_hiera4" class="btn btn-default" target="terminal">Start Practice Session</a></p>
+
+  </div>
+
+  <div id="terminal"></div>
+
+</div>
