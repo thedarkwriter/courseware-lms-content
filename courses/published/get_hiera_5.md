@@ -94,7 +94,8 @@ few permutations until you have a feel for how hiera_array() works.
 
 </div>
 
-<div id="terminal"></div>
+<div id="terminal">
   <iframe name="terminal"></iframe>
 </div>
 
+</div>

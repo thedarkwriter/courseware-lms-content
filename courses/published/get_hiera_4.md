@@ -110,6 +110,8 @@ need.
 
 </div>
 
-<div id="terminal"></div>
+<div id="terminal">
+  <iframe name="terminal"></iframe>
+</div>
 
 </div>
