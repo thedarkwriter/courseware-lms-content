@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="/static/selfpaced/selfpaced.css" markdown="1">
 <div id="lesson" markdown="1">
 
 <div id="instructions" markdown="1">
@@ -109,7 +110,7 @@ hierarchy that's based on the `hostname` fact instead of `environment`.
 
 </div>
 
-<a href="https://try.puppet.com/sandbox/?get_hiera2" class="btn btn-default" target="terminal">Start Practice Session</a>
+<a href="https://try.puppet.com/sandbox/?course=get_hiera2" class="btn btn-default" target="terminal">Start Practice Session</a>
 
 </div>
 

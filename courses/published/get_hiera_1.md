@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="css/selfpaced.css" markdown="1">
+<link rel="stylesheet" href="/static/selfpaced/selfpaced.css" markdown="1">
 
 <div id="lesson" markdown="1">
 
@@ -117,7 +117,7 @@ editor, take a look at those courses before proceeding.
 
 </div>
 
-<a href="https://try.puppet.com/sandbox/?get_hiera1" class="btn btn-default" target=    "terminal">Start Practice Session</a>
+<a href="https://try.puppet.com/sandbox/?course=get_hiera1" class="btn btn-default" target=    "terminal">Start Practice Session</a>
 
 </div>
 

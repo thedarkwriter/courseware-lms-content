@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="/static/selfpaced/selfpaced.css" markdown="1">
 <div id="lesson" markdown="1">
 
 <div id="instructions" markdown="1">
@@ -89,11 +90,12 @@ few permutations until you have a feel for how hiera_array() works.
 
 </div>
 
-<a href="https://try.puppet.com/sandbox/?get_hiera5" class="btn btn-default" target=    "terminal">Start Practice Session</a>
+<a href="https://try.puppet.com/sandbox/?course=get_hiera5" class="btn btn-default" target=    "terminal">Start Practice Session</a>
 
 </div>
 
-<div id="terminal"></div>
+<div id="terminal">
   <iframe name="terminal"></iframe>
 </div>
 
+</div>
