@@ -46,7 +46,7 @@ file { '/etc/motd':
 </pre>
 
 You'll need to tell Hiera where to find the data, you can do this by creating a
-file called `/etc/puppetlabs/code/hiera.yaml`:
+file called `/etc/puppetlabs/puppet/hiera.yaml`:
 
 <pre>
 ---
