@@ -67,7 +67,7 @@ We still need to add the actual data. Do this by creating a file called
 `common.yaml` looks like this:
 <pre>
 ---
-message: "Welcome to $::hostname. Don't break anything!"
+message: "Welcome to ${::hostname}. Don't break anything!"
 </pre>
 
 Now that you have a sense of the basic config, try adding another key/value
@@ -292,7 +292,7 @@ Jane wants to see some useful information when she logs in, so
 `nodes/jane.puppetlabs.vm.yaml` looks like this:
 <pre>
 ---
-message: "Welcome to ${hostname}. ${osfamily} - ${memorysize}"
+message: "Welcome to ${::hostname}. ${::osfamily} - ${::memorysize}"
 </pre>
 
 Bob is more territorial, so `nodes/bob.puppetlabs.vm.yaml` looks like this:
