@@ -3,7 +3,7 @@
 When you first start using Puppet, you might include configuration details in
 your Puppet code.  For example, when setting up a database server, you might
 hard-code the hostname of the server in the Puppet manifest. As your puppet
-implementation grows, this can become unmanageable. Making a small change to an
+implementation grows, this can become unmanageable. Making a small change to a
 system might mean making changes across multiple parts of your Puppet code.
 Hiera offers a robust and straightforward way to separate data from code.
 
@@ -15,9 +15,13 @@ Imagine you want to set a default message of the day on your servers.  You
 could do this with the following Puppet code:
 
 <pre>
-$message = "Welcome to $::hostname. Don't break anything!"
+$message = "Welcome to ${::hostname}. Don't break anything!"
 file { '/etc/motd':
-  content => $message
+  ensure  => file,
+  owner   => 'root',
+  group   => 'root',
+  mode    => '0644',
+  content => $message,
 }
 </pre>
 
@@ -26,13 +30,17 @@ the harder it is to maintain.  What if you wanted to share that code with
 someone outside your company? You'd have to remember to go in and clean out any
 potentially sensitive data across your entire codebase.
 
-Even with the simplest configuration Hiera offers a robust way to separate that
+Even with the simplest configuration, Hiera offers a robust way to separate that
 data from your code.
 
 Using Hiera, the code would look this this:
 <pre>
 $message = hiera("message")
 file { '/etc/motd':
+  ensure  => file,
+  owner   => 'root',
+  group   => 'root',
+  mode    => '0644',
   content => $message
 }
 </pre>
