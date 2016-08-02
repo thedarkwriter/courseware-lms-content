@@ -2,13 +2,8 @@
 
 When you first start using Puppet, you might include configuration details in
 your Puppet code.  For example, when setting up a database server, you might
-<<<<<<< b5ff74c4268acd9efe45de6c9ecb2128b1179543
-hard-code the hostname of the server in the Puppet manifest. As your puppet
-implementation grows, this can become unmanageable. Making a small change to a
-=======
 hard-code the hostname of the server in the Puppet manifest. As your Puppet
 implementation grows, this can become unmanageable. Making a small change to an
->>>>>>> Changed hostnames to adhere to current branding
 system might mean making changes across multiple parts of your Puppet code.
 Hiera offers a robust and straightforward way to separate data from code.
 
