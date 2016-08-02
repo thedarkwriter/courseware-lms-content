@@ -38,13 +38,13 @@ file { '/etc/motd':
 </pre>
 
 You'll need to tell Hiera where to find the data, you can do this by creating a
-file called `/etc/puppetlabs/code/hiera.yaml`:
+file called `/etc/puppetlabs/puppet/hiera.yaml`:
 
 <pre>
 ---
 :backends: "yaml"
 :yaml:
-  :datadir: "/etc/puppetlabs/code/hieradata/"
+  :datadir: "/etc/puppetlabs/puppet/hieradata/"
   :hierarchy:
     - "common"
 </pre>
@@ -143,7 +143,7 @@ Here's what the `hiera.yaml` needs to look like:
 ---
 :backends: "yaml"
 :yaml:
-  :datadir: "/etc/puppetlabs/code/hieradata"
+  :datadir: "/etc/puppetlabs/puppet/hieradata"
   :hierarchy:
     - "%{environment}"
     - "common"
@@ -269,7 +269,7 @@ our hierarchy in hiera.yaml:
 ---
 :backends: "yaml"
 :yaml:
-  :datadir: "/etc/puppetlabs/code/hieradata"
+  :datadir: "/etc/puppetlabs/puppet/hieradata"
   :hierarchy:
     - "nodes/%{clientcert}"
     - "%{environment}"
@@ -308,7 +308,7 @@ you could use a custom fact of "datacenter" to have something like this:
 ---
 :backends: "yaml"
 :yaml:
-  :datadir: "/etc/puppetlabs/code/hieradata"
+  :datadir: "/etc/puppetlabs/puppet/hieradata"
   :hierarchy:
     - "nodes/%{clientcert}"
     - "%{datacenter}/%{environment}"
