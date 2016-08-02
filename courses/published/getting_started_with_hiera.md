@@ -2,8 +2,8 @@
 
 When you first start using Puppet, you might include configuration details in
 your Puppet code.  For example, when setting up a database server, you might
-hard-code the hostname of the server in the Puppet manifest. As your puppet
-implementation grows, this can become unmanageable. Making a small change to a
+hard-code the hostname of the server in the Puppet manifest. As your Puppet
+implementation grows, this can become unmanageable. Making a small change to an
 system might mean making changes across multiple parts of your Puppet code.
 Hiera offers a robust and straightforward way to separate data from code.
 
@@ -102,10 +102,10 @@ Without Hiera, your code might look like this:
 <pre>
 case $environment {
   'production': {
-    $dns_server = 'proddns.puppetlabs.vm'
+    $dns_server = 'proddns.puppet.vm'
   }
   'development': {
-    $dns_server = 'devdns.puppetlabs.vm'
+    $dns_server = 'devdns.puppet.vm'
   }
 }
 profile::dns_server {
@@ -132,13 +132,13 @@ each environment. They go in the same directory as `common.yaml`
 Here's the production environment, we'll call it `production.yaml`
 <pre>
 ---
-dns_server: 'proddns.puppetlabs.vm'
+dns_server: 'proddns.puppet.vm'
 </pre>
 
 And here's the dev environment, we'll call it `development.yaml`
 <pre>
 ---
-dns_server: 'devdns.puppetlabs.vm'
+dns_server: 'devdns.puppet.vm'
 </pre>
 
 There's one place you need to change things, that's in your `hiera.yaml`.
@@ -229,7 +229,7 @@ parameter yourself:
 
 <pre>
 class {'profile::dns':
-  dns_server => 'globaldns.puppetlabs.vm',
+  dns_server => 'globaldns.puppet.vm',
 }
 </pre>
 
@@ -289,13 +289,13 @@ you've got two developers, Jane and Bob. They each have a development server
 for testing out their code.
 
 Jane wants to see some useful information when she logs in, so
-`nodes/jane.puppetlabs.vm.yaml` looks like this:
+`nodes/jane.puppet.vm.yaml` looks like this:
 <pre>
 ---
 message: "Welcome to ${::hostname}. ${::osfamily} - ${::memorysize}"
 </pre>
 
-Bob is more territorial, so `nodes/bob.puppetlabs.vm.yaml` looks like this:
+Bob is more territorial, so `nodes/bob.puppet.vm.yaml` looks like this:
 <pre>
 ---
 message: "This is Bob's development server. Don't touch anything, or else!"
@@ -305,7 +305,7 @@ Since you can't log in to the actual machines, you can test out Hiera's
 response to different certnames by passing in "certname" as a variable to the
 `hiera` command line tool:
 <pre>
-hiera message certname=jane.puppetlabs.vm
+hiera message certname=jane.puppet.vm
 </pre>
 
 This isn't limited to a single directory, you can have multiple subdirectories.
@@ -358,7 +358,7 @@ that at every level of the hierarchy it would lead to a lot of duplicate data.
 Thankfully, Hiera is more intelligent than that. Let's look at how this could
 play out in a hierarchy with three levels. At the top, we have the per-node
 configuration. Let's just set one up for Bob's dev server in
-'nodes/bob.puppetlabs.vm.yaml':
+'nodes/bob.puppet.vm.yaml':
 <pre>
 ---
 package_list:
@@ -409,7 +409,7 @@ It's pretty easy to test by using the command line `hiera` tool, just use the
 `-a` argument. For example to see what packages are installed on Bob's dev
 machine you would use this command:
 <pre>
-hiera -a package_list environment=development certname=bob.puppetlabs.vm.yaml
+hiera -a package_list environment=development certname=bob.puppet.vm.yaml
 </pre>
 
 and the result would be:
