@@ -8,8 +8,12 @@
   margin: 0;
 }
 
+.course-pathway-consumption #user-content {
+  padding: 90px 0 0 0;
+}
+
 #user-content > .content.container,
-#user-content * .content { 
+#user-content * #lesson { 
   /* Viewable hight minus header and footer */
   height: calc(100vh - 171px);
   padding: 0 10px;
@@ -45,13 +49,24 @@ iframe {
 }
 
 .instruction-content {
+  display: flex;
+  flex-flow: column;
+  flex-shrink: 0;
+  flex-grow: 3;
   margin: 20px 20px;
 }
 
-.content.section, #lesson {
+.video-container,
+.video-container > iframe{
+  margin: 0;
+  height: 480px;
+  width: 100%;
+}
+
+#lesson {
   display: flex;
   flex: 1 1 auto;
-  height: inherit;
+  height: 100%;
 }
 
 #terminal iframe {
@@ -69,7 +84,7 @@ iframe {
   display: flex;
   flex-direction: column;
   width: 100%;
-  height: inherit;
+  height: 100%;
 }
 
 #instructions {
@@ -86,12 +101,21 @@ iframe {
     display: block;
     overflow-y: visible;
   }
-  #user-content > .content.container,
-  #user-content * .content { 
-    /* Viewable hight minus header and footer */
+
+  /* Clear fancy styling */
+  .course-pathway-consumption #user-content {
+    padding: 0;
+  }
+  #user-content > .content.container {
+    height: 100%;
+    position: static;
+    padding-bottom: 90px;
+  }
+  #user-content * #lesson { 
     height: 100%;
     position: static;
   }
+
 
   .row-offcanvas-right {
     right: 0;
