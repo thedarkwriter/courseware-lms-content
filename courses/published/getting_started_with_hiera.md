@@ -44,7 +44,7 @@ file called `/etc/puppetlabs/puppet/hiera.yaml`:
 ---
 :backends: "yaml"
 :yaml:
-  :datadir: "/etc/puppetlabs/puppet/hieradata/"
+  :datadir: "/etc/puppetlabs/code/hieradata/"
   :hierarchy:
     - "common"
 </pre>
@@ -143,7 +143,7 @@ Here's what the `hiera.yaml` needs to look like:
 ---
 :backends: "yaml"
 :yaml:
-  :datadir: "/etc/puppetlabs/puppet/hieradata"
+  :datadir: "/etc/puppetlabs/code/hieradata"
   :hierarchy:
     - "%{environment}"
     - "common"
@@ -269,7 +269,7 @@ our hierarchy in hiera.yaml:
 ---
 :backends: "yaml"
 :yaml:
-  :datadir: "/etc/puppetlabs/puppet/hieradata"
+  :datadir: "/etc/puppetlabs/code/hieradata"
   :hierarchy:
     - "nodes/%{clientcert}"
     - "%{environment}"
@@ -308,7 +308,7 @@ you could use a custom fact of "datacenter" to have something like this:
 ---
 :backends: "yaml"
 :yaml:
-  :datadir: "/etc/puppetlabs/puppet/hieradata"
+  :datadir: "/etc/puppetlabs/code/hieradata"
   :hierarchy:
     - "nodes/%{clientcert}"
     - "%{datacenter}/%{environment}"
