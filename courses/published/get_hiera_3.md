@@ -94,6 +94,9 @@ the `/root/puppetcode` directory on the agent node.  You can just declare the
 example classes in the `default` node definition in
 `/root/puppetcode/manifests/site.pp` and run puppet on your agent node.
 
+Hiera lookups are done on the master, so you'll need to change the files in 
+`/root/puppetcode/hieradata` which is mapped to your environment.
+
 </div>
 
 <div class="instruction-header">
