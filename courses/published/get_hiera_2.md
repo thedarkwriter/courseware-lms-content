@@ -110,12 +110,10 @@ hierarchy that's based on the `hostname` fact instead of `environment`.
 
 </div>
 
-<a href="https://try.puppet.com/sandbox/?course=get_hiera2" class="btn btn-default" target="terminal">Start Practice Session</a>
-
 </div>
 
 <div id="terminal">
-  <iframe name="terminal"></iframe>
+  <iframe src="https://try.puppet.com/sandbox/?course=get_hiera2" name="terminal"></iframe>
 </div>
 
 </div>
