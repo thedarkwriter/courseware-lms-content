@@ -99,19 +99,18 @@ see if you can get a sense of how Hiera behaves. What happens if you use a
 certname that doesn't have a corresponding yaml file? How about an environment
 that doesn't exist? What if you set up conflicting values? 
 
-If this is starting to seem overwhelming, don't worry. Hierachies of more than
+If this is starting to seem overwhelming, don't worry. Hierarchies of more than
 a few levels are unusual in practice, so don't add complexity if you don't need
 it. Even this example is probably more complexity then most users will ever
 need.
 
 </div>
 
-<a href="https://try.puppet.com/sandbox/?course=get_hiera4" class="btn btn-default" target=    "terminal">Start Practice Session</a>
 
 </div>
 
 <div id="terminal">
-  <iframe name="terminal"></iframe>
+  <iframe src="https://try.puppet.com/sandbox/?course=get_hiera4" name="terminal"></iframe>
 </div>
 
 </div>

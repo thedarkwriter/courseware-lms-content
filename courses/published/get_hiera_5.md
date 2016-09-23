@@ -9,7 +9,7 @@
 
 <div class="instruction-content" markdown="1">
 
-Now that we've seens what possible with complex hierarchies, let's take a look
+Now that we've seen what's possible with complex hierarchies, let's take a look
 at some other ways of interacting with Hiera data. What if you want to combine
 data from multiple levels of the hierarchy?
 
@@ -90,12 +90,11 @@ few permutations until you have a feel for how hiera_array() works.
 
 </div>
 
-<a href="https://try.puppet.com/sandbox/?course=get_hiera5" class="btn btn-default" target=    "terminal">Start Practice Session</a>
 
 </div>
 
 <div id="terminal">
-  <iframe name="terminal"></iframe>
+  <iframe src="https://try.puppet.com/sandbox/?course=get_hiera5" name="terminal"></iframe>
 </div>
 
 </div>

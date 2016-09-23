@@ -97,6 +97,8 @@ example classes in the `default` node definition in
 Hiera lookups are done on the master, so you'll need to change the files in 
 `/root/puppetcode/hieradata` which is mapped to your environment.
 
+The master doesn't use the `hiera.yaml` on your agent, but the default configuration
+is to include the `hieradata` directory in your environment.
 </div>
 
 <div class="instruction-header">
@@ -110,12 +112,11 @@ environment.
 
 </div>
 
-<a href="https://try.puppet.com/sandbox/?course=get_hiera3" class="btn btn-default" target=    "terminal">Start Practice Session</a>
 
 </div>
 
 <div id="terminal">
-  <iframe name="terminal"></iframe>
+  <iframe src="https://try.puppet.com/sandbox/?course=get_hiera3" name="terminal"></iframe>
 </div>
 
 </div>

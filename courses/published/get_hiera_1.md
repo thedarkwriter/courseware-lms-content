@@ -18,14 +18,14 @@ system might mean making changes across multiple parts of your Puppet code.
 Hiera offers a robust and straightforward way to separate data from code.
 
 The name 'Hiera' stands for hierarchy, but the most basic functional Hiera
-config doesn't have to be hierachical.  Let's set up a simple flat lookup using
+config doesn't have to be hierarchical.  Let's set up a simple flat lookup using
 Hiera.  
 
 Imagine you want to set a default message of the day on your servers.  You
 could do this with the following Puppet code:
 
 <pre>
-$message = "Welcome to $::hostname. Don't break anything!"
+$message = "Welcome to ${::hostname}. Don't break anything!"
 file { '/etc/motd':
   content => $message
 }
@@ -48,7 +48,7 @@ file { '/etc/motd':
 </pre>
 
 You'll need to tell Hiera where to find the data, you can do this by creating a
-file called `/etc/puppetlabs/code/hiera.yaml`:
+file called `/etc/puppetlabs/puppet/hiera.yaml`:
 
 <pre>
 ---
@@ -69,8 +69,11 @@ We still need to add the actual data. Do this by creating a file called
 `common.yaml` looks like this:
 <pre>
 ---
-message: "Welcome to $::hostname. Don't break anything!"
+message: "Welcome to %{::hostname}. Don't break anything!"
 </pre>
+
+Notice the `%`, that's the character that hiera uses for variable interpolation
+instead of the `$` that puppet uses.
 
 </div>
 
@@ -117,12 +120,11 @@ editor, take a look at those courses before proceeding.
 
 </div>
 
-<a href="https://try.puppet.com/sandbox/?course=get_hiera1" class="btn btn-default" target=    "terminal">Start Practice Session</a>
 
 </div>
 
 <div id="terminal" markdown="1">
-  <iframe name="terminal"></iframe>
+  <iframe src="https://try.puppet.com/sandbox/?course=get_hiera1" name="terminal"></iframe>
 </div>
 
 </div>
