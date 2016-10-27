@@ -5,6 +5,7 @@
 
 <div class="instruction-header">
 <i class="fa fa-graduation-cap"></i>
+Lesson
 </div>
 
 <div class="instruction-content" markdown="1">
@@ -82,6 +83,7 @@ and the result would be:
 </div>
 <div class="instruction-header">
 <i class="fa fa-desktop"></i>
+Practice
 </div>
 <div class="instruction-content" markdown="1">
 

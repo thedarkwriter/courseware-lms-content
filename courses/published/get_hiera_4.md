@@ -5,6 +5,7 @@
 
 <div class="instruction-header">
 <i class="fa fa-graduation-cap"></i>
+Lesson
 </div>
 
 <div class="instruction-content" markdown="1">
