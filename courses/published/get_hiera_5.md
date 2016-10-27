@@ -21,14 +21,14 @@ that at every level of the hierarchy it would lead to a lot of duplicate data.
 Thankfully, Hiera is more intelligent than that. Let's look at how this could
 play out in a hierarchy with three levels. At the top, we have the per-node
 configuration. Let's just set one up for Bob's dev server in
-'nodes/bob.puppetlabs.vm.yaml':
+`nodes/bob.puppetlabs.vm.yaml`:
 <pre>
 ---
 package_list:
   - emacs
 </pre>
 
-All of the other developers use vim, so let's make sure the development.yaml
+All of the other developers use vim, so let's make sure the `development.yaml`
 has that package along with some other useful things:
 <pre>
 ---
@@ -38,16 +38,16 @@ package_list:
   - cowsay
 </pre>
 
-But in production, we don't want anything extra, so instead of vim we'll just
-have vi and leave out the other packages:
+But in production, we don't want anything extra, so instead of `vim` we'll just
+have `vi` and leave out the other packages:
 <pre>
 ---
 package_list:
   - vi
 </pre>
 
-Finally, at the bottom of the hierarchy we have a few packages that should be
-installed on every machine in common.yaml:
+Finally, at the bottom of the hierarchy in `common.yaml`, we have a few packages
+that should be installed on every machine in common.yaml:
 <pre>
 ---
 package_list:
@@ -58,7 +58,7 @@ package_list:
 
 Unfortunately, using the `hiera()` function will only return the result from a
 single level in the hierarchy. To correctly merge across multiple levels of the
-hierarchy, we'll need to use `hiera_array()`:
+hierarchy, we'll use the `hiera_array()` function:
 
 <pre>
 $packages = hiera_array('package_list')
@@ -68,9 +68,9 @@ package { $packages:
 </pre>
 
 The best way to understand `hiera_array()` is to just dig in and try it out.
-It's pretty easy to test by using the command line `hiera` tool, just use the
-`-a` argument. For example to see what packages are installed on Bob's dev
-machine you would use this command:
+It's easy to test by using the command line `hiera` tool with the `-a`
+argument. For example to see what packages are installed on Bob's dev
+machine, you would use this command:
 <pre>
 hiera -a package_list environment=development certname=bob.puppetlabs.vm.yaml
 </pre>
@@ -87,8 +87,8 @@ Practice
 </div>
 <div class="instruction-content" markdown="1">
 
-We've set up these example files and a few more on the practice machine, try a
-few permutations until you have a feel for how hiera_array() works.
+We've set up these example files and a few more on the practice machine. Try a
+few permutations until you have a feel for how `hiera_array()` works.
 
 </div>
 

@@ -41,7 +41,7 @@ data from your code.</p>
 
       <p>Using Hiera, the code would look this this:</p>
       <pre>
-$message = hiera("message")
+$message = hiera('message')
 file { '/etc/motd':
   content =&gt; $message
 }

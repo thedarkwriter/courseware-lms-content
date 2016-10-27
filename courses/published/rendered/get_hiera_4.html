@@ -23,12 +23,12 @@ couple of unique snowflakes in your infrastructure.</p>
       <p>To support per-node configuration in Hiera, it&#8217;s best to use the <code>clientcert</code>
 fact.  By default this is the hostname of the node when the certificate was
 generated and it&#8217;s the unique name that the master knows the node by.  It&#8217;s
-more secure than using the hostname since a compromised node could report a
-false hostname but can&#8217;t fake another node&#8217;s certificate.</p>
+more secure than using the hostname fact since a compromised node could report 
+a false hostname, but it can&#8217;t fake another node&#8217;s certificate.</p>
 
-      <p>In order to keep all those yaml files from cluttering up our hieradata folder,
-we&#8217;ll put them in a subfolder called &#8220;nodes&#8221; and add that level to the top of
-our hierarchy in hiera.yaml:</p>
+      <p>In order to keep all those YAML files from cluttering up our <code>hieradata</code> folder,
+we&#8217;ll put them in a subfolder called <code>nodes</code> and add that level to the top of
+our hierarchy in <code>hiera.yaml</code>:</p>
 
       <pre>
 ---
@@ -59,16 +59,16 @@ message: "This is Bob's development server. Don't touch anything, or else!"
 </pre>
 
       <p>Since you can&#8217;t log in to the actual machines, you can test out Hiera&#8217;s
-response to different certnames by passing in &#8220;certname&#8221; as a variable to the
+response to different hostnames by passing in <code>clientcert</code> as a variable to the
 <code>hiera</code> command line tool:</p>
       <pre>
-hiera message certname=jane.puppetlabs.vm
+hiera message clientcert=jane.puppetlabs.vm
 </pre>
 
       <p>This isn&#8217;t limited to a single directory, you can have multiple subdirectories.
 You can even use have more complex levels of the hierarchy. For example, if you
-have multiple datacenters each with a development and production environment,
-you could use a custom fact of &#8220;datacenter&#8221; to have something like this:</p>
+have multiple datacenters each with a <code>development</code> and <code>production</code> environment,
+you could use a custom fact of <code>datacenter</code> to have something like this:</p>
       <pre>
 ---
 :backends: "yaml"
@@ -82,7 +82,8 @@ you could use a custom fact of &#8220;datacenter&#8221; to have something like t
 
       <p>To give a more complex configuration a try you can pass multiple parameters to
 the <code>hiera</code> command line tool.  For example, to find out the MOTD on the
-development servers in the Portland datacenter, you would use this command:</p>
+development servers in the Portland datacenter, you would use this 
+command:</p>
       <pre>
 hiera message environment=development datacenter=portland
 </pre>
@@ -96,14 +97,14 @@ Practice
 
     <div class="instruction-content">
 
-      <p>We&#8217;ve set up a complex hierarchy, explore a bit, add some keys/value pairs, and
+      <p>We&#8217;ve set up a complex hierarchy, explore a bit, add some key/value pairs, and
 see if you can get a sense of how Hiera behaves. What happens if you use a
-certname that doesn&#8217;t have a corresponding yaml file? How about an environment
+hostname that doesn&#8217;t have a corresponding YAML file? How about an environment
 that doesn&#8217;t exist? What if you set up conflicting values?</p>
 
       <p>If this is starting to seem overwhelming, don&#8217;t worry. Hierarchies of more than
 a few levels are unusual in practice, so don&#8217;t add complexity if you don&#8217;t need
-it. Even this example is probably more complexity then most users will ever
+it. Even this example is probably more complex than most users will ever
 need.</p>
 
     </div>
