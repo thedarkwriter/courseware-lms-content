@@ -13,7 +13,7 @@ Lesson
 When you first start using Puppet, you might include configuration details in
 your Puppet code.  For example, when setting up a database server, you might
 hard-code the hostname of the server in the Puppet manifest. As your puppet
-implementation grows, this can become unmanageable. Making a small change to an
+implementation grows, this can become unmanageable. Making a small change to a
 system might mean making changes across multiple parts of your Puppet code.
 Hiera offers a robust and straightforward way to separate data from code.
 
@@ -25,7 +25,7 @@ Imagine you want to set a default message of the day on your servers.  You
 could do this with the following Puppet code:
 
 <pre>
-$message = "Welcome to ${::hostname}. Don't break anything!"
+$message = "Welcome to try.puppet.com. Don't break anything!"
 file { '/etc/motd':
   content => $message
 }
@@ -36,7 +36,7 @@ the harder it is to maintain.  What if you wanted to share that code with
 someone outside your company? You'd have to remember to go in and clean out any
 potentially sensitive data across your entire codebase.
 
-Even with the simplest configuration Hiera offers a robust way to separate that
+Even with the simplest configuration, Hiera offers a robust way to separate that
 data from your code.
 
 Using Hiera, the code would look this this:
@@ -47,21 +47,35 @@ file { '/etc/motd':
 }
 </pre>
 
-You'll need to tell Hiera where to find the data, you can do this by creating a
-file called `/etc/puppetlabs/puppet/hiera.yaml`:
+You'll need to tell Hiera where to find the data, this is done with the
+`/etc/puppetlabs/puppet/hiera.yaml` file.  The file puppet installs by default
+will work:
 
 <pre>
 ---
-:backends: "yaml"
+:backends:
+  - yaml
+:hierarchy:
+  - "nodes/%{::trusted.certname}"
+  - common
 :yaml:
-  :datadir: "/etc/puppetlabs/code/hieradata/"
-  :hierarchy:
-    - "common"
+# datadir is empty here, so hiera uses its defaults:
+# - /etc/puppetlabs/code/environments/%{environment}/hieradata on *nix
+# - %CommonAppData%\PuppetLabs\code\environments\%{environment}\hieradata on Windows
+# When specifying a datadir, make sure the directory exists.
+  :datadir:
 </pre>
 
-Since this is a simple example, our hierarchy only has one level, "common". In
-future lessons, we'll add some more levels. We'll keep "common" as the base of
-the hierarchy as a place to hold global defaults. 
+The lines starting with `#` are comments, and for now just ignore the first item
+under `:hierarchy:`, we're going to start with `common`. In future lessons, 
+we'll add some more levels and use the defaults more. We'll keep "common" as 
+the base of the hierarchy as a place to hold global defaults. 
+
+Notice in the comment about default `datadir` that it says your data will be in
+`/etc/puppetlabs/code/environments/%{environment}/hieradata`.
+`%{environment}` part will be interpolated by puppet to refer to your code
+environment.  The default is `production`, so that's what we'll use for this
+exercise.
 
 We still need to add the actual data. Do this by creating a file called
 `common.yaml` in the `datadir` that's listed in `hiera.yaml`
@@ -69,11 +83,8 @@ We still need to add the actual data. Do this by creating a file called
 `common.yaml` looks like this:
 <pre>
 ---
-message: "Welcome to %{::hostname}. Don't break anything!"
+message: "Welcome to try.puppet.com. Don't break anything!"
 </pre>
-
-Notice the `%`, that's the character that hiera uses for variable interpolation
-instead of the `$` that puppet uses.
 
 </div>
 
@@ -98,8 +109,15 @@ Instructions
 
 <div class="instruction-content" markdown="1">
 
-To test out Hiera, you can use the `hiera` command line tool.  For example, to
-lookup the value of "message", type `hiera message`.
+To test out Hiera, you can use make a simple manifest like the examples above
+and use `puppet apply`. The notify resource can be handy for this.  For example, 
+to lookup the value of "message", create a file `/root/message.pp`:
+
+<pre>
+notify{hiera('message'):}
+</pre>
+
+To see the hiera value run `puppet apply /root/message.pp`
 
 Add a second key by editing `/etc/puppetlabs/code/hieradata/common.yaml`
 
@@ -111,6 +129,9 @@ Notes
 </div>
 
 <div class="instruction-content" markdown="1">
+
+Hiera data should live on the puppet master. For learning how hiera works, 
+we're editing code on the agent and using `puppet apply`.
 
 When you're ready to move on, just click to the next section, the practice
 machine will shut down automatically when you're done.

@@ -13,17 +13,22 @@ Lesson
 Hiera is pretty handy for keeping all of your data in one place, when you add a
 level of hierarchy it becomes a lot more powerful.
 
-Let's imagine you have two webservers, one is in your "production" environment
-and one is in your "development" environment.  They are mostly the same, but
-they need to use different DNS servers.
+Let's imagine you have two webservers, one is in your "prod" app tier and one 
+is in your "dev" app tier.  They are mostly the same, but they need to use 
+different DNS servers.
+
+*Note: In puppet, the word `environment` refers to a set of puppet code that
+applies to a certain set of nodes.  We use the term `app tier` to refer to a
+physical set of nodes. This distinction isn't important for this course but it
+becomes important when using recommended best practices for managing puppet code.*
 
 Without Hiera, your code might look like this:
 <pre>
-case $environment {
-  'production': {
+case $::app_tier {
+  'prod': {
     $dns_server = 'proddns.puppetlabs.vm'
   }
-  'development': {
+  'dev': {
     $dns_server = 'devdns.puppetlabs.vm'
   }
 }
@@ -33,8 +38,8 @@ profile::dns_server {
 </pre>
 
 This is simple enough for two servers. What if you add developer workstations
-or another pre-production test environment? What if there are more
-configuration differences between environments? The code can quickly get out of
+or another pre-production test app tier? What if there are more configuration
+differences between app tiers? The code can quickly get out of
 control.
 
 Let's look at how the code would appear in using Hiera:
@@ -46,15 +51,15 @@ profile::dns_server {
 </pre>
 
 So what happened to the details? Now they're in two separate files, one for
-each environment. They go in the same directory as `common.yaml`
+each app tier. They go in the same directory as `common.yaml`
 
-Here's the production environment, we'll call it `production.yaml`
+Here's the prod tier, we'll call it `prod.yaml`
 <pre>
 ---
 dns_server: 'proddns.puppetlabs.vm'
 </pre>
 
-And here's the dev environment, we'll call it `development.yaml`
+And here's the dev tier, we'll call it `dev.yaml`
 <pre>
 ---
 dns_server: 'devdns.puppetlabs.vm'
@@ -62,18 +67,25 @@ dns_server: 'devdns.puppetlabs.vm'
 
 There's one place you need to change things, that's in your `hiera.yaml`.
 You'll have to add another level to the hierarchy, above "common". Since we
-want to use the value of the environment and not just the word "environment",
+want to use the value of the app tier fact and not just the word "app_tier",
 we'll need to add some special syntax.
 
 Here's what the `hiera.yaml` needs to look like:
 <pre>
 ---
-:backends: "yaml"
+:backends:
+  - yaml
+:hierarchy:
+  - "nodes/%{::trusted.certname}"
+	- "%{::app_tier}"
+  - common
+
 :yaml:
-  :datadir: "/etc/puppetlabs/code/hieradata"
-  :hierarchy:
-    - "%{environment}"
-    - "common"
+# datadir is empty here, so hiera uses its defaults:
+# - /etc/puppetlabs/code/environments/%{environment}/hieradata on *nix
+# - %CommonAppData%\PuppetLabs\code\environments\%{environment}\hieradata on Windows
+# When specifying a datadir, make sure the directory exists.
+  :datadir:
 </pre>
 
 </div>
@@ -85,16 +97,20 @@ Practice
 
 <div class="instruction-content" markdown="1">
 
-Before we go further, why not try out what you've just learned? To tell the
-command line `hiera` tool what value to use for `environment` just add it after
-the key.
+Before we go further, why not try out what you've just learned? 
 
-For example, to check the `dns_server` in the `production` environment, you
-would use this command:
-
+You will need to set the `app_tier` fact. To do this create an external
+fact called app_tier, by creating a file in `/opt/puppetlabs/facter/facts.d/my_facts.txt`
+with the following contents
 <pre>
-hiera dns_server environment=production
+app_tier=prod
 </pre>
+
+This time, try this one-liner puppet apply command to get the value of dns_server.
+`puppet apply -e 'notify{hiera("dns_server":)}'`
+
+Test out a few different app tiers by changing the value of your external fact.
+
 
 </div>
 
@@ -105,8 +121,11 @@ Instructions
 
 <div class="instruction-content" markdown="1">
 
-Try adding another environment called "qa", or even another level in the
-hierarchy that's based on the `hostname` fact instead of `environment`.
+Try adding another app tier called `qa`, or even another level in the
+hierarchy that's based on the `hostname` fact instead of `app_tier`.
+
+Remember, `hostname` is a built in fact to find your hostname run
+`facter hostname`.
 
 </div>
 

@@ -95,10 +95,11 @@ example classes in the `default` node definition in
 `/root/puppetcode/manifests/site.pp` and run puppet on your agent node.
 
 Hiera lookups are done on the master, so you'll need to change the files in 
-`/root/puppetcode/hieradata` which is mapped to your environment.
+`/root/puppetcode/hieradata` which is mapped to your code environment.
 
-The master doesn't use the `hiera.yaml` on your agent, but the default configuration
-is to include the `hieradata` directory in your environment.
+The master doesn't use the `hiera.yaml` on your agent so you won't be able to
+change the hierarchy, but the default configuration is to include the 
+`hieradata` directory in your code environment.
 </div>
 
 <div class="instruction-header">
@@ -107,9 +108,12 @@ is to include the `hieradata` directory in your environment.
 
 <div class="instruction-content" markdown="1">
 
-Remember, if you break something, just reload the page and you'll get a fresh
-environment.
+When you run `puppet agent -t` you will see a notice that about your code
+environment. This is because the agent defaults to `production` but the master
+enforces another code environment we have automatically set up.
 
+Remember, if you break something, just reload the page and you'll get a fresh
+node and code environment.
 </div>
 
 
