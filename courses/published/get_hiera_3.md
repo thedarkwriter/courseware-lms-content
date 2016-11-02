@@ -31,9 +31,14 @@ the class, you can now include the `profile::dns` class with this code:
 include profile::dns
 </pre>
 
-But there's a problem. As you write more code like this, it becomes very easy
-to lose track of which key/value pair applies to what class. The standard
-convention is to use the name of class as part of the Hiera key like this:
+This is a very common convention and was recommended best practice. You'll
+will often see it in older forge modules or code written by developers who
+have used puppet since before version 3. 
+
+There's a problem with using hiera this way; As you write more code like this, 
+it becomes very easy to lose track of which key/value pair applies to what class. 
+The standard convention is to use the name of class as part of the Hiera key 
+like this:
 `profile::dns::dns_server`.
 
 This convention isn't just to make things easy to remember. Since Puppet 3,
@@ -58,14 +63,17 @@ module. You may be thinking that Hiera understands namespaces, so it's somehow
 filing the `dns_server` key under `profile::dns`, but that isn't correct. Hiera
 just uses the entire string `profile::dns::dns_server` as a single key.
 
-As always, you can still override both defaults by specifying the
-parameter yourself:
+As always, you can override both defaults by specifying the
+parameter yourself, like this:
 
 <pre>
 class {'profile::dns':
   dns_server => 'globaldns.puppetlabs.vm',
 }
 </pre>
+
+The order of precedence is to check for class declaration parameters, then
+hiera, then class defaults.
 
 </div>
 
@@ -79,14 +87,6 @@ Practice
 Automatic Parameter Lookup is one of the ways in which Hiera can seem "magical"
 to new users.  To help you get the hang of how it works, we've created a few
 example classes that take parameters. Play around with it until it makes sense.
-
-</div>
-
-<div class="instruction-header">
-<i class="fa fa-square-check-o"></i>
-</div>
-
-<div class="instruction-content" markdown="1">
 
 For this exercise, you'll be running `puppet agent -t` against a Puppet master.
 For convenience, we've made a link to your agent's environment on the master to

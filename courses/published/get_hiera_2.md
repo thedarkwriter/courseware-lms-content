@@ -53,13 +53,13 @@ profile::dns_server {
 So what happened to the details? Now they're in two separate files, one for
 each app tier. They go in the same directory as `common.yaml`
 
-Here's the prod tier, we'll call it `prod.yaml`
+Here's the prod tier datasource, we'll call it `prod.yaml`
 <pre>
 ---
 dns_server: 'proddns.puppetlabs.vm'
 </pre>
 
-And here's the dev tier, we'll call it `dev.yaml`
+And here's the dev tier datasource, we'll call it `dev.yaml`
 <pre>
 ---
 dns_server: 'devdns.puppetlabs.vm'
@@ -77,7 +77,7 @@ Here's what the `hiera.yaml` needs to look like:
   - yaml
 :hierarchy:
   - "nodes/%{::trusted.certname}"
-	- "%{::app_tier}"
+  - "%{::app_tier}"
   - common
 
 :yaml:
@@ -87,6 +87,10 @@ Here's what the `hiera.yaml` needs to look like:
 # When specifying a datadir, make sure the directory exists.
   :datadir:
 </pre>
+
+Don't worry if you're confused by the syntax at this point, we'll talk about
+it more later on. Note the other places in the file where the same syntax
+is used.
 
 </div>
 
@@ -107,10 +111,14 @@ app_tier=prod
 </pre>
 
 This time, try this one-liner puppet apply command to get the value of dns_server.
-`puppet apply -e 'notify{hiera("dns_server":)}'`
+`puppet apply -e 'notify{hiera("dns_server"):}'`
 
 Test out a few different app tiers by changing the value of your external fact.
 
+You cal always check the value of that fact by running
+<pre>
+facter app_tier
+</pre>
 
 </div>
 
