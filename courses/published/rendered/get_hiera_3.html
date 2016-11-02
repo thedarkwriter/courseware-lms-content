@@ -38,11 +38,11 @@ convention is to use the name of class as part of the Hiera key like this:
 
       <p>This convention isn&#8217;t just to make things easy to remember. Since Puppet 3,
 there has been a feature called &#8220;Automatic Parameter Lookup&#8221; which means you
-can leave out the Hiera call from the class definition. When the Puppet Master
+can leave out the Hiera call from the class definition. When the Puppet master
 compiles a catalog for your node it will check in Hiera before falling back to
 the defaults.</p>
 
-      <p>In our example, let&#8217;s assume there&#8217;s a default value in profile::params:</p>
+      <p>In our example, let&#8217;s assume there&#8217;s a default value in <code>profile::params</code>:</p>
 
       <pre>
 class profile::dns (
@@ -55,7 +55,7 @@ class profile::dns (
       <p>Now if there is a value in Hiera for <code>profile::dns::dns_server</code> the master will
 use that, otherwise it will fall back to what&#8217;s in <code>params.pp</code> of the &#8220;profile&#8221;
 module. You may be thinking that Hiera understands namespaces, so it&#8217;s somehow
-filing the <code>dns_server</code> key under <code>profile::dns</code>, but that isn&#8217;t right. Hiera
+filing the <code>dns_server</code> key under <code>profile::dns</code>, but that isn&#8217;t correct. Hiera
 just uses the entire string <code>profile::dns::dns_server</code> as a single key.</p>
 
       <p>As always, you can still override both defaults by specifying the
@@ -88,17 +88,18 @@ example classes that take parameters. Play around with it until it makes sense.<
 
     <div class="instruction-content">
 
-      <p>For this exercise, you&#8217;ll be running <code>puppet agent -t</code> against a Puppet Master.
+      <p>For this exercise, you&#8217;ll be running <code>puppet agent -t</code> against a Puppet master.
 For convenience, we&#8217;ve made a link to your agent&#8217;s environment on the master to
 the <code>/root/puppetcode</code> directory on the agent node.  You can just declare the
 example classes in the <code>default</code> node definition in
 <code>/root/puppetcode/manifests/site.pp</code> and run puppet on your agent node.</p>
 
       <p>Hiera lookups are done on the master, so you&#8217;ll need to change the files in 
-<code>/root/puppetcode/hieradata</code> which is mapped to your environment.</p>
+<code>/root/puppetcode/hieradata</code> which is mapped to your code environment.</p>
 
-      <p>The master doesn&#8217;t use the <code>hiera.yaml</code> on your agent, but the default configuration
-is to include the <code>hieradata</code> directory in your environment.</p>
+      <p>The master doesn&#8217;t use the <code>hiera.yaml</code> on your agent so you won&#8217;t be able to
+change the hierarchy, but the default configuration is to include the 
+<code>hieradata</code> directory in your code environment.</p>
     </div>
 
     <div class="instruction-header">
@@ -107,9 +108,12 @@ is to include the <code>hieradata</code> directory in your environment.</p>
 
     <div class="instruction-content">
 
-      <p>Remember, if you break something, just reload the page and you&#8217;ll get a fresh
-environment.</p>
+      <p>When you run <code>puppet agent -t</code> you will see a notice that about your code
+environment. This is because the agent defaults to <code>production</code> but the master
+enforces another code environment we have automatically set up.</p>
 
+      <p>Remember, if you break something, just reload the page and you&#8217;ll get a fresh
+node and code environment.</p>
     </div>
 
   </div>
