@@ -10,10 +10,9 @@ Lesson
 
 <div class="instruction-content" markdown="1">
 
-Before we move on to other ways of using Hiera data, let's take a look at few
-of the configuration options in `hiera.yaml` So far, all of our Hiera data
-files have been in a single directory. Depending on the complexity of your
-data, this might be fine, but chances are you'll want to split things up.
+So far, all of our Hiera data files have been in a single directory.
+Depending on the complexity of your data, this might be fine,
+but chances are you'll want to split things up.
 
 For example, what if you have some configuration that only applies to
 individual nodes? It isn't best practice, but sometimes you need to have a
@@ -99,10 +98,11 @@ Practice
 
 <div class="instruction-content" markdown="1">
 
-We've set up a complex hierarchy, explore a bit, add some key/value pairs, and
-see if you can get a sense of how Hiera behaves. What happens if you use a
-hostname that doesn't have a corresponding YAML file? How about an app tier
-that doesn't exist? What if you set up conflicting values? 
+We've set up a complex hierarchy in the production code environment on your
+agent node, explore a bit, add some key/value pairs, and see if you can get a
+sense of how Hiera behaves. What happens if you use a hostname that doesn't
+have a corresponding YAML file? How about an app tier that doesn't exist?
+What if you set up conflicting values?
 
 If this is starting to seem overwhelming, don't worry. Hierarchies of more than
 a few levels are unusual in practice, so don't add complexity if you don't need

@@ -103,22 +103,21 @@ Practice
 
 Before we go further, why not try out what you've just learned? 
 
-You will need to set the `app_tier` fact. To do this create an external
-fact called app_tier, by creating a file in `/opt/puppetlabs/facter/facts.d/my_facts.txt`
-with the following contents
+We've set a custom fact of `app_tier=prod` so you can see what hiera will return
+for the `prod` app tier by using this command:
+
 <pre>
-app_tier=prod
+puppet apply -e "notify{hiera('dns_server'):}"
 </pre>
 
-This time, try this one-liner puppet apply command to get the value of dns_server.
-`puppet apply -e 'notify{hiera("dns_server"):}'`
+To test out other app_tiers, try using the hiera command line tool. The `hiera`
+comand line tool lets you specify the values for facts to test out results.
 
-Test out a few different app tiers by changing the value of your external fact.
-
-You cal always check the value of that fact by running
+To see what the value would be for prod use this command:
 <pre>
-facter app_tier
+hiera dns_server app_tier=prod
 </pre>
+
 
 </div>
 
