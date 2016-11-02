@@ -119,7 +119,7 @@ notify{hiera('message'):}
 
 To see the hiera value run `puppet apply /root/message.pp`
 
-Add a second key by editing `/etc/puppetlabs/code/hieradata/common.yaml`
+Add a second key by editing `/etc/puppetlabs/code/environments/production/hieradata/common.yaml`
 
 </div>
 
