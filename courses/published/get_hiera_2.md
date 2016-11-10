@@ -1,5 +1,6 @@
 <link rel="stylesheet" href="/static/selfpaced/selfpaced.css" markdown="1">
-<script src="https://try.puppet.com/js/selfpaced.js" markdown="1"></script>
+<script defer="" src="//code.jquery.com/jquery-1.11.2.js" markdown="1"></script>
+<script defer="" src="https://try.puppet.com/js/selfpaced.js" markdown="1"></script>
 
 <div id="lesson" markdown="1">
 
@@ -141,7 +142,7 @@ Remember, `hostname` is a built in fact to find your hostname run
 </div>
 
 <div id="terminal">
-  <iframe src="https://try.puppet.com/sandbox/?course=get_hiera2" name="terminal"></iframe>
+  <iframe id="try" src="https://try.puppet.com/sandbox/?course=get_hiera2" name="terminal"></iframe>
 </div>
 
 </div>
