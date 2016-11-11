@@ -106,6 +106,8 @@ Practice
 
 Before we go further, why not try out what you've just learned? 
 
+First, run `puppet agent -t` to set up the node for this lesson.
+
 We've set a custom fact of `app_tier=prod` so you can see what hiera will return
 for the `prod` app tier by using this command:
 

@@ -100,6 +100,7 @@ Practice
 </div>
 
 <div class="instruction-content" markdown="1">
+First, run `puppet agent -t` to set up your node for this lesson.
 
 We've set up a complex hierarchy in the production code environment on your
 agent node, explore a bit, add some key/value pairs, and see if you can get a

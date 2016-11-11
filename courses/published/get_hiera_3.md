@@ -109,13 +109,10 @@ change the hierarchy, but the default configuration is to include the
 </div>
 
 <div class="instruction-content" markdown="1">
+Before you begin run `puppet agent -t` once to set up your node for this lesson.
 
-When you run `puppet agent -t` you will see a notice that about your code
-environment. This is because the agent defaults to `production` but the master
-enforces another code environment we have automatically set up.
-
-Remember, if you break something, just reload the page and you'll get a fresh
-node and code environment.
+Remember, if you break something, just type `exit` and click `start session`
+when it appears and you'll get a new node and code environment.
 </div>
 
 

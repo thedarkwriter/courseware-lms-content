@@ -110,6 +110,8 @@ Instructions
 </div>
 
 <div class="instruction-content" markdown="1">
+If you haven't already, run `puppet agent -t` to set up your node with
+example code.
 
 To test out Hiera, you can use make a simple manifest like the examples above
 and use `puppet apply`. The notify resource can be handy for this.  For example, 
@@ -135,8 +137,8 @@ Notes
 Hiera data should live on the puppet master. For learning how hiera works, 
 we're editing code on the agent and using `puppet apply`.
 
-When you're ready to move on, just click to the next section, the practice
-machine will shut down automatically when you're done.
+If you make a mistake and would like a fresh practice environment, type
+`exit` and click the `start session` button when it appears.
 
 If you need a refresher in the Linux command line or in using the vim text
 editor, take a look at those courses before proceeding.
