@@ -116,11 +116,12 @@ puppet apply -e "notify{hiera('dns_server'):}"
 </pre>
 
 To test out other app_tiers, try using the hiera command line tool. The `hiera`
-comand line tool lets you specify the values for facts to test out results.
+comand line tool lets you specify the values for facts to test out results. This
+tool doesn't have any facts by default, so we also need to specify environment.
 
 To see what the value would be for dev use this command:
 <pre>
-hiera dns_server app_tier=dev
+hiera dns_server ::app_tier=dev environment=production
 </pre>
 
 

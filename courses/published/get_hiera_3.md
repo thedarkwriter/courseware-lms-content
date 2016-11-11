@@ -33,13 +33,13 @@ the class, you can now include the `profile::dns` class with this code:
 include profile::dns
 </pre>
 
-This is a very common convention and was recommended best practice. You'll
-will often see it in older forge modules or code written by developers who
-have used puppet since before version 3. 
+Assigning default parameters with hiera is a very common convention and was
+recommended best practice in the past. You'll will often see it in older forge modules
+or code written by developers who have used puppet since before version 3.
 
-There's a problem with using hiera this way; As you write more code like this, 
-it becomes very easy to lose track of which key/value pair applies to what class. 
-The standard convention is to use the name of class as part of the Hiera key 
+There's a problem with using hiera this way; As you write more code like this,
+it becomes very easy to lose track of which key/value pair applies to what class.
+The standard convention is to use the name of class as part of the Hiera key
 like this:
 `profile::dns::dns_server`.
 
@@ -92,8 +92,11 @@ example classes that take parameters. Play around with it until it makes sense.
 
 For this exercise, you'll be running `puppet agent -t` against a Puppet master.
 For convenience, we've made a link to your agent's environment on the master to
-the `/root/puppetcode` directory on the agent node.  You can just declare the
-example classes in the `default` node definition in
+the `/root/puppetcode` directory on the agent node.
+
+Look through the examples classes in `/root/puppetcode/modules/example/`
+
+You can just declare the example classes in the `default` node definition in
 `/root/puppetcode/manifests/site.pp` and run puppet on your agent node.
 
 Hiera lookups are done on the master, so you'll need to change the files in 
@@ -102,6 +105,10 @@ Hiera lookups are done on the master, so you'll need to change the files in
 The master doesn't use the `hiera.yaml` on your agent so you won't be able to
 change the hierarchy, but the default configuration is to include the 
 `hieradata` directory in your code environment.
+
+Try setting values in `common.yaml` and the yaml file that matches your node
+in the `nodes` directory until you understand how automatic parameter lookup
+works.
 </div>
 
 <div class="instruction-header">
