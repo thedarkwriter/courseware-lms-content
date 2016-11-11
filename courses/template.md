@@ -7,6 +7,8 @@ in markdown.
     
 
 <link rel="stylesheet" href="/static/selfpaced/selfpaced.css" markdown="1">
+<script src="https://try.puppet.com/js/selfpaced.js" markdown="1"></script>
+
 <div id="lesson" markdown="1">
 <div id="instructions" markdown="1">
 <div class="instruction-header" markdown="1">

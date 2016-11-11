@@ -1,4 +1,6 @@
 <link rel="stylesheet" href="/static/selfpaced/selfpaced.css" markdown="1">
+<script defer="" src="//code.jquery.com/jquery-1.11.2.js" markdown="1"></script>
+<script defer="" src="https://try.puppet.com/js/selfpaced.js" markdown="1"></script>
 
 <div id="lesson" markdown="1">
 
@@ -108,6 +110,12 @@ Instructions
 </div>
 
 <div class="instruction-content" markdown="1">
+If you haven't already, run `puppet agent -t` to set up your node with
+example code.
+
+**Note: You will see a notice about your code environment not matching the server. 
+This is because nodes ask for "production" by default, but we've set up a
+code environment just for your node.**
 
 To test out Hiera, you can use make a simple manifest like the examples above
 and use `puppet apply`. The notify resource can be handy for this.  For example, 
@@ -133,8 +141,8 @@ Notes
 Hiera data should live on the puppet master. For learning how hiera works, 
 we're editing code on the agent and using `puppet apply`.
 
-When you're ready to move on, just click to the next section, the practice
-machine will shut down automatically when you're done.
+If you make a mistake and would like a fresh practice environment, type
+`exit` and click the `start session` button when it appears.
 
 If you need a refresher in the Linux command line or in using the vim text
 editor, take a look at those courses before proceeding.
@@ -145,7 +153,7 @@ editor, take a look at those courses before proceeding.
 </div>
 
 <div id="terminal" markdown="1">
-  <iframe src="https://try.puppet.com/sandbox/?course=get_hiera1" name="terminal"></iframe>
+  <iframe id="try" src="https://try.puppet.com/sandbox/?course=get_hiera1" name="terminal"></iframe>
 </div>
 
 </div>
