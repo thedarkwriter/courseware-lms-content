@@ -119,7 +119,7 @@ need.
 </div>
 
 <div id="terminal">
-  <iframe id="try" src="https://try.puppet.com/sandbox/?course=get_hiera3" name="terminal"></iframe>
+  <iframe id="try" src="https://try.puppet.com/sandbox/?course=get_hiera4" name="terminal"></iframe>
 </div>
 
 </div>

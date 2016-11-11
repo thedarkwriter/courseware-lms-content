@@ -113,6 +113,10 @@ Instructions
 If you haven't already, run `puppet agent -t` to set up your node with
 example code.
 
+**Note: You will see a notice about your code environment not matching the server. 
+This is because nodes ask for "production" by default, but we've set up a
+code environment just for your node.**
+
 To test out Hiera, you can use make a simple manifest like the examples above
 and use `puppet apply`. The notify resource can be handy for this.  For example, 
 to lookup the value of "message", create a file `/root/message.pp`:

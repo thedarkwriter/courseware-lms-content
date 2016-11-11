@@ -20,10 +20,10 @@ Let's imagine you have two webservers, one is in your "prod" app tier and one
 is in your "dev" app tier.  They are mostly the same, but they need to use 
 different DNS servers.
 
-*Note: In puppet, the word `environment` refers to a set of puppet code that
+**Note: In puppet, the word `environment` refers to a set of puppet code that
 applies to a certain set of nodes.  We use the term `app tier` to refer to a
 physical set of nodes. This distinction isn't important for this course but it
-becomes important when using recommended best practices for managing puppet code.*
+becomes important when using recommended best practices for managing puppet code.**
 
 Without Hiera, your code might look like this:
 <pre>
