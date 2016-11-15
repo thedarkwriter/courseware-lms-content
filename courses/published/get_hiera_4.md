@@ -13,7 +13,7 @@ Lesson
 
 <div class="instruction-content" markdown="1">
 
-So far, all of our Hiera data files have been in a single directory.
+So far, most of our Hiera data files have been in a single directory.
 Depending on the complexity of your data, this might be fine,
 but chances are you'll want to split things up.
 
@@ -75,7 +75,7 @@ a custom fact of `datacenter` to have something like this:
 
 To test `trusted.certname` you'll need to use `puppet agent` and you'll obviously
 only be able to test your actual trusted certname. Remember, you can't use
-`trusted.certname` with puppet apply and you can't change the `hiera.yaml` hierarchy
+`trusted.certname` with `puppet apply` and you can't change the `hiera.yaml` hierarchy
 on the master from your node.
 
 To give a more complex configuration a try, use something like `hostname`
@@ -90,7 +90,7 @@ hiera message app_tier=dev datacenter=portland environment=production
 </pre>
 
 `environment` is specified here because the `hiera` command line tool
-doesn't supply any default facts.
+doesn't supply any default facts or other variables.
 
 </div>
 
@@ -113,6 +113,11 @@ a few levels are unusual in practice, so don't add complexity if you don't need
 it. Even this example is probably more complex than most users will ever
 need.
 
+Play around with `hiera` until you feel comfortable. Your node will expire after
+15 minutes, but you can start a new one and run `puppet agent -t` to get the
+starter code again. Once you're done, head back to [learn.puppet.com](https://learn.puppet.com)
+to try some other self-paced courses or download the Learning VM for more
+hands-on exercises.
 </div>
 
 
