@@ -20,10 +20,10 @@ Let's imagine you have two webservers, one is in your "prod" app tier and one
 is in your "dev" app tier.  They are mostly the same, but they need to use 
 different DNS servers.
 
-**Note: In puppet, the word `environment` refers to a set of puppet code that
+**Note: In Puppet, the word `environment` refers to a set of Puppet code that
 applies to a certain set of nodes.  We use the term `app tier` to refer to a
 physical set of nodes. This distinction isn't important for this course but it
-becomes important when using recommended best practices for managing puppet code.**
+becomes important when using recommended best practices for managing Puppet code.**
 
 Without Hiera, your code might look like this:
 <pre>
@@ -68,10 +68,10 @@ And here's the dev tier datasource, we'll call it `dev.yaml`
 dns_server: 'devdns.puppetlabs.vm'
 </pre>
 
-There's one place you need to change things, that's in your `hiera.yaml`.
-You'll have to add another level to the hierarchy, above "common". Since we
-want to use the value of the app tier fact and not just the word "app_tier",
-we'll need to add some special syntax.
+You'll need to tell Hiera how to use these two files by editing your
+hiera.yaml file. You'll have to add another level to the hierarchy,
+above "common". Since we want to use the value of the app tier fact
+and not just the word "app_tier", we'll need to add some special syntax.
 
 Here's what the `hiera.yaml` needs to look like:
 <pre>
