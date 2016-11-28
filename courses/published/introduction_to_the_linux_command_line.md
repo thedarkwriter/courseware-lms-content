@@ -10,7 +10,7 @@ Lesson
 <div class="instruction-content" markdown="1">
 <!-- Primary Text of the lesson -->
 <!-------------------------------->
-For the purpose of using Puppet, you don't need a deep understanding of the Linux command line. This course is intended as a basic introduction and refresher. If you would like a more comprehensive training, we recommend (Linux Journey)[http://linuxjourney.com].
+For the purpose of using Puppet, you don't need a deep understanding of the Linux command line. This course is intended as a basic introduction and refresher. If you would like a more comprehensive training, we recommend [Linux Journey](http://linuxjourney.com).
 
 Take a look at the window to the right. This is a Linux terminal running Bash.
 
@@ -55,7 +55,7 @@ Once it's installed just type `nano` to run it. Type some text and press `Ctrl-x
 
 There is much more to learn about the command line, but this should be enough to get you through the online self-paced training.
 
-As you explore more, feel free to keep using the terminal provided here, or (open a full screen version)[https://try.puppet.com/sandbox]. This will work for most of the exercises on (Linux Journey)[http://linuxjourney.com].
+As you explore more, feel free to keep using the terminal provided here, or [open a full screen version](https://try.puppet.com/sandbox). This will work for most of the exercises on [Linux Journey](http://linuxjourney.com).
 
 <!-- End of primary test of the lesson -->
 </div>
