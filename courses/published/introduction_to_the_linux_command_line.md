@@ -10,9 +10,9 @@ Lesson
 <div class="instruction-content" markdown="1">
 <!-- Primary Text of the lesson -->
 <!-------------------------------->
-For the purpose of using puppet, you don't need a deep understanding of the Linux command line. This course is intended as a basic introduction and refresher. If you would like a more comprehensive training, we recommend (Linux Journey)[http://linuxjourney.com].
+For the purpose of using Puppet, you don't need a deep understanding of the Linux command line. This course is intended as a basic introduction and refresher. If you would like a more comprehensive training, we recommend (Linux Journey)[http://linuxjourney.com].
 
-Take a look at the window to the right. This is a linux terminal running bash.
+Take a look at the window to the right. This is a Linux terminal running Bash.
 
 Notice a line similar to this:
 <pre>
@@ -40,7 +40,7 @@ anaconda-ks.cfg  puppetcode
 
 Notice the `puppetcode` directory? That isn't commonly used in Puppet, but it's something extra we've added for these courses. It's a special directory we've connected to your code environment on the master. As you go through the other self-paced lessons, you'll sometimes have to update code in that directory.
 
-The exercises also often require editing files. `vim` and `emacs` are the most popular linux command line text editors, but neither one is very intuitive. To get started, you might want to use `nano` instead. Since different distributions of Linux have different commands for installing software, try a simple puppet one-liner instead.
+The exercises also often require editing files. `vim` and `emacs` are the most popular Linux command line text editors, but neither one is very intuitive. To get started, you might want to use `nano` instead. Since different distributions of Linux have different commands for installing software, try a simple Puppet one-liner instead.
 
 <pre>
 [root@yacolt-kenly root]# puppet resource package nano ensure=present
