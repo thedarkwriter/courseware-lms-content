@@ -1,5 +1,7 @@
 <link rel="stylesheet" href="/static/selfpaced/selfpaced.css" markdown="1">
 <script src="https://try.puppet.com/js/selfpaced.js" markdown="1"></script>
+<script defer="" src="https://code.jquery.com/jquery-1.11.2.js" markdown="1"></script>
+
 
 <div id="lesson" markdown="1">
 <div id="instructions" markdown="1">
@@ -19,7 +21,7 @@ Notice a line similar to this:
 [root@yacolt-kenly /]#
 </pre>
 
-That's your command prompt, we've customized it to add a couple of important pieces of information. The first part is your username, in this case `root` which is the Administrator account for the system. The second part is the name of the system, in this case `yacold-kenly`. Yours will be different, we randomly generate the system names for these courses from a list of international place names. The third part, in this case `/` is the current directory. `/` is the highest level directory in the file system, all other accesible directies are below it.
+That's your command prompt, we've customized it to add a couple of important pieces of information. The first part is your username, in this case `root` which is the Administrator account for the system. The second part is the name of the system, in this case `yacold-kenly`. Yours will be different, we randomly generate the system names for these courses from a list of international place names. The third part, in this case `/` is the current directory. `/` is the highest level directory in the file system, all other accesible directories are below it.
 
 Try out a few commands. `pwd` will tell you the current directory, `ls` will list the files in that directory.
 <pre>
@@ -59,7 +61,7 @@ As you explore more, feel free to keep using the terminal provided here, or [ope
 
 <!-- End of primary test of the lesson -->
 </div>
-<div id="terminal" markdown="1">
-  <iframe name="terminal"></iframe>
 </div>
+<div id="terminal" markdown="1">
+  <iframe id="try" src="https://try.puppet.com/sandbox/?course=cli" name="terminal"></iframe>
 </div>
