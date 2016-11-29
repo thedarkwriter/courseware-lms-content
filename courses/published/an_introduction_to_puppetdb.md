@@ -61,16 +61,6 @@ Information in the inventory is never automatically expired, but it is timestamp
 ## Slide 8
 
 
-
-
-
-## Exercises
-Assuming you have a working Puppet installation with PuppetDB installed:
-
-1. Execute the following command on the command line:
-`$ sudo puppet node status <node>`
-where `<node>` is the name of an acutal node that Puppet is managing.
-
 ## Quiz
 1. True or False. PuppetDB is a database that can replace your MySQL or PostgreSQL databases in your current configuration. (False)
 2. PuppetDB stores all of the following, except:

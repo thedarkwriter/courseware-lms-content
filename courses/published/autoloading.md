@@ -76,13 +76,9 @@ It works like this:
 ## Exercises ##
 1. Login shells are the programs that users interact with. They interpret commands typed at the command line. We would like to ensure that our system allows users to use the shells we have installed, by listing them in `/etc/shells`.
 
-Execute the following command. This will return the current modulepath for your Puppet installation.
+2. We've set up an environment on the master for you and mapped the directory to `/root/puppetcode` on your agent. Think of this like network fileshare. Puppet code should only live on the master. Change your current working directory to your fileshare:
 
-`puppet config print modulepath`
-
-2. Change your current working directory to your module path with:
-
-`cd /etc/puppetlabs/puppet/modules`
+`cd /root/puppetcode/modules`
 
 3. Examine the directory structure of the example shells module.
 
@@ -109,9 +105,9 @@ shells/
 
 *   `vim shells/tests/init.pp`
 
-6. Finally, apply your test to observe any changes being made.
+6. Finally, apply your test to observe any changes being made, temporarily setting the modulepath to your local modules directory.
 
-*   `puppet apply shells/tests/init.pp`
+*   `puppet apply shells/tests/init.pp --modulepath=.`
 
 Example:
 

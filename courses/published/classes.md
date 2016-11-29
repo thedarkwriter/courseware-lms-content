@@ -38,13 +38,16 @@ At the end of this course you will be able to:
 
 2\. In that file create a class named motd that will manage the `/etc/motd` file in a given state.
 
-3\. The file resource that your class contains might look similar to:
+3\. Your class might look similar to:
 
-<pre>file { '/etc/motd':
-  ensure  => file,
-  owner   => 'root',
-  group   => 'root',
-  content => 'Hello world! Puppet is awesome.',
+<pre>
+class motd {
+  file { '/etc/motd':
+    ensure  => file,
+    owner   => 'root',
+    group   => 'root',
+    content => 'Hello world! Puppet is awesome.',
+  }
 }
 </pre>
 

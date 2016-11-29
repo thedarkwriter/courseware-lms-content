@@ -71,9 +71,10 @@ More information in the External Facts course.
 
 3. The `/etc/motd` file is presented to users each time they log in. We would like to customize this login message to contain information about the current host.
 
-Change your current working directory to your modulepath with
+We've set up your environment on the master and mapped that directory to the `/root/puppetcode` directory of your agent.
+Change your current working directory to your fileshare with:
 
-`cd /etc/puppetlabs/puppet/modules`
+`cd /root/puppetcode/modules`
 
 4. Examine the directory structure of the example motd module.
 
@@ -93,10 +94,22 @@ Update the motd module’s main class manifest file to set the content of your `
 
 `vim motd/manifests/init.pp`
 
-5. Validate your syntax and enforce your class. and apply the class. Your `/etc/motd` file should contain the facts you specified.
+5. Validate your syntax and enforce your class. and apply the class. Your `/etc/motd` file should contain the facts you specified. For testing locally you'll want to specify the current directory as the modulepath for `puppet apply`.
 
 *   `puppet parser validate motd/manifests/init.pp`
-*   `puppet apply motd/tests/init.pp`
+*   `puppet apply motd/tests/init.pp --modulepath=.`
+
+6. Now that you've tested it, you can add the class to your environment's init.pp on the master:
+*   `vim /root/puppetcode/manifests/init.pp`
+*   Add the line `include motd` inside the default node definition
+
+7. Since you've already applied the manifest locally, running puppet agent won't change anything. So you'll need to change the message.
+*   `vim motd/manifests/init.pp
+*   Add a few words to the content of /etc/motd.
+
+8. Run the puppet agent.
+*   `puppet agent -t`
+
 
 ## Quiz
 1. True or False. Facter stores information about the Puppet Master for your system. (False)
