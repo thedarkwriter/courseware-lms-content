@@ -4,10 +4,10 @@ Before testing to see whether your manifest and modules are delivering the resul
 
 At the end of this course you will be able to:
 
-* Access the Puppet Language Style Guide. 
+* Access the Puppet Language Style Guide.
 * Use Puppet parser to validate Puppet code syntax.
 * Install puppet-lint.
-* Use puppet-lint to compare your manifests to established coding standards. 
+* Use puppet-lint to compare your manifests to established coding standards.
 
 # Slide Content
 
@@ -15,15 +15,22 @@ At the end of this course you will be able to:
 
 ### slide Title - Validating your Puppet Code
 
-Before testing to see whether your manifest and modules are delivering the results that you expect, you need to validate your Puppet code syntax and check that you have followed established style conventions.  In this course we look at the first level of testing, validating your Puppet code, using the Puppet Language Style Guide, Puppet parser, and puppet lint.
+In this course we look at the most basic level of testing, validating your Puppet code syntax and checking that you have followed established style conventions. We'll use three tools:
+* The Puppet Language Style Guide
+* Puppet parser
+* Puppet lint.
+
+### Puppet Language Style Guide
+
+Before testing puppet code, you have to write it. The Puppet Language Style Guide is the authoritative resource for writing good readable puppet code. You can find it linked in the resources section of this course, or just go to docs.puppet.com and search for "style".
 
 ### Puppet Parser
 
-So, after you have written your Puppet code, the first level of testing is syntax validation. Typos and errors are bound to creep into code. You can use Puppet parser to make sure that your manifest can be parsed before you commit your changes or deploy them to a live environment. 
+After you have written your Puppet code, the first level of testing is syntax validation. Typos and errors are bound to creep into code. You can use Puppet parser to make sure that your manifest can be parsed before you commit your changes or deploy them to a live environment.
 
-Puppet parser validates Puppet DSL syntax without compiling a catalog or syncing any resources. If no manifest files are provided, it validates the default site manifest.
+Puppet parser validates Puppet DSL syntax without compiling a catalog or syncing any resources.
 
-For example, let's say you left out a curly brace. If you run the command puppet parser validate, you would receive output that looks like this text. Puppet tells you what went wrong and which line contains the error so that you can easily find and correct the mistake in your manifest. If Puppet returns nothing after you run the command, no syntax errors were encountered.
+As an example, let's say you left out a curly brace. If you run the command puppet parser validate, you would receive output that looks like this text. Puppet tells you what went wrong and which line contains the error so that you can easily find and correct the mistake in your manifest. If Puppet returns nothing after you run the command, no syntax errors were encountered.
 
 ### slide puppet-lint
 
@@ -78,7 +85,7 @@ https://docs.puppetlabs.com/references/3.4.0/man/parser.html
 <pre>puppet parser validate /root/puppetcode/modules/ntplint/manifests/init.pp
 </pre>
 
-Puppet will return the following error message:  
+Puppet will return the following error message:
 
 <pre>Error: Could not parse for environment production: Syntax error at '{' at /root/puppetcode/
 modules/ntplint/manifests/init.pp:3:68
@@ -101,8 +108,8 @@ modules/ntplint/manifests/init.pp:3:68
 
 Puppet-lint will return the following list of warnings:
 
-<pre>WARNING:top-scope variable being used without an explicit namespace on line 5 
-WARNING:double quoted string containing no variables on line 10 
+<pre>WARNING:top-scope variable being used without an explicit namespace on line 5
+WARNING:double quoted string containing no variables on line 10
 WARNING:string containing only a variable on line 39 WARNING: unquoted resource title on line 38WARNING:ensure found on line but it's not the first attribute on line 40
 </pre>
 
