@@ -95,7 +95,7 @@ rspec-puppet needs three files in order to run your tests; the Rakefile, the spe
 
 ## Slide 19
 
-So, now that rspec-puppet is installed and we've looked at the basic rpec-puppet concepts, the recommended directory tree structure for testing your modules, and the required files, let's look more specifically at writing rspec-puppet tests. Regardless of whether you are testing classes, defined types, functions, or hosts, the structure of your test file is essentially the same. You want to include the spec_helper library of functions for running your tests. The basic structure of describing the thing you want to test  and what the test should do lets you easily express concepts in a conversational manner.
+So, now that rspec-puppet is installed and we've looked at the basic rspec-puppet concepts, the recommended directory tree structure for testing your modules, and the required files, let's look more specifically at writing rspec-puppet tests. Regardless of whether you are testing classes, defined types, functions, or hosts, the structure of your test file is essentially the same. You want to include the spec_helper library of functions for running your tests. The basic structure of describing the thing you want to test  and what the test should do lets you easily express concepts in a conversational manner.
 
 ## Slide 20
 
