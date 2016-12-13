@@ -132,11 +132,11 @@ documentation located at [https://www.relishapp.com/rspec](https://www.relishapp
     * generates and checks puppet catalogs
     * checks that the catalog contains the values that we want saved (e.g., an http pkg)
     * inspects what is there
- * Install ... (Practitioner - Introduction to Module Testing/rpec_setup.md)(There is a note that the way we install in the class is not the cleanest way. So should we be teaching a different way?)
+ * Install ... (Practitioner - Introduction to Module Testing/rspec_setup.md)(There is a note that the way we install in the class is not the cleanest way. So should we be teaching a different way?)
     * gem install rspec-puppet
     * gem install puppetlabs_spec_helper
     * gem install rake
- * Configure ... (Practitioner - Introduction to Module Testing/rpec_setup.md, rspec_files.md)
+ * Configure ... (Practitioner - Introduction to Module Testing/rspec_setup.md, rspec_files.md)
     * rspec-puppet
     * puppetlabs_spec_helper (Remember that you do not need to run `rspec-puppet-init` when using `puppetlabs_spec_helper`.)
     * rake
