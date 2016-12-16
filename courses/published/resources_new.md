@@ -5,6 +5,8 @@ out the different sections.  Text should be written
 in markdown.
 -->
 <link rel="stylesheet" href="/static/selfpaced/selfpaced.css" markdown="1">
+<script src="https://try.puppet.com/js/selfpaced.js" markdown="1"></script>
+<script defer="" src="https://code.jquery.com/jquery-1.11.2.js" markdown="1"></script>
 <div id="lesson" markdown="1">
 <div id="instructions" markdown="1">
 <div class="instruction-header" markdown="1">
@@ -74,6 +76,7 @@ The command `puppet resource user root`, will return something like the
 following, though the exact details might vary depending on your operating
 system and the details of the root user account.
 
+<pre>
     user { 'root':
       ensure           => present,
       comment          => 'root',
@@ -85,6 +88,7 @@ system and the details of the root user account.
       shell            => '/bin/bash',
       uid              => '0',
     }
+</pre>
 
 This resource declaration syntax is composed of three main components:
 
@@ -101,11 +105,11 @@ we'll go through the example point by point.
 
 We'll start with the first line first:
 
-```puppet
+<pre>
   user { 'root':
     ...
   }
-```
+</pre>
 
 The word `user`, right _before_ the curly brace, is the **resource type**.
 The type represents the kind of thing that the resource describes. It tells
@@ -134,11 +138,11 @@ or try the command `puppet describe --list`.
 
 Take another look at the first line of the resource declaration.
 
-```puppet
+<pre>
   user { 'root':
     ...
   }
-```
+</pre>
 
 The single quoted word `'root'` just before the colon is the resource
 **title**.  Puppet uses the resource title as its own internal unique
@@ -166,7 +170,7 @@ code more concise and readible.
 Now that we've covered the *type* and *title*, take a look at the body of the
 resource declaration.
 
-```puppet
+<pre>
 user { 'root':
   ensure           => present,
   comment          => 'root',
@@ -178,7 +182,7 @@ user { 'root':
   shell            => '/bin/bash',
   uid              => '0',
 }
-```
+</pre>
 
 After the colon in that first line comes a hash of **attributes** and their
 corresponding **values**. Each line consists of an attribute name, a `=>`
@@ -189,11 +193,11 @@ directory `/root`.
 So to bring this all together, a resource declaration will match the following
 pattern:
 
-```puppet
+<pre>
 type {'title':
     attribute => 'value',
 }
-```
+</pre>
 
 Note that the comma at the end of the final attribute value pair isn't required
 by the parser, but it is best practice to include it for the sake of
@@ -264,9 +268,8 @@ machine will shut down automatically when you're done.
 
 <!-- End of notes section -->
 </div>
-<a href="https://try.puppet.com/sandbox/" class="btn btn-default" target="terminal">Start Practice Session</a>
 </div>
 <div id="terminal" markdown="1">
-  <iframe name="terminal"></iframe>
+  <iframe name="terminal" src="https://try.puppet.com/sandbox/"></iframe>
 </div>
 </div>
