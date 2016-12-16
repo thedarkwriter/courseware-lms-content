@@ -254,20 +254,9 @@ result in an error message. Why do you think this is?)
 </div>
 
 <div class="instruction-header" markdown="1">
-<i class="fa fa-pencil"></i>
-Notes
 </div>
 
-<div class="instruction-content" markdown="1">
 
-<!-- Other notes -->
-<!-------------------->
-
-When you're ready to move on, just click to the next section, the practice
-machine will shut down automatically when you're done.
-
-<!-- End of notes section -->
-</div>
 </div>
 <div id="terminal" markdown="1">
   <iframe name="terminal" src="https://try.puppet.com/sandbox/"></iframe>
