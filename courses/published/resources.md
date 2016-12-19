@@ -13,7 +13,7 @@ At the end of this course you will be able to:
 
 # Puppet Resources
 
-"Resources are the fundamental unit for modeling system configurations. They're like building lacks. Think 'Lego'. Each resource describes some aspect of a system, like a service that must be running, or a package that must be installed. The block of Puppet code that describes a resource is called a 'resource declaration'."
+"Resources are the fundamental unit for modeling system configurations. They're like building blocks. Think 'Lego'. Each resource describes some aspect of a system, like a service that must be running, or a package that must be installed. The block of Puppet code that describes a resource is called a 'resource declaration'."
 
 "Resources can be combined together to represent the desired configuration of your system. And order doesn't matter. Puppet resources are written using the declarative modeling language. This is a simple, easy to understand, and easy to write language. Let's take a look at an example."
 
