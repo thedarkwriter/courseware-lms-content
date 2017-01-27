@@ -30,7 +30,7 @@ The `creates` parameter is a third option. If the file referenced by `creates` d
 
 If possible, every exec should have one of these checks to make sure it isn't run unless it's needed.
 
-Sometimes that isn't possible, for example if our webapp had a script call `webupdate` that needed to be run when a config file had changed. We don't have a simple way of checking the desired state in that case. In this case, there is still a way of preventing the exec from triggering on every puppet run. If the `refreshonly` parameter is set to `true` the exec command will only run if it is notified by another resource. That is, the exec will only run if it has another resource specificed in the `subscribe` parameter, or if another resource has a `notify` directed at the exec.
+Sometimes that isn't possible, for example if our webapp had a `webupdate` command that needed to be run when a config file had changed. We don't have a simple way of checking the desired state in that case. In this case, there is still a way of preventing the exec from triggering on every puppet run. If the `refreshonly` parameter is set to `true` the exec command will only run if it is notified by another resource. That is, the exec will only run if it has another resource specificed in the `subscribe` parameter, or if another resource has a `notify` directed at the exec.
 
 For example:
 <pre>
@@ -45,7 +45,7 @@ exec {'webupdate':
 </pre>
 
 The exec will only be triggered if the file changes.
-Alternatively, the same relationship would be specified the other way:
+Alternatively, the same relationship could be specified the other way:
 
 <pre>
 file {'/etc/webapp/settings.conf':
