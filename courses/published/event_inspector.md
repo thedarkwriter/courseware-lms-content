@@ -75,7 +75,7 @@ There are no exercises for this course. However, you can download Puppet Enterpr
 	c. Noop
 	d. **Apply**
 
-3. Event Inspector offers three perspectives to look at your infratstructure. They are Classes, Nodes, and which of the following items?
+3. Event Inspector offers three perspectives to look at your infrastructure. They are Classes, Nodes, and which of the following items?
 	a. Modules
 	b. Manifests
 	c. **Resources**
