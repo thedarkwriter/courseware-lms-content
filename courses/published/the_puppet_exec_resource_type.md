@@ -1,3 +1,17 @@
+<link rel="stylesheet" href="/static/selfpaced/selfpaced.css" markdown="1">
+<script src="https://try.puppet.com/js/selfpaced.js" markdown="1"></script>
+
+<div id="lesson" markdown="1">
+<div id="instructions" markdown="1">
+<div class="instruction-header" markdown="1">
+<i class="fa fa-graduation-cap" markdown="1"></i>
+Lesson
+</div>
+<div class="instruction-content" markdown="1">
+<!-- Primary Text of the lesson -->
+<!-------------------------------->
+
+
 # The Exec Resource
 The Puppet exec resource allows you to execute a command directly using Puppet. It is the most versatile resource because it can do anything that the underlying operating system can do. That versatility makes it tempting to use, but the exec should really only be used as a last resort. If there isn't a built in resource type that does what you need, there is often one provided by a module on the forge. Before writing an exec, always check the forge.
 
@@ -62,7 +76,18 @@ exec {'webupdate':
 
 There are several other parameters that can be set on the exec resource, such as `cwd` to set the working directory for the command, and `user` to set the user to run the command. The details about all of the built in types can be found here: [Puppet Docs - Type Reference](https://docs.puppet.com/references/latest/type.html). If you're managing Windows machines you should also look the the [tips and examples for using Exec resources on Windows](https://docs.puppet.com/puppet/latest/reference/resources_exec_windows.html)
 
-# Exercises
+
+<!-- End of primary test of the lesson -->
+</div>
+<div class="instruction-header" markdown="1">
+<i class="fa fa-desktop"></i>
+Practice
+</div>
+<div class="instruction-content" markdown="1">
+<!-- High level description of the exercise. -->
+<!-------------------------------------------->
+
+
 
 Run `puppet agent -t` to load the example code on to your agent node.
 
@@ -71,3 +96,18 @@ We've installed a few scripts to demonstrate different ways of using the exec re
 There is also an example `.tar` file in /root. Create an exec resource to run `tar -xf` on that file and use the `creates` parameter to be sure it only happens once.
 
 Once you feel comfortable with exec resources, try opening the `/usr/bin/webuser` script to see if it can replaced with puppet code that doesn't use the exec resource type.
+
+
+
+</div>
+
+<div class="instruction-header" markdown="1">
+<i class="fa fa-pencil"></i>
+Notes
+</div>
+
+</div>
+<div id="terminal" markdown="1">
+  <iframe id="try" name="terminal" src="https://try.puppet.com/sandbox/?course=exec"></iframe>
+</div>
+</div>
