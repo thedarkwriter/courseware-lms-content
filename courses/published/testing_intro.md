@@ -1,0 +1,211 @@
+## Testing
+
+Just like in other development, automated testing is an essential piece of solid reliable Puppet code. Creating tests for Puppet code does not need to be a burden, but it can be difficult to know where to start. In this course, you'll about the different kinds of tests, the basics of testing Puppet code, how you can get started with testing, and how testing can enable you to move faster in development with less risk.
+
+## Kinds of tests
+
+A good way to approach testing is to think of it like a series of seives or filters. Imgaine trying to filter rocks and debris out of a pile of rocky soil. You'd want to start with a cheap strudy filter to first remove the larges boulders. Below that, you'd have a finer screen to catch medium sized rocks and branches. After several layers you might have a very delicate fine mesh that would only let the good soil through. It might seem like a good idea to just have that final filter, after all it would catch boulders as well as pebbles. But that final stage is also the most expensive, the most delicate, and the slowest. So it's best to be close to the finished product when you get to that stage.
+
+With testing puppet code, you can very quickly catch a large portion of bugs with minimal effort. With each layer of testing you'll focus on finer details. Since you've already caught the larger bugs, you don't need such a large
+
+There are few different categories of tests that are relevant to Puppet:
+
+* Syntax and style validation
+* Unit tests
+* Acceptance tests
+* Continuous integration
+
+## Syntax and style validation
+
+Syntax and style validation is a good place to start when you'd like to start testing your Puppet code. The most basic syntax test can be run anytime from the command line. Just type `puppet parser validate` and then the name of a file or directory to be checked. This can be a good habit as you're working on code to make sure you haven't made any obvious typos. Since it's easy to forget this step, git users will often add this as a pre-commit hook for any `.pp` file. A pre-commit hook will run before changes are commited to source control, so it's a quick way to catch obvious errors. Search online for examples of how to do this, or [take a look at the code we use in instructor led trainings](https://github.com/puppetlabs/pltraining-classroom/blob/master/files/pre-commit). You can also use this method to add syntax validation for frequently used file types such as `epp` and `yaml`.
+
+To check your Puppet code style, [there is a gem called `puppet-lint`](http://puppet-lint.com/). Puppet lint goes beyond correct syntax and warns if code doesn't follow the recommended style conventions, this means it will catch things like trailing whitespace or if `"` are used in a string without variable interpolation. Some people choose to add Puppet-lint to their pre-commit hooks along side `puppet parser validate` to help enforce good habits, but if you find it burdensome you can just run the command manually. If you'd rather not install the gem, you can use this [online Puppet code validator](https://validate.Puppet.com/).
+
+## Practice
+
+Try out some of these commands in the terminal to the right. First, run `puppet agent -t` to set up the example code. In the `/root` directory you'll find a file called `example.pp`. Using `puppet parser validate example.pp` find and resolve the syntax errors in the code. If you'd like install the `puppet-lint` gem with `gem install puppet-lint` and use it to find any style issues.
+
+## Notes
+
+In a later section, we'll look at how to incorporate these checks into your automated integration tests.
+
+## Unit tests
+
+Unit tests are short simple tests that form the first line of defense for your code, they are limited scope tests that focus on small units of code. Since Puppet was originally written in Ruby, unit tests are generally written in a variation of the `rspec` called `rspec-puppet`, this can be installed as a gem on your development workstation. `puppetlabs_spec_helper` is another gem that offers some useful helper methods when writing tests for puppet code.
+
+Rspec syntax reads almost like natural language, once you're familiar with it you'll find it's easy to follow. For testing puppet code, a good first step is to check that your code will compile.
+
+For example, if you had a module to manage a webserver, you might have a class called `apache`. A minimal test for that class would be:
+
+<code>
+describe 'apache', :type => 'class' do
+  it { should compile }
+end
+</code>
+
+You can provide more human readable output by using the `context` keyword.
+
+For example, since we're just testing the `apache` class without parameters you could update test to look like this:
+
+<code>
+describe 'apache', :type => class do
+  context "Default parameters" do
+    if { should compile }
+  end
+end
+</code>
+
+
+What if we want to test some of those parameters? It's pretty common to set the document root for a webserver to something other than the default, so let's assume the `apache` class has a `docroot` parameter. We can specify things like parameters using the `let` keyword in each context. Since we still want to keep the test for default parameters, we'll add a second context for the docroot parameter, like this:
+
+<code>
+describe 'apache', :type => class do
+  context "Default parameters" do
+    it { should compile }
+  end
+  context "Docroot set to /var/www" do
+    let(:params){
+      :docroot => '/var/www'
+    }
+    it { should compile }
+  end
+end
+</code>
+
+If we ran that last test, it would run through both permutations let us know if one of them didn't compile. This might seem redundant since you're already written the puppet code, but it can catch diffucult to diagnose errors, especially once you move beyond just checking if the code compiles.
+
+What if you'd actually named your parameter `doc_root` instead of `docroot`? It's a simple mistake that would be easy to miss. Since `doc_root` and `docroot` are both valid syntax and style for parameters, `puppet parser validate` and `puppet-lint` wouldn't catch the mistake. This is where unit tests really shine, and once you've developed the habit of writing them alongside all of your code they'll offer a simple way to catch those errors before your code is even deployed to a testing environment. Although the syntax is correct, missing a required parameter or trying to set one that doesn't exist will cause a compilation error.
+
+## Running Unit tests
+
+If you're not familiar with ruby and rspec, running your tests can seem overwhelming. Thankfully, `puppetlabs_spec_helper` provides almost everything you'll need to actually run your tests.
+
+You'll need do install that gem and create a few other files in your module.
+
+First, create the `Rakefile` in the root directory of your module. The `Rakefile` provides a single starting point for your test scripts. Since the `puppetlabs_spec_helper` gem handles all of that, you're `Rakefile` can be just two lines:
+
+<code>
+require 'rubygems'
+require 'puppetlabs_spec_helper/rake_tasks'
+</code>
+
+The next file to create is `spec/spec_helper.rb` which is also just two lines:
+<code>
+require 'rubygems'
+require 'puppetlabs_spec_helper/module_spec_helper'
+</code>
+
+That file is where you can include helper methods and other details you'd like to include in your actual tests. The second `require` provides support for interacting with other modules.
+
+The `.fixtures.yaml` file is in YAML format, which is a very human readable format for structured data. [yaml.org has the complete documentation](https://yaml.org) but the format is fairly intuitive. For the context of specifying `.fixtures.yaml` the format is fairly simple. Here's an example:
+
+If your Puppet module has dependencies on other modules, you'll need some way for your spec tests to download those. In this context, those dependencies are known as `fixtures` and they are specified in `.fixtures.yaml` in the root directory of your module. Note: Make sure to include the leading `.` character. Fixtures does not automatically resolve dependencies, so you need to specify every module your module depends on, their dependencies, and so on.
+
+If your module depended on the `chocolatey` module and the `stdlib` module, your `.fixtures.yaml` might look like this:
+<code>
+fixtures:
+  repositories:
+    stdlib: "git://github.com/puppetlabs/puppetlabs-stdlib.git"
+  forge_modules:
+    chocolatey: "puppetlabs/chocolatey"
+  symlinks:
+    apache: "#{source_dir}"
+</code>
+
+One quick trick for finding all of your modules dependencies is to run `puppet module install <your-modulename> --modulepath=/tmp/folder` The Puppet module tool will resolve dependencies in your metadata.json, those modules dependencies, and so on. You can then get a list of all those modules using `puppet module list --modulepath=/tmp/folder`. Once you're done you can delete the folder.
+
+Notice that we're using both a github repo and a published forge module in that example. Depending on how you manage your code, you might need to specify different options. For the full syntax of `.fixtures.yml` look at the [puppetlabs_spec_helper documentation](https://github.com/puppetlabs/puppetlabs_spec_helper). For example, if you're working on an update that requires changes to two modules you could temporarily specify that dependancy as coming from your own fork and branch. You should always use the simplest configuration that fits your needs, so it's generally best to keep fixtures pointed at published modules on the Puppet forge.
+
+Finally, you see that there is a section for `symlinks`, this is a way to tell `rspec-puppet` to use a local copy. In this case, it actually specifies the module we're testing. It sometimes makes sense to add more symlinks, but it's usally simpler to work with modules to the forge or source control. 
+
+Once you have all of your pieces in place you'll need to add a little to your actual test code. For the example we've been working with, this would be in a file called `spec/classes/apache_spec.rb` just add the following line at the top before your tests:
+<code>
+require 'spec_helper'
+</code>
+
+That will pull in the code from `spec/spec_helper.rb`, which will deal with your fixture modules.
+
+Take a look at [this blog post](https://puppet.com/blog/next-generation-of-puppet-module-testing) for more details of what you'll need to set up.
+
+## Increasing coverage
+
+Unit tests can test more than just compliation, you can write tests that will check that your code actually does what you think it does. In Puppet, there are two levels of thinking about this. For unit tests, Puppet never actually applies the code. Instead it compiles the code and checks that the resources exist. For your webserver, you might write a test like this:
+
+<code>
+describe 'apache', :type => class do
+  context "Default parameters" do
+    it { should compile }
+  end
+  context "Docroot set to /var/www" do
+    let(:params){
+      :docroot => '/var/www'
+    }
+    it { should compile }
+    it { should contain_package('apache').with_ensure('present') }
+  end
+end
+</code>
+
+When that test is run, it compiles a Puppet catalog and checks that the "apache" package is in it. If you're new to unit testing, this probably feels redundant since you've already written the Puppet code to do this. The important piece here is that your unit tests treat the Puppet code as a black box. Also as code becomes more complex with multiple parameters and conditional statements, it can be easy to make a logic error that will be hard to track down if you're not testing for each supported configuration.
+
+Take this example Puppet code:
+
+<code>
+case $osfamily {
+  'redhat': {
+    package {'apache':
+      ensure => present,
+    }
+  }
+  'debian': {
+    package {'httpd':
+      ensure => present,
+    }
+  }
+  'windows': {
+    package {'apache':
+      ensure => present,
+      provider => 'chocolatey',
+    }  
+  }
+  default: {
+    fail("Unsupported operating system ${osfamily}")
+  }
+}
+</code>
+
+Different operating systems sometimes need different package names or providers and if you want your module to be flexible you need a good way to test each operating system. The unit tests for this bit of code would try each of those values. Since `$osfamily` is a fact instead of a parameter, we'll use `let(:facts){}` to set it for each test.
+
+<code>
+describe 'apache', :type => class do
+  context "RedHat OS" do
+    let(:facts){
+      :osfamily => 'redhat'
+    }
+    it { should compile }
+    it { should contain_package('apache').with_ensure('present') }
+  end
+  context "Debian OS" do
+    let(:facts){
+      :osfamily => 'debian'
+    }
+    it { should compile }
+    it { should contain_package('httpd').with_ensure('present') }
+  end
+  ...
+end
+</code>
+
+Adding coverage is important, but it's important to be realistic. There is little sense in covering testing scenarios that will never happen in real life. It also isn't generally necessary to have 100% coverage for your tests. 80% coverage, focusing on those pieces most likely to fail is usually sufficient. The other 20% of time is better spent on higher level testing or increasing coverage in other modules.
+
+## Test driven development
+
+You might be thinking that the syntax of those tests reads a bit like a specification of how the code should work. For example, you might specify that code by writing "An apache module that will install the apache package on RedHat and the httpd package on debian. It should also let you specify an alternate doc root." etc. One very powerful approach is to actually write the tests before writing any code at all. This is known as `Test Driven Development`.
+
+Test driven development can help focus on the basic requirements before adding new features, it's also a great way to enforce the habit of testing all your code. If you're working in a team setting, one useful strategy is for different team members to write the tests and code.
+
+For those who enjoy solving problems, test driven develop can also add an element of fun. Once the test is written, think of the module as being "broken" and your task becomes fixing it. It sounds silly, but it is a really helpful way of reframing your work.
+
+## Exercises
+
+
