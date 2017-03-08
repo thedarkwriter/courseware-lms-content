@@ -1,3 +1,0 @@
----
-message: This string is the value that is returned when hiera('message') is called.
-
