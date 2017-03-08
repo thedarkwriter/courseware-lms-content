@@ -121,13 +121,17 @@ require 'spec_helper'
 
 That will pull in the code from `spec/spec_helper.rb`, which will deal with your fixture modules.
 
-Take a look at [this blog post](https://puppet.com/blog/next-generation-of-puppet-module-testing) for more details of what you'll need to set up.
+[This blog post](https://puppet.com/blog/next-generation-of-puppet-module-testing) provides more details of what you'll need to set up.
+
+## Practice
+
+Take a look at the ssh module in `/root/puppetcode/modules`. The puppet code has some problems. Start by running the tests to find out what's wrong and fix it.
 
 ## Increasing coverage
 
 Unit tests can test more than just compliation, you can write tests that will check that your code actually does what you think it does. In Puppet, there are two levels of thinking about this. For unit tests, Puppet never actually applies the code. Instead it compiles the code and checks that the resources exist in the compiled catalog. For your webserver, you might write a test like this:
 
-<code>
+<pre>
 describe 'apache', :type => class do
   context "Default parameters" do
     it { should compile }
@@ -140,13 +144,13 @@ describe 'apache', :type => class do
     it { should contain_package('apache').with_ensure('present') }
   end
 end
-</code>
+</pre>
 
 When that test is run, it compiles a Puppet catalog and checks that the "apache" package is in it. If you're new to unit testing, this probably still feels redundant since you've already written the Puppet code to do this. The important piece here is that your unit tests treat the Puppet code as a black box. As code becomes more complex with multiple parameters and conditional statements, it can be easy to make a logic error that will be hard to track down if you're not testing for each supported configuration.
 
 Take this example Puppet code:
 
-<code>
+<pre>
 case $osfamily {
   'redhat': {
     package {'apache':
@@ -168,11 +172,11 @@ case $osfamily {
     fail("Unsupported operating system ${osfamily}")
   }
 }
-</code>
+</pre>
 
 Different operating systems sometimes need different package names or providers and if you want your module to be flexible you need a good way to test each operating system. The unit tests for this bit of code would try each of those values. Since `$osfamily` is a fact instead of a parameter, we'll use `let(:facts){}` to set it for each test.
 
-<code>
+<pre>
 describe 'apache', :type => class do
   context "RedHat OS" do
     let(:facts){
@@ -190,7 +194,7 @@ describe 'apache', :type => class do
   end
   ...
 end
-</code>
+</pre>
 
 Adding coverage is important, but remember to be realistic. There is little sense in covering testing scenarios that will never happen in real life. It also isn't generally necessary to have 100% coverage for your tests. 80% coverage, focusing on those pieces most likely to fail is usually sufficient. The other 20% of time is better spent on higher level testing or increasing coverage in other modules. That said, it's often worth adding a few unit tests for unsupported configurations to makes sure that your module also fails gracefully and provides informative error messages.
 
