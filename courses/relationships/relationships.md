@@ -7,7 +7,9 @@
 # Resource
 
 ~~~DIV:left~~~
+
 ## Package file service
+
 ~~~ENDDIV~~~
 
 ~~~DIV:right~~~
@@ -28,27 +30,48 @@
 
 ## Relationship metaparameter
 
-!SLIDE
+!SLIDE slide4
+<script> 
+audio("slide4")
+timeline([1000,11000,14000,16000],"slide4")
+</script>
 
 # Metaparameters
 
+~~~DIV:time align-center~~~
 ## 4 Metaparameters
+~~~ENDDIV~~~
 
+~~~DIV:time align-center~~~
 ## Resource reference (or array of references)
+~~~ENDDIV~~~
 
+~~~DIV:time align-center~~~
 [fa-arrow-down fa-5x]
+~~~ENDDIV~~~
 
+~~~DIV:time align-center~~~
 ## One or more target references
+~~~ENDDIV~~~
 
-!SLIDE
+!SLIDE slide5
+<script> 
+audio("slide5")
+timeline([1000,2000],"slide5")
+</script>
 
 # Relationship Metaparameters
 
-## before: 
-##    Causes a resource to be applied before the target resource.
 
+~~~DIV:time~~~
+## before: 
+Causes a resource to be applied before the target resource.
+~~~ENDDIV~~~
+
+~~~DIV:time~~~
 ## require: 
-##    Causes a resource to be applied after the target resource.
+Causes a resource to be applied after the target resource.
+~~~ENDDIV~~~
 
 !SLIDE
 
