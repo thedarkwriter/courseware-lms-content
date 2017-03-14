@@ -1,72 +1,72 @@
 /* Official Puppet fonts */
 @font-face {
     font-family: 'Calibre Web Black';
-    src: local("Calibre Web Black"),local("CalibreWeb-Black"),url(/file/assets/fonts/CalibreWeb-Black.woff) format("woff");
+    src: local("Calibre Web Black"),local("CalibreWeb-Black"),url(fonts/CalibreWeb-Black.woff) format("woff");
 }
 
 @font-face {
     font-family: 'Calibre Web Black Italic';
-    src: local("Calibre Web Black Italic"),local("CalibreWeb-BlackItalic"),url(/file/assets/fonts/CalibreWeb-BlackItalic.woff) format("woff");
+    src: local("Calibre Web Black Italic"),local("CalibreWeb-BlackItalic"),url(fonts/CalibreWeb-BlackItalic.woff) format("woff");
 }
 
 @font-face {
     font-family: 'Calibre Web Bold';
-    src: local("Calibre Web Bold"),local("CalibreWeb-Bold"),url(/file/assets/fonts/CalibreWeb-Bold.woff) format("woff");
+    src: local("Calibre Web Bold"),local("CalibreWeb-Bold"),url(fonts/CalibreWeb-Bold.woff) format("woff");
 }
 
 @font-face {
     font-family: 'Calibre Web Bold Italic';
-    src: local("Calibre Web Bold Italic"),local("CalibreWeb-BoldItalic"),url(/file/assets/fonts/CalibreWeb-BoldItalic.woff) format("woff");
+    src: local("Calibre Web Bold Italic"),local("CalibreWeb-BoldItalic"),url(fonts/CalibreWeb-BoldItalic.woff) format("woff");
 }
 
 @font-face {
     font-family: 'Calibre Web Light';
-    src: local("Calibre Web Light"),local("CalibreWeb-Light"),url(/file/assets/fonts/CalibreWeb-Light.woff) format("woff");
+    src: local("Calibre Web Light"),local("CalibreWeb-Light"),url(fonts/CalibreWeb-Light.woff) format("woff");
 }
 
 @font-face {
     font-family: 'Calibre Web Light Italic';
-    src: local("Calibre Web Light Italic"),local("CalibreWeb-LightItalic"),url(/file/assets/fonts/CalibreWeb-LightItalic.woff) format("woff");
+    src: local("Calibre Web Light Italic"),local("CalibreWeb-LightItalic"),url(fonts/CalibreWeb-LightItalic.woff) format("woff");
 }
 
 @font-face {
     font-family: 'Calibre Web Medium';
-    src: local("Calibre Web Medium"),local("CalibreWeb-Medium"),url(/file/assets/fonts/CalibreWeb-Medium.woff) format("woff");
+    src: local("Calibre Web Medium"),local("CalibreWeb-Medium"),url(fonts/CalibreWeb-Medium.woff) format("woff");
 }
 
 @font-face {
     font-family: 'Calibre Web Medium Italic';
-    src: local("Calibre Web Medium Italic"),local("CalibreWeb-MediumItalic"),url(/file/assets/fonts/CalibreWeb-MediumItalic.woff) format("woff");
+    src: local("Calibre Web Medium Italic"),local("CalibreWeb-MediumItalic"),url(fonts/CalibreWeb-MediumItalic.woff) format("woff");
 }
 
 @font-face {
     font-family: 'Calibre Web Regular';
-    src: local("Calibre Web Regular"),local("CalibreWeb-Regular"),url(/file/assets/fonts/CalibreWeb-Regular.woff) format("woff");
+    src: local("Calibre Web Regular"),local("CalibreWeb-Regular"),url(fonts/CalibreWeb-Regular.woff) format("woff");
 }
 
 @font-face {
     font-family: 'Calibre Web Regular Italic';
-    src: local("Calibre Web Regular Italic"),local("CalibreWeb-RegularItalic"),url(/file/assets/fonts/CalibreWeb-RegularItalic.woff) format("woff");
+    src: local("Calibre Web Regular Italic"),local("CalibreWeb-RegularItalic"),url(fonts/CalibreWeb-RegularItalic.woff) format("woff");
 }
 
 @font-face {
     font-family: 'Calibre Web Semibold';
-    src: local("Calibre Web Semibold"),local("CalibreWeb-Semibold"),url(/file/assets/fonts/CalibreWeb-Semibold.woff) format("woff");
+    src: local("Calibre Web Semibold"),local("CalibreWeb-Semibold"),url(fonts/CalibreWeb-Semibold.woff) format("woff");
 }
 
 @font-face {
     font-family: 'Calibre Web Semibold Italic';
-    src: local("Calibre Web Semibold Italic"),local("CalibreWeb-SemiboldItalic"),url(/file/assets/fonts/CalibreWeb-SemiboldItalic.woff) format("woff");
+    src: local("Calibre Web Semibold Italic"),local("CalibreWeb-SemiboldItalic"),url(fonts/CalibreWeb-SemiboldItalic.woff) format("woff");
 }
 
 @font-face {
     font-family: 'Calibre Web Thin';
-    src: local("Calibre Web Thin"),local("CalibreWeb-Thin"),url(/file/assets/fonts/CalibreWeb-Thin.woff) format("woff");
+    src: local("Calibre Web Thin"),local("CalibreWeb-Thin"),url(fonts/CalibreWeb-Thin.woff) format("woff");
 }
 
 @font-face {
     font-family: 'Calibre Web Thin Italic';
-    src: local("Calibre Web Thin Italic"),local("CalibreWeb-ThinItalic"),url(/file/assets/fonts/CalibreWeb-ThinItalic.woff) format("woff");
+    src: local("Calibre Web Thin Italic"),local("CalibreWeb-ThinItalic"),url(fonts/CalibreWeb-ThinItalic.woff) format("woff");
 }
 
 h1, h2, h3, h4, h5, h6 {

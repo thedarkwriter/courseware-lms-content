@@ -30,25 +30,32 @@ function timeline(times, slidename) {
   bind_times(times,slide);
 }
 
-function bind_audio(slide, player){
-  slide.bind("showoff:show", function(event){
-    player.currentTime = 0;
-    player.play();
-  });
-  slide.bind("showoff:prev", function (event) {
-    player.pause();
-  });
-  slide.bind("showoff:next", function (event) {
-    player.pause();
+function bind_audio(slide, player, pauseAtEndOfSlide = 1000){
+  player.addEventListener("loadeddata", function() {
+    slide.bind("showoff:show", function(event){
+      player.currentTime = 0;
+      player.play();
+      timers.push(setTimeout(function(){
+        nextStep()
+      },player.duration * 1000 + pauseAtEndOfSlide));
+    });
+    slide.bind("showoff:prev", function (event) {
+      player.pause();
+    });
+    slide.bind("showoff:next", function (event) {
+      player.pause();
+    });
   });
 }
 
 function audio(slidename){
   slide = $(".slide." + slidename);
   slide.append(`
-    <audio id="${slidename}">
-      <source src="file/audio/${slidename}.mp3" type="audio/mpeg">
+    <audio id="${slidename}" preload="auto">
+      <source src="file/_files/audio/${slidename}.mp3" type="audio/mpeg">
     </audio>`);
   player = $("#" + slidename)[0];
-  bind_audio(slide,player);
+
+  bind_audio(slide,player, 5000);
+  
 }

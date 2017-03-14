@@ -1,6 +1,7 @@
-!SLIDE[bg=assets/background.png] center inverse
+!SLIDE[bg=_images/background.png] center inverse
+<script type="text/javascript" src="file/_files/shared/timeline.js"></script>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-<link rel="stylesheet" href="/file/assets/slides.css">
+<link rel="stylesheet" href="file/_files/shared/slides.css">
 
 ## Relationships
 
@@ -20,26 +21,15 @@ timeline([2000,3000,4000,5000,6000,7000],"slide2")
 ~~~ENDDIV~~~
 ~~~DIV:container~~~
   ~~~DIV:col-xs-5~~~~~~DIV:parent~~~
-    ~~~DIV:time1 img1~~~
-      ![file](assets/resource_file.png)
-    ~~~ENDDIV~~~
-    ~~~DIV:time2 img2~~~
-      ![service](assets/resource_service.png)
-    ~~~ENDDIV~~~
-    ~~~DIV:time3 img3~~~
-      ![package](assets/resource_package.png)
-    ~~~ENDDIV~~~
+      ![.time1.img1 file](_images/resource_file.png)
+      ![.time2.img2 service](_images/resource_service.png)
+      ![.time3.img3 package](_images/resource_package.png)
   ~~~ENDDIV~~~~~~ENDDIV~~~
 
   ~~~DIV:col-xs-5~~~~~~DIV:parent~~~
-    ~~~DIV:time4 img2~~~
-      ![service](assets/resource_service.png)
-    ~~~ENDDIV~~~
-    ~~~DIV:time5 img3~~~
-      ![package](assets/resource_package.png)
-    ~~~ENDDIV~~~
-    ~~~DIV:time6 img1~~~
-      ![file](assets/resource_file.png)
+      ![.time4.img1 service](_images/resource_service.png)
+      ![.time5.img2 package](_images/resource_package.png)
+      ![.time6.img3 file](_images/resource_file.png)
     ~~~ENDDIV~~~
   ~~~ENDDIV~~~~~~ENDDIV~~~
 ~~~ENDDIV~~~
@@ -444,7 +434,7 @@ timeline([7750,13500,21000,25000,31000,39000],"slide15")
 
 
 
-!SLIDE[bg=assets/background.png] center inverse slide16
+!SLIDE[bg=_images/background.png] center inverse slide16
 <script> 
 audio("slide16")
 </script>
