@@ -1,9 +1,9 @@
 function timeline(times, slidename) {
   slide = $(".slide." + slidename);
   slide.bind("showoff:show", function (event) {
-    times.forEach(function(time) {
+    times.forEach(function(time,index) {
       setTimeout(function(){
-        increment();
+        $(".time" + (index + 1)).css('visibility', 'visible');
       },time);
     });
   });

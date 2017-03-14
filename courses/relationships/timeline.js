@@ -1,1 +1,1 @@
-../../timeline.js
+assets/timeline.js
