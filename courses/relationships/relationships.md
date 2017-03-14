@@ -19,7 +19,7 @@ timeline([2000,3000,4000,5000,6000,7000],"slide2")
 ## Service
 ~~~ENDDIV~~~
 ~~~DIV:container~~~
-  ~~~DIV:col-xs-6~~~~~~DIV:parent~~~
+  ~~~DIV:col-xs-5~~~~~~DIV:parent~~~
     ~~~DIV:time1 img1~~~
       ![file](assets/resource_file.png)
     ~~~ENDDIV~~~
@@ -31,7 +31,7 @@ timeline([2000,3000,4000,5000,6000,7000],"slide2")
     ~~~ENDDIV~~~
   ~~~ENDDIV~~~~~~ENDDIV~~~
 
-  ~~~DIV:col-xs-6~~~~~~DIV:parent~~~
+  ~~~DIV:col-xs-5~~~~~~DIV:parent~~~
     ~~~DIV:time4 img2~~~
       ![service](assets/resource_service.png)
     ~~~ENDDIV~~~
