@@ -91,6 +91,9 @@ p, div {
 .big {
   font-size: 2em;
 }
+.huge {
+  font-size: 4em;
+}
 .align-center {
   text-align: center;
 }
