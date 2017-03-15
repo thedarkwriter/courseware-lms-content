@@ -6,7 +6,7 @@ Automated testing is an essential part of creating solid, reliable Puppet code. 
 
 Imagine your tests like a series of sieves or filters trying to filter rocks and debris out of a pile of rocky soil. You'd want to start with a cheap sturdy filter to first remove the larges boulders. Below that, you'd have a finer screen to catch medium sized rocks and branches. After several layers you might have a very delicate fine mesh that would only let the good soil through. It might seem like a good idea to just have that final filter, after all it would catch boulders as well as pebbles, but that final stage is also the most expensive, the most delicate, and the slowest. It's best to be close to the finished product when you get to that stage.
 
-With testing puppet code, you can very quickly catch a large portion of bugs with minimal effort. With each layer of testing you'll focus on finer details. Since you've already caught the larger bugs, you don't need to cover such a large area, which is good because the tests become more complicated and slower with each level.
+With testing Puppet code, you can very quickly catch a large number of bugs with minimal effort. With each layer of testing you'll focus on finer details. Since you've already caught the larger bugs, you don't need to cover such a large area, which is good because the tests become more complicated and slower with each level.
 
 There are few different categories of tests that are relevant to Puppet:
 
@@ -19,11 +19,11 @@ There are few different categories of tests that are relevant to Puppet:
 
 Validating code for syntax and style is a good place to start with testing your Puppet code. The most basic syntax test can be run anytime from the command line. Just type `puppet parser validate` and then the name of a file or directory to be checked. This can be a good habit as you're working on code to make sure you haven't made any obvious typos. Since it's easy to forget this step, git users will often add this as a pre-commit hook for any `.pp` file. A pre-commit hook will run before changes are committed to source control, so it's a quick way to catch obvious errors. Search online for examples of how to do this, or [take a look at the code we use in instructor led trainings](https://github.com/puppetlabs/pltraining-classroom/blob/master/files/pre-commit). You can also use this method to add syntax validation for frequently used file types such as `epp` and `yaml`. Git hooks are scripts that are run automatically at various points in your git workflow, [more information is available in the official git documentation](https://git-scm.com/docs/githooks).
 
-To check your Puppet code style, [there is a gem called `puppet-lint`](http://puppet-lint.com/). Puppet lint goes beyond correct syntax and warns if code doesn't follow the recommended style conventions, it will catch things like trailing whitespace or if `"` quotation marks are used instead of `'` in a string without variable interpolation. Some people choose to add Puppet-lint to their pre-commit hooks along side `puppet parser validate` to help enforce good habits, but if you find it burdensome you can just run the command manually. If you'd rather not install the gem, you can use this [online Puppet code validator](https://validate.puppet.com/).
+To check your Puppet code style, [there is a gem called `puppet-lint`](http://puppet-lint.com/). Puppet-lint goes beyond correct syntax and warns if code doesn't follow the recommended style conventions. It will catch things like trailing whitespace or if `"` quotation marks are used instead of `'` in a string without variable interpolation. Some people choose to add puppet-lint to their pre-commit hooks along side `puppet parser validate` to help enforce good habits, but if you find it burdensome you can just run the command manually. If you'd rather not install the gem, you can use this [online Puppet code validator](https://validate.puppet.com/).
 
 ## Practice
 
-Try out some of these commands in the terminal to the right. First, run `puppet agent -t` to set up the example code. In the `/root` directory you'll find a file called `example.pp`. Using `puppet parser validate example.pp` find and resolve the syntax errors in the code. If you'd like, install the `puppet-lint` gem with `gem install puppet-lint` and use it to find any style issues.
+Try out some of these commands in the terminal to the right. First, run `puppet agent -t` to set up the example code. In the `/root` directory you'll find a file called `example.pp`. Using `puppet parser validate example.pp`, find and resolve the syntax errors in the code. If you'd like, install the `puppet-lint` gem with `gem install puppet-lint` and use it to find any style issues.
 
 ## Notes
 
@@ -31,9 +31,9 @@ In a later section, we'll look at how to incorporate these checks into your auto
 
 ## Unit tests
 
-Unit tests are short simple tests that form the first line of defense for your code. They are called unit tests because they are limited scope tests that focus on small units of code. Since Puppet was originally written in Ruby, unit tests are generally written in a variation of `rspec` called `rspec-puppet`, this can be installed as a gem on your development workstation. You should also install the `puppetlabs_spec_helper` gem, it provides a lot of helpful features for developing puppet tests.
+Unit tests are short simple tests that form the first line of defense for your code. They are called unit tests because they are limited scope tests that focus on small units of code. Since Puppet was originally written in Ruby, unit tests are generally written in a variation of `rspec` called `rspec-puppet` that can be installed as a gem on your development workstation. You should also install the `puppetlabs_spec_helper` gem, as it provides a lot of helpful features for developing puppet tests.
 
-Rspec syntax reads almost like natural language, once you're familiar with it you'll find it's easy to follow. For testing puppet code, a good first step is to check that your code will compile.
+Rspec syntax reads almost like natural language, and once you're familiar with it you'll find it's easy to follow. For testing Puppet code, a good first step is to check that your code will compile.
 
 For example, if you had a module to manage a webserver, you might have a class called `apache`. A minimal test for that class would be:
 
@@ -45,7 +45,7 @@ end
 
 You can provide more human readable output when your tests run by using the `context` keyword.
 
-For example, since we're just testing the `apache` class without parameters you could update test to look like this:
+For example, since we're just testing the `apache` class without parameters you could update the test to look like this:
 
 <pre>
 describe 'apache', :type => class do
@@ -71,7 +71,7 @@ describe 'apache', :type => class do
 end
 </code>
 
-If we ran that last test, it would run through both contexts and let us know if one of them didn't compile. This might seem redundant since you're already written the puppet code, but it can catch difficult to diagnose errors, especially once you move beyond just checking if the code compiles.
+If we ran that last test, it would run through both contexts and let us know if one of them didn't compile. This might seem redundant since you're already written the Puppet code, but it can catch difficult to diagnose errors, especially once you move beyond just checking if the code compiles.
 
 What if you'd actually named your parameter `doc_root` instead of `docroot`? It's a simple mistake that would be easy to miss even in a thorough peer code review. Since `doc_root` and `docroot` are both valid syntax and style for parameters, `puppet parser validate` and `puppet-lint` wouldn't catch the mistake. This is where unit tests really shine, once you've developed the habit of writing them alongside all of your code they'll offer a simple way to catch those errors before your code is even deployed to a testing environment. Although the syntax is correct, missing a required parameter or trying to set one that doesn't exist will cause a compilation error.
 
@@ -96,7 +96,7 @@ require 'puppetlabs_spec_helper/module_spec_helper'
 
 That file is where you can include helper methods and other details you'd like to include in your actual tests. The second `require` provides support for interacting with other modules.
 
-The `.fixtures.yaml` file is in YAML format, which is a very human readable format for structured data. [yaml.org has the complete documentation](https://yaml.org) but the format is fairly intuitive. For the context of specifying `.fixtures.yaml` the format is fairly simple. If your module depended on the `chocolatey` module and the `stdlib` module, your `.fixtures.yaml` might look like this:
+The `.fixtures.yaml` file is in YAML format, which is a very human readable format for structured data. [yaml.org has the complete documentation](https://yaml.org) but the format is fairly intuitive. For the context of specifying `.fixtures.yaml` the format is fairly simple. If your module depends on the `chocolatey` module and the `stdlib` module, your `.fixtures.yaml` might look like this:
 
 <pre>
 fixtures:
@@ -110,11 +110,11 @@ fixtures:
 
 One quick trick for finding all of your modules dependencies is to run `puppet module install <your-modulename> --modulepath=/tmp/folder` The Puppet module tool will resolve dependencies in your metadata.json, those modules dependencies, and so on. You can then get a list of all those modules using `puppet module list --modulepath=/tmp/folder`. Once you're done you can delete the folder.
 
-Notice that we're using both a github repo and a published forge module in that example. Depending on how you manage your code, you might need to specify different options. For the full syntax of `.fixtures.yml` look at the [puppetlabs_spec_helper documentation](https://github.com/puppetlabs/puppetlabs_spec_helper). For example, if you're working on an update that requires changes to two modules you could temporarily specify that dependency as coming from your own fork and branch. You should always use the simplest configuration that fits your needs, so it's generally best to keep fixtures pointed at published modules on the Puppet forge.
+Notice that we're using both a GitHub repository and a published Puppet forge module in that example. Depending on how you manage your code, you might need to specify different options. For the full syntax of `.fixtures.yml` look at the [puppetlabs_spec_helper documentation](https://github.com/puppetlabs/puppetlabs_spec_helper). For example, if you're working on an update that requires changes to two modules, you could temporarily specify that dependency as coming from your own fork and branch. You should always use the simplest configuration that fits your needs, so it's generally best to keep fixtures pointed at published modules on the Puppet Forge.
 
-Finally, you see that there is a section for `symlinks`, this is a way to tell `rspec-puppet` to use a local copy. In this case, it actually specifies the module we're testing. It sometimes makes sense to add more symlinks, but it's usually simpler to work with modules to the forge or source control. 
+Finally, you see that there is a section for `symlinks`, this is a way to tell `rspec-puppet` to use a local copy. In this case, it actually specifies the module we're testing. It sometimes makes sense to add more symlinks, but it's usually simpler to work with modules from the Puppet Forge or source control. 
 
-Once you have all of your pieces in place you'll need to add a little to your actual test code. For the example we've been working with, this would be in a file called `spec/classes/apache_spec.rb` just add the following line at the top before your tests:
+Once you have all of your pieces in place you'll need to add a little to your actual test code. For the example we've been working with, this would be in a file called `spec/classes/apache_spec.rb`. Add the following line at the top before your tests:
 <code>
 require 'spec_helper'
 </code>
@@ -125,7 +125,7 @@ That will pull in the code from `spec/spec_helper.rb`, which will deal with your
 
 ## Practice
 
-Take a look at the ssh module in `/root/puppetcode/modules`. The puppet code has some problems. Start by running the tests to find out what's wrong and fix it.
+Take a look at the ssh module in `/root/puppetcode/modules`. The Puppet code has some problems. Start by running the tests to find out what's wrong and fix it.
 
 ## Increasing coverage
 
@@ -200,11 +200,11 @@ Adding coverage is important, but remember to be realistic. There is little sens
 
 ## Integration tests
 
-Unit tests are made to test small units of code, integration tests focus on bringing those units together. In Puppet the line between unit tests and integration tests is a bit blurry. It's better to think of integration tests and unit tests as two ends of a spectrum, with integration tests focusing on the most complex behavior you expect from your module. To get started with integration testing, think of example usage code that you would include in the readme of your module or the example usage you've put in the examples directory. If you're regularly using the module in one particular way, be sure to include at least that configuration in your integration tests. You don't need to cover every possible use for your module, just focus your attention on common ones. If you're using resource types from other modules, that usage should be covered by your integration tests.
+Unit tests are made to test small units of code, integration tests focus on bringing those units together. In Puppet the line between unit tests and integration tests is a bit blurry. It's better to think of integration tests and unit tests as two ends of a spectrum, with integration tests focusing on the most complex behavior you expect from your module. To get started with integration testing, think of example usage code that you would include in the README of your module or the example usage you've put in the examples directory. If you're regularly using the module in one particular way, be sure to include at least that configuration in your integration tests. You don't need to cover every possible use for your module, just focus your attention on common ones. If you're using resource types from other modules, that usage should be covered by your integration tests.
 
 ## Test driven development
 
-You might be thinking that the syntax of those tests reads a bit like a specification of how the code should work. For example, you might specify that code by writing "An apache module that will install the apache package on RedHat and the httpd package on debian. It should also let you specify an alternate doc root." etc. One very powerful approach is to actually write the tests before writing any code at all. This is known as `Test Driven Development`.
+You might be thinking that the syntax of those tests reads a bit like a specification of how the code should work. For example, you might specify that code by writing "An apache module that will install the apache package on RedHat and the httpd package on Debian. It should also let you specify an alternate document root." etc. One very powerful approach is to actually write the tests before writing any code at all. This is known as `Test Driven Development`.
 
 Test driven development can help focus on the basic requirements before adding new features, it's also a great way to enforce the habit of testing all your code. If you're working in a team setting, one useful strategy is for different team members to write the tests and code.
 
@@ -212,23 +212,23 @@ For those who enjoy solving problems, test driven develop can also add an elemen
 
 ## Exercises
 
-We've provided a module with a few fully written tests and a few that only have comments describing the specification. None of the puppet code is written yet. Take a look at the tests and write some puppet code to make them pass.
+We've provided a module with a few fully written tests and a few that only have comments describing the specification. None of the Puppet code is written yet. Take a look at the tests and write some Puppet code to make them pass.
 
 ## Acceptance tests
 
-The last level of testing before the code is actually deployed is Acceptance tests. Acceptance tests go beyond just testing the compiled catalog and actually enforce the code being tested on a pre-production node or nodes. In our webserver example, this would mean running Puppet and then checking that a webserver is correctly installed and functioning. You might not realize it but you're probably already doing this kind of testing in some form, usually running code against a dev server or VM and manually checking the outcome.
+The last level of testing before the code is actually deployed is acceptance tests. Acceptance tests go beyond just testing the compiled catalog and actually enforce the code being tested on a pre-production node or nodes. In our webserver example, this would mean running Puppet and then checking that a webserver is correctly installed and functioning. You might not realize it but you're probably already doing this kind of testing in some form, usually running code against a dev server or VM and manually checking the outcome.
 
-At Puppet, we use an internally developed tool called Beaker for acceptance tests of puppet itself and for testing supported modules. Beaker can be used for writing tests of your own modules, but since you've already written some rspec, we recommend using `beaker-rspec` which allows you to use rspec style and syntax for your Beaker tests. You can even incorporate [serverspec](http://serverspec.org/) tests when using `beaker-rspec`.
+At Puppet, we use an internally developed tool called Beaker for acceptance tests of Puppet itself and for testing supported modules. Beaker can be used for writing tests of your own modules, but since you've already written some rspec, we recommend using `beaker-rspec` which allows you to use rspec style and syntax for your Beaker tests. You can even incorporate [serverspec](http://serverspec.org/) tests when using `beaker-rspec`.
 
-Acceptance tests are the most heavyweight; they require significant resources because they're testing the actual implementation of your puppet code, not just the compilation.. With that in mind, make sure you have adequate memory and CPU on your testing server. You'll also need to be able to run virtual machines on your testing server, for example using vagrant and virtualbox. Consider the resources currently allocated to your Puppet master node and any agent nodes you'd like to test in your acceptance tests and make sure you have adequate resources available to run equivalent virtual machines. This varies quite a bit, but a good starting place would be ~16GB of RAM and a Quad Core CPU.
+Acceptance tests are the most heavyweight; they require significant resources because they're testing the actual implementation of your Puppet code, not just the compilation. With that in mind, make sure you have adequate memory and CPU on your testing server. You'll also need to be able to run virtual machines on your testing server, for example using vagrant and virtualbox. Consider the resources currently allocated to your Puppet master node and any agent nodes you'd like to test in your acceptance tests and make sure you have adequate resources available to run equivalent virtual machines. This varies quite a bit, but a good starting place would be ~16GB of RAM and a Quad Core CPU.
 
-To get started with Acceptance tests, follow the instructions in [the README.md from the beaker-rspec github repository](https://github.com/puppetlabs/beaker-rspec/blob/master/README.md).
+To get started with acceptance tests, follow the instructions in [the README.md from the beaker-rspec github repository](https://github.com/puppetlabs/beaker-rspec/blob/master/README.md).
 
 
 ## Conclusion
 
-A comprehensive suite of tests for your Puppet code can offer tremendous peace of mind and free up your team to move more quickly. As your code base becomes more complex tests become even more important. Although tests take time to write, investing that time now will pay off in a fewer emergencies in the future.
+A comprehensive suite of tests for your Puppet code can offer tremendous peace of mind and free up your team to move more quickly. As your code base becomes more complex, tests become even more important. Although tests take time to write, investing that time now will pay off in a fewer emergencies in the future.
 
 ## References
 
-The supported and approved Puppet Forge modules are a great place to look for examples code. The `puppetlabs-apache` module has [an extensive set of Acceptance tests](https://github.com/puppetlabs/puppetlabs-apache/tree/master/spec/acceptance).
+The supported and approved Puppet Forge modules are a great place to look for example code. The `puppetlabs-apache` module has [an extensive set of acceptance tests](https://github.com/puppetlabs/puppetlabs-apache/tree/master/spec/acceptance).
