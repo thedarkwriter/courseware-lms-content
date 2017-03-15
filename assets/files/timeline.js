@@ -49,15 +49,13 @@ function bind_audio(slide, player, repeat, pause, countdown, pauseAtEndOfSlide =
       });
       pause.click(function(){
         player.pause();
-        clearAllTimers(timers);
-        clearInterval(countdownTimer);
       });
     });
     slide.bind("showoff:prev", function (event) {
-      player.pause();
+      pause.trigger("click")
     });
     slide.bind("showoff:next", function (event) {
-      player.pause();
+      pause.trigger("click")
     });
   });
 }
@@ -89,13 +87,13 @@ function audio(slidename){
 
 /* Shorten element over a duration by % */
 function startTimer(duration, display) {
-  var tick = 100 / duration
-  var timer = duration * tick
+  var tick = (100 / duration) / 100
+  var timer = duration * tick * 100
   return setInterval(function () {
     display.attr("width", (100 - timer) + "%");
     timer = timer - tick
     if (timer < 0) {
         timer = duration;
     }
-  }, 1000);
+  }, 10);
 }
