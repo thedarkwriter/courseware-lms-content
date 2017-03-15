@@ -7,6 +7,7 @@ function clearAllTimers(t){
   timers = []
 }
 
+/* Trigger timing events on a particular slide's events */
 function bind_times(times,slide){
   slide.bind("showoff:show", function (event) {
     clearAllTimers(timers);
@@ -25,11 +26,13 @@ function bind_times(times,slide){
   });
 }
 
+/* Add timing events to a slide */
 function timeline(times, slidename) {
   slide = $(".slide." + slidename);
   bind_times(times,slide);
 }
 
+/* Trigger audio events on a slide's events */
 function bind_audio(slide, player, pauseAtEndOfSlide = 1000){
   player.addEventListener("loadeddata", function() {
     slide.bind("showoff:show", function(event){
@@ -48,6 +51,9 @@ function bind_audio(slide, player, pauseAtEndOfSlide = 1000){
   });
 }
 
+/* Attach audio to a slide 
+ * Assumes there is a audio directory with mp3 files
+ * matching each slide class name*/
 function audio(slidename){
   slide = $(".slide." + slidename);
   slide.append(`
@@ -57,5 +63,4 @@ function audio(slidename){
   player = $("#" + slidename)[0];
 
   bind_audio(slide,player, 5000);
-  
 }
