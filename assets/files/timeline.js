@@ -33,7 +33,7 @@ function timeline(times, slidename) {
 }
 
 /* Trigger audio events on a slide's events */
-function bind_audio(slide, player, play, stop, countdown, pauseAtEndOfSlide = 1000){
+function bind_audio(slide, player, repeat, pause, countdown, pauseAtEndOfSlide = 1000){
   player.addEventListener("loadeddata", function() {
     slide.bind("showoff:show", function(event){
       timeRemaining = player.duration * 1000 + pauseAtEndOfSlide;
@@ -44,10 +44,10 @@ function bind_audio(slide, player, play, stop, countdown, pauseAtEndOfSlide = 10
         nextStep()
       },timeRemaining);
       timers.push(countdownTimeout);
-      play.click(function(){
+      repeat.click(function(){
         slide.trigger("showoff:show");
       });
-      stop.click(function(){
+      pause.click(function(){
         player.pause();
         clearAllTimers(timers);
         clearInterval(countdownTimer);
@@ -74,26 +74,25 @@ function audio(slidename){
   player = $("#" + slidename)[0];
 	slide.append(`
     <div class="countdown" width="100%">
-      <i class="fa fa-play" aria-hidden="true"></i>
-      <i class="fa fa-stop" aria-hidden="true"></i>
+      <i class="fa fa-repeat fa-fw" aria-hidden="true"></i>
+      <i class="fa fa-pause fa-fw" aria-hidden="true"></i>
       <svg class="countdown-timer" width="90%" height="10">
-        <rect width="100%" height="10"/>
+        <rect width="0%" height="10"/>
       </svg>
     </div>`);
-  play = slide.find(".countdown > .fa-play");
-  stop = slide.find(".countdown > .fa-stop");
-  countdown = slide.find(".countdown-timer");
+  repeat = slide.find(".countdown > .fa-repeat");
+  pause = slide.find(".countdown > .fa-pause");
+  countdown = slide.find(".countdown-timer > rect");
 
-  bind_audio(slide,player,play,stop,countdown,5000);
+  bind_audio(slide,player,repeat,pause,countdown,5000);
 }
 
 /* Shorten element over a duration by % */
 function startTimer(duration, display) {
-  var tick = 90 / duration
+  var tick = 100 / duration
   var timer = duration * tick
   return setInterval(function () {
-    display.attr("x", (90 - timer) + "%");
-    display.attr("width", timer + "%");
+    display.attr("width", (100 - timer) + "%");
     timer = timer - tick
     if (timer < 0) {
         timer = duration;
