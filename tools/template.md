@@ -4,18 +4,24 @@ Put your content in between the comments that mark
 out the different sections.  Text should be written
 in markdown.
 -->
-    
 
-<link rel="stylesheet" href="/static/selfpaced/selfpaced.css" markdown="1">
-<script src="https://try.puppet.com/js/selfpaced.js" markdown="1"></script>
 
-<div id="lesson" markdown="1">
-<div id="instructions" markdown="1">
-<div class="instruction-header" markdown="1">
-<i class="fa fa-graduation-cap" markdown="1"></i>
+<link rel="stylesheet" href="/static/selfpaced/selfpaced.css" />
+
+<script defer="" src="//code.jquery.com/jquery-1.11.2.js"></script>
+
+<script defer="" src="https://try.puppet.com/js/selfpaced.js"></script>
+
+<div id="lesson">
+
+<div id="instructions">
+
+<div class="instruction-header">
+<i class="fa fa-graduation-cap"></i>
 Lesson
 </div>
-<div class="instruction-content" markdown="1">
+<div class="instruction-content">
+
 <!-- Primary Text of the lesson -->
 <!-------------------------------->
 
@@ -24,12 +30,15 @@ Lesson
 
 
 <!-- End of primary test of the lesson -->
+
 </div>
-<div class="instruction-header" markdown="1">
+<div class="instruction-header">
 <i class="fa fa-desktop"></i>
 Practice
 </div>
-<div class="instruction-content" markdown="1">
+
+<div class="instruction-content">
+
 <!-- High level description of the exercise. -->
 <!-------------------------------------------->
 
@@ -38,12 +47,16 @@ Practice
 
 
 <!-- End of high level description. -->
+
+
 </div>
-<div class="instruction-header" markdown="1">
+
+<div class="instruction-header">
 <i class="fa fa-square-check-o"></i>
 Instructions
 </div>
-<div class="instruction-content" markdown="1">
+
+<div class="instruction-content">
 <!-- Step by step instructions -->
 <!-------------------------------->
 
@@ -53,14 +66,14 @@ Instructions
 
 
 <!-- End of step by step instruction -->
+
 </div>
 
-<div class="instruction-header" markdown="1">
+<div class="instruction-header">
 <i class="fa fa-pencil"></i>
 Notes
 </div>
-
-<div class="instruction-content" markdown="1">
+<div class="instruction-content">
 
 <!-- Other notes -->
 <!-------------------->
@@ -70,10 +83,12 @@ machine will shut down automatically when you're done.
 
 
 <!-- End of notes section -->
-</div>
-<a href="https://try.puppet.com/sandbox/" class="btn btn-default" target="terminal">Start Practice Session</a>
-</div>
-<div id="terminal" markdown="1">
-  <iframe name="terminal"></iframe>
+
 </div>
 </div>
+
+<div id="terminal">
+<iframe id="try" src="https://try.puppet.com/sandbox/?course=COURSENAME" name="terminal"></iframe>
+</div>
+</div>
+
