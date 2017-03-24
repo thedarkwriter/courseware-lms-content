@@ -4,7 +4,12 @@
 
 <script defer="" src="https://try.puppet.com/js/selfpaced.js"></script>
 
-<div markdown="1">
+<div markdown="1" id="instructions">
+<div markdown="1" class="instruction-header">
+<i class="fa fa-graduation-cap"></i>
+Lesson
+</div>
+<div markdown="1" class="instruction-content">
 ## Testing Puppet code
 
 Automated testing is an essential part of creating solid, reliable Puppet code. Developing tests for Puppet code does not need to be a burden, but it can be difficult to know where to start.
@@ -28,5 +33,6 @@ There are few different categories of tests that are relevant to Puppet:
 
 In this course, you'll learn about the different kinds of tests, the basics of testing Puppet code, how you can get started with testing, and how testing can enable you to move faster in development with less risk.
 
+</div>
 </div>
 

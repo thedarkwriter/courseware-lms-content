@@ -127,7 +127,7 @@ You don't need to cover every possible use for your module, just focus your atte
 
 You might be thinking that the syntax of those tests reads a bit like a specification of how the code should work. For example, you might specify that code by writing "An apache module that will install the apache package on RedHat and the httpd package on Debian. It should also let you specify an alternate document root." etc.
 
-One very powerful approach is to actually write the tests before writing any code at all. This is known as `Test Driven Development`.
+One very powerful approach is to actually write the tests before writing any code at all. This is known as "Test Driven Development".
 
 Test driven development can help focus on the basic requirements before adding new features, it's also a great way to enforce the habit of testing all your code. If you're working in a team setting, one useful strategy is for different team members to write the tests and code.
 

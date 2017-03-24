@@ -122,9 +122,22 @@ fixtures:
 </code>
 </pre>
 
-One quick trick for finding all of your modules dependencies is to run `puppet module install [your-modulename] --modulepath=/tmp/folder`
+One quick trick for finding all of your modules dependencies is to run
+<pre>
+<code>
+puppet module install [your-modulename] --modulepath=/tmp/folder
+</code>
+</pre>
 
-The Puppet module tool will resolve dependencies in your metadata.json, those modules dependencies, and so on. You can then get a list of all those modules using `puppet module list --modulepath=/tmp/folder`. Once you're done you can delete the folder.
+The Puppet module tool will resolve dependencies in your metadata.json, those modules dependencies, and so on. You can then get a list of all those modules using
+
+<pre>
+<code>
+puppet module list --modulepath=/tmp/folder
+</code>
+</pre>
+
+Once you're done you can delete the folder.
 
 Notice that we're using both a GitHub repository and a published Puppet forge module in that example. Depending on how you manage your code, you might need to specify different options. For the full syntax of `.fixtures.yml` look at the [puppetlabs_spec_helper documentation](https://github.com/puppetlabs/puppetlabs_spec_helper). For example, if you're working on an update that requires changes to two modules, you could temporarily specify that dependency as coming from your own fork and branch.
 

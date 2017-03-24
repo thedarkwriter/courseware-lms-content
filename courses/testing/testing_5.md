@@ -12,7 +12,12 @@ in markdown.
 
 <script defer="" src="https://try.puppet.com/js/selfpaced.js"></script>
 
-<div markdown="1" >
+<div markdown="1" id="instructions" >
+<div markdown="1" class="instruction-header">
+<i class="fa fa-graduation-cap"></i>
+Lesson
+</div>
+<div markdown="1" class="instruction-content" >
 
 ## Acceptance tests
 
@@ -32,4 +37,5 @@ Consider the resources currently allocated to your Puppet master node and any ag
 
 To get started with acceptance tests, follow the instructions in [the README.md from the beaker-rspec github repository](https://github.com/puppetlabs/beaker-rspec/blob/master/README.md).
 
+</div>
 </div>
