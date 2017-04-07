@@ -15,9 +15,9 @@ Lesson
 # The Exec Resource
 The Puppet exec resource allows you to execute a command directly using Puppet. It is the most versatile resource because it can do anything that the underlying operating system can do. That versatility makes it tempting to use, but the exec should really only be used as a last resort. If there isn't a built in resource type that does what you need, there is often one provided by a module on the forge. Before writing an exec, always check the forge.
 
-To learn to use the exec resource properly, it's important to begin with the idea of desired state. Imagine you have a script called `webuser` that manages users for a web app and it can't be easily replaced with Puppet code because it contains some complex business logic. The hypothetical `webuser` script has a couple of command line options: `webuser add <username>` creates a new user, `webuser check <username>` returns info about that user or an error if your user dosn't exist, and `webuser del <username>` deletes the user.
+To learn to use the exec resource properly, it's important to begin with the idea of desired state. Imagine you have a script called `webuser` that manages users for a web app and it can't be easily replaced with Puppet code because it contains some complex business logic. The hypothetical `webuser` script has a couple of command line options: `webuser add <username>` creates a new user, `webuser check <username>` returns info about that user or an error if your user doesn't exist, and `webuser del <username>` deletes the user.
 
-If you wanted to write puppet code to create a user with that script, you'd first think of the desired state, i.e. the user exists. How would you know the user exists? The `webuser check` command returns information and an exit code of 0.  The exec resource has two parmeters for defining this: `unless` and `onlyif`. For creating a user, we want the exec to run `unless` the `webuser check username` command returns a user. So the exec resource would look something like this:
+If you wanted to write puppet code to create a user with that script, you'd first think of the desired state, i.e. the user exists. How would you know the user exists? The `webuser check` command returns information and an exit code of 0.  The exec resource has two parameters for defining this: `unless` and `onlyif`. For creating a user, we want the exec to run `unless` the `webuser check username` command returns a user. So the exec resource would look something like this:
 
 <pre>
 exec {'webuser add bob':
@@ -30,7 +30,7 @@ exec {'webuser add bob':
 
 Because we started thinking about this from the desired state and included that logic in the exec, this code is idempotent. This means you can run it multiple times and it will only attempt to create the user once.
 
-The same thing could be done for deleting the user this time using the `onlyif` prameter:
+The same thing could be done for deleting the user this time using the `onlyif` parameters:
 <pre>
 exec {'webuser del bob':
   onlyif => 'webuser check bob',
@@ -44,11 +44,11 @@ The `creates` parameter is a third option. If the file referenced by `creates` d
 
 Every exec resource should have one of these parameters to check the desired start so the exec isn't run unless it's needed.
 
-Sometimes, it isn't possible to check the desired state, for example if our webapp had a `webupdate` command that needed to be run when a config file had changed. We don't have a simple way of checking the desired state in that case. You can still prevent the exec from triggering on every Puppet run by using the `refreshonly` parameter. If the `refreshonly` parameter is set to `true` the exec command will only run if it has a `notify` or `subscribe` relationship with another resource. That is, the exec will only run if it has another resource specificed in the `subscribe` parameter, or if another resource has a `notify` directed at the exec.
+Sometimes, it isn't possible to check the desired state, for example if our webapp had a `webupdate` command that needed to be run when a config file had changed. We don't have a simple way of checking the desired state in that case. You can still prevent the exec from triggering on every Puppet run by using the `refreshonly` parameter. If the `refreshonly` parameter is set to `true` the exec command will only run if it has a `notify` or `subscribe` relationship with another resource. That is, the exec will only run if it has another resource specified in the `subscribe` parameter, or if another resource has a `notify` directed at the exec.
 
 For example:
 <pre>
-file {'/etc/webapp/settings.conf':
+file {'/etc/webapp/settings.cony':
   source => 'puppet:///webapp/settings.conf',
 }
 exec {'webupdate':
