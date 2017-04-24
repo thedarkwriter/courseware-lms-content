@@ -1,0 +1,9 @@
+{
+  "name": "forge",
+  "sections": [
+      "intro_to_the_forge.md"
+  ],
+  "feedback": false,
+  "markdown": "commonmarker",
+  "parser": "v2"
+}
