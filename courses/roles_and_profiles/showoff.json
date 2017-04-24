@@ -1,0 +1,9 @@
+{
+  "name": "roles and profiles",
+  "sections": [
+      "roles_and_profiles.md"
+  ],
+  "feedback": false,
+  "markdown": "commonmarker",
+  "parser": "v2"
+}
