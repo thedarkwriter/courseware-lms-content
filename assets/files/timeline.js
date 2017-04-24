@@ -70,19 +70,11 @@ function audio(slidename){
       <source src="file/_files/audio/${slidename}.mp3" type="audio/mpeg">
     </audio>`);
   player = $("#" + slidename)[0];
-	slide.append(`
-    <div class="countdown" width="100%">
-      <i class="fa fa-repeat fa-fw" aria-hidden="true"></i>
-      <i class="fa fa-pause fa-fw" aria-hidden="true"></i>
-      <svg class="countdown-timer" width="90%" height="10">
-        <rect width="0%" height="10"/>
-      </svg>
-    </div>`);
   repeat = slide.find(".countdown > .fa-repeat");
   pause = slide.find(".countdown > .fa-pause");
   countdown = slide.find(".countdown-timer > rect");
 
-  bind_audio(slide,player,repeat,pause,countdown,5000);
+  bind_audio(slide,player,repeat,pause,countdown,3000);
 }
 
 /* Shorten element over a duration by % */
