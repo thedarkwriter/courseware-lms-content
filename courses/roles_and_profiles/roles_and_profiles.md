@@ -74,3 +74,254 @@ audio("slide3")
 .break
 
 </div>
+
+!SLIDE slide4
+<script> 
+audio("slide4")
+</script>
+
+# One node has many classes
+
+![One node connected to several classes](_images/node-many-classes.png)
+
+!SLIDE slide5
+<script> 
+audio("slide5")
+</script>
+
+# Classification
+
+## Many nodes = tangled mess
+![Multiple nodes connected to several classes](_images/nodes-many-classes.png)
+
+!SLIDE slide6
+<script> 
+audio("slide6")
+</script>
+
+![Complex graph showing multiple dependencies](_images/network-diagram-1.jpg)
+
+!SLIDE slide7
+<script> 
+audio("slide7")
+timeline([17000,19250,25000],"slide7")
+</script>
+
+# The Puppet Advantage
+
+<div class="time1">
+
+## But, this WILL happen:
+
+</div>
+<div class="time2 col-offset-2 col-10">
+
+## BOSS: “Can you make another development tier for the devs?
+
+</div>
+<div class="time3 col-offset-2 col-10">
+
+## Just like production, but different.”
+
+</div>
+
+!SLIDE slide8 full
+<script> 
+audio("slide8")
+timeline([2600,3400],"slide8")
+</script>
+
+# Dev vs. Prod
+
+<div class="row full align-items-center">
+<div class="time1 col">
+
+    @@@ Puppet
+    node ‘hera.example.com’ {
+      include network
+      include users
+      include apache
+      include mysql
+      include memcache
+      include jdk
+      include tomcat
+      class { ‘php’:
+        loglevel => ‘debug’,
+      }
+    }
+
+.break
+
+</div>
+<div class="time2 col">
+
+    @@@ Puppet
+    node ‘zeus.example.com’ {
+      include network
+      include users
+      include apache
+      include php
+      include memcache
+      include jdk
+      include tomcat
+    }
+
+.break
+
+</div>
+
+!SLIDE slide9
+<script> 
+audio("slide9")
+</script>
+
+![Complex graph showing multiple dependencies](_images/network-diagram-1.jpg)
+
+!SLIDE slide10 full
+<script> 
+audio("slide10")
+timeline([7000,8000,9000,10000,12000,13000,14000],"slide10")
+</script>
+
+# Roles & Profiles
+
+<div class="center">
+<div class="h1 mb-5">
+
+Bringing clarity to chaos.
+
+</div>
+
+<div class="row">
+<div class="time1 col">
+
+## Puppet
+
+</div>
+<div class="time2 col">
+
+[fa-arrow-right]
+
+</div>
+<div class="time3 col">
+
+## Profile
+
+</div>
+<div class="time4 col"> [fa-arrow-right]
+
+</div>
+<div class="time5 col">
+
+## Roles
+
+</div>
+<div class="time6 col">
+
+[fa-arrow-right]
+
+</div>
+<div class="time7 col">
+
+## Nodes
+
+</div>
+</div>
+</div>
+
+!SLIDE slide11
+<script>
+audio("slide11")
+timeline([3000,5000,6000,7000,8000],"slide11")
+</script>
+
+# Roles & Profiles
+
+<div class="time1">
+
+## Don't overthink it.
+</div>
+
+<ul>
+<li class="time2">
+
+## Roles & Profiles are just modules.
+
+</li>
+<li class="time3">
+
+## They are written in a specific way.
+
+</li>
+<li class="time4">
+
+## They fulfill specific purposes.
+
+</li>
+<li class="time5">
+
+## They help to promote clarity & reusability.
+
+</li>
+
+!SLIDE slide12
+<script>
+audio("slide12")
+timeline([3000],"slide12")
+</script>
+
+# Roles: Structure
+
+<div>
+
+    @@@ render-diagram
+    graph TD
+    role(role)--> role_web(role::webserver)
+    role(role) --> role_db(role::dbserver)
+    role(role) --> role_mail(role::mailserver)
+
+.break
+
+</div>
+!SLIDE slide13
+<script>
+audio("slide13")
+timeline([12000,14000],"slide13")
+</script>
+
+# Roles: Classification
+<div class="container">
+<div class="row">
+<div class="col">
+
+    @@@ Puppet
+    node ‘ares.example.com’ {
+      include role::dbserver
+    }
+    node ‘zeus.example.com’ {
+      include role::webserver
+    }
+    node ‘hera.example.com’ {
+      include role::webdbserver
+    }
+    node ‘hermes.example.com’ {
+      include role::webmail
+    }
+
+.break
+
+</div>
+<div class="col">
+<div class="time1">
+
+[fa-arrow-left fa-3x]
+
+</div>
+<div class="time2">
+
+[fa-arrow-left fa-3x]
+
+</div>
+</div>
+</div>
+</div>
