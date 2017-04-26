@@ -82,7 +82,7 @@ function audio(slidename){
   pause = slide.find(".countdown > .fa-pause");
   countdown = slide.find(".countdown-timer > rect");
 
-  bind_audio(slide,player,repeat,pause,countdown,5000);
+  bind_audio(slide,player,repeat,pause,countdown);
 }
 
 /* Shorten element over a duration by % */

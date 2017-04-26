@@ -10,7 +10,7 @@
 
 ## Roles and Profiles
 
-!SLIDE slide1 full
+!SLIDE slide1
 <script> 
 audio("slide1")
 timeline([3500,9750],"slide1")
@@ -18,8 +18,11 @@ timeline([3500,9750],"slide1")
 
 # Roles and Profiles
 
-<div class="row full align-items-center">
-<div class="time1 col offset-2">
+<div class="container-fluid">
+<div class="row m-5 p-5">
+</div>
+<div class="row mt-5 pt-5">
+<div class="time1 col offset-1">
 
 ## Where we're headed
 
@@ -28,6 +31,7 @@ timeline([3500,9750],"slide1")
 
 ## Where we've been
 
+</div>
 </div>
 </div>
 
@@ -47,6 +51,7 @@ audio("slide3")
 
 # Classification in site.pp
 
+<div class="container-fluid">
 <div class="row full align-items-center">
 <div class="col">
 
@@ -73,6 +78,7 @@ audio("slide3")
 
 .break
 
+</div>
 </div>
 
 !SLIDE slide4
@@ -133,7 +139,8 @@ timeline([2600,3400],"slide8")
 
 # Dev vs. Prod
 
-<div class="row full align-items-center">
+<div class="container-fluid">
+<div class="row">
 <div class="time1 col">
 
     @@@ Puppet
@@ -168,6 +175,7 @@ timeline([2600,3400],"slide8")
 
 .break
 
+</div>
 </div>
 
 !SLIDE slide9
@@ -272,7 +280,8 @@ timeline([3000],"slide12")
 
 # Roles: Structure
 
-<div>
+<div class="container-fluid justify-content-center">
+<div class="offset-1">
 
     @@@ render-diagram
     graph TD
@@ -283,6 +292,7 @@ timeline([3000],"slide12")
 .break
 
 </div>
+</div>
 !SLIDE slide13
 <script>
 audio("slide13")
@@ -290,9 +300,9 @@ timeline([12000,14000],"slide13")
 </script>
 
 # Roles: Classification
-<div class="container">
+<div class="container-fluid">
 <div class="row">
-<div class="col">
+<div class="col offset-3">
 
     @@@ Puppet
     node ‘ares.example.com’ {
@@ -329,52 +339,33 @@ timeline([12000,14000],"slide13")
 !SLIDE slide14 full
 <script>
 audio("slide14")
-</script>
-
-# Roles structure: Basic role
-
-<div class="container">
-
-    @@@ Puppet col-6 col-offset4
-    class role {
-      include profile::base
-    }
-
-.break
-
-</div>
-
-!SLIDE slide15 full
-<script>
-audio("slide15")
-timeline([10000,14000,15000],"slide15")
+timeline([10000,14000,15000],"slide14")
 </script>
 
 # Classification
 
-<div class="col">
-</div>
-<div class="col-1">
-</div>
+<div class="container">
+<div class="row justify-content-center">
 <div class="col">
 
-![Icon representing a node](_images/node.png)
+![One role assigned to multiple nodes](_images/role_to_nodes.svg)
 
 </div>
+</div>
 
-!SLIDE slide16
+!SLIDE slide15
 <script>
-audio("slide16")
+audio("slide15")
 </script>
 
 # Profiles: Wireframing
 
 ![One node connected to several classes](_images/node-many-classes.svg)
 
-!SLIDE slide17
+!SLIDE slide16
 <script>
-audio("slide17")
-timeline([7500],"slide17")
+audio("slide16")
+timeline([7500],"slide16")
 </script>
 
 # Profiles: Wireframing
@@ -401,9 +392,9 @@ timeline([7500],"slide17")
 </div>
 </div>
 
-!SLIDE slide18
+!SLIDE slide17
 <script>
-audio("slide18")
+audio("slide17")
 </script>
 
 # Profiles: Wireframing
@@ -446,9 +437,9 @@ audio("slide18")
 </div>
 </div>
 
-!SLIDE slide19
+!SLIDE slide18
 <script>
-audio("slide19")
+audio("slide18")
 </script>
 
 # Profiles: Round up
@@ -473,9 +464,9 @@ audio("slide19")
 </div>
 </div>
 
-!SLIDE slide20
+!SLIDE slide19
 <script>
-audio("slide20")
+audio("slide19")
 </script>
 
 # Summary
