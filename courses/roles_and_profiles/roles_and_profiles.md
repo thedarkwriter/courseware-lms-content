@@ -82,7 +82,7 @@ audio("slide4")
 
 # One node has many classes
 
-![One node connected to several classes](_images/node-many-classes.png)
+![One node connected to several classes](_images/node-many-classes.svg)
 
 !SLIDE slide5
 <script> 
@@ -92,7 +92,7 @@ audio("slide5")
 # Classification
 
 ## Many nodes = tangled mess
-![Multiple nodes connected to several classes](_images/nodes-many-classes.png)
+![Multiple nodes connected to several classes](_images/node-many-classes2.svg)
 
 !SLIDE slide6
 <script> 
@@ -325,3 +325,159 @@ timeline([12000,14000],"slide13")
 </div>
 </div>
 </div>
+
+!SLIDE slide14 full
+<script>
+audio("slide14")
+</script>
+
+# Roles structure: Basic role
+
+<div class="container">
+
+    @@@ Puppet col-6 col-offset4
+    class role {
+      include profile::base
+    }
+
+.break
+
+</div>
+
+!SLIDE slide15 full
+<script>
+audio("slide15")
+timeline([10000,14000,15000],"slide15")
+</script>
+
+# Classification
+
+<div class="col">
+</div>
+<div class="col-1">
+</div>
+<div class="col">
+
+![Icon representing a node](_images/node.png)
+
+</div>
+
+!SLIDE slide16
+<script>
+audio("slide16")
+</script>
+
+# Profiles: Wireframing
+
+![One node connected to several classes](_images/node-many-classes.svg)
+
+!SLIDE slide17
+<script>
+audio("slide17")
+timeline([7500],"slide17")
+</script>
+
+# Profiles: Wireframing
+
+<div class="container-fluid">
+<div class="row align-items-center">
+
+    @@@ Puppet
+    class profile::web {
+      include apache
+      include php
+      include tomcat
+      include jdk
+      include memcache
+    }
+
+.break
+
+<div class="col time1">
+
+![One profile connected to several classes](_images/profile.svg)
+
+</div>
+</div>
+</div>
+
+!SLIDE slide18
+<script>
+audio("slide18")
+</script>
+
+# Profiles: Wireframing
+
+<div class="container-fluid align-items-center">
+<div class="row align-items-center">
+<div class="col-5">
+
+    @@@ Puppet
+    class profile::base {
+      include network
+      include users
+    }
+
+.break
+
+</div>
+<div class="col-7">
+
+![Base profile connected to several classes](_images/profile_base.svg)
+
+</div>
+</div>
+
+<div class="row align-items-center">
+<div class="col-5">
+
+    @@@ Puppet
+    class profile::db {
+      include mysql
+    }
+
+.break
+
+</div>
+<div class="col-7">
+
+![DB profile connected to a single class](_images/profile_db.svg)
+
+</div>
+</div>
+
+!SLIDE slide19
+<script>
+audio("slide19")
+</script>
+
+# Profiles: Round up
+
+<div class="container-fluid">
+<div class="row">
+<div class="col">
+
+![DB profile connected to a single class](_images/profile_db.svg)
+
+![Mail profile connected to a single class](_images/profile_mail.svg)
+
+![Base profile connected to several classes](_images/profile_base.svg)
+
+</div>
+<div class="col">
+
+![Profile connected to several classes](_images/profile.svg)
+
+</div>
+
+</div>
+</div>
+
+!SLIDE slide20
+<script>
+audio("slide20")
+</script>
+
+# Summary
+
+![Three nodes connected to one role, which is connected to two classes, which connect to classes](_images/roles_profiles.svg)
