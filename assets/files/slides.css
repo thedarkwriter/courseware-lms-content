@@ -1,0 +1,529 @@
+.left {
+  float: left;
+  width: 50%;
+}
+.left25 {
+  float: left;
+  width: 25%;
+}
+.right {
+  float: right;
+  width: auto;
+}
+.big {
+  font-size: 2em;
+}
+.huge {
+  font-size: 4em;
+}
+.align-center {
+  text-align: center;
+}
+.countdown-timer {
+  position: fixed;
+  bottom: 10px;
+  right: 0;
+}
+.countdown {
+  position: fixed;
+  bottom: 0;
+  left: 10px;
+}
+
+/* Hide elements that have timeX class, so they can be revealed in order */
+[class^="time"] {
+  visibility: hidden;
+}
+
+/* Overlay transparent images */
+.parent {
+  position: relative;
+}
+.img1 {
+  top: 0;
+  left: 0;
+  z-index: 1
+}
+.img2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2
+}
+.img3 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 3
+}
+
+
+/* General styling */
+code {
+  font-family: 'Droid Sans Mono', 'Andale Mono', Monaco, Consolas, 'Lucida Console', monospace;
+  color: rgb(51,51,51);
+  backgroud-color: #ededed;
+  font-size: .8em;
+}
+
+pre {
+  font-size: .9em;
+}
+
+.content {
+  font-family: "Calibre Web Regular",Helvetica,Tahoma,Arial,sans-serif;
+}
+
+.content a {
+  color: #ffae1a;
+}
+
+.content h1 {
+  padding-bottom: 12px;
+}
+
+.content h1:first-child {
+  font-weight: 600;
+}
+
+.content strong,
+.content h4,
+#preview .correct {
+  font-weight: 600;
+}
+
+.comparison h4 {
+  margin: 4px 8px;
+}
+/* End general styling */
+
+/* icons as backgrounds */
+/* .checkpoint is applied to both .slide and .content levels
+   Icons are positioned on the .slide.checkpoint because it has a consistent height */
+.slide.checkpoint {
+  background-repeat: no-repeat;
+  background-position: 50% 6em;
+  background-size: 10em;
+}
+
+.slide.checkpoint h1:not(.section_title) {
+  margin-bottom: 7em;
+}
+.slide.checkpoint.corner h1:not(.section_title) {
+  margin-bottom: auto; /* wkhtmltopdf doesn't like value 'unset' and IE can't handle 'initial' */
+}
+
+.slide.checkpoint.corner {
+  background-position: 99% 1%;
+  background-size: 3em;
+}
+
+.slide.checkpoint.quiz {       background-image: url('_images/shared/icons/full/quiz.png'); }
+.slide.checkpoint.exercise {   background-image: url('_images/shared/icons/full/exercise.png'); }
+.slide.checkpoint.workshop {   background-image: url('_images/shared/icons/full/workshop.png'); }
+.slide.checkpoint.review {     background-image: url('_images/shared/icons/full/review.png'); }
+.slide.checkpoint.lab {        background-image: url('_images/shared/icons/terminal_amber.png'); }
+.slide.checkpoint.discussion { background-image: url('_images/shared/icons/discussion_amber.png'); }
+.slide.checkpoint.demo {       background-image: url('_images/shared/icons/dashboard_amber.png'); }
+
+.callout {
+  border: none;
+  border-radius: 0;
+  border-left: 6px solid #ffae1a;
+  border-bottom: 2px solid #ccc;
+  background-color: #fafafa;
+}
+
+.callout.warning,
+.callout.stop { 
+  border-left-color: #d63700; 
+}
+
+/* end icons */
+
+/* Split slide vertically */
+.content .float_left  {
+  float: left;
+  margin-right: 0.5em;
+}
+.content .float_right {
+  float: right;
+  margin-left: 0.5em;
+}
+
+  .float_left .border  { border-right: 3px solid #222; }
+  .float_right .border { border-left: 3px solid #222; }
+
+  /* align .flush elements flush with the side of the slide */
+  .float_left.flush  { margin-left: -1em; }
+  .float_right.flush { margin-right: -1em; }
+
+.sixty { width: 60%; }
+.forty { width: 40%; }
+/* End split slide vertically */
+
+/* Sidemenu styling */
+#hamburger:hover,
+.submenu .buttonWrapper {
+  background-color: #ffae1a;
+  border: none;
+}
+
+.buttonWrapper:hover,
+.submenu a:hover,
+.submenu .highlighted a,
+.submenu .buttonWrapper:hover {
+  background-color: #ffd86e;
+  color: #222;
+}
+/* End of sidemenu styling */
+
+
+/* Allow us to specify when we want code to wrap */
+.content pre.code_wrap:not(.highlight),
+.content pre.highlight code.code_wrap  {
+    white-space: pre-wrap; /* css-3 */
+    white-space: -moz-pre-wrap !important; /* Mozilla, since 1999 */
+    white-space: -pre-wrap; /* Opera 4-6 */
+    white-space: -o-pre-wrap; /* Opera 7 */
+    word-wrap: break-word; /* Internet Explorer 5.5+ */
+}
+
+/* Update powershell style a bit */
+  .content pre.sh_powershell,
+  .content pre.powershell,
+  .content pre.highlight code.language-powershell {
+      background-color: #032655 !important;  /* rgb(3, 38, 85); */
+      color: white;
+  }
+
+/* make bash code styling not look so much like puppet code */
+  code.language-bash.hljs {
+    background-color: #222;
+    color: #00ff40;
+  }
+  code.language-bash.hljs * {
+    color: #00ff40;
+  }
+
+/* add classes for forge results */
+.content .forge {
+    font-family: 'Courier New', Courier, monospace;
+}
+.content .forge span.hit {
+    color: #81ff26;
+}
+.content .forge span.version {
+    color: cyan;
+}
+
+/* Puppet output highlighting */
+.content pre.highlight code.language-puppet_output                   { background-color: black; color: #00ff40; }
+.content pre.highlight code.language-puppet_output span.hljs-info    { color: green;  }
+.content pre.highlight code.language-puppet_output span.hljs-notice  { color: cyan;   }
+.content pre.highlight code.language-puppet_output span.hljs-warning { color: yellow; }
+.content pre.highlight code.language-puppet_output span.hljs-error   { color: red;    }
+
+/* custom paragraph style for word definitions. */
+.define {
+  background-color: #222;
+  color: #fff;
+  padding: 16px;
+}
+.define:first-line {
+  color: #ffae1a;
+  font-weight: 600;
+}
+.define code {
+  color: #222;
+}
+
+.center {
+  text-align: center;
+}
+
+.large {
+  font-size: 1.5em;
+}
+
+.feedback p.callout {
+  width: 65%;
+  margin: 2em auto;
+  padding: 0.5em;
+  text-align: center;
+}
+
+/* TODO: replace visualization with something else */
+    div.visualization table {
+      border: 2px solid black;
+    }
+
+    div.visualization table.chart tr.pageOne td:first-child,
+    div.visualization table.chart tr.pageOne td {
+	    border-right: solid black;
+	    border-top: solid black;
+    }
+
+    div.visualization table.chart tr.pageTwo td:first-child,
+    div.visualization table.chart tr.pageTwo td {
+	    border-right: solid black;
+	    border-top: solid black;
+	}
+
+    div.visualization table.chart tr.pageThree td:first-child,
+    div.visualization table.chart tr.pageThree td {
+	    border-right: solid black;
+	    border-top: solid black;
+	}
+
+    div.visualization ol.legend {
+      width: 20em;
+      margin: 2em auto;
+      border: 2px solid black;
+      font-size: 1em;
+      background: #0d0d0d !important;
+    }
+
+    div.visualization ol.legend li {
+      font-weight: bold;
+    }
+    div.visualization ol.legend li.disabled {
+      font-style: italic;
+      font-weight: 100;
+      color: #777;
+    }
+    div.visualization ol.legend li.highlight {
+      font-size: 1.25em;
+    }
+
+    div.visualization.pageOne,
+    div.visualization tr.pageOne {
+      background: #aae1ff !important;
+    }
+    div.visualization ol.legend li.pageOne {
+      color: #aae1ff;
+      font-weight: bold;
+    }
+
+    div.visualization.pageTwo,
+    div.visualization tr.pageTwo {
+      background: #e8ffdb !important;
+    }
+    div.visualization ol.legend li.pageTwo {
+      color: #e8ffdb;
+      font-weight: bold;
+    }
+
+    div.visualization.pageThree,
+    div.visualization tr.pageThree {
+      background: #ccac96 !important;
+    }
+    div.visualization ol.legend li.pageThree {
+      color: #ccac96;
+      font-weight: bold;
+    }
+
+/* style comparison table */
+table.comparison code {
+  font-size: 0.8em;
+}
+
+table.comparison pre {
+  margin: 0;
+}
+
+table.chart th {
+  font-size: 1.1em;
+}
+table.chart td {
+  text-align: center;
+}
+
+#screenblanker {
+  background-image: url('_images/shared/Puppet-Logo-Amber-Black.png');
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position-y: 50%;
+}
+
+@media print {
+  /* cover styling */
+  .slide.cover {
+    height: 9.8in;
+    padding-top: 1in;
+    -webkit-transform: none;
+    -ms-transform: none;
+    transform: none;
+  }
+  
+  .slide.cover.supplemental {
+    height: 10.8in !important;
+  }
+   
+  .content.cover h1:not(.section_title),
+  #slides.supplemental .content.cover h1:not(.section_title) {
+    margin-top: 2.5em;
+    font-size: 36pt;
+    border: none;
+  }
+
+  .content.cover h2,
+  #slides.supplemental .content.cover h2 {
+    margin-bottom: 2em;
+    font-size: 24pt;
+  }
+
+  .content.cover h3,
+  #slides.supplemental .content.cover h3 {
+    margin: 1em 0 6.5em 0;
+    font-size: 32pt;
+    font-weight: bold;
+  }
+
+  .content.cover h4,
+  #slides.supplemental .content.cover h4 {
+    font-size: 24pt;
+  }
+
+  .content.cover hr,
+  #slides.supplemental .content.cover hr {
+    border: none;
+    width: 35%;
+    height: 4px;
+    background-color: #ffae1a;
+    margin: 0 auto;
+  }
+
+  #slides.supplemental .content div.em,
+  #slides.supplemental .content span.em {
+      border: 1px dotted #ccc;
+      color: black;
+      background-color: #efefef !important;
+      font-weight: bold;
+  }
+}
+
+/* print formatting for Prince */
+@page {
+  size: US-Letter;
+/*  margin: 0.45in 0; */
+  margin: 0.5in 0in 1.0in 0in;
+  orphans: 3;
+  widows: 3;
+
+  @top-center {
+  	content: string(doctitle);
+  	font-weight: normal;
+  	padding-top: 0.5em;
+  	vertical-align: bottom;
+  }
+
+  @bottom-left {
+    content: "Fundamentals v4.4.4";
+    padding-left: 0.5in;
+  }
+
+  @bottom-right {
+    content: "\00a9 2016 Puppet"; /* escaped hex for copyright sign */
+    padding-right: 0.5in;
+  }
+
+  @bottom-center {
+    content: counter(page);
+  }
+}
+
+/* set subsection page titles for Prince */
+div.content.subsection > h1 {
+  string-set: doctitle content();
+}
+
+/* set the page type for full-page slides */
+div.full-page { page: full-page }
+@page full-page {
+  size: US-Letter;
+  margin: 0in;
+
+  @top-center { content: none; }
+  @bottom-left { content: none; }
+  @bottom-right { content: none; }
+  @bottom-center { content: none; }
+
+}
+/* Official Puppet fonts */
+@font-face {
+    font-family: 'Calibre Web Black';
+    src: local("Calibre Web Black"),local("CalibreWeb-Black"),url(fonts/CalibreWeb-Black.woff) format("woff");
+}
+
+@font-face {
+    font-family: 'Calibre Web Black Italic';
+    src: local("Calibre Web Black Italic"),local("CalibreWeb-BlackItalic"),url(fonts/CalibreWeb-BlackItalic.woff) format("woff");
+}
+
+@font-face {
+    font-family: 'Calibre Web Bold';
+    src: local("Calibre Web Bold"),local("CalibreWeb-Bold"),url(fonts/CalibreWeb-Bold.woff) format("woff");
+}
+
+@font-face {
+    font-family: 'Calibre Web Bold Italic';
+    src: local("Calibre Web Bold Italic"),local("CalibreWeb-BoldItalic"),url(fonts/CalibreWeb-BoldItalic.woff) format("woff");
+}
+
+@font-face {
+    font-family: 'Calibre Web Light';
+    src: local("Calibre Web Light"),local("CalibreWeb-Light"),url(fonts/CalibreWeb-Light.woff) format("woff");
+}
+
+@font-face {
+    font-family: 'Calibre Web Light Italic';
+    src: local("Calibre Web Light Italic"),local("CalibreWeb-LightItalic"),url(fonts/CalibreWeb-LightItalic.woff) format("woff");
+}
+
+@font-face {
+    font-family: 'Calibre Web Medium';
+    src: local("Calibre Web Medium"),local("CalibreWeb-Medium"),url(fonts/CalibreWeb-Medium.woff) format("woff");
+}
+
+@font-face {
+    font-family: 'Calibre Web Medium Italic';
+    src: local("Calibre Web Medium Italic"),local("CalibreWeb-MediumItalic"),url(fonts/CalibreWeb-MediumItalic.woff) format("woff");
+}
+
+@font-face {
+    font-family: 'Calibre Web Regular';
+    src: local("Calibre Web Regular"),local("CalibreWeb-Regular"),url(fonts/CalibreWeb-Regular.woff) format("woff");
+}
+
+@font-face {
+    font-family: 'Calibre Web Regular Italic';
+    src: local("Calibre Web Regular Italic"),local("CalibreWeb-RegularItalic"),url(fonts/CalibreWeb-RegularItalic.woff) format("woff");
+}
+
+@font-face {
+    font-family: 'Calibre Web Semibold';
+    src: local("Calibre Web Semibold"),local("CalibreWeb-Semibold"),url(fonts/CalibreWeb-Semibold.woff) format("woff");
+}
+
+@font-face {
+    font-family: 'Calibre Web Semibold Italic';
+    src: local("Calibre Web Semibold Italic"),local("CalibreWeb-SemiboldItalic"),url(fonts/CalibreWeb-SemiboldItalic.woff) format("woff");
+}
+
+@font-face {
+    font-family: 'Calibre Web Thin';
+    src: local("Calibre Web Thin"),local("CalibreWeb-Thin"),url(fonts/CalibreWeb-Thin.woff) format("woff");
+}
+
+@font-face {
+    font-family: 'Calibre Web Thin Italic';
+    src: local("Calibre Web Thin Italic"),local("CalibreWeb-ThinItalic"),url(fonts/CalibreWeb-ThinItalic.woff) format("woff");
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Calibre Web Regular";
+}
+p, div {
+  font-family: "Calibre Web Regular";
+}

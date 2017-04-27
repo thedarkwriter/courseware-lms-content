@@ -1,0 +1,9 @@
+{
+  "name": "relationships",
+  "sections": [
+      "relationships.md"
+  ],
+  "feedback": false,
+  "markdown": "commonmarker",
+  "parser": "v2"
+}
