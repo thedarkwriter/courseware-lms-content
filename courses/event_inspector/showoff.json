@@ -1,0 +1,9 @@
+{
+  "name": "event inspector",
+  "sections": [
+      "event_inspector.md"
+  ],
+  "feedback": false,
+  "markdown": "commonmarker",
+  "parser": "v2"
+}
