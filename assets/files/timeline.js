@@ -33,7 +33,7 @@ function timeline(times, slidename) {
 }
 
 /* Trigger audio events on a slide's events */
-function bind_audio(slide, player, pauseAtEndOfSlide = 1000){
+function bind_audio(slide, player, repeat, pause, countdown, pauseAtEndOfSlide = 1000){
   player.addEventListener("loadeddata", function() {
     slide.bind("showoff:show", function(event){
       timeRemaining = player.duration * 1000 + pauseAtEndOfSlide;
@@ -70,7 +70,19 @@ function audio(slidename){
       <source src="file/_files/audio/${slidename}.mp3" type="audio/mpeg">
     </audio>`);
   player = $("#" + slidename)[0];
-  bind_audio(slide,player,3000);
+	slide.append(`
+    <div class="countdown" width="100%" hidden="true">
+      <i class="fa fa-repeat fa-fw" aria-hidden="true" hidden="true"></i>
+      <i class="fa fa-pause fa-fw" aria-hidden="true" hidden="true"></i>
+      <svg class="countdown-timer" width="90%">
+        <rect width="0%" height="10"/>
+      </svg>
+    </div>`);
+  repeat = slide.find(".countdown > .fa-repeat");
+  pause = slide.find(".countdown > .fa-pause");
+  countdown = slide.find(".countdown-timer > rect");
+
+  bind_audio(slide,player,repeat,pause,countdown);
 }
 
 /* Shorten element over a duration by % */

@@ -13,38 +13,78 @@ timeline([2000,3000,4000,5000,6000,7000],"slide2")
 
 # Resource
 
-~~~DIV:time3 col-xs-6~~~
-## Service
-~~~ENDDIV~~~
-~~~DIV:time5 col-xs-6~~~
-## Service
-~~~ENDDIV~~~
-~~~DIV:container~~~
-  ~~~DIV:col-xs-5~~~~~~DIV:parent~~~
-      ![.time1.img1 file](_images/resource_file.png)
-      ![.time2.img2 service](_images/resource_service.png)
-      ![.time3.img3 package](_images/resource_package.png)
-  ~~~ENDDIV~~~~~~ENDDIV~~~
+<div class="time3 col-xs-6">
 
-  ~~~DIV:col-xs-5~~~~~~DIV:parent~~~
-      ![.time4.img1 service](_images/resource_service.png)
-      ![.time5.img2 package](_images/resource_package.png)
-      ![.time6.img3 file](_images/resource_file.png)
-    ~~~ENDDIV~~~
-  ~~~ENDDIV~~~~~~ENDDIV~~~
-~~~ENDDIV~~~
-~~~DIV:time1 col-xs-3~~~
+## Service
+
+</div>
+<div class="time5 col-xs-6">
+
+## Service
+
+</div>
+<div class="container">
+<div class="col-xs-5">
+<div class="parent">
+<div class="time1 img1">
+
+![file](_images/resource_file.png)
+
+</div>
+<div class="time2 img2">
+
+![service](_images/resource_service.png)
+
+</div>
+<div class="time3 img3">
+
+![package](_images/resource_package.png)
+
+</div>
+</div>
+</div>
+
+<div class="col-xs-5">
+<div class="parent">
+<div class="time4 img1">
+
+![service](_images/resource_service.png)
+
+</div>
+<div class="time5 img2">
+
+![package](_images/resource_package.png)
+
+</div>
+<div class="time6 img3">
+
+![file](_images/resource_file.png)
+
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="time1 col-xs-3">
+
 ## File
-~~~ENDDIV~~~
-~~~DIV:time2 col-xs-3~~~
+
+</div>
+<div class="time2 col-xs-3">
+
 ## Package
-~~~ENDDIV~~~
-~~~DIV:time6 col-xs-3~~~
+
+</div>
+<div class="time6 col-xs-3">
+
 ## File
-~~~ENDDIV~~~
-~~~DIV:time4 col-xs-3~~~
+
+</div>
+<div class="time4 col-xs-3">
+
 ## Package
-~~~ENDDIV~~~
+
+</div>
 
 !SLIDE slide3
 <script> 
@@ -60,15 +100,23 @@ timeline([17000],"slide3")
       before => File[’/etc/ssh/sshd_config’],
     }
 
+.break
 
+<div class="time1 col-xs-1">
+<div class="row">
+<div class="col-xs-1">
+</div>
+<div class="col-xs-1">
 
-~~~DIV:time1 col-xs-1~~~~~~DIV:row~~~~~~DIV:col-xs-1~~~~~~ENDDIV~~~~~~DIV:col-xs-1~~~
 [fa-long-arrow-up fa-5x]
-~~~ENDDIV~~~~~~ENDDIV~~~~~~ENDDIV~~~
 
-~~~DIV:time1 col-xs-12~~~
+</div></div></div>
+
+<div class="time1 col-xs-12">
+
 ## Relationship metaparameter
-~~~ENDDIV~~~
+
+</div>
 
 !SLIDE slide4
 <script> 
@@ -78,24 +126,34 @@ timeline([1000,1000,11000,14000,15500],"slide4")
 
 # Metaparameters
 
-~~~DIV:time2 align-center big~~~
+<div class="time2 align-center big">
+
 Metaparameters
-~~~ENDDIV~~~
-~~~DIV:time1 align-center big~~~
+
+</div>
+<div class="time1 align-center big">
+
 4
-~~~ENDDIV~~~
 
-~~~DIV:time3 align-center~~~
+</div>
+
+<div class="time3 align-center">
+
 ## Resource reference (or array of references)
-~~~ENDDIV~~~
 
-~~~DIV:time4 align-center~~~
+</div>
+
+<div class="time4 align-center">
+
 [fa-long-arrow-down fa-5x]
-~~~ENDDIV~~~
 
-~~~DIV:time5 align-center~~~
+</div>
+
+<div class="time5 align-center">
+
 ## One or more target resources
-~~~ENDDIV~~~
+
+</div>
 
 !SLIDE slide5
 <script> 
@@ -105,25 +163,32 @@ timeline([3500,6500,19500,25500],"slide5")
 
 # Relationship Metaparameters
 
-~~~DIV:row~~~
-~~~DIV:time1 col-xs-2~~~
+<div class="row">
+<div class="time1 col-xs-2">
+
 ## `before`
-~~~ENDDIV~~~
 
-~~~DIV:time3 col-xs-offset-1 col-xs-10~~~
+</div>
+
+<div class="time3 col-xs-offset-1 col-xs-10">
+
 ## Causes a resource to be applied before the target resource.
-~~~ENDDIV~~~
-~~~ENDDIV~~~
 
-~~~DIV:row~~~
-~~~DIV:time2 col-xs-2~~~
+</div>
+</div>
+
+<div class="row">
+<div class="time2 col-xs-2">
+
 ## `require`
-~~~ENDDIV~~~
 
-~~~DIV:time4 col-xs-offset-1  col-xs-10~~~
+</div>
+<div class="time4 col-xs-offset-1  col-xs-10">
+
 ## Causes a resource to be applied after the target resource.
-~~~ENDDIV~~~
-~~~ENDDIV~~~
+
+</div>
+</div>
 
 !SLIDE slide6
 <script> 
@@ -134,25 +199,31 @@ timeline([250,750,10000,11000],"slide6")
 
 # Relationship Metaparameters
 
-~~~DIV:row~~~
-~~~DIV:time1 col-xs-2~~~
+<div class="row">
+<div class="time1 col-xs-2">
+
 ## `notify`
-~~~ENDDIV~~~
 
-~~~DIV:time2 col-xs-offset-1 col-xs-10~~~
+</div>
+
+<div class="time2 col-xs-offset-1 col-xs-10">
+
 ## Causes a resource to be applied before the target resource. The target resource will refresh if the notifying resource changes.
-~~~ENDDIV~~~
-~~~ENDDIV~~~
 
-~~~DIV:row~~~
-~~~DIV:time3 col-xs-2~~~
+</div>
+</div>
+<div class="row">
+<div class="time3 col-xs-2">
+
 ## `subscribe`
-~~~ENDDIV~~~
 
-~~~DIV:time4 col-xs-offset-1  col-xs-10~~~
+</div>
+<div class="time4 col-xs-offset-1  col-xs-10">
+
 ## Causes a resource to be applied after the target resource. The target resource will refresh if the target resource changes.
-~~~ENDDIV~~~
-~~~ENDDIV~~~
+
+</div>
+</div>
 
 !SLIDE slide7
 <script> 
@@ -163,13 +234,21 @@ timeline([2500,3500,4000],"slide7")
 
 # Requirement
 
-.huge.align-center.time1 2 Resources
+<div class="huge align-center time1"> 
 
-~~~DIV:time2 align-center~~~
+2 Resources
+
+</div>
+<div class="time2 align-center">
+
 [fa-long-arrow-down fa-5x]
-~~~ENDDIV~~~
 
-.time3.align-center.huge Order Matters
+</div>
+<div class="time3 align-center huge">
+
+Order Matters
+
+</div>
 
 !SLIDE slide8
 <script> 
@@ -179,19 +258,26 @@ timeline([2000,5000,5250],"slide8")
 
 # Requirement
 
-.huge.align-center 2 Options
+<div class="huge align-center">
 
-~~~DIV:time1 col-xs-3 col-xs-offset-1~~~
+2 Options
+
+</div>
+<div class="time1 col-xs-3 col-xs-offset-1">
+
 ## `before`
-~~~ENDDIV~~~
 
-~~~DIV:time2 col-xs-3 col-xs-offset-1~~~
+</div>
+<div class="time2 col-xs-3 col-xs-offset-1">
+
 [fa-long-arrow-right fa-5x]
-~~~ENDDIV~~~
 
-~~~DIV:time3 col-xs-3 col-xs-offset-1~~~
+</div>
+<div class="time3 col-xs-3 col-xs-offset-1">
+
 ## `require`
-~~~ENDDIV~~~
+
+</div>
 
 !SLIDE slide9
 <script> 
@@ -209,26 +295,30 @@ timeline([5000,9000],"slide9")
       before => File['/etc/ssh/sshd_config'],
     }
 
+.break
 
-~~~DIV:time1 col-xs-1~~~
-~~~DIV:row~~~
-~~~DIV:col-xs-1~~~
-~~~ENDDIV~~~
-~~~DIV:col-xs-1~~~
+<div class="time1 col-xs-1">
+<div class="row">
+<div class="col-xs-1">
+</div>
+<div class="col-xs-1">
+
 [fa-long-arrow-up fa-5x]
+
 ## Metaparameter
-~~~ENDDIV~~~
-~~~ENDDIV~~~
-~~~ENDDIV~~~
-~~~DIV:time2 col-xs-offset-3 col-xs-1~~~
-~~~DIV:row~~~
+
+</div>
+</div>
+</div>
+<div class="time2 col-xs-offset-3 col-xs-1">
+<div class="row">
+
 [fa-long-arrow-up fa-5x]
+
 ## Target resource
-~~~ENDDIV~~~
-~~~ENDDIV~~~
 
-
-
+</div>
+</div>
 
 !SLIDE slide10
 <script> 
@@ -248,22 +338,30 @@ timeline([9000,17250],"slide10")
       require => Package['openssh-server'],
     }
 
-~~~DIV:time1 col-xs-1~~~
-~~~DIV:row~~~
-~~~DIV:col-xs-1~~~
-~~~ENDDIV~~~
-~~~DIV:col-xs-1~~~
+.break
+
+<div class="time1 col-xs-1">
+<div class="row">
+<div class="col-xs-1">
+</div>
+<div class="col-xs-1">
+
 [fa-long-arrow-up fa-5x]
+
 ## Metaparameter
-~~~ENDDIV~~~
-~~~ENDDIV~~~
-~~~ENDDIV~~~
-~~~DIV:time2 col-xs-offset-3 col-xs-1~~~
-~~~DIV:row~~~
+
+</div>
+</div>
+</div>
+<div class="time2 col-xs-offset-3 col-xs-1">
+<div class="row">
+
 [fa-long-arrow-up fa-5x]
+
 ## Target resource
-~~~ENDDIV~~~
-~~~ENDDIV~~~
+
+</div>
+</div>
 
 
 
@@ -275,22 +373,28 @@ timeline([8000,14000],"slide11")
 
 # Ordering Arrows (Chaining Arrows)
 
-.align-center.huge `->`
+<div class="align-center huge">
+
+`->`
+
+</div>
 
     @@@ Puppet
     Package['openssh-server'] -> File['/etc/ssh/sshd_config']
 
-~~~DIV:time1~~~
+.break
+
+<div class="time1">
 
 * The resource on the left to be applied before the resource on the right.
 
-~~~ENDDIV~~~
+</div>
 
-~~~DIV:time2~~~
+<div class="time2">
 
 * Written with a hyphen and a greater-than sign.
 
-~~~ENDDIV~~~
+</div>
 
 !SLIDE slide12
 <script> 
@@ -310,22 +414,30 @@ timeline([6500,14750],"slide12")
       notify  => Service['sshd'],
     }
 
-~~~DIV:time1 col-xs-1~~~
-~~~DIV:row~~~
-~~~DIV:col-xs-1~~~
-~~~ENDDIV~~~
-~~~DIV:col-xs-1~~~
+.break
+
+<div class="time1 col-xs-1">
+<div class="row">
+<div class="col-xs-1">
+</div>
+<div class="col-xs-1">
+
 [fa-long-arrow-up fa-5x]
+
 ## Metaparameter
-~~~ENDDIV~~~
-~~~ENDDIV~~~
-~~~ENDDIV~~~
-~~~DIV:time2 col-xs-offset-2 col-xs-1~~~
-~~~DIV:row~~~
+
+</div>
+</div>
+</div>
+<div class="time2 col-xs-offset-2 col-xs-1">
+<div class="row">
+
 [fa-long-arrow-up fa-5x]
+
 ## Target resource
-~~~ENDDIV~~~
-~~~ENDDIV~~~
+
+</div>
+</div>
 
 !SLIDE slide13
 <script> 
@@ -344,22 +456,29 @@ timeline([750,6750],"slide13")
       subscribe => File['/etc/ssh/sshd_config'],
     }
 
-~~~DIV:time1 col-xs-1~~~
-~~~DIV:row~~~
-~~~DIV:col-xs-1~~~
-~~~ENDDIV~~~
-~~~DIV:col-xs-1~~~
+.break
+
+<div class="time1 col-xs-1">
+<div class="row">
+<div class="col-xs-1">
+</div>
+<div class="col-xs-1">
+
 [fa-long-arrow-up fa-5x]
+
 ## Metaparameter
-~~~ENDDIV~~~
-~~~ENDDIV~~~
-~~~ENDDIV~~~
-~~~DIV:time2 col-xs-offset-2 col-xs-1~~~
-~~~DIV:row~~~
+</div>
+</div>
+</div>
+<div class="time2 col-xs-offset-2 col-xs-1">
+<div class="row">
+
 [fa-long-arrow-up fa-5x]
+
 ## Target resource
-~~~ENDDIV~~~
-~~~ENDDIV~~~
+
+</div>
+</div>
 
 !SLIDE slide14
 <script> 
@@ -369,21 +488,27 @@ timeline([9000,13000],"slide14")
 
 # Notification arrow (Chaining Arrows)
 
-.align-center.huge `~>`
+<div class="align-center huge">
+
+`~>`
+
+</div>
 
     @@@ Puppet
     File['/etc/ntp.conf'] ~> Service['ntpd']
 
-~~~DIV:time1~~~
+.break
+
+<div class="time1">
 
 * Written with a tilde and a greater-than sign.
 
-~~~ENDDIV~~~
-~~~DIV:time2~~~
+</div>
+<div class="time2">
 
 * Causes the resource on the left to be applied first, and sends a refresh event to the resource on the right if the left resource changes.
 
-~~~ENDDIV~~~
+</div>
 
 !SLIDE slide15
 <script> 
@@ -393,46 +518,51 @@ timeline([7750,13500,21000,25000,31000,39000],"slide15")
 
 # In Summary:  Metaparameters
 
-~~~DIV:col-xs-5 col-xs-offset-1~~~
+<div class="col-xs-5 col-xs-offset-1">
+<div class="big">
 
-.big Before
+Before
 
-~~~DIV:time1 col-xs-offset-1~~~
+</div>
+<div class="time1 col-xs-offset-1">
 
 ## `before`
 
-~~~ENDDIV~~~
-~~~DIV:time3 col-xs-offset-1~~~
+</div>
+<div class="time3 col-xs-offset-1">
 
 ## `notify`\*
 
-~~~ENDDIV~~~
-~~~DIV:time4 col-xs-offset-5~~~
+</div>
+<div class="time4 col-xs-offset-5">
+
 \* With refresh
-~~~ENDDIV~~~
 
-~~~ENDDIV~~~
+</div>
+</div>
 
-~~~DIV:col-xs-5 col-xs-offset-1~~~
+<div class="col-xs-5 col-xs-offset-1">
+<div class="big">
 
-.big After
+After
 
-~~~DIV:time2 col-xs-offset-1~~~
+</div>
+<div class="time2 col-xs-offset-1">
 
 ## `require`
 
-~~~ENDDIV~~~
-~~~DIV:time5 col-xs-offset-1~~~
+</div>
+<div class="time5 col-xs-offset-1">
 
 ## `subscribe`\*
 
-~~~ENDDIV~~~
-~~~DIV:time6 col-xs-offset-5~~~
+</div>
+<div class="time6 col-xs-offset-5">
+
 \* With refresh
-~~~ENDDIV~~~
-~~~ENDDIV~~~
 
-
+</div>
+</div>
 
 !SLIDE[bg=_images/background.png] center inverse slide16
 <script> 

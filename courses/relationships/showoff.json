@@ -3,5 +3,7 @@
   "sections": [
       "relationships.md"
   ],
-  "feedback": false
+  "feedback": false,
+  "markdown": "commonmarker",
+  "parser": "v2"
 }
