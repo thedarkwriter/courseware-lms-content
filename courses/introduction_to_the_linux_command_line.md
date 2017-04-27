@@ -1,6 +1,6 @@
 <link rel="stylesheet" href="/static/selfpaced/selfpaced.css" markdown="1">
-<script src="https://try.puppet.com/js/selfpaced.js" markdown="1"></script>
 <script defer="" src="https://code.jquery.com/jquery-1.11.2.js" markdown="1"></script>
+<script src="https://try.puppet.com/js/selfpaced.js" markdown="1"></script>
 
 
 <div id="lesson" markdown="1">
