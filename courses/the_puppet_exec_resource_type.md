@@ -48,7 +48,7 @@ Sometimes, it isn't possible to check the desired state, for example if our weba
 
 For example:
 <pre>
-file {'/etc/webapp/settings.cony':
+file {'/etc/webapp/settings.conf':
   source => 'puppet:///webapp/settings.conf',
 }
 exec {'webupdate':
