@@ -30,6 +30,10 @@
   left: 10px;
 }
 
+.full {
+  height: 100%;
+}
+
 /* Hide elements that have timeX class, so they can be revealed in order */
 [class^="time"] {
   visibility: hidden;
@@ -62,7 +66,7 @@
 code {
   font-family: 'Droid Sans Mono', 'Andale Mono', Monaco, Consolas, 'Lucida Console', monospace;
   color: rgb(51,51,51);
-  backgroud-color: #ededed;
+  background-color: #ededed;
   font-size: .8em;
 }
 
@@ -96,6 +100,17 @@ pre {
   margin: 4px 8px;
 }
 /* End general styling */
+
+/* mermaid graph styling */
+.language-render-diagram g .node div {
+ background-color: #ededed;
+}
+.language-render-diagram g .node rect {
+  stroke: #ededed;
+  fill: #ededed;
+}
+/* end mermaid graph styling */
+
 
 /* icons as backgrounds */
 /* .checkpoint is applied to both .slide and .content levels
