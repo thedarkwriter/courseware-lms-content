@@ -1,0 +1,11 @@
+#source 'http://rubygems.delivery.puppetlabs.net/' do
+#  gem 'learndot_api'
+#end
+
+gem 'learndot_api', :git => 'https://github.com/puppetlabs/learndot_api.git', :branch => 'master'
+
+
+source 'https://rubygems.org' do
+  gem 'kramdown'
+  gem 'rugged'
+end

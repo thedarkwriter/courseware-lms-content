@@ -1,0 +1,25 @@
+require 'yaml'
+
+# Pull rake taskes in from takes directory
+task_dir = File.expand_path('../tasks', __FILE__)
+
+# Pull in the functional Rake tasks
+Dir["#{task_dir}/**/*.rake"].each do |task_file|
+    load task_file
+end
+
+# Create the stub tasks for tracking upload state and for manual deploys
+Dir["*"].each do |component_directory|
+  if File.exists?("#{component_directory}/metadata.json")
+    #puts component_directory
+    namespace :release do
+      desc "Build component (#{component_directory}) and upload a release to <target>"
+      task component_directory.to_sym ,[:target] do  |_t, args|
+        Rake::Task['upload:component'].invoke(component_directory,args[:target]) 
+      end
+    end
+  end
+end
+
+# Run interactively if user gives us no arguments
+task :default => ['help']
