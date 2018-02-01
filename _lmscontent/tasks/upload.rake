@@ -10,14 +10,16 @@ namespace :upload do
   config = YAML.load_file('config.yaml')
 
   # Connect to the learndot api
-  def connect()
-    @lms = @lms || Learndot.new(true, true).learning_component
+  def connect(target)
+    # https://github.com/puppetlabs/learndot_api/blob/e1df5b0e1c64b09e7e48c504e98e2f3645f2eaf9/lib/learndot.rb#L22
+    staging = target == 'production'  ? false : true
+
+    @lms = @lms || Learndot.new(true, staging).learning_component
   end
 
 	# Show learning components 
   def retrieve(name)
-    lms = connect
-    lms.retrieve_component({
+    @lms.retrieve_component({
       'name' => [ name.to_s ]
     }).to_h
   rescue => e
@@ -28,25 +30,27 @@ namespace :upload do
   def update(conditions)
     # Assume name is always in metadata
     name = conditions['name']
-    lms = connect
+    @lms = connect
     components = lms.retrieve_component({
       'name' => [ name.to_s ]
     }).to_h
 
     # TODO: identify the correct component since this can return multiples
-    lms.update_component(component[id], conditions) unless id.nil? || id.empty?
+    @lms.update_component(component[id], conditions) unless id.nil? || id.empty?
   rescue => e
     puts "#{e.message}"
   end
 
   # Create learning component
   def create(conditions)
-    lms = connect
-    lms.create_component(conditions)
+    @lms.create_component(conditions)
   end
 
   # Rake Tasks
   task :component,[:component_directory,:target] do  |_t, args|
+    # Connect to production or staging
+    @lms = connect(args[:target])
+
     #defaults = JSON.parse(File.read('defaults.json'))
 
     component_directory = args[:component_directory]
