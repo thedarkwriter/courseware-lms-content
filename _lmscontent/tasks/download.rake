@@ -5,19 +5,17 @@ require 'yaml'
 namespace :download do
   task :repos do
 
-    config = YAML.load_file('config.yaml')
-
     # First time run initialize
     unless File.directory?('repos')
       FileUtils.mkdir('repos')
     end
 
     credentials = Rugged::Credentials::UserPassword.new({
-      username: config['credentials']['github']['user'],
-      password: config['credentials']['github']['token']
+      username: @config['credentials']['github']['user'],
+      password: @config['credentials']['github']['token']
     })
 
-    config['repos'].each do |key,hash|
+    @config['repos'].each do |key,hash|
       puts "Updating repo #{key} #{hash['url']}"
       if Dir.exist?("repos/#{key}")
         # If repo already exists fetch and reset (pull)

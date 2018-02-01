@@ -7,12 +7,13 @@ require 'kramdown'
 
 namespace :upload do
 
-  config = YAML.load_file('config.yaml')
-
   # Connect to the learndot api
   def connect(target)
     # https://github.com/puppetlabs/learndot_api/blob/e1df5b0e1c64b09e7e48c504e98e2f3645f2eaf9/lib/learndot.rb#L22
     staging = target == 'production'  ? false : true
+
+    # Configure the token for the target
+    ENV['LEARNDOT_TOKEN'] = @config['credentials']['learndot'][target]['token']
 
     @lms = @lms || Learndot.new(true, staging).learning_component
   end
@@ -24,6 +25,7 @@ namespace :upload do
     }).to_h
   rescue => e
     puts "#{e.message}"
+    {}
   end
 
   # Update learning component
@@ -67,9 +69,6 @@ namespace :upload do
       doc = Kramdown::Document.new(File.read("#{component_directory}/#{field}.md"))
       metadata[field] = doc.to_html
     end
-
-    # Configure the token for the target
-    ENV['LEARNDOT_TOKEN'] = config['credentials']['learndot'][args[:target]]['token']
 
     puts metadata.to_json
 

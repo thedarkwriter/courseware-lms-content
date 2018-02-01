@@ -1,5 +1,7 @@
 require 'yaml'
 
+@config = YAML.load_file('config.yaml')
+
 # Pull rake taskes in from takes directory
 task_dir = File.expand_path('../tasks', __FILE__)
 

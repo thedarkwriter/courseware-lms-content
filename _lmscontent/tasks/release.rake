@@ -4,12 +4,11 @@ require 'pathname'
 namespace :release do
   desc 'Build LMS content and upload a release to staging'
   task :staging do
-    config = YAML.load_file('config.yaml')
 
     # Update the reposositories from github
     Rake::Task['download:repos'].invoke
 
-    config['repos'].each do |key,hash|
+    @config['repos'].each do |key,hash|
       # Push every commit to staging
       # Once repo is up to date , pull new commits from today
       git_dir = "./repos/#{key}"
