@@ -1,1 +1,28 @@
-{"UUID":"3c5fde10-6318-3a97-90ec-af2f8de2f8e7","_displayName_":"02. Introduction to Hiera - Exercises","_keyword_":"content_component","created":"2015-02-04 12:00:41","createdById":3,"deprecatedBy":"","duration":{"days":0,"minutesPerDay":0},"generateCertificate":"DEFAULT","generateProofOfCompletion":"DEFAULT","id":89,"modified":"2015-09-21 11:01:57","modifiedById":35,"name":"02. Introduction to Hiera - Exercises","orderNumber":0,"price":{"amount":0.0,"currency":"USD"},"primaryCategoryId":1,"providerId":1,"status":"ACTIVE_COMPONENT","urlName":"02-introduction-to-hiera---exercises","visibility":"HIDDEN"}
+{
+  "UUID": "3c5fde10-6318-3a97-90ec-af2f8de2f8e7",
+  "_displayName_": "02. Introduction to Hiera - Exercises",
+  "_keyword_": "content_component",
+  "created": "2015-02-04 12:00:41",
+  "createdById": 3,
+  "deprecatedBy": "",
+  "duration": {
+    "days": 0,
+    "minutesPerDay": 0
+  },
+  "generateCertificate": "DEFAULT",
+  "generateProofOfCompletion": "DEFAULT",
+  "id": 89,
+  "modified": "2015-09-21 11:01:57",
+  "modifiedById": 35,
+  "name": "02. Introduction to Hiera - Exercises",
+  "orderNumber": 0,
+  "price": {
+    "amount": 0.0,
+    "currency": "USD"
+  },
+  "primaryCategoryId": 1,
+  "providerId": 1,
+  "status": "ACTIVE_COMPONENT",
+  "urlName": "02-introduction-to-hiera---exercises",
+  "visibility": "HIDDEN"
+}

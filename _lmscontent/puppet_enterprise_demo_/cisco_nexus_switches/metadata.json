@@ -1,1 +1,27 @@
-{"UUID":"a368dc1a-0458-3bad-9142-20a87f172058","_displayName_":"Puppet Enterprise Demo: Cisco Nexus Switches","_keyword_":"content_component","created":"2017-08-02 11:20:49","createdById":31489,"deprecatedBy":"","duration":{"days":0,"minutesPerDay":15},"generateCertificate":"DEFAULT","generateProofOfCompletion":"DEFAULT","id":274,"modified":"2017-08-03 13:52:14","modifiedById":35,"name":"Puppet Enterprise Demo: Cisco Nexus Switches","orderNumber":0,"price":{"amount":0.0,"currency":"USD"},"primaryCategoryId":10,"status":"ENABLED","urlName":"puppet-enterprise-demo-cisco-nexus-switches","visibility":"DEPRECATED"}
+{
+  "UUID": "a368dc1a-0458-3bad-9142-20a87f172058",
+  "_displayName_": "Puppet Enterprise Demo: Cisco Nexus Switches",
+  "_keyword_": "content_component",
+  "created": "2017-08-02 11:20:49",
+  "createdById": 31489,
+  "deprecatedBy": "",
+  "duration": {
+    "days": 0,
+    "minutesPerDay": 15
+  },
+  "generateCertificate": "DEFAULT",
+  "generateProofOfCompletion": "DEFAULT",
+  "id": 274,
+  "modified": "2017-08-03 13:52:14",
+  "modifiedById": 35,
+  "name": "Puppet Enterprise Demo: Cisco Nexus Switches",
+  "orderNumber": 0,
+  "price": {
+    "amount": 0.0,
+    "currency": "USD"
+  },
+  "primaryCategoryId": 10,
+  "status": "ENABLED",
+  "urlName": "puppet-enterprise-demo-cisco-nexus-switches",
+  "visibility": "DEPRECATED"
+}

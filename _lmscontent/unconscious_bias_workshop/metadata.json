@@ -1,1 +1,37 @@
-{"UUID":"933af0f8-76b7-3c17-b042-404a3b161175","_displayName_":"Unconscious Bias Workshop","_keyword_":"course","courseVersion":"","coursewareProvided":true,"coursewareUrl":"","created":"2016-06-09 14:15:21","createdById":38,"deprecatedBy":"","duration":{"days":1,"minutesPerDay":120},"earlyBirdDays":0,"generateCertificate":"DEFAULT","generateProofOfCompletion":"NO","id":216,"modified":"2016-06-09 14:30:14","modifiedById":38,"name":"Unconscious Bias Workshop","orderNumber":0,"price":{"amount":0.0,"currency":"USD"},"priceMultiplier":1.0,"primaryCategoryId":9,"priority":0,"providerId":1,"purchasableAsEngagement":false,"shared":false,"status":"ENABLED","theyTookThisCourse":"","urlName":"unconscious-bias-workshop","visibility":"HIDDEN"}
+{
+  "UUID": "933af0f8-76b7-3c17-b042-404a3b161175",
+  "_displayName_": "Unconscious Bias Workshop",
+  "_keyword_": "course",
+  "courseVersion": "",
+  "coursewareProvided": true,
+  "coursewareUrl": "",
+  "created": "2016-06-09 14:15:21",
+  "createdById": 38,
+  "deprecatedBy": "",
+  "duration": {
+    "days": 1,
+    "minutesPerDay": 120
+  },
+  "earlyBirdDays": 0,
+  "generateCertificate": "DEFAULT",
+  "generateProofOfCompletion": "NO",
+  "id": 216,
+  "modified": "2016-06-09 14:30:14",
+  "modifiedById": 38,
+  "name": "Unconscious Bias Workshop",
+  "orderNumber": 0,
+  "price": {
+    "amount": 0.0,
+    "currency": "USD"
+  },
+  "priceMultiplier": 1.0,
+  "primaryCategoryId": 9,
+  "priority": 0,
+  "providerId": 1,
+  "purchasableAsEngagement": false,
+  "shared": false,
+  "status": "ENABLED",
+  "theyTookThisCourse": "",
+  "urlName": "unconscious-bias-workshop",
+  "visibility": "HIDDEN"
+}

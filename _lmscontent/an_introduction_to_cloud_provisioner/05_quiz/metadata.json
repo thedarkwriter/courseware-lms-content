@@ -1,1 +1,31 @@
-{"UUID":"d0ac5121-a441-3ae1-b935-e90f4722584a","_displayName_":"05. An Introductio n to Cloud Provisioner - Quiz","_keyword_":"e_learning_component","allowReview":false,"created":"2015-02-04 12:38:01","createdById":3,"deprecatedBy":"","duration":{"days":0,"minutesPerDay":10},"generateCertificate":"DEFAULT","generateProofOfCompletion":"DEFAULT","id":103,"launchWithScooter":false,"maxAttempts":-1,"modified":"2015-05-05 16:44:49","modifiedById":3,"name":"05. An Introductio n to Cloud Provisioner - Quiz","orderNumber":33,"price":{"amount":0.0,"currency":"USD"},"primaryCategoryId":1,"providerId":1,"status":"ACTIVE_COMPONENT","urlName":"05-introduction-to-cloud-provisioner---quiz","visibility":"HIDDEN"}
+{
+  "UUID": "d0ac5121-a441-3ae1-b935-e90f4722584a",
+  "_displayName_": "05. An Introductio n to Cloud Provisioner - Quiz",
+  "_keyword_": "e_learning_component",
+  "allowReview": false,
+  "created": "2015-02-04 12:38:01",
+  "createdById": 3,
+  "deprecatedBy": "",
+  "duration": {
+    "days": 0,
+    "minutesPerDay": 10
+  },
+  "generateCertificate": "DEFAULT",
+  "generateProofOfCompletion": "DEFAULT",
+  "id": 103,
+  "launchWithScooter": false,
+  "maxAttempts": -1,
+  "modified": "2015-05-05 16:44:49",
+  "modifiedById": 3,
+  "name": "05. An Introductio n to Cloud Provisioner - Quiz",
+  "orderNumber": 33,
+  "price": {
+    "amount": 0.0,
+    "currency": "USD"
+  },
+  "primaryCategoryId": 1,
+  "providerId": 1,
+  "status": "ACTIVE_COMPONENT",
+  "urlName": "05-introduction-to-cloud-provisioner---quiz",
+  "visibility": "HIDDEN"
+}

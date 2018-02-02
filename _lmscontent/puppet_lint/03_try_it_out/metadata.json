@@ -1,1 +1,27 @@
-{"UUID":"355eec7d-7eba-3704-afc3-ad3aef0ffd8c","_displayName_":"03. Puppet Lint - Try it Out","_keyword_":"content_component","created":"2015-02-03 13:19:09","createdById":3,"deprecatedBy":"","duration":{"days":0,"minutesPerDay":0},"generateCertificate":"DEFAULT","generateProofOfCompletion":"DEFAULT","id":57,"modified":"2015-02-03 13:19:09","modifiedById":3,"name":"03. Puppet Lint - Try it Out","orderNumber":0,"price":{"amount":0.0,"currency":"USD"},"primaryCategoryId":1,"status":"ACTIVE_COMPONENT","urlName":"03-puppet-lint---try-it-out","visibility":"HIDDEN"}
+{
+  "UUID": "355eec7d-7eba-3704-afc3-ad3aef0ffd8c",
+  "_displayName_": "03. Puppet Lint - Try it Out",
+  "_keyword_": "content_component",
+  "created": "2015-02-03 13:19:09",
+  "createdById": 3,
+  "deprecatedBy": "",
+  "duration": {
+    "days": 0,
+    "minutesPerDay": 0
+  },
+  "generateCertificate": "DEFAULT",
+  "generateProofOfCompletion": "DEFAULT",
+  "id": 57,
+  "modified": "2015-02-03 13:19:09",
+  "modifiedById": 3,
+  "name": "03. Puppet Lint - Try it Out",
+  "orderNumber": 0,
+  "price": {
+    "amount": 0.0,
+    "currency": "USD"
+  },
+  "primaryCategoryId": 1,
+  "status": "ACTIVE_COMPONENT",
+  "urlName": "03-puppet-lint---try-it-out",
+  "visibility": "HIDDEN"
+}

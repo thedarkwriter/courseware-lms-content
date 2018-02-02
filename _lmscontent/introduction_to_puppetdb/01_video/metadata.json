@@ -1,1 +1,28 @@
-{"UUID":"3e277636-1946-36bb-8336-0a4d052f84f4","_displayName_":"01. Introductionto PuppetDB- Video","_keyword_":"content_component","created":"2015-02-04 11:48:31","createdById":3,"deprecatedBy":"","duration":{"days":0,"minutesPerDay":0},"generateCertificate":"DEFAULT","generateProofOfCompletion":"DEFAULT","id":83,"modified":"2015-02-04 11:48:31","modifiedById":3,"name":"01. Introductionto PuppetDB- Video","orderNumber":0,"price":{"amount":0.0,"currency":"USD"},"primaryCategoryId":1,"providerId":1,"status":"ACTIVE_COMPONENT","urlName":"01-introductionto-puppetdb--video","visibility":"HIDDEN"}
+{
+  "UUID": "3e277636-1946-36bb-8336-0a4d052f84f4",
+  "_displayName_": "01. Introductionto PuppetDB- Video",
+  "_keyword_": "content_component",
+  "created": "2015-02-04 11:48:31",
+  "createdById": 3,
+  "deprecatedBy": "",
+  "duration": {
+    "days": 0,
+    "minutesPerDay": 0
+  },
+  "generateCertificate": "DEFAULT",
+  "generateProofOfCompletion": "DEFAULT",
+  "id": 83,
+  "modified": "2015-02-04 11:48:31",
+  "modifiedById": 3,
+  "name": "01. Introductionto PuppetDB- Video",
+  "orderNumber": 0,
+  "price": {
+    "amount": 0.0,
+    "currency": "USD"
+  },
+  "primaryCategoryId": 1,
+  "providerId": 1,
+  "status": "ACTIVE_COMPONENT",
+  "urlName": "01-introductionto-puppetdb--video",
+  "visibility": "HIDDEN"
+}

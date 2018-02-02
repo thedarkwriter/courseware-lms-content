@@ -1,1 +1,28 @@
-{"UUID":"47e8413f-60d4-3f8d-b886-4597d791b594","_displayName_":"02. Introduction to the Console - Exercises","_keyword_":"content_component","created":"2015-02-04 11:28:07","createdById":3,"deprecatedBy":"","duration":{"days":0,"minutesPerDay":0},"generateCertificate":"DEFAULT","generateProofOfCompletion":"DEFAULT","id":74,"modified":"2015-02-04 11:28:07","modifiedById":3,"name":"02. Introduction to the Console - Exercises","orderNumber":0,"price":{"amount":0.0,"currency":"USD"},"primaryCategoryId":1,"providerId":1,"status":"ACTIVE_COMPONENT","urlName":"02-introduction-to-the-console---exercises","visibility":"HIDDEN"}
+{
+  "UUID": "47e8413f-60d4-3f8d-b886-4597d791b594",
+  "_displayName_": "02. Introduction to the Console - Exercises",
+  "_keyword_": "content_component",
+  "created": "2015-02-04 11:28:07",
+  "createdById": 3,
+  "deprecatedBy": "",
+  "duration": {
+    "days": 0,
+    "minutesPerDay": 0
+  },
+  "generateCertificate": "DEFAULT",
+  "generateProofOfCompletion": "DEFAULT",
+  "id": 74,
+  "modified": "2015-02-04 11:28:07",
+  "modifiedById": 3,
+  "name": "02. Introduction to the Console - Exercises",
+  "orderNumber": 0,
+  "price": {
+    "amount": 0.0,
+    "currency": "USD"
+  },
+  "primaryCategoryId": 1,
+  "providerId": 1,
+  "status": "ACTIVE_COMPONENT",
+  "urlName": "02-introduction-to-the-console---exercises",
+  "visibility": "HIDDEN"
+}

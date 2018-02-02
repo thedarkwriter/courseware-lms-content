@@ -1,1 +1,37 @@
-{"UUID":"74c2c390-95ca-36c0-8a38-e01f100edcbf","_displayName_":"Package File Service - Refresh Events","_keyword_":"content_component","created":"2018-01-10 11:09:44","createdById":31489,"customField01":"","customField02":"","customField03":"","customField04":"","customField05":"","customField06":"","customField07":"","customField08":"","customField09":"","customField10":"","deprecatedBy":"","duration":{"days":0,"minutesPerDay":10},"generateCertificate":"DEFAULT","generateProofOfCompletion":"DEFAULT","id":381,"modified":"2018-01-12 16:23:36","modifiedById":49633,"name":"Package File Service - Refresh Events","orderNumber":0,"price":{"amount":0.0,"currency":"USD"},"primaryCategoryId":7,"status":"ENABLED","urlName":"package-file-service---refresh-events","visibility":"PUBLIC"}
+{
+  "UUID": "74c2c390-95ca-36c0-8a38-e01f100edcbf",
+  "_displayName_": "Package File Service - Refresh Events",
+  "_keyword_": "content_component",
+  "created": "2018-01-10 11:09:44",
+  "createdById": 31489,
+  "customField01": "",
+  "customField02": "",
+  "customField03": "",
+  "customField04": "",
+  "customField05": "",
+  "customField06": "",
+  "customField07": "",
+  "customField08": "",
+  "customField09": "",
+  "customField10": "",
+  "deprecatedBy": "",
+  "duration": {
+    "days": 0,
+    "minutesPerDay": 10
+  },
+  "generateCertificate": "DEFAULT",
+  "generateProofOfCompletion": "DEFAULT",
+  "id": 381,
+  "modified": "2018-01-12 16:23:36",
+  "modifiedById": 49633,
+  "name": "Package File Service - Refresh Events",
+  "orderNumber": 0,
+  "price": {
+    "amount": 0.0,
+    "currency": "USD"
+  },
+  "primaryCategoryId": 7,
+  "status": "ENABLED",
+  "urlName": "package-file-service---refresh-events",
+  "visibility": "PUBLIC"
+}

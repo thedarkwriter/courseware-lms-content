@@ -1,1 +1,28 @@
-{"UUID":"22b038e8-5f9d-3a2f-9c48-10035cdb7fc1","_displayName_":"04. Puppet DNS - Action Items & Resources","_keyword_":"content_component","created":"2015-02-04 13:04:29","createdById":3,"deprecatedBy":"","duration":{"days":0,"minutesPerDay":0},"generateCertificate":"DEFAULT","generateProofOfCompletion":"DEFAULT","id":117,"modified":"2015-02-04 13:04:29","modifiedById":3,"name":"04. Puppet DNS - Action Items & Resources","orderNumber":0,"price":{"amount":0.0,"currency":"USD"},"primaryCategoryId":1,"providerId":1,"status":"ACTIVE_COMPONENT","urlName":"04-puppet-dns---action-items-resources","visibility":"HIDDEN"}
+{
+  "UUID": "22b038e8-5f9d-3a2f-9c48-10035cdb7fc1",
+  "_displayName_": "04. Puppet DNS - Action Items & Resources",
+  "_keyword_": "content_component",
+  "created": "2015-02-04 13:04:29",
+  "createdById": 3,
+  "deprecatedBy": "",
+  "duration": {
+    "days": 0,
+    "minutesPerDay": 0
+  },
+  "generateCertificate": "DEFAULT",
+  "generateProofOfCompletion": "DEFAULT",
+  "id": 117,
+  "modified": "2015-02-04 13:04:29",
+  "modifiedById": 3,
+  "name": "04. Puppet DNS - Action Items & Resources",
+  "orderNumber": 0,
+  "price": {
+    "amount": 0.0,
+    "currency": "USD"
+  },
+  "primaryCategoryId": 1,
+  "providerId": 1,
+  "status": "ACTIVE_COMPONENT",
+  "urlName": "04-puppet-dns---action-items-resources",
+  "visibility": "HIDDEN"
+}

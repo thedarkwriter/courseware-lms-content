@@ -1,1 +1,37 @@
-{"UUID":"3519e509-4979-3a78-92ce-2ee7db4e31d8","_displayName_":"New Manager Orientation","_keyword_":"course","courseVersion":"","coursewareProvided":true,"coursewareUrl":"","created":"2016-06-09 14:39:32","createdById":38,"deprecatedBy":"","duration":{"days":1,"minutesPerDay":240},"earlyBirdDays":0,"generateCertificate":"DEFAULT","generateProofOfCompletion":"DEFAULT","id":217,"modified":"2016-06-09 14:39:32","modifiedById":38,"name":"New Manager Orientation","orderNumber":0,"price":{"amount":0.0,"currency":"USD"},"priceMultiplier":1.0,"primaryCategoryId":9,"priority":3,"providerId":1,"purchasableAsEngagement":false,"shared":false,"status":"ENABLED","theyTookThisCourse":"","urlName":"new-manager-orientation","visibility":"HIDDEN"}
+{
+  "UUID": "3519e509-4979-3a78-92ce-2ee7db4e31d8",
+  "_displayName_": "New Manager Orientation",
+  "_keyword_": "course",
+  "courseVersion": "",
+  "coursewareProvided": true,
+  "coursewareUrl": "",
+  "created": "2016-06-09 14:39:32",
+  "createdById": 38,
+  "deprecatedBy": "",
+  "duration": {
+    "days": 1,
+    "minutesPerDay": 240
+  },
+  "earlyBirdDays": 0,
+  "generateCertificate": "DEFAULT",
+  "generateProofOfCompletion": "DEFAULT",
+  "id": 217,
+  "modified": "2016-06-09 14:39:32",
+  "modifiedById": 38,
+  "name": "New Manager Orientation",
+  "orderNumber": 0,
+  "price": {
+    "amount": 0.0,
+    "currency": "USD"
+  },
+  "priceMultiplier": 1.0,
+  "primaryCategoryId": 9,
+  "priority": 3,
+  "providerId": 1,
+  "purchasableAsEngagement": false,
+  "shared": false,
+  "status": "ENABLED",
+  "theyTookThisCourse": "",
+  "urlName": "new-manager-orientation",
+  "visibility": "HIDDEN"
+}

@@ -1,1 +1,32 @@
-{"UUID":"84d0e973-dc14-330c-9c0e-e54f8f7bfd7b","_displayName_":"Resources","_keyword_":"e_learning_component","allowReview":false,"created":"2015-05-04 17:04:56","createdById":3,"deprecatedBy":"","duration":{"days":0,"minutesPerDay":10},"generateCertificate":"DEFAULT","generateProofOfCompletion":"DEFAULT","id":169,"launchWithScooter":false,"learndotCourse":2417,"learndotDomain":"puppetlabs.learndot.com","maxAttempts":-1,"modified":"2016-07-05 11:52:06","modifiedById":38,"name":"Resources","orderNumber":3,"price":{"amount":0.0,"currency":"USD"},"primaryCategoryId":7,"status":"ENABLED","urlName":"resources","visibility":"PUBLIC"}
+{
+  "UUID": "84d0e973-dc14-330c-9c0e-e54f8f7bfd7b",
+  "_displayName_": "Resources",
+  "_keyword_": "e_learning_component",
+  "allowReview": false,
+  "created": "2015-05-04 17:04:56",
+  "createdById": 3,
+  "deprecatedBy": "",
+  "duration": {
+    "days": 0,
+    "minutesPerDay": 10
+  },
+  "generateCertificate": "DEFAULT",
+  "generateProofOfCompletion": "DEFAULT",
+  "id": 169,
+  "launchWithScooter": false,
+  "learndotCourse": 2417,
+  "learndotDomain": "puppetlabs.learndot.com",
+  "maxAttempts": -1,
+  "modified": "2016-07-05 11:52:06",
+  "modifiedById": 38,
+  "name": "Resources",
+  "orderNumber": 3,
+  "price": {
+    "amount": 0.0,
+    "currency": "USD"
+  },
+  "primaryCategoryId": 7,
+  "status": "ENABLED",
+  "urlName": "resources",
+  "visibility": "PUBLIC"
+}

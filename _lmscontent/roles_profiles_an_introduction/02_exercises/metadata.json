@@ -1,1 +1,28 @@
-{"UUID":"142365f7-ec85-3cb8-87e0-4003fbf24f56","_displayName_":"02. Roles & Profiles - An Introduction - Exercises","_keyword_":"content_component","created":"2015-02-04 12:53:15","createdById":3,"deprecatedBy":"","duration":{"days":0,"minutesPerDay":0},"generateCertificate":"DEFAULT","generateProofOfCompletion":"DEFAULT","id":111,"modified":"2015-02-04 12:53:15","modifiedById":3,"name":"02. Roles & Profiles - An Introduction - Exercises","orderNumber":0,"price":{"amount":0.0,"currency":"USD"},"primaryCategoryId":1,"providerId":1,"status":"ACTIVE_COMPONENT","urlName":"02-roles-profiles---an-introduction---exercises","visibility":"HIDDEN"}
+{
+  "UUID": "142365f7-ec85-3cb8-87e0-4003fbf24f56",
+  "_displayName_": "02. Roles & Profiles - An Introduction - Exercises",
+  "_keyword_": "content_component",
+  "created": "2015-02-04 12:53:15",
+  "createdById": 3,
+  "deprecatedBy": "",
+  "duration": {
+    "days": 0,
+    "minutesPerDay": 0
+  },
+  "generateCertificate": "DEFAULT",
+  "generateProofOfCompletion": "DEFAULT",
+  "id": 111,
+  "modified": "2015-02-04 12:53:15",
+  "modifiedById": 3,
+  "name": "02. Roles & Profiles - An Introduction - Exercises",
+  "orderNumber": 0,
+  "price": {
+    "amount": 0.0,
+    "currency": "USD"
+  },
+  "primaryCategoryId": 1,
+  "providerId": 1,
+  "status": "ACTIVE_COMPONENT",
+  "urlName": "02-roles-profiles---an-introduction---exercises",
+  "visibility": "HIDDEN"
+}

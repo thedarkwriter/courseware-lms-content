@@ -30,6 +30,14 @@ namespace :migrate do
     name.lstrip.downcase.gsub(/(:|"|\.| |&|-)/,'_').squeeze('_')
   end
 
+  task :json do
+    Dir.glob('**/*metadata.json').each do |path|
+      puts path
+      json = JSON.parse(File.read(path))
+      File.write(path,JSON.pretty_generate(json))
+    end
+  end
+
   # Rake Tasks
   task :components do
     # Connect to production or staging

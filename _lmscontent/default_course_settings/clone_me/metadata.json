@@ -1,1 +1,57 @@
-{"UUID":"7ce2f0ad-10c8-388b-a049-e3bc6f658085","_displayName_":"Default Course Settings - Clone Me","_keyword_":"course_pathway","components":[],"courseInfo":"<course content here>","created":"2017-12-22 14:51:34","createdById":49633,"customField01":"","customField02":"","customField03":"","customField04":"","customField05":"","customField06":"","customField07":"","customField08":"","customField09":"","customField10":"","deprecatedBy":"","duration":{"days":0,"minutesPerDay":0},"generateCertificate":"DEFAULT","generateProofOfCompletion":"DEFAULT","id":377,"modified":"2017-12-22 14:51:34","modifiedById":49633,"name":"Default Course Settings - Clone Me","orderNumber":0,"price":{"amount":0.0,"currency":"USD"},"primaryCategoryId":7,"status":"DISABLED","type":{"_displayName_":"Course","_keyword_":"course_pathway_type","created":"2015-06-14 23:21:43","id":4,"modified":"2015-06-14 23:21:43","name":"Course","rootType":true,"supportedComponentTypes":["e_learning_component","course","content_component","exam_component"]},"typeId":4,"urlName":"default-course","visibility":"HIDDEN"}
+{
+  "UUID": "7ce2f0ad-10c8-388b-a049-e3bc6f658085",
+  "_displayName_": "Default Course Settings - Clone Me",
+  "_keyword_": "course_pathway",
+  "components": [
+
+  ],
+  "courseInfo": "<course content here>",
+  "created": "2017-12-22 14:51:34",
+  "createdById": 49633,
+  "customField01": "",
+  "customField02": "",
+  "customField03": "",
+  "customField04": "",
+  "customField05": "",
+  "customField06": "",
+  "customField07": "",
+  "customField08": "",
+  "customField09": "",
+  "customField10": "",
+  "deprecatedBy": "",
+  "duration": {
+    "days": 0,
+    "minutesPerDay": 0
+  },
+  "generateCertificate": "DEFAULT",
+  "generateProofOfCompletion": "DEFAULT",
+  "id": 377,
+  "modified": "2017-12-22 14:51:34",
+  "modifiedById": 49633,
+  "name": "Default Course Settings - Clone Me",
+  "orderNumber": 0,
+  "price": {
+    "amount": 0.0,
+    "currency": "USD"
+  },
+  "primaryCategoryId": 7,
+  "status": "DISABLED",
+  "type": {
+    "_displayName_": "Course",
+    "_keyword_": "course_pathway_type",
+    "created": "2015-06-14 23:21:43",
+    "id": 4,
+    "modified": "2015-06-14 23:21:43",
+    "name": "Course",
+    "rootType": true,
+    "supportedComponentTypes": [
+      "e_learning_component",
+      "course",
+      "content_component",
+      "exam_component"
+    ]
+  },
+  "typeId": 4,
+  "urlName": "default-course",
+  "visibility": "HIDDEN"
+}

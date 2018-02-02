@@ -1,1 +1,37 @@
-{"UUID":"0fc1aeb6-a18f-3fab-a44e-715547e53f9c","_displayName_":"Facts - Working With Data: Hashes","_keyword_":"content_component","created":"2017-12-19 09:10:36","createdById":49633,"customField01":"","customField02":"","customField03":"","customField04":"","customField05":"","customField06":"","customField07":"","customField08":"","customField09":"","customField10":"","deprecatedBy":"","duration":{"days":0,"minutesPerDay":0},"generateCertificate":"DEFAULT","generateProofOfCompletion":"DEFAULT","id":372,"modified":"2018-01-12 14:43:23","modifiedById":49633,"name":"Facts - Working With Data: Hashes","orderNumber":0,"price":{"amount":0.0,"currency":"USD"},"primaryCategoryId":7,"status":"DISABLED","urlName":"facts---working-with-data-hashes","visibility":"HIDDEN"}
+{
+  "UUID": "0fc1aeb6-a18f-3fab-a44e-715547e53f9c",
+  "_displayName_": "Facts - Working With Data: Hashes",
+  "_keyword_": "content_component",
+  "created": "2017-12-19 09:10:36",
+  "createdById": 49633,
+  "customField01": "",
+  "customField02": "",
+  "customField03": "",
+  "customField04": "",
+  "customField05": "",
+  "customField06": "",
+  "customField07": "",
+  "customField08": "",
+  "customField09": "",
+  "customField10": "",
+  "deprecatedBy": "",
+  "duration": {
+    "days": 0,
+    "minutesPerDay": 0
+  },
+  "generateCertificate": "DEFAULT",
+  "generateProofOfCompletion": "DEFAULT",
+  "id": 372,
+  "modified": "2018-01-12 14:43:23",
+  "modifiedById": 49633,
+  "name": "Facts - Working With Data: Hashes",
+  "orderNumber": 0,
+  "price": {
+    "amount": 0.0,
+    "currency": "USD"
+  },
+  "primaryCategoryId": 7,
+  "status": "DISABLED",
+  "urlName": "facts---working-with-data-hashes",
+  "visibility": "HIDDEN"
+}

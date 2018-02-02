@@ -1,1 +1,27 @@
-{"UUID":"108fc722-5452-3c33-be6f-5d1f9120e71d","_displayName_":"Puppet Enterprise Out of the Box Value","_keyword_":"content_component","created":"2017-07-26 09:54:03","createdById":31489,"deprecatedBy":"","duration":{"days":0,"minutesPerDay":30},"generateCertificate":"DEFAULT","generateProofOfCompletion":"DEFAULT","id":257,"modified":"2017-08-03 12:51:57","modifiedById":35,"name":"Puppet Enterprise Out of the Box Value","orderNumber":0,"price":{"amount":0.0,"currency":"USD"},"primaryCategoryId":10,"status":"DISABLED","urlName":"puppet-enterprise-overview","visibility":"DEPRECATED"}
+{
+  "UUID": "108fc722-5452-3c33-be6f-5d1f9120e71d",
+  "_displayName_": "Puppet Enterprise Out of the Box Value",
+  "_keyword_": "content_component",
+  "created": "2017-07-26 09:54:03",
+  "createdById": 31489,
+  "deprecatedBy": "",
+  "duration": {
+    "days": 0,
+    "minutesPerDay": 30
+  },
+  "generateCertificate": "DEFAULT",
+  "generateProofOfCompletion": "DEFAULT",
+  "id": 257,
+  "modified": "2017-08-03 12:51:57",
+  "modifiedById": 35,
+  "name": "Puppet Enterprise Out of the Box Value",
+  "orderNumber": 0,
+  "price": {
+    "amount": 0.0,
+    "currency": "USD"
+  },
+  "primaryCategoryId": 10,
+  "status": "DISABLED",
+  "urlName": "puppet-enterprise-overview",
+  "visibility": "DEPRECATED"
+}

@@ -1,1 +1,28 @@
-{"UUID":"81a339bf-274d-3576-b4ac-6f422fc3f29e","_displayName_":"04. Introduction to Git - Action Items & Resources","_keyword_":"content_component","created":"2015-02-04 14:52:32","createdById":3,"deprecatedBy":"","duration":{"days":0,"minutesPerDay":0},"generateCertificate":"DEFAULT","generateProofOfCompletion":"DEFAULT","id":152,"modified":"2015-02-04 14:52:32","modifiedById":3,"name":"04. Introduction to Git - Action Items & Resources","orderNumber":0,"price":{"amount":0.0,"currency":"USD"},"primaryCategoryId":1,"providerId":1,"status":"ACTIVE_COMPONENT","urlName":"04-introduction-to-git---action-items-resources","visibility":"HIDDEN"}
+{
+  "UUID": "81a339bf-274d-3576-b4ac-6f422fc3f29e",
+  "_displayName_": "04. Introduction to Git - Action Items & Resources",
+  "_keyword_": "content_component",
+  "created": "2015-02-04 14:52:32",
+  "createdById": 3,
+  "deprecatedBy": "",
+  "duration": {
+    "days": 0,
+    "minutesPerDay": 0
+  },
+  "generateCertificate": "DEFAULT",
+  "generateProofOfCompletion": "DEFAULT",
+  "id": 152,
+  "modified": "2015-02-04 14:52:32",
+  "modifiedById": 3,
+  "name": "04. Introduction to Git - Action Items & Resources",
+  "orderNumber": 0,
+  "price": {
+    "amount": 0.0,
+    "currency": "USD"
+  },
+  "primaryCategoryId": 1,
+  "providerId": 1,
+  "status": "ACTIVE_COMPONENT",
+  "urlName": "04-introduction-to-git---action-items-resources",
+  "visibility": "HIDDEN"
+}

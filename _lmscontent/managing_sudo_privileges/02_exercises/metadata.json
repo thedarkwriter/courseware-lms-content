@@ -1,1 +1,28 @@
-{"UUID":"761cd2a9-0605-3c0e-8117-5bffe0e5552a","_displayName_":"02. Managing sudo Privileges - Exercises","_keyword_":"content_component","created":"2015-02-04 13:30:26","createdById":3,"deprecatedBy":"","duration":{"days":0,"minutesPerDay":0},"generateCertificate":"DEFAULT","generateProofOfCompletion":"DEFAULT","id":131,"modified":"2015-02-04 13:30:26","modifiedById":3,"name":"02. Managing sudo Privileges - Exercises","orderNumber":0,"price":{"amount":0.0,"currency":"USD"},"primaryCategoryId":1,"providerId":1,"status":"ACTIVE_COMPONENT","urlName":"02-managing-sudo-privileges---exercises","visibility":"HIDDEN"}
+{
+  "UUID": "761cd2a9-0605-3c0e-8117-5bffe0e5552a",
+  "_displayName_": "02. Managing sudo Privileges - Exercises",
+  "_keyword_": "content_component",
+  "created": "2015-02-04 13:30:26",
+  "createdById": 3,
+  "deprecatedBy": "",
+  "duration": {
+    "days": 0,
+    "minutesPerDay": 0
+  },
+  "generateCertificate": "DEFAULT",
+  "generateProofOfCompletion": "DEFAULT",
+  "id": 131,
+  "modified": "2015-02-04 13:30:26",
+  "modifiedById": 3,
+  "name": "02. Managing sudo Privileges - Exercises",
+  "orderNumber": 0,
+  "price": {
+    "amount": 0.0,
+    "currency": "USD"
+  },
+  "primaryCategoryId": 1,
+  "providerId": 1,
+  "status": "ACTIVE_COMPONENT",
+  "urlName": "02-managing-sudo-privileges---exercises",
+  "visibility": "HIDDEN"
+}

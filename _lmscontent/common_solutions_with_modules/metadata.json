@@ -1,1 +1,28 @@
-{"UUID":"3873ccf0-92c1-39b4-b3c1-da0dadf89cda","_displayName_":"Common Solutions with Modules","_keyword_":"learning_pathway","created":"2015-06-05 11:09:06","createdById":7,"deprecatedBy":"","duration":{"days":0,"minutesPerDay":0},"generateCertificate":"DEFAULT","generateProofOfCompletion":"DEFAULT","id":199,"modified":"2016-05-13 14:31:31","modifiedById":38,"name":"Common Solutions with Modules","orderNumber":0,"price":{"amount":0.0,"currency":"USD"},"primaryCategoryId":7,"requirementsNeededToPass":5,"status":"DISABLED","urlName":"common-solutions-with-modules","visibility":"DEPRECATED"}
+{
+  "UUID": "3873ccf0-92c1-39b4-b3c1-da0dadf89cda",
+  "_displayName_": "Common Solutions with Modules",
+  "_keyword_": "learning_pathway",
+  "created": "2015-06-05 11:09:06",
+  "createdById": 7,
+  "deprecatedBy": "",
+  "duration": {
+    "days": 0,
+    "minutesPerDay": 0
+  },
+  "generateCertificate": "DEFAULT",
+  "generateProofOfCompletion": "DEFAULT",
+  "id": 199,
+  "modified": "2016-05-13 14:31:31",
+  "modifiedById": 38,
+  "name": "Common Solutions with Modules",
+  "orderNumber": 0,
+  "price": {
+    "amount": 0.0,
+    "currency": "USD"
+  },
+  "primaryCategoryId": 7,
+  "requirementsNeededToPass": 5,
+  "status": "DISABLED",
+  "urlName": "common-solutions-with-modules",
+  "visibility": "DEPRECATED"
+}

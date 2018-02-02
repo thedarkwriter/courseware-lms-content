@@ -1,1 +1,31 @@
-{"UUID":"78fb7877-36df-39f8-9e61-4ee08c0dae45","_displayName_":"05. Event Ins pector - Quiz","_keyword_":"e_learning_component","allowReview":false,"created":"2015-02-04 11:40:11","createdById":3,"deprecatedBy":"","duration":{"days":0,"minutesPerDay":10},"generateCertificate":"DEFAULT","generateProofOfCompletion":"DEFAULT","id":81,"launchWithScooter":false,"maxAttempts":-1,"modified":"2015-05-05 16:37:34","modifiedById":3,"name":"05. Event Ins pector - Quiz","orderNumber":46,"price":{"amount":0.0,"currency":"USD"},"primaryCategoryId":1,"providerId":1,"status":"ACTIVE_COMPONENT","urlName":"05-event-inspector---quiz","visibility":"HIDDEN"}
+{
+  "UUID": "78fb7877-36df-39f8-9e61-4ee08c0dae45",
+  "_displayName_": "05. Event Ins pector - Quiz",
+  "_keyword_": "e_learning_component",
+  "allowReview": false,
+  "created": "2015-02-04 11:40:11",
+  "createdById": 3,
+  "deprecatedBy": "",
+  "duration": {
+    "days": 0,
+    "minutesPerDay": 10
+  },
+  "generateCertificate": "DEFAULT",
+  "generateProofOfCompletion": "DEFAULT",
+  "id": 81,
+  "launchWithScooter": false,
+  "maxAttempts": -1,
+  "modified": "2015-05-05 16:37:34",
+  "modifiedById": 3,
+  "name": "05. Event Ins pector - Quiz",
+  "orderNumber": 46,
+  "price": {
+    "amount": 0.0,
+    "currency": "USD"
+  },
+  "primaryCategoryId": 1,
+  "providerId": 1,
+  "status": "ACTIVE_COMPONENT",
+  "urlName": "05-event-inspector---quiz",
+  "visibility": "HIDDEN"
+}

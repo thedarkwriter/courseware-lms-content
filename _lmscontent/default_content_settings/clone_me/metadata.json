@@ -1,1 +1,37 @@
-{"UUID":"b12976a4-b8e4-3637-80c3-6eb7a1db9bb0","_displayName_":"Default Content Settings - Clone Me","_keyword_":"content_component","created":"2017-12-22 15:10:28","createdById":49633,"customField01":"","customField02":"","customField03":"","customField04":"","customField05":"","customField06":"","customField07":"","customField08":"","customField09":"","customField10":"","deprecatedBy":"","duration":{"days":0,"minutesPerDay":0},"generateCertificate":"DEFAULT","generateProofOfCompletion":"DEFAULT","id":378,"modified":"2017-12-22 15:10:28","modifiedById":49633,"name":"Default Content Settings - Clone Me","orderNumber":0,"price":{"amount":0.0,"currency":"USD"},"primaryCategoryId":7,"status":"ACTIVE_COMPONENT","urlName":"default-content-settings---clone-me","visibility":"HIDDEN"}
+{
+  "UUID": "b12976a4-b8e4-3637-80c3-6eb7a1db9bb0",
+  "_displayName_": "Default Content Settings - Clone Me",
+  "_keyword_": "content_component",
+  "created": "2017-12-22 15:10:28",
+  "createdById": 49633,
+  "customField01": "",
+  "customField02": "",
+  "customField03": "",
+  "customField04": "",
+  "customField05": "",
+  "customField06": "",
+  "customField07": "",
+  "customField08": "",
+  "customField09": "",
+  "customField10": "",
+  "deprecatedBy": "",
+  "duration": {
+    "days": 0,
+    "minutesPerDay": 0
+  },
+  "generateCertificate": "DEFAULT",
+  "generateProofOfCompletion": "DEFAULT",
+  "id": 378,
+  "modified": "2017-12-22 15:10:28",
+  "modifiedById": 49633,
+  "name": "Default Content Settings - Clone Me",
+  "orderNumber": 0,
+  "price": {
+    "amount": 0.0,
+    "currency": "USD"
+  },
+  "primaryCategoryId": 7,
+  "status": "ACTIVE_COMPONENT",
+  "urlName": "default-content-settings---clone-me",
+  "visibility": "HIDDEN"
+}

@@ -1,1 +1,31 @@
-{"UUID":"56934762-b522-34c3-94bb-d3d086706772","_displayName_":"05. Introductio n to the Vim Text Editor - Quiz","_keyword_":"e_learning_component","allowReview":false,"created":"2015-02-04 14:44:18","createdById":3,"deprecatedBy":"","duration":{"days":0,"minutesPerDay":10},"generateCertificate":"DEFAULT","generateProofOfCompletion":"DEFAULT","id":148,"launchWithScooter":false,"maxAttempts":-1,"modified":"2015-05-05 16:42:38","modifiedById":3,"name":"05. Introductio n to the Vim Text Editor - Quiz","orderNumber":41,"price":{"amount":0.0,"currency":"USD"},"primaryCategoryId":1,"providerId":1,"status":"ACTIVE_COMPONENT","urlName":"05-introduction-to-the-vim-text-editor---quiz","visibility":"HIDDEN"}
+{
+  "UUID": "56934762-b522-34c3-94bb-d3d086706772",
+  "_displayName_": "05. Introductio n to the Vim Text Editor - Quiz",
+  "_keyword_": "e_learning_component",
+  "allowReview": false,
+  "created": "2015-02-04 14:44:18",
+  "createdById": 3,
+  "deprecatedBy": "",
+  "duration": {
+    "days": 0,
+    "minutesPerDay": 10
+  },
+  "generateCertificate": "DEFAULT",
+  "generateProofOfCompletion": "DEFAULT",
+  "id": 148,
+  "launchWithScooter": false,
+  "maxAttempts": -1,
+  "modified": "2015-05-05 16:42:38",
+  "modifiedById": 3,
+  "name": "05. Introductio n to the Vim Text Editor - Quiz",
+  "orderNumber": 41,
+  "price": {
+    "amount": 0.0,
+    "currency": "USD"
+  },
+  "primaryCategoryId": 1,
+  "providerId": 1,
+  "status": "ACTIVE_COMPONENT",
+  "urlName": "05-introduction-to-the-vim-text-editor---quiz",
+  "visibility": "HIDDEN"
+}

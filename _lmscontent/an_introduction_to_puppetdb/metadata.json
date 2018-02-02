@@ -1,1 +1,32 @@
-{"UUID":"1eb92b8f-8b82-3258-a5db-5a3b563c70a5","_displayName_":"An Introduction to PuppetDB","_keyword_":"e_learning_component","allowReview":false,"created":"2015-05-04 17:24:14","createdById":3,"deprecatedBy":"","duration":{"days":0,"minutesPerDay":10},"generateCertificate":"DEFAULT","generateProofOfCompletion":"DEFAULT","id":185,"launchWithScooter":false,"learndotCourse":2622,"learndotDomain":"puppetlabs.learndot.com","maxAttempts":-1,"modified":"2017-04-07 10:41:27","modifiedById":35,"name":"An Introduction to PuppetDB","orderNumber":13,"price":{"amount":0.0,"currency":"USD"},"primaryCategoryId":7,"status":"DISABLED","urlName":"an-introduction-to-puppetdb","visibility":"DEPRECATED"}
+{
+  "UUID": "1eb92b8f-8b82-3258-a5db-5a3b563c70a5",
+  "_displayName_": "An Introduction to PuppetDB",
+  "_keyword_": "e_learning_component",
+  "allowReview": false,
+  "created": "2015-05-04 17:24:14",
+  "createdById": 3,
+  "deprecatedBy": "",
+  "duration": {
+    "days": 0,
+    "minutesPerDay": 10
+  },
+  "generateCertificate": "DEFAULT",
+  "generateProofOfCompletion": "DEFAULT",
+  "id": 185,
+  "launchWithScooter": false,
+  "learndotCourse": 2622,
+  "learndotDomain": "puppetlabs.learndot.com",
+  "maxAttempts": -1,
+  "modified": "2017-04-07 10:41:27",
+  "modifiedById": 35,
+  "name": "An Introduction to PuppetDB",
+  "orderNumber": 13,
+  "price": {
+    "amount": 0.0,
+    "currency": "USD"
+  },
+  "primaryCategoryId": 7,
+  "status": "DISABLED",
+  "urlName": "an-introduction-to-puppetdb",
+  "visibility": "DEPRECATED"
+}

@@ -1,1 +1,32 @@
-{"UUID":"5318077d-baa9-3cf8-8c2c-175ed4fad194","_displayName_":"Puppet Lint","_keyword_":"e_learning_component","allowReview":false,"created":"2015-05-04 17:19:00","createdById":3,"deprecatedBy":"","duration":{"days":0,"minutesPerDay":10},"generateCertificate":"DEFAULT","generateProofOfCompletion":"DEFAULT","id":180,"launchWithScooter":false,"learndotCourse":2611,"learndotDomain":"puppetlabs.learndot.com","maxAttempts":-1,"modified":"2017-03-02 11:12:56","modifiedById":38,"name":"Puppet Lint","orderNumber":17,"price":{"amount":0.0,"currency":"USD"},"primaryCategoryId":7,"status":"DISABLED","urlName":"puppet-lint","visibility":"HIDDEN"}
+{
+  "UUID": "5318077d-baa9-3cf8-8c2c-175ed4fad194",
+  "_displayName_": "Puppet Lint",
+  "_keyword_": "e_learning_component",
+  "allowReview": false,
+  "created": "2015-05-04 17:19:00",
+  "createdById": 3,
+  "deprecatedBy": "",
+  "duration": {
+    "days": 0,
+    "minutesPerDay": 10
+  },
+  "generateCertificate": "DEFAULT",
+  "generateProofOfCompletion": "DEFAULT",
+  "id": 180,
+  "launchWithScooter": false,
+  "learndotCourse": 2611,
+  "learndotDomain": "puppetlabs.learndot.com",
+  "maxAttempts": -1,
+  "modified": "2017-03-02 11:12:56",
+  "modifiedById": 38,
+  "name": "Puppet Lint",
+  "orderNumber": 17,
+  "price": {
+    "amount": 0.0,
+    "currency": "USD"
+  },
+  "primaryCategoryId": 7,
+  "status": "DISABLED",
+  "urlName": "puppet-lint",
+  "visibility": "HIDDEN"
+}

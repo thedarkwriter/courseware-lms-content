@@ -1,1 +1,37 @@
-{"UUID":"21d20071-5526-39dc-be0e-2710f7fd02c0","_displayName_":"Virtual TTT: Skytap vs. EC2","_keyword_":"content_component","created":"2017-08-28 10:34:42","createdById":49633,"customField01":"","customField02":"","customField03":"","customField04":"","customField05":"","customField06":"","customField07":"","customField08":"","customField09":"","customField10":"","deprecatedBy":"","duration":{"days":0,"minutesPerDay":0},"generateCertificate":"DEFAULT","generateProofOfCompletion":"DEFAULT","id":293,"modified":"2017-09-08 09:47:36","modifiedById":49633,"name":"Virtual TTT: Skytap vs. EC2","orderNumber":0,"price":{"amount":0.0,"currency":"USD"},"primaryCategoryId":7,"status":"ACTIVE_COMPONENT","urlName":"virtual-ttt-skytap-ec2","visibility":"HIDDEN"}
+{
+  "UUID": "21d20071-5526-39dc-be0e-2710f7fd02c0",
+  "_displayName_": "Virtual TTT: Skytap vs. EC2",
+  "_keyword_": "content_component",
+  "created": "2017-08-28 10:34:42",
+  "createdById": 49633,
+  "customField01": "",
+  "customField02": "",
+  "customField03": "",
+  "customField04": "",
+  "customField05": "",
+  "customField06": "",
+  "customField07": "",
+  "customField08": "",
+  "customField09": "",
+  "customField10": "",
+  "deprecatedBy": "",
+  "duration": {
+    "days": 0,
+    "minutesPerDay": 0
+  },
+  "generateCertificate": "DEFAULT",
+  "generateProofOfCompletion": "DEFAULT",
+  "id": 293,
+  "modified": "2017-09-08 09:47:36",
+  "modifiedById": 49633,
+  "name": "Virtual TTT: Skytap vs. EC2",
+  "orderNumber": 0,
+  "price": {
+    "amount": 0.0,
+    "currency": "USD"
+  },
+  "primaryCategoryId": 7,
+  "status": "ACTIVE_COMPONENT",
+  "urlName": "virtual-ttt-skytap-ec2",
+  "visibility": "HIDDEN"
+}

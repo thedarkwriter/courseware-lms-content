@@ -1,1 +1,38 @@
-{"UUID":"def06583-0e2d-3d0f-b870-2bbd7d27a857","_displayName_":"02. Introduction to Facter - Exercises","_keyword_":"content_component","created":"2015-02-04 12:22:32","createdById":3,"customField01":"","customField02":"","customField03":"","customField04":"","customField05":"","customField06":"","customField07":"","customField08":"","customField09":"","customField10":"","deprecatedBy":"","duration":{"days":0,"minutesPerDay":0},"generateCertificate":"DEFAULT","generateProofOfCompletion":"DEFAULT","id":95,"modified":"2017-08-22 09:48:46","modifiedById":35,"name":"02. Introduction to Facter - Exercises","orderNumber":0,"price":{"amount":0.0,"currency":"USD"},"primaryCategoryId":1,"providerId":1,"status":"ACTIVE_COMPONENT","urlName":"02-introduction-to-facter---exercises","visibility":"HIDDEN"}
+{
+  "UUID": "def06583-0e2d-3d0f-b870-2bbd7d27a857",
+  "_displayName_": "02. Introduction to Facter - Exercises",
+  "_keyword_": "content_component",
+  "created": "2015-02-04 12:22:32",
+  "createdById": 3,
+  "customField01": "",
+  "customField02": "",
+  "customField03": "",
+  "customField04": "",
+  "customField05": "",
+  "customField06": "",
+  "customField07": "",
+  "customField08": "",
+  "customField09": "",
+  "customField10": "",
+  "deprecatedBy": "",
+  "duration": {
+    "days": 0,
+    "minutesPerDay": 0
+  },
+  "generateCertificate": "DEFAULT",
+  "generateProofOfCompletion": "DEFAULT",
+  "id": 95,
+  "modified": "2017-08-22 09:48:46",
+  "modifiedById": 35,
+  "name": "02. Introduction to Facter - Exercises",
+  "orderNumber": 0,
+  "price": {
+    "amount": 0.0,
+    "currency": "USD"
+  },
+  "primaryCategoryId": 1,
+  "providerId": 1,
+  "status": "ACTIVE_COMPONENT",
+  "urlName": "02-introduction-to-facter---exercises",
+  "visibility": "HIDDEN"
+}

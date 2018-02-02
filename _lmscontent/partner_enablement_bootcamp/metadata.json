@@ -1,1 +1,37 @@
-{"UUID":"617e9865-7442-3f8e-b3c9-1dd9f81a572b","_displayName_":"Partner Enablement Bootcamp","_keyword_":"course","courseVersion":"","coursewareProvided":true,"coursewareUrl":"","created":"2017-04-13 11:13:14","createdById":31489,"deprecatedBy":"","duration":{"days":4,"minutesPerDay":0},"earlyBirdDays":0,"generateCertificate":"DEFAULT","generateProofOfCompletion":"NO","id":248,"modified":"2017-05-26 13:04:53","modifiedById":31489,"name":"Partner Enablement Bootcamp","orderNumber":0,"prerequisites":"Prior to attending bootcamp, consultants must have completed the Mock Engagement Toolkit and have passed the Puppet Professional Certification exam.","price":{"amount":0.0,"currency":"USD"},"priceMultiplier":1.0,"primaryCategoryId":10,"priority":3,"purchasableAsEngagement":false,"shared":false,"status":"DISABLED","theyTookThisCourse":"","urlName":"partner-enablement-bootcamp-london","visibility":"DEPRECATED"}
+{
+  "UUID": "617e9865-7442-3f8e-b3c9-1dd9f81a572b",
+  "_displayName_": "Partner Enablement Bootcamp",
+  "_keyword_": "course",
+  "courseVersion": "",
+  "coursewareProvided": true,
+  "coursewareUrl": "",
+  "created": "2017-04-13 11:13:14",
+  "createdById": 31489,
+  "deprecatedBy": "",
+  "duration": {
+    "days": 4,
+    "minutesPerDay": 0
+  },
+  "earlyBirdDays": 0,
+  "generateCertificate": "DEFAULT",
+  "generateProofOfCompletion": "NO",
+  "id": 248,
+  "modified": "2017-05-26 13:04:53",
+  "modifiedById": 31489,
+  "name": "Partner Enablement Bootcamp",
+  "orderNumber": 0,
+  "prerequisites": "Prior to attending bootcamp, consultants must have completed the Mock Engagement Toolkit and have passed the Puppet Professional Certification exam.",
+  "price": {
+    "amount": 0.0,
+    "currency": "USD"
+  },
+  "priceMultiplier": 1.0,
+  "primaryCategoryId": 10,
+  "priority": 3,
+  "purchasableAsEngagement": false,
+  "shared": false,
+  "status": "DISABLED",
+  "theyTookThisCourse": "",
+  "urlName": "partner-enablement-bootcamp-london",
+  "visibility": "DEPRECATED"
+}

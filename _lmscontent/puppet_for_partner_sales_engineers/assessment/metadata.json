@@ -1,1 +1,27 @@
-{"UUID":"9004cc2e-308f-3e4d-b2b2-c3655a735bc9","_displayName_":"Puppet for Partner Sales Engineers: Assessment","_keyword_":"content_component","created":"2017-07-27 13:44:44","createdById":31489,"deprecatedBy":"","duration":{"days":0,"minutesPerDay":2},"generateCertificate":"DEFAULT","generateProofOfCompletion":"DEFAULT","id":265,"modified":"2017-08-02 09:48:17","modifiedById":35,"name":"Puppet for Partner Sales Engineers: Assessment","orderNumber":0,"price":{"amount":0.0,"currency":"USD"},"primaryCategoryId":10,"status":"DISABLED","urlName":"puppet-for-partner-sales-engineers-assesssment","visibility":"DEPRECATED"}
+{
+  "UUID": "9004cc2e-308f-3e4d-b2b2-c3655a735bc9",
+  "_displayName_": "Puppet for Partner Sales Engineers: Assessment",
+  "_keyword_": "content_component",
+  "created": "2017-07-27 13:44:44",
+  "createdById": 31489,
+  "deprecatedBy": "",
+  "duration": {
+    "days": 0,
+    "minutesPerDay": 2
+  },
+  "generateCertificate": "DEFAULT",
+  "generateProofOfCompletion": "DEFAULT",
+  "id": 265,
+  "modified": "2017-08-02 09:48:17",
+  "modifiedById": 35,
+  "name": "Puppet for Partner Sales Engineers: Assessment",
+  "orderNumber": 0,
+  "price": {
+    "amount": 0.0,
+    "currency": "USD"
+  },
+  "primaryCategoryId": 10,
+  "status": "DISABLED",
+  "urlName": "puppet-for-partner-sales-engineers-assesssment",
+  "visibility": "DEPRECATED"
+}

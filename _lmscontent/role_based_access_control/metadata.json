@@ -1,1 +1,27 @@
-{"UUID":"10683d9a-8cf1-3d7c-adba-a1cd94c0c867","_displayName_":"Role Based Access Control","_keyword_":"content_component","created":"2017-07-27 09:56:16","createdById":31489,"deprecatedBy":"","duration":{"days":0,"minutesPerDay":7},"generateCertificate":"DEFAULT","generateProofOfCompletion":"DEFAULT","id":260,"modified":"2017-08-03 13:14:25","modifiedById":35,"name":"Role Based Access Control","orderNumber":0,"price":{"amount":0.0,"currency":"USD"},"primaryCategoryId":10,"status":"DISABLED","urlName":"role-based-access-control","visibility":"DEPRECATED"}
+{
+  "UUID": "10683d9a-8cf1-3d7c-adba-a1cd94c0c867",
+  "_displayName_": "Role Based Access Control",
+  "_keyword_": "content_component",
+  "created": "2017-07-27 09:56:16",
+  "createdById": 31489,
+  "deprecatedBy": "",
+  "duration": {
+    "days": 0,
+    "minutesPerDay": 7
+  },
+  "generateCertificate": "DEFAULT",
+  "generateProofOfCompletion": "DEFAULT",
+  "id": 260,
+  "modified": "2017-08-03 13:14:25",
+  "modifiedById": 35,
+  "name": "Role Based Access Control",
+  "orderNumber": 0,
+  "price": {
+    "amount": 0.0,
+    "currency": "USD"
+  },
+  "primaryCategoryId": 10,
+  "status": "DISABLED",
+  "urlName": "role-based-access-control",
+  "visibility": "DEPRECATED"
+}

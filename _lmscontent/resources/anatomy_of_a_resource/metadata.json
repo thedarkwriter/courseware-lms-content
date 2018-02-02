@@ -1,1 +1,37 @@
-{"UUID":"7061f094-5ec3-3a6d-a2ef-b172089fb8ee","_displayName_":"Resources - Anatomy of a Resource","_keyword_":"content_component","created":"2017-12-14 15:56:49","createdById":49633,"customField01":"","customField02":"","customField03":"","customField04":"","customField05":"","customField06":"","customField07":"","customField08":"","customField09":"","customField10":"","deprecatedBy":"","duration":{"days":0,"minutesPerDay":0},"generateCertificate":"DEFAULT","generateProofOfCompletion":"DEFAULT","id":363,"modified":"2018-01-25 15:40:18","modifiedById":31489,"name":"Resources - Anatomy of a Resource","orderNumber":0,"price":{"amount":0.0,"currency":"USD"},"primaryCategoryId":7,"status":"ACTIVE_COMPONENT","urlName":"resources-anatomy-of-a-resource","visibility":"HIDDEN"}
+{
+  "UUID": "7061f094-5ec3-3a6d-a2ef-b172089fb8ee",
+  "_displayName_": "Resources - Anatomy of a Resource",
+  "_keyword_": "content_component",
+  "created": "2017-12-14 15:56:49",
+  "createdById": 49633,
+  "customField01": "",
+  "customField02": "",
+  "customField03": "",
+  "customField04": "",
+  "customField05": "",
+  "customField06": "",
+  "customField07": "",
+  "customField08": "",
+  "customField09": "",
+  "customField10": "",
+  "deprecatedBy": "",
+  "duration": {
+    "days": 0,
+    "minutesPerDay": 0
+  },
+  "generateCertificate": "DEFAULT",
+  "generateProofOfCompletion": "DEFAULT",
+  "id": 363,
+  "modified": "2018-01-25 15:40:18",
+  "modifiedById": 31489,
+  "name": "Resources - Anatomy of a Resource",
+  "orderNumber": 0,
+  "price": {
+    "amount": 0.0,
+    "currency": "USD"
+  },
+  "primaryCategoryId": 7,
+  "status": "ACTIVE_COMPONENT",
+  "urlName": "resources-anatomy-of-a-resource",
+  "visibility": "HIDDEN"
+}

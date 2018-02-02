@@ -1,1 +1,32 @@
-{"UUID":"d2beaf89-2940-3f8b-9d53-fef2ca99f7fc","_displayName_":"Managing SSH Keys","_keyword_":"e_learning_component","allowReview":false,"created":"2015-05-04 17:10:41","createdById":3,"deprecatedBy":"","duration":{"days":0,"minutesPerDay":10},"generateCertificate":"DEFAULT","generateProofOfCompletion":"DEFAULT","id":173,"launchWithScooter":false,"learndotCourse":2573,"learndotDomain":"puppetlabs.learndot.com","maxAttempts":-1,"modified":"2017-04-27 11:17:06","modifiedById":35,"name":"Managing SSH Keys","orderNumber":21,"price":{"amount":0.0,"currency":"USD"},"primaryCategoryId":7,"status":"DISABLED","urlName":"managing-ssh-keys","visibility":"DEPRECATED"}
+{
+  "UUID": "d2beaf89-2940-3f8b-9d53-fef2ca99f7fc",
+  "_displayName_": "Managing SSH Keys",
+  "_keyword_": "e_learning_component",
+  "allowReview": false,
+  "created": "2015-05-04 17:10:41",
+  "createdById": 3,
+  "deprecatedBy": "",
+  "duration": {
+    "days": 0,
+    "minutesPerDay": 10
+  },
+  "generateCertificate": "DEFAULT",
+  "generateProofOfCompletion": "DEFAULT",
+  "id": 173,
+  "launchWithScooter": false,
+  "learndotCourse": 2573,
+  "learndotDomain": "puppetlabs.learndot.com",
+  "maxAttempts": -1,
+  "modified": "2017-04-27 11:17:06",
+  "modifiedById": 35,
+  "name": "Managing SSH Keys",
+  "orderNumber": 21,
+  "price": {
+    "amount": 0.0,
+    "currency": "USD"
+  },
+  "primaryCategoryId": 7,
+  "status": "DISABLED",
+  "urlName": "managing-ssh-keys",
+  "visibility": "DEPRECATED"
+}

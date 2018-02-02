@@ -1,1 +1,27 @@
-{"UUID":"c6fcf26e-2751-38fa-9eb6-5e632f643376","_displayName_":"Separating Data from Code","_keyword_":"content_component","created":"2017-07-27 10:51:27","createdById":31489,"deprecatedBy":"","duration":{"days":0,"minutesPerDay":5},"generateCertificate":"DEFAULT","generateProofOfCompletion":"DEFAULT","id":261,"modified":"2017-08-03 13:24:16","modifiedById":35,"name":"Separating Data from Code","orderNumber":0,"price":{"amount":0.0,"currency":"USD"},"primaryCategoryId":10,"status":"ENABLED","urlName":"an-introduction-to-hiera","visibility":"DEPRECATED"}
+{
+  "UUID": "c6fcf26e-2751-38fa-9eb6-5e632f643376",
+  "_displayName_": "Separating Data from Code",
+  "_keyword_": "content_component",
+  "created": "2017-07-27 10:51:27",
+  "createdById": 31489,
+  "deprecatedBy": "",
+  "duration": {
+    "days": 0,
+    "minutesPerDay": 5
+  },
+  "generateCertificate": "DEFAULT",
+  "generateProofOfCompletion": "DEFAULT",
+  "id": 261,
+  "modified": "2017-08-03 13:24:16",
+  "modifiedById": 35,
+  "name": "Separating Data from Code",
+  "orderNumber": 0,
+  "price": {
+    "amount": 0.0,
+    "currency": "USD"
+  },
+  "primaryCategoryId": 10,
+  "status": "ENABLED",
+  "urlName": "an-introduction-to-hiera",
+  "visibility": "DEPRECATED"
+}

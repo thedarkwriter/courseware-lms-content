@@ -1,1 +1,28 @@
-{"UUID":"03c7ee06-2bd8-3e37-94a5-44e01bc68fdf","_displayName_":"01. Event Inspector- Video","_keyword_":"content_component","created":"2015-02-04 11:36:18","createdById":3,"deprecatedBy":"","duration":{"days":0,"minutesPerDay":0},"generateCertificate":"DEFAULT","generateProofOfCompletion":"DEFAULT","id":78,"modified":"2015-02-04 11:36:18","modifiedById":3,"name":"01. Event Inspector- Video","orderNumber":0,"price":{"amount":0.0,"currency":"USD"},"primaryCategoryId":1,"providerId":1,"status":"ACTIVE_COMPONENT","urlName":"01-event-inspector--video","visibility":"HIDDEN"}
+{
+  "UUID": "03c7ee06-2bd8-3e37-94a5-44e01bc68fdf",
+  "_displayName_": "01. Event Inspector- Video",
+  "_keyword_": "content_component",
+  "created": "2015-02-04 11:36:18",
+  "createdById": 3,
+  "deprecatedBy": "",
+  "duration": {
+    "days": 0,
+    "minutesPerDay": 0
+  },
+  "generateCertificate": "DEFAULT",
+  "generateProofOfCompletion": "DEFAULT",
+  "id": 78,
+  "modified": "2015-02-04 11:36:18",
+  "modifiedById": 3,
+  "name": "01. Event Inspector- Video",
+  "orderNumber": 0,
+  "price": {
+    "amount": 0.0,
+    "currency": "USD"
+  },
+  "primaryCategoryId": 1,
+  "providerId": 1,
+  "status": "ACTIVE_COMPONENT",
+  "urlName": "01-event-inspector--video",
+  "visibility": "HIDDEN"
+}

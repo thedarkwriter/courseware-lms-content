@@ -1,1 +1,40 @@
-{"UUID":"32134a7b-d3d7-3256-884c-87012aa06ee6","_displayName_":"Puppet Essentials for Windows","_keyword_":"course","additionalNotes":"<style>\r\n  #content-section-additionalNotes h2 { display: none };\r\n</style>\r\n<p>\r\n<a class=\"btn\" href=\"https://learn.puppet.com/search?courseId=5&locationId=0\">Find a Class</a> or see the full class schedule below:\r\n</p>","courseVersion":"","coursewareProvided":true,"coursewareUrl":"","created":"2014-10-29 16:11:06","createdById":3,"deprecatedBy":"","duration":{"days":3,"minutesPerDay":180},"earlyBirdDays":0,"expiryDays":365,"generateCertificate":"DEFAULT","generateProofOfCompletion":"DEFAULT","id":5,"language":"en","modified":"2017-02-02 10:08:07","modifiedById":38,"name":"Puppet Essentials for Windows","orderNumber":6,"price":{"amount":1000.0,"currency":"USD"},"priceMultiplier":1.0,"primaryCategoryId":8,"priority":3,"providerId":1,"purchasableAsEngagement":false,"shared":false,"status":"ENABLED","theyTookThisCourse":"","urlName":"puppet-essentials-for-windows","visibility":"PUBLIC"}
+{
+  "UUID": "32134a7b-d3d7-3256-884c-87012aa06ee6",
+  "_displayName_": "Puppet Essentials for Windows",
+  "_keyword_": "course",
+  "additionalNotes": "<style>\r\n  #content-section-additionalNotes h2 { display: none };\r\n</style>\r\n<p>\r\n<a class=\"btn\" href=\"https://learn.puppet.com/search?courseId=5&locationId=0\">Find a Class</a> or see the full class schedule below:\r\n</p>",
+  "courseVersion": "",
+  "coursewareProvided": true,
+  "coursewareUrl": "",
+  "created": "2014-10-29 16:11:06",
+  "createdById": 3,
+  "deprecatedBy": "",
+  "duration": {
+    "days": 3,
+    "minutesPerDay": 180
+  },
+  "earlyBirdDays": 0,
+  "expiryDays": 365,
+  "generateCertificate": "DEFAULT",
+  "generateProofOfCompletion": "DEFAULT",
+  "id": 5,
+  "language": "en",
+  "modified": "2017-02-02 10:08:07",
+  "modifiedById": 38,
+  "name": "Puppet Essentials for Windows",
+  "orderNumber": 6,
+  "price": {
+    "amount": 1000.0,
+    "currency": "USD"
+  },
+  "priceMultiplier": 1.0,
+  "primaryCategoryId": 8,
+  "priority": 3,
+  "providerId": 1,
+  "purchasableAsEngagement": false,
+  "shared": false,
+  "status": "ENABLED",
+  "theyTookThisCourse": "",
+  "urlName": "puppet-essentials-for-windows",
+  "visibility": "PUBLIC"
+}

@@ -1,1 +1,27 @@
-{"UUID":"43e8cb13-bf13-3e6e-b6d1-81bb567034a5","_displayName_":"Getting Started with Hiera - Part 4","_keyword_":"content_component","created":"2016-07-13 11:49:25","createdById":35,"deprecatedBy":"","duration":{"days":0,"minutesPerDay":0},"generateCertificate":"DEFAULT","generateProofOfCompletion":"DEFAULT","id":223,"modified":"2016-11-15 12:01:35","modifiedById":35,"name":"Getting Started with Hiera - Part 4","orderNumber":0,"price":{"amount":0.0,"currency":"USD"},"primaryCategoryId":7,"status":"ACTIVE_COMPONENT","urlName":"getting-started-with-hiera---part-4","visibility":"HIDDEN"}
+{
+  "UUID": "43e8cb13-bf13-3e6e-b6d1-81bb567034a5",
+  "_displayName_": "Getting Started with Hiera - Part 4",
+  "_keyword_": "content_component",
+  "created": "2016-07-13 11:49:25",
+  "createdById": 35,
+  "deprecatedBy": "",
+  "duration": {
+    "days": 0,
+    "minutesPerDay": 0
+  },
+  "generateCertificate": "DEFAULT",
+  "generateProofOfCompletion": "DEFAULT",
+  "id": 223,
+  "modified": "2016-11-15 12:01:35",
+  "modifiedById": 35,
+  "name": "Getting Started with Hiera - Part 4",
+  "orderNumber": 0,
+  "price": {
+    "amount": 0.0,
+    "currency": "USD"
+  },
+  "primaryCategoryId": 7,
+  "status": "ACTIVE_COMPONENT",
+  "urlName": "getting-started-with-hiera---part-4",
+  "visibility": "HIDDEN"
+}

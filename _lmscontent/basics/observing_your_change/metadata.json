@@ -1,1 +1,37 @@
-{"UUID":"5801e61f-fa74-32d9-b1c8-0d912b1b603e","_displayName_":"Basics - Observing Your Change","_keyword_":"content_component","created":"2017-11-09 14:28:11","createdById":49633,"customField01":"","customField02":"","customField03":"","customField04":"","customField05":"","customField06":"","customField07":"","customField08":"","customField09":"","customField10":"","deprecatedBy":"","duration":{"days":0,"minutesPerDay":0},"generateCertificate":"DEFAULT","generateProofOfCompletion":"DEFAULT","id":333,"modified":"2018-01-12 16:07:17","modifiedById":49633,"name":"Basics - Observing Your Change","orderNumber":0,"price":{"amount":0.0,"currency":"USD"},"primaryCategoryId":7,"status":"ACTIVE_COMPONENT","urlName":"basics-observing-your-change","visibility":"HIDDEN"}
+{
+  "UUID": "5801e61f-fa74-32d9-b1c8-0d912b1b603e",
+  "_displayName_": "Basics - Observing Your Change",
+  "_keyword_": "content_component",
+  "created": "2017-11-09 14:28:11",
+  "createdById": 49633,
+  "customField01": "",
+  "customField02": "",
+  "customField03": "",
+  "customField04": "",
+  "customField05": "",
+  "customField06": "",
+  "customField07": "",
+  "customField08": "",
+  "customField09": "",
+  "customField10": "",
+  "deprecatedBy": "",
+  "duration": {
+    "days": 0,
+    "minutesPerDay": 0
+  },
+  "generateCertificate": "DEFAULT",
+  "generateProofOfCompletion": "DEFAULT",
+  "id": 333,
+  "modified": "2018-01-12 16:07:17",
+  "modifiedById": 49633,
+  "name": "Basics - Observing Your Change",
+  "orderNumber": 0,
+  "price": {
+    "amount": 0.0,
+    "currency": "USD"
+  },
+  "primaryCategoryId": 7,
+  "status": "ACTIVE_COMPONENT",
+  "urlName": "basics-observing-your-change",
+  "visibility": "HIDDEN"
+}

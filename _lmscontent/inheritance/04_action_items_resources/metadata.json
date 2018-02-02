@@ -1,1 +1,28 @@
-{"UUID":"698fab82-e6ee-33e0-a6d8-4e09434d0f15","_displayName_":"04. Inheritance- Action Items & Resources","_keyword_":"content_component","created":"2015-02-03 12:14:49","createdById":3,"deprecatedBy":"","duration":{"days":0,"minutesPerDay":0},"generateCertificate":"DEFAULT","generateProofOfCompletion":"DEFAULT","id":52,"modified":"2015-02-04 10:42:47","modifiedById":3,"name":"04. Inheritance- Action Items & Resources","orderNumber":0,"price":{"amount":0.0,"currency":"USD"},"primaryCategoryId":1,"providerId":1,"status":"ACTIVE_COMPONENT","urlName":"04-inheritance--action-items-resources","visibility":"HIDDEN"}
+{
+  "UUID": "698fab82-e6ee-33e0-a6d8-4e09434d0f15",
+  "_displayName_": "04. Inheritance- Action Items & Resources",
+  "_keyword_": "content_component",
+  "created": "2015-02-03 12:14:49",
+  "createdById": 3,
+  "deprecatedBy": "",
+  "duration": {
+    "days": 0,
+    "minutesPerDay": 0
+  },
+  "generateCertificate": "DEFAULT",
+  "generateProofOfCompletion": "DEFAULT",
+  "id": 52,
+  "modified": "2015-02-04 10:42:47",
+  "modifiedById": 3,
+  "name": "04. Inheritance- Action Items & Resources",
+  "orderNumber": 0,
+  "price": {
+    "amount": 0.0,
+    "currency": "USD"
+  },
+  "primaryCategoryId": 1,
+  "providerId": 1,
+  "status": "ACTIVE_COMPONENT",
+  "urlName": "04-inheritance--action-items-resources",
+  "visibility": "HIDDEN"
+}

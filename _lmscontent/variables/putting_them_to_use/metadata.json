@@ -1,1 +1,37 @@
-{"UUID":"43f335a6-51ac-32f2-b72b-8e951c4f3b51","_displayName_":"Variables - Putting Them To Use","_keyword_":"content_component","created":"2017-12-04 13:39:41","createdById":49633,"customField01":"","customField02":"","customField03":"","customField04":"","customField05":"","customField06":"","customField07":"","customField08":"","customField09":"","customField10":"","deprecatedBy":"","duration":{"days":0,"minutesPerDay":5},"generateCertificate":"DEFAULT","generateProofOfCompletion":"DEFAULT","id":349,"modified":"2018-01-12 16:56:26","modifiedById":49633,"name":"Variables - Putting Them To Use","orderNumber":0,"price":{"amount":0.0,"currency":"USD"},"primaryCategoryId":7,"status":"ACTIVE_COMPONENT","urlName":"variables---putting-them-to-use","visibility":"HIDDEN"}
+{
+  "UUID": "43f335a6-51ac-32f2-b72b-8e951c4f3b51",
+  "_displayName_": "Variables - Putting Them To Use",
+  "_keyword_": "content_component",
+  "created": "2017-12-04 13:39:41",
+  "createdById": 49633,
+  "customField01": "",
+  "customField02": "",
+  "customField03": "",
+  "customField04": "",
+  "customField05": "",
+  "customField06": "",
+  "customField07": "",
+  "customField08": "",
+  "customField09": "",
+  "customField10": "",
+  "deprecatedBy": "",
+  "duration": {
+    "days": 0,
+    "minutesPerDay": 5
+  },
+  "generateCertificate": "DEFAULT",
+  "generateProofOfCompletion": "DEFAULT",
+  "id": 349,
+  "modified": "2018-01-12 16:56:26",
+  "modifiedById": 49633,
+  "name": "Variables - Putting Them To Use",
+  "orderNumber": 0,
+  "price": {
+    "amount": 0.0,
+    "currency": "USD"
+  },
+  "primaryCategoryId": 7,
+  "status": "ACTIVE_COMPONENT",
+  "urlName": "variables---putting-them-to-use",
+  "visibility": "HIDDEN"
+}

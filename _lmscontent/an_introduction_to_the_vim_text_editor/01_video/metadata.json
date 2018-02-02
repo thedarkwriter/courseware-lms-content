@@ -1,1 +1,28 @@
-{"UUID":"24c72de0-2391-3bb0-be84-fcea40289d40","_displayName_":"01. An Introduction to the Vim Text Editor - Video","_keyword_":"content_component","created":"2015-02-04 14:42:10","createdById":3,"deprecatedBy":"","duration":{"days":0,"minutesPerDay":0},"generateCertificate":"DEFAULT","generateProofOfCompletion":"DEFAULT","id":145,"modified":"2015-02-04 14:42:10","modifiedById":3,"name":"01. An Introduction to the Vim Text Editor - Video","orderNumber":0,"price":{"amount":0.0,"currency":"USD"},"primaryCategoryId":1,"providerId":1,"status":"ACTIVE_COMPONENT","urlName":"01-an-introduction-to-the-vim-text-editor---video","visibility":"HIDDEN"}
+{
+  "UUID": "24c72de0-2391-3bb0-be84-fcea40289d40",
+  "_displayName_": "01. An Introduction to the Vim Text Editor - Video",
+  "_keyword_": "content_component",
+  "created": "2015-02-04 14:42:10",
+  "createdById": 3,
+  "deprecatedBy": "",
+  "duration": {
+    "days": 0,
+    "minutesPerDay": 0
+  },
+  "generateCertificate": "DEFAULT",
+  "generateProofOfCompletion": "DEFAULT",
+  "id": 145,
+  "modified": "2015-02-04 14:42:10",
+  "modifiedById": 3,
+  "name": "01. An Introduction to the Vim Text Editor - Video",
+  "orderNumber": 0,
+  "price": {
+    "amount": 0.0,
+    "currency": "USD"
+  },
+  "primaryCategoryId": 1,
+  "providerId": 1,
+  "status": "ACTIVE_COMPONENT",
+  "urlName": "01-an-introduction-to-the-vim-text-editor---video",
+  "visibility": "HIDDEN"
+}

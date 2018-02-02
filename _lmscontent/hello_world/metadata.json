@@ -1,1 +1,37 @@
-{"UUID":"866e40da-4e4b-34c6-ab66-1f0372bd9538","_displayName_":"Hello world","_keyword_":"content_component","created":"2017-11-09 14:00:34","createdById":49633,"customField01":"","customField02":"","customField03":"","customField04":"","customField05":"","customField06":"","customField07":"","customField08":"","customField09":"","customField10":"","deprecatedBy":"","duration":{"days":0,"minutesPerDay":0},"generateCertificate":"DEFAULT","generateProofOfCompletion":"DEFAULT","id":329,"modified":"2018-01-29 11:54:23","modifiedById":38,"name":"Hello world","orderNumber":0,"price":{"amount":0.0,"currency":"USD"},"primaryCategoryId":7,"status":"ACTIVE_COMPONENT","urlName":"hello-world","visibility":"HIDDEN"}
+{
+  "UUID": "866e40da-4e4b-34c6-ab66-1f0372bd9538",
+  "_displayName_": "Hello world",
+  "_keyword_": "content_component",
+  "created": "2017-11-09 14:00:34",
+  "createdById": 49633,
+  "customField01": "",
+  "customField02": "",
+  "customField03": "",
+  "customField04": "",
+  "customField05": "",
+  "customField06": "",
+  "customField07": "",
+  "customField08": "",
+  "customField09": "",
+  "customField10": "",
+  "deprecatedBy": "",
+  "duration": {
+    "days": 0,
+    "minutesPerDay": 0
+  },
+  "generateCertificate": "DEFAULT",
+  "generateProofOfCompletion": "DEFAULT",
+  "id": 329,
+  "modified": "2018-01-29 11:54:23",
+  "modifiedById": 38,
+  "name": "Hello world",
+  "orderNumber": 0,
+  "price": {
+    "amount": 0.0,
+    "currency": "USD"
+  },
+  "primaryCategoryId": 7,
+  "status": "ACTIVE_COMPONENT",
+  "urlName": "hello-world",
+  "visibility": "HIDDEN"
+}

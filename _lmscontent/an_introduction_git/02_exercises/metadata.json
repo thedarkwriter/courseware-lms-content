@@ -1,1 +1,28 @@
-{"UUID":"512f528f-3fa0-3965-9257-0cbb969a960a","_displayName_":"02. An Introduction Git - Exercises","_keyword_":"content_component","created":"2015-02-04 14:51:43","createdById":3,"deprecatedBy":"","duration":{"days":0,"minutesPerDay":0},"generateCertificate":"DEFAULT","generateProofOfCompletion":"DEFAULT","id":151,"modified":"2015-02-04 14:51:43","modifiedById":3,"name":"02. An Introduction Git - Exercises","orderNumber":0,"price":{"amount":0.0,"currency":"USD"},"primaryCategoryId":1,"providerId":1,"status":"ACTIVE_COMPONENT","urlName":"02-an-introduction-git---exercises","visibility":"HIDDEN"}
+{
+  "UUID": "512f528f-3fa0-3965-9257-0cbb969a960a",
+  "_displayName_": "02. An Introduction Git - Exercises",
+  "_keyword_": "content_component",
+  "created": "2015-02-04 14:51:43",
+  "createdById": 3,
+  "deprecatedBy": "",
+  "duration": {
+    "days": 0,
+    "minutesPerDay": 0
+  },
+  "generateCertificate": "DEFAULT",
+  "generateProofOfCompletion": "DEFAULT",
+  "id": 151,
+  "modified": "2015-02-04 14:51:43",
+  "modifiedById": 3,
+  "name": "02. An Introduction Git - Exercises",
+  "orderNumber": 0,
+  "price": {
+    "amount": 0.0,
+    "currency": "USD"
+  },
+  "primaryCategoryId": 1,
+  "providerId": 1,
+  "status": "ACTIVE_COMPONENT",
+  "urlName": "02-an-introduction-git---exercises",
+  "visibility": "HIDDEN"
+}

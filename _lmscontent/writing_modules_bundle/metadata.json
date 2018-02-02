@@ -1,1 +1,28 @@
-{"UUID":"66110c12-4d5a-3503-9d15-3b5839fe71cb","_displayName_":"Writing Modules Bundle","_keyword_":"learning_pathway","created":"2015-06-05 10:40:24","createdById":7,"deprecatedBy":"","duration":{"days":0,"minutesPerDay":0},"generateCertificate":"DEFAULT","generateProofOfCompletion":"DEFAULT","id":198,"modified":"2016-05-13 14:31:03","modifiedById":38,"name":"Writing Modules Bundle","orderNumber":0,"price":{"amount":400.0,"currency":"USD"},"primaryCategoryId":8,"requirementsNeededToPass":5,"status":"DISABLED","urlName":"writing-modules-bundle","visibility":"DEPRECATED"}
+{
+  "UUID": "66110c12-4d5a-3503-9d15-3b5839fe71cb",
+  "_displayName_": "Writing Modules Bundle",
+  "_keyword_": "learning_pathway",
+  "created": "2015-06-05 10:40:24",
+  "createdById": 7,
+  "deprecatedBy": "",
+  "duration": {
+    "days": 0,
+    "minutesPerDay": 0
+  },
+  "generateCertificate": "DEFAULT",
+  "generateProofOfCompletion": "DEFAULT",
+  "id": 198,
+  "modified": "2016-05-13 14:31:03",
+  "modifiedById": 38,
+  "name": "Writing Modules Bundle",
+  "orderNumber": 0,
+  "price": {
+    "amount": 400.0,
+    "currency": "USD"
+  },
+  "primaryCategoryId": 8,
+  "requirementsNeededToPass": 5,
+  "status": "DISABLED",
+  "urlName": "writing-modules-bundle",
+  "visibility": "DEPRECATED"
+}

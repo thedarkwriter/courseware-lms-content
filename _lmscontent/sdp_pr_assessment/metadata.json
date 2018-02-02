@@ -1,1 +1,28 @@
-{"UUID":"321508d7-197a-31d4-ba0d-674cbbd7783f","_displayName_":"SDP Pre-assessment","_keyword_":"exam_component","created":"2017-03-01 13:34:08","createdById":31489,"deprecatedBy":"","duration":{"days":0,"minutesPerDay":0},"generateCertificate":"DEFAULT","generateProofOfCompletion":"YES","id":233,"launchWithScooter":false,"modified":"2017-04-25 16:01:22","modifiedById":38,"name":"SDP Pre-assessment","orderNumber":0,"price":{"amount":0.0,"currency":"USD"},"primaryCategoryId":10,"status":"DISABLED","urlName":"sdp-pre-assessment","visibility":"HIDDEN"}
+{
+  "UUID": "321508d7-197a-31d4-ba0d-674cbbd7783f",
+  "_displayName_": "SDP Pre-assessment",
+  "_keyword_": "exam_component",
+  "created": "2017-03-01 13:34:08",
+  "createdById": 31489,
+  "deprecatedBy": "",
+  "duration": {
+    "days": 0,
+    "minutesPerDay": 0
+  },
+  "generateCertificate": "DEFAULT",
+  "generateProofOfCompletion": "YES",
+  "id": 233,
+  "launchWithScooter": false,
+  "modified": "2017-04-25 16:01:22",
+  "modifiedById": 38,
+  "name": "SDP Pre-assessment",
+  "orderNumber": 0,
+  "price": {
+    "amount": 0.0,
+    "currency": "USD"
+  },
+  "primaryCategoryId": 10,
+  "status": "DISABLED",
+  "urlName": "sdp-pre-assessment",
+  "visibility": "HIDDEN"
+}

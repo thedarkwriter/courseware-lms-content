@@ -1,1 +1,32 @@
-{"UUID":"323a85e7-c333-32f9-87f4-bb5ce72019cc","_displayName_":"An Introduction to Facter","_keyword_":"e_learning_component","allowReview":false,"created":"2015-05-04 17:15:25","createdById":3,"deprecatedBy":"","duration":{"days":0,"minutesPerDay":10},"generateCertificate":"DEFAULT","generateProofOfCompletion":"DEFAULT","id":177,"launchWithScooter":false,"learndotCourse":2592,"learndotDomain":"puppetlabs.learndot.com","maxAttempts":-1,"modified":"2016-07-05 12:09:19","modifiedById":38,"name":"An Introduction to Facter","orderNumber":6,"price":{"amount":0.0,"currency":"USD"},"primaryCategoryId":7,"status":"ENABLED","urlName":"an-introduction-to-facter","visibility":"PUBLIC"}
+{
+  "UUID": "323a85e7-c333-32f9-87f4-bb5ce72019cc",
+  "_displayName_": "An Introduction to Facter",
+  "_keyword_": "e_learning_component",
+  "allowReview": false,
+  "created": "2015-05-04 17:15:25",
+  "createdById": 3,
+  "deprecatedBy": "",
+  "duration": {
+    "days": 0,
+    "minutesPerDay": 10
+  },
+  "generateCertificate": "DEFAULT",
+  "generateProofOfCompletion": "DEFAULT",
+  "id": 177,
+  "launchWithScooter": false,
+  "learndotCourse": 2592,
+  "learndotDomain": "puppetlabs.learndot.com",
+  "maxAttempts": -1,
+  "modified": "2016-07-05 12:09:19",
+  "modifiedById": 38,
+  "name": "An Introduction to Facter",
+  "orderNumber": 6,
+  "price": {
+    "amount": 0.0,
+    "currency": "USD"
+  },
+  "primaryCategoryId": 7,
+  "status": "ENABLED",
+  "urlName": "an-introduction-to-facter",
+  "visibility": "PUBLIC"
+}

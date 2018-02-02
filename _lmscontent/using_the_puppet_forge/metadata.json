@@ -1,1 +1,27 @@
-{"UUID":"c2485d3f-2fa7-374c-b288-c3ff9c180b55","_displayName_":"Using the Puppet Forge","_keyword_":"content_component","created":"2017-07-27 12:43:35","createdById":31489,"deprecatedBy":"","duration":{"days":0,"minutesPerDay":5},"generateCertificate":"DEFAULT","generateProofOfCompletion":"DEFAULT","id":264,"modified":"2017-08-03 13:34:12","modifiedById":35,"name":"Using the Puppet Forge","orderNumber":0,"price":{"amount":0.0,"currency":"USD"},"primaryCategoryId":10,"status":"DISABLED","urlName":"using-the-puppet-forge","visibility":"DEPRECATED"}
+{
+  "UUID": "c2485d3f-2fa7-374c-b288-c3ff9c180b55",
+  "_displayName_": "Using the Puppet Forge",
+  "_keyword_": "content_component",
+  "created": "2017-07-27 12:43:35",
+  "createdById": 31489,
+  "deprecatedBy": "",
+  "duration": {
+    "days": 0,
+    "minutesPerDay": 5
+  },
+  "generateCertificate": "DEFAULT",
+  "generateProofOfCompletion": "DEFAULT",
+  "id": 264,
+  "modified": "2017-08-03 13:34:12",
+  "modifiedById": 35,
+  "name": "Using the Puppet Forge",
+  "orderNumber": 0,
+  "price": {
+    "amount": 0.0,
+    "currency": "USD"
+  },
+  "primaryCategoryId": 10,
+  "status": "DISABLED",
+  "urlName": "using-the-puppet-forge",
+  "visibility": "DEPRECATED"
+}

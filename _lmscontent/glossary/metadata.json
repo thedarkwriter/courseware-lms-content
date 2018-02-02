@@ -1,1 +1,108 @@
-{"UUID":"a626d887-c200-351c-8e7c-6abb9a4dacc2","_displayName_":"Glossary","_keyword_":"course_pathway","components":[{"_displayName_":"Course Requirement #324","_keyword_":"course_requirement","component":{"UUID":"b8995565-7919-3356-99c0-724f79daf45c","_displayName_":"Glossary - Content","_keyword_":"content_component","content":"<h3 id=\"toc_0\">Glossary</h3>\r\n<p><strong>Declarative Language:</strong> A style of coding that describes the end result, without the steps of how to do it. <a href=\"https://www.netguru.co/blog/imperative-vs-declarative\">You can learn more about declarative languages and why they are so great here</a>.</p>\r\n<p><strong>Resource:</strong> Something on a server&nbsp;you would like to manage. <a href=\"https://puppet.com/docs/puppet/5.3/lang_resources.html\">Learn more about resources here</a>.</p>\r\n<p><strong>Attribute:</strong> A manageable configuration for a resource. For example, the owner of a file. <a href=\"https://en.wikipedia.org/wiki/Attribute_(computing)\">Here&rsquo;s a more in depth explanation of attributes.</a></p>\r\n<p><strong>Node</strong>: A single machine that uses Puppet. For example, your laptop could be a node. An individual server could also be a node. <a href=\"https://puppet.com/docs/puppet/5.0/lang_node_definitions.html\">Here&rsquo;s some more info about Puppet Nodes.</a></p>\r\n<p><strong>Syntax Validation:</strong> Checking that your code is in the right format without checking what it's actually doing. <a href=\"https://puppet.com/docs/puppet/5.3/style_guide.html\">You can learn about Puppet Syntax here</a>.</p>\r\n<p><strong>Facts:</strong> Information about a specific node written in the form of a key-value pair. This information might include the operating system being used, the IP address, or whether or not it is a virtual machine. <a href=\"https://puppet.com/blog/fact\">Learn more about facts here</a>.</p>\r\n<p><strong>Array</strong>: An array is a series of values that looks like ['one', 'two', 'three'], denoted by square brackets. <a href=\"https://techterms.com/definition/array\">Learn more about arrays here.</a></p>\r\n<p><strong>Hash:</strong> A hash is a series of key-value pairs that looks like { 'a' =&gt; 'A', 'b' =&gt; 'B', 'c' =&gt;'C' } denoted by curly braces. <a href=\"https://www.techopedia.com/definition/25432/hash-code\">Learn more about hashes here.</a></p>\r\n<p><strong>Directory:</strong> In computing, a directory is a catalog containing related files, also sometimes called a folder. A directory can contain other directories (known as subdirectories). These are typically referred to as having a parent-child relationship, with the top-most directory being referred to as the &lsquo;root&rsquo;. <a href=\"https://en.wikipedia.org/wiki/Directory_(computing)\">Learn more about directories here.</a></p>\r\n<p><strong>Symlink:</strong> Also known as a symbolic link, or a soft link. A symlink points to the entry that contains the data; it does not contain the data itself. <a href=\"https://en.wikipedia.org/wiki/Symbolic_link\">Learn more about symlinks here.</a></p>","created":"2017-11-17 10:02:09","createdById":49633,"customField01":"","customField02":"","customField03":"","customField04":"","customField05":"","customField06":"","customField07":"","customField08":"","customField09":"","customField10":"","deprecatedBy":"","duration":{"days":0,"minutesPerDay":0},"generateCertificate":"DEFAULT","generateProofOfCompletion":"DEFAULT","id":348,"modified":"2018-01-05 15:07:40","modifiedById":31489,"name":"Glossary - Content","orderNumber":0,"price":{"amount":0.0,"currency":"USD"},"primaryCategoryId":7,"status":"ACTIVE_COMPONENT","urlName":"glossary","visibility":"HIDDEN"},"componentId":348,"componentUUID":"b8995565-7919-3356-99c0-724f79daf45c","created":"2017-12-04 14:23:15","createdById":49633,"id":324,"modified":"2017-12-04 14:23:15","modifiedById":49633,"name":"Glossary","pathwayId":354,"position":1}],"courseInfo":"","created":"2017-12-04 14:21:47","createdById":49633,"customField01":"","customField02":"","customField03":"","customField04":"","customField05":"","customField06":"","customField07":"","customField08":"","customField09":"","customField10":"","deprecatedBy":"","duration":{"days":0,"minutesPerDay":0},"generateCertificate":"DEFAULT","generateProofOfCompletion":"DEFAULT","id":354,"modified":"2017-12-04 15:55:19","modifiedById":49633,"name":"Glossary","orderNumber":0,"price":{"amount":0.0,"currency":"USD"},"primaryCategoryId":7,"status":"ACTIVE_COMPONENT","type":{"_displayName_":"Module","_keyword_":"course_pathway_type","created":"2015-06-14 23:21:43","id":3,"modified":"2015-06-14 23:21:43","name":"Module","rootType":false,"supportedComponentTypes":["e_learning_component","course","content_component","exam_component"]},"typeId":3,"urlName":"glossary","visibility":"HIDDEN"}
+{
+  "UUID": "a626d887-c200-351c-8e7c-6abb9a4dacc2",
+  "_displayName_": "Glossary",
+  "_keyword_": "course_pathway",
+  "components": [
+    {
+      "_displayName_": "Course Requirement #324",
+      "_keyword_": "course_requirement",
+      "component": {
+        "UUID": "b8995565-7919-3356-99c0-724f79daf45c",
+        "_displayName_": "Glossary - Content",
+        "_keyword_": "content_component",
+        "content": "<h3 id=\"toc_0\">Glossary</h3>\r\n<p><strong>Declarative Language:</strong> A style of coding that describes the end result, without the steps of how to do it. <a href=\"https://www.netguru.co/blog/imperative-vs-declarative\">You can learn more about declarative languages and why they are so great here</a>.</p>\r\n<p><strong>Resource:</strong> Something on a server&nbsp;you would like to manage. <a href=\"https://puppet.com/docs/puppet/5.3/lang_resources.html\">Learn more about resources here</a>.</p>\r\n<p><strong>Attribute:</strong> A manageable configuration for a resource. For example, the owner of a file. <a href=\"https://en.wikipedia.org/wiki/Attribute_(computing)\">Here&rsquo;s a more in depth explanation of attributes.</a></p>\r\n<p><strong>Node</strong>: A single machine that uses Puppet. For example, your laptop could be a node. An individual server could also be a node. <a href=\"https://puppet.com/docs/puppet/5.0/lang_node_definitions.html\">Here&rsquo;s some more info about Puppet Nodes.</a></p>\r\n<p><strong>Syntax Validation:</strong> Checking that your code is in the right format without checking what it's actually doing. <a href=\"https://puppet.com/docs/puppet/5.3/style_guide.html\">You can learn about Puppet Syntax here</a>.</p>\r\n<p><strong>Facts:</strong> Information about a specific node written in the form of a key-value pair. This information might include the operating system being used, the IP address, or whether or not it is a virtual machine. <a href=\"https://puppet.com/blog/fact\">Learn more about facts here</a>.</p>\r\n<p><strong>Array</strong>: An array is a series of values that looks like ['one', 'two', 'three'], denoted by square brackets. <a href=\"https://techterms.com/definition/array\">Learn more about arrays here.</a></p>\r\n<p><strong>Hash:</strong> A hash is a series of key-value pairs that looks like { 'a' =&gt; 'A', 'b' =&gt; 'B', 'c' =&gt;'C' } denoted by curly braces. <a href=\"https://www.techopedia.com/definition/25432/hash-code\">Learn more about hashes here.</a></p>\r\n<p><strong>Directory:</strong> In computing, a directory is a catalog containing related files, also sometimes called a folder. A directory can contain other directories (known as subdirectories). These are typically referred to as having a parent-child relationship, with the top-most directory being referred to as the &lsquo;root&rsquo;. <a href=\"https://en.wikipedia.org/wiki/Directory_(computing)\">Learn more about directories here.</a></p>\r\n<p><strong>Symlink:</strong> Also known as a symbolic link, or a soft link. A symlink points to the entry that contains the data; it does not contain the data itself. <a href=\"https://en.wikipedia.org/wiki/Symbolic_link\">Learn more about symlinks here.</a></p>",
+        "created": "2017-11-17 10:02:09",
+        "createdById": 49633,
+        "customField01": "",
+        "customField02": "",
+        "customField03": "",
+        "customField04": "",
+        "customField05": "",
+        "customField06": "",
+        "customField07": "",
+        "customField08": "",
+        "customField09": "",
+        "customField10": "",
+        "deprecatedBy": "",
+        "duration": {
+          "days": 0,
+          "minutesPerDay": 0
+        },
+        "generateCertificate": "DEFAULT",
+        "generateProofOfCompletion": "DEFAULT",
+        "id": 348,
+        "modified": "2018-01-05 15:07:40",
+        "modifiedById": 31489,
+        "name": "Glossary - Content",
+        "orderNumber": 0,
+        "price": {
+          "amount": 0.0,
+          "currency": "USD"
+        },
+        "primaryCategoryId": 7,
+        "status": "ACTIVE_COMPONENT",
+        "urlName": "glossary",
+        "visibility": "HIDDEN"
+      },
+      "componentId": 348,
+      "componentUUID": "b8995565-7919-3356-99c0-724f79daf45c",
+      "created": "2017-12-04 14:23:15",
+      "createdById": 49633,
+      "id": 324,
+      "modified": "2017-12-04 14:23:15",
+      "modifiedById": 49633,
+      "name": "Glossary",
+      "pathwayId": 354,
+      "position": 1
+    }
+  ],
+  "courseInfo": "",
+  "created": "2017-12-04 14:21:47",
+  "createdById": 49633,
+  "customField01": "",
+  "customField02": "",
+  "customField03": "",
+  "customField04": "",
+  "customField05": "",
+  "customField06": "",
+  "customField07": "",
+  "customField08": "",
+  "customField09": "",
+  "customField10": "",
+  "deprecatedBy": "",
+  "duration": {
+    "days": 0,
+    "minutesPerDay": 0
+  },
+  "generateCertificate": "DEFAULT",
+  "generateProofOfCompletion": "DEFAULT",
+  "id": 354,
+  "modified": "2017-12-04 15:55:19",
+  "modifiedById": 49633,
+  "name": "Glossary",
+  "orderNumber": 0,
+  "price": {
+    "amount": 0.0,
+    "currency": "USD"
+  },
+  "primaryCategoryId": 7,
+  "status": "ACTIVE_COMPONENT",
+  "type": {
+    "_displayName_": "Module",
+    "_keyword_": "course_pathway_type",
+    "created": "2015-06-14 23:21:43",
+    "id": 3,
+    "modified": "2015-06-14 23:21:43",
+    "name": "Module",
+    "rootType": false,
+    "supportedComponentTypes": [
+      "e_learning_component",
+      "course",
+      "content_component",
+      "exam_component"
+    ]
+  },
+  "typeId": 3,
+  "urlName": "glossary",
+  "visibility": "HIDDEN"
+}

@@ -8,7 +8,7 @@
   "customField07": "7",
   "customField08": "8",
   "customField09": "9",
-  "customField10": "10",  
+  "customField10": "10",
   "duration": {
     "days": 0,
     "minutesPerDay": 30
@@ -23,6 +23,6 @@
   },
   "primaryCategoryId": 7,
   "status": "ACTIVE_COMPONENT",
-   "urlName": "zack-smith",
+  "urlName": "zack-smith",
   "visibility": "HIDDEN"
 }

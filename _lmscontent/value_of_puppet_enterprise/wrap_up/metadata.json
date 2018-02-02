@@ -1,1 +1,27 @@
-{"UUID":"ad970c71-17bf-343d-9b56-bced12db2a2e","_displayName_":"Value of Puppet Enterprise: Wrap Up","_keyword_":"content_component","created":"2017-08-03 15:31:35","createdById":31489,"deprecatedBy":"","duration":{"days":0,"minutesPerDay":1},"generateCertificate":"DEFAULT","generateProofOfCompletion":"DEFAULT","id":279,"modified":"2017-08-04 18:08:15","modifiedById":31489,"name":"Value of Puppet Enterprise: Wrap Up","orderNumber":0,"price":{"amount":0.0,"currency":"USD"},"primaryCategoryId":10,"status":"ENABLED","urlName":"value-of-puppet-enterprise-wrap-up","visibility":"DEPRECATED"}
+{
+  "UUID": "ad970c71-17bf-343d-9b56-bced12db2a2e",
+  "_displayName_": "Value of Puppet Enterprise: Wrap Up",
+  "_keyword_": "content_component",
+  "created": "2017-08-03 15:31:35",
+  "createdById": 31489,
+  "deprecatedBy": "",
+  "duration": {
+    "days": 0,
+    "minutesPerDay": 1
+  },
+  "generateCertificate": "DEFAULT",
+  "generateProofOfCompletion": "DEFAULT",
+  "id": 279,
+  "modified": "2017-08-04 18:08:15",
+  "modifiedById": 31489,
+  "name": "Value of Puppet Enterprise: Wrap Up",
+  "orderNumber": 0,
+  "price": {
+    "amount": 0.0,
+    "currency": "USD"
+  },
+  "primaryCategoryId": 10,
+  "status": "ENABLED",
+  "urlName": "value-of-puppet-enterprise-wrap-up",
+  "visibility": "DEPRECATED"
+}

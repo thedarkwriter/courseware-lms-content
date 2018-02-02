@@ -1,1 +1,42 @@
-{"UUID":"a2b4ae20-9155-373f-a27b-45c58639eeb4","_displayName_":"Puppet Syntax","_keyword_":"e_learning_component","allowReview":false,"created":"2017-11-08 14:31:22","createdById":31489,"customField01":"","customField02":"","customField03":"","customField04":"","customField05":"","customField06":"","customField07":"","customField08":"","customField09":"","customField10":"","deprecatedBy":"","duration":{"days":0,"minutesPerDay":30},"generateCertificate":"DEFAULT","generateProofOfCompletion":"DEFAULT","id":326,"launchWithScooter":false,"learndotCourse":7575,"learndotDomain":"puppetlabs.learndot.com","maxAttempts":1,"modified":"2017-11-08 14:31:48","modifiedById":31489,"name":"Puppet Syntax","orderNumber":0,"price":{"amount":0.0,"currency":"USD"},"primaryCategoryId":7,"status":"DISABLED","urlName":"puppet-syntax","visibility":"HIDDEN"}
+{
+  "UUID": "a2b4ae20-9155-373f-a27b-45c58639eeb4",
+  "_displayName_": "Puppet Syntax",
+  "_keyword_": "e_learning_component",
+  "allowReview": false,
+  "created": "2017-11-08 14:31:22",
+  "createdById": 31489,
+  "customField01": "",
+  "customField02": "",
+  "customField03": "",
+  "customField04": "",
+  "customField05": "",
+  "customField06": "",
+  "customField07": "",
+  "customField08": "",
+  "customField09": "",
+  "customField10": "",
+  "deprecatedBy": "",
+  "duration": {
+    "days": 0,
+    "minutesPerDay": 30
+  },
+  "generateCertificate": "DEFAULT",
+  "generateProofOfCompletion": "DEFAULT",
+  "id": 326,
+  "launchWithScooter": false,
+  "learndotCourse": 7575,
+  "learndotDomain": "puppetlabs.learndot.com",
+  "maxAttempts": 1,
+  "modified": "2017-11-08 14:31:48",
+  "modifiedById": 31489,
+  "name": "Puppet Syntax",
+  "orderNumber": 0,
+  "price": {
+    "amount": 0.0,
+    "currency": "USD"
+  },
+  "primaryCategoryId": 7,
+  "status": "DISABLED",
+  "urlName": "puppet-syntax",
+  "visibility": "HIDDEN"
+}

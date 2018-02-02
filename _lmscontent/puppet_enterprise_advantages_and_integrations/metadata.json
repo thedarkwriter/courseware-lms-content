@@ -1,1 +1,385 @@
-{"UUID":"64d8364e-df55-3121-be6c-147861fda1e3","_displayName_":"Puppet Enterprise Advantages and Integrations","_keyword_":"course_pathway","components":[{"_displayName_":"Course Requirement #238","_keyword_":"course_requirement","component":{"UUID":"cb80f59c-38f8-3f9f-97f4-8ab15a0e3653","_displayName_":"Puppet Enterprise Integrations","_keyword_":"content_component","content":"<script src=\"https://fast.wistia.com/embed/medias/4yd52o7ftp.jsonp\" async></script><script src=\"https://fast.wistia.com/assets/external/E-v1.js\" async></script><div class=\"wistia_responsive_padding\" style=\"padding:56.25% 0 0 0;position:relative;\"><div class=\"wistia_responsive_wrapper\" style=\"height:100%;left:0;position:absolute;top:0;width:100%;\"><div class=\"wistia_embed wistia_async_4yd52o7ftp videoFoam=true\" style=\"height:100%;width:100%\">&nbsp;</div></div></div>","created":"2017-08-02 09:55:46","createdById":31489,"deprecatedBy":"","duration":{"days":0,"minutesPerDay":2},"generateCertificate":"DEFAULT","generateProofOfCompletion":"DEFAULT","id":273,"modified":"2017-08-02 09:55:46","modifiedById":31489,"name":"Puppet Enterprise Integrations","orderNumber":0,"price":{"amount":0.0,"currency":"USD"},"primaryCategoryId":10,"status":"ENABLED","summary":"<h2>Summary</h2>\r\n<p>How does Puppet work with cloud, CI, and the countless other tools your clients use? After watching this video, you will know the technologies with which Puppet Enterprise seamlessly integrates. </p>\r\n<h2>Topics Covered</h2>\r\n<ul>\r\n<li>What does Puppet Enterprise integrate with?</li>\r\n</ul>\r\n<h2>Audience</h2>\r\n<p>This training is ideal for sales engineers, non-practitioners, and open source Puppet users.</p>","urlName":"puppet-enterprise-integrations","visibility":"DEPRECATED"},"componentId":273,"componentUUID":"cb80f59c-38f8-3f9f-97f4-8ab15a0e3653","created":"2017-08-02 09:56:04","createdById":31489,"id":238,"modified":"2017-08-03 13:45:55","modifiedById":31489,"name":"Puppet Enterprise Integrations","pathwayId":271,"position":0},{"_displayName_":"Course Requirement #237","_keyword_":"course_requirement","component":{"UUID":"a7284324-eca8-3058-842b-1b0cc3757995","_displayName_":"Puppet Enterprise and Open Source Puppet Comparison","_keyword_":"content_component","content":"<script src=\"https://fast.wistia.com/embed/medias/8a5y801ha3.jsonp\" async></script><script src=\"https://fast.wistia.com/assets/external/E-v1.js\" async></script><div class=\"wistia_responsive_padding\" style=\"padding:56.0% 0 0 0;position:relative;\"><div class=\"wistia_responsive_wrapper\" style=\"height:100%;left:0;position:absolute;top:0;width:100%;\"><div class=\"wistia_embed wistia_async_8a5y801ha3 videoFoam=true\" style=\"height:100%;width:100%\">&nbsp;</div></div></div>","created":"2017-08-02 09:28:36","createdById":31489,"deprecatedBy":"","duration":{"days":0,"minutesPerDay":7},"generateCertificate":"DEFAULT","generateProofOfCompletion":"DEFAULT","id":272,"modified":"2017-08-02 09:28:36","modifiedById":31489,"name":"Puppet Enterprise and Open Source Puppet Comparison","orderNumber":0,"price":{"amount":0.0,"currency":"USD"},"primaryCategoryId":10,"status":"ENABLED","summary":"<h2>Summary</h2>\r\n<p>Many clients may be familiar with Puppet but what additional value does Puppet Enterprise bring? After watching this video, you will be able to explain the key components available only in Enterprise.</p>\r\n<h2>Topics Covered</h2>\r\n<ul>\r\n<li>High-level differences between Puppet Enterprise and open source Puppet</li>\r\n<li>Closer look at the additional functionality of Puppet Enterprise</li>\r\n</ul>\r\n<h2>Audience</h2>\r\n<p>This training is ideal for open source Puppet practitioners, sales engineers, and non-practitioners who want to understand the advantages of Puppet Enterprise.</p>","urlName":"puppet-enterprise-and-open-source-puppet-comparison","visibility":"DEPRECATED"},"componentId":272,"componentUUID":"a7284324-eca8-3058-842b-1b0cc3757995","created":"2017-08-02 09:30:41","createdById":31489,"id":237,"modified":"2017-08-03 13:45:55","modifiedById":31489,"name":"Puppet Enterprise and Open Source Puppet Comparison","pathwayId":271,"position":1},{"_displayName_":"Course Requirement #239","_keyword_":"course_requirement","component":{"UUID":"a368dc1a-0458-3bad-9142-20a87f172058","_displayName_":"Puppet Enterprise Demo: Cisco Nexus Switches","_keyword_":"content_component","content":"<script src=\"https://fast.wistia.com/embed/medias/ftoe3ldlap.jsonp\" async></script><script src=\"https://fast.wistia.com/assets/external/E-v1.js\" async></script><div class=\"wistia_responsive_padding\" style=\"padding:56.0% 0 0 0;position:relative;\"><div class=\"wistia_responsive_wrapper\" style=\"height:100%;left:0;position:absolute;top:0;width:100%;\"><div class=\"wistia_embed wistia_async_ftoe3ldlap videoFoam=true\" style=\"height:100%;width:100%\">&nbsp;</div></div></div>","created":"2017-08-02 11:20:49","createdById":31489,"deprecatedBy":"","duration":{"days":0,"minutesPerDay":15},"generateCertificate":"DEFAULT","generateProofOfCompletion":"DEFAULT","id":274,"modified":"2017-08-03 13:52:14","modifiedById":35,"name":"Puppet Enterprise Demo: Cisco Nexus Switches","orderNumber":0,"price":{"amount":0.0,"currency":"USD"},"primaryCategoryId":10,"status":"ENABLED","summary":"<h2>Summary</h2>\r\n<p>How can Puppet Enterprise be used to manage Cisco Nexus hardware? After this video you will know the basics of managing Cisco with the puppetlabs/ciscopuppet module.</p>\r\n<h2>Topics Covered</h2>\r\n<ul>\r\n<li>How Puppet remediates drift on switches</li>\r\n<li>Puppet workflow examples</li>\r\n</ul>\r\n<h2>Audience</h2>\r\n<p>This training is ideal for Puppet practitioners, solution architects, and sales engineers.</p>","urlName":"puppet-enterprise-demo-cisco-nexus-switches","visibility":"DEPRECATED"},"componentId":274,"componentUUID":"a368dc1a-0458-3bad-9142-20a87f172058","created":"2017-08-02 11:21:42","createdById":31489,"id":239,"modified":"2017-08-03 13:45:56","modifiedById":31489,"name":"Puppet Enterprise Demo: Cisco Nexus Switches","pathwayId":271,"position":2},{"_displayName_":"Course Requirement #242","_keyword_":"course_requirement","component":{"UUID":"6a7ef610-59e2-3545-af62-628acea1d206","_displayName_":"Puppet Enterprise and Docker","_keyword_":"content_component","content":"<script src=\"https://fast.wistia.com/embed/medias/7j5ivc6752.jsonp\" async></script><script src=\"https://fast.wistia.com/assets/external/E-v1.js\" async></script><div class=\"wistia_responsive_padding\" style=\"padding:56.25% 0 0 0;position:relative;\"><div class=\"wistia_responsive_wrapper\" style=\"height:100%;left:0;position:absolute;top:0;width:100%;\"><div class=\"wistia_embed wistia_async_7j5ivc6752 videoFoam=true\" style=\"height:100%;width:100%\">&nbsp;</div></div></div>\r\n<h2>Puppet Enterprise and Docker</h2><p>\r\nPlease complete the short assessment.\r\n</p>\r\n<iframe src=\"https://www.classmarker.com/online-test/start/?quiz=b9a5982b5a5269c7&iframe=1\" frameborder=\"0\" style=\"width:100%;max-width:700px;\" height=\"800\"></iframe>","created":"2017-08-02 21:43:04","createdById":31489,"deprecatedBy":"","duration":{"days":0,"minutesPerDay":4},"generateCertificate":"DEFAULT","generateProofOfCompletion":"DEFAULT","id":277,"modified":"2017-08-02 22:34:08","modifiedById":31489,"name":"Puppet Enterprise and Docker","orderNumber":0,"price":{"amount":0.0,"currency":"USD"},"primaryCategoryId":10,"status":"ENABLED","summary":"<h2>Summary</h2>\r\n<p>How does Puppet Enterprise work with Docker? After watching this video you will have a greater understanding of how to use the Puppet Docker Module.</p>\r\n<h2>Topics Covered</h2>\r\n<ul>\r\n<li>How to get started with the Puppet Docker platform module</li>\r\n<li>Overview of using Docker</li>\r\n</ul>\r\n<h2>Audience</h2>\r\n<p>This training is ideal for practitioners, sales engineers, and those who are getting started with Docker and Puppet Enterprise.</p>","urlName":"puppet-enterprise-and-docker","visibility":"DEPRECATED"},"componentId":277,"componentUUID":"6a7ef610-59e2-3545-af62-628acea1d206","created":"2017-08-02 21:43:24","createdById":31489,"id":242,"modified":"2017-08-03 13:45:55","modifiedById":31489,"name":"Puppet Enterprise and Docker","pathwayId":271,"position":3},{"_displayName_":"Course Requirement #243","_keyword_":"course_requirement","component":{"UUID":"e323392f-fab4-35f4-9098-4aa717defaf6","_displayName_":"Puppet Enterprise and AWS","_keyword_":"content_component","content":"<script src=\"https://fast.wistia.com/embed/medias/ccee03x2z6.jsonp\" async></script><script src=\"https://fast.wistia.com/assets/external/E-v1.js\" async></script><div class=\"wistia_responsive_padding\" style=\"padding:56.25% 0 0 0;position:relative;\"><div class=\"wistia_responsive_wrapper\" style=\"height:100%;left:0;position:absolute;top:0;width:100%;\"><div class=\"wistia_embed wistia_async_ccee03x2z6 videoFoam=true\" style=\"height:100%;width:100%\">&nbsp;</div></div></div>\r\n<p></p>\r\n<h2>Puppet Enterprise and AWS</h2><p>\r\nPlease complete the short assessment.\r\n</p>\r\n<iframe src=\"https://www.classmarker.com/online-test/start/?quiz=jcr5982b4c3d9cf3&iframe=1\" frameborder=\"0\" style=\"width:100%;max-width:700px;\" height=\"800\"></iframe>","created":"2017-08-02 22:00:45","createdById":31489,"deprecatedBy":"","duration":{"days":0,"minutesPerDay":3},"generateCertificate":"DEFAULT","generateProofOfCompletion":"DEFAULT","id":278,"modified":"2017-08-02 22:32:09","modifiedById":31489,"name":"Puppet Enterprise and AWS","orderNumber":0,"price":{"amount":0.0,"currency":"USD"},"primaryCategoryId":10,"status":"ENABLED","summary":"<h2>Summary</h2>\r\n<p>How can you harness the power of Puppet Enterprise in the Cloud? After watching this video you will have the information needed to get started with the Puppet AWS module.</p>\r\n<h2>Topics Covered</h2>\r\n<ul>\r\n<li>AWS supported module</li>\r\n<li>Advantages of using Puppet Enterprise with AWS</li>\r\n<li>Where to find documentation and how to get started</li>\r\n</ul>\r\n<h2>Audience</h2>\r\n<p>This training is ideal for solution architects, sales engineers, and those who want to know more about Puppet Enterprise integrations.</p>","urlName":"puppet-enterprise-and-aws","visibility":"DEPRECATED"},"componentId":278,"componentUUID":"e323392f-fab4-35f4-9098-4aa717defaf6","created":"2017-08-02 22:01:05","createdById":31489,"id":243,"modified":"2017-08-03 13:45:55","modifiedById":31489,"name":"Puppet Enterprise and AWS","pathwayId":271,"position":4},{"_displayName_":"Course Requirement #246","_keyword_":"course_requirement","component":{"UUID":"1682b573-4a28-3988-b051-d72442557786","_displayName_":"1-800-Flowers Case Study","_keyword_":"content_component","content":"Review the 1-800-Flowers Case Study in the Course Resources and answer the quiz below.\r\n\r\n<script src=\"https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.1.4/js.cookie.min.js\"></script>\r\n<iframe id=\"quiz\" src=\"\"\r\nframeborder=\"0\" style=\"width:100%;max-width:700px;\" height=\"800\"></iframe>\r\n<script> \r\ndocument.getElementById('quiz').src =\r\n\"https://www.classmarker.com/online-test/start?quiz=bjq5984d377cfdc3\" +\r\n\"&cm_fn=\" + Cookies.get(\"studentName\") + \r\n\"&cm_ln=\" + Cookies.get(\"studentName\") + \r\n\"&cm_e=\" + Cookies.get(\"studentEmail\") +\r\n\"&cm_user_id=\" + Cookies.get(\"studentId\")  ; \r\n</script>","created":"2017-08-04 12:56:53","createdById":35,"deprecatedBy":"","duration":{"days":0,"minutesPerDay":0},"generateCertificate":"DEFAULT","generateProofOfCompletion":"DEFAULT","id":281,"modified":"2017-08-04 13:18:36","modifiedById":35,"name":"1-800-Flowers Case Study","orderNumber":0,"price":{"amount":0.0,"currency":"USD"},"primaryCategoryId":10,"status":"ACTIVE_COMPONENT","urlName":"1-800-flowers-case-study","visibility":"HIDDEN"},"componentId":281,"componentUUID":"1682b573-4a28-3988-b051-d72442557786","created":"2017-08-04 12:59:47","createdById":35,"id":246,"modified":"2017-08-04 12:59:47","modifiedById":35,"name":"1-800-Flowers Case Study","pathwayId":271,"position":5},{"_displayName_":"Course Requirement #247","_keyword_":"course_requirement","component":{"UUID":"a4249b65-50ab-3a14-988f-b47ec045a169","_displayName_":"NYSE Case Study","_keyword_":"content_component","content":"Review the NYSE case study in Course Resources and answer the quiz below.\r\n\r\n<script src=\"https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.1.4/js.cookie.min.js\"></script>\r\n<iframe id=\"quiz\" src=\"\"\r\nframeborder=\"0\" style=\"width:100%;max-width:700px;\" height=\"800\"></iframe>\r\n<script> \r\ndocument.getElementById('quiz').src =\r\n\"https://www.classmarker.com/online-test/start?quiz=4fq5984d7da5479f\" +\r\n\"&cm_fn=\" + Cookies.get(\"studentName\") + \r\n\"&cm_ln=\" + Cookies.get(\"studentName\") + \r\n\"&cm_e=\" + Cookies.get(\"studentEmail\") +\r\n\"&cm_user_id=\" + Cookies.get(\"studentId\")  ; \r\n</script>","created":"2017-08-04 13:24:50","createdById":35,"deprecatedBy":"","duration":{"days":0,"minutesPerDay":0},"generateCertificate":"DEFAULT","generateProofOfCompletion":"DEFAULT","id":282,"modified":"2017-08-04 13:24:50","modifiedById":35,"name":"NYSE Case Study","orderNumber":0,"price":{"amount":0.0,"currency":"USD"},"primaryCategoryId":10,"status":"ACTIVE_COMPONENT","urlName":"nyse-case-study","visibility":"HIDDEN"},"componentId":282,"componentUUID":"a4249b65-50ab-3a14-988f-b47ec045a169","created":"2017-08-04 13:26:07","createdById":35,"id":247,"modified":"2017-08-04 13:26:07","modifiedById":35,"name":"NYSE Case Study","pathwayId":271,"position":6},{"_displayName_":"Course Requirement #248","_keyword_":"course_requirement","component":{"UUID":"884fe699-7a07-36ba-9c47-43cf8370905f","_displayName_":"Infusionsoft Case Study","_keyword_":"content_component","content":"Review the Infusionsoft case study in Course Resources and answer the quiz below.\r\n\r\n<script src=\"https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.1.4/js.cookie.min.js\"></script>\r\n<iframe id=\"quiz\" src=\"\"\r\nframeborder=\"0\" style=\"width:100%;max-width:700px;\" height=\"800\"></iframe>\r\n<script> \r\ndocument.getElementById('quiz').src =\r\n\"https://www.classmarker.com/online-test/start?quiz= f7t5984e11d2e07d\" +\r\n\"&cm_fn=\" + Cookies.get(\"studentName\") + \r\n\"&cm_ln=\" + Cookies.get(\"studentName\") + \r\n\"&cm_e=\" + Cookies.get(\"studentEmail\") +\r\n\"&cm_user_id=\" + Cookies.get(\"studentId\")  ; \r\n</script>","created":"2017-08-04 14:05:39","createdById":35,"deprecatedBy":"","duration":{"days":0,"minutesPerDay":0},"generateCertificate":"DEFAULT","generateProofOfCompletion":"DEFAULT","id":283,"modified":"2017-08-04 14:05:39","modifiedById":35,"name":"Infusionsoft Case Study","orderNumber":0,"price":{"amount":0.0,"currency":"USD"},"primaryCategoryId":10,"status":"ENABLED","urlName":"infusionsoft-case-study","visibility":"HIDDEN"},"componentId":283,"componentUUID":"884fe699-7a07-36ba-9c47-43cf8370905f","created":"2017-08-04 14:14:10","createdById":35,"id":248,"modified":"2017-08-04 14:14:10","modifiedById":35,"name":"Infusionsoft Case Study","pathwayId":271,"position":7}],"created":"2017-08-02 09:01:32","createdById":31489,"duration":{"days":0,"minutesPerDay":0},"generateCertificate":"DEFAULT","generateProofOfCompletion":"DEFAULT","id":271,"modified":"2017-08-02 09:01:32","modifiedById":31489,"name":"Puppet Enterprise Advantages and Integrations","orderNumber":0,"price":{"amount":0.0,"currency":"USD"},"primaryCategoryId":10,"status":"ACTIVE_COMPONENT","type":{"_displayName_":"Module","_keyword_":"course_pathway_type","created":"2015-06-14 23:21:43","id":3,"modified":"2015-06-14 23:21:43","name":"Module","rootType":false,"supportedComponentTypes":["e_learning_component","course","content_component","exam_component"]},"typeId":3,"urlName":"puppet-enterprise-advantages-and-integrations","visibility":"PUBLIC"}
+{
+  "UUID": "64d8364e-df55-3121-be6c-147861fda1e3",
+  "_displayName_": "Puppet Enterprise Advantages and Integrations",
+  "_keyword_": "course_pathway",
+  "components": [
+    {
+      "_displayName_": "Course Requirement #238",
+      "_keyword_": "course_requirement",
+      "component": {
+        "UUID": "cb80f59c-38f8-3f9f-97f4-8ab15a0e3653",
+        "_displayName_": "Puppet Enterprise Integrations",
+        "_keyword_": "content_component",
+        "content": "<script src=\"https://fast.wistia.com/embed/medias/4yd52o7ftp.jsonp\" async></script><script src=\"https://fast.wistia.com/assets/external/E-v1.js\" async></script><div class=\"wistia_responsive_padding\" style=\"padding:56.25% 0 0 0;position:relative;\"><div class=\"wistia_responsive_wrapper\" style=\"height:100%;left:0;position:absolute;top:0;width:100%;\"><div class=\"wistia_embed wistia_async_4yd52o7ftp videoFoam=true\" style=\"height:100%;width:100%\">&nbsp;</div></div></div>",
+        "created": "2017-08-02 09:55:46",
+        "createdById": 31489,
+        "deprecatedBy": "",
+        "duration": {
+          "days": 0,
+          "minutesPerDay": 2
+        },
+        "generateCertificate": "DEFAULT",
+        "generateProofOfCompletion": "DEFAULT",
+        "id": 273,
+        "modified": "2017-08-02 09:55:46",
+        "modifiedById": 31489,
+        "name": "Puppet Enterprise Integrations",
+        "orderNumber": 0,
+        "price": {
+          "amount": 0.0,
+          "currency": "USD"
+        },
+        "primaryCategoryId": 10,
+        "status": "ENABLED",
+        "summary": "<h2>Summary</h2>\r\n<p>How does Puppet work with cloud, CI, and the countless other tools your clients use? After watching this video, you will know the technologies with which Puppet Enterprise seamlessly integrates. </p>\r\n<h2>Topics Covered</h2>\r\n<ul>\r\n<li>What does Puppet Enterprise integrate with?</li>\r\n</ul>\r\n<h2>Audience</h2>\r\n<p>This training is ideal for sales engineers, non-practitioners, and open source Puppet users.</p>",
+        "urlName": "puppet-enterprise-integrations",
+        "visibility": "DEPRECATED"
+      },
+      "componentId": 273,
+      "componentUUID": "cb80f59c-38f8-3f9f-97f4-8ab15a0e3653",
+      "created": "2017-08-02 09:56:04",
+      "createdById": 31489,
+      "id": 238,
+      "modified": "2017-08-03 13:45:55",
+      "modifiedById": 31489,
+      "name": "Puppet Enterprise Integrations",
+      "pathwayId": 271,
+      "position": 0
+    },
+    {
+      "_displayName_": "Course Requirement #237",
+      "_keyword_": "course_requirement",
+      "component": {
+        "UUID": "a7284324-eca8-3058-842b-1b0cc3757995",
+        "_displayName_": "Puppet Enterprise and Open Source Puppet Comparison",
+        "_keyword_": "content_component",
+        "content": "<script src=\"https://fast.wistia.com/embed/medias/8a5y801ha3.jsonp\" async></script><script src=\"https://fast.wistia.com/assets/external/E-v1.js\" async></script><div class=\"wistia_responsive_padding\" style=\"padding:56.0% 0 0 0;position:relative;\"><div class=\"wistia_responsive_wrapper\" style=\"height:100%;left:0;position:absolute;top:0;width:100%;\"><div class=\"wistia_embed wistia_async_8a5y801ha3 videoFoam=true\" style=\"height:100%;width:100%\">&nbsp;</div></div></div>",
+        "created": "2017-08-02 09:28:36",
+        "createdById": 31489,
+        "deprecatedBy": "",
+        "duration": {
+          "days": 0,
+          "minutesPerDay": 7
+        },
+        "generateCertificate": "DEFAULT",
+        "generateProofOfCompletion": "DEFAULT",
+        "id": 272,
+        "modified": "2017-08-02 09:28:36",
+        "modifiedById": 31489,
+        "name": "Puppet Enterprise and Open Source Puppet Comparison",
+        "orderNumber": 0,
+        "price": {
+          "amount": 0.0,
+          "currency": "USD"
+        },
+        "primaryCategoryId": 10,
+        "status": "ENABLED",
+        "summary": "<h2>Summary</h2>\r\n<p>Many clients may be familiar with Puppet but what additional value does Puppet Enterprise bring? After watching this video, you will be able to explain the key components available only in Enterprise.</p>\r\n<h2>Topics Covered</h2>\r\n<ul>\r\n<li>High-level differences between Puppet Enterprise and open source Puppet</li>\r\n<li>Closer look at the additional functionality of Puppet Enterprise</li>\r\n</ul>\r\n<h2>Audience</h2>\r\n<p>This training is ideal for open source Puppet practitioners, sales engineers, and non-practitioners who want to understand the advantages of Puppet Enterprise.</p>",
+        "urlName": "puppet-enterprise-and-open-source-puppet-comparison",
+        "visibility": "DEPRECATED"
+      },
+      "componentId": 272,
+      "componentUUID": "a7284324-eca8-3058-842b-1b0cc3757995",
+      "created": "2017-08-02 09:30:41",
+      "createdById": 31489,
+      "id": 237,
+      "modified": "2017-08-03 13:45:55",
+      "modifiedById": 31489,
+      "name": "Puppet Enterprise and Open Source Puppet Comparison",
+      "pathwayId": 271,
+      "position": 1
+    },
+    {
+      "_displayName_": "Course Requirement #239",
+      "_keyword_": "course_requirement",
+      "component": {
+        "UUID": "a368dc1a-0458-3bad-9142-20a87f172058",
+        "_displayName_": "Puppet Enterprise Demo: Cisco Nexus Switches",
+        "_keyword_": "content_component",
+        "content": "<script src=\"https://fast.wistia.com/embed/medias/ftoe3ldlap.jsonp\" async></script><script src=\"https://fast.wistia.com/assets/external/E-v1.js\" async></script><div class=\"wistia_responsive_padding\" style=\"padding:56.0% 0 0 0;position:relative;\"><div class=\"wistia_responsive_wrapper\" style=\"height:100%;left:0;position:absolute;top:0;width:100%;\"><div class=\"wistia_embed wistia_async_ftoe3ldlap videoFoam=true\" style=\"height:100%;width:100%\">&nbsp;</div></div></div>",
+        "created": "2017-08-02 11:20:49",
+        "createdById": 31489,
+        "deprecatedBy": "",
+        "duration": {
+          "days": 0,
+          "minutesPerDay": 15
+        },
+        "generateCertificate": "DEFAULT",
+        "generateProofOfCompletion": "DEFAULT",
+        "id": 274,
+        "modified": "2017-08-03 13:52:14",
+        "modifiedById": 35,
+        "name": "Puppet Enterprise Demo: Cisco Nexus Switches",
+        "orderNumber": 0,
+        "price": {
+          "amount": 0.0,
+          "currency": "USD"
+        },
+        "primaryCategoryId": 10,
+        "status": "ENABLED",
+        "summary": "<h2>Summary</h2>\r\n<p>How can Puppet Enterprise be used to manage Cisco Nexus hardware? After this video you will know the basics of managing Cisco with the puppetlabs/ciscopuppet module.</p>\r\n<h2>Topics Covered</h2>\r\n<ul>\r\n<li>How Puppet remediates drift on switches</li>\r\n<li>Puppet workflow examples</li>\r\n</ul>\r\n<h2>Audience</h2>\r\n<p>This training is ideal for Puppet practitioners, solution architects, and sales engineers.</p>",
+        "urlName": "puppet-enterprise-demo-cisco-nexus-switches",
+        "visibility": "DEPRECATED"
+      },
+      "componentId": 274,
+      "componentUUID": "a368dc1a-0458-3bad-9142-20a87f172058",
+      "created": "2017-08-02 11:21:42",
+      "createdById": 31489,
+      "id": 239,
+      "modified": "2017-08-03 13:45:56",
+      "modifiedById": 31489,
+      "name": "Puppet Enterprise Demo: Cisco Nexus Switches",
+      "pathwayId": 271,
+      "position": 2
+    },
+    {
+      "_displayName_": "Course Requirement #242",
+      "_keyword_": "course_requirement",
+      "component": {
+        "UUID": "6a7ef610-59e2-3545-af62-628acea1d206",
+        "_displayName_": "Puppet Enterprise and Docker",
+        "_keyword_": "content_component",
+        "content": "<script src=\"https://fast.wistia.com/embed/medias/7j5ivc6752.jsonp\" async></script><script src=\"https://fast.wistia.com/assets/external/E-v1.js\" async></script><div class=\"wistia_responsive_padding\" style=\"padding:56.25% 0 0 0;position:relative;\"><div class=\"wistia_responsive_wrapper\" style=\"height:100%;left:0;position:absolute;top:0;width:100%;\"><div class=\"wistia_embed wistia_async_7j5ivc6752 videoFoam=true\" style=\"height:100%;width:100%\">&nbsp;</div></div></div>\r\n<h2>Puppet Enterprise and Docker</h2><p>\r\nPlease complete the short assessment.\r\n</p>\r\n<iframe src=\"https://www.classmarker.com/online-test/start/?quiz=b9a5982b5a5269c7&iframe=1\" frameborder=\"0\" style=\"width:100%;max-width:700px;\" height=\"800\"></iframe>",
+        "created": "2017-08-02 21:43:04",
+        "createdById": 31489,
+        "deprecatedBy": "",
+        "duration": {
+          "days": 0,
+          "minutesPerDay": 4
+        },
+        "generateCertificate": "DEFAULT",
+        "generateProofOfCompletion": "DEFAULT",
+        "id": 277,
+        "modified": "2017-08-02 22:34:08",
+        "modifiedById": 31489,
+        "name": "Puppet Enterprise and Docker",
+        "orderNumber": 0,
+        "price": {
+          "amount": 0.0,
+          "currency": "USD"
+        },
+        "primaryCategoryId": 10,
+        "status": "ENABLED",
+        "summary": "<h2>Summary</h2>\r\n<p>How does Puppet Enterprise work with Docker? After watching this video you will have a greater understanding of how to use the Puppet Docker Module.</p>\r\n<h2>Topics Covered</h2>\r\n<ul>\r\n<li>How to get started with the Puppet Docker platform module</li>\r\n<li>Overview of using Docker</li>\r\n</ul>\r\n<h2>Audience</h2>\r\n<p>This training is ideal for practitioners, sales engineers, and those who are getting started with Docker and Puppet Enterprise.</p>",
+        "urlName": "puppet-enterprise-and-docker",
+        "visibility": "DEPRECATED"
+      },
+      "componentId": 277,
+      "componentUUID": "6a7ef610-59e2-3545-af62-628acea1d206",
+      "created": "2017-08-02 21:43:24",
+      "createdById": 31489,
+      "id": 242,
+      "modified": "2017-08-03 13:45:55",
+      "modifiedById": 31489,
+      "name": "Puppet Enterprise and Docker",
+      "pathwayId": 271,
+      "position": 3
+    },
+    {
+      "_displayName_": "Course Requirement #243",
+      "_keyword_": "course_requirement",
+      "component": {
+        "UUID": "e323392f-fab4-35f4-9098-4aa717defaf6",
+        "_displayName_": "Puppet Enterprise and AWS",
+        "_keyword_": "content_component",
+        "content": "<script src=\"https://fast.wistia.com/embed/medias/ccee03x2z6.jsonp\" async></script><script src=\"https://fast.wistia.com/assets/external/E-v1.js\" async></script><div class=\"wistia_responsive_padding\" style=\"padding:56.25% 0 0 0;position:relative;\"><div class=\"wistia_responsive_wrapper\" style=\"height:100%;left:0;position:absolute;top:0;width:100%;\"><div class=\"wistia_embed wistia_async_ccee03x2z6 videoFoam=true\" style=\"height:100%;width:100%\">&nbsp;</div></div></div>\r\n<p></p>\r\n<h2>Puppet Enterprise and AWS</h2><p>\r\nPlease complete the short assessment.\r\n</p>\r\n<iframe src=\"https://www.classmarker.com/online-test/start/?quiz=jcr5982b4c3d9cf3&iframe=1\" frameborder=\"0\" style=\"width:100%;max-width:700px;\" height=\"800\"></iframe>",
+        "created": "2017-08-02 22:00:45",
+        "createdById": 31489,
+        "deprecatedBy": "",
+        "duration": {
+          "days": 0,
+          "minutesPerDay": 3
+        },
+        "generateCertificate": "DEFAULT",
+        "generateProofOfCompletion": "DEFAULT",
+        "id": 278,
+        "modified": "2017-08-02 22:32:09",
+        "modifiedById": 31489,
+        "name": "Puppet Enterprise and AWS",
+        "orderNumber": 0,
+        "price": {
+          "amount": 0.0,
+          "currency": "USD"
+        },
+        "primaryCategoryId": 10,
+        "status": "ENABLED",
+        "summary": "<h2>Summary</h2>\r\n<p>How can you harness the power of Puppet Enterprise in the Cloud? After watching this video you will have the information needed to get started with the Puppet AWS module.</p>\r\n<h2>Topics Covered</h2>\r\n<ul>\r\n<li>AWS supported module</li>\r\n<li>Advantages of using Puppet Enterprise with AWS</li>\r\n<li>Where to find documentation and how to get started</li>\r\n</ul>\r\n<h2>Audience</h2>\r\n<p>This training is ideal for solution architects, sales engineers, and those who want to know more about Puppet Enterprise integrations.</p>",
+        "urlName": "puppet-enterprise-and-aws",
+        "visibility": "DEPRECATED"
+      },
+      "componentId": 278,
+      "componentUUID": "e323392f-fab4-35f4-9098-4aa717defaf6",
+      "created": "2017-08-02 22:01:05",
+      "createdById": 31489,
+      "id": 243,
+      "modified": "2017-08-03 13:45:55",
+      "modifiedById": 31489,
+      "name": "Puppet Enterprise and AWS",
+      "pathwayId": 271,
+      "position": 4
+    },
+    {
+      "_displayName_": "Course Requirement #246",
+      "_keyword_": "course_requirement",
+      "component": {
+        "UUID": "1682b573-4a28-3988-b051-d72442557786",
+        "_displayName_": "1-800-Flowers Case Study",
+        "_keyword_": "content_component",
+        "content": "Review the 1-800-Flowers Case Study in the Course Resources and answer the quiz below.\r\n\r\n<script src=\"https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.1.4/js.cookie.min.js\"></script>\r\n<iframe id=\"quiz\" src=\"\"\r\nframeborder=\"0\" style=\"width:100%;max-width:700px;\" height=\"800\"></iframe>\r\n<script> \r\ndocument.getElementById('quiz').src =\r\n\"https://www.classmarker.com/online-test/start?quiz=bjq5984d377cfdc3\" +\r\n\"&cm_fn=\" + Cookies.get(\"studentName\") + \r\n\"&cm_ln=\" + Cookies.get(\"studentName\") + \r\n\"&cm_e=\" + Cookies.get(\"studentEmail\") +\r\n\"&cm_user_id=\" + Cookies.get(\"studentId\")  ; \r\n</script>",
+        "created": "2017-08-04 12:56:53",
+        "createdById": 35,
+        "deprecatedBy": "",
+        "duration": {
+          "days": 0,
+          "minutesPerDay": 0
+        },
+        "generateCertificate": "DEFAULT",
+        "generateProofOfCompletion": "DEFAULT",
+        "id": 281,
+        "modified": "2017-08-04 13:18:36",
+        "modifiedById": 35,
+        "name": "1-800-Flowers Case Study",
+        "orderNumber": 0,
+        "price": {
+          "amount": 0.0,
+          "currency": "USD"
+        },
+        "primaryCategoryId": 10,
+        "status": "ACTIVE_COMPONENT",
+        "urlName": "1-800-flowers-case-study",
+        "visibility": "HIDDEN"
+      },
+      "componentId": 281,
+      "componentUUID": "1682b573-4a28-3988-b051-d72442557786",
+      "created": "2017-08-04 12:59:47",
+      "createdById": 35,
+      "id": 246,
+      "modified": "2017-08-04 12:59:47",
+      "modifiedById": 35,
+      "name": "1-800-Flowers Case Study",
+      "pathwayId": 271,
+      "position": 5
+    },
+    {
+      "_displayName_": "Course Requirement #247",
+      "_keyword_": "course_requirement",
+      "component": {
+        "UUID": "a4249b65-50ab-3a14-988f-b47ec045a169",
+        "_displayName_": "NYSE Case Study",
+        "_keyword_": "content_component",
+        "content": "Review the NYSE case study in Course Resources and answer the quiz below.\r\n\r\n<script src=\"https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.1.4/js.cookie.min.js\"></script>\r\n<iframe id=\"quiz\" src=\"\"\r\nframeborder=\"0\" style=\"width:100%;max-width:700px;\" height=\"800\"></iframe>\r\n<script> \r\ndocument.getElementById('quiz').src =\r\n\"https://www.classmarker.com/online-test/start?quiz=4fq5984d7da5479f\" +\r\n\"&cm_fn=\" + Cookies.get(\"studentName\") + \r\n\"&cm_ln=\" + Cookies.get(\"studentName\") + \r\n\"&cm_e=\" + Cookies.get(\"studentEmail\") +\r\n\"&cm_user_id=\" + Cookies.get(\"studentId\")  ; \r\n</script>",
+        "created": "2017-08-04 13:24:50",
+        "createdById": 35,
+        "deprecatedBy": "",
+        "duration": {
+          "days": 0,
+          "minutesPerDay": 0
+        },
+        "generateCertificate": "DEFAULT",
+        "generateProofOfCompletion": "DEFAULT",
+        "id": 282,
+        "modified": "2017-08-04 13:24:50",
+        "modifiedById": 35,
+        "name": "NYSE Case Study",
+        "orderNumber": 0,
+        "price": {
+          "amount": 0.0,
+          "currency": "USD"
+        },
+        "primaryCategoryId": 10,
+        "status": "ACTIVE_COMPONENT",
+        "urlName": "nyse-case-study",
+        "visibility": "HIDDEN"
+      },
+      "componentId": 282,
+      "componentUUID": "a4249b65-50ab-3a14-988f-b47ec045a169",
+      "created": "2017-08-04 13:26:07",
+      "createdById": 35,
+      "id": 247,
+      "modified": "2017-08-04 13:26:07",
+      "modifiedById": 35,
+      "name": "NYSE Case Study",
+      "pathwayId": 271,
+      "position": 6
+    },
+    {
+      "_displayName_": "Course Requirement #248",
+      "_keyword_": "course_requirement",
+      "component": {
+        "UUID": "884fe699-7a07-36ba-9c47-43cf8370905f",
+        "_displayName_": "Infusionsoft Case Study",
+        "_keyword_": "content_component",
+        "content": "Review the Infusionsoft case study in Course Resources and answer the quiz below.\r\n\r\n<script src=\"https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.1.4/js.cookie.min.js\"></script>\r\n<iframe id=\"quiz\" src=\"\"\r\nframeborder=\"0\" style=\"width:100%;max-width:700px;\" height=\"800\"></iframe>\r\n<script> \r\ndocument.getElementById('quiz').src =\r\n\"https://www.classmarker.com/online-test/start?quiz= f7t5984e11d2e07d\" +\r\n\"&cm_fn=\" + Cookies.get(\"studentName\") + \r\n\"&cm_ln=\" + Cookies.get(\"studentName\") + \r\n\"&cm_e=\" + Cookies.get(\"studentEmail\") +\r\n\"&cm_user_id=\" + Cookies.get(\"studentId\")  ; \r\n</script>",
+        "created": "2017-08-04 14:05:39",
+        "createdById": 35,
+        "deprecatedBy": "",
+        "duration": {
+          "days": 0,
+          "minutesPerDay": 0
+        },
+        "generateCertificate": "DEFAULT",
+        "generateProofOfCompletion": "DEFAULT",
+        "id": 283,
+        "modified": "2017-08-04 14:05:39",
+        "modifiedById": 35,
+        "name": "Infusionsoft Case Study",
+        "orderNumber": 0,
+        "price": {
+          "amount": 0.0,
+          "currency": "USD"
+        },
+        "primaryCategoryId": 10,
+        "status": "ENABLED",
+        "urlName": "infusionsoft-case-study",
+        "visibility": "HIDDEN"
+      },
+      "componentId": 283,
+      "componentUUID": "884fe699-7a07-36ba-9c47-43cf8370905f",
+      "created": "2017-08-04 14:14:10",
+      "createdById": 35,
+      "id": 248,
+      "modified": "2017-08-04 14:14:10",
+      "modifiedById": 35,
+      "name": "Infusionsoft Case Study",
+      "pathwayId": 271,
+      "position": 7
+    }
+  ],
+  "created": "2017-08-02 09:01:32",
+  "createdById": 31489,
+  "duration": {
+    "days": 0,
+    "minutesPerDay": 0
+  },
+  "generateCertificate": "DEFAULT",
+  "generateProofOfCompletion": "DEFAULT",
+  "id": 271,
+  "modified": "2017-08-02 09:01:32",
+  "modifiedById": 31489,
+  "name": "Puppet Enterprise Advantages and Integrations",
+  "orderNumber": 0,
+  "price": {
+    "amount": 0.0,
+    "currency": "USD"
+  },
+  "primaryCategoryId": 10,
+  "status": "ACTIVE_COMPONENT",
+  "type": {
+    "_displayName_": "Module",
+    "_keyword_": "course_pathway_type",
+    "created": "2015-06-14 23:21:43",
+    "id": 3,
+    "modified": "2015-06-14 23:21:43",
+    "name": "Module",
+    "rootType": false,
+    "supportedComponentTypes": [
+      "e_learning_component",
+      "course",
+      "content_component",
+      "exam_component"
+    ]
+  },
+  "typeId": 3,
+  "urlName": "puppet-enterprise-advantages-and-integrations",
+  "visibility": "PUBLIC"
+}

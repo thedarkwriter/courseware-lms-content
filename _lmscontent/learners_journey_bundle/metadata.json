@@ -1,1 +1,28 @@
-{"UUID":"8a91b6be-1b67-3651-8e9c-bd38b9a641cc","_displayName_":"Learners Journey Bundle","_keyword_":"learning_pathway","created":"2015-08-17 06:14:05","createdById":7,"deprecatedBy":"","duration":{"days":0,"minutesPerDay":0},"generateCertificate":"DEFAULT","generateProofOfCompletion":"DEFAULT","id":202,"modified":"2016-05-13 14:31:19","modifiedById":38,"name":"Learners Journey Bundle","orderNumber":0,"price":{"amount":0.0,"currency":"USD"},"primaryCategoryId":7,"requirementsNeededToPass":8,"status":"DISABLED","urlName":"learners-journey-bundle","visibility":"DEPRECATED"}
+{
+  "UUID": "8a91b6be-1b67-3651-8e9c-bd38b9a641cc",
+  "_displayName_": "Learners Journey Bundle",
+  "_keyword_": "learning_pathway",
+  "created": "2015-08-17 06:14:05",
+  "createdById": 7,
+  "deprecatedBy": "",
+  "duration": {
+    "days": 0,
+    "minutesPerDay": 0
+  },
+  "generateCertificate": "DEFAULT",
+  "generateProofOfCompletion": "DEFAULT",
+  "id": 202,
+  "modified": "2016-05-13 14:31:19",
+  "modifiedById": 38,
+  "name": "Learners Journey Bundle",
+  "orderNumber": 0,
+  "price": {
+    "amount": 0.0,
+    "currency": "USD"
+  },
+  "primaryCategoryId": 7,
+  "requirementsNeededToPass": 8,
+  "status": "DISABLED",
+  "urlName": "learners-journey-bundle",
+  "visibility": "DEPRECATED"
+}

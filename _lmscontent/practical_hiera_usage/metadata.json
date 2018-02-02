@@ -1,1 +1,39 @@
-{"UUID":"252d2a4d-3f83-3d6e-92db-786538ab09c3","_displayName_":"Practical Hiera Usage","_keyword_":"course","additionalNotes":"<style>\r\n  #content-section-additionalNotes h2 { display: none };\r\n</style>\r\n<p>\r\n<a class=\"btn\" href=\"https://learn.puppet.com/search?courseId=195&locationId=0\">Find a Class</a> or see the full class schedule below:\r\n</p>","courseVersion":"","coursewareProvided":true,"coursewareUrl":"","created":"2015-05-08 15:30:18","createdById":38,"deprecatedBy":"../catalog","duration":{"days":1,"minutesPerDay":180},"earlyBirdDays":0,"expiryDays":365,"generateCertificate":"DEFAULT","generateProofOfCompletion":"DEFAULT","id":195,"modified":"2017-03-30 14:23:50","modifiedById":38,"name":"Practical Hiera Usage","orderNumber":11,"price":{"amount":400.0,"currency":"USD"},"priceMultiplier":1.0,"primaryCategoryId":8,"priority":0,"providerId":1,"purchasableAsEngagement":false,"shared":false,"status":"DISABLED","theyTookThisCourse":"","urlName":"practical-hiera-usage","visibility":"DEPRECATED"}
+{
+  "UUID": "252d2a4d-3f83-3d6e-92db-786538ab09c3",
+  "_displayName_": "Practical Hiera Usage",
+  "_keyword_": "course",
+  "additionalNotes": "<style>\r\n  #content-section-additionalNotes h2 { display: none };\r\n</style>\r\n<p>\r\n<a class=\"btn\" href=\"https://learn.puppet.com/search?courseId=195&locationId=0\">Find a Class</a> or see the full class schedule below:\r\n</p>",
+  "courseVersion": "",
+  "coursewareProvided": true,
+  "coursewareUrl": "",
+  "created": "2015-05-08 15:30:18",
+  "createdById": 38,
+  "deprecatedBy": "../catalog",
+  "duration": {
+    "days": 1,
+    "minutesPerDay": 180
+  },
+  "earlyBirdDays": 0,
+  "expiryDays": 365,
+  "generateCertificate": "DEFAULT",
+  "generateProofOfCompletion": "DEFAULT",
+  "id": 195,
+  "modified": "2017-03-30 14:23:50",
+  "modifiedById": 38,
+  "name": "Practical Hiera Usage",
+  "orderNumber": 11,
+  "price": {
+    "amount": 400.0,
+    "currency": "USD"
+  },
+  "priceMultiplier": 1.0,
+  "primaryCategoryId": 8,
+  "priority": 0,
+  "providerId": 1,
+  "purchasableAsEngagement": false,
+  "shared": false,
+  "status": "DISABLED",
+  "theyTookThisCourse": "",
+  "urlName": "practical-hiera-usage",
+  "visibility": "DEPRECATED"
+}

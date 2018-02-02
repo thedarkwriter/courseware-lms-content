@@ -1,1 +1,27 @@
-{"UUID":"38425cde-121f-3ea0-bee6-4a28d511fab0","_displayName_":"Self-paced course example","_keyword_":"content_component","created":"2017-06-06 10:38:03","createdById":35,"deprecatedBy":"","duration":{"days":0,"minutesPerDay":0},"generateCertificate":"DEFAULT","generateProofOfCompletion":"DEFAULT","id":253,"modified":"2017-06-06 10:47:54","modifiedById":35,"name":"Self-paced course example","orderNumber":0,"price":{"amount":0.0,"currency":"USD"},"primaryCategoryId":7,"status":"ACTIVE_COMPONENT","urlName":"self-paced-course-example","visibility":"HIDDEN"}
+{
+  "UUID": "38425cde-121f-3ea0-bee6-4a28d511fab0",
+  "_displayName_": "Self-paced course example",
+  "_keyword_": "content_component",
+  "created": "2017-06-06 10:38:03",
+  "createdById": 35,
+  "deprecatedBy": "",
+  "duration": {
+    "days": 0,
+    "minutesPerDay": 0
+  },
+  "generateCertificate": "DEFAULT",
+  "generateProofOfCompletion": "DEFAULT",
+  "id": 253,
+  "modified": "2017-06-06 10:47:54",
+  "modifiedById": 35,
+  "name": "Self-paced course example",
+  "orderNumber": 0,
+  "price": {
+    "amount": 0.0,
+    "currency": "USD"
+  },
+  "primaryCategoryId": 7,
+  "status": "ACTIVE_COMPONENT",
+  "urlName": "self-paced-course-example",
+  "visibility": "HIDDEN"
+}

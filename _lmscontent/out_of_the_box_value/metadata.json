@@ -1,1 +1,478 @@
-{"UUID":"17d91eb8-cdec-311c-a8f0-8f059ce7bf11","_displayName_":"Out of the Box Value","_keyword_":"course_pathway","components":[{"_displayName_":"Course Requirement #225","_keyword_":"course_requirement","component":{"UUID":"16242ba7-13d0-37e7-ab6e-61fe73e7ca80","_displayName_":"Puppet Enterprise Competitive Edge","_keyword_":"content_component","content":"<p>\r\n<script src=\"https://fast.wistia.com/embed/medias/pyex0mbleq.jsonp\" async=\"\"></script>\r\n<script src=\"https://fast.wistia.com/assets/external/E-v1.js\" async=\"\"></script>\r\n</p>\r\n<div class=\"wistia_responsive_padding\" style=\"padding: 56.25% 0 0 0; position: relative;\">\r\n<div class=\"wistia_responsive_wrapper\" style=\"height: 100%; left: 0; position: absolute; top: 0; width: 100%;\">\r\n<div class=\"wistia_embed wistia_async_pyex0mbleq videoFoam=true\" style=\"height: 100%; width: 100%;\">&nbsp;</div>\r\n</div>\r\n</div>\r\n<h2>Case Studies</h2>\r\n<p><a href=\"https://puppet.com/resources/case-study/1-800-flowerscom\" target=\"_blank\">1-800-FLOWERS.COM</a></p>\r\n<p>Puppet Enterprise automates cloud provisioning and deprovisioning and maintains consistent configurations and efficiency as the business grows.</p>\r\n<p><a href=\"https://puppet.com/resources/case-study/infusionsoft\" target=\"_blank\">Infusionsoft</a></p>\r\n<p>As an integral component of standard continuous integration process, Puppet Enterprise provides the ability to achieve continuous delivery of infrastructure.</p>\r\n<p><a href=\"https://puppet.com/resources/case-study/nyse-and-ice\" target=\"_blank\">NYSE and ICE</a></p>\r\n<p>The New York Stock Exchange (NYSE) and its parent company, Intercontinental Exchange (ICE), use Puppet Enterprise to manage nearly 20,000 servers on a mix of platforms and enforce regulatory compliance.&nbsp;</p>","created":"2017-08-01 17:01:40","createdById":31489,"deprecatedBy":"","duration":{"days":0,"minutesPerDay":20},"generateCertificate":"DEFAULT","generateProofOfCompletion":"DEFAULT","id":269,"modified":"2017-08-02 22:17:07","modifiedById":31489,"name":"Puppet Enterprise Competitive Edge","orderNumber":0,"price":{"amount":0.0,"currency":"USD"},"primaryCategoryId":10,"status":"ENABLED","summary":"<h2>Summary</h2>\r\n<p>Puppet Enterprise gives clients value right out of the box. But how? After watching this video and reading the attached case studies, you will know why clients rely on Puppet Enterprise for deploying faster, increasing revenue, and transforming culture.</p>\r\n<h2>Topics Covered</h2>\r\n<ul>\r\n<li>Why does Puppet Enterprise exist?</li>\r\n<li>How is Puppet different from other tools in the market?</li>\r\n<li>What does Puppet Enterprise do, in practical terms, for your clients?</li>\r\n</ul>\r\n<h2>Audience</h2>\r\n<p>This training is ideal for solution engineers, sales engineers, and non-practitioners who need to understand Puppet Enterprise's competitive advantage.</p>","urlName":"puppet-enterprise-competitive-edge","visibility":"DEPRECATED"},"componentId":269,"componentUUID":"16242ba7-13d0-37e7-ab6e-61fe73e7ca80","created":"2017-08-01 17:09:28","createdById":31489,"id":225,"modified":"2017-08-03 13:45:55","modifiedById":31489,"name":"Puppet Enterprise: Competitive Edge","pathwayId":270,"position":0},{"_displayName_":"Course Requirement #227","_keyword_":"course_requirement","component":{"UUID":"9557b813-9403-3402-be81-1a76c55bd8de","_displayName_":"Lifecycle of a Puppet Run","_keyword_":"content_component","content":"<script src=\"https://fast.wistia.com/embed/medias/34i9m3vinh.jsonp\" async></script><script src=\"https://fast.wistia.com/assets/external/E-v1.js\" async></script><div class=\"wistia_responsive_padding\" style=\"padding:56.0% 0 0 0;position:relative;\"><div class=\"wistia_responsive_wrapper\" style=\"height:100%;left:0;position:absolute;top:0;width:100%;\"><div class=\"wistia_embed wistia_async_34i9m3vinh videoFoam=true\" style=\"height:100%;width:100%\">&nbsp;</div></div></div>\r\n<h2>Lifecycle of a Puppet Run Quiz</h2><p>\r\nPlease enter your email below to take a short assessment.\r\n</p>\r\n<script src=\"https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.1.4/js.cookie.min.js\"></script>\r\n<iframe id=\"quiz\" src=\"\"\r\nframeborder=\"0\" style=\"width:100%;max-width:700px;\" height=\"800\"></iframe>\r\n<script> \r\ndocument.getElementById('quiz').src =\r\n\"https://www.classmarker.com/online-test/start?quiz=7pj597a4af922627\" +\r\n\"&cm_fn=\" + Cookies.get(\"studentName\") + \r\n\"&cm_ln=\" + Cookies.get(\"studentName\") + \r\n\"&cm_e=\" + Cookies.get(\"studentEmail\") +\r\n\"&cm_user_id=\" + Cookies.get(\"studentId\")  ; \r\n</script>","created":"2017-07-26 17:06:57","createdById":31489,"deprecatedBy":"","duration":{"days":0,"minutesPerDay":7},"generateCertificate":"DEFAULT","generateProofOfCompletion":"DEFAULT","id":258,"modified":"2017-08-03 12:58:16","modifiedById":35,"name":"Lifecycle of a Puppet Run","orderNumber":0,"price":{"amount":0.0,"currency":"USD"},"primaryCategoryId":10,"status":"DISABLED","summary":"<h2>Summary</h2>\r\n<p>Learn exactly what happens when Puppet runs on an agent node.</p>\r\n<h2>Topics Covered</h2>\r\n<ul>\r\n<li>How do the agent and master interact to enforce changes?</li>\r\n<li>What is the difference between puppet code and a puppet catalog?</li>\r\n<li>How can I find out what happened during the Puppet run?</li>\r\n</ul>\r\n<h2>Audience</h2>\r\n<p>This training is ideal for solution architects, sales engineers, and practitioners.</p>","urlName":"lifecycle-of-a-puppet-run","visibility":"DEPRECATED"},"componentId":258,"componentUUID":"9557b813-9403-3402-be81-1a76c55bd8de","created":"2017-08-01 17:28:45","createdById":31489,"id":227,"modified":"2017-08-03 13:45:55","modifiedById":31489,"name":"Lifecycle of a Puppet Run","pathwayId":270,"position":1},{"_displayName_":"Course Requirement #226","_keyword_":"course_requirement","component":{"UUID":"108fc722-5452-3c33-be6f-5d1f9120e71d","_displayName_":"Puppet Enterprise Out of the Box Value","_keyword_":"content_component","content":"<script src=\"https://fast.wistia.com/embed/medias/yp4b41tue5.jsonp\" async></script><script src=\"https://fast.wistia.com/assets/external/E-v1.js\" async></script><div class=\"wistia_responsive_padding\" style=\"padding:62.5% 0 0 0;position:relative;\"><div class=\"wistia_responsive_wrapper\" style=\"height:100%;left:0;position:absolute;top:0;width:100%;\"><div class=\"wistia_embed wistia_async_yp4b41tue5 videoFoam=true\" style=\"height:100%;width:100%\">&nbsp;</div></div></div>\r\n<h2>Puppet Enterprise Out of the Box Value</h2><p>\r\nPlease enter your email below to take a short assessment.\r\n</p>\r\n<script src=\"https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.1.4/js.cookie.min.js\"></script>\r\n<iframe id=\"quiz\" src=\"\"\r\nframeborder=\"0\" style=\"width:100%;max-width:700px;\" height=\"800\"></iframe>\r\n<script> \r\ndocument.getElementById('quiz').src =\r\n\"https://www.classmarker.com/online-test/start?quiz=67n597a460c10e80\" +\r\n\"&cm_fn=\" + Cookies.get(\"studentName\") + \r\n\"&cm_ln=\" + Cookies.get(\"studentName\") + \r\n\"&cm_e=\" + Cookies.get(\"studentEmail\") +\r\n\"&cm_user_id=\" + Cookies.get(\"studentId\")  \r\n</script>","created":"2017-07-26 09:54:03","createdById":31489,"deprecatedBy":"","duration":{"days":0,"minutesPerDay":30},"generateCertificate":"DEFAULT","generateProofOfCompletion":"DEFAULT","id":257,"modified":"2017-08-03 12:51:57","modifiedById":35,"name":"Puppet Enterprise Out of the Box Value","orderNumber":0,"price":{"amount":0.0,"currency":"USD"},"primaryCategoryId":10,"status":"DISABLED","summary":"<h2>Summary</h2>\r\n<p>Puppet Enterprise offers a lot of features even before any configuration has been done or puppet code has been written.</p>\r\n<h2>Topics Covered</h2>\r\n<ul>\r\n<li>Gathering information about your infrastructure using Puppet Enterprise reports.</li>\r\n<li>Using Package Inspector to discover vulnerable software packages.</li>\r\n\r\n</ul>\r\n<h2>Audience</h2>\r\n<p>This training is ideal for sales engineers, non-practitioners, and open source users new to Puppet Enterprise</p>","urlName":"puppet-enterprise-overview","visibility":"DEPRECATED"},"componentId":257,"componentUUID":"108fc722-5452-3c33-be6f-5d1f9120e71d","created":"2017-08-01 17:27:43","createdById":31489,"id":226,"modified":"2017-08-03 13:45:55","modifiedById":31489,"name":"Puppet Enterprise Out of the Box Value","pathwayId":270,"position":2},{"_displayName_":"Course Requirement #228","_keyword_":"course_requirement","component":{"UUID":"7f4e8b57-f57f-3ec2-b4b6-6a1a5aa82d4a","_displayName_":"Node Groups","_keyword_":"content_component","content":"<script src=\"https://fast.wistia.com/embed/medias/c1qdn6aywr.jsonp\" async></script><script src=\"https://fast.wistia.com/assets/external/E-v1.js\" async></script><div class=\"wistia_responsive_padding\" style=\"padding:56.0% 0 0 0;position:relative;\"><div class=\"wistia_responsive_wrapper\" style=\"height:100%;left:0;position:absolute;top:0;width:100%;\"><div class=\"wistia_embed wistia_async_c1qdn6aywr videoFoam=true\" style=\"height:100%;width:100%\">&nbsp;</div></div></div>\r\n<h2>Node Groups Quiz</h2>\r\n<p>Please enter your email below to take a short assessment.</p>\r\n\r\n<script src=\"https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.1.4/js.cookie.min.js\"></script>\r\n<iframe id=\"quiz\" src=\"\"\r\nframeborder=\"0\" style=\"width:100%;max-width:700px;\" height=\"800\"></iframe>\r\n<script> \r\ndocument.getElementById('quiz').src =\r\n\"https://www.classmarker.com/online-test/start?quiz=9kd597a4c33b6690\" +\r\n\"&cm_fn=\" + Cookies.get(\"studentName\") + \r\n\"&cm_ln=\" + Cookies.get(\"studentName\") + \r\n\"&cm_e=\" + Cookies.get(\"studentEmail\") +\r\n\"&cm_user_id=\" + Cookies.get(\"studentId\")  ; \r\n</script>","created":"2017-07-27 09:21:32","createdById":31489,"deprecatedBy":"","duration":{"days":0,"minutesPerDay":7},"generateCertificate":"DEFAULT","generateProofOfCompletion":"DEFAULT","id":259,"modified":"2017-08-03 13:06:08","modifiedById":35,"name":"Node Groups","orderNumber":0,"price":{"amount":0.0,"currency":"USD"},"primaryCategoryId":10,"status":"DISABLED","summary":"<h2>Summary</h2>\r\n<p>Node groups allow you to dynamically define how Puppet Enterprise manages your infrastructure.</p>\r\n<h2>Topics Covered</h2>\r\n<ul>\r\n<li>How do you define rules to specify which nodes will get a particular configuration?</li>\r\n<li>What's the best way to keep node classification from getting confusing?</li>\r\n<li>How do you to create complex hierarchies of nested node groups?</li>\r\n</ul>\r\n<h2>Audience</h2>\r\n<p>This training is ideal for solution architects, sales engineers, and practitioners.</p>","urlName":"node-groups","visibility":"DEPRECATED"},"componentId":259,"componentUUID":"7f4e8b57-f57f-3ec2-b4b6-6a1a5aa82d4a","created":"2017-08-01 17:31:03","createdById":31489,"id":228,"modified":"2017-08-03 13:45:55","modifiedById":31489,"name":"Node Groups","pathwayId":270,"position":3},{"_displayName_":"Course Requirement #229","_keyword_":"course_requirement","component":{"UUID":"10683d9a-8cf1-3d7c-adba-a1cd94c0c867","_displayName_":"Role Based Access Control","_keyword_":"content_component","content":"<script src=\"https://fast.wistia.com/embed/medias/9bti74zn88.jsonp\" async></script><script src=\"https://fast.wistia.com/assets/external/E-v1.js\" async></script><div class=\"wistia_responsive_padding\" style=\"padding:56.0% 0 0 0;position:relative;\"><div class=\"wistia_responsive_wrapper\" style=\"height:100%;left:0;position:absolute;top:0;width:100%;\"><div class=\"wistia_embed wistia_async_9bti74zn88 videoFoam=true\" style=\"height:100%;width:100%\">&nbsp;</div></div></div>\r\n<p>\r\n<h2>Role Based Access Control Quiz</h2>\r\n</p>\r\nPlease enter your email below to take a short assessment of what you learned.<br>\r\n\r\n<script src=\"https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.1.4/js.cookie.min.js\"></script>\r\n<iframe id=\"quiz\" src=\"\"\r\nframeborder=\"0\" style=\"width:100%;max-width:700px;\" height=\"800\"></iframe>\r\n<script> \r\ndocument.getElementById('quiz').src =\r\n\"https://www.classmarker.com/online-test/start?quiz=ttj597a43d42c123\" +\r\n\"&cm_fn=\" + Cookies.get(\"studentName\") + \r\n\"&cm_ln=\" + Cookies.get(\"studentName\") + \r\n\"&cm_e=\" + Cookies.get(\"studentEmail\") +\r\n\"&cm_user_id=\" + Cookies.get(\"studentId\")  ; \r\n</script>","created":"2017-07-27 09:56:16","createdById":31489,"deprecatedBy":"","duration":{"days":0,"minutesPerDay":7},"generateCertificate":"DEFAULT","generateProofOfCompletion":"DEFAULT","id":260,"modified":"2017-08-03 13:14:25","modifiedById":35,"name":"Role Based Access Control","orderNumber":0,"price":{"amount":0.0,"currency":"USD"},"primaryCategoryId":10,"status":"DISABLED","summary":"<h2>Summary</h2>\r\n<p>Puppet Enterprise manages user permissions with sophisticated Role Based Access Control\r\n</p>\r\n<h2>Topics Covered</h2>\r\n<ul>\r\n<li>How can roles be used to define user permissions?</li>\r\n<li>What level of granularity of permissions is possible in Puppet Enterprise?</li>\r\n<li>Can Puppet Enterprise be integrated with external directory services like LDAP?</li>\r\n</ul>\r\n<h2>Audience</h2>\r\n<p>This training is ideal for solution architects, sales engineers, and practitioners.</p>","urlName":"role-based-access-control","visibility":"DEPRECATED"},"componentId":260,"componentUUID":"10683d9a-8cf1-3d7c-adba-a1cd94c0c867","created":"2017-08-01 17:31:56","createdById":31489,"id":229,"modified":"2017-08-03 13:45:56","modifiedById":31489,"name":"Role Based Access Control","pathwayId":270,"position":4},{"_displayName_":"Course Requirement #230","_keyword_":"course_requirement","component":{"UUID":"c6fcf26e-2751-38fa-9eb6-5e632f643376","_displayName_":"Separating Data from Code","_keyword_":"content_component","content":"<script src=\"https://fast.wistia.com/embed/medias/c0knfkrcgi.jsonp\" async></script><script src=\"https://fast.wistia.com/assets/external/E-v1.js\" async></script><div class=\"wistia_responsive_padding\" style=\"padding:56.25% 0 0 0;position:relative;\"><div class=\"wistia_responsive_wrapper\" style=\"height:100%;left:0;position:absolute;top:0;width:100%;\"><div class=\"wistia_embed wistia_async_c0knfkrcgi videoFoam=true\" style=\"height:100%;width:100%\">&nbsp;</div></div></div>\r\n<h2>Separating Data from Code</h2><p>\r\nPlease enter your email below to take a short assessment.\r\n</p>\r\n\r\n<script src=\"https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.1.4/js.cookie.min.js\"></script>\r\n<iframe id=\"quiz\" src=\"\"\r\nframeborder=\"0\" style=\"width:100%;max-width:700px;\" height=\"800\"></iframe>\r\n<script> \r\ndocument.getElementById('quiz').src =\r\n\"https://www.classmarker.com/online-test/start?quiz=7px597a46e067919\" +\r\n\"&cm_fn=\" + Cookies.get(\"studentName\") + \r\n\"&cm_ln=\" + Cookies.get(\"studentName\") + \r\n\"&cm_e=\" + Cookies.get(\"studentEmail\") +\r\n\"&cm_user_id=\" + Cookies.get(\"studentId\")  ; \r\n</script>","created":"2017-07-27 10:51:27","createdById":31489,"deprecatedBy":"","duration":{"days":0,"minutesPerDay":5},"generateCertificate":"DEFAULT","generateProofOfCompletion":"DEFAULT","id":261,"modified":"2017-08-03 13:24:16","modifiedById":35,"name":"Separating Data from Code","orderNumber":0,"price":{"amount":0.0,"currency":"USD"},"primaryCategoryId":10,"status":"ENABLED","summary":"<h2>Summary</h2>\r\n<p>Puppet Enterprise allows configuration data to be easily separated from code using Hiera.\r\n</p>\r\n<h2>Topics Covered</h2>\r\n<ul>\r\n<li>How does Hiera improve the readability of puppet code?\r\n</li>\r\n<li>How can puppet modules be shared without sharing sensitive data?\r\n</li>\r\n<li>How does Hiera improve the security of puppet code?\r\n</li>\r\n</ul>\r\n<h2>Audience</h2>\r\n<p>This training is ideal for solution architects, sales engineers, and practitioners.</p>","urlName":"an-introduction-to-hiera","visibility":"DEPRECATED"},"componentId":261,"componentUUID":"c6fcf26e-2751-38fa-9eb6-5e632f643376","created":"2017-08-01 17:32:10","createdById":31489,"id":230,"modified":"2017-08-03 13:45:55","modifiedById":31489,"name":"Separating Data from Code","pathwayId":270,"position":5},{"_displayName_":"Course Requirement #231","_keyword_":"course_requirement","component":{"UUID":"14f195a8-33a9-3b6d-b73d-df027d86b56a","_displayName_":"Puppet Enterprise at Scale","_keyword_":"content_component","content":"<script src=\"https://fast.wistia.com/embed/medias/e417mb8wda.jsonp\" async></script><script src=\"https://fast.wistia.com/assets/external/E-v1.js\" async></script><div class=\"wistia_responsive_padding\" style=\"padding:56.25% 0 0 0;position:relative;\"><div class=\"wistia_responsive_wrapper\" style=\"height:100%;left:0;position:absolute;top:0;width:100%;\"><div class=\"wistia_embed wistia_async_e417mb8wda videoFoam=true\" style=\"height:100%;width:100%\">&nbsp;</div></div></div>\r\n<h2>Puppet Enterprise at Scale Quiz</h2><p>\r\nPlease enter your email below to take a short assessment.\r\n</p>\r\n\r\n<script src=\"https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.1.4/js.cookie.min.js\"></script>\r\n<iframe id=\"quiz\" src=\"\"\r\nframeborder=\"0\" style=\"width:100%;max-width:700px;\" height=\"800\"></iframe>\r\n<script> \r\ndocument.getElementById('quiz').src =\r\n\"https://www.classmarker.com/online-test/start?quiz=hcc597a4bb7e4478\" +\r\n\"&cm_fn=\" + Cookies.get(\"studentName\") + \r\n\"&cm_ln=\" + Cookies.get(\"studentName\") + \r\n\"&cm_e=\" + Cookies.get(\"studentEmail\") +\r\n\"&cm_user_id=\" + Cookies.get(\"studentId\")  ; \r\n</script>","created":"2017-07-27 11:27:19","createdById":31489,"deprecatedBy":"","duration":{"days":0,"minutesPerDay":4},"generateCertificate":"DEFAULT","generateProofOfCompletion":"DEFAULT","id":263,"modified":"2017-08-03 13:30:05","modifiedById":35,"name":"Puppet Enterprise at Scale","orderNumber":0,"price":{"amount":0.0,"currency":"USD"},"primaryCategoryId":10,"status":"DISABLED","summary":"<h2>Summary</h2>\r\n<p>Puppet Enterprise allows managing your entire infrastructure from a single console.\r\n</p>\r\n<h2>Topics Covered</h2>\r\n<ul>\r\n<li>How many nodes are supported by a single monolithic Puppet Enterprise master?\r\n</li>\r\n<li>Which services can load balanced to provide better performance?\r\n</li>\r\n<li>What is the maximum scale of a Puppet Enterprise Installation?\r\n</li>\r\n</ul>\r\n<h2>Audience</h2>\r\n<p>This training is ideal for solution architects, sales engineers, and practitioners.</p>","urlName":"puppet-enterprise-at-scale","visibility":"DEPRECATED"},"componentId":263,"componentUUID":"14f195a8-33a9-3b6d-b73d-df027d86b56a","created":"2017-08-01 17:32:25","createdById":31489,"id":231,"modified":"2017-08-03 13:45:55","modifiedById":31489,"name":"Puppet Enterprise at Scale","pathwayId":270,"position":6},{"_displayName_":"Course Requirement #232","_keyword_":"course_requirement","component":{"UUID":"c2485d3f-2fa7-374c-b288-c3ff9c180b55","_displayName_":"Using the Puppet Forge","_keyword_":"content_component","content":"<script src=\"https://fast.wistia.com/embed/medias/5warssd4bc.jsonp\" async></script><script src=\"https://fast.wistia.com/assets/external/E-v1.js\" async></script><div class=\"wistia_responsive_padding\" style=\"padding:56.25% 0 0 0;position:relative;\"><div class=\"wistia_responsive_wrapper\" style=\"height:100%;left:0;position:absolute;top:0;width:100%;\"><div class=\"wistia_embed wistia_async_5warssd4bc videoFoam=true\" style=\"height:100%;width:100%\">&nbsp;</div></div></div>\r\n<h2> Using the Puppet Forge Quiz</h2><p>\r\nPlease enter your email below to take a short assessment.\r\n</p>\r\n\r\n<script src=\"https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.1.4/js.cookie.min.js\"></script>\r\n<iframe id=\"quiz\" src=\"\"\r\nframeborder=\"0\" style=\"width:100%;max-width:700px;\" height=\"800\"></iframe>\r\n<script> \r\ndocument.getElementById('quiz').src =\r\n\"https://www.classmarker.com/online-test/start?quiz=jhp597a4b537c38d\" +\r\n\"&cm_fn=\" + Cookies.get(\"studentName\") + \r\n\"&cm_ln=\" + Cookies.get(\"studentName\") + \r\n\"&cm_e=\" + Cookies.get(\"studentEmail\") +\r\n\"&cm_user_id=\" + Cookies.get(\"studentId\")  ; \r\n</script>","created":"2017-07-27 12:43:35","createdById":31489,"deprecatedBy":"","duration":{"days":0,"minutesPerDay":5},"generateCertificate":"DEFAULT","generateProofOfCompletion":"DEFAULT","id":264,"modified":"2017-08-03 13:34:12","modifiedById":35,"name":"Using the Puppet Forge","orderNumber":0,"price":{"amount":0.0,"currency":"USD"},"primaryCategoryId":10,"status":"DISABLED","summary":"<h2>Summary</h2>\r\n<p>The Puppet Forge is an online repository of Puppet code shared as modules.\r\n</p>\r\n<h2>Topics Covered</h2>\r\n<ul>\r\n<li>What is the difference between support, approved, and community modules?\r\n</li>\r\n<li>How can you find out if a module is well written?\r\n</li>\r\n<li>How do you install modules on your Puppet Enterprise master?\r\n</li>\r\n</ul>\r\n<h2>Audience</h2>\r\n<p>This training is ideal for solution architects, sales engineers, and practitioners.</p>","urlName":"using-the-puppet-forge","visibility":"DEPRECATED"},"componentId":264,"componentUUID":"c2485d3f-2fa7-374c-b288-c3ff9c180b55","created":"2017-08-01 17:32:48","createdById":31489,"id":232,"modified":"2017-08-03 13:45:55","modifiedById":31489,"name":"Using the Puppet Forge","pathwayId":270,"position":7},{"_displayName_":"Course Requirement #234","_keyword_":"course_requirement","component":{"UUID":"e3155458-8d9b-32ed-9bd6-2f902a2092ea","_displayName_":"Puppet Enterprise Code Management","_keyword_":"content_component","content":"<script src=\"https://fast.wistia.com/embed/medias/p6282swv63.jsonp\" async></script><script src=\"https://fast.wistia.com/assets/external/E-v1.js\" async></script><div class=\"wistia_responsive_padding\" style=\"padding:56.25% 0 0 0;position:relative;\"><div class=\"wistia_responsive_wrapper\" style=\"height:100%;left:0;position:absolute;top:0;width:100%;\"><div class=\"wistia_embed wistia_async_p6282swv63 videoFoam=true\" style=\"height:100%;width:100%\">&nbsp;</div></div></div>\r\n<h2>Puppet Enterprise Code Management Quiz</h2><p>\r\nPlease enter your email below to take a short assessment.\r\n</p>\r\n\r\n<script src=\"https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.1.4/js.cookie.min.js\"></script>\r\n<iframe id=\"quiz\" src=\"\"\r\nframeborder=\"0\" style=\"width:100%;max-width:700px;\" height=\"800\"></iframe>\r\n<script> \r\ndocument.getElementById('quiz').src =\r\n\"https://www.classmarker.com/online-test/start?quiz=93k597a4a7f7b53e\" +\r\n\"&cm_fn=\" + Cookies.get(\"studentName\") + \r\n\"&cm_ln=\" + Cookies.get(\"studentName\") + \r\n\"&cm_e=\" + Cookies.get(\"studentEmail\") +\r\n\"&cm_user_id=\" + Cookies.get(\"studentId\")  ; \r\n</script>","created":"2017-07-27 11:14:48","createdById":31489,"deprecatedBy":"","duration":{"days":0,"minutesPerDay":7},"generateCertificate":"DEFAULT","generateProofOfCompletion":"DEFAULT","id":262,"modified":"2017-08-03 13:38:58","modifiedById":35,"name":"Puppet Enterprise Code Management","orderNumber":0,"price":{"amount":0.0,"currency":"USD"},"primaryCategoryId":10,"status":"DISABLED","summary":"<h2>Summary</h2>\r\n<p>Puppet Enterprise integrates directly with source control to make collaboration and change tracking manageable.\r\n</p>\r\n<h2>Topics Covered</h2>\r\n<ul>\r\n<li>How are modules installed when using Puppet Enterprise?\r\n</li>\r\n<li>How can a git repository be configured to automatically deploy puppet code?\r\n</li>\r\n<li>What kind of workflow is possible using code management with Puppet Enterprise?\r\n</li>\r\n</ul>\r\n<h2>Audience</h2>\r\n<p>This training is ideal for solution architects, sales engineers, and practitioners.</p>","urlName":"puppet-enterprise-code-management","visibility":"DEPRECATED"},"componentId":262,"componentUUID":"e3155458-8d9b-32ed-9bd6-2f902a2092ea","created":"2017-08-01 17:35:16","createdById":31489,"id":234,"modified":"2017-08-03 13:45:55","modifiedById":31489,"name":"Puppet Enterprise Code Management","pathwayId":270,"position":8},{"_displayName_":"Course Requirement #233","_keyword_":"course_requirement","component":{"UUID":"2d0067ef-8d57-3643-87b1-a9ccda7f1239","_displayName_":"Puppet Services and Support","_keyword_":"content_component","content":"<script src=\"https://fast.wistia.com/embed/medias/dzxod6cl1o.jsonp\" async></script><script src=\"https://fast.wistia.com/assets/external/E-v1.js\" async></script><div class=\"wistia_responsive_padding\" style=\"padding:62.5% 0 0 0;position:relative;\"><div class=\"wistia_responsive_wrapper\" style=\"height:100%;left:0;position:absolute;top:0;width:100%;\"><div class=\"wistia_embed wistia_async_dzxod6cl1o videoFoam=true\" style=\"height:100%;width:100%\">&nbsp;</div></div></div>","created":"2017-07-28 13:53:44","createdById":31489,"deprecatedBy":"","duration":{"days":0,"minutesPerDay":11},"generateCertificate":"DEFAULT","generateProofOfCompletion":"DEFAULT","id":266,"modified":"2017-08-03 13:48:01","modifiedById":35,"name":"Puppet Services and Support","orderNumber":0,"price":{"amount":0.0,"currency":"USD"},"primaryCategoryId":10,"status":"ENABLED","summary":"<h2>Summary</h2>\r\n<p>Being a Puppet Enterprise customer offers more value than the product itself.\r\n</p>\r\n<h2>Topics Covered</h2>\r\n<ul>\r\n<li>What instructor led training are available?\r\n</li>\r\n<li>What professional services does Puppet provide?\r\n</li>\r\n<li>What levels of customer support does Puppet provide to customers?\r\n</li>\r\n</ul>\r\n<h2>Audience</h2>\r\n<p>This training is ideal for solution architects, sales engineers, managers, practitioners and non-practitioners.</p>","urlName":"puppet-services-and-support","visibility":"DEPRECATED"},"componentId":266,"componentUUID":"2d0067ef-8d57-3643-87b1-a9ccda7f1239","created":"2017-08-01 17:33:49","createdById":31489,"id":233,"modified":"2017-08-03 13:45:55","modifiedById":31489,"name":"Puppet Services and Support","pathwayId":270,"position":9},{"pathwayId":0,"position":0}],"created":"2017-08-01 17:06:40","createdById":31489,"duration":{"days":0,"minutesPerDay":0},"generateCertificate":"DEFAULT","generateProofOfCompletion":"DEFAULT","id":270,"modified":"2017-08-01 17:06:40","modifiedById":31489,"name":"Out of the Box Value","orderNumber":0,"price":{"amount":0.0,"currency":"USD"},"primaryCategoryId":10,"status":"ACTIVE_COMPONENT","type":{"_displayName_":"Module","_keyword_":"course_pathway_type","created":"2015-08-02 21:45:38","id":6,"modified":"2015-08-02 21:45:38","name":"Module","rootType":false,"supportedComponentTypes":["e_learning_component","course","content_component","exam_component"]},"typeId":6,"urlName":"out-of-the-box-value","visibility":"PUBLIC"}
+{
+  "UUID": "17d91eb8-cdec-311c-a8f0-8f059ce7bf11",
+  "_displayName_": "Out of the Box Value",
+  "_keyword_": "course_pathway",
+  "components": [
+    {
+      "_displayName_": "Course Requirement #225",
+      "_keyword_": "course_requirement",
+      "component": {
+        "UUID": "16242ba7-13d0-37e7-ab6e-61fe73e7ca80",
+        "_displayName_": "Puppet Enterprise Competitive Edge",
+        "_keyword_": "content_component",
+        "content": "<p>\r\n<script src=\"https://fast.wistia.com/embed/medias/pyex0mbleq.jsonp\" async=\"\"></script>\r\n<script src=\"https://fast.wistia.com/assets/external/E-v1.js\" async=\"\"></script>\r\n</p>\r\n<div class=\"wistia_responsive_padding\" style=\"padding: 56.25% 0 0 0; position: relative;\">\r\n<div class=\"wistia_responsive_wrapper\" style=\"height: 100%; left: 0; position: absolute; top: 0; width: 100%;\">\r\n<div class=\"wistia_embed wistia_async_pyex0mbleq videoFoam=true\" style=\"height: 100%; width: 100%;\">&nbsp;</div>\r\n</div>\r\n</div>\r\n<h2>Case Studies</h2>\r\n<p><a href=\"https://puppet.com/resources/case-study/1-800-flowerscom\" target=\"_blank\">1-800-FLOWERS.COM</a></p>\r\n<p>Puppet Enterprise automates cloud provisioning and deprovisioning and maintains consistent configurations and efficiency as the business grows.</p>\r\n<p><a href=\"https://puppet.com/resources/case-study/infusionsoft\" target=\"_blank\">Infusionsoft</a></p>\r\n<p>As an integral component of standard continuous integration process, Puppet Enterprise provides the ability to achieve continuous delivery of infrastructure.</p>\r\n<p><a href=\"https://puppet.com/resources/case-study/nyse-and-ice\" target=\"_blank\">NYSE and ICE</a></p>\r\n<p>The New York Stock Exchange (NYSE) and its parent company, Intercontinental Exchange (ICE), use Puppet Enterprise to manage nearly 20,000 servers on a mix of platforms and enforce regulatory compliance.&nbsp;</p>",
+        "created": "2017-08-01 17:01:40",
+        "createdById": 31489,
+        "deprecatedBy": "",
+        "duration": {
+          "days": 0,
+          "minutesPerDay": 20
+        },
+        "generateCertificate": "DEFAULT",
+        "generateProofOfCompletion": "DEFAULT",
+        "id": 269,
+        "modified": "2017-08-02 22:17:07",
+        "modifiedById": 31489,
+        "name": "Puppet Enterprise Competitive Edge",
+        "orderNumber": 0,
+        "price": {
+          "amount": 0.0,
+          "currency": "USD"
+        },
+        "primaryCategoryId": 10,
+        "status": "ENABLED",
+        "summary": "<h2>Summary</h2>\r\n<p>Puppet Enterprise gives clients value right out of the box. But how? After watching this video and reading the attached case studies, you will know why clients rely on Puppet Enterprise for deploying faster, increasing revenue, and transforming culture.</p>\r\n<h2>Topics Covered</h2>\r\n<ul>\r\n<li>Why does Puppet Enterprise exist?</li>\r\n<li>How is Puppet different from other tools in the market?</li>\r\n<li>What does Puppet Enterprise do, in practical terms, for your clients?</li>\r\n</ul>\r\n<h2>Audience</h2>\r\n<p>This training is ideal for solution engineers, sales engineers, and non-practitioners who need to understand Puppet Enterprise's competitive advantage.</p>",
+        "urlName": "puppet-enterprise-competitive-edge",
+        "visibility": "DEPRECATED"
+      },
+      "componentId": 269,
+      "componentUUID": "16242ba7-13d0-37e7-ab6e-61fe73e7ca80",
+      "created": "2017-08-01 17:09:28",
+      "createdById": 31489,
+      "id": 225,
+      "modified": "2017-08-03 13:45:55",
+      "modifiedById": 31489,
+      "name": "Puppet Enterprise: Competitive Edge",
+      "pathwayId": 270,
+      "position": 0
+    },
+    {
+      "_displayName_": "Course Requirement #227",
+      "_keyword_": "course_requirement",
+      "component": {
+        "UUID": "9557b813-9403-3402-be81-1a76c55bd8de",
+        "_displayName_": "Lifecycle of a Puppet Run",
+        "_keyword_": "content_component",
+        "content": "<script src=\"https://fast.wistia.com/embed/medias/34i9m3vinh.jsonp\" async></script><script src=\"https://fast.wistia.com/assets/external/E-v1.js\" async></script><div class=\"wistia_responsive_padding\" style=\"padding:56.0% 0 0 0;position:relative;\"><div class=\"wistia_responsive_wrapper\" style=\"height:100%;left:0;position:absolute;top:0;width:100%;\"><div class=\"wistia_embed wistia_async_34i9m3vinh videoFoam=true\" style=\"height:100%;width:100%\">&nbsp;</div></div></div>\r\n<h2>Lifecycle of a Puppet Run Quiz</h2><p>\r\nPlease enter your email below to take a short assessment.\r\n</p>\r\n<script src=\"https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.1.4/js.cookie.min.js\"></script>\r\n<iframe id=\"quiz\" src=\"\"\r\nframeborder=\"0\" style=\"width:100%;max-width:700px;\" height=\"800\"></iframe>\r\n<script> \r\ndocument.getElementById('quiz').src =\r\n\"https://www.classmarker.com/online-test/start?quiz=7pj597a4af922627\" +\r\n\"&cm_fn=\" + Cookies.get(\"studentName\") + \r\n\"&cm_ln=\" + Cookies.get(\"studentName\") + \r\n\"&cm_e=\" + Cookies.get(\"studentEmail\") +\r\n\"&cm_user_id=\" + Cookies.get(\"studentId\")  ; \r\n</script>",
+        "created": "2017-07-26 17:06:57",
+        "createdById": 31489,
+        "deprecatedBy": "",
+        "duration": {
+          "days": 0,
+          "minutesPerDay": 7
+        },
+        "generateCertificate": "DEFAULT",
+        "generateProofOfCompletion": "DEFAULT",
+        "id": 258,
+        "modified": "2017-08-03 12:58:16",
+        "modifiedById": 35,
+        "name": "Lifecycle of a Puppet Run",
+        "orderNumber": 0,
+        "price": {
+          "amount": 0.0,
+          "currency": "USD"
+        },
+        "primaryCategoryId": 10,
+        "status": "DISABLED",
+        "summary": "<h2>Summary</h2>\r\n<p>Learn exactly what happens when Puppet runs on an agent node.</p>\r\n<h2>Topics Covered</h2>\r\n<ul>\r\n<li>How do the agent and master interact to enforce changes?</li>\r\n<li>What is the difference between puppet code and a puppet catalog?</li>\r\n<li>How can I find out what happened during the Puppet run?</li>\r\n</ul>\r\n<h2>Audience</h2>\r\n<p>This training is ideal for solution architects, sales engineers, and practitioners.</p>",
+        "urlName": "lifecycle-of-a-puppet-run",
+        "visibility": "DEPRECATED"
+      },
+      "componentId": 258,
+      "componentUUID": "9557b813-9403-3402-be81-1a76c55bd8de",
+      "created": "2017-08-01 17:28:45",
+      "createdById": 31489,
+      "id": 227,
+      "modified": "2017-08-03 13:45:55",
+      "modifiedById": 31489,
+      "name": "Lifecycle of a Puppet Run",
+      "pathwayId": 270,
+      "position": 1
+    },
+    {
+      "_displayName_": "Course Requirement #226",
+      "_keyword_": "course_requirement",
+      "component": {
+        "UUID": "108fc722-5452-3c33-be6f-5d1f9120e71d",
+        "_displayName_": "Puppet Enterprise Out of the Box Value",
+        "_keyword_": "content_component",
+        "content": "<script src=\"https://fast.wistia.com/embed/medias/yp4b41tue5.jsonp\" async></script><script src=\"https://fast.wistia.com/assets/external/E-v1.js\" async></script><div class=\"wistia_responsive_padding\" style=\"padding:62.5% 0 0 0;position:relative;\"><div class=\"wistia_responsive_wrapper\" style=\"height:100%;left:0;position:absolute;top:0;width:100%;\"><div class=\"wistia_embed wistia_async_yp4b41tue5 videoFoam=true\" style=\"height:100%;width:100%\">&nbsp;</div></div></div>\r\n<h2>Puppet Enterprise Out of the Box Value</h2><p>\r\nPlease enter your email below to take a short assessment.\r\n</p>\r\n<script src=\"https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.1.4/js.cookie.min.js\"></script>\r\n<iframe id=\"quiz\" src=\"\"\r\nframeborder=\"0\" style=\"width:100%;max-width:700px;\" height=\"800\"></iframe>\r\n<script> \r\ndocument.getElementById('quiz').src =\r\n\"https://www.classmarker.com/online-test/start?quiz=67n597a460c10e80\" +\r\n\"&cm_fn=\" + Cookies.get(\"studentName\") + \r\n\"&cm_ln=\" + Cookies.get(\"studentName\") + \r\n\"&cm_e=\" + Cookies.get(\"studentEmail\") +\r\n\"&cm_user_id=\" + Cookies.get(\"studentId\")  \r\n</script>",
+        "created": "2017-07-26 09:54:03",
+        "createdById": 31489,
+        "deprecatedBy": "",
+        "duration": {
+          "days": 0,
+          "minutesPerDay": 30
+        },
+        "generateCertificate": "DEFAULT",
+        "generateProofOfCompletion": "DEFAULT",
+        "id": 257,
+        "modified": "2017-08-03 12:51:57",
+        "modifiedById": 35,
+        "name": "Puppet Enterprise Out of the Box Value",
+        "orderNumber": 0,
+        "price": {
+          "amount": 0.0,
+          "currency": "USD"
+        },
+        "primaryCategoryId": 10,
+        "status": "DISABLED",
+        "summary": "<h2>Summary</h2>\r\n<p>Puppet Enterprise offers a lot of features even before any configuration has been done or puppet code has been written.</p>\r\n<h2>Topics Covered</h2>\r\n<ul>\r\n<li>Gathering information about your infrastructure using Puppet Enterprise reports.</li>\r\n<li>Using Package Inspector to discover vulnerable software packages.</li>\r\n\r\n</ul>\r\n<h2>Audience</h2>\r\n<p>This training is ideal for sales engineers, non-practitioners, and open source users new to Puppet Enterprise</p>",
+        "urlName": "puppet-enterprise-overview",
+        "visibility": "DEPRECATED"
+      },
+      "componentId": 257,
+      "componentUUID": "108fc722-5452-3c33-be6f-5d1f9120e71d",
+      "created": "2017-08-01 17:27:43",
+      "createdById": 31489,
+      "id": 226,
+      "modified": "2017-08-03 13:45:55",
+      "modifiedById": 31489,
+      "name": "Puppet Enterprise Out of the Box Value",
+      "pathwayId": 270,
+      "position": 2
+    },
+    {
+      "_displayName_": "Course Requirement #228",
+      "_keyword_": "course_requirement",
+      "component": {
+        "UUID": "7f4e8b57-f57f-3ec2-b4b6-6a1a5aa82d4a",
+        "_displayName_": "Node Groups",
+        "_keyword_": "content_component",
+        "content": "<script src=\"https://fast.wistia.com/embed/medias/c1qdn6aywr.jsonp\" async></script><script src=\"https://fast.wistia.com/assets/external/E-v1.js\" async></script><div class=\"wistia_responsive_padding\" style=\"padding:56.0% 0 0 0;position:relative;\"><div class=\"wistia_responsive_wrapper\" style=\"height:100%;left:0;position:absolute;top:0;width:100%;\"><div class=\"wistia_embed wistia_async_c1qdn6aywr videoFoam=true\" style=\"height:100%;width:100%\">&nbsp;</div></div></div>\r\n<h2>Node Groups Quiz</h2>\r\n<p>Please enter your email below to take a short assessment.</p>\r\n\r\n<script src=\"https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.1.4/js.cookie.min.js\"></script>\r\n<iframe id=\"quiz\" src=\"\"\r\nframeborder=\"0\" style=\"width:100%;max-width:700px;\" height=\"800\"></iframe>\r\n<script> \r\ndocument.getElementById('quiz').src =\r\n\"https://www.classmarker.com/online-test/start?quiz=9kd597a4c33b6690\" +\r\n\"&cm_fn=\" + Cookies.get(\"studentName\") + \r\n\"&cm_ln=\" + Cookies.get(\"studentName\") + \r\n\"&cm_e=\" + Cookies.get(\"studentEmail\") +\r\n\"&cm_user_id=\" + Cookies.get(\"studentId\")  ; \r\n</script>",
+        "created": "2017-07-27 09:21:32",
+        "createdById": 31489,
+        "deprecatedBy": "",
+        "duration": {
+          "days": 0,
+          "minutesPerDay": 7
+        },
+        "generateCertificate": "DEFAULT",
+        "generateProofOfCompletion": "DEFAULT",
+        "id": 259,
+        "modified": "2017-08-03 13:06:08",
+        "modifiedById": 35,
+        "name": "Node Groups",
+        "orderNumber": 0,
+        "price": {
+          "amount": 0.0,
+          "currency": "USD"
+        },
+        "primaryCategoryId": 10,
+        "status": "DISABLED",
+        "summary": "<h2>Summary</h2>\r\n<p>Node groups allow you to dynamically define how Puppet Enterprise manages your infrastructure.</p>\r\n<h2>Topics Covered</h2>\r\n<ul>\r\n<li>How do you define rules to specify which nodes will get a particular configuration?</li>\r\n<li>What's the best way to keep node classification from getting confusing?</li>\r\n<li>How do you to create complex hierarchies of nested node groups?</li>\r\n</ul>\r\n<h2>Audience</h2>\r\n<p>This training is ideal for solution architects, sales engineers, and practitioners.</p>",
+        "urlName": "node-groups",
+        "visibility": "DEPRECATED"
+      },
+      "componentId": 259,
+      "componentUUID": "7f4e8b57-f57f-3ec2-b4b6-6a1a5aa82d4a",
+      "created": "2017-08-01 17:31:03",
+      "createdById": 31489,
+      "id": 228,
+      "modified": "2017-08-03 13:45:55",
+      "modifiedById": 31489,
+      "name": "Node Groups",
+      "pathwayId": 270,
+      "position": 3
+    },
+    {
+      "_displayName_": "Course Requirement #229",
+      "_keyword_": "course_requirement",
+      "component": {
+        "UUID": "10683d9a-8cf1-3d7c-adba-a1cd94c0c867",
+        "_displayName_": "Role Based Access Control",
+        "_keyword_": "content_component",
+        "content": "<script src=\"https://fast.wistia.com/embed/medias/9bti74zn88.jsonp\" async></script><script src=\"https://fast.wistia.com/assets/external/E-v1.js\" async></script><div class=\"wistia_responsive_padding\" style=\"padding:56.0% 0 0 0;position:relative;\"><div class=\"wistia_responsive_wrapper\" style=\"height:100%;left:0;position:absolute;top:0;width:100%;\"><div class=\"wistia_embed wistia_async_9bti74zn88 videoFoam=true\" style=\"height:100%;width:100%\">&nbsp;</div></div></div>\r\n<p>\r\n<h2>Role Based Access Control Quiz</h2>\r\n</p>\r\nPlease enter your email below to take a short assessment of what you learned.<br>\r\n\r\n<script src=\"https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.1.4/js.cookie.min.js\"></script>\r\n<iframe id=\"quiz\" src=\"\"\r\nframeborder=\"0\" style=\"width:100%;max-width:700px;\" height=\"800\"></iframe>\r\n<script> \r\ndocument.getElementById('quiz').src =\r\n\"https://www.classmarker.com/online-test/start?quiz=ttj597a43d42c123\" +\r\n\"&cm_fn=\" + Cookies.get(\"studentName\") + \r\n\"&cm_ln=\" + Cookies.get(\"studentName\") + \r\n\"&cm_e=\" + Cookies.get(\"studentEmail\") +\r\n\"&cm_user_id=\" + Cookies.get(\"studentId\")  ; \r\n</script>",
+        "created": "2017-07-27 09:56:16",
+        "createdById": 31489,
+        "deprecatedBy": "",
+        "duration": {
+          "days": 0,
+          "minutesPerDay": 7
+        },
+        "generateCertificate": "DEFAULT",
+        "generateProofOfCompletion": "DEFAULT",
+        "id": 260,
+        "modified": "2017-08-03 13:14:25",
+        "modifiedById": 35,
+        "name": "Role Based Access Control",
+        "orderNumber": 0,
+        "price": {
+          "amount": 0.0,
+          "currency": "USD"
+        },
+        "primaryCategoryId": 10,
+        "status": "DISABLED",
+        "summary": "<h2>Summary</h2>\r\n<p>Puppet Enterprise manages user permissions with sophisticated Role Based Access Control\r\n</p>\r\n<h2>Topics Covered</h2>\r\n<ul>\r\n<li>How can roles be used to define user permissions?</li>\r\n<li>What level of granularity of permissions is possible in Puppet Enterprise?</li>\r\n<li>Can Puppet Enterprise be integrated with external directory services like LDAP?</li>\r\n</ul>\r\n<h2>Audience</h2>\r\n<p>This training is ideal for solution architects, sales engineers, and practitioners.</p>",
+        "urlName": "role-based-access-control",
+        "visibility": "DEPRECATED"
+      },
+      "componentId": 260,
+      "componentUUID": "10683d9a-8cf1-3d7c-adba-a1cd94c0c867",
+      "created": "2017-08-01 17:31:56",
+      "createdById": 31489,
+      "id": 229,
+      "modified": "2017-08-03 13:45:56",
+      "modifiedById": 31489,
+      "name": "Role Based Access Control",
+      "pathwayId": 270,
+      "position": 4
+    },
+    {
+      "_displayName_": "Course Requirement #230",
+      "_keyword_": "course_requirement",
+      "component": {
+        "UUID": "c6fcf26e-2751-38fa-9eb6-5e632f643376",
+        "_displayName_": "Separating Data from Code",
+        "_keyword_": "content_component",
+        "content": "<script src=\"https://fast.wistia.com/embed/medias/c0knfkrcgi.jsonp\" async></script><script src=\"https://fast.wistia.com/assets/external/E-v1.js\" async></script><div class=\"wistia_responsive_padding\" style=\"padding:56.25% 0 0 0;position:relative;\"><div class=\"wistia_responsive_wrapper\" style=\"height:100%;left:0;position:absolute;top:0;width:100%;\"><div class=\"wistia_embed wistia_async_c0knfkrcgi videoFoam=true\" style=\"height:100%;width:100%\">&nbsp;</div></div></div>\r\n<h2>Separating Data from Code</h2><p>\r\nPlease enter your email below to take a short assessment.\r\n</p>\r\n\r\n<script src=\"https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.1.4/js.cookie.min.js\"></script>\r\n<iframe id=\"quiz\" src=\"\"\r\nframeborder=\"0\" style=\"width:100%;max-width:700px;\" height=\"800\"></iframe>\r\n<script> \r\ndocument.getElementById('quiz').src =\r\n\"https://www.classmarker.com/online-test/start?quiz=7px597a46e067919\" +\r\n\"&cm_fn=\" + Cookies.get(\"studentName\") + \r\n\"&cm_ln=\" + Cookies.get(\"studentName\") + \r\n\"&cm_e=\" + Cookies.get(\"studentEmail\") +\r\n\"&cm_user_id=\" + Cookies.get(\"studentId\")  ; \r\n</script>",
+        "created": "2017-07-27 10:51:27",
+        "createdById": 31489,
+        "deprecatedBy": "",
+        "duration": {
+          "days": 0,
+          "minutesPerDay": 5
+        },
+        "generateCertificate": "DEFAULT",
+        "generateProofOfCompletion": "DEFAULT",
+        "id": 261,
+        "modified": "2017-08-03 13:24:16",
+        "modifiedById": 35,
+        "name": "Separating Data from Code",
+        "orderNumber": 0,
+        "price": {
+          "amount": 0.0,
+          "currency": "USD"
+        },
+        "primaryCategoryId": 10,
+        "status": "ENABLED",
+        "summary": "<h2>Summary</h2>\r\n<p>Puppet Enterprise allows configuration data to be easily separated from code using Hiera.\r\n</p>\r\n<h2>Topics Covered</h2>\r\n<ul>\r\n<li>How does Hiera improve the readability of puppet code?\r\n</li>\r\n<li>How can puppet modules be shared without sharing sensitive data?\r\n</li>\r\n<li>How does Hiera improve the security of puppet code?\r\n</li>\r\n</ul>\r\n<h2>Audience</h2>\r\n<p>This training is ideal for solution architects, sales engineers, and practitioners.</p>",
+        "urlName": "an-introduction-to-hiera",
+        "visibility": "DEPRECATED"
+      },
+      "componentId": 261,
+      "componentUUID": "c6fcf26e-2751-38fa-9eb6-5e632f643376",
+      "created": "2017-08-01 17:32:10",
+      "createdById": 31489,
+      "id": 230,
+      "modified": "2017-08-03 13:45:55",
+      "modifiedById": 31489,
+      "name": "Separating Data from Code",
+      "pathwayId": 270,
+      "position": 5
+    },
+    {
+      "_displayName_": "Course Requirement #231",
+      "_keyword_": "course_requirement",
+      "component": {
+        "UUID": "14f195a8-33a9-3b6d-b73d-df027d86b56a",
+        "_displayName_": "Puppet Enterprise at Scale",
+        "_keyword_": "content_component",
+        "content": "<script src=\"https://fast.wistia.com/embed/medias/e417mb8wda.jsonp\" async></script><script src=\"https://fast.wistia.com/assets/external/E-v1.js\" async></script><div class=\"wistia_responsive_padding\" style=\"padding:56.25% 0 0 0;position:relative;\"><div class=\"wistia_responsive_wrapper\" style=\"height:100%;left:0;position:absolute;top:0;width:100%;\"><div class=\"wistia_embed wistia_async_e417mb8wda videoFoam=true\" style=\"height:100%;width:100%\">&nbsp;</div></div></div>\r\n<h2>Puppet Enterprise at Scale Quiz</h2><p>\r\nPlease enter your email below to take a short assessment.\r\n</p>\r\n\r\n<script src=\"https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.1.4/js.cookie.min.js\"></script>\r\n<iframe id=\"quiz\" src=\"\"\r\nframeborder=\"0\" style=\"width:100%;max-width:700px;\" height=\"800\"></iframe>\r\n<script> \r\ndocument.getElementById('quiz').src =\r\n\"https://www.classmarker.com/online-test/start?quiz=hcc597a4bb7e4478\" +\r\n\"&cm_fn=\" + Cookies.get(\"studentName\") + \r\n\"&cm_ln=\" + Cookies.get(\"studentName\") + \r\n\"&cm_e=\" + Cookies.get(\"studentEmail\") +\r\n\"&cm_user_id=\" + Cookies.get(\"studentId\")  ; \r\n</script>",
+        "created": "2017-07-27 11:27:19",
+        "createdById": 31489,
+        "deprecatedBy": "",
+        "duration": {
+          "days": 0,
+          "minutesPerDay": 4
+        },
+        "generateCertificate": "DEFAULT",
+        "generateProofOfCompletion": "DEFAULT",
+        "id": 263,
+        "modified": "2017-08-03 13:30:05",
+        "modifiedById": 35,
+        "name": "Puppet Enterprise at Scale",
+        "orderNumber": 0,
+        "price": {
+          "amount": 0.0,
+          "currency": "USD"
+        },
+        "primaryCategoryId": 10,
+        "status": "DISABLED",
+        "summary": "<h2>Summary</h2>\r\n<p>Puppet Enterprise allows managing your entire infrastructure from a single console.\r\n</p>\r\n<h2>Topics Covered</h2>\r\n<ul>\r\n<li>How many nodes are supported by a single monolithic Puppet Enterprise master?\r\n</li>\r\n<li>Which services can load balanced to provide better performance?\r\n</li>\r\n<li>What is the maximum scale of a Puppet Enterprise Installation?\r\n</li>\r\n</ul>\r\n<h2>Audience</h2>\r\n<p>This training is ideal for solution architects, sales engineers, and practitioners.</p>",
+        "urlName": "puppet-enterprise-at-scale",
+        "visibility": "DEPRECATED"
+      },
+      "componentId": 263,
+      "componentUUID": "14f195a8-33a9-3b6d-b73d-df027d86b56a",
+      "created": "2017-08-01 17:32:25",
+      "createdById": 31489,
+      "id": 231,
+      "modified": "2017-08-03 13:45:55",
+      "modifiedById": 31489,
+      "name": "Puppet Enterprise at Scale",
+      "pathwayId": 270,
+      "position": 6
+    },
+    {
+      "_displayName_": "Course Requirement #232",
+      "_keyword_": "course_requirement",
+      "component": {
+        "UUID": "c2485d3f-2fa7-374c-b288-c3ff9c180b55",
+        "_displayName_": "Using the Puppet Forge",
+        "_keyword_": "content_component",
+        "content": "<script src=\"https://fast.wistia.com/embed/medias/5warssd4bc.jsonp\" async></script><script src=\"https://fast.wistia.com/assets/external/E-v1.js\" async></script><div class=\"wistia_responsive_padding\" style=\"padding:56.25% 0 0 0;position:relative;\"><div class=\"wistia_responsive_wrapper\" style=\"height:100%;left:0;position:absolute;top:0;width:100%;\"><div class=\"wistia_embed wistia_async_5warssd4bc videoFoam=true\" style=\"height:100%;width:100%\">&nbsp;</div></div></div>\r\n<h2> Using the Puppet Forge Quiz</h2><p>\r\nPlease enter your email below to take a short assessment.\r\n</p>\r\n\r\n<script src=\"https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.1.4/js.cookie.min.js\"></script>\r\n<iframe id=\"quiz\" src=\"\"\r\nframeborder=\"0\" style=\"width:100%;max-width:700px;\" height=\"800\"></iframe>\r\n<script> \r\ndocument.getElementById('quiz').src =\r\n\"https://www.classmarker.com/online-test/start?quiz=jhp597a4b537c38d\" +\r\n\"&cm_fn=\" + Cookies.get(\"studentName\") + \r\n\"&cm_ln=\" + Cookies.get(\"studentName\") + \r\n\"&cm_e=\" + Cookies.get(\"studentEmail\") +\r\n\"&cm_user_id=\" + Cookies.get(\"studentId\")  ; \r\n</script>",
+        "created": "2017-07-27 12:43:35",
+        "createdById": 31489,
+        "deprecatedBy": "",
+        "duration": {
+          "days": 0,
+          "minutesPerDay": 5
+        },
+        "generateCertificate": "DEFAULT",
+        "generateProofOfCompletion": "DEFAULT",
+        "id": 264,
+        "modified": "2017-08-03 13:34:12",
+        "modifiedById": 35,
+        "name": "Using the Puppet Forge",
+        "orderNumber": 0,
+        "price": {
+          "amount": 0.0,
+          "currency": "USD"
+        },
+        "primaryCategoryId": 10,
+        "status": "DISABLED",
+        "summary": "<h2>Summary</h2>\r\n<p>The Puppet Forge is an online repository of Puppet code shared as modules.\r\n</p>\r\n<h2>Topics Covered</h2>\r\n<ul>\r\n<li>What is the difference between support, approved, and community modules?\r\n</li>\r\n<li>How can you find out if a module is well written?\r\n</li>\r\n<li>How do you install modules on your Puppet Enterprise master?\r\n</li>\r\n</ul>\r\n<h2>Audience</h2>\r\n<p>This training is ideal for solution architects, sales engineers, and practitioners.</p>",
+        "urlName": "using-the-puppet-forge",
+        "visibility": "DEPRECATED"
+      },
+      "componentId": 264,
+      "componentUUID": "c2485d3f-2fa7-374c-b288-c3ff9c180b55",
+      "created": "2017-08-01 17:32:48",
+      "createdById": 31489,
+      "id": 232,
+      "modified": "2017-08-03 13:45:55",
+      "modifiedById": 31489,
+      "name": "Using the Puppet Forge",
+      "pathwayId": 270,
+      "position": 7
+    },
+    {
+      "_displayName_": "Course Requirement #234",
+      "_keyword_": "course_requirement",
+      "component": {
+        "UUID": "e3155458-8d9b-32ed-9bd6-2f902a2092ea",
+        "_displayName_": "Puppet Enterprise Code Management",
+        "_keyword_": "content_component",
+        "content": "<script src=\"https://fast.wistia.com/embed/medias/p6282swv63.jsonp\" async></script><script src=\"https://fast.wistia.com/assets/external/E-v1.js\" async></script><div class=\"wistia_responsive_padding\" style=\"padding:56.25% 0 0 0;position:relative;\"><div class=\"wistia_responsive_wrapper\" style=\"height:100%;left:0;position:absolute;top:0;width:100%;\"><div class=\"wistia_embed wistia_async_p6282swv63 videoFoam=true\" style=\"height:100%;width:100%\">&nbsp;</div></div></div>\r\n<h2>Puppet Enterprise Code Management Quiz</h2><p>\r\nPlease enter your email below to take a short assessment.\r\n</p>\r\n\r\n<script src=\"https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.1.4/js.cookie.min.js\"></script>\r\n<iframe id=\"quiz\" src=\"\"\r\nframeborder=\"0\" style=\"width:100%;max-width:700px;\" height=\"800\"></iframe>\r\n<script> \r\ndocument.getElementById('quiz').src =\r\n\"https://www.classmarker.com/online-test/start?quiz=93k597a4a7f7b53e\" +\r\n\"&cm_fn=\" + Cookies.get(\"studentName\") + \r\n\"&cm_ln=\" + Cookies.get(\"studentName\") + \r\n\"&cm_e=\" + Cookies.get(\"studentEmail\") +\r\n\"&cm_user_id=\" + Cookies.get(\"studentId\")  ; \r\n</script>",
+        "created": "2017-07-27 11:14:48",
+        "createdById": 31489,
+        "deprecatedBy": "",
+        "duration": {
+          "days": 0,
+          "minutesPerDay": 7
+        },
+        "generateCertificate": "DEFAULT",
+        "generateProofOfCompletion": "DEFAULT",
+        "id": 262,
+        "modified": "2017-08-03 13:38:58",
+        "modifiedById": 35,
+        "name": "Puppet Enterprise Code Management",
+        "orderNumber": 0,
+        "price": {
+          "amount": 0.0,
+          "currency": "USD"
+        },
+        "primaryCategoryId": 10,
+        "status": "DISABLED",
+        "summary": "<h2>Summary</h2>\r\n<p>Puppet Enterprise integrates directly with source control to make collaboration and change tracking manageable.\r\n</p>\r\n<h2>Topics Covered</h2>\r\n<ul>\r\n<li>How are modules installed when using Puppet Enterprise?\r\n</li>\r\n<li>How can a git repository be configured to automatically deploy puppet code?\r\n</li>\r\n<li>What kind of workflow is possible using code management with Puppet Enterprise?\r\n</li>\r\n</ul>\r\n<h2>Audience</h2>\r\n<p>This training is ideal for solution architects, sales engineers, and practitioners.</p>",
+        "urlName": "puppet-enterprise-code-management",
+        "visibility": "DEPRECATED"
+      },
+      "componentId": 262,
+      "componentUUID": "e3155458-8d9b-32ed-9bd6-2f902a2092ea",
+      "created": "2017-08-01 17:35:16",
+      "createdById": 31489,
+      "id": 234,
+      "modified": "2017-08-03 13:45:55",
+      "modifiedById": 31489,
+      "name": "Puppet Enterprise Code Management",
+      "pathwayId": 270,
+      "position": 8
+    },
+    {
+      "_displayName_": "Course Requirement #233",
+      "_keyword_": "course_requirement",
+      "component": {
+        "UUID": "2d0067ef-8d57-3643-87b1-a9ccda7f1239",
+        "_displayName_": "Puppet Services and Support",
+        "_keyword_": "content_component",
+        "content": "<script src=\"https://fast.wistia.com/embed/medias/dzxod6cl1o.jsonp\" async></script><script src=\"https://fast.wistia.com/assets/external/E-v1.js\" async></script><div class=\"wistia_responsive_padding\" style=\"padding:62.5% 0 0 0;position:relative;\"><div class=\"wistia_responsive_wrapper\" style=\"height:100%;left:0;position:absolute;top:0;width:100%;\"><div class=\"wistia_embed wistia_async_dzxod6cl1o videoFoam=true\" style=\"height:100%;width:100%\">&nbsp;</div></div></div>",
+        "created": "2017-07-28 13:53:44",
+        "createdById": 31489,
+        "deprecatedBy": "",
+        "duration": {
+          "days": 0,
+          "minutesPerDay": 11
+        },
+        "generateCertificate": "DEFAULT",
+        "generateProofOfCompletion": "DEFAULT",
+        "id": 266,
+        "modified": "2017-08-03 13:48:01",
+        "modifiedById": 35,
+        "name": "Puppet Services and Support",
+        "orderNumber": 0,
+        "price": {
+          "amount": 0.0,
+          "currency": "USD"
+        },
+        "primaryCategoryId": 10,
+        "status": "ENABLED",
+        "summary": "<h2>Summary</h2>\r\n<p>Being a Puppet Enterprise customer offers more value than the product itself.\r\n</p>\r\n<h2>Topics Covered</h2>\r\n<ul>\r\n<li>What instructor led training are available?\r\n</li>\r\n<li>What professional services does Puppet provide?\r\n</li>\r\n<li>What levels of customer support does Puppet provide to customers?\r\n</li>\r\n</ul>\r\n<h2>Audience</h2>\r\n<p>This training is ideal for solution architects, sales engineers, managers, practitioners and non-practitioners.</p>",
+        "urlName": "puppet-services-and-support",
+        "visibility": "DEPRECATED"
+      },
+      "componentId": 266,
+      "componentUUID": "2d0067ef-8d57-3643-87b1-a9ccda7f1239",
+      "created": "2017-08-01 17:33:49",
+      "createdById": 31489,
+      "id": 233,
+      "modified": "2017-08-03 13:45:55",
+      "modifiedById": 31489,
+      "name": "Puppet Services and Support",
+      "pathwayId": 270,
+      "position": 9
+    },
+    {
+      "pathwayId": 0,
+      "position": 0
+    }
+  ],
+  "created": "2017-08-01 17:06:40",
+  "createdById": 31489,
+  "duration": {
+    "days": 0,
+    "minutesPerDay": 0
+  },
+  "generateCertificate": "DEFAULT",
+  "generateProofOfCompletion": "DEFAULT",
+  "id": 270,
+  "modified": "2017-08-01 17:06:40",
+  "modifiedById": 31489,
+  "name": "Out of the Box Value",
+  "orderNumber": 0,
+  "price": {
+    "amount": 0.0,
+    "currency": "USD"
+  },
+  "primaryCategoryId": 10,
+  "status": "ACTIVE_COMPONENT",
+  "type": {
+    "_displayName_": "Module",
+    "_keyword_": "course_pathway_type",
+    "created": "2015-08-02 21:45:38",
+    "id": 6,
+    "modified": "2015-08-02 21:45:38",
+    "name": "Module",
+    "rootType": false,
+    "supportedComponentTypes": [
+      "e_learning_component",
+      "course",
+      "content_component",
+      "exam_component"
+    ]
+  },
+  "typeId": 6,
+  "urlName": "out-of-the-box-value",
+  "visibility": "PUBLIC"
+}

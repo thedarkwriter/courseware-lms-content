@@ -1,1 +1,28 @@
-{"UUID":"13450792-c001-3783-8e99-6b1ef2239c64","_displayName_":"02. Introduction to Cloud Provisioner - Exercises","_keyword_":"content_component","created":"2015-02-04 12:33:29","createdById":3,"deprecatedBy":"","duration":{"days":0,"minutesPerDay":0},"generateCertificate":"DEFAULT","generateProofOfCompletion":"DEFAULT","id":101,"modified":"2015-02-04 12:33:29","modifiedById":3,"name":"02. Introduction to Cloud Provisioner - Exercises","orderNumber":0,"price":{"amount":0.0,"currency":"USD"},"primaryCategoryId":1,"providerId":1,"status":"ACTIVE_COMPONENT","urlName":"02-introduction-to-cloud-provisioner---exercises","visibility":"HIDDEN"}
+{
+  "UUID": "13450792-c001-3783-8e99-6b1ef2239c64",
+  "_displayName_": "02. Introduction to Cloud Provisioner - Exercises",
+  "_keyword_": "content_component",
+  "created": "2015-02-04 12:33:29",
+  "createdById": 3,
+  "deprecatedBy": "",
+  "duration": {
+    "days": 0,
+    "minutesPerDay": 0
+  },
+  "generateCertificate": "DEFAULT",
+  "generateProofOfCompletion": "DEFAULT",
+  "id": 101,
+  "modified": "2015-02-04 12:33:29",
+  "modifiedById": 3,
+  "name": "02. Introduction to Cloud Provisioner - Exercises",
+  "orderNumber": 0,
+  "price": {
+    "amount": 0.0,
+    "currency": "USD"
+  },
+  "primaryCategoryId": 1,
+  "providerId": 1,
+  "status": "ACTIVE_COMPONENT",
+  "urlName": "02-introduction-to-cloud-provisioner---exercises",
+  "visibility": "HIDDEN"
+}
