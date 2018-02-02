@@ -1,0 +1,1 @@
+Classes define a collection of resources that are managed together as a single unit. You can also think of them as named blocks of Puppet code, which are created in one place and invoked elsewhere.

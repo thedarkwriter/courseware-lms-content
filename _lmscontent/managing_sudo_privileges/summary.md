@@ -1,0 +1,1 @@
+You can use Puppet to automate management of sudo privileges across your Puppet Enterprise deployment.

@@ -1,0 +1,1 @@
+Enroll in all self-paced Puppet Courses in one go.

@@ -1,0 +1,1 @@
+This module contains some deeper dives into Puppet Enterprise so you can see the power of PE in action.

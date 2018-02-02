@@ -1,0 +1,1 @@
+A default content module used as a base to clone, rather than manually creating content from scratch each time.

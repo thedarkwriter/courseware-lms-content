@@ -1,0 +1,1 @@
+This Learning Path (Bundle) includes 3 eLearning courses to get you started testing your Puppet code and modules.

@@ -1,0 +1,1 @@
+At Puppet Labs, we use the git version control system and the Github web-based hosting service to host our source code.

@@ -1,0 +1,1 @@
+Learn practical skills used to architect Puppet infrastructure and to understand interactions between different components. This course is also taught as a remote in-person class, while the instructor is teaching in a classroom face to face, so users can remotely participate in an in-person class.
