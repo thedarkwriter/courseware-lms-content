@@ -18,7 +18,7 @@ namespace :migrate do
     @lms = @lms || Learndot.new(true, staging).learning_component
   end
 
-	# Show learning components 
+	# Show learning components
   def retrieve_all()
     @lms.retrieve_component({}).to_h
   rescue => e
@@ -34,6 +34,20 @@ namespace :migrate do
     Dir.glob('**/*metadata.json').each do |path|
       puts path
       json = JSON.parse(File.read(path))
+      if json['createdById'].nil?
+        # If this field is missing, rewrite to be micheal
+        json['createdById'] = 38
+      end
+      if json['price'].class == Hash
+        json['price'] = "#{json['price']['amount']} #{json['price']['currency']}"
+      end
+      if json['duration'].class == Hash
+        ['minutesPerDay','days'].each do |k|
+          json["duration.#{k}" = json[k]
+        end
+      end
+      json.delete('duration')
+
       File.write(path,JSON.pretty_generate(json))
     end
   end
