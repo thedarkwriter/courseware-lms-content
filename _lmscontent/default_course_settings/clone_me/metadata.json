@@ -19,10 +19,6 @@
   "customField09": "",
   "customField10": "",
   "deprecatedBy": "",
-  "duration": {
-    "days": 0,
-    "minutesPerDay": 0
-  },
   "generateCertificate": "DEFAULT",
   "generateProofOfCompletion": "DEFAULT",
   "id": 377,
@@ -30,10 +26,7 @@
   "modifiedById": 49633,
   "name": "Default Course Settings - Clone Me",
   "orderNumber": 0,
-  "price": {
-    "amount": 0.0,
-    "currency": "USD"
-  },
+  "price": "0.0 USD",
   "primaryCategoryId": 7,
   "status": "DISABLED",
   "type": {
@@ -53,5 +46,7 @@
   },
   "typeId": 4,
   "urlName": "default-course",
-  "visibility": "HIDDEN"
+  "visibility": "HIDDEN",
+  "duration.minutesPerDay": 0,
+  "duration.days": 0
 }

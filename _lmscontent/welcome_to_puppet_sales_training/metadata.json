@@ -130,10 +130,6 @@
   "customField09": "",
   "customField10": "",
   "deprecatedBy": "https://learn.puppet.com/course/virtual-ttt",
-  "duration": {
-    "days": 0,
-    "minutesPerDay": 60
-  },
   "generateCertificate": "DEFAULT",
   "generateProofOfCompletion": "YES",
   "id": 359,
@@ -141,10 +137,7 @@
   "modifiedById": 31489,
   "name": "Welcome to Puppet Sales Training",
   "orderNumber": 0,
-  "price": {
-    "amount": 0.0,
-    "currency": "USD"
-  },
+  "price": "0.0 USD",
   "primaryCategoryId": 10,
   "status": "ENABLED",
   "type": {
@@ -164,5 +157,7 @@
   },
   "typeId": 4,
   "urlName": "puppet-sales-training",
-  "visibility": "HIDDEN"
+  "visibility": "HIDDEN",
+  "duration.minutesPerDay": 60,
+  "duration.days": 0
 }

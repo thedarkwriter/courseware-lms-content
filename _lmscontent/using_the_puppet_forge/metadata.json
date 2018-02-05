@@ -5,10 +5,6 @@
   "created": "2017-07-27 12:43:35",
   "createdById": 31489,
   "deprecatedBy": "",
-  "duration": {
-    "days": 0,
-    "minutesPerDay": 5
-  },
   "generateCertificate": "DEFAULT",
   "generateProofOfCompletion": "DEFAULT",
   "id": 264,
@@ -16,12 +12,11 @@
   "modifiedById": 35,
   "name": "Using the Puppet Forge",
   "orderNumber": 0,
-  "price": {
-    "amount": 0.0,
-    "currency": "USD"
-  },
+  "price": "0.0 USD",
   "primaryCategoryId": 10,
   "status": "DISABLED",
   "urlName": "using-the-puppet-forge",
-  "visibility": "DEPRECATED"
+  "visibility": "DEPRECATED",
+  "duration.minutesPerDay": 5,
+  "duration.days": 0
 }

@@ -6,10 +6,6 @@
   "created": "2015-05-04 17:25:22",
   "createdById": 3,
   "deprecatedBy": "",
-  "duration": {
-    "days": 0,
-    "minutesPerDay": 10
-  },
   "generateCertificate": "DEFAULT",
   "generateProofOfCompletion": "DEFAULT",
   "id": 186,
@@ -21,12 +17,11 @@
   "modifiedById": 38,
   "name": "An Introduction to Git",
   "orderNumber": 19,
-  "price": {
-    "amount": 0.0,
-    "currency": "USD"
-  },
+  "price": "0.0 USD",
   "primaryCategoryId": 7,
   "status": "DISABLED",
   "urlName": "an-introduction-to-git",
-  "visibility": "HIDDEN"
+  "visibility": "HIDDEN",
+  "duration.minutesPerDay": 10,
+  "duration.days": 0
 }

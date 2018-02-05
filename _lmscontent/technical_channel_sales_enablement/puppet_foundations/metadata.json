@@ -258,10 +258,6 @@
   "customField09": "",
   "customField10": "",
   "deprecatedBy": "",
-  "duration": {
-    "days": 1,
-    "minutesPerDay": 0
-  },
   "generateCertificate": "DEFAULT",
   "generateProofOfCompletion": "DEFAULT",
   "id": 235,
@@ -269,10 +265,7 @@
   "modifiedById": 31489,
   "name": "Technical Channel Sales Enablement: Puppet Foundations",
   "orderNumber": 0,
-  "price": {
-    "amount": 0.0,
-    "currency": "USD"
-  },
+  "price": "0.0 USD",
   "primaryCategoryId": 10,
   "status": "DISABLED",
   "type": {
@@ -292,5 +285,7 @@
   },
   "typeId": 4,
   "urlName": "channel-technical",
-  "visibility": "DEPRECATED"
+  "visibility": "DEPRECATED",
+  "duration.minutesPerDay": 0,
+  "duration.days": 1
 }

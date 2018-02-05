@@ -5,10 +5,6 @@
   "created": "2017-07-28 13:53:44",
   "createdById": 31489,
   "deprecatedBy": "",
-  "duration": {
-    "days": 0,
-    "minutesPerDay": 11
-  },
   "generateCertificate": "DEFAULT",
   "generateProofOfCompletion": "DEFAULT",
   "id": 266,
@@ -16,12 +12,11 @@
   "modifiedById": 35,
   "name": "Puppet Services and Support",
   "orderNumber": 0,
-  "price": {
-    "amount": 0.0,
-    "currency": "USD"
-  },
+  "price": "0.0 USD",
   "primaryCategoryId": 10,
   "status": "ENABLED",
   "urlName": "puppet-services-and-support",
-  "visibility": "DEPRECATED"
+  "visibility": "DEPRECATED",
+  "duration.minutesPerDay": 11,
+  "duration.days": 0
 }

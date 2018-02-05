@@ -6,10 +6,6 @@
   "created": "2015-02-04 15:05:07",
   "createdById": 3,
   "deprecatedBy": "",
-  "duration": {
-    "days": 0,
-    "minutesPerDay": 10
-  },
   "generateCertificate": "DEFAULT",
   "generateProofOfCompletion": "DEFAULT",
   "id": 158,
@@ -21,13 +17,12 @@
   "modifiedById": 9791,
   "name": "Github Fundamentals - Quiz",
   "orderNumber": 45,
-  "price": {
-    "amount": 0.0,
-    "currency": "USD"
-  },
+  "price": "0.0 USD",
   "primaryCategoryId": 1,
   "providerId": 1,
   "status": "ACTIVE_COMPONENT",
   "urlName": "05-github-fundamentals---quiz",
-  "visibility": "HIDDEN"
+  "visibility": "HIDDEN",
+  "duration.minutesPerDay": 10,
+  "duration.days": 0
 }

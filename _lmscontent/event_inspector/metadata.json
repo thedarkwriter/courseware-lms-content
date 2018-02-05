@@ -6,10 +6,6 @@
   "created": "2015-05-04 17:22:05",
   "createdById": 3,
   "deprecatedBy": "",
-  "duration": {
-    "days": 0,
-    "minutesPerDay": 10
-  },
   "generateCertificate": "DEFAULT",
   "generateProofOfCompletion": "DEFAULT",
   "id": 183,
@@ -21,12 +17,11 @@
   "modifiedById": 38,
   "name": "Event Inspector",
   "orderNumber": 16,
-  "price": {
-    "amount": 0.0,
-    "currency": "USD"
-  },
+  "price": "0.0 USD",
   "primaryCategoryId": 7,
   "status": "ENABLED",
   "urlName": "event-inspector",
-  "visibility": "PUBLIC"
+  "visibility": "PUBLIC",
+  "duration.minutesPerDay": 10,
+  "duration.days": 0
 }

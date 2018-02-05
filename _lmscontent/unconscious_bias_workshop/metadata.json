@@ -8,10 +8,6 @@
   "created": "2016-06-09 14:15:21",
   "createdById": 38,
   "deprecatedBy": "",
-  "duration": {
-    "days": 1,
-    "minutesPerDay": 120
-  },
   "earlyBirdDays": 0,
   "generateCertificate": "DEFAULT",
   "generateProofOfCompletion": "NO",
@@ -20,10 +16,7 @@
   "modifiedById": 38,
   "name": "Unconscious Bias Workshop",
   "orderNumber": 0,
-  "price": {
-    "amount": 0.0,
-    "currency": "USD"
-  },
+  "price": "0.0 USD",
   "priceMultiplier": 1.0,
   "primaryCategoryId": 9,
   "priority": 0,
@@ -33,5 +26,7 @@
   "status": "ENABLED",
   "theyTookThisCourse": "",
   "urlName": "unconscious-bias-workshop",
-  "visibility": "HIDDEN"
+  "visibility": "HIDDEN",
+  "duration.minutesPerDay": 120,
+  "duration.days": 1
 }

@@ -176,10 +176,6 @@
   "created": "2016-07-13 11:45:56",
   "createdById": 35,
   "deprecatedBy": "",
-  "duration": {
-    "days": 0,
-    "minutesPerDay": 0
-  },
   "generateCertificate": "DEFAULT",
   "generateProofOfCompletion": "DEFAULT",
   "id": 219,
@@ -187,10 +183,7 @@
   "modifiedById": 35,
   "name": "Getting Started with Hiera",
   "orderNumber": 0,
-  "price": {
-    "amount": 0.0,
-    "currency": "USD"
-  },
+  "price": "0.0 USD",
   "primaryCategoryId": 7,
   "status": "ENABLED",
   "type": {
@@ -210,5 +203,7 @@
   },
   "typeId": 4,
   "urlName": "getting-started-with-hiera",
-  "visibility": "PUBLIC"
+  "visibility": "PUBLIC",
+  "duration.minutesPerDay": 0,
+  "duration.days": 0
 }

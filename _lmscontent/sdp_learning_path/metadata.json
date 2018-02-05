@@ -5,10 +5,6 @@
   "created": "2017-06-15 11:29:29",
   "createdById": 31489,
   "deprecatedBy": "",
-  "duration": {
-    "days": 1,
-    "minutesPerDay": 0
-  },
   "generateCertificate": "DEFAULT",
   "generateProofOfCompletion": "DEFAULT",
   "id": 254,
@@ -16,12 +12,11 @@
   "modifiedById": 35,
   "name": "SDP Learning Path",
   "orderNumber": 0,
-  "price": {
-    "amount": 0.0,
-    "currency": "USD"
-  },
+  "price": "0.0 USD",
   "primaryCategoryId": 10,
   "status": "ACTIVE_COMPONENT",
   "urlName": "sdp-learning-path",
-  "visibility": "DEPRECATED"
+  "visibility": "DEPRECATED",
+  "duration.minutesPerDay": 0,
+  "duration.days": 1
 }

@@ -5,10 +5,6 @@
   "created": "2016-07-13 11:48:31",
   "createdById": 35,
   "deprecatedBy": "",
-  "duration": {
-    "days": 0,
-    "minutesPerDay": 0
-  },
   "generateCertificate": "DEFAULT",
   "generateProofOfCompletion": "DEFAULT",
   "id": 221,
@@ -16,12 +12,11 @@
   "modifiedById": 35,
   "name": "Getting Started with Hiera - Part 2",
   "orderNumber": 0,
-  "price": {
-    "amount": 0.0,
-    "currency": "USD"
-  },
+  "price": "0.0 USD",
   "primaryCategoryId": 7,
   "status": "ACTIVE_COMPONENT",
   "urlName": "getting-started-with-hiera---part-2",
-  "visibility": "HIDDEN"
+  "visibility": "HIDDEN",
+  "duration.minutesPerDay": 0,
+  "duration.days": 0
 }

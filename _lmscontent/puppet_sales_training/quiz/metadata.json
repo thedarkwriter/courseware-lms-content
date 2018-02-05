@@ -16,10 +16,6 @@
   "customField09": "",
   "customField10": "",
   "deprecatedBy": "",
-  "duration": {
-    "days": 0,
-    "minutesPerDay": 10
-  },
   "generateCertificate": "DEFAULT",
   "generateProofOfCompletion": "DEFAULT",
   "id": 360,
@@ -31,12 +27,11 @@
   "modifiedById": 31489,
   "name": "Puppet Sales Training: Quiz",
   "orderNumber": 0,
-  "price": {
-    "amount": 0.0,
-    "currency": "USD"
-  },
+  "price": "0.0 USD",
   "primaryCategoryId": 10,
   "status": "ENABLED",
   "urlName": "puppet-sales-training-quiz",
-  "visibility": "HIDDEN"
+  "visibility": "HIDDEN",
+  "duration.minutesPerDay": 10,
+  "duration.days": 0
 }

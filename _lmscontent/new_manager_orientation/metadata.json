@@ -8,10 +8,6 @@
   "created": "2016-06-09 14:39:32",
   "createdById": 38,
   "deprecatedBy": "",
-  "duration": {
-    "days": 1,
-    "minutesPerDay": 240
-  },
   "earlyBirdDays": 0,
   "generateCertificate": "DEFAULT",
   "generateProofOfCompletion": "DEFAULT",
@@ -20,10 +16,7 @@
   "modifiedById": 38,
   "name": "New Manager Orientation",
   "orderNumber": 0,
-  "price": {
-    "amount": 0.0,
-    "currency": "USD"
-  },
+  "price": "0.0 USD",
   "priceMultiplier": 1.0,
   "primaryCategoryId": 9,
   "priority": 3,
@@ -33,5 +26,7 @@
   "status": "ENABLED",
   "theyTookThisCourse": "",
   "urlName": "new-manager-orientation",
-  "visibility": "HIDDEN"
+  "visibility": "HIDDEN",
+  "duration.minutesPerDay": 240,
+  "duration.days": 1
 }

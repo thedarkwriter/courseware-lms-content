@@ -6,10 +6,6 @@
   "created": "2015-05-04 18:41:27",
   "createdById": 3,
   "deprecatedBy": "",
-  "duration": {
-    "days": 1,
-    "minutesPerDay": 0
-  },
   "generateCertificate": "DEFAULT",
   "generateProofOfCompletion": "DEFAULT",
   "id": 194,
@@ -19,12 +15,11 @@
   "modifiedById": 3,
   "name": "Test 5.4.15",
   "orderNumber": 28,
-  "price": {
-    "amount": 0.0,
-    "currency": "USD"
-  },
+  "price": "0.0 USD",
   "primaryCategoryId": 1,
   "status": "DISABLED",
   "urlName": "test-5415",
-  "visibility": "DEPRECATED"
+  "visibility": "DEPRECATED",
+  "duration.minutesPerDay": 0,
+  "duration.days": 1
 }

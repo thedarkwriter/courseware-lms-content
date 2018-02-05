@@ -8,10 +8,6 @@
   "created": "2016-03-15 11:09:10",
   "createdById": 38,
   "deprecatedBy": "",
-  "duration": {
-    "days": 4,
-    "minutesPerDay": 480
-  },
   "earlyBirdDays": 0,
   "generateCertificate": "DEFAULT",
   "generateProofOfCompletion": "DEFAULT",
@@ -21,10 +17,7 @@
   "modifiedById": 38,
   "name": "Puppet Fundamentals + Windows",
   "orderNumber": 1,
-  "price": {
-    "amount": 24000.0,
-    "currency": "USD"
-  },
+  "price": "24000.0 USD",
   "priceMultiplier": 1.0,
   "primaryCategoryId": 6,
   "priority": 3,
@@ -35,5 +28,7 @@
   "status": "DISABLED",
   "theyTookThisCourse": "",
   "urlName": "puppet-fundamentals-windows",
-  "visibility": "HIDDEN"
+  "visibility": "HIDDEN",
+  "duration.minutesPerDay": 480,
+  "duration.days": 4
 }

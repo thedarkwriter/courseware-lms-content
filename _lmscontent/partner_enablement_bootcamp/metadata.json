@@ -8,10 +8,6 @@
   "created": "2017-04-13 11:13:14",
   "createdById": 31489,
   "deprecatedBy": "",
-  "duration": {
-    "days": 4,
-    "minutesPerDay": 0
-  },
   "earlyBirdDays": 0,
   "generateCertificate": "DEFAULT",
   "generateProofOfCompletion": "NO",
@@ -21,10 +17,7 @@
   "name": "Partner Enablement Bootcamp",
   "orderNumber": 0,
   "prerequisites": "Prior to attending bootcamp, consultants must have completed the Mock Engagement Toolkit and have passed the Puppet Professional Certification exam.",
-  "price": {
-    "amount": 0.0,
-    "currency": "USD"
-  },
+  "price": "0.0 USD",
   "priceMultiplier": 1.0,
   "primaryCategoryId": 10,
   "priority": 3,
@@ -33,5 +26,7 @@
   "status": "DISABLED",
   "theyTookThisCourse": "",
   "urlName": "partner-enablement-bootcamp-london",
-  "visibility": "DEPRECATED"
+  "visibility": "DEPRECATED",
+  "duration.minutesPerDay": 0,
+  "duration.days": 4
 }

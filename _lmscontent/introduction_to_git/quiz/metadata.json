@@ -6,10 +6,6 @@
   "created": "2015-02-04 14:52:59",
   "createdById": 3,
   "deprecatedBy": "",
-  "duration": {
-    "days": 0,
-    "minutesPerDay": 10
-  },
   "generateCertificate": "DEFAULT",
   "generateProofOfCompletion": "DEFAULT",
   "id": 153,
@@ -19,13 +15,12 @@
   "modifiedById": 9791,
   "name": "Introduction to Git - Quiz",
   "orderNumber": 43,
-  "price": {
-    "amount": 0.0,
-    "currency": "USD"
-  },
+  "price": "0.0 USD",
   "primaryCategoryId": 1,
   "providerId": 1,
   "status": "ACTIVE_COMPONENT",
   "urlName": "05-introduction-git---quiz",
-  "visibility": "HIDDEN"
+  "visibility": "HIDDEN",
+  "duration.minutesPerDay": 10,
+  "duration.days": 0
 }

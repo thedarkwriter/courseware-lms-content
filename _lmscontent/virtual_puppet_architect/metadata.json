@@ -9,10 +9,6 @@
   "created": "2016-06-09 13:21:01",
   "createdById": 38,
   "deprecatedBy": "",
-  "duration": {
-    "days": 2,
-    "minutesPerDay": 420
-  },
   "earlyBirdDays": 0,
   "generateCertificate": "DEFAULT",
   "generateProofOfCompletion": "DEFAULT",
@@ -22,10 +18,7 @@
   "modifiedById": 39616,
   "name": "Virtual Puppet Architect",
   "orderNumber": 5,
-  "price": {
-    "amount": 1700.0,
-    "currency": "USD"
-  },
+  "price": "1700.0 USD",
   "priceMultiplier": 1.0,
   "primaryCategoryId": 8,
   "priority": 3,
@@ -36,5 +29,7 @@
   "status": "ENABLED",
   "theyTookThisCourse": "",
   "urlName": "virtual-puppet-architect",
-  "visibility": "PUBLIC"
+  "visibility": "PUBLIC",
+  "duration.minutesPerDay": 420,
+  "duration.days": 2
 }

@@ -6,10 +6,6 @@
   "created": "2015-05-04 17:10:41",
   "createdById": 3,
   "deprecatedBy": "",
-  "duration": {
-    "days": 0,
-    "minutesPerDay": 10
-  },
   "generateCertificate": "DEFAULT",
   "generateProofOfCompletion": "DEFAULT",
   "id": 173,
@@ -21,12 +17,11 @@
   "modifiedById": 35,
   "name": "Managing SSH Keys",
   "orderNumber": 21,
-  "price": {
-    "amount": 0.0,
-    "currency": "USD"
-  },
+  "price": "0.0 USD",
   "primaryCategoryId": 7,
   "status": "DISABLED",
   "urlName": "managing-ssh-keys",
-  "visibility": "DEPRECATED"
+  "visibility": "DEPRECATED",
+  "duration.minutesPerDay": 10,
+  "duration.days": 0
 }

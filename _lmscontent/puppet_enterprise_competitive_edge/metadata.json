@@ -5,10 +5,6 @@
   "created": "2017-08-01 17:01:40",
   "createdById": 31489,
   "deprecatedBy": "",
-  "duration": {
-    "days": 0,
-    "minutesPerDay": 20
-  },
   "generateCertificate": "DEFAULT",
   "generateProofOfCompletion": "DEFAULT",
   "id": 269,
@@ -16,12 +12,11 @@
   "modifiedById": 31489,
   "name": "Puppet Enterprise Competitive Edge",
   "orderNumber": 0,
-  "price": {
-    "amount": 0.0,
-    "currency": "USD"
-  },
+  "price": "0.0 USD",
   "primaryCategoryId": 10,
   "status": "ENABLED",
   "urlName": "puppet-enterprise-competitive-edge",
-  "visibility": "DEPRECATED"
+  "visibility": "DEPRECATED",
+  "duration.minutesPerDay": 20,
+  "duration.days": 0
 }

@@ -578,10 +578,6 @@
   "created": "2016-05-20 15:44:23",
   "createdById": 38,
   "deprecatedBy": "/course-catalog",
-  "duration": {
-    "days": 0,
-    "minutesPerDay": 0
-  },
   "generateCertificate": "DEFAULT",
   "generateProofOfCompletion": "NO",
   "id": 213,
@@ -589,10 +585,7 @@
   "modifiedById": 38,
   "name": "Virtual Training Subscription",
   "orderNumber": 0,
-  "price": {
-    "amount": 4300.0,
-    "currency": "USD"
-  },
+  "price": "4300.0 USD",
   "primaryCategoryId": 8,
   "providerId": 1,
   "status": "DISABLED",
@@ -613,5 +606,7 @@
   },
   "typeId": 4,
   "urlName": "virtual-training-subscription",
-  "visibility": "DEPRECATED"
+  "visibility": "DEPRECATED",
+  "duration.minutesPerDay": 0,
+  "duration.days": 0
 }

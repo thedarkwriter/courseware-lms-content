@@ -15,10 +15,6 @@
   "customField09": "",
   "customField10": "",
   "deprecatedBy": "",
-  "duration": {
-    "days": 0,
-    "minutesPerDay": 0
-  },
   "generateCertificate": "DEFAULT",
   "generateProofOfCompletion": "DEFAULT",
   "id": 95,
@@ -26,13 +22,12 @@
   "modifiedById": 35,
   "name": "02. Introduction to Facter - Exercises",
   "orderNumber": 0,
-  "price": {
-    "amount": 0.0,
-    "currency": "USD"
-  },
+  "price": "0.0 USD",
   "primaryCategoryId": 1,
   "providerId": 1,
   "status": "ACTIVE_COMPONENT",
   "urlName": "02-introduction-to-facter---exercises",
-  "visibility": "HIDDEN"
+  "visibility": "HIDDEN",
+  "duration.minutesPerDay": 0,
+  "duration.days": 0
 }

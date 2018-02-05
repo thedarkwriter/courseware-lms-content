@@ -50,10 +50,6 @@
   "created": "2017-06-06 10:30:02",
   "createdById": 35,
   "deprecatedBy": "",
-  "duration": {
-    "days": 0,
-    "minutesPerDay": 0
-  },
   "generateCertificate": "DEFAULT",
   "generateProofOfCompletion": "DEFAULT",
   "id": 252,
@@ -61,10 +57,7 @@
   "modifiedById": 35,
   "name": "Learndot Training",
   "orderNumber": 0,
-  "price": {
-    "amount": 0.0,
-    "currency": "USD"
-  },
+  "price": "0.0 USD",
   "primaryCategoryId": 7,
   "status": "ENABLED",
   "type": {
@@ -84,5 +77,7 @@
   },
   "typeId": 4,
   "urlName": "learndot-training",
-  "visibility": "HIDDEN"
+  "visibility": "HIDDEN",
+  "duration.minutesPerDay": 0,
+  "duration.days": 0
 }

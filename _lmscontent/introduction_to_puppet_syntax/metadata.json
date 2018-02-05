@@ -1606,10 +1606,6 @@
   "customField09": "",
   "customField10": "",
   "deprecatedBy": "",
-  "duration": {
-    "days": 1,
-    "minutesPerDay": 30
-  },
   "generateCertificate": "DEFAULT",
   "generateProofOfCompletion": "DEFAULT",
   "id": 328,
@@ -1617,10 +1613,7 @@
   "modifiedById": 49633,
   "name": "Introduction to Puppet Syntax",
   "orderNumber": 0,
-  "price": {
-    "amount": 0.0,
-    "currency": "USD"
-  },
+  "price": "0.0 USD",
   "primaryCategoryId": 7,
   "status": "DISABLED",
   "type": {
@@ -1640,5 +1633,7 @@
   },
   "typeId": 4,
   "urlName": "introduction-to-puppet-syntax---ld-enterprise-course",
-  "visibility": "HIDDEN"
+  "visibility": "HIDDEN",
+  "duration.minutesPerDay": 30,
+  "duration.days": 1
 }

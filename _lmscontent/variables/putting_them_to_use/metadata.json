@@ -15,10 +15,6 @@
   "customField09": "",
   "customField10": "",
   "deprecatedBy": "",
-  "duration": {
-    "days": 0,
-    "minutesPerDay": 5
-  },
   "generateCertificate": "DEFAULT",
   "generateProofOfCompletion": "DEFAULT",
   "id": 349,
@@ -26,12 +22,11 @@
   "modifiedById": 49633,
   "name": "Variables - Putting Them To Use",
   "orderNumber": 0,
-  "price": {
-    "amount": 0.0,
-    "currency": "USD"
-  },
+  "price": "0.0 USD",
   "primaryCategoryId": 7,
   "status": "ACTIVE_COMPONENT",
   "urlName": "variables---putting-them-to-use",
-  "visibility": "HIDDEN"
+  "visibility": "HIDDEN",
+  "duration.minutesPerDay": 5,
+  "duration.days": 0
 }

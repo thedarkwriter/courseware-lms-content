@@ -6,10 +6,6 @@
   "created": "2015-05-04 17:29:42",
   "createdById": 3,
   "deprecatedBy": "",
-  "duration": {
-    "days": 0,
-    "minutesPerDay": 10
-  },
   "generateCertificate": "DEFAULT",
   "generateProofOfCompletion": "DEFAULT",
   "id": 190,
@@ -21,12 +17,11 @@
   "modifiedById": 38,
   "name": "Puppet NTP",
   "orderNumber": 20,
-  "price": {
-    "amount": 0.0,
-    "currency": "USD"
-  },
+  "price": "0.0 USD",
   "primaryCategoryId": 7,
   "status": "ENABLED",
   "urlName": "puppet-ntp",
-  "visibility": "PUBLIC"
+  "visibility": "PUBLIC",
+  "duration.minutesPerDay": 10,
+  "duration.days": 0
 }

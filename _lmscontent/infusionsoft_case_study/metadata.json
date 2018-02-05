@@ -5,10 +5,6 @@
   "created": "2017-08-04 14:05:39",
   "createdById": 35,
   "deprecatedBy": "",
-  "duration": {
-    "days": 0,
-    "minutesPerDay": 0
-  },
   "generateCertificate": "DEFAULT",
   "generateProofOfCompletion": "DEFAULT",
   "id": 283,
@@ -16,12 +12,11 @@
   "modifiedById": 35,
   "name": "Infusionsoft Case Study",
   "orderNumber": 0,
-  "price": {
-    "amount": 0.0,
-    "currency": "USD"
-  },
+  "price": "0.0 USD",
   "primaryCategoryId": 10,
   "status": "ENABLED",
   "urlName": "infusionsoft-case-study",
-  "visibility": "HIDDEN"
+  "visibility": "HIDDEN",
+  "duration.minutesPerDay": 0,
+  "duration.days": 0
 }

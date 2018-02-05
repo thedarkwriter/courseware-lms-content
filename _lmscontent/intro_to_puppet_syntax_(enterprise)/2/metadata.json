@@ -70,10 +70,6 @@
   "customField09": "",
   "customField10": "",
   "deprecatedBy": "",
-  "duration": {
-    "days": 1,
-    "minutesPerDay": 30
-  },
   "generateCertificate": "DEFAULT",
   "generateProofOfCompletion": "DEFAULT",
   "id": 369,
@@ -81,10 +77,7 @@
   "modifiedById": 49633,
   "name": "Intro to Puppet Syntax (Enterprise) - 2",
   "orderNumber": 0,
-  "price": {
-    "amount": 0.0,
-    "currency": "USD"
-  },
+  "price": "0.0 USD",
   "primaryCategoryId": 7,
   "status": "DISABLED",
   "type": {
@@ -104,5 +97,7 @@
   },
   "typeId": 4,
   "urlName": "introduction-to-puppet-syntax-2",
-  "visibility": "HIDDEN"
+  "visibility": "HIDDEN",
+  "duration.minutesPerDay": 30,
+  "duration.days": 1
 }

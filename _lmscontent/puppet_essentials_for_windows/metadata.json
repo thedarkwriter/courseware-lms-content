@@ -9,10 +9,6 @@
   "created": "2014-10-29 16:11:06",
   "createdById": 3,
   "deprecatedBy": "",
-  "duration": {
-    "days": 3,
-    "minutesPerDay": 180
-  },
   "earlyBirdDays": 0,
   "expiryDays": 365,
   "generateCertificate": "DEFAULT",
@@ -23,10 +19,7 @@
   "modifiedById": 38,
   "name": "Puppet Essentials for Windows",
   "orderNumber": 6,
-  "price": {
-    "amount": 1000.0,
-    "currency": "USD"
-  },
+  "price": "1000.0 USD",
   "priceMultiplier": 1.0,
   "primaryCategoryId": 8,
   "priority": 3,
@@ -36,5 +29,7 @@
   "status": "ENABLED",
   "theyTookThisCourse": "",
   "urlName": "puppet-essentials-for-windows",
-  "visibility": "PUBLIC"
+  "visibility": "PUBLIC",
+  "duration.minutesPerDay": 180,
+  "duration.days": 3
 }

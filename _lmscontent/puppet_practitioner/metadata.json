@@ -19,10 +19,6 @@
   "customField09": "",
   "customField10": "",
   "deprecatedBy": "",
-  "duration": {
-    "days": 3,
-    "minutesPerDay": 420
-  },
   "earlyBirdDays": 0,
   "generateCertificate": "DEFAULT",
   "generateProofOfCompletion": "DEFAULT",
@@ -32,10 +28,7 @@
   "modifiedById": 53,
   "name": "Puppet Practitioner",
   "orderNumber": 2,
-  "price": {
-    "amount": 2400.0,
-    "currency": "USD"
-  },
+  "price": "2400.0 USD",
   "priceMultiplier": 1.0,
   "primaryCategoryId": 6,
   "priority": 3,
@@ -46,5 +39,7 @@
   "status": "ENABLED",
   "theyTookThisCourse": "",
   "urlName": "puppet-practitioner",
-  "visibility": "PUBLIC"
+  "visibility": "PUBLIC",
+  "duration.minutesPerDay": 420,
+  "duration.days": 3
 }

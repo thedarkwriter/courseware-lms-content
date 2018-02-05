@@ -578,10 +578,6 @@
   "created": "2015-12-09 14:56:52",
   "createdById": 7,
   "deprecatedBy": "/course-catalog",
-  "duration": {
-    "days": 0,
-    "minutesPerDay": 0
-  },
   "generateCertificate": "DEFAULT",
   "generateProofOfCompletion": "NO",
   "id": 207,
@@ -589,10 +585,7 @@
   "modifiedById": 38,
   "name": "All You Can Take Virtual Training",
   "orderNumber": 0,
-  "price": {
-    "amount": 4300.0,
-    "currency": "USD"
-  },
+  "price": "4300.0 USD",
   "primaryCategoryId": 8,
   "providerId": 1,
   "status": "DISABLED",
@@ -613,5 +606,7 @@
   },
   "typeId": 4,
   "urlName": "all-you-can-take",
-  "visibility": "HIDDEN"
+  "visibility": "HIDDEN",
+  "duration.minutesPerDay": 0,
+  "duration.days": 0
 }

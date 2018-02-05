@@ -495,10 +495,6 @@
   "customField09": "",
   "customField10": "",
   "deprecatedBy": "",
-  "duration": {
-    "days": 0,
-    "minutesPerDay": 60
-  },
   "generateCertificate": "DEFAULT",
   "generateProofOfCompletion": "DEFAULT",
   "id": 289,
@@ -506,10 +502,7 @@
   "modifiedById": 49633,
   "name": "Train the Trainers: Virtual Classes",
   "orderNumber": 0,
-  "price": {
-    "amount": 0.0,
-    "currency": "USD"
-  },
+  "price": "0.0 USD",
   "primaryCategoryId": 10,
   "status": "ENABLED",
   "type": {
@@ -529,5 +522,7 @@
   },
   "typeId": 4,
   "urlName": "virtual-ttt",
-  "visibility": "HIDDEN"
+  "visibility": "HIDDEN",
+  "duration.minutesPerDay": 60,
+  "duration.days": 0
 }

@@ -19,10 +19,6 @@
   "customField09": "",
   "customField10": "",
   "deprecatedBy": "",
-  "duration": {
-    "days": 3,
-    "minutesPerDay": 420
-  },
   "earlyBirdDays": 0,
   "expiryDays": 365,
   "generateCertificate": "DEFAULT",
@@ -33,10 +29,7 @@
   "modifiedById": 38,
   "name": "Virtual Puppet Fundamentals",
   "orderNumber": 3,
-  "price": {
-    "amount": 2400.0,
-    "currency": "USD"
-  },
+  "price": "2400.0 USD",
   "priceMultiplier": 1.0,
   "primaryCategoryId": 8,
   "priority": 3,
@@ -46,5 +39,7 @@
   "status": "ENABLED",
   "theyTookThisCourse": "",
   "urlName": "virtual-puppet-fundamentals",
-  "visibility": "PUBLIC"
+  "visibility": "PUBLIC",
+  "duration.minutesPerDay": 420,
+  "duration.days": 3
 }

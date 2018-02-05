@@ -504,10 +504,6 @@
   "created": "2017-07-20 13:33:21",
   "createdById": 38,
   "deprecatedBy": "",
-  "duration": {
-    "days": 0,
-    "minutesPerDay": 0
-  },
   "generateCertificate": "DEFAULT",
   "generateProofOfCompletion": "DEFAULT",
   "id": 255,
@@ -515,10 +511,7 @@
   "modifiedById": 38,
   "name": "XTO Energy Learning Plan",
   "orderNumber": 0,
-  "price": {
-    "amount": 0.0,
-    "currency": "USD"
-  },
+  "price": "0.0 USD",
   "primaryCategoryId": 7,
   "status": "ENABLED",
   "type": {
@@ -538,5 +531,7 @@
   },
   "typeId": 4,
   "urlName": "xto-energy-learning-plan",
-  "visibility": "HIDDEN"
+  "visibility": "HIDDEN",
+  "duration.minutesPerDay": 0,
+  "duration.days": 0
 }

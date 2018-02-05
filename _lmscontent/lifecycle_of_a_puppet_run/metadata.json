@@ -5,10 +5,6 @@
   "created": "2017-07-26 17:06:57",
   "createdById": 31489,
   "deprecatedBy": "",
-  "duration": {
-    "days": 0,
-    "minutesPerDay": 7
-  },
   "generateCertificate": "DEFAULT",
   "generateProofOfCompletion": "DEFAULT",
   "id": 258,
@@ -16,12 +12,11 @@
   "modifiedById": 35,
   "name": "Lifecycle of a Puppet Run",
   "orderNumber": 0,
-  "price": {
-    "amount": 0.0,
-    "currency": "USD"
-  },
+  "price": "0.0 USD",
   "primaryCategoryId": 10,
   "status": "DISABLED",
   "urlName": "lifecycle-of-a-puppet-run",
-  "visibility": "DEPRECATED"
+  "visibility": "DEPRECATED",
+  "duration.minutesPerDay": 7,
+  "duration.days": 0
 }

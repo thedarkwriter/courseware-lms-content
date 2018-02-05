@@ -8,10 +8,6 @@
   "created": "2015-08-13 10:43:35",
   "createdById": 38,
   "deprecatedBy": "",
-  "duration": {
-    "days": 1,
-    "minutesPerDay": 180
-  },
   "earlyBirdDays": 0,
   "expiryDays": 365,
   "generateCertificate": "DEFAULT",
@@ -22,10 +18,7 @@
   "name": "Puppet 4 Parser",
   "orderNumber": 7,
   "prerequisites": "<style>\r\n  #content-section-additionalNotes h2 { display: none };\r\n</style>\r\n<p>\r\n<a class=\"btn\" href=\"https://learn.puppet.com/search?courseId=201&locationId=0\">Find a Class</a> or see the full class schedule below:\r\n</p>",
-  "price": {
-    "amount": 400.0,
-    "currency": "USD"
-  },
+  "price": "400.0 USD",
   "priceMultiplier": 1.0,
   "primaryCategoryId": 8,
   "priority": 0,
@@ -34,5 +27,7 @@
   "status": "ENABLED",
   "theyTookThisCourse": "",
   "urlName": "puppet-4-parser",
-  "visibility": "PUBLIC"
+  "visibility": "PUBLIC",
+  "duration.minutesPerDay": 180,
+  "duration.days": 1
 }

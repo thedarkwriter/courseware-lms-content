@@ -5,10 +5,6 @@
   "created": "2015-02-04 13:29:44",
   "createdById": 3,
   "deprecatedBy": "",
-  "duration": {
-    "days": 0,
-    "minutesPerDay": 0
-  },
   "generateCertificate": "DEFAULT",
   "generateProofOfCompletion": "DEFAULT",
   "id": 130,
@@ -16,13 +12,12 @@
   "modifiedById": 3,
   "name": "01. Managing sudo Privileges - Video",
   "orderNumber": 0,
-  "price": {
-    "amount": 0.0,
-    "currency": "USD"
-  },
+  "price": "0.0 USD",
   "primaryCategoryId": 1,
   "providerId": 1,
   "status": "ACTIVE_COMPONENT",
   "urlName": "01-managing-sudo-privileges---video",
-  "visibility": "HIDDEN"
+  "visibility": "HIDDEN",
+  "duration.minutesPerDay": 0,
+  "duration.days": 0
 }

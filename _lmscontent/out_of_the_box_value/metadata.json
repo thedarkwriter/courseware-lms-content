@@ -440,10 +440,6 @@
   ],
   "created": "2017-08-01 17:06:40",
   "createdById": 31489,
-  "duration": {
-    "days": 0,
-    "minutesPerDay": 0
-  },
   "generateCertificate": "DEFAULT",
   "generateProofOfCompletion": "DEFAULT",
   "id": 270,
@@ -451,10 +447,7 @@
   "modifiedById": 31489,
   "name": "Out of the Box Value",
   "orderNumber": 0,
-  "price": {
-    "amount": 0.0,
-    "currency": "USD"
-  },
+  "price": "0.0 USD",
   "primaryCategoryId": 10,
   "status": "ACTIVE_COMPONENT",
   "type": {
@@ -474,5 +467,7 @@
   },
   "typeId": 6,
   "urlName": "out-of-the-box-value",
-  "visibility": "PUBLIC"
+  "visibility": "PUBLIC",
+  "duration.minutesPerDay": 0,
+  "duration.days": 0
 }

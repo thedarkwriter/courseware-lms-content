@@ -5,10 +5,6 @@
   "created": "2015-02-03 12:10:17",
   "createdById": 3,
   "deprecatedBy": "",
-  "duration": {
-    "days": 0,
-    "minutesPerDay": 0
-  },
   "generateCertificate": "DEFAULT",
   "generateProofOfCompletion": "DEFAULT",
   "id": 51,
@@ -16,12 +12,11 @@
   "modifiedById": 3,
   "name": "02. Inheritance - Exercises",
   "orderNumber": 0,
-  "price": {
-    "amount": 0.0,
-    "currency": "USD"
-  },
+  "price": "0.0 USD",
   "primaryCategoryId": 1,
   "status": "ACTIVE_COMPONENT",
   "urlName": "02-inheritance---exercises",
-  "visibility": "HIDDEN"
+  "visibility": "HIDDEN",
+  "duration.minutesPerDay": 0,
+  "duration.days": 0
 }

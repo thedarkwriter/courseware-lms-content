@@ -260,10 +260,6 @@
   "created": "2017-03-24 09:23:52",
   "createdById": 35,
   "deprecatedBy": "",
-  "duration": {
-    "days": 0,
-    "minutesPerDay": 0
-  },
   "generateCertificate": "DEFAULT",
   "generateProofOfCompletion": "DEFAULT",
   "id": 239,
@@ -271,10 +267,7 @@
   "modifiedById": 35,
   "name": "Introduction to Testing Puppet",
   "orderNumber": 0,
-  "price": {
-    "amount": 0.0,
-    "currency": "USD"
-  },
+  "price": "0.0 USD",
   "primaryCategoryId": 7,
   "status": "ENABLED",
   "type": {
@@ -294,5 +287,7 @@
   },
   "typeId": 4,
   "urlName": "introduction-to-testing-puppet",
-  "visibility": "PUBLIC"
+  "visibility": "PUBLIC",
+  "duration.minutesPerDay": 0,
+  "duration.days": 0
 }

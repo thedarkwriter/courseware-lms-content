@@ -1222,10 +1222,6 @@
   "customField09": "",
   "customField10": "",
   "deprecatedBy": "puppet-SE",
-  "duration": {
-    "days": 0,
-    "minutesPerDay": 240
-  },
   "generateCertificate": "DEFAULT",
   "generateProofOfCompletion": "YES",
   "id": 256,
@@ -1233,10 +1229,7 @@
   "modifiedById": 31489,
   "name": "The Value of Puppet for Partner Sales Engineers",
   "orderNumber": 0,
-  "price": {
-    "amount": 0.0,
-    "currency": "USD"
-  },
+  "price": "0.0 USD",
   "primaryCategoryId": 10,
   "status": "ENABLED",
   "type": {
@@ -1256,5 +1249,7 @@
   },
   "typeId": 4,
   "urlName": "puppet-for-partner-sales-engineers",
-  "visibility": "HIDDEN"
+  "visibility": "HIDDEN",
+  "duration.minutesPerDay": 240,
+  "duration.days": 0
 }

@@ -6,10 +6,6 @@
   "created": "2015-02-03 12:05:13",
   "createdById": 3,
   "deprecatedBy": "",
-  "duration": {
-    "days": 0,
-    "minutesPerDay": 10
-  },
   "generateCertificate": "DEFAULT",
   "generateProofOfCompletion": "DEFAULT",
   "id": 50,
@@ -19,12 +15,11 @@
   "modifiedById": 3,
   "name": "05. Inherit ance - Quiz",
   "orderNumber": 36,
-  "price": {
-    "amount": 0.0,
-    "currency": "USD"
-  },
+  "price": "0.0 USD",
   "primaryCategoryId": 1,
   "status": "ACTIVE_COMPONENT",
   "urlName": "03-inheritance---quiz",
-  "visibility": "HIDDEN"
+  "visibility": "HIDDEN",
+  "duration.minutesPerDay": 10,
+  "duration.days": 0
 }

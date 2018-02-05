@@ -6,10 +6,6 @@
   "created": "2015-04-21 23:19:14",
   "createdById": 3,
   "deprecatedBy": "",
-  "duration": {
-    "days": 0,
-    "minutesPerDay": 3
-  },
   "generateCertificate": "DEFAULT",
   "generateProofOfCompletion": "DEFAULT",
   "id": 164,
@@ -21,12 +17,11 @@
   "modifiedById": 38,
   "name": "What is Puppet",
   "orderNumber": 1,
-  "price": {
-    "amount": 0.0,
-    "currency": "USD"
-  },
+  "price": "0.0 USD",
   "primaryCategoryId": 7,
   "status": "ENABLED",
   "urlName": "what-is-puppet",
-  "visibility": "PUBLIC"
+  "visibility": "PUBLIC",
+  "duration.minutesPerDay": 3,
+  "duration.days": 0
 }

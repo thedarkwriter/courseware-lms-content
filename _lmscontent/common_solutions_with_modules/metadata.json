@@ -5,10 +5,6 @@
   "created": "2015-06-05 11:09:06",
   "createdById": 7,
   "deprecatedBy": "",
-  "duration": {
-    "days": 0,
-    "minutesPerDay": 0
-  },
   "generateCertificate": "DEFAULT",
   "generateProofOfCompletion": "DEFAULT",
   "id": 199,
@@ -16,13 +12,12 @@
   "modifiedById": 38,
   "name": "Common Solutions with Modules",
   "orderNumber": 0,
-  "price": {
-    "amount": 0.0,
-    "currency": "USD"
-  },
+  "price": "0.0 USD",
   "primaryCategoryId": 7,
   "requirementsNeededToPass": 5,
   "status": "DISABLED",
   "urlName": "common-solutions-with-modules",
-  "visibility": "DEPRECATED"
+  "visibility": "DEPRECATED",
+  "duration.minutesPerDay": 0,
+  "duration.days": 0
 }

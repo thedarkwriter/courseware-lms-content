@@ -9,10 +9,6 @@
   "created": "2014-10-29 12:51:41",
   "createdById": 3,
   "deprecatedBy": "",
-  "duration": {
-    "days": 2,
-    "minutesPerDay": 420
-  },
   "earlyBirdDays": 0,
   "generateCertificate": "DEFAULT",
   "generateProofOfCompletion": "DEFAULT",
@@ -22,10 +18,7 @@
   "modifiedById": 39616,
   "name": "Puppet Architect",
   "orderNumber": 3,
-  "price": {
-    "amount": 1700.0,
-    "currency": "USD"
-  },
+  "price": "1700.0 USD",
   "priceMultiplier": 1.0,
   "primaryCategoryId": 6,
   "priority": 3,
@@ -36,5 +29,7 @@
   "status": "ENABLED",
   "theyTookThisCourse": "",
   "urlName": "puppet-architect",
-  "visibility": "PUBLIC"
+  "visibility": "PUBLIC",
+  "duration.minutesPerDay": 420,
+  "duration.days": 2
 }

@@ -15,10 +15,6 @@
   "customField09": "",
   "customField10": "",
   "deprecatedBy": "",
-  "duration": {
-    "days": 0,
-    "minutesPerDay": 12
-  },
   "generateCertificate": "DEFAULT",
   "generateProofOfCompletion": "DEFAULT",
   "id": 275,
@@ -26,12 +22,11 @@
   "modifiedById": 31489,
   "name": "Hello, Puppet",
   "orderNumber": 0,
-  "price": {
-    "amount": 0.0,
-    "currency": "USD"
-  },
+  "price": "0.0 USD",
   "primaryCategoryId": 10,
   "status": "ENABLED",
   "urlName": "hello-puppet",
-  "visibility": "MEMBER"
+  "visibility": "MEMBER",
+  "duration.minutesPerDay": 12,
+  "duration.days": 0
 }

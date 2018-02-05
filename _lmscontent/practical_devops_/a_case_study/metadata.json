@@ -5,10 +5,6 @@
   "created": "2017-08-04 17:58:36",
   "createdById": 31489,
   "deprecatedBy": "",
-  "duration": {
-    "days": 0,
-    "minutesPerDay": 25
-  },
   "generateCertificate": "DEFAULT",
   "generateProofOfCompletion": "DEFAULT",
   "id": 284,
@@ -16,12 +12,11 @@
   "modifiedById": 31489,
   "name": "Practical DevOps: A Case Study",
   "orderNumber": 0,
-  "price": {
-    "amount": 0.0,
-    "currency": "USD"
-  },
+  "price": "0.0 USD",
   "primaryCategoryId": 10,
   "status": "ENABLED",
   "urlName": "practical-devops-a-case-study",
-  "visibility": "DEPRECATED"
+  "visibility": "DEPRECATED",
+  "duration.minutesPerDay": 25,
+  "duration.days": 0
 }
