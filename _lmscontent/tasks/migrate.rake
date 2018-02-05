@@ -43,7 +43,7 @@ namespace :migrate do
       end
       if json['duration'].class == Hash
         ['minutesPerDay','days'].each do |k|
-          json["duration.#{k}" = json[k]
+          json["duration.#{k}"] = json['duration'][k]
         end
       end
       json.delete('duration')
