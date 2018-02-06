@@ -12,4 +12,4 @@ Once resources are contained within a class, the entire class can be easily appl
 
 As your server configuration becomes even more complex, it makes sense to further organize your code into a module. A module contains a collection of related classes, all working together to configure a specific piece of software or settings on a server.
 
-Puppet gives you the power to express your configuration in code to manage your infrastruture automatically and repeatably.
+Puppet gives you the power to express your configuration in code to manage your infrastructure automatically and repeatably.
