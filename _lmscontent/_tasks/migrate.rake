@@ -85,14 +85,14 @@ namespace :migrate do
       end
       json.delete('duration')
 
-      File.write(path,JSON.pretty_generate(json))
+      File.write(path,JSON.pretty_generate(json.delete_if { |k,v| ['components'].include? k }))
 
       if json.has_key?('components')
         json['components'].each do |lc|
           if lc['name']
             puts "Found nested component: #{lc['name']}"
             Dir.chdir(File.dirname(path)) do
-              parse_and_build_structure(lc)
+              #parse_and_build_structure(lc)
             end
           end
         end

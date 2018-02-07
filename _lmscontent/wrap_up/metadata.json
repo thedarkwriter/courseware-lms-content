@@ -2,51 +2,6 @@
   "UUID": "82d1b3bf-3b3e-3328-94aa-f2e365d37e9f",
   "_displayName_": "Wrap Up",
   "_keyword_": "course_pathway",
-  "components": [
-    {
-      "_displayName_": "Course Requirement #245",
-      "_keyword_": "course_requirement",
-      "component": {
-        "UUID": "ad970c71-17bf-343d-9b56-bced12db2a2e",
-        "_displayName_": "Value of Puppet Enterprise: Wrap Up",
-        "_keyword_": "content_component",
-        "content": "<h2> Post-assessment</h2><p>\r\nPlease complete the short assessment.\r\n</p>\r\n<iframe src=\"https://www.classmarker.com/online-test/start/?quiz=ha45985194361039&iframe=1\" frameborder=\"0\" style=\"width:100%;max-width:700px;\" height=\"800\"></iframe>",
-        "created": "2017-08-03 15:31:35",
-        "createdById": 31489,
-        "deprecatedBy": "",
-        "duration": {
-          "days": 0,
-          "minutesPerDay": 1
-        },
-        "generateCertificate": "DEFAULT",
-        "generateProofOfCompletion": "DEFAULT",
-        "id": 279,
-        "modified": "2017-08-04 18:08:15",
-        "modifiedById": 31489,
-        "name": "Value of Puppet Enterprise: Wrap Up",
-        "orderNumber": 0,
-        "price": {
-          "amount": 0.0,
-          "currency": "USD"
-        },
-        "primaryCategoryId": 10,
-        "status": "ENABLED",
-        "summary": "<h2>Summary</h2>\r\n<p>Assess how much you have learned by taking the final quiz below. Your answers will appear on the screen and help you identify strengths and areas to learn more about Puppet Enterprise. Below are some great resources to increase your Puppet knowledge!</p>\r\n<h2>Resources</h2>\r\n<p><a href=\"https://puppet.com/download-learning-vm\" target=\"_blank\">The Puppet Learning VM</a></p>\r\n<p>The Puppet Learning VM is an interactive tutorial and learning environment to get you started with Puppet or level up the skills you already have.&nbsp;</p>\r\n<p><a href=\"https://learn.puppet.com/category/instructor-led-training\" target=\"_blank\">Puppet Instructor-led Training</a></p>\r\n<p>Attend one of our comprehensive classes in a classroom from one of our expert instructors. You&rsquo;ll get hands on experience and benefit from access to top Puppet professionals.</p>\r\n<p><a href=\"https://learn.puppet.com/category/online-instructor-led-training\" target=\"_blank\">Puppet Online Instructor-led Training</a></p>\r\n<p>Choose from a growing library of instructor-led classes delivered in an online environment. Get the same expert guidance from our instructors and plenty of hands on experience, but in shorter duration classes and at a lower price point.</p>\r\n<p><a href=\"https://learn.puppet.com/category/self-paced-training\" target=\"_blank\">Self-paced Online Courses</a></p>\r\n<p>Single topic classes, complete with exercises and quizzes to check your progress are available at any time and any place.</p>",
-        "urlName": "value-of-puppet-enterprise-wrap-up",
-        "visibility": "DEPRECATED"
-      },
-      "componentId": 279,
-      "componentUUID": "ad970c71-17bf-343d-9b56-bced12db2a2e",
-      "created": "2017-08-03 15:32:06",
-      "createdById": 31489,
-      "id": 245,
-      "modified": "2017-08-03 15:32:06",
-      "modifiedById": 31489,
-      "name": "Value of Puppet Enterprise: Wrap Up",
-      "pathwayId": 280,
-      "position": 1
-    }
-  ],
   "created": "2017-08-03 15:31:56",
   "createdById": 31489,
   "generateCertificate": "DEFAULT",
