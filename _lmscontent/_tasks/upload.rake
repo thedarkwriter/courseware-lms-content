@@ -32,13 +32,14 @@ namespace :upload do
   def update(conditions)
     # Assume name is always in metadata
     name = conditions['name']
-    @lms = connect
-    components = lms.retrieve_component({
+    components = @lms.retrieve_component({
       'name' => [ name.to_s ]
     }).to_h
 
+    id = components.select{|id,h| h['name'] == name}.keys.first
+    puts "Found existing component with id #{id}"
     # TODO: identify the correct component since this can return multiples
-    @lms.update_component(component[id], conditions) unless id.nil? || id.empty?
+    @lms.update_component(id, conditions) unless id.nil?
   rescue => e
     puts "#{e.message}"
   end
