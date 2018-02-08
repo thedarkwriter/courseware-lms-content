@@ -31,40 +31,40 @@ namespace :migrate do
   end
 
   def convert_fields_to_md(fields,lc,path)
-      fields.each do |field|
-        unless lc[field].nil?
+    fields.each do |field|
+      unless lc[field].nil?
+        begin
+          md = Upmark.convert(lc[field])
+        rescue
           begin
-            md = Upmark.convert(lc[field])
+            md = ReverseMarkdown.convert(lc[field])
           rescue
-            begin
-              md = ReverseMarkdown.convert(lc[field])
-            rescue
-              md = lc[field]
-            end
+            md = lc[field]
           end
-          File.write("#{path}/#{field}.md",md)
         end
-     end
+        File.write("#{path}/#{field}.md",md)
+      end
+   end
   end
 
   def parse_and_build_structure(lc)
-     # .gsub(/\w-/,' -') is to fix word- instead of word -
-      match = lc['name'].gsub(/\w-/,' -').match(
-        /(?<number>^[0-9]+\.(\s|\w))?(?<parent>.*(\s-\s|:))?(?<name>.*$)/
-      )
-      if match['parent']
-        parent_dir = normalize_name(match['parent'].gsub(/ - /,''))
-        child_dir  =  normalize_name("#{match['number']}#{match['name']}")
-        path = "#{parent_dir}/#{child_dir}"
-      else
-        path = normalize_name(match['name'])
-      end
-      puts path
-      FileUtils.mkdir_p path
+    # .gsub(/\w-/,' -') is to fix word- instead of word -
+     match = lc['name'].gsub(/\w-/,' -').match(
+       /(?<number>^[0-9]+\.(\s|\w))?(?<parent>.*(\s-\s|:))?(?<name>.*$)/
+     )
+     if match['parent']
+       parent_dir = normalize_name(match['parent'].gsub(/ - /,''))
+       child_dir  =  normalize_name("#{match['number']}#{match['name']}")
+       path = "#{parent_dir}/#{child_dir}"
+     else
+       path = normalize_name(match['name'])
+     end
+     puts path
+     FileUtils.mkdir_p path
 
-      convert_fields_to_md(['content','description','summary'],lc,path)
+     convert_fields_to_md(['content','description','summary'],lc,path)
 
-      File.write("#{path}/metadata.json",lc.delete_if { |k,v| ['content', 'description', 'summary'].include? k }.to_json)
+     File.write("#{path}/metadata.json",lc.delete_if { |k,v| ['content', 'description', 'summary'].include? k }.to_json)
   end
 
   task :json do
