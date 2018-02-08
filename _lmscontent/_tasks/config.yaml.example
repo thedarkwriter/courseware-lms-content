@@ -1,0 +1,14 @@
+---
+credentials:
+  github:
+    user: 'acidprime'
+    token: '1234512345123451234512345'
+  learndot:
+    production:
+      token: '678910116789101167891011'
+    staging:
+      token: '121314151617181920'
+repos:
+  courseware-lms-content:
+    url: 'https://github.com/puppetlabs/courseware-lms-content.git'
+    branch: 'master'

@@ -1,0 +1,1 @@
+This Learning Path (Bundle) includes 4 eLearning courses and an Online Instructor-led course to help you start writing Puppet modules.

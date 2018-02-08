@@ -1,0 +1,1 @@
+Hiera is a key/value lookup to that is useful for separating data from puppet code.  This course is a hands-on exploration of some of the primary features of Hiera.

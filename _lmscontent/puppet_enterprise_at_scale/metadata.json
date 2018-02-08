@@ -1,0 +1,22 @@
+{
+  "UUID": "14f195a8-33a9-3b6d-b73d-df027d86b56a",
+  "_displayName_": "Puppet Enterprise at Scale",
+  "_keyword_": "content_component",
+  "created": "2017-07-27 11:27:19",
+  "createdById": 31489,
+  "deprecatedBy": "",
+  "generateCertificate": "DEFAULT",
+  "generateProofOfCompletion": "DEFAULT",
+  "id": 263,
+  "modified": "2017-08-03 13:30:05",
+  "modifiedById": 35,
+  "name": "Puppet Enterprise at Scale",
+  "orderNumber": 0,
+  "price": "0.0 USD",
+  "primaryCategoryId": 10,
+  "status": "DISABLED",
+  "urlName": "puppet-enterprise-at-scale",
+  "visibility": "DEPRECATED",
+  "duration.minutesPerDay": 4,
+  "duration.days": 0
+}

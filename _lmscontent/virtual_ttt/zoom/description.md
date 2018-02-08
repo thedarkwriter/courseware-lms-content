@@ -1,0 +1,1 @@
+This tutorial introduces instructors to using Zoom for virtual trainings. Content includes how to access a Zoom session using the app or a url, claiming your host, managing a classroom and using interactivity features.

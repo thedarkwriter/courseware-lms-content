@@ -1,0 +1,23 @@
+{
+  "UUID": "c8db5198-9751-3b31-9b96-6c3ad8f82a7d",
+  "_displayName_": "04. Puppet exec Resource Type- Action Items & Resources",
+  "_keyword_": "content_component",
+  "created": "2015-02-04 11:02:58",
+  "createdById": 3,
+  "deprecatedBy": "",
+  "generateCertificate": "DEFAULT",
+  "generateProofOfCompletion": "DEFAULT",
+  "id": 64,
+  "modified": "2015-02-04 11:02:58",
+  "modifiedById": 3,
+  "name": "04. Puppet exec Resource Type- Action Items & Resources",
+  "orderNumber": 0,
+  "price": "0.0 USD",
+  "primaryCategoryId": 1,
+  "providerId": 1,
+  "status": "ACTIVE_COMPONENT",
+  "urlName": "04-puppet-exec-resource-type--action-items-resources",
+  "visibility": "HIDDEN",
+  "duration.minutesPerDay": 0,
+  "duration.days": 0
+}

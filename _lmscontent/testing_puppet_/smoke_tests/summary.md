@@ -1,0 +1,1 @@
+After basic code validation, the next level of testing is smoke testing. The goal of smoke testing is to verify that your module runs and does what you want it to do.

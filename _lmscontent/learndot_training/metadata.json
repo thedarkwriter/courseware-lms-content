@@ -1,0 +1,39 @@
+{
+  "UUID": "52b08063-8299-35c2-949c-ad7d4e14e6b5",
+  "_displayName_": "Learndot Training",
+  "_keyword_": "course_pathway",
+  "courseInfo": "",
+  "created": "2017-06-06 10:30:02",
+  "createdById": 35,
+  "deprecatedBy": "",
+  "generateCertificate": "DEFAULT",
+  "generateProofOfCompletion": "DEFAULT",
+  "id": 252,
+  "modified": "2017-06-06 10:45:11",
+  "modifiedById": 35,
+  "name": "Learndot Training",
+  "orderNumber": 0,
+  "price": "0.0 USD",
+  "primaryCategoryId": 7,
+  "status": "ENABLED",
+  "type": {
+    "_displayName_": "Course",
+    "_keyword_": "course_pathway_type",
+    "created": "2015-06-14 23:21:43",
+    "id": 4,
+    "modified": "2015-06-14 23:21:43",
+    "name": "Course",
+    "rootType": true,
+    "supportedComponentTypes": [
+      "e_learning_component",
+      "course",
+      "content_component",
+      "exam_component"
+    ]
+  },
+  "typeId": 4,
+  "urlName": "learndot-training",
+  "visibility": "HIDDEN",
+  "duration.minutesPerDay": 0,
+  "duration.days": 0
+}

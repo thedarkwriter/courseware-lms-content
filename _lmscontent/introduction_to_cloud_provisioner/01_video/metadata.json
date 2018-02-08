@@ -1,0 +1,23 @@
+{
+  "UUID": "756804ce-06bd-3626-9a1b-71e3f00331b8",
+  "_displayName_": "01. Introduction to Cloud Provisioner - Video",
+  "_keyword_": "content_component",
+  "created": "2015-02-04 12:32:06",
+  "createdById": 3,
+  "deprecatedBy": "",
+  "generateCertificate": "DEFAULT",
+  "generateProofOfCompletion": "DEFAULT",
+  "id": 100,
+  "modified": "2015-02-04 12:32:06",
+  "modifiedById": 3,
+  "name": "01. Introduction to Cloud Provisioner - Video",
+  "orderNumber": 0,
+  "price": "0.0 USD",
+  "primaryCategoryId": 1,
+  "providerId": 1,
+  "status": "ACTIVE_COMPONENT",
+  "urlName": "01-introduction-to-cloud-provisioner---video",
+  "visibility": "HIDDEN",
+  "duration.minutesPerDay": 0,
+  "duration.days": 0
+}

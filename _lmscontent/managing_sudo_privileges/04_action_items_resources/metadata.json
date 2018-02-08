@@ -1,0 +1,23 @@
+{
+  "UUID": "54e7a38a-b3d5-3789-909b-c81afa4819d3",
+  "_displayName_": "04. Managing sudo Privileges- Action Items & Resources",
+  "_keyword_": "content_component",
+  "created": "2015-02-04 13:31:27",
+  "createdById": 3,
+  "deprecatedBy": "",
+  "generateCertificate": "DEFAULT",
+  "generateProofOfCompletion": "DEFAULT",
+  "id": 132,
+  "modified": "2015-02-04 13:31:27",
+  "modifiedById": 3,
+  "name": "04. Managing sudo Privileges- Action Items & Resources",
+  "orderNumber": 0,
+  "price": "0.0 USD",
+  "primaryCategoryId": 1,
+  "providerId": 1,
+  "status": "ACTIVE_COMPONENT",
+  "urlName": "04-managing-sudo-privileges--action-items-resources",
+  "visibility": "HIDDEN",
+  "duration.minutesPerDay": 0,
+  "duration.days": 0
+}

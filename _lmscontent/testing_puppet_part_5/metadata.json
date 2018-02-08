@@ -1,0 +1,22 @@
+{
+  "UUID": "acc495d4-d60b-3d64-824a-098ecc493ecc",
+  "_displayName_": "Testing Puppet Part 5",
+  "_keyword_": "content_component",
+  "created": "2017-03-24 09:29:12",
+  "createdById": 35,
+  "deprecatedBy": "",
+  "generateCertificate": "DEFAULT",
+  "generateProofOfCompletion": "DEFAULT",
+  "id": 244,
+  "modified": "2017-03-24 10:25:37",
+  "modifiedById": 35,
+  "name": "Testing Puppet Part 5",
+  "orderNumber": 0,
+  "price": "0.0 USD",
+  "primaryCategoryId": 7,
+  "status": "ACTIVE_COMPONENT",
+  "urlName": "testing-puppet-part-5",
+  "visibility": "HIDDEN",
+  "duration.minutesPerDay": 0,
+  "duration.days": 0
+}

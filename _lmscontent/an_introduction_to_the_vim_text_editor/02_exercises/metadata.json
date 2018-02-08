@@ -1,0 +1,23 @@
+{
+  "UUID": "133fe178-6a25-3b5b-a8dd-268b2397fc53",
+  "_displayName_": "02. An Introduction to the Vim Text Editor - Exercises",
+  "_keyword_": "content_component",
+  "created": "2015-02-04 14:43:46",
+  "createdById": 3,
+  "deprecatedBy": "",
+  "generateCertificate": "DEFAULT",
+  "generateProofOfCompletion": "DEFAULT",
+  "id": 147,
+  "modified": "2015-02-04 14:43:46",
+  "modifiedById": 3,
+  "name": "02. An Introduction to the Vim Text Editor - Exercises",
+  "orderNumber": 0,
+  "price": "0.0 USD",
+  "primaryCategoryId": 1,
+  "providerId": 1,
+  "status": "ACTIVE_COMPONENT",
+  "urlName": "02-an-introduction-to-the-vim-text-editor---exercises",
+  "visibility": "HIDDEN",
+  "duration.minutesPerDay": 0,
+  "duration.days": 0
+}

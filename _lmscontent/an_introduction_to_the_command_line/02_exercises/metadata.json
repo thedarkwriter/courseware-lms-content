@@ -1,0 +1,23 @@
+{
+  "UUID": "efec1c91-ac69-3710-b03d-4469dbbc53fc",
+  "_displayName_": "02. An Introduction to the Command Line - Exercises",
+  "_keyword_": "content_component",
+  "created": "2015-02-04 14:29:46",
+  "createdById": 3,
+  "deprecatedBy": "",
+  "generateCertificate": "DEFAULT",
+  "generateProofOfCompletion": "DEFAULT",
+  "id": 141,
+  "modified": "2015-02-04 14:29:46",
+  "modifiedById": 3,
+  "name": "02. An Introduction to the Command Line - Exercises",
+  "orderNumber": 0,
+  "price": "0.0 USD",
+  "primaryCategoryId": 1,
+  "providerId": 1,
+  "status": "ACTIVE_COMPONENT",
+  "urlName": "02-an-introduction-to-the-command-line---exercises",
+  "visibility": "HIDDEN",
+  "duration.minutesPerDay": 0,
+  "duration.days": 0
+}

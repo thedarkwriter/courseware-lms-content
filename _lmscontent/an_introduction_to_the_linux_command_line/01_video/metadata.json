@@ -1,0 +1,23 @@
+{
+  "UUID": "8d1f4ef1-c9d6-395d-b9b4-1ed6c05b7a7e",
+  "_displayName_": "01. An Introduction to the Linux Command Line - Video",
+  "_keyword_": "content_component",
+  "created": "2015-02-04 14:29:13",
+  "createdById": 3,
+  "deprecatedBy": "",
+  "generateCertificate": "DEFAULT",
+  "generateProofOfCompletion": "DEFAULT",
+  "id": 140,
+  "modified": "2015-02-04 14:29:13",
+  "modifiedById": 3,
+  "name": "01. An Introduction to the Linux Command Line - Video",
+  "orderNumber": 0,
+  "price": "0.0 USD",
+  "primaryCategoryId": 1,
+  "providerId": 1,
+  "status": "ACTIVE_COMPONENT",
+  "urlName": "01-an-introduction-to-the-linux-command-line---video",
+  "visibility": "HIDDEN",
+  "duration.minutesPerDay": 0,
+  "duration.days": 0
+}

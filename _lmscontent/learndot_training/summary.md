@@ -1,0 +1,1 @@
+How to set up self-paced courses in learndot

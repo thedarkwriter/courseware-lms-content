@@ -1,0 +1,23 @@
+{
+  "UUID": "c159c40e-0fe0-37e4-8267-727e58c4dc29",
+  "_displayName_": "04. Github Fundamentals - Action Items & Resources",
+  "_keyword_": "content_component",
+  "created": "2015-02-04 15:04:37",
+  "createdById": 3,
+  "deprecatedBy": "",
+  "generateCertificate": "DEFAULT",
+  "generateProofOfCompletion": "DEFAULT",
+  "id": 157,
+  "modified": "2015-02-04 15:04:37",
+  "modifiedById": 3,
+  "name": "04. Github Fundamentals - Action Items & Resources",
+  "orderNumber": 0,
+  "price": "0.0 USD",
+  "primaryCategoryId": 1,
+  "providerId": 1,
+  "status": "ACTIVE_COMPONENT",
+  "urlName": "04-github-fundamentals---action-items-resources",
+  "visibility": "HIDDEN",
+  "duration.minutesPerDay": 0,
+  "duration.days": 0
+}

@@ -1,0 +1,1 @@
+Use this course as a clone for building future courses, rather than manually building from scratch.

@@ -1,0 +1,23 @@
+{
+  "UUID": "3b6f0add-a055-34b5-a6e7-e13ecd0aeab0",
+  "_displayName_": "02. Managing SSH Keys - Exercises",
+  "_keyword_": "content_component",
+  "created": "2015-02-04 13:20:03",
+  "createdById": 3,
+  "deprecatedBy": "",
+  "generateCertificate": "DEFAULT",
+  "generateProofOfCompletion": "DEFAULT",
+  "id": 126,
+  "modified": "2015-02-04 13:20:03",
+  "modifiedById": 3,
+  "name": "02. Managing SSH Keys - Exercises",
+  "orderNumber": 0,
+  "price": "0.0 USD",
+  "primaryCategoryId": 1,
+  "providerId": 1,
+  "status": "ACTIVE_COMPONENT",
+  "urlName": "02-managing-ssh-keys---exercises",
+  "visibility": "HIDDEN",
+  "duration.minutesPerDay": 0,
+  "duration.days": 0
+}

@@ -1,0 +1,23 @@
+{
+  "UUID": "0f797763-b763-36de-b695-6f0d52f1b6e4",
+  "_displayName_": "02. Puppet NTP - Exercises",
+  "_keyword_": "content_component",
+  "created": "2015-02-04 13:12:21",
+  "createdById": 3,
+  "deprecatedBy": "",
+  "generateCertificate": "DEFAULT",
+  "generateProofOfCompletion": "DEFAULT",
+  "id": 123,
+  "modified": "2015-02-04 13:12:21",
+  "modifiedById": 3,
+  "name": "02. Puppet NTP - Exercises",
+  "orderNumber": 0,
+  "price": "0.0 USD",
+  "primaryCategoryId": 1,
+  "providerId": 1,
+  "status": "ACTIVE_COMPONENT",
+  "urlName": "02-puppet-ntp---exercises",
+  "visibility": "HIDDEN",
+  "duration.minutesPerDay": 0,
+  "duration.days": 0
+}

@@ -1,0 +1,22 @@
+{
+  "UUID": "20ca6f44-d492-3a8c-b946-7f965dd72349",
+  "_displayName_": "Getting Started with Hiera - Part 3",
+  "_keyword_": "content_component",
+  "created": "2016-07-13 11:49:04",
+  "createdById": 35,
+  "deprecatedBy": "",
+  "generateCertificate": "DEFAULT",
+  "generateProofOfCompletion": "DEFAULT",
+  "id": 222,
+  "modified": "2016-11-15 12:01:13",
+  "modifiedById": 35,
+  "name": "Getting Started with Hiera - Part 3",
+  "orderNumber": 0,
+  "price": "0.0 USD",
+  "primaryCategoryId": 7,
+  "status": "ACTIVE_COMPONENT",
+  "urlName": "getting-started-with-hiera---part-3",
+  "visibility": "HIDDEN",
+  "duration.minutesPerDay": 0,
+  "duration.days": 0
+}

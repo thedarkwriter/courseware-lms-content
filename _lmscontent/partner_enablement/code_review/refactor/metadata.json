@@ -1,0 +1,39 @@
+{
+  "UUID": "b86abde3-3e58-3a3d-9cf1-a5cc8b87de04",
+  "_displayName_": "Partner Enablement: Code Review/Refactor",
+  "_keyword_": "course_pathway",
+  "courseInfo": "",
+  "created": "2017-03-20 14:25:02",
+  "createdById": 31489,
+  "deprecatedBy": "",
+  "generateCertificate": "DEFAULT",
+  "generateProofOfCompletion": "DEFAULT",
+  "id": 237,
+  "modified": "2017-03-20 14:25:02",
+  "modifiedById": 31489,
+  "name": "Partner Enablement: Code Review/Refactor",
+  "orderNumber": 0,
+  "price": "0.0 USD",
+  "primaryCategoryId": 10,
+  "status": "DISABLED",
+  "type": {
+    "_displayName_": "Course",
+    "_keyword_": "course_pathway_type",
+    "created": "2015-06-14 23:21:43",
+    "id": 4,
+    "modified": "2015-06-14 23:21:43",
+    "name": "Course",
+    "rootType": true,
+    "supportedComponentTypes": [
+      "e_learning_component",
+      "course",
+      "content_component",
+      "exam_component"
+    ]
+  },
+  "typeId": 4,
+  "urlName": "partner-enablement-code-review/refactor",
+  "visibility": "DEPRECATED",
+  "duration.minutesPerDay": 0,
+  "duration.days": 0
+}

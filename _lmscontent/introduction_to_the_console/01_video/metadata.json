@@ -1,0 +1,23 @@
+{
+  "UUID": "f1eaad6e-41c0-31c6-9abe-df64b3fdb890",
+  "_displayName_": "01. Introduction to the Console - Video",
+  "_keyword_": "content_component",
+  "created": "2015-02-04 11:23:44",
+  "createdById": 3,
+  "deprecatedBy": "",
+  "generateCertificate": "DEFAULT",
+  "generateProofOfCompletion": "DEFAULT",
+  "id": 73,
+  "modified": "2015-02-04 11:23:44",
+  "modifiedById": 3,
+  "name": "01. Introduction to the Console - Video",
+  "orderNumber": 0,
+  "price": "0.0 USD",
+  "primaryCategoryId": 1,
+  "providerId": 1,
+  "status": "ACTIVE_COMPONENT",
+  "urlName": "01-introduction-to-the-console---video",
+  "visibility": "HIDDEN",
+  "duration.minutesPerDay": 0,
+  "duration.days": 0
+}

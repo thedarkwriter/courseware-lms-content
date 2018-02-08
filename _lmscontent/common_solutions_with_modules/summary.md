@@ -1,0 +1,1 @@
+This Learning Path (Bundle) includes 5 eLearning courses to get you quickly up to speed on managing five common areas of your infrastructure using Puppet (NTP, SSH, sudo, firewalls, & DNS).

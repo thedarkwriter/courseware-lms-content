@@ -1,0 +1,40 @@
+{
+  "UUID": "9feec4b5-ca0e-33fd-9a1d-628dcbdf161e",
+  "_displayName_": "All You Can Take Virtual Training",
+  "_keyword_": "course_pathway",
+  "courseInfo": "",
+  "created": "2015-12-09 14:56:52",
+  "createdById": 7,
+  "deprecatedBy": "/course-catalog",
+  "generateCertificate": "DEFAULT",
+  "generateProofOfCompletion": "NO",
+  "id": 207,
+  "modified": "2016-05-20 15:39:52",
+  "modifiedById": 38,
+  "name": "All You Can Take Virtual Training",
+  "orderNumber": 0,
+  "price": "4300.0 USD",
+  "primaryCategoryId": 8,
+  "providerId": 1,
+  "status": "DISABLED",
+  "type": {
+    "_displayName_": "Course",
+    "_keyword_": "course_pathway_type",
+    "created": "2015-06-14 23:21:43",
+    "id": 4,
+    "modified": "2015-06-14 23:21:43",
+    "name": "Course",
+    "rootType": true,
+    "supportedComponentTypes": [
+      "e_learning_component",
+      "course",
+      "content_component",
+      "exam_component"
+    ]
+  },
+  "typeId": 4,
+  "urlName": "all-you-can-take",
+  "visibility": "HIDDEN",
+  "duration.minutesPerDay": 0,
+  "duration.days": 0
+}

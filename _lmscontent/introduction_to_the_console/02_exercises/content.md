@@ -1,0 +1,1 @@
+There are no exercises for this course. However, you can download Puppet Enterprise for free and use it on up to 10 nodes to test the features of the Console. <a href="https://puppetlabs.com/puppet/puppet-enterprise">Download PE</a></p>

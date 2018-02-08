@@ -1,0 +1,1 @@
+This course is an introduction to using the Vim text editor to create and edit text files in a Linux environment.

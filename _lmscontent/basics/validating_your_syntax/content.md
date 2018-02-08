@@ -1,0 +1,14 @@
+<h2 id="toc_0">Introduction:</h2>
+<p>As you start to write and edit your own Puppet code, you want to be sure your syntax is correct so it can be understood by Puppet. The best place to learn how to correctly write your Puppet code is in the <a href="https://puppet.com/docs/puppet/5.3/lang_visual_index.html">Puppet Docs</a>.</p>
+<p>For now, review the following video about syntax. Pay particular attention to the rules regarding use of curly braces, quotes, and commas.</p>
+<script src="https://fast.wistia.com/embed/medias/6te1c1owui.jsonp" async></script><script src="https://fast.wistia.com/assets/external/E-v1.js" async></script><div class="wistia_responsive_padding" style="padding:56.25% 0 0 0;position:relative;"><div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;"><div class="wistia_embed wistia_async_6te1c1owui seo=false videoFoam=true" style="height:100%;width:100%">&nbsp;</div></div></div>
+<blockquote><hr />
+<p><strong>Protip</strong>: Often you and your peers will want to agree on things like using spaces or tabs in your code; number of indents to use; or whether or not you like the trailing comma. Puppet will interpret your code the same regardless of spaces, tabs, or indents. But to have some consistency to how code is written, you might want to use what is referred to as a <strong>style guide</strong>. Puppet's <a href="https://puppet.com/docs/puppet/5.3/style_guide.html">style guide</a> helps Puppet community members write code to be easily shared and read by other community members.</p>
+<p>Luckily, there is a command you can run to check a file containing Puppet code and let you know if the syntax is correct or not. This command is <code>puppet parser validate</code> followed by the name of the file that you want to check. For example, if you have a file called <code>default.pp</code> containing Puppet code that you want to check, you'd type <code>puppet parser validate default.pp</code> on the command line.</p>
+<p>Another tool to bookmark is the <a href="https://validate.puppet.com/" target="_blank">Puppet Validator</a>&nbsp;where you can paste Puppet code and test its validity.</p>
+</blockquote>
+<p>When you&rsquo;re ready to move on, continue to the task below to check the syntax of a file containing Puppet code using the <code>puppet parser validate</code> command.</p>
+<h2 id="toc_1">Task:</h2>
+Complete the exercise below. Use any error output to fix any syntax errors and rerun the command if necessary.</p>
+<p><iframe src="https://magicbox.whatsaranjit.com/syntax/validating_your_syntax" width="100%" height="500px" frameborder="0"></iframe></p>
+<p><strong>Pro tip:</strong> A quick way to validate your code in the real world is to test it with our <a href="https://validate.puppet.com/">Puppet Code Validator</a>, which comes with a handy customizable linter function.</p>

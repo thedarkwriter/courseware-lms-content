@@ -1,0 +1,37 @@
+{
+  "UUID": "17d91eb8-cdec-311c-a8f0-8f059ce7bf11",
+  "_displayName_": "Out of the Box Value",
+  "_keyword_": "course_pathway",
+  "created": "2017-08-01 17:06:40",
+  "createdById": 31489,
+  "generateCertificate": "DEFAULT",
+  "generateProofOfCompletion": "DEFAULT",
+  "id": 270,
+  "modified": "2017-08-01 17:06:40",
+  "modifiedById": 31489,
+  "name": "Out of the Box Value",
+  "orderNumber": 0,
+  "price": "0.0 USD",
+  "primaryCategoryId": 10,
+  "status": "ACTIVE_COMPONENT",
+  "type": {
+    "_displayName_": "Module",
+    "_keyword_": "course_pathway_type",
+    "created": "2015-08-02 21:45:38",
+    "id": 6,
+    "modified": "2015-08-02 21:45:38",
+    "name": "Module",
+    "rootType": false,
+    "supportedComponentTypes": [
+      "e_learning_component",
+      "course",
+      "content_component",
+      "exam_component"
+    ]
+  },
+  "typeId": 6,
+  "urlName": "out-of-the-box-value",
+  "visibility": "PUBLIC",
+  "duration.minutesPerDay": 0,
+  "duration.days": 0
+}

@@ -1,0 +1,1 @@
+Learn how to use Puppet Enterprise, Git, and r10k to write, review and deploy code to multiple environments in a controlled manner. You'll be  exposed to core concepts of the Git SCM and the practices that will grow a team-oriented coding culture.

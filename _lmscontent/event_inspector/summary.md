@@ -1,0 +1,1 @@
+The Event Inspector, part of the Puppet Enterprise Console, is a reporting tool that provides data for investigating the current state of your infrastructure. Its focus is on correlating information and presenting it from multiple perspectives in order to reveal common causes behind related events.
