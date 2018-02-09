@@ -70,9 +70,11 @@ namespace :upload do
       'description',
       'summary',
     ].each do |field|
-      puts "Converting #{field}.md to html"
-      doc = Kramdown::Document.new(File.read("#{component_directory}/#{field}.md"))
-      metadata[field] = doc.to_html
+      if File.exist?("#{component_directory}/#{field}.md")
+        puts "Converting #{field}.md to html"
+        doc = Kramdown::Document.new(File.read("#{component_directory}/#{field}.md"))
+        metadata[field] = doc.to_html
+      end
     end
 
     puts metadata.to_json
