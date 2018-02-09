@@ -45,7 +45,7 @@ __What sub-topics must be covered to achieve the objective?__
 	*  What are the key points of this topic?
 	*  Do you have ideas for how to communicate this idea
 
-#### Objective 2: !What they should be able to do and at what level>
+#### Objective 2: <!What they should be able to do and at what level>
 
 __What sub-topics must be covered to achieve the objective?__
 
