@@ -9,4 +9,8 @@ source 'https://rubygems.org' do
   gem 'kramdown'
   gem 'rugged'
   gem 'learndot_api'
+  gem 'upmark'
+  gem 'reverse_markdown'
+  gem 'rake'
+  gem 'learndot_api'
 end
