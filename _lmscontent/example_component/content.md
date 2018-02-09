@@ -3,3 +3,5 @@
 * foo
 * bar
 * baz
+
+[foo](http://foo.com)
