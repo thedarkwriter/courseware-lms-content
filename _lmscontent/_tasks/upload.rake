@@ -51,6 +51,8 @@ namespace :upload do
 
   # Rake Tasks
   task :component,[:component_directory,:target] do  |_t, args|
+
+    puts 'Connecting to learndot api'
     # Connect to production or staging
     @lms = connect(args[:target])
 
@@ -62,11 +64,13 @@ namespace :upload do
 
     metadata = JSON.parse(File.read("#{component_directory}/metadata.json"))
     # Loop over fields that are broken out as markdown files
+
     [
       'content',
       'description',
       'summary',
     ].each do |field|
+      puts "Converting #{field}.md to html"
       doc = Kramdown::Document.new(File.read("#{component_directory}/#{field}.md"))
       metadata[field] = doc.to_html
     end

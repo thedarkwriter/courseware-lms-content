@@ -31,7 +31,7 @@ namespace :release do
             next if     delta.new_file[:path] =~ %r{.*README.md$}
             
             component_directory = Pathname.new(delta.new_file[:path]).parent.basename
-
+            puts "Found updated component #{component_directory}"
             Rake::Task["release:#{component_directory}"].invoke('staging') 
           end
       end  

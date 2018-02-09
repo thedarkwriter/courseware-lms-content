@@ -17,6 +17,8 @@ Dir["./repos/courseware-lms-content/_lmscontent/*"].each do |component_directory
     namespace :release do
       desc "Build component (#{File.basename(component_directory)}) and upload a release to <target>"
       task File.basename(component_directory).to_sym ,[:target] do  |_t, args|
+        puts "invoking \`rake upload:component:#{File.basename(component_directory)}\`"
+        Rake::Task['upload:component'].reenable
         Rake::Task['upload:component'].invoke(component_directory,args[:target]) 
       end
     end
