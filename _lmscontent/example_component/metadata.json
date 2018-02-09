@@ -15,12 +15,12 @@
   "duration.minutesPerDay": 30,
   "generateCertificate": "DEFAULT",
   "generateProofOfCompletion": "DEFAULT",
-  "name": "Test before demo",
+  "name": "Sprint Demo",
   "orderNumber": 0,
   "price": "0.00 USD",
   "primaryCategoryId": 10,
   "providerId": 1,
   "status": "ENABLED",
-  "urlName": "before-test",
+  "urlName": "sprint-demo",
   "visibility": "HIDDEN"
 }
