@@ -26,4 +26,4 @@ Dir["./repos/courseware-lms-content/_lmscontent/*"].each do |component_directory
 end
 
 # Run interactively if user gives us no arguments
-task :default => ['help']
+task :default => ['create:component']

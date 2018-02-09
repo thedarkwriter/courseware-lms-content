@@ -1,5 +1,5 @@
 {
-  "banner": "",
+  "createdById": 38,
   "customField01": "",
   "customField02": "",
   "customField03": "",
@@ -9,28 +9,18 @@
   "customField07": "",
   "customField08": "",
   "customField09": "",
-  "customField10": "",  
-  "description": "",
-  "duration": {
-    "days": 1,
-    "minutesPerDay": 1
-  },
-  "expiryDays": "",
+  "customField10": "",
+  "deprecatedBy": "",
+  "duration.days": 0,
+  "duration.minutesPerDay": 30,
   "generateCertificate": "DEFAULT",
   "generateProofOfCompletion": "DEFAULT",
-  "language": "",
-  "logo": "",
-  "name": "",
-  "orderNumber": "",
-  "price": {
-    "amount": 0,
-    "currency": "USD"
-  },
-  "primaryCategoryId": 7,
+  "name": "This is an - Example name",
+  "orderNumber": 0,
+  "price": "0.00 USD",
+  "primaryCategoryId": 10,
   "providerId": 1,
-  "salesforceProductId": "",
-  "status": "ACTIVE_COMPONENT",
-  "summary": "",
-  "urlName": "",
+  "status": "ENABLED",
+  "urlName": "this-is-an-example",
   "visibility": "HIDDEN"
 }
