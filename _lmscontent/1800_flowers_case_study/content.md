@@ -9,4 +9,4 @@ document.getElementById('quiz').src =
 "&cm_ln=" + Cookies.get("studentName") + 
 "&cm_e=" + Cookies.get("studentEmail") +
 "&cm_user_id=" + Cookies.get("studentId")  ; 
-</script>
+</script>  
