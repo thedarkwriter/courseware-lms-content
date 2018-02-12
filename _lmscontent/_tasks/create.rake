@@ -49,7 +49,7 @@ namespace :create do
     end
 
     def git_commit_file(file)
-      repo   = Rugged::Repository.new(git_dir)
+      repo   = Rugged::Repository.new('.')
       # `git add file`
       index = repo.index
       file.slice!(repo.workdir)
