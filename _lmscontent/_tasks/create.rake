@@ -48,6 +48,33 @@ namespace :create do
       end
     end
 
+    def git_commit_file(file)
+      repo   = Rugged::Repository.new(git_dir)
+      # `git add file`
+      index = repo.index
+      file.slice!(repo.workdir)
+      index.add(:path => file,
+                :oid  => Rugged::Blob.from_workdir(repo, file),
+                :mode => 0100644)
+      # `git commit -m 'Initial Commit'`
+      options = {}
+      index.write
+      options[:author]     = 'Rake Task'
+      options[:message]    = 'Initial Commit'
+      options[:committer]  = 'Rake Task'
+      options[:parents]    = repo.empty? ? [] : [repo.head.target_id].compact
+      options[:update_ref] = 'HEAD'
+      options[:tree]       = index.write_tree
+      oid                  = Rugged::Commit.create(repo, options)
+      if oid
+        cputs "Created commit #{message}"
+        cputs repo.status { |file, status_data| puts "#{file} has status: #{status_data.inspect}" }
+      else
+        raise "Something went wrong with the commit"
+      end
+      oid
+    end
+
     unless ask_questions({
       :create_learning_component => {
         :query       => 'Would you like to create a learning component?',
@@ -103,6 +130,15 @@ namespace :create do
 
     File.write("#{@dir_name}/metadata.json", JSON.pretty_generate(json))
 
+    if ask_questions({
+        :commit_file => {
+          :query       => 'Would you like to commit the learning component?',
+          :description => 'The learning component will be added to the local branch',
+          :default     => 'Y/n',
+        },
+      }, :boolean)
+      git_commit_file(@dir_name)
+    end
     # Only works on macOS
     system("open '#{@dir_name}'")
   end
