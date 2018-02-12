@@ -22,7 +22,7 @@ namespace :create do
       name.lstrip.downcase.gsub(/(:|"|\.| |&|-)/,'_').squeeze('_')
     end
 
-    def ask_questions(questions,question_type = :customer_yaml)
+    def ask_questions(questions,question_type = :simple)
       questions.each do |key,hash|
         cputs hash[:query]
     
@@ -38,13 +38,11 @@ namespace :create do
          else
            return answer  =~ (/(yes|y)/i)  ? true : false
          end
-        when  :simple
-          return answer.delete('\\')
-        when :customer_yaml 
+        when :simple
           if answer.nil? or answer.empty?
-            @customer[key] = hash[:default]
+            return hash[:default]
           else
-            @customer[key] = answer
+            return answer.delete('\\')
           end
         end
       end
@@ -59,14 +57,33 @@ namespace :create do
     }, :boolean)
       exit 1
     end
-    name_question = {
-      :name => {
-        :query   => 'What is the name of the learning component',
-        :default => 'This - An Example',
+    @name = ask_questions(
+      {
+        :name => {
+          :query   => 'What is the name of the learning component',
+          :default => 'This - An Example',
+        },
       },
-    }
+    :simple)
 
-    @name     = ask_questions(name_question,:simple)
+    @days = ask_questions(
+      {
+        :days => {
+          :query   => 'How many days is the component?',
+          :default => 0,
+        },
+      },
+    :simple)
+
+    @minutes_per_day = ask_questions(
+      {
+        :days => {
+          :query   => 'How many minutes per day?',
+          :default => 30,
+        },
+      },
+    :simple)
+
     @dir_name = normalize_name(@name) 
 
     if !File.directory?(@dir_name)
@@ -79,11 +96,14 @@ namespace :create do
 
     json     = read_json('_tasks/defaults.json')
 
-    json['name']    = @name
-    json['urlName'] = normalize_name(@name).gsub('_','-')
+    json['name']                   = @name
+    json['urlName']                = normalize_name(@name).gsub('_','-')
+    json['duration.minutesPerDay'] = @minutes_per_day
+    json['duration.days']          = @days
 
     File.write("#{@dir_name}/metadata.json", JSON.pretty_generate(json))
 
+    # Only works on macOS
     system("open '#{@dir_name}'")
   end
 end
