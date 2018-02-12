@@ -48,26 +48,29 @@ namespace :create do
       end
     end
 
-    def git_commit_file(file)
-      repo   = Rugged::Repository.new('.')
+    def git_commit_file(lc_directory)
+      repo   = Rugged::Repository.new(File.dirname(File.dirname(File.dirname(__FILE__))))
       # `git add file`
       index = repo.index
-      file.slice!(repo.workdir)
-      index.add(:path => file,
-                :oid  => Rugged::Blob.from_workdir(repo, file),
-                :mode => 0100644)
+      ['content.md','description.md','summary.md','metadata.json'].each do |file|
+        #file.slice!(repo.workdir)
+        index.add(:path => "#{lc_directory}/_lmscontent/#{file}",
+                  :oid  => Rugged::Blob.from_workdir(repo, "_lmscontent/#{lc_directory}/#{file}"),
+                  :mode => 0100644)
+      end
       # `git commit -m 'Initial Commit'`
       options = {}
       index.write
-      options[:author]     = 'Rake Task'
+      author = {:email=>"zack@puppet.com", :time=>Time.now, :name=>"Zack Smith"}
+      options[:author]     = author
       options[:message]    = 'Initial Commit'
-      options[:committer]  = 'Rake Task'
+      options[:committer]  = author
       options[:parents]    = repo.empty? ? [] : [repo.head.target_id].compact
       options[:update_ref] = 'HEAD'
       options[:tree]       = index.write_tree
       oid                  = Rugged::Commit.create(repo, options)
       if oid
-        cputs "Created commit #{message}"
+        cputs "Created commit Initial Commit"
         cputs repo.status { |file, status_data| puts "#{file} has status: #{status_data.inspect}" }
       else
         raise "Something went wrong with the commit"
