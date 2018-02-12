@@ -11,13 +11,20 @@ Dir["#{task_dir}/**/*.rake"].each do |task_file|
 end
 
 # Create the stub tasks for tracking upload state and for manual deploys
-Dir["./repos/courseware-lms-content/_lmscontent/*"].each do |component_directory|
+Dir["./repos/courseware-lms-content/_lmscontent/**/*"].each do |component_directory|
   if File.exists?("#{component_directory}/metadata.json")
-    #puts component_directory
+    # Allow for subfolders 1 level deep
+    if component_directory.split('/').length == 6
+      parent_component_directory = File.basename(File.dirname(component_directory))
+      rake_task_name = "#{parent_component_directory}-#{File.basename(component_directory)}" 
+    else
+      rake_task_name = File.basename(component_directory) 
+    end
+
     namespace :release do
-      desc "Build component (#{File.basename(component_directory)}) and upload a release to <target>"
-      task File.basename(component_directory).to_sym ,[:target] do  |_t, args|
-        puts "invoking \`rake upload:component:#{File.basename(component_directory)}\`"
+      desc "Build component (#{rake_task_name}) and upload a release to <target>"
+      task rake_task_name.to_sym ,[:target] do  |_t, args|
+        puts "invoking \`rake upload:component:#{rake_task_name}\`"
         Rake::Task['upload:component'].reenable
         Rake::Task['upload:component'].invoke(component_directory,args[:target]) 
       end

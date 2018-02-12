@@ -31,8 +31,16 @@ namespace :release do
             next if     delta.new_file[:path] =~ %r{.*README.md$}
             
             component_directory = Pathname.new(delta.new_file[:path]).parent.basename
-            puts "Found updated component #{component_directory}"
-            Rake::Task["release:#{component_directory}"].invoke('staging') 
+            puts "Found updated component #{component_directory} at path #{delta.new_file[:path]}"
+            # Allow for subfolders
+            if delta.new_file[:path].split('/').length == 4
+              puts "Learning component in subfolder"
+              parent_component_directory = Pathname.new(delta.new_file[:path]).parent.parent.basename
+              rake_task_name = "#{parent_component_directory}-#{component_directory}"
+            else
+              rake_task_name = File.basename(component_directory)
+            end
+            Rake::Task["release:#{rake_task_name}"].invoke('staging') 
           end
       end  
     end
