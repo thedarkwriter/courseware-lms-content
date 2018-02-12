@@ -134,15 +134,15 @@ namespace :create do
 
     File.write("#{@dir_name}/metadata.json", JSON.pretty_generate(json))
 
-    if ask_questions({
-        :commit_file => {
-          :query       => 'Would you like to commit the learning component?',
-          :description => 'The learning component will be added to the local branch',
-          :default     => 'Y/n',
-        },
-      }, :boolean)
-      git_commit_file(@dir_name)
-    end
+    #if ask_questions({
+    #    :commit_file => {
+    #      :query       => 'Would you like to commit the learning component?',
+    #      :description => 'The learning component will be added to the local branch',
+    #      :default     => 'Y/n',
+    #    },
+    #  }, :boolean)
+    #  git_commit_file(@dir_name)
+    #end
     # Only works on macOS
     system("open '#{@dir_name}'")
   end
