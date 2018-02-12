@@ -49,13 +49,14 @@ namespace :create do
     end
 
     def git_commit_file(lc_directory)
+      directory = "_lmscontent/#{lc_directory}"
       repo   = Rugged::Repository.new(File.dirname(File.dirname(File.dirname(__FILE__))))
       # `git add file`
       index = repo.index
       ['content.md','description.md','summary.md','metadata.json'].each do |file|
-        #file.slice!(repo.workdir)
-        index.add(:path => "#{lc_directory}/_lmscontent/#{file}",
-                  :oid  => Rugged::Blob.from_workdir(repo, "_lmscontent/#{lc_directory}/#{file}"),
+        file.slice!(repo.workdir)
+        index.add(:path => "#{directory}/#{file}",
+                  :oid  => Rugged::Blob.from_workdir(repo, "#{directory}/#{file}"),
                   :mode => 0100644)
       end
       # `git commit -m 'Initial Commit'`
