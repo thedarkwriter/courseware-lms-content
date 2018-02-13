@@ -11,7 +11,7 @@ Dir["#{task_dir}/**/*.rake"].each do |task_file|
 end
 
 # Create the stub tasks for tracking upload state and for manual deploys
-Dir["./repos/courseware-lms-content/_lmscontent/**/*"].each do |component_directory|
+Dir["**/*"].each do |component_directory|
   if File.exists?("#{component_directory}/metadata.json")
     # Allow for subfolders 1 level deep
     if component_directory.split('/').length == 6
