@@ -7,7 +7,7 @@ namespace :release do
     # Walk repo to find commits
     repo   = Rugged::Repository.new(File.dirname(File.dirname(File.dirname(__FILE__))))
     walker = Rugged::Walker.new(repo)
-    walker.push(repo.head.target)
+    walker.push(repo.head.target_id)
     walker.each do |commit|
       puts "Processing commit: #{commit.oid}"
       commit.parents[0].diff(commit).each_delta do |delta|
