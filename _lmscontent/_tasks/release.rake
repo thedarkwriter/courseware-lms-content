@@ -27,7 +27,7 @@ namespace :release do
         else
           rake_task_name = File.basename(component_directory)
         end
-        Rake::Task["release:#{rake_task_name}"].invoke('staging') 
+        puts "Generated rake task: #{rake_task_name}"
       end
       break
     end
