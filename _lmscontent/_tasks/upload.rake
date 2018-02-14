@@ -84,6 +84,9 @@ namespace :upload do
     repo   = Rugged::Repository.new(git_dir)
 
     # Set one of our custom fields to the tree view in Git
+    metadata['customField7']  = 'https://pipelines.puppet.com/esquared/builds' 
+    metadata['customField8']  = repo.head.target.author.to_s
+    metadata['customField9']  = repo.head.target.summary.to_s
     metadata['customField10'] = "https://github.com/puppetlabs/courseware-lms-content/commit/#{repo.head.target.oid.to_s}" 
 
     # Check if the LC already exists and update it or create it
