@@ -83,7 +83,7 @@ namespace :upload do
     git_dir = "./repos/courseware-lms-content"
     repo   = Rugged::Repository.new(git_dir)
 
-    sha = File.read('../.git/refs/heads/master') || repo.head.target.oid.to_s
+    sha = File.read('../.git/refs/heads/master') #|| repo.head.target.oid.to_s
 
     # Set one of our custom fields to the tree view in Git
     metadata['customField07']  = "https://pipelines.puppet.com/esquared/builds/#{ENV['DISTELLI_BUILDNUM']}"
