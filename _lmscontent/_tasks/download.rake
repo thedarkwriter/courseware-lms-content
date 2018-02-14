@@ -36,11 +36,10 @@ namespace :download do
         # Clone the repo on the initial run
         Rugged::Repository.clone_at(hash['url'], "repos/#{key}", {
           credentials: credentials,
-          checkout_branch: hash['branch']
+          checkout: sha 
         })
         # Reset local repo to be sha of pipelines shallow repo.
         repo = Rugged::Repository.discover("repos/#{key}")
-        repo.checkout(sha)
         remotes = Rugged::RemoteCollection.new(repo)
         remotes.create('upstream',hash['url'])
 
