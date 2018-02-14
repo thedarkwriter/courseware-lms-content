@@ -5,31 +5,36 @@ namespace :release do
   desc 'Build LMS content and upload a release to staging'
   task :staging do
     # Walk repo to find commits
-    repo   = Rugged::Repository.new(File.dirname(File.dirname(File.dirname(__FILE__))))
-    walker = Rugged::Walker.new(repo)
-    walker.push(repo.head.target_id)
-    walker.each do |commit|
-      puts "Processing commit: #{commit.oid}"
-      commit.parents[0].diff(commit).each_delta do |delta|
-        # Join the path with path repo and read the file into Kramdown
-        next unless delta.new_file[:path] =~ %r{.*\.md$}
-        next unless delta.new_file[:path] =~ %r{_lmscontent/.*$}
-        next if     delta.new_file[:path] =~ %r{.*README.md$}
+    @config['repos'].each do |key,hash|
+      git_dir = "./repos/#{key}"
 
-        component_directory = Pathname.new(delta.new_file[:path]).parent.basename
-        puts "Found updated component #{component_directory} at path #{delta.new_file[:path]}"
+      # Walk repo to find commits by date
+      repo   = Rugged::Repository.new(git_dir)
+      walker = Rugged::Walker.new(repo)
+      walker.push(repo.head.target)
+      walker.each do |commit|
+        puts "Processing commit: #{commit.oid}"
+        commit.parents[0].diff(commit).each_delta do |delta|
+          # Join the path with path repo and read the file into Kramdown
+          next unless delta.new_file[:path] =~ %r{.*\.md$}
+          next unless delta.new_file[:path] =~ %r{_lmscontent/.*$}
+          next if     delta.new_file[:path] =~ %r{.*README.md$}
 
-        # Allow for subfolders
-        if delta.new_file[:path].split('/').length == 4
-          puts "Learning component in subfolder"
-          parent_component_directory = Pathname.new(delta.new_file[:path]).parent.parent.basename
-          rake_task_name = "#{parent_component_directory}-#{component_directory}"
-        else
-          rake_task_name = File.basename(component_directory)
+          component_directory = Pathname.new(delta.new_file[:path]).parent.basename
+          puts "Found updated component #{component_directory} at path #{delta.new_file[:path]}"
+
+          # Allow for subfolders
+          if delta.new_file[:path].split('/').length == 4
+            puts "Learning component in subfolder"
+            parent_component_directory = Pathname.new(delta.new_file[:path]).parent.parent.basename
+            rake_task_name = "#{parent_component_directory}-#{component_directory}"
+          else
+            rake_task_name = File.basename(component_directory)
+          end
+          Rake::Task["release:#{rake_task_name}"].invoke('staging') 
         end
-        Rake::Task["release:#{rake_task_name}"].invoke('staging') 
+        break
       end
-      break
     end
   end
 
