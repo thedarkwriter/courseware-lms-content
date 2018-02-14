@@ -24,11 +24,13 @@ namespace :download do
 
     @config['repos'].each do |key,hash|
       puts "Updating repo #{key} #{hash['url']}"
+
+      sha = File.read('../.git/refs/heads/master')
       if Dir.exist?("repos/#{key}")
         # If repo already exists fetch and reset (pull)
         repo = Rugged::Repository.discover("repos/#{key}")
         repo.remotes['origin'].fetch(credentials: credentials)
-        repo.reset("origin/#{hash['branch']}",:hard)
+        repo.reset(sha,:hard)
 
       else
         # Clone the repo on the initial run
@@ -36,6 +38,8 @@ namespace :download do
           credentials: credentials,
           checkout_branch: hash['branch']
         })
+        # Reset local repo to be sha of pipelines shallow repo.
+        repo.reset(sha,:hard)
         repo = Rugged::Repository.discover("repos/#{key}")
         remotes = Rugged::RemoteCollection.new(repo)
         remotes.create('upstream',hash['url'])
