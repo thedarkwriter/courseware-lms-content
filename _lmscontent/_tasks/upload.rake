@@ -84,7 +84,7 @@ namespace :upload do
     repo   = Rugged::Repository.new(git_dir)
 
     # Set one of our custom fields to the tree view in Git
-    metadata['customField07']  = ENV['DISTELLI_RELEASE'] || 'https://pipelines.puppet.com/esquared/builds'
+    metadata['customField07']  = "https://pipelines.puppet.com/esquared/builds/#{ENV['DISTELLI_BUILDNUM']}"
     metadata['customField08']  = repo.head.target.author[:name].to_s
     metadata['customField09']  = repo.head.target.summary.to_s
     metadata['customField10'] = "https://github.com/puppetlabs/courseware-lms-content/commit/#{repo.head.target.oid.to_s}" 
