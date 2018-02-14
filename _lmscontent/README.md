@@ -1,5 +1,10 @@
 # LMS Content
 
+# Automatic deployment
+
+The content in this folder is managed by Puppet Pipelines [here](https://pipelines.puppet.com/esquared/apps/courseware-lms-content)
+
+
 # Manually deploying / Setup Instructions
 
 Clone the repository
