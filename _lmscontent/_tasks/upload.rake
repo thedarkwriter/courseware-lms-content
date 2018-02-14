@@ -79,6 +79,13 @@ namespace :upload do
 
     puts metadata.to_json
 
+    # Walk repo to find commit
+    git_dir = "./repos/courseware-lms-content"
+    repo   = Rugged::Repository.new(git_dir)
+
+    # Set one of our custom fields to the tree view in Git
+    metadata['customField10'] = "https://github.com/puppetlabs/courseware-lms-content/commit/#{repo.head.target}" 
+
     # Check if the LC already exists and update it or create it
     if retrieve(metadata['name']).empty?
       create(metadata)
