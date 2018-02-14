@@ -1,6 +1,13 @@
+# encoding: utf-8
 require 'rugged'
 require 'yaml'
 
+# Puppet pipelines clones a "shallow" repo for its build process. 
+# libgit2 does not support these https://github.com/libgit2/rugged/issues/409
+# This task works around this by cloning the entire repo using the Github
+# API personal token.
+# TODO: Decided if we should us an absolute path instead of the realtive
+# "repos" path. The realtive path may be better for desktop users
 
 namespace :download do
   task :repos do
