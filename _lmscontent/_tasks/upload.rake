@@ -84,7 +84,7 @@ namespace :upload do
     repo   = Rugged::Repository.new(git_dir)
 
     # Set one of our custom fields to the tree view in Git
-    metadata['customField10'] = "https://github.com/puppetlabs/courseware-lms-content/commit/#{repo.head.target}" 
+    metadata['customField10'] = "https://github.com/puppetlabs/courseware-lms-content/commit/#{repo.head.target.to_s}" 
 
     # Check if the LC already exists and update it or create it
     if retrieve(metadata['name']).empty?
