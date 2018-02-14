@@ -39,8 +39,8 @@ namespace :download do
           checkout_branch: hash['branch']
         })
         # Reset local repo to be sha of pipelines shallow repo.
-        repo.reset(sha,:hard)
         repo = Rugged::Repository.discover("repos/#{key}")
+        repo.reset(sha,:hard)
         remotes = Rugged::RemoteCollection.new(repo)
         remotes.create('upstream',hash['url'])
 
