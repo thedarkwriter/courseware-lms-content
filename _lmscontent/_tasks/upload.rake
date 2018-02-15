@@ -5,6 +5,8 @@ require 'yaml'
 require 'json'
 require 'kramdown'
 
+# This set of tasks are the primary code for uploading content to learndot.
+
 namespace :upload do
 
   # Connect to the learndot api
@@ -56,6 +58,8 @@ namespace :upload do
     # Connect to production or staging
     @lms = connect(args[:target])
 
+    # TODO: Decide if we want merge defaults in to allow for sparse
+    # json files with only the content that is being managed such as `name`
     #defaults = JSON.parse(File.read('defaults.json'))
 
     component_directory = args[:component_directory]
@@ -83,9 +87,12 @@ namespace :upload do
     git_dir = "./repos/courseware-lms-content"
     repo   = Rugged::Repository.new(git_dir)
 
+    # The sha of the current repo and the download repo (e.g. ./repos) should
+    # be the same. This code uses it to create the correct links below.
     sha = File.read('../.git/refs/heads/master') || repo.head.target.oid.to_s
 
-    # Set one of our custom fields to the tree view in Git
+    # Add a series of call back links to the learndot content to make it clear
+    # which build ,author and commit generated the html version of the content.
     metadata['customField07']  = "https://pipelines.puppet.com/esquared/builds/#{ENV['DISTELLI_BUILDNUM']}"
     metadata['customField08']  = repo.head.target.author[:name].to_s
     metadata['customField09']  = repo.head.target.summary.to_s

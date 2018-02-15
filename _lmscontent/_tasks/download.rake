@@ -8,6 +8,8 @@ require 'yaml'
 # API personal token.
 # TODO: Decided if we should us an absolute path instead of the realtive
 # "repos" path. The realtive path may be better for desktop users
+# However using an absolute might speed things up as we can just fetch the
+# deltas.
 
 namespace :download do
   task :repos do
@@ -34,6 +36,9 @@ namespace :download do
 
       else
         # Clone the repo on the initial run
+        # This is likely always run when pipelines runs this task as from
+        # a fresh build directory. The sha thats checkouted is the sha of the
+        # shallow repo as thats the commit that kicked off this run.
         Rugged::Repository.clone_at(hash['url'], "repos/#{key}", {
           credentials: credentials,
           checkout: sha 
