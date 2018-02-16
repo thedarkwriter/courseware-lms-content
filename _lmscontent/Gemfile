@@ -1,10 +1,3 @@
-#source 'http://rubygems.delivery.puppetlabs.net/' do
-#  gem 'learndot_api'
-#end
-
-#gem 'learndot_api', :git => 'https://github.com/puppetlabs/learndot_api.git', :branch => 'master'
-
-
 source 'https://rubygems.org' do
   gem 'kramdown'
   gem 'rugged'
@@ -12,5 +5,4 @@ source 'https://rubygems.org' do
   gem 'upmark'
   gem 'reverse_markdown'
   gem 'rake'
-  gem 'learndot_api'
 end

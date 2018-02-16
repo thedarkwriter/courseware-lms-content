@@ -5,7 +5,7 @@ require 'yaml'
 
 # This is a helper task meant to automate the creation of
 # a skeleton structure of new learning components. Over time
-# this could be used to cut down on the amount of work by 
+# this could be used to cut down on the amount of work by
 # making use of templates and seeding them with interactive output
 # from the user running this task
 
@@ -15,7 +15,7 @@ namespace :create do
       STDOUT.puts "\033[1m#{string}\033[0m"
     end
 
-    def read_file(file,line_number)
+    def read_file(file, line_number)
       IO.readlines(file)[line_number]
     end
 
@@ -25,7 +25,7 @@ namespace :create do
     end
 
     def normalize_name(name)
-      name.lstrip.downcase.gsub(/(:|"|\.| |&|-)/,'_').squeeze('_')
+      name.lstrip.downcase.gsub(/(:|"|\.| |&|-)/, '_').squeeze('_')
     end
 
     def ask_questions(questions,question_type = :simple)
