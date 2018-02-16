@@ -31,4 +31,11 @@ esquared/courseware-lms-content:
           staging:
             token: $LD_STAG_TOKEN
       EOF
-    - 'rake release:staging'
+    - |
+      if [ $DISTELLI_ENV = "LearnDot_Production" ]
+      then
+        LDENV='production'
+      else
+        LDENV='staging'
+      fi
+    - 'rake release:$LDENV'
