@@ -1,5 +1,5 @@
 ---
-puppetlabs/courseware-lms-content:
+esquared/courseware-lms-content:
   Build:
     - PATH=/opt/puppetlabs/puppet/bin:$PATH
     - cd _lmscontent
