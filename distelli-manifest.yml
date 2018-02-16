@@ -4,7 +4,7 @@ esquared/courseware-lms-content:
     - PATH=/opt/puppetlabs/puppet/bin:$PATH
     - cd _lmscontent
     - |
-      cat > _tasks/config.yaml <<"EOF"
+      cat > _tasks/config.yaml <<EOF
       ---
       credentials:
         github:
