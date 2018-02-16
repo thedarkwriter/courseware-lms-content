@@ -22,6 +22,7 @@ esquared/courseware-lms-content:
       EOF
   PkgInclude:
     - '*'
+    - '.git/'
   PostInstall:
     - PATH=/opt/puppetlabs/puppet/bin:$PATH
     - cd _lmscontent
