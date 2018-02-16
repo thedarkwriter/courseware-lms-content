@@ -20,11 +20,14 @@ esquared/courseware-lms-content:
           url: https://github.com/puppetlabs/courseware-lms-content.git
           branch: master
       EOF
+    # Hidden directories don't ship
+    - cd ..
+    - mv .git/ git_history/
   PkgInclude:
     - '*'
-    - '.git/'
   PostInstall:
     - PATH=/opt/puppetlabs/puppet/bin:$PATH
+    - mv git_history/ .git/
     - cd _lmscontent
     - |
       if [ $DISTELLI_ENV = "LearnDot_Production" ]
