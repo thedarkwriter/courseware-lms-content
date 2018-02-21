@@ -14,17 +14,24 @@ Before Puppet, it was necessary to log into these 3 servers and manually execute
 
 With Puppet,&nbsp;you'll start with&nbsp;a **resource**. As you learned earlier, a</span>&nbsp;resource is Puppet's representation of a characteristic of a server that should be managed or configured, such as a file, a user account, a software package installation and many other possibilities.
 
-<p>The first thing needed for Robby to operate is to install all of the required software packages on the various servers shown previously. The runbook starts with the following package installation instructions:</p>
-<p class="p2">- Install the PostgreSQL database (current released version) on db1 and db2 using the standard RHEL yum repositories</p>
-<p class="p1">- Install the Apache web server (current released version) on web1 using the standard RHEL yum repositories</p>
-<p><strong>Core resource types</strong> are the most essential resource types you will use to interact with Puppet and tell it what to do. They are ready to go when you install Puppet, meaning you don&rsquo;t have to do anything extra to set them up.</p>
-<p>One example of a core resource type you have gotten some practice working with previously in this course is the <code>file</code> type. The full list of all core resource types is posted on our <a href="https://puppet.com/docs/puppet/5.3/type.html" target="_blank">type reference page</a>.&nbsp;</p>
-<p id="toc_1">The <code>package</code> type manages software packages. Some important attributes of this type include <code>name</code>, <code>ensure</code>, <code>source</code>, and <code>provider</code>. For example:</p>
-<div>
-<pre><code class="language-none">package { 'openssh-server':
-  ensure =&gt; installed,
-}</code></pre>
-</div>
-<h2 id="toc_2">Task:</h2>
-<p>Enter the <code>puppet resource</code> command to see which attribute is assigned to the <code>package</code> named <code>puppet</code>.</p>
+The first thing needed for Robby to operate is to install all of the required software packages on the various servers shown previously. The runbook starts with the following package installation instructions:
+
+* Install the PostgreSQL database (current released version) on db1 and db2 using the standard RHEL yum repositories
+* Install the Apache web server (current released version) on web1 using the standard RHEL yum repositories
+
+**Core resource types** are the most essential resource types you will use to interact with Puppet and tell it what to do. They are ready to go when you install Puppet, meaning you don&rsquo;t have to do anything extra to set them up.
+
+One example of a core resource type you have gotten some practice working with previously in this course is the `file` type. The full list of all core resource types is posted on our [type reference page](https://puppet.com/docs/puppet/5.3/type.html)
+
+The `package` type manages software packages. Some important attributes of this type include `name`, `ensure`, `source`, and `provider`. For example:
+
+```
+package { 'openssh-server':
+  ensure => installed,
+}
+```
+
+## Task:
+Enter the `puppet resource` command to see which attribute is assigned to the `package` named `puppet`.
+
 <p><iframe src="https://magicbox.classroom.puppet.com/resources/exploring_package" width="100%" height="500px" frameborder="0"></iframe></p>
