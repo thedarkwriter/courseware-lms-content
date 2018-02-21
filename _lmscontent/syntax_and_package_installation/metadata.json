@@ -15,7 +15,7 @@
   "duration.minutesPerDay": 30,
   "generateCertificate": "DEFAULT",
   "generateProofOfCompletion": "DEFAULT",
-  "name": "Syntax and Package Installation",
+  "name": "Syntax when installing a package",
   "orderNumber": 0,
   "price": "0.00 USD",
   "primaryCategoryId": 10,
