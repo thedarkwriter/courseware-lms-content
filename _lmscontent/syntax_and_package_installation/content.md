@@ -29,7 +29,7 @@ The `package` type manages software packages. Some important attributes of this 
 package { 'openssh-server':
   ensure => installed,
 }
-<pre>
+</pre>
 
 ## Task:
 Enter the `puppet resource` command to see which attribute is assigned to the `package` named `puppet`.
