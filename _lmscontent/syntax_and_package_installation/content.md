@@ -25,11 +25,11 @@ One example of a core resource type you have gotten some practice working with p
 
 The `package` type manages software packages. Some important attributes of this type include `name`, `ensure`, `source`, and `provider`. For example:
 
-```
+<pre>
 package { 'openssh-server':
   ensure => installed,
 }
-```
+<pre>
 
 ## Task:
 Enter the `puppet resource` command to see which attribute is assigned to the `package` named `puppet`.
