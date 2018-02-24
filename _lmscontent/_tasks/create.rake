@@ -1,7 +1,13 @@
+# encoding: utf-8
 require 'rugged'
 require 'fileutils'
 require 'yaml'
 
+# This is a helper task meant to automate the creation of
+# a skeleton structure of new learning components. Over time
+# this could be used to cut down on the amount of work by 
+# making use of templates and seeding them with interactive output
+# from the user running this task
 
 namespace :create do
   task :component do
@@ -125,6 +131,9 @@ namespace :create do
       FileUtils.touch("#{@dir_name}/#{file}")
     end
 
+    # Read in the default keys from the defaults.json.
+    # TODO: Add support for the hash[:default] answer of questions
+    # to be read from this file.
     json     = read_json('_tasks/defaults.json')
 
     json['name']                   = @name
@@ -134,6 +143,10 @@ namespace :create do
 
     File.write("#{@dir_name}/metadata.json", JSON.pretty_generate(json))
 
+    # This causes the files to not be tracked for disabling until this can
+    # troubleshot. In this future this would be a completely automated workflows
+    # perhaps. Requiring no git knowledge and the ability to simple edit and
+    # push content through the version control system using the API token.
     #if ask_questions({
     #    :commit_file => {
     #      :query       => 'Would you like to commit the learning component?',
@@ -143,6 +156,7 @@ namespace :create do
     #  }, :boolean)
     #  git_commit_file(@dir_name)
     #end
+    #
     # Only works on macOS
     system("open '#{@dir_name}'")
   end
