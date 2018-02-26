@@ -1,4 +1,4 @@
-Once the software packages are installed on the proper servers, the runbook instructs us to modify certain files to configure the software. The database servers must be configured in a primary/secondary configuration. [NOTE: For the sake of simplicity, not every required PostgreSQL parameter will be configured].
+Once the software packages are installed on the proper servers, the runbook instructs us to modify certain files to configure the software. The database servers must be configured in a primary/secondary configuration. NOTE: For the sake of simplicity, not every required PostgreSQL parameter will be configured.
 
 The db1 server needs the following line added to its /var/lib/pgsql/data/postgresql.conf file:
 
