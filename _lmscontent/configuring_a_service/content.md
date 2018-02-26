@@ -2,11 +2,11 @@ Once the software packages are installed on the proper servers, the runbook inst
 
 The db1 server needs the following line added to its /var/lib/pgsql/data/postgresql.conf file:
 
-listen_addresses = '192.168.0.10'
+`listen_addresses = '192.168.0.10'`
 
 The db2 server needs the following line added to its  /var/lib/pgsql/data/postgresql.conf file:
 
-primary_conninfo = 'host=192.168.0.10 port=5432 user=replication password=password'
+`primary_conninfo = 'host=192.168.0.10 port=5432 user=replication password=password'`
 
 Puppet can see a variety of attributes about a file or any resource type. Some examples of other attributes might include **mode**, **ensure**, **owner**, or **group**. The <code>puppet resource</code> command shows you all the attributes Puppet knows about a resource, as well as their values. This is useful for identifying and examining the contents of any given file.
 
@@ -37,5 +37,5 @@ The HAProxy load balancer must also be configured by adding the following lines 
     server web1 192.168.0.1:8000 maxconn 32
     server web2 192.168.0.2:8000 maxconn 32
     server web3 192.168.0.3:8000 maxconn 32```
-    
-Notice that as you are developing your Puppet source code, you have multiple resources that will be applied to each of the servers. Since the runbook specified the steps in a certain order, it's important to make sure that Puppet applies changes to your servers in the same order. This can be achieved with resource relationships. 
+
+Notice that as you are developing your Puppet source code, you have multiple resources that will be applied to each of the servers. Since the runbook specified the steps in a certain order, it's important to make sure that Puppet applies changes to your servers in the same order. This can be achieved with resource relationships.
