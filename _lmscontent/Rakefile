@@ -4,6 +4,8 @@ REPO_PATH='./repos/courseware-lms-content'
 
 @config = YAML.load_file(File.expand_path('../_tasks/config.yaml', __FILE__))
 
+puts @config.inspect
+
 # Pull rake taskes in from takes directory
 task_dir = File.expand_path('../_tasks', __FILE__)
 
