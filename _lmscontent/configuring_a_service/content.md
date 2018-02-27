@@ -15,11 +15,11 @@ Enter the <code>puppet resource</code> command to see all the attributes of the 
 
 <iframe src="https://magicbox.whatsaranjit.com/syntax/querying_the_system" width="100%" height="500px" frameborder="0" />
 
-The web1, web2 and web3 servers need the following line added to /etc/robby/robby.cfg:
+The web1 and web2 servers need the following line added to /etc/robby/robby.cfg:
 
 welcome_msg = Welcome to Robby, running on ``<hostname>!``
 
-``<hostname>`` indicates a location where the actual hostname of the server being configured must be inserted into the string. When writing Puppet code, you use facts to retrieve information about the server that you are configuring. The fqdn fact contains the fully-qualified domain name for the server that is being configured. This fact might have the value of web1, web3, db1, etc. depending on the machine that is being configured.
+``<hostname>`` indicates a location where the actual hostname of the server being configured must be inserted into the string. When writing Puppet code, you use facts to retrieve information about the server that you are configuring. The fqdn fact contains the fully-qualified domain name for the server that is being configured. This fact might have the value of web1, web2, db1, etc. depending on the machine that is being configured.
 
 Now you will create the robby.cfg file with the proper content shown above using a file resource.
 
@@ -29,13 +29,5 @@ Now you will create the robby.cfg file with the proper content shown above using
 <p>You&#39;ve just changed the attributes of a file. Now use the <code>puppet resource</code> command again to see how the attributes of the file look. You&#39;ll notice that the mode attribute is now the new value of 0600 instead of 0644.</p>
 
 <p>Look up the mode attribute of the file to see its new value and how it has changed since you last ran this command. Use the <code>puppet resource</code> command to inspect the <code>file</code> at <code>/etc/motd</code>. </p>
-
-The HAProxy load balancer must also be configured by adding the following lines to the /etc/haproxy/haproxy.cfg file: {{THIS GOES}}
-
-```listen http-in
-    bind *:80
-    server web1 192.168.0.1:8000 maxconn 32
-    server web2 192.168.0.2:8000 maxconn 32
-    server web3 192.168.0.3:8000 maxconn 32```
 
 Notice that as you are developing your Puppet source code, you have multiple resources that will be applied to each of the servers. Since the runbook specified the steps in a certain order, it's important to make sure that Puppet applies changes to your servers in the same order. This can be achieved with resource relationships.
