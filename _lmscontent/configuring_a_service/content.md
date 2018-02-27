@@ -2,11 +2,11 @@ Once the software packages are installed on the proper servers, the runbook inst
 software. The database servers must be configured in a primary/secondary configuration. NOTE: For the sake of simplicity, not every 
 required PostgreSQL parameter will be configured.
 
-The db1 server needs the following line added to its /var/lib/pgsql/data/postgresql.conf file:
+The db1 server needs the following line added to its `/var/lib/pgsql/data/postgresql.conf` file:
 
 `listen_addresses = '192.168.0.10'`
 
-The db2 server needs the following line added to its  /var/lib/pgsql/data/postgresql.conf file:
+The db2 server needs the following line added to its `/var/lib/pgsql/data/postgresql.conf` file:
 
 `primary_conninfo = 'host=192.168.0.10 port=5432 user=replication password=password'`
 
