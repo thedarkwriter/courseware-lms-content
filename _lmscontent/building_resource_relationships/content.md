@@ -1,4 +1,6 @@
-Now that you've written resources to install the required packages and modify the configuration files, it is important to make sure that Puppet applies those changes in the correct order on your servers. Otherwise, if Puppet tried a service that wasn't yet installed, it would generate an error like <q>No such service exists.</q> 
+Now that you've written resources to install the required packages and modify the configuration files, it is important to make sure that 
+Puppet applies those changes in the correct order on your servers. Otherwise, if Puppet tried a service that wasn't yet installed, it 
+would generate an error like <q>No such service exists.</q> 
 
 When following a runbook, you enter the commands in the order given. But with Puppet, resources are applied in a certain order by 
 specifying resource relationships between them. It's important to know that you don't have to specify a relationship between every 
@@ -80,4 +82,4 @@ Puppet lets you use <code>notify</code> and <code>subscribe</code> to not only o
 resource means different things depending on the resource type. For example, when you refresh a service resource type, Puppet restarts 
 the service. And when you refresh a mount resource type, Puppet remounts a file mount. You can try to refresh any type in Puppet, but not 
 all of them will respond. Read the [Puppet docs](https://puppet.com/docs/puppet/5.3/lang_relationships.html#refreshing-and-notification 
-"") for more information about refreshing and notification.
+"") for more on refreshing and notification.
