@@ -11,6 +11,7 @@ Related Projects
 =======================
 
 [LearnDot API Wrapper](https://github.com/puppetlabs/learndot_api) - Used for the Distelli automated deployment.
+
 [Magicbox](https://github.com/WhatsARanjit/magicbox) - Embedded in self-paced courses for interactive exercises.
 
 Contact 
