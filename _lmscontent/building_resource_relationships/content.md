@@ -56,7 +56,7 @@ Puppet code block labelled with relationship, type, and title on bottom line of 
 Add <code>before</code> or <code>require</code> to the following code so that the package resource is managed first and the file resource 
 is managed second.
 
-<iframe src="https://magicbox.whatsaranjit.com/pfs/package_file" width="100%" height="500px" frameborder="0" /></iframe>
+<iframe src="https://magicbox.classroom.puppet.com/pfs/package_file" width="100%" height="500px" frameborder="0"></iframe>
 
 Next, the various services must be started on the different servers - PostgreSQL on the database servers, Apache and Robby on the web 
 servers and HAProxy on the load balancer. The service names to be started are:

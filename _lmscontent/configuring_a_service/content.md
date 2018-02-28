@@ -13,9 +13,9 @@ Puppet can see a variety of attributes about a file or any resource type. Some e
 ## Task:
 Enter the `puppet resource` command to see all the attributes of the `file` at `/etc/motd`.
 
-<p><iframe src="https://magicbox.whatsaranjit.com/syntax/querying_the_system" width="100%" height="500px" frameborder="0"></iframe></p>
+<p><iframe src="https://magicbox.classroom.puppet.com/syntax/querying_the_system" width="100%" height="500px" frameborder="0"></iframe></p>
 
-The web1 and web2 servers need the following line added to `/etc/robby/robby.cfg`:
+The web1 and web2 servers need to contain the following line in the file `/etc/robby/robby.cfg`:
 
 `welcome_msg = Welcome to Robby, running on hostname!`
 
@@ -24,7 +24,7 @@ The web1 and web2 servers need the following line added to `/etc/robby/robby.cfg
 Now you will create the robby.cfg file with the proper content shown above using a file resource.
 
 ## Task:
-<p><iframe src="https://magicbox.whatsaranjit.com/syntax/modifying_attributes" width="100%" height="500px" frameborder="0"></iframe>
+<p><iframe src="https://magicbox.classroom.puppet.com/syntax/creating_robby_cfg" width="100%" height="500px" frameborder="0"></iframe>
 </p>
 
 You've just changed the attributes of a file. Now use the `puppet resource` command again to see how the attributes of the file look. You'll notice that the mode attribute is now the new value of 0600 instead of 0644. Look up the mode attribute of the file to see its new value and how it has changed since you last ran this command. Use the `puppet resource` command to inspect the `file` at `/etc/motd`.

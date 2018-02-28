@@ -4,4 +4,4 @@ Puppet can see a variety of attributes about a file or any resource type. Some e
 ## Task:
 Enter the <code>puppet resource</code> command to see all the attributes of the <code>file</code> at <code>/etc/motd</code>.
 
-<iframe src="https://magicbox.whatsaranjit.com/syntax/querying_the_system" width="100%" height="500px" frameborder="0" />
+<iframe src="https://magicbox.classroom.puppet.com/syntax/querying_the_system" width="100%" height="500px" frameborder="0" />

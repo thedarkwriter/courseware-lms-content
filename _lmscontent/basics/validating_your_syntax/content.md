@@ -10,5 +10,5 @@
 <p>When you&rsquo;re ready to move on, continue to the task below to check the syntax of a file containing Puppet code using the <code>puppet parser validate</code> command.</p>
 <h2 id="toc_1">Task:</h2>
 Complete the exercise below. Use any error output to fix any syntax errors and rerun the command if necessary.</p>
-<p><iframe src="https://magicbox.whatsaranjit.com/syntax/validating_your_syntax" width="100%" height="500px" frameborder="0"></iframe></p>
+<p><iframe src="https://magicbox.classroom.puppet.com/syntax/validating_your_syntax" width="100%" height="500px" frameborder="0"></iframe></p>
 <p><strong>Pro tip:</strong> A quick way to validate your code in the real world is to test it with our <a href="https://validate.puppet.com/">Puppet Code Validator</a>, which comes with a handy customizable linter function.</p>

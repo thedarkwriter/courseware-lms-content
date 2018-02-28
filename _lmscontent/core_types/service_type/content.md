@@ -13,6 +13,6 @@ This type manages services running on the node. Some important attributes includ
 
 Enter the <code>puppet resource</code> command to see all the attributes of the <code>service</code> named <code>puppet</code>.
 
-<iframe src="https://magicbox.whatsaranjit.com/resources/exploring_service" width="100%" height="500px" frameborder="0" />
+<iframe src="https://magicbox.classroom.puppet.com/resources/exploring_service" width="100%" height="500px" frameborder="0" />
 
 </body>

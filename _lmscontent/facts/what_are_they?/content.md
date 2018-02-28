@@ -22,7 +22,7 @@
 <p>Type the command <code>facter -p</code> to get a list of all facts available.</p>
 
 <p>
-<iframe src="https://magicbox.whatsaranjit.com/facts/what_are_they" width="100%" height="500px" frameborder="0"></iframe></p>
+<iframe src="https://magicbox.classroom.puppet.com/facts/what_are_they" width="100%" height="500px" frameborder="0"></iframe></p>
 
 
 

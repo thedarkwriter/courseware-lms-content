@@ -4,4 +4,4 @@
 <img src="https://learn.puppet.com/static/images/courses/syntax/329-puppet-code-explained.png" width=100% height=100% alt="The first line, file { '/etc/motd':, tells Puppet that we will be managing the /etc/motd file on our system. The second line, content => 'Hello world', tells Puppet to set the contents of the /etc/motd file to the text 'Hello world' using the content attribute. The third line, }, closes the code and tells Puppet that we're done managing the /etc/motd file.">
 <h2 id="toc_1">Task:</h2>
 <p>Now it&rsquo;s your turn to write Hello world using Puppet code. Type the example code from above into the box below.</p>
-<p><iframe src="https://magicbox.whatsaranjit.com/syntax/hello_world" width="100%" height="500px" frameborder="0"></iframe></p>
+<p><iframe src="https://magicbox.classroom.puppet.com/syntax/hello_world" width="100%" height="500px" frameborder="0"></iframe></p>

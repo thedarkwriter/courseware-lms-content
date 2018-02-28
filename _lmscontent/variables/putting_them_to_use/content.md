@@ -5,4 +5,4 @@ Currently, the file you have been working on in this course is hard-coded to be 
 ## Task:
 Set the <code>$motd_file</code> variable to <code>/etc/motd</code>.
 
-<iframe src="https://magicbox.whatsaranjit.com/variables/putting_them_to_use" width="100%" height="500px" frameborder="0" />
+<iframe src="https://magicbox.classroom.puppet.com/variables/putting_them_to_use" width="100%" height="500px" frameborder="0" />

@@ -42,4 +42,4 @@ If you want to use <code>before</code> and also send a refresh, use <code>notify
 ## Task:
 Add <code>notify</code> or <code>subscribe</code> to the following code so that the service is restarted if the file resource is changed.
 
-<iframe src="https://magicbox.whatsaranjit.com/pfs/file_service" width="100%" height="500px" frameborder="0" />
+<iframe src="https://magicbox.classroom.puppet.com/pfs/file_service" width="100%" height="500px" frameborder="0" />

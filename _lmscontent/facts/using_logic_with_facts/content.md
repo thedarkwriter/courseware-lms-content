@@ -12,4 +12,4 @@ else {
 ## Task:
 Complete the exercise below. Notice that the $hello_file variable is used in the file resource declaration.
 
-<iframe src="https://magicbox.whatsaranjit.com/facts/using_logic_with_facts" width="100%" height="500px" frameborder="0" />
+<iframe src="https://magicbox.classroom.puppet.com/facts/using_logic_with_facts" width="100%" height="500px" frameborder="0" />
