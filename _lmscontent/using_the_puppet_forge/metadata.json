@@ -7,7 +7,6 @@
   "deprecatedBy": "",
   "generateCertificate": "DEFAULT",
   "generateProofOfCompletion": "DEFAULT",
-  "id": 264,
   "modified": "2017-08-03 13:34:12",
   "modifiedById": 35,
   "name": "Using the Puppet Forge",

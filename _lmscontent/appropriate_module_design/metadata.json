@@ -13,7 +13,6 @@
   "expiryDays": 365,
   "generateCertificate": "DEFAULT",
   "generateProofOfCompletion": "DEFAULT",
-  "id": 196,
   "modified": "2017-03-23 10:13:24",
   "modifiedById": 38,
   "name": "Appropriate Module Design",

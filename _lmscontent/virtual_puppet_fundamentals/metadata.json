@@ -23,7 +23,6 @@
   "expiryDays": 365,
   "generateCertificate": "DEFAULT",
   "generateProofOfCompletion": "DEFAULT",
-  "id": 206,
   "language": "en",
   "modified": "2017-10-23 11:26:28",
   "modifiedById": 38,

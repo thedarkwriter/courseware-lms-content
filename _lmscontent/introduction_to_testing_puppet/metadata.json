@@ -8,7 +8,6 @@
   "deprecatedBy": "",
   "generateCertificate": "DEFAULT",
   "generateProofOfCompletion": "DEFAULT",
-  "id": 239,
   "modified": "2017-04-07 12:23:59",
   "modifiedById": 35,
   "name": "Introduction to Testing Puppet",

@@ -12,7 +12,6 @@
   "expiryDays": 365,
   "generateCertificate": "DEFAULT",
   "generateProofOfCompletion": "DEFAULT",
-  "id": 201,
   "modified": "2017-02-02 10:09:35",
   "modifiedById": 38,
   "name": "Puppet 4 Parser",

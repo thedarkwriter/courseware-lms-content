@@ -7,7 +7,6 @@
   "deprecatedBy": "",
   "generateCertificate": "DEFAULT",
   "generateProofOfCompletion": "DEFAULT",
-  "id": 123,
   "modified": "2015-02-04 13:12:21",
   "modifiedById": 3,
   "name": "02. Puppet NTP - Exercises",

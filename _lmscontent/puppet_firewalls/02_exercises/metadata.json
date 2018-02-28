@@ -7,7 +7,6 @@
   "deprecatedBy": "",
   "generateCertificate": "DEFAULT",
   "generateProofOfCompletion": "DEFAULT",
-  "id": 136,
   "modified": "2015-02-04 14:21:39",
   "modifiedById": 3,
   "name": "02. Puppet Firewalls - Exercises",
