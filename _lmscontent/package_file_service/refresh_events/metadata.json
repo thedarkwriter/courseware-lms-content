@@ -17,7 +17,6 @@
   "deprecatedBy": "",
   "generateCertificate": "DEFAULT",
   "generateProofOfCompletion": "DEFAULT",
-  "id": 381,
   "modified": "2018-01-12 16:23:36",
   "modifiedById": 49633,
   "name": "Package File Service - Refresh Events",

@@ -13,7 +13,6 @@
   "expiryDays": 365,
   "generateCertificate": "DEFAULT",
   "generateProofOfCompletion": "DEFAULT",
-  "id": 195,
   "modified": "2017-03-30 14:23:50",
   "modifiedById": 38,
   "name": "Practical Hiera Usage",

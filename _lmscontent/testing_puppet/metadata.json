@@ -7,7 +7,6 @@
   "deprecatedBy": "",
   "generateCertificate": "DEFAULT",
   "generateProofOfCompletion": "DEFAULT",
-  "id": 204,
   "modified": "2016-05-13 14:30:56",
   "modifiedById": 38,
   "name": "Testing Puppet",

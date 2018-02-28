@@ -9,7 +9,6 @@
   "deprecatedBy": "",
   "generateCertificate": "DEFAULT",
   "generateProofOfCompletion": "DEFAULT",
-  "id": 250,
   "launchWithScooter": false,
   "learndotCourse": 6777,
   "learndotDomain": "puppetlabs.learndot.com",

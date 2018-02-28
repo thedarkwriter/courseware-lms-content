@@ -105,6 +105,9 @@ namespace :migrate do
       end
       json.delete('duration')
 
+      # The ids in staging don't seem to be permanent
+      json.delete('id')
+
       File.write(path,JSON.pretty_generate(json.delete_if { |k,v| ['components'].include? k }))
 
       if json.has_key?('components')

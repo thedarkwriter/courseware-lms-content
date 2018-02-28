@@ -8,7 +8,6 @@
   "deprecatedBy": "https://learn.puppet.com/course/getting-started-with-hiera",
   "generateCertificate": "DEFAULT",
   "generateProofOfCompletion": "DEFAULT",
-  "id": 187,
   "launchWithScooter": false,
   "learndotCourse": 2626,
   "learndotDomain": "puppetlabs.learndot.com",

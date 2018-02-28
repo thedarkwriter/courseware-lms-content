@@ -13,7 +13,6 @@
   "expiryDays": 365,
   "generateCertificate": "DEFAULT",
   "generateProofOfCompletion": "DEFAULT",
-  "id": 160,
   "modified": "2017-02-21 10:30:54",
   "modifiedById": 38,
   "name": "Writing Your First Module",

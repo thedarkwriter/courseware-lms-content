@@ -7,7 +7,6 @@
   "deprecatedBy": "",
   "generateCertificate": "DEFAULT",
   "generateProofOfCompletion": "DEFAULT",
-  "id": 57,
   "modified": "2015-02-03 13:19:09",
   "modifiedById": 3,
   "name": "03. Puppet Lint - Try it Out",
