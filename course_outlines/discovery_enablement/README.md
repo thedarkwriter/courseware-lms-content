@@ -36,16 +36,16 @@ We likely don't need the consultant to understand everything about Docker. In mu
 
 # Reference links 
 
-[Puppet Discovery 1.0 Messaging](https://confluence.puppetlabs.com/display/ProductMarketing/Puppet+Discovery+1.0+Messaging)
-[Discovery GA Marketing plan](https://docs.google.com/document/d/1enOWm2pviOVIX-ub5wLCw6wIRp0ANzmGtV9uGhuczGU/edit?ts=5a8c4314)
-[Discovery Component Characterization](https://docs.google.com/document/d/14mA22JLp1rjS2FoI2pr8shfRkS1Tx2nVdngh3aKXDNs/edit)
-[Discovery Messaging Brief](https://docs.google.com/document/d/1eWKtdKVahyQ46QeZii2QYaFdkJfoIdCdIwBd4uPttmk/edit)
-[Discovery GA Requirements](https://confluence.puppetlabs.com/display/DI/Puppet+Discovery+GA+Requirements)
-[Discovery Version proposal](https://docs.google.com/document/d/1XMoElNL3eoSvH1vLuZAIguY8vvJqzhtCO-DhN70ZfAY/edit)
-[Puppetconf Talk](https://www.youtube.com/watch?v=6_T53JmzVBU)
-[Discovery Nightly Builds](https://confluence.puppetlabs.com/display/DI/Puppet+Discovery+Home)
-[Discovery Sample Licence](https://github.com/puppetlabs/cloud-discovery/blob/master/workstation/internal/pkg/license/sample-license.json)
-[Discovery Slice Environment](https://pdlatest.slice.puppetlabs.net:8443/)
+[Puppet Discovery 1.0 Messaging](https://confluence.puppetlabs.com/display/ProductMarketing/Puppet+Discovery+1.0+Messaging)  
+[Discovery GA Marketing plan](https://docs.google.com/document/d/1enOWm2pviOVIX-ub5wLCw6wIRp0ANzmGtV9uGhuczGU/edit?ts=5a8c4314)  
+[Discovery Component Characterization](https://docs.google.com/document/d/14mA22JLp1rjS2FoI2pr8shfRkS1Tx2nVdngh3aKXDNs/edit)  
+[Discovery Messaging Brief](https://docs.google.com/document/d/1eWKtdKVahyQ46QeZii2QYaFdkJfoIdCdIwBd4uPttmk/edit)  
+[Discovery GA Requirements](https://confluence.puppetlabs.com/display/DI/Puppet+Discovery+GA+Requirements)  
+[Discovery Version proposal](https://docs.google.com/document/d/1XMoElNL3eoSvH1vLuZAIguY8vvJqzhtCO-DhN70ZfAY/edit)  
+[Puppetconf Talk](https://www.youtube.com/watch?v=6_T53JmzVBU)  
+[Discovery Nightly Builds](https://confluence.puppetlabs.com/display/DI/Puppet+Discovery+Home)  
+[Discovery Sample Licence](https://github.com/puppetlabs/cloud-discovery/blob/master/workstation/internal/pkg/license/sample-license.json)  
+[Discovery Slice Environment](https://pdlatest.slice.puppetlabs.net:8443/)  
 
 > Password: `admin`
 > This instance will be updated to master on a daily basis so there is potential for breakage.
