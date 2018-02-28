@@ -19,7 +19,7 @@ The web1 and web2 servers need the following line added to `/etc/robby/robby.cfg
 
 `welcome_msg = Welcome to Robby, running on hostname!`
 
-*hostname* indicates a location where the actual hostname of the server being configured must be inserted into the string. When writing Puppet code, you use facts to retrieve information about the server that you are configuring. The fqdn fact contains the fully-qualified domain name for the server that is being configured. This fact might have the value of web1, web2, db1, etc. depending on the machine that is being configured.
+*hostname* indicates a location where the actual hostname of the server being configured must be inserted into the string. When writing Puppet code, you use facts to retrieve information about the server that you are configuring. The `fqdn` fact contains the fully-qualified domain name for the server that is being configured. This fact might have the value of web1, web2, db1, etc. depending on the machine that is being configured.
 
 Now you will create the robby.cfg file with the proper content shown above using a file resource.
 
