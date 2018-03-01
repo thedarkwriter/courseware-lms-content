@@ -1,30 +1,54 @@
-Once the software packages are installed on the proper servers, the runbook instructs us to modify certain files to configure the software. The database servers must be configured in a primary/secondary configuration. NOTE: For the sake of simplicity, not every required PostgreSQL parameter will be configured.
+Once the software packages are installed on the proper servers, the runbook instructs us to modify certain files to configure the software. 
 
-The db1 server needs the following line added to its `/var/lib/pgsql/data/postgresql.conf` file:
-
-`listen_addresses = '192.168.0.10'`
-
-The db2 server needs the following line added to its `/var/lib/pgsql/data/postgresql.conf` file:
-
-`primary_conninfo = 'host=192.168.0.10 port=5432 user=replication password=password'`
-
-Puppet can see a variety of attributes about a file or any resource type. Some examples of other attributes might include **mode**, **ensure**, **owner**, or **group**. The `puppet resource` command shows you all the attributes Puppet knows about a resource, as well as their values. This is useful for identifying and examining the contents of any given file.
+But first, let's learn a little more about how Puppet manages files. Puppet can see a variety of attributes about a file or any resource type. Some examples of other file attributes might include **mode**, **ensure**, **owner**, or **group**. The `puppet resource` command shows you all the attributes Puppet knows about a resource, as well as their values.
 
 ## Task:
 Enter the `puppet resource` command to see all the attributes of the `file` at `/etc/motd`.
 
 <p><iframe src="https://magicbox.classroom.puppet.com/syntax/querying_the_system" width="100%" height="500px" frameborder="0"></iframe></p>
 
-The web1 and web2 servers need to contain the following line in the file `/etc/robby/robby.cfg`:
+Now let's move on to configuring the software packages that have been installed on our servers. To start, the database servers must be configured in a primary/secondary configuration. 
 
-`welcome_msg = Welcome to Robby, running on hostname!`
+**NOTE:** For the sake of simplicity, not every required PostgreSQL parameter will be configured.
 
-*hostname* indicates a location where the actual hostname of the server being configured must be inserted into the string. When writing Puppet code, you use facts to retrieve information about the server that you are configuring. The `fqdn` fact contains the fully-qualified domain name for the server that is being configured. This fact might have the value of web1, web2, db1, etc. depending on the machine that is being configured.
+Add the following line to `/var/lib/pgsql/data/postgresql.conf` on db1:
 
-Now you will create the robby.cfg file with the proper content shown above using a file resource.
+`listen_addresses = '192.168.0.10'`
+
+The file should be owned by `root`, group set to `root` and with `0644` permissions.
 
 ## Task:
-<p><iframe src="https://magicbox.classroom.puppet.com/syntax/creating_robby_cfg" width="100%" height="500px" frameborder="0"></iframe>
+<p><iframe src="https://magicbox.classroom.puppet.com/syntax/creating_db1_postgresql_conf" width="100%" height="500px" frameborder="0"></iframe>
+</p>
+
+Add the following line to `/var/lib/pgsql/data/postgresql.conf` on db2:
+
+`primary_conninfo = 'host=192.168.0.10 port=5432 user=repl password=xyzzy'`
+
+The file should be owned by `root`, group set to `root` and with `0644` permissions.
+
+## Task:
+<p><iframe src="https://magicbox.classroom.puppet.com/syntax/creating_db2_postgresql_conf" width="100%" height="500px" frameborder="0"></iframe>
+</p>
+
+The web1 and web2 servers need to contain the following line in the file `/etc/robby/robby.cfg`:
+
+`welcome_msg = Welcome to Robby, running on HOSTNAME!`
+
+*HOSTNAME* indicates where the actual hostname of the server being configured must be inserted into the string. When writing Puppet code, you use Puppet "facts" to retrieve information about the server that you are configuring. 
+
+The `fqdn` fact contains the fully-qualified domain name for the server that is being configured. This fact might have the value of `web1`, `web2`, `db1`, etc. depending on the machine that is being configured.
+
+Next, you will create the `robby.cfg` file with the proper content shown above using a file resource. But in order to do that, first you need to learn more about facts.
+
+**MOVE FOLLOWING CONTENT TO AFTER FACTS LESSON OR INTEGRATE INTO IT**
+
+Now that you've learned more about Puppet facts, write some Puppet code to create the `robby.cfg` file containing the proper content where *HOSTNAME* should be replaced with the actual name of the server using a fact:
+
+`welcome_msg = Welcome to Robby, running on HOSTNAME!`
+
+## Task:
+<p><iframe src="https://magicbox.classroom.puppet.com/syntax/modifying_the_system" width="100%" height="500px" frameborder="0"></iframe>
 </p>
 
 You've just changed the attributes of a file. Now use the `puppet resource` command again to see how the attributes of the file look. You'll notice that the mode attribute is now the new value of 0600 instead of 0644. Look up the mode attribute of the file to see its new value and how it has changed since you last ran this command. Use the `puppet resource` command to inspect the `file` at `/etc/motd`.
