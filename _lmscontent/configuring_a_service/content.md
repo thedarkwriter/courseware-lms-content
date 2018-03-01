@@ -40,17 +40,3 @@ The web1 and web2 servers need to contain the following line in the file `/etc/r
 The `fqdn` fact contains the fully-qualified domain name for the server that is being configured. This fact might have the value of `web1`, `web2`, `db1`, etc. depending on the machine that is being configured.
 
 Next, you will create the `robby.cfg` file with the proper content shown above using a file resource. But in order to do that, first you need to learn more about facts.
-
-**MOVE FOLLOWING CONTENT TO AFTER FACTS LESSON OR INTEGRATE INTO IT**
-
-Now that you've learned more about Puppet facts, write some Puppet code to create the `robby.cfg` file containing the proper content where *HOSTNAME* should be replaced with the actual name of the server using a fact:
-
-`welcome_msg = Welcome to Robby, running on HOSTNAME!`
-
-## Task:
-<p><iframe src="https://magicbox.classroom.puppet.com/syntax/modifying_the_system" width="100%" height="500px" frameborder="0"></iframe>
-</p>
-
-You've just changed the attributes of a file. Now use the `puppet resource` command again to see how the attributes of the file look. You'll notice that the mode attribute is now the new value of 0600 instead of 0644. Look up the mode attribute of the file to see its new value and how it has changed since you last ran this command. Use the `puppet resource` command to inspect the `file` at `/etc/motd`.
-
-Notice that as you are developing your Puppet source code, you have multiple resources that will be applied to each of the servers. Since the runbook specified the steps in a certain order, it's important to make sure that Puppet applies changes to your servers in the same order. This can be achieved with resource relationships.
