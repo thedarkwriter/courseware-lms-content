@@ -12,7 +12,7 @@ With that request, it's time to start figuring out how to achieve it using Puppe
 
 Before Puppet, it was necessary to log into these 3 servers and manually execute commands according to the runbook. Now with Puppet, you have to write some code to apply changes automatically on each server, based on the final configuration required by each one to make a fully-functioning deployment of the Robby application.
 
-With Puppet,&nbsp;you'll start with&nbsp;a **resource**. As you learned earlier, a</span>&nbsp;resource is Puppet's representation of a characteristic of a server that should be managed or configured, such as a file, a user account, a software package installation and many other possibilities.
+With Puppet, you'll start with a **resource**. As you learned earlier, a resource is Puppet's representation of a characteristic of a server that should be managed or configured, such as a file, a user account, a software package installation and many other possibilities.
 
 **Core resource types** are the most essential resource types you will use to interact with Puppet and tell it what to do. They are ready to go when you install Puppet, meaning you don&rsquo;t have to do anything extra to set them up.
 
