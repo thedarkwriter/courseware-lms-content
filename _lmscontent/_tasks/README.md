@@ -63,6 +63,8 @@ From within this directory `_lmscontent` run the following rake tasks
 
 
 ```shell
+git pull origin master
+rake download:repos 
 rake release:staging
 ```
 
@@ -91,6 +93,8 @@ All markdown will be converted to html via the [kramdown](https://github.com/get
 ## Deploying to production
 
 ```shell
+git pull origin master
+rake download:repos
 rake release:production
 ```
 
@@ -104,6 +108,18 @@ All markdown will be converted to html via the [kramdown](https://github.com/get
 
 # Known limitations
 
+## Modification of JSON
+
 Currently modifications to JSON will not trigger an update. Only changes to
 markdown files are being searched for. Simply updating a markdown file in a component directory will however
 cause any changes in the json to be uploaded as part of that request.
+
+## Redundant git pull
+
+The current release tasks require you to pull the repo and run the
+`download:repos` task. This is due to a limitation in the rugged gem being able
+to read "shallow" repos. Puppet pipelines clones a shallow repo at the current
+HEAD. The `git pull origin master` simulates this behavior. The
+`download:repos` task then clones/pulls the full repo down. In the case of the
+laptop user, this is essentially the same repo, but the pull is required to
+reset the sha hash to the current HEAD of the child ./repos clone.
