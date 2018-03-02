@@ -12,4 +12,3 @@ service { 'sshd':
 ## Task:
 
 Enter the `puppet resource` command to see all the attributes of the `service` named `puppet`.
-
