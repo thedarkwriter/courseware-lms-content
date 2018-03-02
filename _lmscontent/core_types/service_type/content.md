@@ -12,3 +12,5 @@ service { 'sshd':
 ## Task:
 
 Enter the `puppet resource` command to see all the attributes of the `service` named `puppet`.
+
+<iframe src="https://magicbox.classroom.puppet.com/resources/exploring_service" width="100%" height="500px" frameborder="0"></iframe>
