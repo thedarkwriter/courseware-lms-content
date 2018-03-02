@@ -49,7 +49,7 @@ This example uses the `before` attribute to tell Puppet that the package resourc
 <blockquote>
 **Pro Tip:**
 
-When referring to another resource using `before` or `require`, the resource type is capitalized. Be sure you also note the syntax used for defining relationships:
+When referring to another resource using <code>before</code> or <code>require</code>, the resource type is capitalized. Be sure you also note the syntax used for defining relationships:
 
 </blockquote>
 
@@ -60,4 +60,4 @@ When referring to another resource using `before` or `require`, the resource typ
 ## Task:
 Add `before` or `require` to the following code so that the package resource is managed first and the file resource is managed second.
 
-<iframe src="https://magicbox.classroom.puppet.com/pfs/package_file" width="100%" height="500px" frameborder="0" />
+<iframe src="https://magicbox.classroom.puppet.com/pfs/package_file" width="100%" height="500px" frameborder="0"></iframe>
