@@ -35,7 +35,7 @@ The web1 and web2 servers need to contain the following line in the file `/etc/r
 
 `welcome_msg = Welcome to Robby, running on HOSTNAME!`
 
-*HOSTNAME* indicates where the actual hostname of the server being configured must be inserted into the string. When writing Puppet code, you use Puppet "facts" to retrieve information about the server that you are configuring. 
+*HOSTNAME* indicates where the actual hostname of the server being configured must be inserted into the string. When writing Puppet code, you use Puppet **facts** to retrieve information about the server that you are configuring. 
 
 The `fqdn` fact contains the fully-qualified domain name for the server that is being configured. This fact might have the value of `web1`, `web2`, `db1`, etc. depending on the machine that is being configured.
 
