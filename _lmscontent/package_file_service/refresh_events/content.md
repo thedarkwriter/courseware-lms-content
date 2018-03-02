@@ -4,7 +4,7 @@ Puppet lets you use `notify` and `subscribe` to not only order resources, but se
 
 For example, when you refresh a service resource type, Puppet restarts the service. And when you refresh a mount resource type, Puppet remounts a file mount.
 
-You can try to refresh any type in Puppet, but not all of them will respond. Read the [Puppet docs](https://puppet.com/docs/puppet/latest/lang_relationships.html#refreshing-and-notification "") for more information about refreshing and notification.
+You can try to refresh any type in Puppet, but not all of them will respond. Read the [Puppet docs](https://puppet.com/docs/puppet/latest/lang_relationships.html#refreshing-and-notification) for more information about refreshing and notification.
 
 Example:
 
@@ -51,4 +51,4 @@ If you want to use `before` and also send a refresh, use `notify`. If you want t
 ## Task:
 Add `notify` or `subscribe` to the following code so that the service is restarted if the file resource is changed.
 
-<iframe src="https://magicbox.classroom.puppet.com/pfs/file_service" width="100%" height="500px" frameborder="0" />
+<iframe src="https://magicbox.classroom.puppet.com/pfs/file_service" width="100%" height="500px" frameborder="0"></iframe>
