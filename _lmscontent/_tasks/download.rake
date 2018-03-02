@@ -27,7 +27,7 @@ namespace :download do
     @config['repos'].each do |key,hash|
       puts "Updating repo #{key} #{hash['url']}"
 
-      sha = File.read('../.git/refs/heads/master')
+      sha = File.read('../.git/refs/heads/master').chomp
       if Dir.exist?("repos/#{key}")
         # If repo already exists fetch and reset (pull)
         repo = Rugged::Repository.discover("repos/#{key}")
