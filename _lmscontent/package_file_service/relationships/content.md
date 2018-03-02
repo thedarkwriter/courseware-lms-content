@@ -61,3 +61,8 @@ When referring to another resource using <code>before</code> or <code>require</c
 Add `before` or `require` to the following code so that the package resource is managed first and the file resource is managed second.
 
 <iframe src="https://magicbox.classroom.puppet.com/pfs/package_file" width="100%" height="500px" frameborder="0"></iframe>
+
+## Task:
+Add `before` or `require` to the following code so that the `postgresql-server` package resource is managed first and the `postgresql.conf` file resource is managed second.
+
+<iframe src="https://magicbox.classroom.puppet.com/scenario/package_file_postgresql" width="100%" height="500px" frameborder="0"></iframe>
