@@ -2,15 +2,3 @@ This type manages services running on the node. Some important attributes includ
 
 In the following example, the `sshd` service (SSH server) will be started and enabled to automatically restart after a reboot.
 
-<pre>
-service { 'sshd':
-  ensure => running,
-  enable => true,
-}
-</pre>
-
-## Task:
-
-Enter the `puppet resource` command to see all the attributes of the `service` named `puppet`.
-
-<iframe src="https://magicbox.classroom.puppet.com/resources/exploring_service" width="100%" height="500px" frameborder="0" />
