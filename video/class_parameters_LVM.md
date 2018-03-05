@@ -17,9 +17,7 @@ A well-written module in Puppet should let you customize all its
 important variables without editing the module itself. This is done with
 *class parameters*. Writing parameters into a class allows you to declare
 that class with a set of parameter-value pairs similar to the resource
-declaration syntax. This gives you a way to customize all the important
-variables in your class without making any changes to the module that defines
-it. 
+declaration syntax.
 
 To get started, I'll enter the following command:
 
@@ -42,11 +40,13 @@ class class_name (
 }
 ```
 
+The parameters set in this list
+are available as variables within the body of the class.
+
 Notice that this list of parameters must be comma-separated, while variables
 set within the body of the class itself are not. This is because the Puppet
 parser treats these parameters as a list, while variable assignments in the
-body of the class are individual statements. These parameters are available as
-variables within the body of the class.
+body of the class are individual statements.
 
 <div class = "lvm-task-number"><p>Task 1:</p></div>
 
@@ -116,13 +116,13 @@ a class without explicitly setting any parameters, allowing any parameters in
 the class to use their default values. Any parameters without defaults take the
 special `undef` value.
 
-To declare a class with specific parameters, use the *resource-like class
+To declare a class with specific parameters, I'll use a *resource-like class
 declaration*. As the name suggests, the syntax for a resource-like class
 declaration is very similar to a resource declaration. It consists of the
 keyword `class` followed by a set of curly braces (`{...}`) containing the
-class name with a colon (`:`) and a list of parameters and values. Any values
-left out in this declaration are set to the defaults defined within the class,
-or `undef` if no default is set.
+class name, then a colon (`:`) and a list of parameters and values. Any parameters
+that aren't explicitly set in this declaration are set to the defaults defined
+within the class.
 
 ```puppet
 class { 'class_name':
@@ -132,28 +132,24 @@ class { 'class_name':
 ```
 
 Unlike the `include` function, which can be used for the same class in multiple
-places, resource-like class declarations can only be used once per class.
-Because a class declared with the `include` uses defaults, it will always be
-parsed into the same set of resources in my catalog. This means that Puppet
-can safely handle multiple `include` calls for the same class. Because 
-multiple resource-like class declarations are not guaranteed to lead to the same
-set of resources, Puppet has no unambiguous way to handle multiple
-resource-like declarations of the same class. Attempting to make multiple
-resource-like declarations of the same class will cause the Puppet parser to
-throw an error.
+places, resource-like class declarations can only be used once per class in 
+a given catalog.
 
-Though I won't go into detail here, know that external data-sources
-like `facter` and `hiera` can provide lots of flexibility in your classes
-even with the include syntax. For now, be aware that though the
-`include` function uses defaults, there are ways to make those defaults very
-intelligent.
+Because a class declared with the `include` uses defaults, it will always be
+parsed into the same set of resources in a node's catalog. This means that Puppet
+can safely handle multiple `include` calls for the same class. Because 
+multiple resource-like class declarations are not guaranteed to have the same
+parameters and therefor to define the same set of resources, Puppet has no
+unambiguous way to handle multiple resource-like declarations of the same class.
+Attempting to make multiple resource-like declarations of the same class will
+cause the Puppet parser to throw an error.
 
 <div class = "lvm-task-number"><p>Task 2:</p></div>
 
 Now I'll go ahead and use a resource-like class declaration to customize the
 `pasture` class from the `site.pp` manifest. Most of the defaults will still
-work well, but for the sake of this example, let's set this instance of our
-Pasture application to use the classic cow character instead of the sheep we
+work well, but for the sake of this example, I'll set this instance of the
+Pasture application to use the classic cow character instead of the sheep I
 had set as the parameter default.
 
 I'll open my `site.pp` manifest.
@@ -176,7 +172,7 @@ node 'pasture.puppet.vm' {
 Notice that with my class parameters set up, all the necessary configuration
 for all the components of the Pasture application can be handled with a single
 resource-like class declaration. The diverse commands and file formats that
-would ordinarily be involved in managing this application are reduced to this
+would ordinarily be involved in managing this application are now reduced to this
 single set of parameters and values.
 
 <div class = "lvm-task-number"><p>Task 3:</p></div>
