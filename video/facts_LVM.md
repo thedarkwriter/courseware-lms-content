@@ -2,35 +2,35 @@
 
 # Facts
 
-In this lesson, I will explore `facter`, a tool that 
-allows Puppet to automatically access information about the system where an agent is running
-as variables within a Puppet manifest. I'll demonstrate how to use the `facter` tool to access that system 
-information, and I'll show how to use the `facts` hash to incorporate system information into Puppet code. 
+In this lesson, I'll explore `facter`, a tool the Puppet agent uses to discover information
+about the system where it's running. I'll demonstrate how to use the `facter` tool to access this
+system information yourself, then show you how to incorporate facts into your Puppet code.
 
-The class parameters I showed in the previous quest reduced
-many of the tasks involved in configuring an application to a single, well-defined interface. 
-I can make life even easier by writing a module that will automatically use
-available system data to set some of its variables.
+To help demonstrate facts directly, I'll take a detour in this lesson from the Pasture module
+example used in the previous lessons and instead create a new Message of the Day or (MOTD) module,
+using facts from the system to create a custom message to be displayed whenever a user connects
+to my agent node.
 
-## Getting started
+Before getting started, I'll use the quest command to set up the environment for this lesson:
 
-As I'll show in this lesson, facts can be quite useful on their own. In
-the next lesson, I will show how they can be used along with *conditional
-statements* to write Puppet code that will behave differently in
-different contexts.
+    quest begin facter
 
 ## Facter
 
-We already encountered the `facter` tool when we ran `facter
-ipaddress` in the first video. We briefly discussed
-the tool's role in a Puppet run: the Puppet agent runs `facter` to get a list
-of facts about the system to send to the Puppet master as it requests a
-catalog. The Puppet master then uses these facts to help compile that catalog
-before sending it back to the Puppet agent to be applied.
+In the agent run video, I briefly discussed facter's role in a Puppet run: the
+Puppet agent runs `facter` to get a list
+of facts about the system, which it then sends to the Puppet master as part of
+its catalog request. The Puppet master then uses these facts to help compile a catalog
+defining the desired state for the Puppet agent's node. Having access to this kind
+of information as it's compiling the catalog means that Puppet can be very adaptable
+across different nodes in your infrastructure. Depending on what operating system a node is running,
+what timezone it's in, how much memory it has availalbe, and a whole range of other
+facts, Puppet can compile a catalog as precisely tailored as you like.
 
-Before we get into integrating facts into Puppet code, let's use the
-`facter` tool from the command line to see what kinds of facts are available
-and how they're structured.
+Outside the context of catalog compilation, you can also use facter as a stand-alone
+command-line tool to investigate a system yourself. Before I get into integrating
+facts into Puppet code, exploring facter directly through the command-line is
+a great way to get an idea of what kinds of facts are available and how they're structured.
 
 <div class = "lvm-task-number"><p>Task 1:</p></div>
 
@@ -41,60 +41,79 @@ First, I'll connect to the agent node prepared for this lesson:
 I can access a standard set of facts using the `facter` command. Adding the
 `-p` flag will include any custom facts that I may have installed on the
 Puppet master and synchronized with the agent during the pluginsync step of a
-Puppet run. I'll pass this `facter -p` command to `less` and scroll
+Puppet run. I'll pass this `facter -p` command to `less` so I can scroll
 through the output in my terminal.
 	
     facter -p | less
 
-When I'm done, I press `q` to quit `less`.
+This quickly gives me an idea of the variety of facts available on this node.
+When I'm done, I'll use `q` to quit `less`.
 
-The output of this command is shown as a hash. Some facts, such as
-`os`, include data in a nested JSON format.
+I can get the value of a specific fact, by passing in the name of that fact
+as a command-line argument.
 
     facter -p os
+    
+Some facts, such as this `os` fact, include structured data, which is shown
+here in a nested JSON format.
 
 I can drill down into this structure by using dots (`.`) to specify the key
-at each child level of the hash, for example:
+at each child level of tree, for example:
 
     facter -p os.family
 
 Now that I know how to check what data are available via `facter` and how the
 data are structured, I'll return to the Puppet master so I can show how this
-can be integrated into my Puppet code.
+can be integrated into my Puppet code. Remember, you can always refer to the
+facter docs page or use the facter -p command yourself to further explore what facts
+are available.
 
     exit
 
-All facts are automatically made available within manifests. I can
-access the value of any fact via the `$facts` hash, following the
-`$facts['fact_name']` syntax. To access structured facts, I can chain more
-names using the same bracket indexing syntax. For example, the `os.family` fact
-I accessed above is available within a manifest as `$facts['os']['family']`.
+All the facts available through facter automatically made available within Puppet manifests. I can
+access the value of any fact via the `$facts` variable, which is set for me
+automatically in every manifest. The value of this variable is a data structure
+called a hash, that lets me look up any fact by passing its name in square brackets
+after the facts variable:
 
-I'm going to take a break from the Pasture module I've been working on. Instead,
-I'll create a new module to manage an MOTD (Message of the Day) file. This
-file is commonly used on \*nix systems to display information about a host when
-a user connects. Using facts will allow me to create a dynamic MOTD that can
-display some basic information about the system.
+    $facts['fact_name']
 
-Creating a new module will also help review some of the concepts I've shown you so far.
+To access structured facts within a manifest, I can chain more names together with
+the same bracket indexing syntax. For example, the `os.family` fact I accessed
+above is available within a manifest as `$facts['os']['family']`:
+
+    $facts['os']['family']
+
+Especially if you're looking at older Puppet code, you'll likely run across facts
+called directly by name, rather than through the $facts variable. In fact, all top-level
+facts are available directly 
+
+As I mentioned above, I'm going to take a break from the Pasture module I've been working on
+to create a new MOTD module. This MOTD file is commonly used on Linux systems to display
+information about a host when a user logs in. Using facts will allow Puppet to manage
+MOTD with custom information about the system.
+
+Creating a new module will from scratch will also give me a chance to review some of the
+concepts I've discussed in the previous lessons.
 
 <div class = "lvm-task-number"><p>Task 2:</p></div>
 
-From my `modules` directory, create the directory structure for a module
-called `motd`. I'll need two subdirectories called `manifests` and
+From my `modules` directory, I'll create the directory structure for a module
+called `motd`. Here, I'll need two subdirectories called `manifests` and
 `templates`.
 
     mkdir -p motd/{manifests,templates}
 
 <div class = "lvm-task-number"><p>Task 3:</p></div>
 
-Begin by creating an `init.pp` manifest to contain the main `motd` class.
+I'll begin by creating an `init.pp` manifest to contain the main `motd` class.
 
     vim motd/manifests/init.pp
 
 This class will consist of a single `file` resource to manage the `/etc/motd`
-file. I'll use a template to set the value for this resource's `content`
-parameter.
+file. I'll use an EPP template to set the value for this resource's `content`
+parameter. To pass in values for this template, I'll set the value of an $motd_hash
+variable using facts for all the values I want to show in the MOTD file.
 
 ```puppet
 class motd {
@@ -112,12 +131,6 @@ class motd {
 
 }
 ```
-
-The `$facts` hash and top-level (unstructured) facts are automatically loaded
-as variables into any template. To improve readibility and reliability, I
-strongly suggest using the method shown here. Be aware, however, that
-you will likely encounter templates that refer directly to facts using the
-general variable syntax rather than the `$facts` hash syntax I suggest here.
 
 <div class = "lvm-task-number"><p>Task 4:</p></div>
 
@@ -154,7 +167,7 @@ This is a <%= $os_family %> system running <%= $os_name %> <%= $os_release %>
 
 <div class = "lvm-task-number"><p>Task 5:</p></div>
 
-With this template set, my simple MOTD module is complete. I open my
+With this template set, my simple MOTD module is complete. I'll open my
 `site.pp` manifest to assign it to the `pasture.puppet.vm` node. 
 
     vim /etc/puppetlabs/code/environments/production/manifests/site.pp
