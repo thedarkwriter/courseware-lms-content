@@ -2,26 +2,19 @@
 
 # Conditional Statements
 
-## Quest objectives
- - Learn about the role of conditional statements in writing flexible Puppet code
- - Learn the syntax of the `if` statement.
- - Use an `if` statement to intelligently manage a package dependency.
+In this lesson, I'll discuss **conditional statements.** Conditional statements let
+you write Puppet code that behaves differently in different contexts. I will 
+show how to use conditional statements to write flexible Puppet code, explain the syntax 
+of the `if` statement, and show how to use an `if` statement to intelligently
+manage a package dependency.
 
 ## Getting started
 
-In this quest, we'll discuss **conditional statements.** Conditional statements let
-you write Puppet code that will behave differently in different contexts.
-
-To start this quest enter the following command:
+To start this lesson, I enter the following command:
 
     quest begin conditional_statements
 
 ## Writing for flexibility
-
->The green reed which bends in the wind is stronger than the mighty oak which
->breaks in a storm.
-
-> -Confucius
 
 Because Puppet manages configurations on a variety of systems fulfilling a
 variety of roles, great Puppet code means flexible and portable Puppet code.
@@ -41,15 +34,13 @@ is used to manage Apache on a RedHat or Debian system, it will need to manage
 either the `httpd` or `apache2` package.
 
 This kind of **what** question is often addressed through a combination of
-conditional statements and facts or parameters.  If you look at the
-`puppetlabs-apache` module on the [Forge](forge.puppet.com), you'll see [this
-package name and numerous other
-variables](https://github.com/puppetlabs/puppetlabs-apache/blob/master/manifests/params.pp#L59)
-set based on an `if` statement using the `osfamily` fact. (You may notice that
+conditional statements and facts or parameters. If you look at the
+`puppetlabs-apache` module on the Forge, you'll see this
+package name and numerous other variables
+set based on an `if` statement using the `osfamily` fact. You may notice that
 this module uses an un-structured `$::osfamily` format for this fact to
 preserve backwards compatibility. You can read more about this form of
-reference on [the docs
-page](https://docs.puppet.com/puppet/latest/lang_facts_and_builtin_vars.html#classic-factname-facts))
+reference on the docs page linked below this video.
 
 Simplified to show only the values we're concerned with, the conditional
 statement looks like this:
@@ -68,9 +59,8 @@ if $::osfamily == 'RedHat' {
 
 Here, the `$apache_name` variable is set to either `httpd` or `apache2`
 depending on the value of the `$::osfamily` fact. Elsewhere in the module,
-you'll find a [package
-resource](https://github.com/puppetlabs/puppetlabs-apache/blob/master/manifests/package.pp#L32)
-that uses this `$apache_name` variable to set its `name` parameter.
+you'll find a package resource that uses this `$apache_name` variable
+to set its `name` parameter.
 
 ```puppet
 package { 'httpd':
@@ -87,12 +77,8 @@ installed.
 
 ## Conditions
 
-> Just dropped in (to see what condition my condition was in)
-
-> -Mickey Newbury
-
 Now that you've seen this real-world example of how and why a conditional
-statement can be used to create more flexible Puppet code, let's take a moment
+statement can be used to create more flexible Puppet code, I'll take a moment
 to discuss how these statements work and how to write them. 
 
 Conditional statements return different values or execute different blocks of
@@ -106,9 +92,9 @@ Puppet supports a few different ways of implementing conditional logic:
  * selectors.
 
 Because the same concept underlies these different forms of conditional logic
-available in Puppet, we'll only cover the `if` statement in the tasks for this
-quest. Once you have a good understanding of how to implement `if` statements,
-we'll leave you with descriptions of the other forms and some notes on when you
+available in Puppet, I'll only cover the `if` statement in the tasks for this
+lesson. Once you have a good understanding of how to implement `if` statements,
+I'll leave you with descriptions of the other forms and some notes on when you
 may find them useful.
 
 An `if` statement includes a condition followed by a block of Puppet code that
@@ -125,37 +111,36 @@ clause.
 
 ## Pick a server
 
-Let's return to our Pasture example module. The application is build on the
-[Sinatra](http://www.sinatrarb.com/) framework. Out of the box, Sinatra
-supports a few different options for the server the service will run: WEBrick,
-Thin, or Mongrel. In production, you would likely use Sinatra with a more
-robust option such as [Passenger](https://www.phusionpassenger.com/) or
-[Unicorn](http://bogomips.org/unicorn/), but these built-in options will be
+Let's return to my Pasture example module. The application is built on the
+Sinatra framework. Out of the box, Sinatra supports a few different options
+for the server the service will run: WEBrick, Thin, or Mongrel. 
+In production, I would likely use Sinatra with a more
+robust option such as Passenger or Unicorn, but these built-in options will be
 adequate for this lesson.
 
-We can easily select which server will be used in the Pasture application's
-configuration file, However, options other than the default WEBrick are not
-included as pre-requisites when we install the Pasture package. To use these
-other options, we'll need our module to manage them as separate `package`
-resources.  However, we don't want to install these extra packages if we don't
-plan on using them. Using the `if` statement discussed above, we'll configure
+I can easily select which server will be used in the Pasture application's
+configuration file. However, options other than the default WEBrick are not
+included as pre-requisites when I install the Pasture package. To use these
+other options, I'll need our module to manage them as separate `package`
+resources.  However, I don't want to install these extra packages if I don't
+plan on using them. Using the `if` statement discussed above, I'll configure
 the `pasture` class to manage the necessary Thin or Mongrel package resource
 only if one of these servers is selected.
 
 By using a class parameter to specify the preferred server for Sinatra to use,
-we can use the same value to pass on to our configuration file template and to
+I can use the same value to pass on to my configuration file template and to
 decide which additional packages need to be installed. Using parameters in this
 way helps keep configuration coordinated across all the components of the
-system your module is written to manage.
+system my module is written to manage.
 
 <div class = "lvm-task-number"><p>Task 1:</p></div>
 
-Open the module's `init.pp` manifest.
+I'll open the module's `init.pp` manifest.
 
     vim pasture/manifests/init.pp
 
-First, add a `$sinatra_server` parameter with a default value of `webrick`. The
-beginning of your class should look like the following example:
+First, I add a `$sinatra_server` parameter with a default value of `webrick`. The
+beginning of my class looks like this:
 
 ```puppet
 class pasture (
@@ -167,7 +152,7 @@ class pasture (
 ){
 ```
 
-Next add the `$sinatra_server` variable to the `$pasture_config_hash` so that
+Next I add the `$sinatra_server` variable to the `$pasture_config_hash` so that
 it can be passed through to the configuration file template.
 
 ```puppet
@@ -181,12 +166,12 @@ it can be passed through to the configuration file template.
 
 <div class = "lvm-task-number"><p>Task 2:</p></div>
 
-Once that's complete, open the `pasture_config.yaml.epp` template.
+Once that's complete, I'll open the `pasture_config.yaml.epp` template.
 
     vim pasture/templates/pasture_config.yaml.epp
 
 Add the `$sinatra_server` variable to the params block at the beginning of the
-template. The Pasture appication passes any settings under the
+template. The Pasture application passes any settings under the
 `:sinatra_settings:` key to Sinatra itself.
 
 ```yaml
@@ -204,26 +189,26 @@ template. The Pasture appication passes any settings under the
   :server: <%= $sinatra_server %>
 ```
 
-Now that your module is able to manage this setting, add a conditional
+Now that my module is able to manage this setting, I'll add a conditional
 statement to manage the required packages for the Thin and Mongrel webservers.
 
 <div class = "lvm-task-number"><p>Task 3:</p></div>
 
-Return to your `init.pp` manifest.
+I return to my `init.pp` manifest.
 
     vim pasture/manifests/init.pp
 
-You can wrap a package resource in an `if` statment to tell your class to only
+I can wrap a package resource in an `if` statment to tell my class to only
 manage the resource if the `$sinatra_server` variable is `thin` or `mongrel`.
 
-Both of these servers are available as gems, so you will use the `gem`
+Both of these servers are available as gems, so I will use the `gem`
 provider for the package.
 
-Finally, we will add a `notify` parameter pointing to our service resource.
+Finally, I'll add a `notify` parameter pointing to my service resource.
 This will ensure that the server package is managed before the service, and
-that any updates to the package will trigger a restart of the service. Your
-class should look like the example below, with the conditional statement to
-manage your server packages included at the end.
+that any updates to the package will trigger a restart of the service. My
+class should look like this, with the conditional statement to
+manage my server packages included at the end.
 
 ```puppet
 class pasture (
@@ -275,17 +260,17 @@ class pasture (
 }
 ```
 
-With these changes to your class, you can easily accommodate different servers
-for different agent nodes in your infrastructure. For example, you may want to
+With these changes to my class, I can easily accommodate different servers
+for different agent nodes in my infrastructure. For example, I may want to
 use the default WEBrick server on a development system and the Thin server on
 for production.
 
-We created two new systems for this quest: `pasture-dev.puppet.vm` and
-`pasture-prod.puppet.vm`. For a more complex infrastructure, you would likely
-manage your development, test, and production segments of your infrastructure
-by creating a distinct [environment](https://docs.puppet.com/puppet/latest/environments.html)
-for each. For now, however, we can easily demonstrate our conditional statement
-by setting up two different node definitions in the `site.pp` manifest.
+I created two new systems for this quest: `pasture-dev.puppet.vm` and
+`pasture-prod.puppet.vm`. For a more complex infrastructure, I would likely
+manage my development, test, and production segments of my infrastructure
+by creating a distinct environment for each. For now, however, I can easily 
+demonstrate our conditional statement by setting up two different node 
+definitions in the `site.pp` manifest.
 
 <div class = "lvm-task-number"><p>Task 4:</p></div>
 
@@ -304,17 +289,17 @@ node 'pasture-prod.puppet.vm' {
 
 ## The puppet job tool
 
-Now that you're working across multiple nodes, connecting manually with SSH to
+Now that I'm working across multiple nodes, connecting manually with SSH to
 trigger Puppet runs may start to seem a little tedious. The `puppet job` tool
-lets you trigger Puppet runs across multiple nodes remotely.
+lets me trigger Puppet runs across multiple nodes remotely.
 
 <div class = "lvm-task-number"><p>Task 5:</p></div>
 
-Before using this tool, we'll have to take a few steps via the PE console to set
+Before using this tool, I'll have to take a few steps via the PE console to set
 up authentication through PE's role-based access control system (RBAC).
 
-To log in to the console, bring up a web browser on the host system you're
-using to run the Learning VM and navigate to `https://<VM's IPADDRESS>`. (Note
+To log in to the console, I bring up a web browser on the host system I'm
+using and navigate to `https://<VM's IPADDRESS>`. (Note
 that using `https` will take you to the console, while `http` will take you to
 this quest guide.)
 
@@ -328,15 +313,13 @@ Use the following credentials to log in:
 Username: **admin**
 Password: **puppetlabs**
 
-Once you're connected, click the **access control** menu option in the
-navigation bar at near the bottom left of the screen, then select **Users**
+Once I've connected, I click the **access control** menu option in the
+navigation bar at near the bottom left of the screen, and then select **Users**
 in the *Access Control* navigation menu.
 
-Create a new user with the **Full name** `Learning` and **Login** `learning`.
-
-Click on the name of the new user, then click the **Generate password reset**
-link. Copy the given link to a new browser tab and set the password to:
-**puppet**.
+I'll create a new user. Then, click on the name of the new user, then click
+the **Generate password reset** link. Copy the given link to a new 
+browser tab and set the password to: **puppet**.
 
 Under the **Access Control** navigation bar, click the **User Roles** menu
 option. Click on the link for the **Operators** role. Select the **Learning**
@@ -397,22 +380,17 @@ disconnect to return to the Learning VM.
 
 ## Review
 
-In this quest, you learned how conditional statements can help make the code
-you write for a Puppet module adaptable to cover different conditions. You saw
+In this lesson, I showed how conditional statements can help make the code
+you write for a Puppet module adaptable to cover different conditions. I showed 
 an example of how the `puppetlabs-apache` module uses a conditional statement
 to install a different package depending on the node's operating system. After
-learning about the syntax of the `if` statement, you incorporated a conditional
-statement into your `pasture` module to help manage the package dependencies
+explaining the syntax of the `if` statement, I incorporated a conditional
+statement into my `pasture` module to help manage the package dependencies
 for the different server options available to the Sinatra framework.
 
-So far, the `pasture` and `motd` modules you've used have been written from
+So far, the `pasture` and `motd` modules I've used have been written from
 scratch. This is great for the sake of learning, but one of Puppet's strengths
 lies in the Puppet community and the Puppet Forge—the repository of pre-written
-modules you can easily incorporate into your own Puppet codebase. In the next
-quest, you'll see how to make use of an existing module to set up a database
+modules that can easily be incorporated into your own Puppet codebase. In the next
+video, I'll show how to make use of an existing module to set up a database
 backend for the Pasture application.
-
-## Additional Resources
-
-* Puppet's [docs page](https://docs.puppet.com/puppet/latest/lang_conditional.html) covers the syntax of all forms of conditional statements and expressions.
-* The [style guide](https://docs.puppet.com/puppet/latest/style_guide.html#conditionals) includes best-practices recommendations for the use of conditionals.
