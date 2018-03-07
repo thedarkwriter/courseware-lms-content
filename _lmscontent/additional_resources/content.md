@@ -9,4 +9,4 @@ You might also want to check out our [Youtube channel](https://www.youtube.com/u
 
 If you’d prefer to dive deep into the technical details of a particular topic, the [Puppet Docs](https://puppet.com/docs?_ga=2.199663533.2016006115.1511914520-1690870473.1505239292 "") are your best bet.
 
-Of course, if you can’t find what you are looking for at any of those places, you can always [reach out to our team directly](https://puppet.com/company/contact "") with any and all questions you might have about learning Puppet.
+Of course, if you can’t find what you are looking for at any of those places, you can always [reach out to our team directly](https://puppet.com/company/contact "" ) with any and all questions you might have about learning Puppet.
