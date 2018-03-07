@@ -4,6 +4,8 @@ These are the same things a sysadmin would manually manage at the command line o
 
 Resources define the **end state** of a server, not the steps required to achieve that state. You will write code that defines the desired end state (or final configuration) of a server, and Puppet will be responsible for applying the changes required to get it into and keeping it in that state.
 
+As you start to write and edit your own Puppet code, you want to be sure your syntax is correct so it can be understood by Puppet. Watch the following video about syntax. Pay particular attention to the rules regarding use of curly braces, quotes, and commas.
+
 <script src="https://fast.wistia.com/embed/medias/6te1c1owui.jsonp" async></script><script src="https://fast.wistia.com/assets/external/E-v1.js" async></script><div class="wistia_responsive_padding" style="padding:56.25% 0 0 0;position:relative;"><div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;"><div class="wistia_embed wistia_async_6te1c1owui seo=false videoFoam=true" style="height:100%;width:100%">&nbsp;</div></div></div>
 
 For this course, you will only explore the syntax at the resource level. But understanding how this all works together will help you in the future. In the rest of this course, you will work on a scenario that helps you apply this information.
@@ -49,15 +51,6 @@ Change the `mode` attribute from `0644` to `0600`.
 
 <iframe src="https://magicbox.classroom.puppet.com/syntax/modifying_attributes" width="100%" height="500px" frameborder="0"></iframe>
 
-As you start to write and edit your own Puppet code, you want to be sure your syntax is correct so it can be understood by Puppet. Watch the following video about syntax. Pay particular attention to the rules regarding use of curly braces, quotes, and commas.
-
-<script src="https://fast.wistia.com/embed/medias/6te1c1owui.jsonp" async=""></script>
-<script src="https://fast.wistia.com/assets/external/E-v1.js" async=""></script>
-<div class="wistia_responsive_padding" style="padding: 56.25% 0 0 0; position: relative;">
-<div class="wistia_responsive_wrapper" style="height: 100%; left: 0; position: absolute; top: 0; width: 100%;">
-<div class="wistia_embed wistia_async_6te1c1owui seo=false videoFoam=true" style="height: 100%; width: 100%;">&nbsp;</div>
-</div>
-</div>
 <blockquote><hr />
 <p><strong>Protip</strong>: Often you and your peers will want to agree on things like using spaces or tabs in your code; number of indents to use; or whether or not you like the trailing comma. Puppet will interpret your code the same regardless of spaces, tabs, or indents. But to have some consistency to how code is written, you might want to use what is referred to as a <strong>style guide</strong>. Puppet's <a href="https://puppet.com/docs/puppet/5.3/style_guide.html" target="_blank">style guide</a> helps Puppet community members write code to be easily shared and read by other community members.</p>
 <p>Luckily, there is a command you can run to check a file containing Puppet code and let you know if the syntax is correct or not. This command is <code>puppet parser validate</code> followed by the name of the file that you want to check. For example, if you have a file called <code>default.pp</code> containing Puppet code that you want to check, you'd type <code>puppet parser validate default.pp</code> on the command line.</p>
