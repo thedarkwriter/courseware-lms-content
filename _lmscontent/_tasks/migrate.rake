@@ -1,10 +1,13 @@
-# encoding: utf-8
+# -*- coding: utf-8 -*- #specify UTF-8 (unicode) characters
 require 'learndot'
 require 'learndot/learning_components'
 require 'yaml'
 require 'json'
 require 'kramdown'
 require 'upmark'
+require 'diffy'
+require 'html_validation'
+require 'paint'
 
 # This task is sort of a general purpose task for dealing with downloading
 # content that was created prior to this workflow. It can be used to modify the
@@ -35,8 +38,27 @@ namespace :migrate do
     {}
   end
 
+  # Show learning components
+  def retrieve(name)
+    @lms.retrieve_component({
+      'name' => [ name.to_s ]
+    }).to_h
+  rescue => e
+    puts "#{e.message}"
+    {}
+  end
+
   def normalize_name(name)
     name.lstrip.downcase.gsub(/(:|"|\.| |&|-)/,'_').squeeze('_')
+  end
+
+  def convert_utf8(string)
+    string.gsub(/[”“‘’]/,
+      '”' => '"',
+      '“' => '"',
+      '‘' => '\'',
+      '’' => '\''
+    )
   end
 
   # Attempt to convert the existing html content into markdown.
@@ -108,6 +130,9 @@ namespace :migrate do
       # The ids in staging don't seem to be permanent
       json.delete('id')
 
+      # Delete the UUID, so you can copy and paste a learning comp
+      json.delete('UUID')
+
       File.write(path,JSON.pretty_generate(json.delete_if { |k,v| ['components'].include? k }))
 
       if json.has_key?('components')
@@ -123,6 +148,15 @@ namespace :migrate do
     end
   end
 
+  desc 'Fix issues with markdown'
+  task :markdown do
+    Dir.glob('**/*.md').each do |path|
+      text = File.read(path)
+      text = convert_utf8(text)
+      File.write(path,text)
+    end
+  end
+
   # Rake Tasks
   task :components do
     # Connect to production or staging
@@ -133,6 +167,75 @@ namespace :migrate do
       parse_and_build_structure(lc)
     end
 
+  end
+
+  desc 'Simulate a production deployment'
+  task :production do
+      # Update the reposositories from github
+      #Rake::Task['download:repos'].invoke
+      # Once repo is up to date , pull new commits from today
+      git_dir = "./repos/courseware-lms-content"
+
+      # Walk repo to find commits by date
+      repo   = Rugged::Repository.new(git_dir)
+      # Push version tags to production
+      # Find the latest git tag by date & time
+      tags = repo.references.each("refs/tags/v*").sort_by{|r| r.target.target.epoch_time}.reverse!
+
+      raise "Can't deploy to production No matching (v*) tags found on this repository!" if tags[0].nil?
+
+      # Use the last commit in the repo if only one tag exists
+      parent = tags[1].nil? ? repo.last_commit : tags[1].target
+
+      # Compare that tag to the tag that historically preceded it
+      parent.target.diff(tags[0].target.target).each_delta do |delta|
+      # Join the path with path repo and read the file into Kramdown
+      # TODO: break this out to avoid duplication above
+      next unless delta.new_file[:path] =~ %r{.*\.md$}
+      next unless delta.new_file[:path] =~ %r{_lmscontent/.*$}
+      next if     delta.new_file[:path] =~ %r{.*README.md$}
+
+      component_directory = Pathname.new(delta.new_file[:path]).parent.basename
+      puts "Found updated component #{component_directory} at path #{delta.new_file[:path]}"
+
+      # Allow for subfolders
+      if delta.new_file[:path].split('/').length == 4
+        puts "Learning component in subfolder"
+        parent_component_directory = Pathname.new(delta.new_file[:path]).parent.parent.basename
+        rake_task_name = "#{parent_component_directory}-#{component_directory}"
+      else
+        rake_task_name = File.basename(component_directory)
+      end
+      
+      puts "Processing: #{component_directory}"
+      path = [parent_component_directory,component_directory,'metadata.json'].join('/')
+      json = JSON.parse(File.read(path))
+
+      @lms = connect('production')
+      retrieve(json['name']).each  do |id,component|
+        puts Paint["Component: #{id} #{component['name']}", :blue, :bright, :underline]
+        if component.empty?
+          puts Paint["Component: #{component_directory} is missing from production",:red]
+          next
+        end
+        Diffy::Diff.default_format = :color
+        ['content','description','summary'].each do |field|
+          puts Paint["Field: #{field}", :blue,:underline]
+          field_path = [parent_component_directory,component_directory,"#{field}.md"].join('/')
+          if File.exist?(field_path)
+            doc = Kramdown::Document.new(File.read(field_path))
+            html_validation = PageValidations::HTMLValidation.new
+            html = html_validation.validation(doc.to_html, field)
+
+            puts Diffy::Diff.new(component[field],doc.to_html)
+            unless html.valid?
+              puts Paint["HTML validation:", :blue, :underline]
+              puts Paint[html.exceptions,"orange"]
+            end
+          end
+        end
+      end
+    end
   end
 end
 

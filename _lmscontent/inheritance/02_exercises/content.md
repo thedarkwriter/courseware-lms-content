@@ -1,4 +1,4 @@
-<p>Login shells are the programs that users interact with. They interpret commands typed at the command line. We would like to provide a new shell for our users, and we’ll customize the configuration file a bit for all of our users. We would also like to customize this default configuration file for a subset of our users to provide handy shortcuts and aliases that are useful for software developers.</p>
+<p>Login shells are the programs that users interact with. They interpret commands typed at the command line. We would like to provide a new shell for our users, and we'll customize the configuration file a bit for all of our users. We would also like to customize this default configuration file for a subset of our users to provide handy shortcuts and aliases that are useful for software developers.</p>
 <p>Change your current working directory to your modulepath with</p>
 <p><code>cd /etc/puppetlabs/puppet/modules</code></p>
 <p>Examine the directory structure of the example zsh module.</p>

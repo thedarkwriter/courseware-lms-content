@@ -26,7 +26,7 @@ motd/
 │   └── spec_helper.rb
 └── tests
     └── init.pp</code></pre>
-Update the motd module’s main class manifest file to set the content of your <code>/etc/motd</code> file to a message that includes the node’s <code>hostname</code> and <code>operatingsystem</code>. Please note that strings must use double quotes in order for variables to be interpolated.
+Update the motd module's main class manifest file to set the content of your <code>/etc/motd</code> file to a message that includes the node's <code>hostname</code> and <code>operatingsystem</code>. Please note that strings must use double quotes in order for variables to be interpolated.
 
 <code>vim motd/manifests/init.pp</code>
 

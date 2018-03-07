@@ -1,4 +1,4 @@
-[Beginner’s Guide to Modules](https://docs.puppetlabs.com/guides/module_guides/bgtm.html "")
+[Beginner's Guide to Modules](https://docs.puppetlabs.com/guides/module_guides/bgtm.html "")
 
 [Event Inspector docs](https://docs.puppetlabs.com/pe/latest/console_event-inspector.html "")
 
