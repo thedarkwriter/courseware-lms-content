@@ -1,0 +1,40 @@
+---
+esquared/courseware-lms-content:
+  Build:
+    - PATH=/opt/puppetlabs/puppet/bin:$PATH
+    - cd _lmscontent
+    - |
+      cat > _tasks/config.yaml <<EOF
+      ---
+      credentials:
+        github:
+          user: puppet-edu-courseware
+          token: $GITHUB_TOKEN
+        learndot:
+          production:
+            token: $LD_PROD_TOKEN
+          staging:
+            token: $LD_STAG_TOKEN
+      repos:
+        courseware-lms-content:
+          url: https://github.com/puppetlabs/courseware-lms-content.git
+          branch: master
+      EOF
+    # Hidden directories don't ship
+    - cd ..
+    - mv .git/ git_history/
+  PkgInclude:
+    - '*'
+  PostInstall:
+    - PATH=/opt/puppetlabs/puppet/bin:$PATH
+    - mv git_history/ .git/
+    - cd _lmscontent
+    - |
+      if [ $DISTELLI_ENV = "LearnDot_Production" ]
+      then
+        LDENV='production'
+      else
+        LDENV='staging'
+      fi
+    - 'rake download:repos'
+    - 'rake release:$LDENV'

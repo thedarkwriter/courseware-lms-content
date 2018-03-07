@@ -54,4 +54,4 @@ Puppet code block labelled with relationship, type, and title on bottom line of 
 ## Task:
 Add <code>before</code> or <code>require</code> to the following code so that the package resource is managed first and the file resource is managed second.
 
-<iframe src="https://magicbox.whatsaranjit.com/pfs/package_file" width="100%" height="500px" frameborder="0" />
+<iframe src="https://magicbox.classroom.puppet.com/pfs/package_file" width="100%" height="500px" frameborder="0" />

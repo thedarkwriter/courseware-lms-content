@@ -7,7 +7,6 @@
   "deprecatedBy": "",
   "generateCertificate": "DEFAULT",
   "generateProofOfCompletion": "DEFAULT",
-  "id": 263,
   "modified": "2017-08-03 13:30:05",
   "modifiedById": 35,
   "name": "Puppet Enterprise at Scale",

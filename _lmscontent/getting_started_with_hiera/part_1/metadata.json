@@ -7,7 +7,6 @@
   "deprecatedBy": "",
   "generateCertificate": "DEFAULT",
   "generateProofOfCompletion": "DEFAULT",
-  "id": 220,
   "modified": "2016-11-15 12:00:32",
   "modifiedById": 35,
   "name": "Getting Started with Hiera - Part 1",

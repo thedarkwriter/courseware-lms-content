@@ -26,4 +26,4 @@ service { 'httpd':
 ## Task:
 Add resource relationships to the following code so that the resources are managed in the order of package, file, service. The service should restart if the file resource is changed. You can choose between <code>before/require</code> and <code>notify/subscribe</code>.
 
-<iframe src="https://magicbox.whatsaranjit.com/pfs/package_file_service" width="100%" height="500px" frameborder="0" />
+<iframe src="https://magicbox.classroom.puppet.com/pfs/package_file_service" width="100%" height="500px" frameborder="0" />

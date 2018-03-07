@@ -1,9 +1,9 @@
 <h2>Anatomy of a Resource</h2>
 <p>What are <strong>resources</strong>? Resources are characteristics of a machine that need to be managed over time. These are the same things a sysadmin would manually manage. The power of resources is&nbsp;you can express configuration in code to automate it.</p>
-<p>OPINIONATED SENTENCE ABOUT WHAT THEY SHOULD AND SHOULD NOT DO</p>
+<p>**OPINIONATED SENTENCE ABOUT WHAT THEY SHOULD AND SHOULD NOT DO**</p>
 <script src="https://fast.wistia.com/embed/medias/6te1c1owui.jsonp" async></script><script src="https://fast.wistia.com/assets/external/E-v1.js" async></script><div class="wistia_responsive_padding" style="padding:56.25% 0 0 0;position:relative;"><div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;"><div class="wistia_embed wistia_async_6te1c1owui seo=false videoFoam=true" style="height:100%;width:100%">&nbsp;</div></div></div>
 <p>&nbsp;</p>
-<p>For this course, you will only explore the syntax at the resource level. But understanding how this all works together will help you&nbsp;in the future. In the rest of this course, you will work on a problem that helps you apply this information.</p>
+<p>For this course, you will only explore the syntax at the resource level. But understanding how this all works together will help you&nbsp;in the future. In the rest of this course, you will work on a scenario that helps you apply this information.</p>
 <p style="text-align: center;"><img src="/static/images/courses/syntax/363-anatomy-of-a-resource-narrow-2.png" alt="Diagram of the parts of a resource" width="100%" height="100%" /></p>
 <h6 style="text-align: center;">&nbsp;</h6>
 <p>These are the components of a resource statement in the Puppet language. Every resource&nbsp;is comprised of type, title, and list of attributes.</p>

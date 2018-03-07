@@ -7,7 +7,6 @@
   "deprecatedBy": "",
   "generateCertificate": "DEFAULT",
   "generateProofOfCompletion": "DEFAULT",
-  "id": 261,
   "modified": "2017-08-03 13:24:16",
   "modifiedById": 35,
   "name": "Separating Data from Code",

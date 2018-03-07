@@ -17,7 +17,6 @@
   "deprecatedBy": "",
   "generateCertificate": "DEFAULT",
   "generateProofOfCompletion": "DEFAULT",
-  "id": 275,
   "modified": "2017-10-30 15:09:27",
   "modifiedById": 31489,
   "name": "Hello, Puppet",

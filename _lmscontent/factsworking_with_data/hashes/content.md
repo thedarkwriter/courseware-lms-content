@@ -29,7 +29,7 @@ $canine = $my_hash['dog']             # equal to 'woof'
 $bovine  = $my_hash['cow']             # equal to 'moo'</code></pre></div>
 
 <h2 id="toc_2">Task:</h2>
-<p><iframe src="https://magicbox.whatsaranjit.com/facts/working_with_hashes" width="100%" height="500px" frameborder="0"></iframe></p>
+<p><iframe src="https://magicbox.classroom.puppet.com/facts/working_with_hashes" width="100%" height="500px" frameborder="0"></iframe></p>
 
 
 

@@ -7,7 +7,7 @@
 <h2 id="toc_1">Task:</h2>
 
 <p>Look up the mode attribute of the file to see its new value and how it has changed since you last ran this command. Use the <code>puppet resource</code> command to inspect the <code>file</code> at <code>/etc/motd</code>. </p>
-<p><iframe src="https://magicbox.whatsaranjit.com/syntax/observe_your_change" width="100%" height="500px" frameborder="0"></iframe></p>
+<p><iframe src="https://magicbox.classroom.puppet.com/syntax/observe_your_change" width="100%" height="500px" frameborder="0"></iframe></p>
 
 
 

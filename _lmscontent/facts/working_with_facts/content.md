@@ -11,4 +11,4 @@ Example:
 In this example, any system using this code will have its own hostname printed into the file. In this way, you can have server-specific outcomes with a single piece of code. This means you don't have to rewrite your code for every single machine you're managing.
 
 ## Task:
-<iframe src="https://magicbox.whatsaranjit.com/facts/working_with_facts" width="100%" height="500px" frameborder="0" />
+<iframe src="https://magicbox.classroom.puppet.com/facts/working_with_facts" width="100%" height="500px" frameborder="0" />

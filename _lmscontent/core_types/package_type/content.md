@@ -9,4 +9,4 @@ This type manages software packages. Some important attributes of this type incl
 ## Task:
 Enter the <code>puppet resource</code> command to see all the attributes of the <code>package</code> named <code>puppet</code>.
 
-<iframe src="https://magicbox.whatsaranjit.com/resources/exploring_package" width="100%" height="500px" frameborder="0" />
+<iframe src="https://magicbox.classroom.puppet.com/resources/exploring_package" width="100%" height="500px" frameborder="0" />

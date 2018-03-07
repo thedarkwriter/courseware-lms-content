@@ -40,7 +40,7 @@ $job = &lt;PUT ANSWER HERE&gt;</code></pre></div>
 
 <p>Click the test button when you’re done to see your results.</p>
 
-<p><iframe src="https://magicbox.whatsaranjit.com/facts/working_with_arrays" width="100%" height="500px" frameborder="0"></iframe></p>
+<p><iframe src="https://magicbox.classroom.puppet.com/facts/working_with_arrays" width="100%" height="500px" frameborder="0"></iframe></p>
 
 
 
