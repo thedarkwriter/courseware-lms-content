@@ -1,4 +1,4 @@
-# encoding: utf-8
+# -*- coding: utf-8 -*- #specify UTF-8 (unicode) characters
 require 'learndot'
 require 'learndot/learning_components'
 require 'yaml'
@@ -50,6 +50,15 @@ namespace :migrate do
 
   def normalize_name(name)
     name.lstrip.downcase.gsub(/(:|"|\.| |&|-)/,'_').squeeze('_')
+  end
+
+  def convert_utf8(string)
+    string.gsub(/[”“‘’]/,
+      '”' => '"',
+      '“' => '"',
+      '‘' => '\'',
+      '’' => '\''
+    )
   end
 
   # Attempt to convert the existing html content into markdown.
@@ -136,6 +145,15 @@ namespace :migrate do
     end
   end
 
+  desc 'Fix issues with markdown'
+  task :markdown do
+    Dir.glob('**/*.md').each do |path|
+      text = File.read(path)
+      text = convert_utf8(text)
+      File.write(path,text)
+    end
+  end
+
   # Rake Tasks
   task :components do
     # Connect to production or staging
@@ -147,7 +165,8 @@ namespace :migrate do
     end
 
   end
-  desc 'Noop a production deployment'
+
+  desc 'Simulate a production deployment'
   task :production do
       # Update the reposositories from github
       #Rake::Task['download:repos'].invoke

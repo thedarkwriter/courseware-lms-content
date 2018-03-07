@@ -25,5 +25,5 @@ motd/
 <li><code>puppet parser validate motd/manifests/init.pp</code></li>
 <li><code>puppet apply motd/tests/init.pp</code></li>
 </ul>
-<p>Looking at the <code>hiera.yaml</code> file again, identify the datasource that would provide an override for your node’s fully qualified domain name. This fqdn can be found by executing <code>facter fqdn</code>.
+<p>Looking at the <code>hiera.yaml</code> file again, identify the datasource that would provide an override for your node's fully qualified domain name. This fqdn can be found by executing <code>facter fqdn</code>.
 <p>Create that file, and provide an alternate motd message. Without making any changes to your manifest, enforce it again and verify that the overridden message is propagated to your <code>/etc/motd</code> file.</p>
