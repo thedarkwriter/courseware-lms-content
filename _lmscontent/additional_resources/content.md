@@ -1,7 +1,7 @@
 ## Stuck and not sure where to turn? Don’t worry! There are plenty of resources for you to find help.
 ### 
 
-The [Puppet Slack team](http://slack.puppet.com/?_ga=2.219700762.2016006115.1511914520-1690870473.1505239292 "") is an excellent place to get quick and friendly community feedback.
+The [Puppet Slack team](http://slack.puppet.com/?_ga=2.219700762.2016006115.1511914520-1690870473.1505239292 "") is an excellent place to get quick and friendly community feedback.  
 
 Additionally, the [Puppet blog](https://puppet.com/blog "") has lots of helpful info written by our in-house team of experts on a variety of Puppet-related topics.
 
