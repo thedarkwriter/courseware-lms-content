@@ -102,29 +102,42 @@ namespace :release do
   end
   desc 'Build LMS content and upload a release to production'
   task :production do
-    # Update the reposositories from github
-    Rake::Task['download:repos'].invoke
+
+    # TODO: Loop through the yaml as we do in other tasks
+    git_dir = "./repos/courseware-lms-content"
+
+    repo   = Rugged::Repository.new(git_dir)
 
     # Push version tags to production
     # Find the latest git tag by date & time
-    tags = repo.references.each("refs/tags/v*").sort_by{|r| r.target.epoch_time}.reverse!
+    tags = repo.references.each("refs/tags/v*").sort_by{|r| r.target.target.epoch_time}.reverse! 
 
     raise "Can't deploy to production No matching (v*) tags found on this repository!" if tags[0].nil?
 
     # Use the last commit in the repo if only one tag exists
-    parent = tags[1].nil? ? repo.last_commit : tags[1].target
+    parent = tags[1].nil? ? repo.last_commit : tags[1].target 
 
     # Compare that tag to the tag that historically preceded it
-    parent.diff(tags[0].target).each_delta do |delta|
-    # Join the path with path repo and read the file into Kramdown
-    # TODO: break this out to avoid duplication above
-    next unless delta.new_file[:path] =~ %r{.*\.md$}
-    next unless delta.new_file[:path] =~ %r{_lmscontent/.*$}
-    next if     delta.new_file[:path] =~ %r{.*README.md$}
+    parent.target.diff(tags[0].target.target).each_delta do |delta| 
+      # Join the path with path repo and read the file into Kramdown
+      # TODO: break this out to avoid duplication above
+      next unless delta.new_file[:path] =~ %r{.*\.md$}
+      next unless delta.new_file[:path] =~ %r{_lmscontent/.*$}
+      next if     delta.new_file[:path] =~ %r{.*README.md$}
 
-    component_directory = Pathname.new(delta.new_file[:path]).parent.basename
+      component_directory = Pathname.new(delta.new_file[:path]).parent.basename
+      puts "Found updated component #{component_directory} at path #{delta.new_file[:path]}"
 
-    Rake::Task["release:#{component_directory}"].invoke('production')
+      # Allow for subfolders
+      if delta.new_file[:path].split('/').length == 4
+        puts "Learning component in subfolder"
+        parent_component_directory = Pathname.new(delta.new_file[:path]).parent.parent.basename
+        rake_task_name = "#{parent_component_directory}-#{component_directory}"
+      else
+        rake_task_name = File.basename(component_directory)
+      end
+
+      Rake::Task["release:#{rake_task_name}"].invoke('production') 
     end
   end
 end
