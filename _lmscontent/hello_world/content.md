@@ -2,7 +2,9 @@ If you've ever learned a coding language or started a blog, chances are that you
 
 This is what Hello world looks like written in Puppet code:
 
-<img src="https://learn.puppet.com/static/images/courses/syntax/329-puppet-code-explained.png" width=100% height=100% alt="The first line, file { '/etc/motd':, tells Puppet that we will be managing the /etc/motd file on our system. The second line, content => 'Hello world', tells Puppet to set the contents of the /etc/motd file to the text 'Hello world' using the content attribute. The third line, }, closes the code block and tells Puppet that we're done managing the /etc/motd file."></img>
+<img src="https://learn.puppet.com/static/images/courses/syntax/329-puppet-code-explained.png" width=100% height=100% alt="The first line, file { '/etc/motd':, tells Puppet that we will be managing the /etc/motd file on our system. The second line, content => 'Hello world', tells Puppet to set the contents of the /etc/motd file to the text 'Hello world' using the content attribute. The third line, }, closes the code block and tells Puppet that we're done managing the /etc/motd file.">
+<img src="https://learn.puppet.com/static/images/courses/syntax/329-puppet-code-explained.png" width=100% height=100%>
+<img src="https://learn.puppet.com/static/images/courses/syntax/329-puppet-code-explained.png" width=100% height=100% />
 
 ## Task:
 
