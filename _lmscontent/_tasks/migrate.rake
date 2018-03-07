@@ -130,6 +130,9 @@ namespace :migrate do
       # The ids in staging don't seem to be permanent
       json.delete('id')
 
+      # Delete the UUID, so you can copy and paste a learning comp
+      json.delete('UUID')
+
       File.write(path,JSON.pretty_generate(json.delete_if { |k,v| ['components'].include? k }))
 
       if json.has_key?('components')

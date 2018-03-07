@@ -1,5 +1,4 @@
 {
-  "UUID": "e3296989-6cbd-393d-9a1c-e735d26811ac",
   "_displayName_": "Introduction to Puppet Syntax",
   "_keyword_": "course_pathway",
   "courseInfo": "<h2>Getting Started With Puppet Syntax</h2>\r\n<p>Puppet is a <a href=\"https://link.springer.com/referenceworkentry/10.1007%2F978-1-4419-9863-7_1334\" target=\"_blank\" >declarative language</a>, written for a computer, yet easy for humans to read and write. In this tutorial, you will be introduced to the basics of writing Puppet code. Each course unit is designed to build upon the previous one, increasing in complexity as the course progresses. At the end of each unit you will be asked to write some Puppet code using our interactive command line tool. By the end of the training, you should have a good grasp on how Puppet code works.</p>\r\n",
