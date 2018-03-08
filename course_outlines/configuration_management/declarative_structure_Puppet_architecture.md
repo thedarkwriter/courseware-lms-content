@@ -1,4 +1,4 @@
-###Understand Puppet architecture and declarative structure (possible names: Puppet deployment; how puppet master and agent work; Puppet's agent/master architecture)
+### Understand Puppet architecture and declarative structure (possible names: Puppet Deployment; How the Puppet Master and Agent Work; Puppet's Master/Agent Architecture; Automating with Puppet: Architecture)
 	
 
 __Why does a user need to know about this topic in order to understand configuration management with PE?__
@@ -21,7 +21,11 @@ ___
 __What should a user be able to do after completing this module?__
 ___
 
-After completing this module, the user should understand the concept of a declarative programming language vs. a procedural/imperative programming language. The user should understand that they do not have to be concerned with **how** the final state of a server is achieved, just **what** the final state should be. The user should also understand that at its most basic level, Puppet Enterprise converts Puppet language code into system commands to configure a server into its desired state. The user 
+After completing this module, the user should understand the concept of a declarative programming language vs. a procedural/imperative 
+programming language. The user should understand that they do not have to be concerned with **how** the final state of a server is 
+achieved, just **what** the final state should be. The user should also understand that at its most basic level, Puppet Enterprise 
+converts Puppet language code into system commands to configure one or several thousand servers into a desired state. The user should be 
+able to understand the resource abstraction layer, and make the connection between the RAL and the concept of configuring infrastructure. 
 ___
 
 __How can we assess the user's comprehension?__
@@ -68,19 +72,30 @@ Configure a machine normally (shell script example to write a file, for example)
 At its most basic level, Puppet Enterprise converts Puppet language code into system commands to configure a server into its desired state.		
 	
 	*  What are the key points of this topic?
+Puppet can be used to configure a single resource on a single machine and can also scale to several thousand nodes, managing thousands of resources on each.
 
 	*  Do you have ideas for how to communicate this idea
 Show difference of shell script modifying a basic file v. a single Puppet resource doing same thing
 Puppet language compiler example
+Show scale-up diagram: one resource/one machine, many resources/one machine, many resources/many similar machines, many resources/many dissimilar machines
 
 	
 
-####Objective 2: Users will understand Puppet lifecycle and have vocab to talk about lifecycle.
+####Objective 2: Users will understand Puppet lifecycle and be able to connect RAL to the concept of configuration management.
 
 __What sub-topics must be covered to achieve the objective?__
 
 
 	Sub-Topic 1:
+Puppet Resource Abstraction Layer	
+	*  What are the key points of this topic?
+The definition of RAL and how it is used to configure infrastructure.
+
+	*  Do you have ideas for how to communicate this idea?
+Use the animation from Puppet Resources self-paced module currently on LearnDot
+Show side-by-side image/animation of adding a user on dissimilar systems. Show Puppet code that will translate into the proper code on each machine to add a user.
+
+	Sub-Topic 2:
 Lifecycle of a Puppet run		
 	
 	*  What are the key points of this topic?
