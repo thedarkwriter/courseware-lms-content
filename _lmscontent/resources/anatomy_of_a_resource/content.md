@@ -41,7 +41,7 @@ Puppet can see a variety of attributes about a file or any resource type. Some e
 
 Enter the `puppet resource` command to see all the attributes of the `file` at `/etc/motd`.
 
-<iframe src="https://magicbox.classroom.puppet.com/syntax/querying_the_system" width="100%" height="200px" frameborder="0"></iframe>
+<iframe src="https://magicbox.classroom.puppet.com/syntax/querying_the_system" width="100%" height="300px" frameborder="0"></iframe>
 
 Now that you can see all the attributes Puppet knows about the file at `/etc/motd`, you also know the things you can manage about that file. To change the value of an attribute using Puppet, you will use the same syntax from the previous exercise, replacing the old values with your new values.
 
@@ -49,7 +49,7 @@ Now that you can see all the attributes Puppet knows about the file at `/etc/mot
 
 Change the `mode` attribute from `0644` to `0600`.
 
-<iframe src="https://magicbox.classroom.puppet.com/syntax/modifying_attributes" width="100%" height="200px" frameborder="0"></iframe>
+<iframe src="https://magicbox.classroom.puppet.com/syntax/modifying_attributes" width="100%" height="300px" frameborder="0"></iframe>
 
 <blockquote><hr />
 <p><strong>Pro Tip</strong>:<br><br>Often you and your peers will want to agree on things like using spaces or tabs in your code, number of indents to use, or whether or not you like the trailing comma. Puppet will interpret your code the same regardless of spaces, tabs, or indents. But to have some consistency to how code is written, you might want to use what is referred to as a <strong>style guide</strong>. Puppet's <a href="https://puppet.com/docs/puppet/5.3/style_guide.html" target="_blank">style guide</a> helps Puppet community members write code to be easily shared and read by other community members.</p>
@@ -61,4 +61,4 @@ Change the `mode` attribute from `0644` to `0600`.
 
 Use the `puppet parser validate` command to validate the `test.pp` file. Use any error output to fix any syntax errors and rerun the command if necessary.
 
-<iframe src="https://magicbox.classroom.puppet.com/syntax/validating_your_syntax" width="100%" height="500px" frameborder="0"></iframe>
+<iframe src="https://magicbox.classroom.puppet.com/syntax/validating_your_syntax" width="100%" height="300px" frameborder="0"></iframe>
