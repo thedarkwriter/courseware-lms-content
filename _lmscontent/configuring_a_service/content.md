@@ -31,7 +31,7 @@ The file should be owned by `root`, group set to `root` and with `0644` permissi
 <p><iframe src="https://magicbox.classroom.puppet.com/syntax/creating_db2_postgresql_conf" width="100%" height="500px" frameborder="0"></iframe>
 </p>
 
-The web1 and web2 servers need to contain the following line in the file `/etc/robby/robby.cfg`:
+The web1 server needs the following line placed in the file `/etc/robby/robby.cfg`:
 
 `welcome_msg = Welcome to Robby, running on HOSTNAME!`
 
