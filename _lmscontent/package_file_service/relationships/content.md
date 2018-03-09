@@ -25,7 +25,7 @@ package { 'robby':
 
 file { '/etc/robby/robby.cfg':
   ensure  =&gt; file,
-  content =&gt; "\n",
+  content =&gt; "welcome_msg = Welcome to Robby, running on ${hostname}!",
   require =&gt; Package['robby'],
 }
 </pre>
@@ -40,29 +40,28 @@ package { 'robby':
 
 file { '/etc/robby/robby.cfg':
   ensure  =&gt; file,
-  content =&gt; "",
+  content =&gt; "welcome_msg = Welcome to Robby, running on ${hostname}!",
 }
 </pre>
 
 This example uses the `before` attribute to tell Puppet that the package resource must go before the file resource. Ultimately, these two examples do the exact same thing. Depending on your preference, you can write it either way.
 
-<blockquote>
-**Pro Tip:**
+> **Pro Tip:**
 
-When referring to another resource using <code>before</code> or <code>require</code>, the resource type is capitalized. Be sure you also note the syntax used for defining relationships:
-
-</blockquote>
+> When referring to another resource using `before` or `require`, the resource type is capitalized. Be sure you also note the syntax used for defining relationships:
 
 **Puppet code block labelled with relationship, type, and title on bottom line of code block.**
 
 ###### Enlarge image
 
 ## Task:
+
 Add `before` or `require` to the following code so that the package resource is managed first and the file resource is managed second.
 
 <iframe src="https://magicbox.classroom.puppet.com/pfs/package_file" width="100%" height="500px" frameborder="0"></iframe>
 
 ## Task:
+
 Add `before` or `require` to the following code so that the `postgresql-server` package resource is managed first and the `postgresql.conf` file resource is managed second.
 
 <iframe src="https://magicbox.classroom.puppet.com/scenario/package_file_postgresql" width="100%" height="500px" frameborder="0"></iframe>
