@@ -33,9 +33,9 @@ Enter the `puppet resource` command to see which attribute is assigned to the `p
 
 The first thing needed for Robby to operate is to install all of the required software packages on the various servers shown previously. The runbook starts with the following package installation instructions:
 
-* Install the PostgreSQL database (package name: `postgresql-server`) on db1 and db2
-* Install the Apache web server (package name: `httpd`) on web1
-* Install the Robby application (package name: `robby`) on web1
+* Install the PostgreSQL database (package name: `postgresql-server`) on db1.mycorp.com and db2.mycorp.com
+* Install the Apache web server (package name: `httpd`) on web1.mycorp.com
+* Install the Robby application (package name: `robby`) on web1.mycorp.com
 
 ## Task:
 Install the required packages on the database servers and the web server.
