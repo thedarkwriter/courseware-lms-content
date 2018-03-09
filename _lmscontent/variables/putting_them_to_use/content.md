@@ -2,7 +2,9 @@ As you've been working on your code in previous sections, you've written a lot o
 
 Let's take some of the code you've already written and introduce variables into it. Using variables reduces repetition and the chance of making mistakes by misspelling something.
 
-> **Protip:** You can use comments in your code by using a hash like this: <code># this is what a comment looks like</code>. Comments help you describe the function of your code and to communicate it to other people who read your code.
+> **Pro Tip:**
+
+> You can use comments in your code by using a hash like this: `# this is what a comment looks like`. Comments help you describe the function of your code and to communicate it to other people who read your code.
 
 ## Task:
 
