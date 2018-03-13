@@ -38,6 +38,7 @@ The first thing needed for Robby to operate is to install all of the required so
 * Install the Robby application (package name: `robby`) on web1.mycorp.com
 
 ## Task:
+
 Install the required packages on the database servers and the web server.
 
 <p><iframe src="https://magicbox.classroom.puppet.com/scenario/install_database_package" width="100%" height="500px" frameborder="0"></iframe></p>
