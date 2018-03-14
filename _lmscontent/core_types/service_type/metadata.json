@@ -1,5 +1,4 @@
 {
-  "_displayName_": "Starting A Service",
   "_keyword_": "content_component",
   "created": "2017-12-19 09:42:25",
   "createdById": 49633,
@@ -23,7 +22,7 @@
   "price": "0.0 USD",
   "primaryCategoryId": 7,
   "status": "DISABLED",
-  "urlName": "core-types---service-type",
+  "urlName": "starting-a-service",
   "visibility": "HIDDEN",
   "duration.minutesPerDay": 0,
   "duration.days": 0
