@@ -1,27 +1,6 @@
-<script src="https://fast.wistia.com/embed/medias/omlwov3mvp.jsonp" async></script><script src="https://fast.wistia.com/assets/external/E-v1.js" async></script><div class="wistia_responsive_padding" style="padding:56.25% 0 0 0;position:relative;"><div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;"><div class="wistia_embed wistia_async_omlwov3mvp seo=false videoFoam=true" style="height:100%;width:100%">&nbsp;</div></div></div>
-<p>&nbsp;</p>
 <h2 id="toc_0">Welcome!</h2>
-<p>Puppet Syntax is designed just for you: the sysadmin who knows there is a better, easier way to manage your infrastructure. This course is the essential first step in understanding the power of Puppet. The lessons are designed to be quick, effective, and give you what you need to build your configuration management skills.</p>
-<h2 id="toc_1">Navigation</h2>
-<ul>
-<ul>
-<li>
-<p>Hide or reveal the course sidebar menu by clicking on the hamburger icon on the top right of the page.</p>
-</li>
-<li>
-<p>Clicking any title inside the sidebar menu will take you to that unit.</p>
-</li>
-<li>
-<p>Navigate through the lessons using the green forward arrow and gray back arrow at the bottom of the page.</p>
-</li>
-<li>
-<p>Your progress is always saved when you leave.</p>
-</li>
-<li>
-<p>Short animations will demonstrate different ways to write syntax.&nbsp;</p>
-</li>
-</ul>
-</ul>
+<p>Puppet Language Basics is an essential step in putting your Puppet knowledge into practice. The lessons are focused on real-world problems to teach you best practices for working with and writing Puppet code.</p>
+
 <p>Interactive code boxes throughout the course simulate a command line tool and evaluate your code to help you master Puppet syntax. Here's how they work:</p>
 <ul>
 <li>Look for the text inside the code boxes for hints to complete each exercise.&nbsp;</li>
@@ -34,16 +13,16 @@
 <h2 id="toc_2">Resources</h2>
 <ul>
 <li>
-<p>Download any video transcripts or course files by clicking on the downloads icon in the page header.</p>
+Download any video transcripts or course files by clicking on the downloads icon in the page header.
 </li>
 <li>
-<p>Clarify and learn new terminology with the course glossary.</p>
+Clarify and learn new terminology with the course glossary.
 </li>
 <li>
-<p><a href="https://puppetcommunity.slack.com/" target="_blank">Connect </a>and get some help from the community on Slack.</p>
+<a href="https://puppetcommunity.slack.com/" target="_blank">Connect </a>and get some help from the community on Slack.
 </li>
 <li>
-<p><a href="https://puppet.com/docs" target="_blank">Access</a>&nbsp;Puppet's documentation for both Puppet Enterprise and open source Puppet.</p>
+<a href="https://puppet.com/docs" target="_blank">Access</a>&nbsp;Puppet's documentation for both Puppet Enterprise and open source Puppet.
 </li>
 </ul>
 <h2 id="toc_3">Help</h2>
