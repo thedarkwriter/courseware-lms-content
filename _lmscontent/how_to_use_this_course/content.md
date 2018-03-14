@@ -8,7 +8,6 @@
 <li>Unlike a command line interface, this output has been specifically designed for learning purposes and differs from running Puppet on your own system.</li>
 <li>You will only be able to select the test button once your code meets certain basic parameters.&nbsp;&nbsp;</li>
 </ul>
-<p><iframe src="https://learn.puppet.com/static/images/courses/syntax/357-command-line.gif" width="100%" height="100%" frameborder="0"></iframe></p>
 <p>&nbsp;</p>
 <h2 id="toc_2">Resources</h2>
 <ul>
