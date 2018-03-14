@@ -3,6 +3,7 @@ Now that you've learned more about Puppet facts, write some Puppet code to creat
 `welcome_msg = Welcome to Robby, running on HOSTNAME!`
 
 ## Task:
+
 <p><iframe src="https://magicbox.classroom.puppet.com/syntax/modifying_the_system" width="100%" height="500px" frameborder="0"></iframe>
 </p>
 
