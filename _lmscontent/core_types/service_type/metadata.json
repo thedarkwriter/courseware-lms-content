@@ -1,5 +1,5 @@
 {
-  "_displayName_": "Core Types - Service Type",
+  "_displayName_": "Starting A Service",
   "_keyword_": "content_component",
   "created": "2017-12-19 09:42:25",
   "createdById": 49633,
@@ -18,7 +18,7 @@
   "generateProofOfCompletion": "DEFAULT",
   "modified": "2018-01-12 16:17:14",
   "modifiedById": 49633,
-  "name": "Core Types - Service Type",
+  "name": "Starting A Service",
   "orderNumber": 0,
   "price": "0.0 USD",
   "primaryCategoryId": 7,
