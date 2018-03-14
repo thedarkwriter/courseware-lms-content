@@ -1,12 +1,11 @@
 <h2 id="toc_0">Welcome!</h2>
 <p>Puppet Language Basics is an essential step in putting your Puppet knowledge into practice. The lessons are focused on real-world problems to teach you best practices for working with and writing Puppet code.</p>
-
 <p>Interactive code boxes throughout the course simulate a command line tool and evaluate your code to help you master Puppet syntax. Here's how they work:</p>
 <ul>
 <li>Look for the text inside the code boxes for hints to complete each exercise.&nbsp;</li>
 <li>Like a command line interface, you will get feedback and error messages if you enter invalid syntax or code into the box.</li>
 <li>Unlike a command line interface, this output has been specifically designed for learning purposes and differs from running Puppet on your own system.</li>
-<li>You will only be able to select the test button once your code meets certain basic parameters.&nbsp;&nbsp;</li>
+<li>In some cases, you will only be able to select the <strong>Test</strong> button once your code meets certain basic parameters.&nbsp;&nbsp;</li>
 </ul>
 <p><iframe src="https://learn.puppet.com/static/images/courses/syntax/357-command-line.gif" width="100%" height="100%" frameborder="0"></iframe></p>
 <p>&nbsp;</p>

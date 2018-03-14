@@ -1,4 +1,4 @@
-You have now practiced creating resource relationships between a package and a file, and then a file and service. Now put it all together in a common pattern called **Package File Service**.
+You have now practiced creating resource relationships between a package and a file, and then a file and service. Now you can put it all together in a common pattern called **Package File Service**.
 
 This pattern tells Puppet to do the following:
 
