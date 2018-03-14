@@ -1,4 +1,4 @@
-You now know the essential building blocks for working with Puppet. You have made great progress in your learning journey and are on your way to accomplishing great things!
+You now know some essential building blocks for working with Puppet. You have made great progress in your learning journey and are on your way to accomplishing great things with Puppet!
 
 ## What would you like to do next?
 * [Check out some other self-paced courses](https://learn.puppet.com/category/self-paced-training)
