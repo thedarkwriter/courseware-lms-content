@@ -9,7 +9,7 @@ Interactive code boxes throughout the course simulate a command line tool and ev
 * Unlike a command line interface, this output has been specifically designed for learning purposes and differs from running Puppet on your own system.
 * In some cases, you will only be able to select the **Test** button once your code meets certain basic parameters.
 
-<iframe src="https://learn.puppet.com/static/images/courses/syntax/357-command-line.gif" width="100%" height="100%" frameborder="0"></iframe>
+<iframe src="https://learn.puppet.com/static/images/command-line-gif.gif" width="100%" height="100%" frameborder="0"></iframe>
 
 ## Resources
 
