@@ -32,7 +32,7 @@ Every attribute you declare must have a **value**. The format of the value depen
 
 <blockquote>
 <p><strong>Pro Tip:</strong></p>
-<p>There are many third-party modules you can install that deliver more resource types, such as the <a href="https://forge.puppet.com/puppetlabs/mysql" target="_blank">puppetlabs/mysql</a> module that adds the <code>mysql_user</code> resource type. You can find and install modules by browsing the <a href="http://forge.puppetlabs.com/" target="_blank">Puppet Forge</a>.</p>
+<p>There are many third-party modules you can install that deliver more resource types, such as the <a href="https://forge.puppet.com/puppetlabs/mysql" target="_blank">puppetlabs/mysql</a> module that adds the <code>mysql_user</code> resource type. You can find and install modules by browsing the <a href="http://forge.puppet.com/" target="_blank">Puppet Forge</a>.</p>
 </blockquote>
 
 Puppet can see a variety of attributes about a file or any resource type. Some examples of other attributes might include **mode**, **ensure**, **owner**, or **group**. The `puppet resource` command shows you all the attributes Puppet knows about a resource, as well as their values. This is useful for identifying and examining the characteristics of any given file.
