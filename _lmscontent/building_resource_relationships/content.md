@@ -81,5 +81,5 @@ services. As before, we have to add resource relationships between the configura
 Puppet lets you use <code>notify</code> and <code>subscribe</code> to not only order resources, but send a **refresh**. Refreshing a 
 resource means different things depending on the resource type. For example, when you refresh a service resource type, Puppet restarts 
 the service. And when you refresh a mount resource type, Puppet remounts a file mount. You can try to refresh any type in Puppet, but not 
-all of them will respond. Read the [Puppet docs](https://puppet.com/docs/puppet/5.3/lang_relationships.html#refreshing-and-notification 
+all of them will respond. Read the [Puppet docs](https://puppet.com/docs/puppet/latest/lang_relationships.html#refreshing-and-notification 
 "") for more on refreshing and notification.

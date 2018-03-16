@@ -1,5 +1,5 @@
 ## Introduction:
-Other facts contain more complex values. They might contain data structures like arrays or hashes. If you want to learn more about arrays and hashes before diving in, check out the syntax section in [the Puppet docs](https://puppet.com/docs/puppet/5.3/lang_data_array.html "").
+Other facts contain more complex values. They might contain data structures like arrays or hashes. If you want to learn more about arrays and hashes before diving in, check out the syntax section in [the Puppet docs](https://puppet.com/docs/puppet/latest/lang_data_array.html "").
 
 ### Arrays:
 Arrays allow you to define and work with a large set of the same type of data. An array is a series of values that looks like <code>['one', 'two', 'three']</code>, denoted by square brackets. Puppet is like most programming languages and uses zero-based index counting: the first element of any series of values is assigned the index 0&nbsp;instead of the index 1.&nbsp;You can retrieve values from an array using the position, or index, that it is in. For example, to retrieve the first value in an array variable&nbsp; <code>$array</code>, you would access it using the index 0, or <code>$array[0].&nbsp;</code>

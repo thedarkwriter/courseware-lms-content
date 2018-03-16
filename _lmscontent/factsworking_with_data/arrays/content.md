@@ -4,7 +4,7 @@
 
 <h2 id="toc_1">Introduction:</h2>
 
-<p>Other facts contain more complex values. They might contain data structures like arrays or hashes. If you want to learn more about arrays and hashes before diving in, check out the syntax section in <a href="https://puppet.com/docs/puppet/5.3/lang_data_array.html">the Puppet docs.</a></p>
+<p>Other facts contain more complex values. They might contain data structures like arrays or hashes. If you want to learn more about arrays and hashes before diving in, check out the syntax section in <a href="https://puppet.com/docs/puppet/latest/lang_data_array.html">the Puppet docs.</a></p>
 
 <h3 id="toc_2">Arrays:</h3>
 
