@@ -62,4 +62,3 @@ Change the `mode` attribute from `0644` to `0600`.
 Use the `puppet parser validate` command to validate the `test.pp` file. Use any error output to fix any syntax errors and rerun the command if necessary.
 
 <iframe src="https://magicbox.classroom.puppet.com/syntax/validating_your_syntax" width="100%" height="400px" frameborder="0"></iframe>
-
