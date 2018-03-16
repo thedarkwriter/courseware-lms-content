@@ -41,8 +41,14 @@ The first thing needed for Robby to operate is to install all of the required so
 
 Install the required packages on the database servers and the web server.
 
-<p><iframe src="https://magicbox.classroom.puppet.com/scenario/install_database_package" width="100%" height="500px" frameborder="0"></iframe></p>
+db1.mycorp.com:
 
-<p><iframe src="https://magicbox.classroom.puppet.com/scenario/install_httpd_package" width="100%" height="500px" frameborder="0"></iframe></p>
+<iframe src="https://magicbox.classroom.puppet.com/scenario/install_database_package" width="100%" height="500px" frameborder="0"></iframe><
 
-<p><iframe src="https://magicbox.classroom.puppet.com/scenario/install_robby_package" width="100%" height="500px" frameborder="0"></iframe></p>
+web1.mycorp.com (Apache web server):
+
+<iframe src="https://magicbox.classroom.puppet.com/scenario/install_httpd_package" width="100%" height="500px" frameborder="0"></iframe>
+
+web1.mycorp.com (Robby application):
+
+<iframe src="https://magicbox.classroom.puppet.com/scenario/install_robby_package" width="100%" height="500px" frameborder="0"></iframe>
