@@ -21,7 +21,7 @@ Each directory in _lmscontent represents a learning component in LearnDot.  The 
 ### Updating Existing Materials to Staging
 
 * Using the editor of your choice, update the relevant markdown files for a learning component.
-* Once you are done editting, stage the files for commit.
+* Once you are done editing, stage the files for commit.
   * `git add <file name>`
 * When you have staged all the files that you want to commit, create a commit.
   * `git commit`
