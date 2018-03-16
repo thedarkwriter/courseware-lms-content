@@ -6,7 +6,7 @@ Type the command `facter -p` to get a list of all facts available.
 
 <iframe src="https://magicbox.classroom.puppet.com/facts/what_are_they" width="100%" height="500px" frameborder="0"></iframe>
 
-Most facts contain a single value like `"hostname": "host.puppet.com"` or `"kernel": "Linux"`. One way to use these facts is to create server-specific attributes.
+Most facts contain a single value like `"hostname": "host.puppet.com"` or `"kernel": "Linux"`. One way to use these facts is to create server-specific attribute values, perhaps as part of a string written to a file.
 
 Example:
 
