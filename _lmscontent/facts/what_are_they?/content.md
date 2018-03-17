@@ -1,4 +1,4 @@
-Puppet automatically creates a set of variables for you called `facts`. <a href="https://puppet.com/docs/puppet/latest/lang_facts_and_builtin_vars.html">Facts</a> contain useful information integral to a node, such as its operating system, its hostname, or its IP address. Use this information to create conditional logic: make code behave a certain way based on a set of conditions. To see a list of all the facts available, enter the command `facter -p` on any system with Puppet installed.
+Puppet automatically creates a set of variables for you called `facts`. <a href="https://puppet.com/docs/puppet/latest/lang_facts_and_builtin_vars.html">Facts</a> contain useful information integral to a node, such as its operating system, its hostname, or its IP address. Use this information to create conditional logic: make code behave a certain way based on a set of conditions. To see a list of all the facts available, type the command `facter -p` on any system with Puppet installed.
 
 ## Task:
 
