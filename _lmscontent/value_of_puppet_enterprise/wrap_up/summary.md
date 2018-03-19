@@ -3,6 +3,7 @@ To successfully complete the course, complete the final quiz below. Your results
 
 ## Resources
 [Puppet Partner Portal](https://puppet.partnerprm.com)
+
 Tools, resources and more for Puppet's partners.
 
 [The Puppet Learning VM](https://puppet.com/download-learning-vm "")
