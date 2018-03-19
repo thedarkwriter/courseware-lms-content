@@ -1,5 +1,5 @@
 {
-  "_displayName_": "Package File Service - Refresh Events",
+  "_displayName_": "Refresh Events",
   "_keyword_": "content_component",
   "created": "2018-01-10 11:09:44",
   "createdById": 31489,
@@ -18,7 +18,7 @@
   "generateProofOfCompletion": "DEFAULT",
   "modified": "2018-01-12 16:23:36",
   "modifiedById": 49633,
-  "name": "Package File Service - Refresh Events",
+  "name": "Refresh Events",
   "orderNumber": 0,
   "price": "0.0 USD",
   "primaryCategoryId": 7,

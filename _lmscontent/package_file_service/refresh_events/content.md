@@ -1,6 +1,6 @@
-You have seen ways to edit an application's configuration file before you start its service. But what if you need to make a change to a service that is already running? Most software requires a restart after you edit the configuration file for that change to take effect. Puppet allows you to refresh using the `subscribe` or `notify` attributes.
+You have seen ways to edit an application's configuration file before you start its service. But what if you need to make a change to a service that is already running? Most software requires a restart or reload after you edit the configuration file for that change to take effect. Puppet allows you to **refresh** a resource using the `subscribe` or `notify` attributes.
 
-Puppet lets you use `notify` and `subscribe` to not only order resources, but send a **refresh**. Refreshing a resource means different things depending on the resource type.
+Puppet provides the `notify` and `subscribe` attributes to not only order resources, but send a **refresh**. Refreshing a resource means different things depending on the resource type.
 
 For example, when you refresh a service resource type, Puppet restarts the service. And when you refresh a mount resource type, Puppet remounts a file mount.
 
