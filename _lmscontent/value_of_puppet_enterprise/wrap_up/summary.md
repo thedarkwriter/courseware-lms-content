@@ -2,6 +2,9 @@
 To successfully complete the course, complete the final quiz below. Your results will appear on the screen to help you identify strengths and areas to learn more about Puppet Enterprise. Below are some great resources to increase your Puppet knowledge!
 
 ## Resources
+[Puppet Partner Portal](https://puppet.partnerprm.com)
+Tools, resources and more for Puppet's partners.
+
 [The Puppet Learning VM](https://puppet.com/download-learning-vm "")
 
 The Puppet Learning VM is an interactive tutorial and learning environment to get you started with Puppet or level up the skills you already have.&nbsp;
