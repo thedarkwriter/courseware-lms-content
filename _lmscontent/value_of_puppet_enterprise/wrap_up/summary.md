@@ -1,5 +1,5 @@
 ## Summary
-Assess how much you have learned by taking the final quiz below. Your answers will appear on the screen and help you identify strengths and areas to learn more about Puppet Enterprise. Below are some great resources to increase your Puppet knowledge!
+To successfully complete the course, complete the final quiz below. Your results will appear on the screen to help you identify strengths and areas to learn more about Puppet Enterprise. Below are some great resources to increase your Puppet knowledge!
 
 ## Resources
 [The Puppet Learning VM](https://puppet.com/download-learning-vm "")
@@ -17,3 +17,7 @@ Choose from a growing library of instructor-led classes delivered in an online e
 [Self-paced Online Courses](https://learn.puppet.com/category/self-paced-training "")
 
 Single topic classes, complete with exercises and quizzes to check your progress are available at any time and any place.
+
+[Case Studies](https://puppet.com/resources/case-study)
+
+Explore examples of how companies large and small found success with Puppet Enterprise.
