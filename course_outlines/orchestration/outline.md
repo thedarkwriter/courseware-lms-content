@@ -94,13 +94,13 @@ __What sub-topics must be covered to achieve the objective?__
 
 
 * Invoke task from CLI:
-	*  Why do they need to know this?
+	*  Core functionality
 	*  What are the key points of this topic?
 	*  Do you have ideas for how to communicate this idea
 
 
 * Invoke task from PE Console:
-	*  Why do they need to know this?
+	*  Core functionality
 	*  What are the key points of this topic?
 	*  Do you have ideas for how to communicate this idea
 
@@ -110,12 +110,12 @@ __What sub-topics must be covered to achieve the objective?__
 
 
 * Select nodes via facts & query in PE Console:
-	*  Why do they need to know this?
+	*  Filters increase utility of the tool and the Console makes it easy to use
 	*  What are the key points of this topic?
 	*  Do you have ideas for how to communicate this topic?
 
 * Select nodes via facts & query in CLI:
-	*  Why do they need to know this?
+	*  CLI queries make the tool more flexible; eg they can be more complex or used in scripts
 	*  What are the key points of this topic?
 	*  Do you have ideas for how to communicate this topic?
 
@@ -124,18 +124,18 @@ __What sub-topics must be covered to achieve the objective?__
 __What sub-topics must be covered to achieve the objective?__
 
 
-* Develop task in language of choic:
-	*  Why do they need to know this?
+* Develop task in language of choice:
+	*  Custom tasks are how you extend the functionality of the tool
 	*  What are the key points of this topic?
 	*  Do you have ideas for how to communicate this topic?
 
 * Package task in module with metadata:
-	*  Why do they need to know this?
+	*  This is how you can share your tasks with others
 	*  What are the key points of this topic?
 	*  Do you have ideas for how to communicate this topic?
 
 * Combine tasks into plans:
-	*  Why do they need to know this?
+	*  Plans allow you to orchestrate complex actions, with conditionals or involving multiple nodes
 	*  What are the key points of this topic?
 	*  Do you have ideas for how to communicate this topic?
 
@@ -145,12 +145,12 @@ __What sub-topics must be covered to achieve the objective?__
 __What sub-topics must be covered to achieve the objective?__
 
 
-	Sub-Topic 1:
-	*  Why do they need to know this?
+* Identify difference in functionality and implementation between the two
+	*  Knowing what tasks/CM can & can't do is crucial to knowing how to choose one or the other
 	*  What are the key points of this topic?
 	*  Do you have ideas for how to communicate this topic?
 
-	Sub-Topic 2:
-	*  Why do they need to know this?
+* Identify the strengths of ad-hoc or scripted orchestration tasks and the strengths of config management
+	*  Besides knowing what's *possible*, deeper understanding is what tool is better for what job
 	*  What are the key points of this topic?
 	*  Do you have ideas for how to communicate this topic?
