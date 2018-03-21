@@ -217,6 +217,12 @@ namespace :migrate do
         path[0] = ''
       end
 
+      # Protect 
+      unless File.exists?(path)
+         Paint["JSON #{path} is missing from stagin",:red]
+         next
+      end
+
       json = JSON.parse(File.read(path))
 
       @lms = connect('production')
