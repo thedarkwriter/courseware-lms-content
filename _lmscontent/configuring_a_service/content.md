@@ -19,7 +19,7 @@ Add the following line to `/var/lib/pgsql/data/postgresql.conf` on db1.mycorp.co
 The file should be owned by `root`, group set to `root` and with `0644` permissions.
 
 ## Task:
-<p><iframe src="https://magicbox.classroom.puppet.com/scenario/creating_db1_postgresql_conf" width="100%" height="500px" frameborder="0"></iframe>
+<p><iframe src="https://magicbox.classroom.puppet.com/scenario/create_db1_postgresql_conf" width="100%" height="500px" frameborder="0"></iframe>
 </p>
 
 Add the following line to `/var/lib/pgsql/data/postgresql.conf` on db2.mycorp.com:
@@ -29,7 +29,7 @@ Add the following line to `/var/lib/pgsql/data/postgresql.conf` on db2.mycorp.co
 The file should be owned by `root`, group set to `root` and with `0644` permissions.
 
 ## Task:
-<p><iframe src="https://magicbox.classroom.puppet.com/scenario/creating_db2_postgresql_conf" width="100%" height="500px" frameborder="0"></iframe>
+<p><iframe src="https://magicbox.classroom.puppet.com/scenario/create_db2_postgresql_conf" width="100%" height="500px" frameborder="0"></iframe>
 </p>
 
 The web1.mycorp.com server needs the following line placed in the file `/etc/robby/robby.cfg`:
