@@ -41,4 +41,3 @@ The web1.mycorp.com server needs the following line placed in the file `/etc/rob
 The `fqdn` fact contains the fully-qualified domain name for the server that is being configured. This fact might have the value of `web1.mycorp.com`, `web2.mycorp.com`, `db1.mycorp.com`, etc. depending on the machine that is being configured.
 
 Next, you will create the `robby.cfg` file with the proper content shown above using a file resource. But in order to do that, first you need to learn more about facts.
-

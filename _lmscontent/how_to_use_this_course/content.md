@@ -19,4 +19,3 @@ Understanding Puppet Language Basics is an essential step in putting your Puppet
 ## Help
 
 If you experience a technical problem during this training, let us know at <a href="mailto:education+support@puppet.com" target="_blank">education+support@puppet.com</a>
-

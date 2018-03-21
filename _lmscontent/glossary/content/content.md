@@ -18,4 +18,3 @@
 **Directory:** In computing, a directory is a catalog containing related files, also sometimes called a folder. A directory can contain other directories (known as subdirectories). These are typically referred to as having a parent-child relationship, with the top-most directory being referred to as the &lsquo;root&rsquo;. [Learn more about directories here.](https://en.wikipedia.org/wiki/Directory_(computing) "")
 
 **Symlink:** Also known as a symbolic link, or a soft link. A symlink points to the entry that contains the data; it does not contain the data itself. [Learn more about symlinks here.](https://en.wikipedia.org/wiki/Symbolic_link "")
-

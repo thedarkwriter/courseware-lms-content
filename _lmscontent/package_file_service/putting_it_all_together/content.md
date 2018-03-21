@@ -33,4 +33,3 @@ service { 'postgresl-server':
 Add resource relationships to the following code so that the resources are managed in the order of package, file, and service. The service should restart if the file resource is changed. You can choose between `before/require` and `notify/subscribe`.
 
 <iframe src="https://magicbox.classroom.puppet.com/scenario/package_file_service" width="100%" height="500px" frameborder="0"></iframe>
-

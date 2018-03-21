@@ -65,4 +65,3 @@ Add `before` or `require` to the following code so that the package resource is 
 Add `before` or `require` to the following code so the `postgresql-server` package resource is managed first and the `postgresql.conf` file resource is managed second.
 
 <iframe src="https://magicbox.classroom.puppet.com/scenario/package_file" width="100%" height="500px" frameborder="0"></iframe>
-

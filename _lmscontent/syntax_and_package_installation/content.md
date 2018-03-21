@@ -52,4 +52,3 @@ web1.mycorp.com (Apache web server):
 web1.mycorp.com (Robby application):
 
 <iframe src="https://magicbox.classroom.puppet.com/scenario/install_robby_package" width="100%" height="500px" frameborder="0"></iframe>
-

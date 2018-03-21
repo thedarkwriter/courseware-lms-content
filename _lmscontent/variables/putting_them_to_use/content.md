@@ -32,4 +32,3 @@ Currently, the code you have been working on in this course has hard-coded packa
 Set the `$package_name` variable to `postgresql-server`.
 
 <iframe src="https://magicbox.classroom.puppet.com/scenario/putting_variables_to_use" width="100%" height="550px" frameborder="0"></iframe>
-

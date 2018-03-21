@@ -9,4 +9,3 @@ This is what Hello world looks like written in Puppet code:
 Now it's your turn to write Hello world using Puppet code. Type the example code from above into the box below.
 
 <iframe src="https://magicbox.classroom.puppet.com/syntax/hello_world" width="100%" height="500px" frameborder="0"></iframe>
-
