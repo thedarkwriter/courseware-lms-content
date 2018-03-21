@@ -5,3 +5,4 @@ You now have some essential building blocks for working with Puppet. Continue yo
 * [Give feedback about this course](https://www.surveygizmo.com/s3/4267715/Self-paced-Training-Survey)
 * [Get answers for your Puppet questions](https://ask.puppet.com/questions/)
 * [Connect with the Puppet community on Slack](https://slack.puppet.com/)
+

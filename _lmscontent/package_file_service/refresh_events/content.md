@@ -58,4 +58,3 @@ Add `notify` or `subscribe` to the following code so that the service is restart
 Add `notify` or `subscribe` to the following code so the `postgresql` service resource is refreshed when the `postgresql.conf` file resource changes.
 
 <iframe src="https://magicbox.classroom.puppet.com/scenario/file_service" width="100%" height="500px" frameborder="0"></iframe>
-

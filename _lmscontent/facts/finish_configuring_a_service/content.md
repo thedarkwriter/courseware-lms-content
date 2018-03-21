@@ -8,3 +8,4 @@ Now that you've learned more about Puppet facts, write some Puppet code to creat
 </p>
 
 You have now configured the service with the required contents in the `robby.cfg`. The next step is to actually start the service after it has been configured, and you will do that in the next section.
+
