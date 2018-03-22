@@ -4,7 +4,7 @@ Now that you've learned more about Puppet facts, write some Puppet code to creat
 
 ## Task:
 
-<p><iframe src="https://magicbox.classroom.puppet.com/syntax/modifying_the_system" width="100%" height="500px" frameborder="0"></iframe>
+<p><iframe src="https://magicbox.classroom.puppet.com/scenario/create_robby_cfg" width="100%" height="500px" frameborder="0"></iframe>
 </p>
 
 You have now configured the service with the required contents in the `robby.cfg`. The next step is to actually start the service after it has been configured, and you will do that in the next section.
