@@ -1,4 +1,5 @@
 ### Glossary
+
 **Declarative Language:** A style of coding that describes the end result, without the steps of how to do it. [You can learn more about declarative languages and why they are so great here](https://www.netguru.co/blog/imperative-vs-declarative).
 
 **Resource:** Something on a server&nbsp;you would like to manage. [Learn more about resources here](https://puppet.com/docs/puppet/latest/lang_resources.html).
