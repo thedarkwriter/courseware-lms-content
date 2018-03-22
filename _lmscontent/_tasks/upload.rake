@@ -48,6 +48,7 @@ namespace :upload do
 
   # Create learning component
   def create(conditions)
+    puts "Condtions: #{conditions}"
     @lms.create_component(conditions)
   end
 
