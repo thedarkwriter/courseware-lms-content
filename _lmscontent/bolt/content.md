@@ -1,14 +1,13 @@
 # Objectives 
 
-Puppet Tasks lets you easily automate ad hoc tasks and eliminate manual work across your infrastructure and applications.
+With Puppet Tasks, you can easily automate ad hoc tasks and eliminate manual work across your infrastructure and applications.
 
 In this training, you will get started with Bolt: a standalone, agentless open source task runner to execute imperative, ad hoc tasks in smaller infrastructures. The Puppet task runner is driven through a command line interface and executes commands via SSH and WinRM.
 
 This training has two objectives:
 
-* You will know how to get started with Puppet Tasks using Bolt
-
-* You will learn how to run a command, script, and task using Bolt 
+* You will know how to get started with Puppet Tasks using Bolt.
+* You will learn how to run a command, script, and task using Bolt. 
 
 # Video
 Eric Sorenson, director of product management at Puppet, walks you through how to run tasks via Puppet Bolt. After watching this video, you will know how to turn a script into a task and how and why to add metadata to your tasks. 
