@@ -12,7 +12,7 @@ Now let's move on to configuring the software packages that have been installed 
 
 **NOTE:** For the sake of simplicity, not every required PostgreSQL parameter will be configured.
 
-Add the following line to `/var/lib/pgsql/data/postgresql.conf` on db1.mycorp.com:
+For `/var/lib/pgsql/data/postgresql.conf` you will need to add the following to the content attribute on db1.mycorp.com:
 
 `listen_addresses = '192.168.0.10'`
 
@@ -22,7 +22,7 @@ The file should be owned by `root`, group set to `root` and with `0644` permissi
 <p><iframe src="https://magicbox.classroom.puppet.com/scenario/create_db1_postgresql_conf" width="100%" height="500px" frameborder="0"></iframe>
 </p>
 
-Add the following line to `/var/lib/pgsql/data/postgresql.conf` on db2.mycorp.com:
+For `/var/lib/pgsql/data/postgresql.conf` you will need to add the following to the content attribute on db2.mycorp.com:
 
 `primary_conninfo = 'host=192.168.0.10 port=5432 user=repl password=xyzzy'`
 
