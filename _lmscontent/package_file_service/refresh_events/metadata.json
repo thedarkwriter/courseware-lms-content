@@ -24,7 +24,7 @@
   "primaryCategoryId": 7,
   "status": "ENABLED",
   "urlName": "package-file-service---refresh-events",
-  "visibility": "PUBLIC",
+  "visibility": "HIDDEN",
   "duration.minutesPerDay": 10,
   "duration.days": 0
 }
