@@ -1,4 +1,4 @@
-What are **resources**? In Puppet parlance, resources are characteristics of a server that need to be managed over time, such as creating a user, installing a package or setting a kernel parameter.
+What are **resources**? In Puppet parlance, resources are characteristics of a server that need to be managed over time, such as creating a user, installing a package, or setting a kernel parameter.
 
 These are the same things a sysadmin would manually manage at the command line or with a GUI application. The power of resources is you can express system configuration in code to automate it and apply it consistently to one or more servers.
 
@@ -16,11 +16,11 @@ These are the components of a resource statement in the Puppet language. Every r
 
 **What is a type?**
 
-Every resource is associated with a resource **type**, which describes what kind of configuration it manages and provides knobs and settings for configuring that resource. Puppet has many built-in resource types, like files, cron jobs, services, etc. You used the `file` type when you wrote Hello world in Puppet code earlier in this course. See the <a href="https://puppet.com/docs/puppet/latest/type.html" target="_blank">resource type reference</a> for information about the built-in resource types.
+Every resource is associated with a resource **type** that describes what kind of configuration it manages and provides knobs and settings for configuring that resource. Puppet has many built-in resource types, like files, cron jobs, services, etc. See the <a href="https://puppet.com/docs/puppet/latest/type.html" target="_blank">resource type reference</a> for information about the built-in resource types.
 
 **What is a title?**
 
-A **title** is a string that identifies a resource to Puppet. A title doesn't have to match the name of what you're managing on the target system, but you'll often want it to. In the Hello world example, the title of the file resource was `/etc/motd`, which is the location of the file managed by Puppet.
+A **title** is a string that identifies a resource to Puppet. A title doesn't have to match the name of what you're managing on the target system, but you'll often want it to. 
 
 **What are attributes?**
 
