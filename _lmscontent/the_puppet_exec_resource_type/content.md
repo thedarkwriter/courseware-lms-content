@@ -1,18 +1,15 @@
-<link rel="stylesheet" href="/static/selfpaced/selfpaced.css" />
-
 <script src="https://try.puppet.com/js/selfpaced.js"></script>
 
 <div id="lesson">
   <div id="instructions">
-    <div class="instruction-header">
-      <p><i class="fa fa-graduation-cap"></i>
-Lesson</p>
-    </div>
+    <h3 class="instruction-header">
+      <strong><i class="fa fa-graduation-cap"></i> Lesson</strong>
+    </h3>
     <div class="instruction-content">
       <!-- Primary Text of the lesson -->
       <!-------------------------------->
 
-      <h1 id="the-exec-resource">The Exec Resource</h1>
+      <h3 id="the-exec-resource">The Exec Resource</h3>
       <p>The Puppet exec resource allows you to execute a command directly using Puppet. It is the most versatile resource because it can do anything that the underlying operating system can do. That versatility makes it tempting to use, but the exec should really only be used as a last resort. If there isn&#8217;t a built in resource type that does what you need, there is often one provided by a module on the forge. Before writing an exec, always check the forge.</p>
 
       <p>To learn to use the exec resource properly, it&#8217;s important to begin with the idea of desired state. Imagine you have a script called <code>webuser</code> that manages users for a web app and it can&#8217;t be easily replaced with Puppet code because it contains some complex business logic. The hypothetical <code>webuser</code> script has a couple of command line options: <code>webuser add &lt;username&gt;</code> creates a new user, <code>webuser check &lt;username&gt;</code> returns info about that user or an error if your user doesn&#8217;t exist, and <code>webuser del &lt;username&gt;</code> deletes the user.</p>
@@ -78,10 +75,9 @@ exec {'webupdate':
 
       <!-- End of primary test of the lesson -->
     </div>
-    <div class="instruction-header">
-      <p><i class="fa fa-desktop"></i>
-Practice</p>
-    </div>
+    <h3 class="instruction-header">
+      <strong><i class="fa fa-desktop"></i> Practice</strong>
+    </h3>
     <div class="instruction-content">
       <!-- High level description of the exercise. -->
       <!-------------------------------------------->
@@ -96,10 +92,9 @@ Practice</p>
 
     </div>
 
-    <div class="instruction-header">
-      <p><i class="fa fa-pencil"></i>
-Notes</p>
-    </div>
+    <h3 class="instruction-header">
+      <strong><i class="fa fa-pencil"></i> Notes</strong>
+    </h3>
 
   </div>
   <div id="terminal">
