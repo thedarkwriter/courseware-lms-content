@@ -1,4 +1,4 @@
-Puppet automatically creates a set of variables for you called `facts`. <a href="https://puppet.com/docs/puppet/latest/lang_facts_and_builtin_vars.html">Facts</a> contain useful information integral to a node, such as its operating system, its hostname, or its IP address. Use this information to create conditional logic: make code behave a certain way based on a set of conditions. To see a list of all the facts available, type the command `facter -p` on any system with Puppet installed.
+Puppet automatically creates a set of variables for you called `facts`. You will learn more about how variables work in Puppet later in the course. For now, just know that a variable is a placeholder for a reusable piece of data. <a href="https://puppet.com/docs/puppet/latest/lang_facts_and_builtin_vars.html">Facts</a> contain useful information integral to a node, such as its operating system, its hostname, or its IP address. Use this information to create conditional logic: make code behave a certain way based on a set of conditions. To see a list of all the facts available, type the command `facter -p` on any system with Puppet installed.
 
 ## Task:
 
@@ -16,7 +16,7 @@ file { '/etc/motd':
 }
 </pre>
 
-In this example, any system using this code will have its own hostname written into the file. In this way, you can have server-specific outcomes with a single piece of code. This means you don't have to rewrite your code for every single machine you're managing. Notice that you use the <pre>$</pre> and <pre>{ }</pre>to let Puppet know you are using a variable.
+In this example, any system using this code will have its own hostname written into the file. In this way, you can have server-specific outcomes with a single piece of code. This means you don't have to rewrite your code for every single machine you're managing. Notice that in this example, you use a <pre>$</pre> plus <pre>{ }</pre>to indidcate the name of the variable. You will learn more about formatting variables later in the course, and you can refer to the <a href= "https://puppet.com/docs/puppet/5.2/lang_variables.html#interpolation"> Facts and Built-in Variables</a> section of the Puppet docs for more information.
 
 ## Task:
 
