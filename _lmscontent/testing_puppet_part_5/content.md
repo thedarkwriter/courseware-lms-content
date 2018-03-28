@@ -1,24 +1,14 @@
-<!--
-This is the template for the self-paced courses.
-Put your content in between the comments that mark
-out the different sections.  Text should be written
-in markdown.
--->
-
-<link rel="stylesheet" href="/static/selfpaced/selfpaced.css" />
-
 <script defer="" src="//code.jquery.com/jquery-1.11.2.js"></script>
 
 <script defer="" src="https://try.puppet.com/js/selfpaced.js"></script>
 
 <div id="instructions">
-  <div class="instruction-header">
-    <p><i class="fa fa-graduation-cap"></i>
-Lesson</p>
-  </div>
+  <h3 class="instruction-header">
+    <strong><i class="fa fa-graduation-cap"></i> Lesson</strong>
+  </h3>
   <div class="instruction-content">
 
-    <h2 id="acceptance-tests">Acceptance tests</h2>
+    <h3 id="acceptance-tests">Acceptance tests</h3>
 
     <p>The last level of testing before the code is actually deployed is acceptance tests. Acceptance tests go beyond just testing the compiled catalog and actually enforce the code being tested on a pre-production node or nodes.</p>
 

@@ -1,20 +1,17 @@
-<link rel="stylesheet" href="/static/selfpaced/selfpaced.css" />
+<script defer="[]" src="//code.jquery.com/jquery-1.11.2.js"></script>
 
-<script defer="[]" src="//code.jquery.com/jquery-1.11.2.js" />
-
-<script defer="[]" src="https://try.puppet.com/js/selfpaced.js" />
+<script defer="[]" src="https://try.puppet.com/js/selfpaced.js"></script>
 
 <div id="instructions">
-  <div class="instruction-header">
-    <p><i class="fa fa-graduation-cap" />
-Lesson</p>
-  </div>
+  <h3 class="instruction-header">
+    <strong><i class="fa fa-graduation-cap"></i> Lesson</strong>
+  </h3>
   <div class="instruction-content">
-    <h2 id="testing-puppet-code">Testing Puppet code</h2>
+    <h3 id="testing-puppet-code">Testing Puppet code</h3>
 
     <p>Automated testing is an essential part of creating solid, reliable Puppet code. Developing tests for Puppet code does not need to be a burden, but it can be difficult to know where to start.</p>
 
-    <h2 id="levels-of-testing-to-filter-out-bugs">Levels of testing to filter out bugs</h2>
+    <h3 id="levels-of-testing-to-filter-out-bugs">Levels of testing to filter out bugs</h3>
 
     <p>Imagine your tests like a series of sieves or filters trying to filter rocks and debris out of a pile of rocky soil. You&#8217;d want to start with a cheap sturdy filter to first remove the larges boulders.</p>
 

@@ -1,5 +1,3 @@
-<link rel="stylesheet" href="/static/selfpaced/selfpaced.css" />
-
 <script defer="" src="//code.jquery.com/jquery-1.11.2.js"></script>
 
 <script defer="" src="https://try.puppet.com/js/selfpaced.js"></script>
@@ -8,16 +6,15 @@
 
   <div id="instructions">
 
-    <div class="instruction-header">
-      <p><i class="fa fa-graduation-cap"></i>
-Lesson</p>
-    </div>
+    <h3 class="instruction-header">
+      <strong><i class="fa fa-graduation-cap"></i> Lesson</strong>
+    </h3>
     <div class="instruction-content">
 
       <!-- Primary Text of the lesson -->
       <!-------------------------------->
 
-      <h2 id="syntax-and-style-validation">Syntax and style validation</h2>
+      <h3 id="syntax-and-style-validation">Syntax and style validation</h3>
 
       <p>Validating code for syntax and style is a good place to start with testing your Puppet code.</p>
 
@@ -36,10 +33,9 @@ Lesson</p>
       <!-- End of primary test of the lesson -->
 
     </div>
-    <div class="instruction-header">
-      <p><i class="fa fa-desktop"></i>
-Practice</p>
-    </div>
+    <h3 class="instruction-header">
+      <strong><i class="fa fa-desktop"></i> Practice</strong>
+    </h3>
 
     <div class="instruction-content">
 
@@ -52,10 +48,9 @@ Practice</p>
 
     </div>
 
-    <div class="instruction-header">
-      <p><i class="fa fa-pencil"></i>
-Notes</p>
-    </div>
+    <h3 class="instruction-header">
+      <strong><i class="fa fa-pencil"></i> Notes</strong>
+    </h3>
     <div class="instruction-content">
 
       <!-- Other notes -->

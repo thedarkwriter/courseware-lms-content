@@ -1,20 +1,17 @@
-<link rel="stylesheet" href="/static/selfpaced/selfpaced.css" />
+<script defer="[]" src="//code.jquery.com/jquery-1.11.2.js"></script>
 
-<script defer="[]" src="//code.jquery.com/jquery-1.11.2.js" />
-
-<script defer="[]" src="https://try.puppet.com/js/selfpaced.js" />
+<script defer="[]" src="https://try.puppet.com/js/selfpaced.js"></script>
 
 <div id="lesson">
 
   <div id="instructions">
 
-    <div class="instruction-header">
-      <p><i class="fa fa-graduation-cap" />
-Lesson</p>
-    </div>
+    <h3 class="instruction-header">
+      <strong><i class="fa fa-graduation-cap"></i> Lesson</strong>
+    </h3>
     <div class="instruction-content">
 
-      <h2 id="unit-tests">Unit tests</h2>
+      <h3 id="unit-tests">Unit tests</h3>
 
       <p>Unit tests are short simple tests that form the first line of defense for your code. They are called unit tests because they are limited scope tests that focus on small units of code.</p>
 
@@ -72,7 +69,7 @@ end
 
       <p>This is where unit tests really shine, once you&#8217;ve developed the habit of writing them alongside all of your code they&#8217;ll offer a simple way to catch those errors before your code is even deployed to a testing environment. Although the syntax is correct, missing a required parameter or trying to set one that doesn&#8217;t exist will cause a compilation error.</p>
 
-      <h2 id="running-unit-tests">Running Unit tests</h2>
+      <h3 id="running-unit-tests">Running Unit tests</h3>
 
       <p>If you&#8217;re not familiar with ruby and rspec, running your tests can seem overwhelming. Thankfully, <code>puppetlabs_spec_helper</code> provides almost everything you&#8217;ll need to actually run your tests.</p>
 
@@ -147,10 +144,9 @@ require 'spec_helper'
       <p><a href="https://puppet.com/blog/next-generation-of-puppet-module-testing">This blog post</a> provides more details of what you&#8217;ll need to set up.</p>
 
     </div>
-    <div class="instruction-header">
-      <p><i class="fa fa-desktop" />
-Practice</p>
-    </div>
+    <h3 class="instruction-header">
+      <strong><i class="fa fa-desktop"></i> Practice</strong>
+    </h3>
     <div class="instruction-content">
 
       <p>Take a look at the ssh module in <code>/root/puppetcode/modules</code>. The Puppet code has some problems. Start by running the tests to find out what&#8217;s wrong and fix it.</p>
@@ -159,6 +155,6 @@ Practice</p>
   </div>
 
   <div id="terminal">
-    <iframe id="try" src="https://try.puppet.com/sandbox/?course=testing" name="terminal" />
+    <iframe id="try" src="https://try.puppet.com/sandbox/?course=testing" name="terminal"></iframe>
   </div>
 </div>

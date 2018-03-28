@@ -1,5 +1,3 @@
-<link rel="stylesheet" href="/static/selfpaced/selfpaced.css" />
-
 <script defer="" src="//code.jquery.com/jquery-1.11.2.js"></script>
 
 <script defer="" src="https://try.puppet.com/js/selfpaced.js"></script>
@@ -8,16 +6,15 @@
 
   <div id="instructions">
 
-    <div class="instruction-header">
-      <p><i class="fa fa-graduation-cap"></i>
-Lesson</p>
-    </div>
+    <h3 class="instruction-header">
+      <strong><i class="fa fa-graduation-cap"></i> Lesson</strong>
+    </h3>
     <div class="instruction-content">
 
       <!-- Primary Text of the lesson -->
       <!-------------------------------->
 
-      <h2 id="increasing-coverage">Increasing coverage</h2>
+      <h3 id="increasing-coverage">Increasing coverage</h3>
 
       <p>Unit tests can test more than just compilation, you can write tests that will check that your code actually does what you think it does. In Puppet, there are two levels of thinking about this.</p>
 
@@ -104,7 +101,7 @@ end
 
       <p>It also isn&#8217;t generally necessary to have 100% coverage for your tests. 80% coverage, focusing on those pieces most likely to fail is usually sufficient. The other 20% of time is better spent on higher level testing or increasing coverage in other modules. That said, it&#8217;s often worth adding a few unit tests for unsupported configurations to makes sure that your module also fails gracefully and provides informative error messages.</p>
 
-      <h2 id="integration-tests">Integration tests</h2>
+      <h3 id="integration-tests">Integration tests</h3>
 
       <p>Unit tests are made to test small units of code, integration tests focus on bringing those units together.</p>
 
@@ -114,7 +111,7 @@ end
 
       <p>You don&#8217;t need to cover every possible use for your module, just focus your attention on common ones. If you&#8217;re using resource types from other modules, that usage should be covered by your integration tests.</p>
 
-      <h2 id="test-driven-development">Test driven development</h2>
+      <h3 id="test-driven-development">Test driven development</h3>
 
       <p>You might be thinking that the syntax of those tests reads a bit like a specification of how the code should work. For example, you might specify that code by writing &#8220;An apache module that will install the apache package on RedHat and the httpd package on Debian. It should also let you specify an alternate document root.&#8221; etc.</p>
 
@@ -127,17 +124,16 @@ end
       <!-- End of primary test of the lesson -->
 
     </div>
-    <div class="instruction-header">
-      <p><i class="fa fa-desktop"></i>
-Practice</p>
-    </div>
+    <h3 class="instruction-header">
+      <strong><i class="fa fa-desktop"></i> Practice</strong>
+    </h3>
 
     <div class="instruction-content">
 
       <!-- High level description of the exercise. -->
       <!-------------------------------------------->
 
-      <h2 id="exercises">Exercises</h2>
+      <h3 id="exercises">Exercises</h3>
 
       <p>We&#8217;ve provided a module with a few fully written tests and a few that only have comments describing the specification. None of the Puppet code is written yet. Take a look at the tests and write some Puppet code to make them pass.</p>
 
