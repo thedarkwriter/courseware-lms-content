@@ -23,8 +23,8 @@ Now that you are more familiar with the `service` resource type, update the foll
 
 As you develop Puppet source code, you will write multiple resources to be applied to a specific server. Since the runbook specified the steps to configure each server in a certain order, it's important to ensure that Puppet applies changes to a single server in that same order.
 
-For instance, we don't want to try starting the `robby` service before the configuration file has been update. This can be achieved with **resource relationships**.
+For instance, we don't want to try starting the `robby` service before the configuration file has been updated. This can be achieved with **resource relationships**.
 
 > **Pro Tip:**
-
-> Resource relationships control the order that Puppet applies changes on a **single server** not across multiple servers.
+>
+> Resource relationships control the order that Puppet applies changes on a **single server**, not across multiple servers.
