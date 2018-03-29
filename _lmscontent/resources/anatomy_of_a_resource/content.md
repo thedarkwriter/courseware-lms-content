@@ -1,4 +1,4 @@
-What are **resources**? In Puppet parlance, resources are characteristics of a server that need to be managed over time, such as creating a user, installing a package, or setting a kernel parameter.
+What are **resources**? In Puppet parlance, resources are characteristics of a server that need to be managed over time, such as a user, a package, or a kernel parameter.
 
 These are the same things a sysadmin would manually manage at the command line or with a GUI application. The power of resources is you can express system configuration in code to automate it and apply it consistently to one or more servers.
 
