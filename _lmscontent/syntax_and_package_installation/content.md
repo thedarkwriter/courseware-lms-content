@@ -42,7 +42,7 @@ Install the required packages on the database servers and the web server. The fi
 
 db1.mycorp.com:
 
-<iframe src="https://magicbox.classroom.puppet.com/scenario/install_database_package" width="100%" height="500px" frameborder="0"></iframe><
+<iframe src="https://magicbox.classroom.puppet.com/scenario/install_database_package" width="100%" height="500px" frameborder="0"></iframe>
 
 web1.mycorp.com (Apache web server):
 
