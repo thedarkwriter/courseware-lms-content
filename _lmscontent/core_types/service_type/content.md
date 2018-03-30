@@ -21,7 +21,7 @@ Now that you are more familiar with the `service` resource type, update the foll
 
 <iframe src="https://magicbox.classroom.puppet.com/scenario/start_robby_service" width="100%" height="500px" frameborder="0"></iframe>
 
-As you develop Puppet source code, you will write multiple resources to be applied to a specific server. Since the runbook specified the steps to configure each server in a certain order, it's important to ensure that Puppet applies changes to a single server in that same order.
+As you develop Puppet source code, you will write multiple resources to be applied to a specific server. Since the runbook specified the steps to configure each server in a certain order, it's important to ensure that Puppet applies changes to each server in that same order.
 
 For instance, we don't want to try starting the `robby` service before the configuration file has been updated. This can be achieved with **resource relationships**.
 
