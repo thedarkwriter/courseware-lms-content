@@ -10,7 +10,7 @@ After completing this training, you will be able to:
 << embed video here >>
 
 ### Resources
-* Learn about git branching strategies
+* [Learn about git branching strategies](https://www.atlassian.com/git/tutorials/using-branches)
 * Read Pipelines documentation {link needed}
 
 ### Task 
