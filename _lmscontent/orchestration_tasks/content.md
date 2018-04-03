@@ -249,7 +249,7 @@ mailserver outgoing message queue. These are not well suited for Puppet because
 they're a one-time action, but they'd make great tasks. On the other hand, the
 job of making sure that the node is running the latest version of Apache or
 Postfix is a long term configuration management job and pushing it out via Tasks
-would not gein you the benefits and peace of mind that managing the resources
+would not gain you the benefits and peace of mind that managing the resources
 with Puppet would.
 
 We hope you enjoyed this session and are just as excited about running Tasks in
@@ -257,7 +257,7 @@ Puppet Enterprise as we are. If you'd like to kick the tires and practice your
 Task skills, we invite you to try out the [Hands on Lab](https://github.com/puppetlabs/tasks-hands-on-lab).
 This covers the full Bolt ecosystem, which is the open source task runner
 subsystem of Puppet Orchestration. Bolt uses SSH and WinRM as transport mechanisms,
-while Puppet Orchestration uses your exising Puppet infrastructure. For the most
+while Puppet Orchestration uses your existing Puppet infrastructure. For the most
 part, where the Hands on Lab instructs you to run `bolt task`, you can also run
 `puppet task` to accomplish the same results. This tutorial also covers writing
 Puppet Plans, which are scripts that can programmatically aggregate multiple Tasks
