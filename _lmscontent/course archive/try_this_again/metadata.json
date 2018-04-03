@@ -15,13 +15,12 @@
   "duration.minutesPerDay": 30,
   "generateCertificate": "DEFAULT",
   "generateProofOfCompletion": "DEFAULT",
-  "name": "Freya is Annoying!",
+  "name": "Try this AGAIN",
   "orderNumber": 0,
   "price": "0.00 USD",
   "primaryCategoryId": 10,
   "providerId": 1,
   "status": "ENABLED",
-  "urlName": "freya-is-annoying",
+  "urlName": "try-this-again",
   "visibility": "HIDDEN"
 }
-        
