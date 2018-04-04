@@ -47,7 +47,7 @@ being created on the repo. These must be tagged with a specific name format (see
 2. Add a description of what the release contains and then publish release. This tag will represent any changes since the LAST push to production. Make your notes as complete as possible.
 3. Ensure you are in the repo folder on your machine to run the following rake tasks.
 3. Run a  diff using either either `rake migrate:production` on the command line or using compare in GitHub: __e.g.:__ https://github.com/puppetlabs/courseware-lms-content/compare/v1.1...v2018.03.30.01
-4. On the command line, run <code>rake download:repo</code>.
-5. To finish the process and push all your changes live, run <code>rake release:production</code>.
+4. On the command line, run `rake download:repo`.
+5. To finish the process and push all your changes live, run `rake release:production`.
 6. Check your content in the [production site](https://learn.puppet.com/).
 
