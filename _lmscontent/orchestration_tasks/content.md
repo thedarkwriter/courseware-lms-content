@@ -147,7 +147,7 @@ choose a query from the list and then update a parameter.
 
 We could also run that from the command line. A simple workflow to get started
 might be to use the PE Console to generate and preview the desired PQL query,
-and then copy pasting it into the script you're writing.
+and then copying/pasting it into the script you're writing.
 
     $ puppet task run facter fact=os.release.major --query 'inventory[certname] { facts.os.name = "CentOS" }'
     Starting job ...
@@ -171,21 +171,21 @@ and then copy pasting it into the script you're writing.
     Job failed. 3 nodes failed, 0 nodes skipped, 81 nodes succeeded.
     Duration: 0 sec
 
-Of course, the true power of Puppet Tasks comes when you learn how to write your
+Of course, the true power of Puppet tasks comes when you learn how to write your
 own. Tasks are very similar to simple scripts, written in any language you like.
 To turn a shell script into a task, you'd put it in a `tasks` directory of any
-Puppet module and write a metadata file to describe how it works. This allows
-you to reuse and share Tasks quite easily.
+Puppet module and write a metadata file that describes how it works. This allows
+you to reuse and share tasks quite easily.
 
 Let's start with an extraordinarily simple shell script that just calculates how
 many packages are installed on a RedHat family system.
 
     #! /bin/bash
-    # We need to drop the first line, since it's just a header
+    # We need to drop the first line, since it's a header
     expr $(yum list installed --quiet | wc -l) - 1
     
-To make this into a task, we simply create a Puppet module, and put this into
-that module's tasks directory along with a `.json` file with the same name.
+To make this into a task, we create a Puppet module and put this file into
+the module's `tasks` directory along with a `.json` file with the same name.
 
     $ tree packages/
     packages/
@@ -193,7 +193,7 @@ that module's tasks directory along with a `.json` file with the same name.
         ├── yum.json
         └── yum.sh
     
-The `yum.json` file simply describes how to interact with the task. The minimum
+The `yum.json` file describes how to interact with the task. The minimum
 useful file might look like the following, but you can describe parameters, data
 types, enable noop mode, etc. The [Writing Tasks](https://puppet.com/docs/bolt/0.x/writing_tasks.html)
 docs page has more information.
@@ -203,7 +203,7 @@ docs page has more information.
       "description": "Returns the number of yum packages installed"
     }
 
-As soon as the module is installed in the Puppet Master's you can run it, just
+As soon as the module is installed on the Puppet master, you can run it just
 like any other task and get back the information you requested. Note that the
 name of the task is `{module name}::{script name}`
 
@@ -229,37 +229,38 @@ name of the task is `{module name}::{script name}`
     Job failed. 3 nodes failed, 0 nodes skipped, 81 nodes succeeded.
     Duration: 0 sec
 
-The Puppet Orchestrator will handle distributing the task everywhere it needs to
-be and then executing it and returning the results. Because these scripts will be
+The Puppet Orchestrator handles distributing the task everywhere it needs to
+be, executing it and returning the results. Because these scripts will be
 run on multiple nodes and might take untrusted input specified by system
 administrators, you should ensure that you write your scripts to handle untrusted
 data in a safe manner. See the [Writing Tasks](https://puppet.com/docs/bolt/0.x/writing_tasks.html) docs page for some guidelines on writing secure code.
 
-So that was sort of a whirlwind introduction to the world of Puppet Tasks. Now,
+So that was sort of a whirlwind introduction to the world of Puppet tasks. Now,
 you might be tempted to sit down and smash out a lot of tasks to perform all your
 maintenance and configuration tasks. Before you do this, you should take a moment
 to consider long-term maintainability. In many cases, taking the time to update
 shell script methodologies might serve your purposes better.
 
 Jobs that are simple one-time actions or that must be orchestrated across
-multiple nodes in the correct sequence are great candidates for Puppet Tasks.
-For example, you might want a Task to restart your webserver or clear the
+multiple nodes in the correct sequence are great candidates for Puppet tasks.
+For example, you might want a task to restart your webserver or clear the
 mailserver outgoing message queue. These are not well suited for Puppet because
 they're a one-time action, but they'd make great tasks. On the other hand, the
 job of making sure that the node is running the latest version of Apache or
-Postfix is a long term configuration management job and pushing it out via Tasks
-would not gein you the benefits and peace of mind that managing the resources
+Postfix is a long term configuration management job and pushing it out via tasks
+would not gain you the benefits and peace of mind that managing the resources
 with Puppet would.
 
-We hope you enjoyed this session and are just as excited about running Tasks in
+We hope you enjoyed this session and are just as excited about running tasks in
 Puppet Enterprise as we are. If you'd like to kick the tires and practice your
 Task skills, we invite you to try out the [Hands on Lab](https://github.com/puppetlabs/tasks-hands-on-lab).
 This covers the full Bolt ecosystem, which is the open source task runner
-subsystem of Puppet Orchestration. Bolt uses SSH and WinRM as transport mechanisms,
-while Puppet Orchestration uses your exising Puppet infrastructure. For the most
-part, where the Hands on Lab instructs you to run `bolt task`, you can also run
-`puppet task` to accomplish the same results. This tutorial also covers writing
-Puppet Plans, which are scripts that can programmatically aggregate multiple Tasks
-in sequence, or make conditional runtime decisions about them.
+subsystem of Puppet Orchestration. Bolt uses SSH and WinRM as transport
+mechanisms, while Puppet Orchestration uses your exising Puppet infrastructure.
+For the most part, where the Hands on Lab instructs you to run `bolt task`, you
+can also run `puppet task` to accomplish the same results. The tutorial also
+covers writing Puppet plans, which are scripts that can programmatically
+aggregate multiple tasks in sequence, or make conditional runtime decisions about
+them.
 
 Thanks for checking it out and we'll see you next time!
