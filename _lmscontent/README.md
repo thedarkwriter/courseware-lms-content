@@ -40,6 +40,14 @@ pairs in the `metadata.json` file. A template for this file exists
 All commits made to this repo that contain changes to the learning components in
 this folder are pushed to staging. Production changes are published by new
 [releases](https://github.com/puppetlabs/courseware-lms-content/releases/new)
-being created on the repo. These must be in the format `v1.0`. Its recommended
-to use the [Semantic versioning](https://semver.org/) standard when determining
-the number for a release. E.g. `v1.0` vs `v2.0` represents a "breaking" change.
+being created on the repo. These must be tagged with a specific name format (see below).
+
+### Step-by-Step Process
+1. Tag release in the repository using datevar convention with a numeric suffix and prepended by the letter `v`: __e.g.:__ v2018.03.01.01
+2. Add a description of what the release contains and then publish release. This tag will represent any changes since the LAST push to production. Make your notes as complete as possible.
+3. Ensure you are in the repo folder on your machine to run the following rake tasks.
+3. Run a  diff using either either `rake migrate:production` on the command line or using compare in GitHub: __e.g.:__ https://github.com/puppetlabs/courseware-lms-content/compare/v1.1...v2018.03.30.01
+4. On the command line, run `rake download:repo`.
+5. To finish the process and push all your changes live, run `rake release:production`.
+6. Check your content in the [production site](https://learn.puppet.com/).
+
