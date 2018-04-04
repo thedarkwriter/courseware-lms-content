@@ -45,7 +45,7 @@ to use the [Semantic versioning](https://semver.org/) standard when determining
 the number for a release. E.g. `v1.0` vs `v2.0` represents a "breaking" change.
 
 ### Step-by-Step Process
-1. Tag release in the repository using datevar convention prepended by the letter `v`:   __e.g.:__ v2018.03.01
+1. Tag release in the repository using datevar convention with a numeric suffix and prepended by the letter `v`:   __e.g.:__ v2018.03.01.01
 2. Add a description of what the release contains and then publish release This tag will represent any changes since the LAST push to production. Make your notes as complete as possible
 3. Ensure you are in the repo folder on your machine to run the following rake tasks
 3. Run a  diff using either either `rake migrate:production` on the command line using compare in GitHub
