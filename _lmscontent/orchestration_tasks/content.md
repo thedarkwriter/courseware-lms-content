@@ -1,17 +1,17 @@
-# Introduction to Puppet Orchestration 
+# Introduction to Puppet Orchestration and Tasks
 
-Puppet Tasks are a way to solve problems that don't fit well into Puppet's
-traditional configuration management model.
+Puppet **tasks** are a way to solve problems that don't fit well into Puppet's
+traditional declarative configuration management model.
 
 As we know, Puppet is great at modeling resources, and then enforcing state over
-time. It will check the state of a resource and then fix it if it's wrong. Then
-Puppet will send a report back to the Puppet Master if it changed anything. But
-sometimes you're not modeling the state of a resource. Sometimes you just need
-to orchestrate "point-in-time" changes. Instead of long-term configuration
-management, you just need to make something happen and be done with it. Puppet
-Tasks is a really simple way to do that and are quickest way to immediately
-upgrade packages, restart services, or perform any other type of single-action
-executions on your nodes.
+time. It will check the state of a resource, fix it if it's wrong, and send a
+report back to the Puppet Master if it changed anything. But sometimes you're not
+modeling the state of a resource. Instead, you just need to orchestrate
+"point-in-time" changes. Instead of long-term configuration management, you
+need to make something happen and be done with it. Puppet tasks are a
+simple way to do that and are the quickest way to immediately upgrade packages,
+restart services, or perform any other type of single-action executions on your
+nodes.
 
 The Puppet Orchestrator uses your existing Puppet Enterprise infrastructure to
 run tasks everywhere you need them. This allows you to scale up to global
@@ -20,31 +20,31 @@ you don't have your target nodes Puppetized yet, you can also run tasks via SSH
 or WinRM covered in the open source [Bolt documentation](https://puppet.com/docs/bolt/latest/bolt.html).
 
 Let's get started and run a task across our entire infrastructure. Don't worry,
-it won't be anything fun like `halt`, we'll run something more benign and just
+it won't be anything fun like `halt`! We'll run something more benign and just
 echo out the string "Hello world!" from each node.
 
-In *Tasks* tab of the PE Console, we'll just type in the name of the task,
+In the *Tasks* tab of the PE Console, we'll type in the name of the task,
 `echo`. Notice how a list appears and filters down as you type the word. We'll
 come back to that in a moment. Now we'll enter the message we'd like it to
 say, choose a Node Group from the Inventory section and run the job!
 
 ![Hello World task](pe_console_running.png)
 
-The job will run on each node we've selected, and any output will be displayed.
+The job runs on each node we've selected, and any output will be displayed.
 You'll see any nodes that failed on the top of the list. In this example, three
 nodes weren't connected to the broker. Perhaps they were in the middle of
 restarting. We can use this list to further investigate offline, if needed.
 
 ![Task output with failures](pe_console_failures.png)
 
-Well that was quick and easy. But how do you know how to use this task? Let's
+Well, that was quick and easy! But how do you know how to use this task? Let's
 use the PE Console to find out. We'll go back to that top-level *Tasks* tab.
-Instead of typing a name this time, just click in that text box and wait a
-moment. All the tasks you've got installed will show up in the drop-down and you
-can scroll through to see what tasks you can run.
+Instead of typing a name this time, click in that text box and wait a moment.
+All of the installed tasks will show up in the drop-down, and you can scroll
+through to see what tasks you can run.
 
 Pick one out by either clicking its name or typing it out. Directly underneath
-you'll see a *view task metadata* disclosure triangle. Expand it and you'll find
+you'll see a *view task metadata* disclosure triangle. Expand it, and you'll find
 a quick description of the task and all of its parameters.
 
 ![Task description in the console](pe_console_tasks.png)
@@ -56,10 +56,9 @@ job. Luckily, we've designed that capability for you.
 ![puppet task transcript](cli_transcript.png)
 
 First we'll need to make sure that our [PE Client Tools](https://puppet.com/docs/pe/latest/installing/installing_pe_client_tools.html)
-have valid access tokens to access the API. Then we can just start using the
-Orchestrator. We'll want to see the usage instructions of the task we want to
-run, so let's ask the Orchestrator. Note that if you don't specify the name of a
-task, it will list all the tasks you've got installed.
+have valid tokens to access the API. Then we can start using the Orchestrator. We'll want to see the usage instructions of the task we want to run, so let's ask
+the Orchestrator. Note that if you don't specify the name of a task, it will list
+all of the installed tasks.
 
     $ puppet task show facter
     
@@ -72,10 +71,10 @@ task, it will list all the tasks you've got installed.
     - fact : String
         The name of the fact to retrieve
       
-Then to run a task, just specify the task, any parameters, and a list of nodes
-to run the task on. You'll see that the tasks are all run at the same time, and
-they're not run sequentially. You'll see information coming back from each node
-as soon as the Orchestrator knows about it.
+Then to run a task, specify the task, its parameters, and a list of nodes
+to run the task on. The tasks are all run at the same time, and they're not run
+sequentially. You'll see information coming back from each node as soon as the
+Orchestrator knows about it.
 
     $ puppet task run facter fact=osfamily -n basil-2,basil-4,basil-6
     Starting job ...
