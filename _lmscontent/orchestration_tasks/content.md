@@ -256,7 +256,7 @@ Puppet Enterprise as we are. If you'd like to kick the tires and practice your
 Task skills, we invite you to try out the [Hands on Lab](https://github.com/puppetlabs/tasks-hands-on-lab).
 This covers the full Bolt ecosystem, which is the open source task runner
 subsystem of Puppet Orchestration. Bolt uses SSH and WinRM as transport
-mechanisms, while Puppet Orchestration uses your exising Puppet infrastructure.
+mechanisms, while Puppet Orchestration uses your existing Puppet infrastructure.
 For the most part, where the Hands on Lab instructs you to run `bolt task`, you
 can also run `puppet task` to accomplish the same results. The tutorial also
 covers writing Puppet plans, which are scripts that can programmatically
