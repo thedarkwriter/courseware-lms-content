@@ -121,11 +121,10 @@ quite slow. You may want to consider using a download manager, which will allow
 you to pause or restart the download if needed. I'll include links to some free
 download managers in the notes.
 
-From the Learning VM page at puppet.com, I'll enter my email address before
-continuing on to the download page. This email form helps us track downloads so
-we can justify the cost of maintianing and updating the Learning VM.
+From the Learning VM page at puppet.com, enter your email address before
+continuing on to the download page. 
 
-The download page will include a direct link to the Learning VM archive, as
+The download page includes a direct link to the Learning VM archive, as
 well as version information and an MD5 hash you can use to validate your
 download. Once you get this download started, you can move on to the next steps
 as it completes.
@@ -136,15 +135,15 @@ To run the Learning VM, you'll need an up-to-date version of VirtualBox or
 VMware's Fusion, Workstation, or Workstation Player virtualization software.
 
 As [VirtualBox](https://www.virtualbox.org/wiki/Downloads) is free and
-available for Linux, Mac, and Windows systems, I'll be using it here to walk
+available for Linux, Mac, and Windows systems, I'll be using it here to walk you
 through the setup process. Though the interface and menu options in VMware
 virtualization software differ, the overall steps involved are parallel.
 
-To download VirtualBox, I'll go to the VirtualBox website and navigate to the
-downloads page. From here, I'll select the platform package for Windows hosts.
-After completing the download, I'll use the executable to start VirtualBox.
+To download VirtualBox, go to the VirtualBox website and navigate to the
+downloads page. From here, select the platform package for Windows hosts.
+After completing the download, use the executable to start VirtualBox.
 
-Before importing the Learning VM, I'll validate the MD5 checksum for the
+Before importing the Learning VM, validate the MD5 checksum for the
 download with the File Checksum Integrity Verifier utility through the command
 prompt.
 
@@ -160,21 +159,21 @@ The commands to validate this checksum on MacOS and Linux systems are `md5` and
 
     md5sum /path/to/file
 
-Next, I'll unzip the archive.
+Next, unzip the archive.
 
 The archive contains readme files and an Open Virtual Appliance, or OVA package
 for the Learning VM itself.
 
-To load the Learning VM, I'll import this OVA package. Note that if you're
+Import this OVA package to load the Learning VM. Note that if you're
 using VMware virtualization software, you may also see options to create a new
 VM or open a VM. Because the Learning VM is in the OVA format, be sure to use
 an **Import** or **Import Appliance** option. If you cannot locate this option,
 refer to your virtualiation software's documentation for instructions on
 importing an OVA.
 
-When prompted, I'll accept the default options for the import.
+When prompted, accept the default options for the import.
 
-Before launching the VM, I'll need to make a few adjustments to the network
+Before launching the VM, you need to make a few adjustments to the network
 settings.
 
 ## Networking configuration
