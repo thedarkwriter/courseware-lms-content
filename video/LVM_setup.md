@@ -1,14 +1,14 @@
 # Introduction
 
 In this video, I'll walk through the steps involved in getting the Puppet
-Learning VM set up on your system.
+Learning VM set up on your system. 
 
-While the Puppet agent can run on a wide variety of operating systems and
+The Learning VM provides a virtualized CentOS 7 system with Puppet Enterprise
+pre-installed. While the Puppet agent can run on a wide variety of operating systems and
 devices, the central Puppet master server requires Unix or Linux operating
 system.
 
-The Learning VM provides a virtualized CentOS 7 system with Puppet Enterprise
-pre-installed. A virtual machine is a self-contained emulated computer system
+A virtual machine is a self-contained emulated computer system
 you can run on your own desktop or laptop through virtualization software. The
 Learning VM uses Docker containers to fully simulate the set of managed systems
 needed to complete task in the included interactive tutorial content. This
@@ -113,8 +113,8 @@ documentation for enabling virtualization options in the BIOS.
 
 ## Get the VM
 
-Once you've verified that your system meets the requirements, I suggest
-starting the Learning VM download if you haven't already. I'll include a link
+Once you've verified that your system meets the requirements,
+start the Learning VM download. There is a link
 to the download page in the notes below the video. The Learning VM is upwards
 of three gigabytes, so depending on your network speed, the download can be
 quite slow. You may want to consider using a download manager, which will allow
