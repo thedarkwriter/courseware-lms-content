@@ -23,30 +23,35 @@ If you are a Puppet Enterprise user, you can follow along with this tutorial and
 
 <i class="fa fa-graduation-cap" aria-hidden="true"></i> 
 ### Lesson 
-Let's get started and run a task across our entire infrastructure. We'll use a task that shows the package version of [ ]. 
+Let's get started and run a task across our entire infrastructure. We'll use a task that shows the version of the `openssl` package.
 
 In the *Tasks* tab of the PE Console, type in the name of the task,
-`echo`. Notice how a list appears and filters down as you type the word. We'll
-come back to that in a moment. Enter a message, choose a **Node Group** from the inventory section, and run the job.
+`package`. Notice how a list appears and filters down as you type the word.
+After selecting the `package` task, the `Task Parameters` interface updates with the parameters accepted by the task. In this case, there are two parameters - `action` and `name`.
+
+Since we want to interrogate all of the servers in the infrastructure for the version of OpenSSL they are running, we'll select `status` for the `action` parameter and enter `openssl` for the `name` parameter.
+
+<<SCREENSHOT OF TASK AND TASK PARAMETERS>>
 
 ![Hello World task](pe_console_running.png)
 
 The job runs on each node selected, and any output will be displayed.
-You'll see any nodes that failed on the top of the list. In this example, three
+You'll see any nodes that failed on the top of the list. In this example, seven
 nodes weren't connected to the broker. Perhaps they were in the middle of
 restarting. We can use this list to further investigate offline, if needed.
 
+<<NEW SCREENSHOT OF COMPLETED JOB>>
+
 ![Task output with failures](pe_console_failures.png)
 
-But how do you know how to use this task? Let's
+Now that we've run our first task, how do you know how to use this task? Let's
 use the PE Console to find out. We'll go back to that top-level **Tasks** tab.
 Instead of typing a name this time, click in that text box and wait a moment.
 All of the installed tasks will show up in the drop-down, and you can scroll
 through to see what tasks you can run.
 
-Pick one by either clicking its name or typing it out. Directly underneath
-you'll see a **view task metadata** disclosure triangle. Expand it to find
-a quick description of the task and all of its parameters.
+Pick one out by either clicking its name or typing it out. Directly underneath
+you'll see a **view task metadata** disclosure triangle. Expand it, and you'll find a quick description of the task and all of its parameters.
 
 ![Task description in the console](pe_console_tasks.png)
 
