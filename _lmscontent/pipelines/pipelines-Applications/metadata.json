@@ -15,12 +15,12 @@
   "duration.minutesPerDay": 40,
   "generateCertificate": "DEFAULT",
   "generateProofOfCompletion": "DEFAULT",
-  "name": "Pipelines for Applications",
+  "name": "Pipelines for Applications: Technical Training",
   "orderNumber": 0,
   "price": "0.00 USD",
   "primaryCategoryId": 10,
   "providerId": 1,
   "status": "ENABLED",
-  "urlName": "pipelines-applications",
+  "urlName": "technical-pipelines-applications",
   "visibility": "HIDDEN"
 }
