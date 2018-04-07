@@ -1,4 +1,4 @@
-# Introduction to Puppet Orchestration 
+# Introduction to Puppet Orchestration: Puppet Tasks 
 
 Puppet Tasks are a way to solve problems that don't fit well into Puppet's
 traditional configuration management model.
