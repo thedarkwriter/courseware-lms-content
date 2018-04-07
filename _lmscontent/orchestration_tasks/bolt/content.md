@@ -9,7 +9,7 @@ This training has two objectives:
 
 Eric Sorenson, director of product management at Puppet, walks you through how to run tasks via Puppet Bolt. After watching this video, you will know how to turn a script into a task and how and why to add metadata to your tasks. 
 
-You can [download the transcript] (https://puppet.box.com/shared/static/ao0k22gfdwuxkedlsa64ahoxu6eaekvh.pdf) of this video.
+You can [download the transcript](https://puppet.box.com/shared/static/ao0k22gfdwuxkedlsa64ahoxu6eaekvh.pdf) of this video.
 
 <iframe src="https://fast.wistia.net/embed/iframe/o4nlwajf0y?videoFoam=true" title="Wistia video player" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" allowfullscreen="allowfullscreen" mozallowfullscreen="mozallowfullscreen" webkitallowfullscreen="webkitallowfullscreen" oallowfullscreen="oallowfullscreen" msallowfullscreen="msallowfullscreen" width="761" height="428" style="width: 761px; height: 428px;"></iframe>
 
