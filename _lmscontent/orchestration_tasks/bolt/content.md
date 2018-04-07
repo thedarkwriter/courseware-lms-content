@@ -1,5 +1,5 @@
 <i class="fa fa-desktop" aria-hidden="true"></i>
-### Lesson
+<h3>Lesson</h3>
 In this training, you will get started with **Bolt**: a standalone, agentless open source task runner to execute imperative, ad hoc tasks in smaller infrastructures. The Puppet task runner is driven through a command line interface and executes commands via SSH and WinRM.
 
 This training has two objectives:
@@ -14,7 +14,7 @@ You can [download the transcript](https://puppet.box.com/shared/static/ao0k22gfd
 <iframe src="https://fast.wistia.net/embed/iframe/o4nlwajf0y?videoFoam=true" title="Wistia video player" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" allowfullscreen="allowfullscreen" mozallowfullscreen="mozallowfullscreen" webkitallowfullscreen="webkitallowfullscreen" oallowfullscreen="oallowfullscreen" msallowfullscreen="msallowfullscreen" width="761" height="428" style="width: 761px; height: 428px;"></iframe>
 
 <i class="fa fa-pencil" aria-hidden="true"></i>
-### Notes
+<h3>Notes</h3>
 * Visit the [Bolt website](https://puppet.com/products/puppet-bolt).
 * Access the [Bolt documentation](https://puppet.com/docs/bolt/0.x/bolt.html).
 * Visit the [Bolt GitHub repo](https://github.com/puppetlabs/bolt).
