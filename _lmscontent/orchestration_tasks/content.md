@@ -1,17 +1,15 @@
 # Introduction to Puppet Orchestration and Tasks
 
-Puppet **tasks** are a way to solve problems that don't fit well into Puppet's
+Puppet Tasks are a way to solve problems that don't fit well into Puppet's
 traditional declarative configuration management model.
 
 As we know, Puppet is great at modeling resources and then enforcing state over
 time. It will check the state of a resource, fix it if it's wrong, and send a
-report back to the Puppet Master if it changed anything. But sometimes you don't need to
-model the state of a resource--you need to orchestrate
+report back to the Puppet Master if it changed anything. But sometimes you don't need to model the state of a resource--you need to orchestrate
 "point-in-time" changes. Instead of long-term configuration management, you
-need to make something happen and be done with it. Puppet tasks are a
-simple and quick way to immediately upgrade packages,
-restart services, or perform any other type of single-action executions on your
-nodes.
+need to make something happen and be done with it. Puppet Tasks are a simple
+and quick way to immediately upgrade packages, restart services, or perform any
+other type of single-action executions on your nodes.
 
 The Puppet Orchestrator uses your existing Puppet Enterprise infrastructure to
 run tasks everywhere you need them. This allows you to scale up to global
@@ -178,7 +176,7 @@ and then copy/paste it into your script.
     Duration: 0 sec
     
 #### Writing tasks
-The true power of Puppet tasks comes when you learn how to write your
+The true power of Puppet Tasks comes when you learn how to write your
 own. Tasks are very similar to simple scripts, written in any language you like.
 To turn a shell script into a task, you put it in a `tasks` directory of any
 Puppet module and write a metadata file that describes how it works. This allows
@@ -250,7 +248,7 @@ to consider long-term maintainability. In many cases, taking the time to update
 shell script methodologies might serve your purposes better.
 
 Jobs that are simple one-time actions or that must be orchestrated across
-multiple nodes in the correct sequence are great candidates for Puppet tasks.
+multiple nodes in the correct sequence are great candidates for Puppet Tasks.
 For example, you might want a task to restart your webserver or clear the
 mailserver outgoing message queue. These are not well suited for Puppet because
 they're a one-time action, but they'd make great tasks. On the other hand, the
