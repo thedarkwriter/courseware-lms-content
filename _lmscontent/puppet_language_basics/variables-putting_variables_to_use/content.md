@@ -29,6 +29,6 @@ service { $service_name:
 
 Currently, the code you have been working on in this course has hard-coded package names in it. As you learned, using variables rather than hard-coding information about your file is a better method to write code because it reduces the likelihood of typos and bugs. Try using a variable instead.
 
-Set the `$package_name` variable to `postgresql-server`.
+Set the `$package_name` variable to `robby`.
 
 <iframe src="https://magicbox.classroom.puppet.com/scenario/putting_variables_to_use" width="100%" height="550px" frameborder="0"></iframe>
