@@ -8,4 +8,5 @@ source 'https://rubygems.org' do
   gem 'diffy'
   gem 'html_validation'
   gem 'paint'
+  gem 'stringex'
 end

@@ -10,14 +10,14 @@
 <p>Examine the directory structure of the example motd module.</p>
 <pre><code>[root@training modules]# tree motd/
 motd/
-├── manifests
-│   └── init.pp
-├── Modulefile
-├── README
-├── spec
-│   └── spec_helper.rb
-└── tests
-    └── init.pp</code></pre>
++-- manifests
+|   +-- init.pp
++-- Modulefile
++-- README
++-- spec
+|   +-- spec_helper.rb
++-- tests
+    +-- init.pp</code></pre>
 <p>Edit the main class manifest file and replace the value of the content parameter with a <code>hiera()</code> function call to look up the data dynamically.</p>
 <p><code>vim motd/manifests/init.pp</code></p>
 <p>Validate your syntax and enforce your class. and apply the class. Your <code>/etc/motd</code> file should contain the data retrieved from your <code>common.yaml</code> datasource.</p>

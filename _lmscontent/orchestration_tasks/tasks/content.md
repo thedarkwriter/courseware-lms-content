@@ -195,9 +195,9 @@ that module's tasks directory along with a `.json` file with the same name.
 
     $ tree packages/
     packages/
-    └── tasks
-        ├── yum.json
-        └── yum.sh
+    +-- tasks
+        +-- yum.json
+        +-- yum.sh
     
 The `yum.json` file simply describes how to interact with the task. The minimum
 useful file might look like the following, but you can describe parameters, data
