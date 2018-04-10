@@ -1,3 +1,6 @@
+# encoding: UTF-8
+# coding: UTF-8
+# -*- coding: UTF-8 -*-
 # Introduction to Puppet Orchestration: Puppet Tasks 
 
 Puppet Tasks are a way to solve problems that don't fit well into Puppet's
