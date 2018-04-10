@@ -4,17 +4,17 @@
 <p>Examine the directory structure of the example zsh module.</p>
 <pre><code>[root@training modules]# tree zsh/
 zsh/
-├── files
-│   ├── zshrc
-│   └── zshrc.dev
-├── manifests
-│   └── init.pp
-├── Modulefile
-├── README
-├── spec
-│   └── spec_helper.rb
-└── tests
-    └── init.pp</code></pre>
++-- files
+|   +-- zshrc
+|   +-- zshrc.dev
++-- manifests
+|   +-- init.pp
++-- Modulefile
++-- README
++-- spec
+|   +-- spec_helper.rb
++-- tests
+    +-- init.pp</code></pre>
 
 <p>We will start with this zsh module that manages the shell.  Create a new class called <code>zsh::developer</code> that inherits from the <code>zsh</code> class and overrides the <code>File['/etc/zshrc']</code> resource to change the location that the file is sourced from to <code>puppet:///modules/zsh/zshrc.dev</code></p>
 <ul>

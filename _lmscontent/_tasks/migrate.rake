@@ -8,6 +8,7 @@ require 'upmark'
 require 'diffy'
 require 'html_validation'
 require 'paint'
+require 'stringex'
 
 # This task is sort of a general purpose task for dealing with downloading
 # content that was created prior to this workflow. It can be used to modify the
@@ -59,6 +60,7 @@ namespace :migrate do
       '‘' => '\'',
       '’' => '\''
     )
+    string.to_ascii
   end
 
   # Attempt to convert the existing html content into markdown.
