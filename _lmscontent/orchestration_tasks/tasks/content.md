@@ -1,6 +1,8 @@
-# encoding: UTF-8
-# coding: UTF-8
-# -*- coding: UTF-8 -*-
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+</head>
 # Introduction to Puppet Orchestration: Puppet Tasks 
 
 Puppet Tasks are a way to solve problems that don't fit well into Puppet's
