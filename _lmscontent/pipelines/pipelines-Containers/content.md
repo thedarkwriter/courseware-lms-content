@@ -10,8 +10,8 @@ After completing this training, you will be able to:
 << embed video here >>
 
 ### Resources
-* [Learn about git branching strategies](https://www.atlassian.com/git/tutorials/using-branches)
-* Read Pipelines documentation {link needed}
+* https://github.com/ipcrm/puppet_webapp/tree/docker
+* https://github.com/puppetlabs/pipelines-self-paced/tree/master/pipelines-for-containers
 
 ### Task 
 Practice with the Puppet Pipelines for Containers self-paced lab. {Do we want to have a different contact on that lab besides Matt C?}
