@@ -29,16 +29,12 @@ After selecting the `package` task, the `Task Parameters` interface updates with
 
 Since we want to interrogate all of the servers in the infrastructure for the version of OpenSSL they are running, we'll select `status` for the `action` parameter and enter `openssl` for the `name` parameter.
 
-<<SCREENSHOT OF TASK AND TASK PARAMETERS>>
-
 ![Hello World task](pe_console_running.png)
 
 The job runs on each node selected, and any output will be displayed.
 You'll see any nodes that failed on the top of the list. In this example, seven
 nodes weren't connected to the broker. Perhaps they were in the middle of
 restarting. We can use this list to further investigate offline, if needed.
-
-<<NEW SCREENSHOT OF COMPLETED JOB>>
 
 ![Task output with failures](pe_console_failures.png)
 
@@ -49,7 +45,7 @@ All of the installed tasks will show up in the drop-down, and you can scroll
 through to see what tasks you can run.
 
 Pick one out by either clicking its name or typing it out. Directly underneath
-you'll see a **view task metadata** disclosure triangle. Expand it, and you'll find a quick description of the task and all of its parameters.
+you'll see a **view task metadata** disclosure triangle. Expand it, and you'll find a description of the task and all of its parameters.
 
 ![Task description in the console](pe_console_tasks.png)
 
