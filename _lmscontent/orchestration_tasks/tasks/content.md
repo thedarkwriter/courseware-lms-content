@@ -17,7 +17,7 @@ networks of thousands of nodes with hardly any configuration to start with. If
 you don't have your target nodes Puppetized yet, you can also run tasks via SSH
 or WinRM covered in the open source [Bolt documentation](https://puppet.com/docs/bolt/latest/bolt.html).
 
-If you are a Puppet Enterprise user, you can follow along with this tutorial and run the commands shown in the examples. You can also choose to review this material firstand then move to a hands-on lab for practice. 
+If you are a Puppet Enterprise user, you can follow along with this tutorial and run the commands shown in the examples. You can also choose to review this material first and then move to a hands-on lab for practice. 
 
 <i class="fa fa-graduation-cap" aria-hidden="true"></i> 
 ### Lesson 
