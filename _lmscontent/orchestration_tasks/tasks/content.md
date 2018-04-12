@@ -38,7 +38,7 @@ restarting. We can use this list to further investigate offline, if needed.
 
 ![Task output with failures](pe_console_failures.png)
 
-Now that we've run our first task, how do you know how to use this task? Let's
+Now that we've run our first task, how do we know how to use this task? Let's
 use the PE Console to find out. We'll go back to that top-level **Tasks** tab.
 Instead of typing a name this time, click in that text box and wait a moment.
 All of the installed tasks will show up in the drop-down, and you can scroll
