@@ -5,7 +5,7 @@ traditional declarative configuration management model.
 
 As we know, Puppet is great at modeling resources and then enforcing state over
 time. It will check the state of a resource, fix it if it's wrong, and send a
-report back to the Puppet Master if it changed anything. But sometimes you don't need to model the state of a resource--you need to orchestrate
+report back to the Puppet master if it changed anything. But sometimes you don't need to model the state of a resource -- you need to orchestrate
 "point-in-time" changes. Instead of long-term configuration management, you
 need to make something happen and be done with it. Puppet Tasks are a simple
 and quick way to immediately upgrade packages, restart services, or perform any
@@ -28,6 +28,8 @@ In the *Tasks* tab of the PE Console, type in the name of the task,
 After selecting the `package` task, the `Task Parameters` interface updates with the parameters accepted by the task. In this case, there are two parameters - `action` and `name`.
 
 Since we want to interrogate all of the servers in the infrastructure for the version of OpenSSL they are running, we'll select `status` for the `action` parameter and enter `openssl` for the `name` parameter.
+
+Next, we need to select a set of nodes on which we will run our task. This is done with the *Inventory* portion of the screen. In order to run the task on all nodes, select **PQL Query**, then the **All nodes** query. Other useful node queries are also shipped with Puppet Enterprise and can be seen in the drop-down box.
 
 ![Hello World task](pe_console_running.png)
 
