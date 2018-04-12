@@ -12,15 +12,15 @@
   "customField10": "",
   "deprecatedBy": "",
   "duration.days": 0,
-  "duration.minutesPerDay": 40,
+  "duration.minutesPerDay": 30,
   "generateCertificate": "DEFAULT",
   "generateProofOfCompletion": "DEFAULT",
-  "name": "Pipelines for Applications",
+  "name": "Try this AGAIN",
   "orderNumber": 0,
   "price": "0.00 USD",
   "primaryCategoryId": 10,
   "providerId": 1,
   "status": "ENABLED",
-  "urlName": "pipelines-applications",
+  "urlName": "try-this-again",
   "visibility": "HIDDEN"
 }

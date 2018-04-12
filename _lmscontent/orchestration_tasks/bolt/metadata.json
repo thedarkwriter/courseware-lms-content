@@ -15,12 +15,12 @@
   "duration.minutesPerDay": 30,
   "generateCertificate": "DEFAULT",
   "generateProofOfCompletion": "DEFAULT",
-  "name": "Exampele LC",
+  "name": "Puppet Orchestration: Bolt",
   "orderNumber": 0,
   "price": "0.00 USD",
   "primaryCategoryId": 10,
   "providerId": 1,
   "status": "ENABLED",
-  "urlName": "exampele-lc",
+  "urlName": "bolt",
   "visibility": "HIDDEN"
 }

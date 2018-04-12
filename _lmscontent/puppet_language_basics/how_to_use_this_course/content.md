@@ -11,7 +11,6 @@ Understanding Puppet Language Basics is an essential step in putting your Puppet
 
 ## Resources
 
-* Download any video transcripts or course files by clicking on the downloads icon in the page header.
 * Clarify and learn new terminology with the course glossary.
 * <a href="https://puppetcommunity.slack.com/" target="_blank">Connect</a> and get some help from the community on Slack.
 * <a href="https://puppet.com/docs" target="_blank">Access</a> Puppet's documentation for both Puppet Enterprise and open source Puppet.

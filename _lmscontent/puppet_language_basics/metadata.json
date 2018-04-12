@@ -1,5 +1,5 @@
 {
-  "_displayName_": "Puppet Syntax",
+  "_displayName_": "Puppet Language Basics",
   "_keyword_": "e_learning_component",
   "allowReview": false,
   "created": "2017-11-08 14:31:22",
@@ -23,13 +23,13 @@
   "maxAttempts": 1,
   "modified": "2017-11-08 14:31:48",
   "modifiedById": 31489,
-  "name": "Puppet Syntax",
+  "name": "Puppet Language Basics",
   "orderNumber": 0,
   "price": "0.0 USD",
   "primaryCategoryId": 7,
   "status": "DISABLED",
-  "urlName": "puppet-syntax",
+  "urlName": "puppet-language-basics",
   "visibility": "HIDDEN",
-  "duration.minutesPerDay": 30,
+  "duration.minutesPerDay": 45,
   "duration.days": 0
 }
