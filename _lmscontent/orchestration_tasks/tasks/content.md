@@ -57,13 +57,17 @@ On the other hand, maybe you don't want to click through the graphical interface
 to run tasks. Or maybe you'd like to invoke tasks as part of a script or a cron
 job. There is a way to do it without using the GUI.
 
-![puppet task transcript](cli_transcript.png)
-
 First make sure that [PE Client Tools](https://puppet.com/docs/pe/latest/installing/installing_pe_client_tools.html)
 have valid tokens to access the API. You want to see the usage instructions of the task you want to run, so first ask
 the Orchestrator. Note that if you don't specify the name of a task, it will list
 all of the installed tasks. In this case, I'll use `facter` as my example.
 
+    $ puppet access login
+    Enter your Puppet Enterprise credentials.
+    Username: ben.ford
+    Password:
+
+    Access token saved to: /home/ben.ford/.puppetlabs/token
     $ puppet task show facter
     
     facter - Inspect the value of system facts
