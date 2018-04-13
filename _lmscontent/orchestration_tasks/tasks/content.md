@@ -31,14 +31,14 @@ Since we want to interrogate all of the servers in the infrastructure for the ve
 
 Next, we need to select a set of nodes on which we will run our task. This is done with the *Inventory* portion of the screen. In order to run the task on all nodes, select **PQL Query**, then the **All nodes** query. Other useful node queries are also shipped with Puppet Enterprise and can be seen in the drop-down box.
 
-![Hello World task](pe_console_running.png)
+![PE_console_running](/static/images/orchestration/pe_console_running.png)
 
 The job will run on each node selected, and any output will be displayed.
 You'll see nodes that failed on the top of the list. In this example, seven
 nodes weren't connected to the broker. Perhaps they were in the middle of
 restarting. We can use this list to further investigate offline, if needed.
 
-![Task output with failures](pe_console_failures.png)
+![Task output with failures](/static/images/orchestration/pe_console_failures.png)
 
 Now that we've run our first task, how do we know how to use this task? Let's
 use the PE Console to find out. We'll go back to that top-level **Tasks** tab.
@@ -46,18 +46,16 @@ Instead of typing a name this time, click in that text box and wait a moment.
 All of the installed tasks will show up in the drop-down, and you can scroll
 through to see what tasks you can run.
 
-![Task list in the console](pe_console_tasklist.png)
+![Task list in the console](/static/images/orchestration/pe_console_tasklist.png)
 
 Pick one out by either clicking its name or typing it out. Directly underneath
 you'll see a **view task metadata** disclosure triangle. Expand it, and you'll find a description of the task and all of its parameters.
 
-![Task description in the console](pe_console_task_metadata.png)
+![Task metadata](/static/images/orchestration/pe_console_task_metadata.png)
 
 On the other hand, maybe you don't want to click through the graphical interface
 to run tasks. Or maybe you'd like to invoke tasks as part of a script or a cron
 job. There is a way to do it without using the GUI.
-
-![puppet task transcript](cli_transcript.png)
 
 First make sure that [PE Client Tools](https://puppet.com/docs/pe/latest/installing/installing_pe_client_tools.html)
 have valid tokens to access the API. You want to see the usage instructions of the task you want to run, so first ask
@@ -133,7 +131,7 @@ command. Specify the same job ID as the `puppet task run` command displayed.
 You can also return to the PE Console and see the same information under the
 **Jobs** tab. Just choose the Job ID from the list, and you'll see the report.
 
-![PE task output](pe_console_results.png)
+![PE console results](/static/images/orchestration/pe_console_results.png)
 
 If you had to type out the name of each node you wanted to run on,
 this would be a rather tedious tool to use, especially if you have a large
@@ -141,7 +139,7 @@ infrastructure. An easier way to operate is by filtering your inventory. Let's
 see what that might look like by running the `facter` task to find the major
 release version of all our CentOS machines.
 
-![Filtering inventory with PQL](pe_console_pql.png)
+![PE console PQL](/static/images/orchestration/pe_console_pql.png)
 
 For this example, I specify that I want the `os.release.major` fact from all the nodes
 who match the [PQL](https://puppet.com/docs/puppetdb/latest/api/query/v4/pql.html)
