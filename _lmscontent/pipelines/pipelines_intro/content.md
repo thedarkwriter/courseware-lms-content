@@ -1,4 +1,4 @@
-In this demo, sales engineer Matt Cadorette provides a talk track and overview of the benefits and features of Puppet Pipelines. 
+In this demo, sales engineer Matt Cadorette provides a way to speak to clients about the benefits and features of Puppet Pipelines and continuous delivery. 
  
 <i class="fa fa-desktop" aria-hidden="true"></i>
 ### Lesson 
