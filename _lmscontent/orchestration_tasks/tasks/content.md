@@ -25,6 +25,9 @@ Let's get started and run a task across our entire infrastructure. We'll use a t
 
 In the *Tasks* tab of the PE Console, type in the name of the task,
 `package`. Notice how a list appears and filters down as you type the word.
+
+![PE_console_task_filter] (/static/images/orchestration/pe_console_task_filter.png)
+
 After selecting the `package` task, the `Task Parameters` interface updates with the parameters accepted by the task. In this case, there are two parameters - `action` and `name`.
 
 Since we want to interrogate all of the servers in the infrastructure for the version of OpenSSL they are running, we'll select `status` for the `action` parameter and enter `openssl` for the `name` parameter.
@@ -38,7 +41,7 @@ You'll see nodes that failed on the top of the list. In this example, seven
 nodes weren't connected to the broker. Perhaps they were in the middle of
 restarting. We can use this list to further investigate offline, if needed.
 
-![Task output with failures](/static/images/orchestration/pe_console_failures.png)
+![PE_console_failures](/static/images/orchestration/pe_console_failures.png)
 
 Now that we've run our first task, how do we know how to use this task? Let's
 use the PE Console to find out. We'll go back to that top-level **Tasks** tab.
@@ -46,12 +49,12 @@ Instead of typing a name this time, click in that text box and wait a moment.
 All of the installed tasks will show up in the drop-down, and you can scroll
 through to see what tasks you can run.
 
-![Task list in the console](/static/images/orchestration/pe_console_tasklist.png)
+![PE_console_tasklist](/static/images/orchestration/pe_console_tasklist.png)
 
 Pick one out by either clicking its name or typing it out. Directly underneath
 you'll see a **view task metadata** disclosure triangle. Expand it, and you'll find a description of the task and all of its parameters.
 
-![Task metadata](/static/images/orchestration/pe_console_task_metadata.png)
+![PE_console_task_metadata](/static/images/orchestration/pe_console_task_metadata.png)
 
 On the other hand, maybe you don't want to click through the graphical interface
 to run tasks. Or maybe you'd like to invoke tasks as part of a script or a cron
