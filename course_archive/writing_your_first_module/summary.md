@@ -1,0 +1,1 @@
+Get a solid foundation to build great modules. Learn the core concepts of module architecture, composability, reusability, and defensive coding practices so you can design and write Puppet Modules.

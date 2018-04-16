@@ -1,0 +1,1 @@
+The exec resource is a powerful tools that allows you to access operating system commands and execute scripts from within your Puppet manifests. It is especially useful when there is no available  Puppet resource type to perform a function.

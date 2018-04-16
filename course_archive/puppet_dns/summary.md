@@ -1,0 +1,1 @@
+In this course, you will see how to get started managing a simple DNS &nbsp;file with Puppet Enterprise.

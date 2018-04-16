@@ -1,0 +1,1 @@
+Your entire datacenter, from the network to the applications, depends on consistent time for many different functions, such as security services, certificate validation, and file sharing across nodes.

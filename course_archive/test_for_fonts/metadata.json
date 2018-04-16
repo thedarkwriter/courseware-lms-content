@@ -1,0 +1,23 @@
+{
+  "_displayName_": "Test for Fonts",
+  "_keyword_": "e_learning_component",
+  "allowReview": false,
+  "created": "2015-10-14 12:15:32",
+  "createdById": 9,
+  "deprecatedBy": "",
+  "generateCertificate": "DEFAULT",
+  "generateProofOfCompletion": "DEFAULT",
+  "launchWithScooter": false,
+  "maxAttempts": 1,
+  "modified": "2015-10-14 13:09:07",
+  "modifiedById": 38,
+  "name": "Test for Fonts",
+  "orderNumber": 0,
+  "price": "0.0 USD",
+  "primaryCategoryId": 7,
+  "status": "DISABLED",
+  "urlName": "test-for-fonts",
+  "visibility": "HIDDEN",
+  "duration.minutesPerDay": 0,
+  "duration.days": 0
+}

@@ -1,0 +1,1 @@
+This short assessment helps gauge your familiarity with Puppet Enterprise. To get started, enter your email below. Your results will appear after you complete all the questions.

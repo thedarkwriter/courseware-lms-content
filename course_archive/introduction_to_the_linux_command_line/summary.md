@@ -1,0 +1,1 @@
+This course is an introduction to using the command line to communicate with your Linux environment.

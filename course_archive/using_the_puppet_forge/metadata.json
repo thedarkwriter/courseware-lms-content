@@ -1,0 +1,20 @@
+{
+  "_displayName_": "Using the Puppet Forge",
+  "_keyword_": "content_component",
+  "created": "2017-07-27 12:43:35",
+  "createdById": 31489,
+  "deprecatedBy": "",
+  "generateCertificate": "DEFAULT",
+  "generateProofOfCompletion": "DEFAULT",
+  "modified": "2017-08-03 13:34:12",
+  "modifiedById": 35,
+  "name": "Using the Puppet Forge",
+  "orderNumber": 0,
+  "price": "0.0 USD",
+  "primaryCategoryId": 10,
+  "status": "DISABLED",
+  "urlName": "using-the-puppet-forge",
+  "visibility": "DEPRECATED",
+  "duration.minutesPerDay": 5,
+  "duration.days": 0
+}

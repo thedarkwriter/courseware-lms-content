@@ -1,0 +1,37 @@
+{
+  "_displayName_": "XTO Energy Learning Plan",
+  "_keyword_": "course_pathway",
+  "courseInfo": "",
+  "created": "2017-07-20 13:33:21",
+  "createdById": 38,
+  "deprecatedBy": "",
+  "generateCertificate": "DEFAULT",
+  "generateProofOfCompletion": "DEFAULT",
+  "modified": "2017-07-20 13:33:21",
+  "modifiedById": 38,
+  "name": "XTO Energy Learning Plan",
+  "orderNumber": 0,
+  "price": "0.0 USD",
+  "primaryCategoryId": 7,
+  "status": "ENABLED",
+  "type": {
+    "_displayName_": "Course",
+    "_keyword_": "course_pathway_type",
+    "created": "2015-06-14 23:21:43",
+    "id": 4,
+    "modified": "2015-06-14 23:21:43",
+    "name": "Course",
+    "rootType": true,
+    "supportedComponentTypes": [
+      "e_learning_component",
+      "course",
+      "content_component",
+      "exam_component"
+    ]
+  },
+  "typeId": 4,
+  "urlName": "xto-energy-learning-plan",
+  "visibility": "HIDDEN",
+  "duration.minutesPerDay": 0,
+  "duration.days": 0
+}

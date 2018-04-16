@@ -1,0 +1,1 @@
+Learn how to write effective single task-oriented Puppet modules in a manner that makes them composable and reusable. You'll learn basic Puppet concepts followed by how to refine requirements, design composable classes, guidelines for designing the API for modules, and coding defensively.

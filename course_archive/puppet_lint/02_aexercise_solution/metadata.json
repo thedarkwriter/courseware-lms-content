@@ -1,0 +1,21 @@
+{
+  "_displayName_": "02.a Puppet Lint - Exercise Solution",
+  "_keyword_": "content_component",
+  "created": "2015-02-03 13:17:02",
+  "createdById": 3,
+  "deprecatedBy": "",
+  "generateCertificate": "DEFAULT",
+  "generateProofOfCompletion": "DEFAULT",
+  "modified": "2015-02-03 13:17:02",
+  "modifiedById": 3,
+  "name": "02.a Puppet Lint - Exercise Solution",
+  "orderNumber": 0,
+  "price": "0.0 USD",
+  "primaryCategoryId": 1,
+  "providerId": 1,
+  "status": "ACTIVE_COMPONENT",
+  "urlName": "02a-puppet-lint---exercise-solution",
+  "visibility": "HIDDEN",
+  "duration.minutesPerDay": 0,
+  "duration.days": 0
+}

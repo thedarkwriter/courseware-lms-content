@@ -1,0 +1,1 @@
+Learn how to design and describe the configuration of your infrastructure, leveraging the Node Classifier provided by Puppet Enterprise.
