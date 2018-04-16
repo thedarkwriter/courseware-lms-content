@@ -1,6 +1,4 @@
-After completing this training, you will be able to:
-
-* Explain the benefits and features of Puppet Pipelines 
+In this demo, sales engineer Matt Cadorette provides a talk track and overview of the benefits and features of Puppet Pipelines. 
  
 <i class="fa fa-desktop" aria-hidden="true"></i>
 ### Lesson 
