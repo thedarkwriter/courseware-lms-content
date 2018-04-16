@@ -26,7 +26,7 @@ Let's get started and run a task across our entire infrastructure. We'll use a t
 In the *Tasks* tab of the PE Console, type in the name of the task,
 `package`. Notice how a list appears and filters down as you type the word.
 
-![PE_console_task_filter] (/static/images/orchestration/pe_console_task_filter.png)
+![PE_console_task_filter](/static/images/orchestration/pe_console_task_filter.png)
 
 After selecting the `package` task, the `Task Parameters` interface updates with the parameters accepted by the task. In this case, there are two parameters - `action` and `name`.
 
