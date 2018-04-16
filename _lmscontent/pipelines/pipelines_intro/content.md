@@ -9,4 +9,4 @@ After completing this training, you will be able to:
 <i class="fa fa-pencil"></i>
 ### Resources
 * [Continuous delivery blog posts](https://puppet.com/blog-tags/continuous-delivery)
-* [Suggested reading on continuous delivery](https://www.amazon.com/Continuous-Delivery-Deployment-Automation-Addison-Wesley/dp/0321601912/ref=sr_1_1?ie=UTF8&qid=1520944214&sr=8-1&keywords=continuous+delivery+book)
+* [Suggested continuous delivery reading](https://www.amazon.com/Continuous-Delivery-Deployment-Automation-Addison-Wesley/dp/0321601912/ref=sr_1_1?ie=UTF8&qid=1520944214&sr=8-1&keywords=continuous+delivery+book)
