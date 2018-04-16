@@ -14,4 +14,4 @@ After completing this training, you will be able to:
 * [Bookmark the Puppet Pipelines official documentation](https://puppet.com/docs/pipelines)
 
 ### Practice 
-Get hands-on pipelines practice with [Puppet Pipelines for Applications self-paced lab](https://github.com/puppetlabs/pipelines-self-paced/tree/master/pipelines-for-applications).
+Get hands-on practice with [Puppet Pipelines for Applications self-paced lab](https://github.com/puppetlabs/pipelines-self-paced/tree/master/pipelines-for-applications)
