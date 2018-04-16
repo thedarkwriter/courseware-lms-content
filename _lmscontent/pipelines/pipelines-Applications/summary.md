@@ -1,3 +1,6 @@
-# This is an example summary file
+# Puppet Pipelines for Applications
 
-Testing Updated foo!!
+
+Puppet Pipelines for Applications automates the way you build and deploy traditionally-packaged applications. Pipelines for Applications is offered in self-hosted (on-premises) and hosted (SaaS) versions, while maintaining a consistent experience.
+
+
