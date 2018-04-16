@@ -1,1 +1,0 @@
-This course will give you a complete overview of setting up an online class (Online Instructor-Led Training), from start to finish.

@@ -1,1 +1,0 @@
-Puppet manages your infrastructure. You describe configurations in an easy-to-read declarative language, and Puppet will bring your systems into the desired state and keep them there.

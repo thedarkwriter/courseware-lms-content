@@ -1,1 +1,0 @@
-Learn firsthand best practices for managing your infrastructure with Puppet Enterprise. You'll learn how to use Puppet Enterprise, write classes, and create modules.

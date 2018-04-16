@@ -1,1 +1,0 @@
-<iframe src="//player.vimeo.com/video/70058628" width="715" height="400" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> <p><a href="http://vimeo.com/105288788">Introduction to Hiera (03-3101)</a> from <a href="http://vimeo.com/puppeteducation">Puppet Labs Education</a> on <a href="https://vimeo.com">Vimeo</a>.</p>

@@ -1,1 +1,0 @@
-Review of the different kinds of tests, the basics of testing Puppet code, how you can get started with testing, and how testing can enable you to move faster in development with less risk.

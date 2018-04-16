@@ -1,1 +1,0 @@
-<iframe src="//player.vimeo.com/video/104871362" width="715" height="400" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> <p><a href="http://vimeo.com/105288788">Github Fundamentals (06-1104)</a> from <a href="http://vimeo.com/puppeteducation">Puppet Labs Education</a> on <a href="https://vimeo.com">Vimeo</a>.</p>

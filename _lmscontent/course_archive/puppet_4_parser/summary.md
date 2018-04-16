@@ -1,1 +1,0 @@
-Learn about the new features in the Puppet 4 parser including consistency features, data type support, about breaking changes, and how to update legacy patterns.

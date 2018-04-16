@@ -1,1 +1,0 @@
-This course provides a strong foundation for understanding the technical foundations and benefits achieved by using Puppet Enterprise.

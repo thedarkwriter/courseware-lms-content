@@ -1,3 +1,0 @@
-Puppet Enterprise is IT automation software that gives system administrators the power to easily automate repetitive tasks, quickly deploy critical applications, and proactively manage infrastructure, on-premises or in the cloud.
-
-Puppet Enterprise automates tasks at any stage of the IT infrastructure lifecycle, including: discovery, provisioning, OS &amp; app configuration management, orchestration, and reporting.

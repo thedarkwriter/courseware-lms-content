@@ -1,1 +1,0 @@
-This bundle should be used in conjunction with the Learners Journey found at [https://learn.puppetlabs.com/learners-journey](https://learn.puppetlabs.com/learners-journey "").

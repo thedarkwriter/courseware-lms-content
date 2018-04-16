@@ -1,1 +1,0 @@
-This tutorial will show a walkthrough of setting up a class for Windows using Skytap.

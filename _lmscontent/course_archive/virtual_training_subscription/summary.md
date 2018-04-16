@@ -1,3 +1,0 @@
-New knowledge at your fingertips.  Making the financial commitment to training can be a challenge. We want your organization to be wildly successful using Puppet therefore the best way to ensure everyone receives ongoing skill development is through the Puppet Virtual Training subscription.
-
-We now offer a virtual training subscription for any budget. With the purchase of a Virtual Training Subscription, you get access to every virtual training course we offer for 50% off over the next year.

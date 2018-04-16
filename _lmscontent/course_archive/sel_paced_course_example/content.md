@@ -1,1 +1,0 @@
-This is example content for creating a self-paced course

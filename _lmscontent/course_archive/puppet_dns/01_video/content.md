@@ -1,1 +1,0 @@
-<iframe src="//player.vimeo.com/video/107733511" width="715" height="400" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> <p><a href="http://vimeo.com/105288788">Puppet DNS (04-2102)</a> from <a href="http://vimeo.com/puppeteducation">Puppet Labs Education</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
