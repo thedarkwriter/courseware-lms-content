@@ -1,0 +1,1 @@
+***Introduction to DevOps*** and ***Puppet Fundamentals*** has been bundled together so you can take advantage of automation with Puppet Enterprise and proven DevOps practices to drive your team and your deployments forward. This is a great way to help kickstart your DevOps transformation.

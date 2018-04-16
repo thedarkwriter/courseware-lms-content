@@ -1,0 +1,20 @@
+{
+  "_displayName_": "1-800-Flowers Case Study",
+  "_keyword_": "content_component",
+  "created": "2017-08-04 12:56:53",
+  "createdById": 35,
+  "deprecatedBy": "",
+  "generateCertificate": "DEFAULT",
+  "generateProofOfCompletion": "DEFAULT",
+  "modified": "2017-08-04 13:18:36",
+  "modifiedById": 35,
+  "name": "1-800-Flowers Case Study",
+  "orderNumber": 0,
+  "price": "0.0 USD",
+  "primaryCategoryId": 10,
+  "status": "ACTIVE_COMPONENT",
+  "urlName": "1-800-flowers-case-study",
+  "visibility": "HIDDEN",
+  "duration.minutesPerDay": 0,
+  "duration.days": 0
+}

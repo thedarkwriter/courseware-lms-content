@@ -1,0 +1,20 @@
+{
+  "_displayName_": "Puppet Services and Support",
+  "_keyword_": "content_component",
+  "created": "2017-07-28 13:53:44",
+  "createdById": 31489,
+  "deprecatedBy": "",
+  "generateCertificate": "DEFAULT",
+  "generateProofOfCompletion": "DEFAULT",
+  "modified": "2017-08-03 13:48:01",
+  "modifiedById": 35,
+  "name": "Puppet Services and Support",
+  "orderNumber": 0,
+  "price": "0.0 USD",
+  "primaryCategoryId": 10,
+  "status": "ENABLED",
+  "urlName": "puppet-services-and-support",
+  "visibility": "DEPRECATED",
+  "duration.minutesPerDay": 11,
+  "duration.days": 0
+}

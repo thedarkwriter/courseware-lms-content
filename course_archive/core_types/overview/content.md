@@ -1,0 +1,3 @@
+<h2>Introduction:</h2>
+Core types are the most essential types you will use to interact with Puppet and tell it what to do. They are ready to go when you install Puppet, meaning you don't have to do anything to set them up. </p> 
+<p>One example of a core type you have gotten some practice working with previously in this course is the <code>file</code> type. In the next two units, you will get some practice working with the <code>package</code> and <code>service</code> types as well. The full list of all core types is posted on our <a href="https://puppet.com/docs/puppet/latest/type.html">type reference page</a>.</p>

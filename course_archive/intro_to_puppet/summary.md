@@ -1,0 +1,1 @@
+Get a quick primer on Puppet before you get into the weeds. Learn why you should use Puppet Enterprise and get exposed to the core concepts of the Puppet DSL and Puppet Enterprise capabilities.

@@ -1,0 +1,21 @@
+{
+  "_displayName_": "02. Puppet Lint - Exercises",
+  "_keyword_": "content_component",
+  "created": "2015-02-03 13:14:04",
+  "createdById": 3,
+  "deprecatedBy": "",
+  "generateCertificate": "DEFAULT",
+  "generateProofOfCompletion": "DEFAULT",
+  "modified": "2015-02-03 13:14:04",
+  "modifiedById": 3,
+  "name": "02. Puppet Lint - Exercises",
+  "orderNumber": 0,
+  "price": "0.0 USD",
+  "primaryCategoryId": 1,
+  "providerId": 1,
+  "status": "ACTIVE_COMPONENT",
+  "urlName": "02-puppet-lint---exercises",
+  "visibility": "HIDDEN",
+  "duration.minutesPerDay": 0,
+  "duration.days": 0
+}

@@ -1,0 +1,1 @@
+This tutorial provides a walkthrough of setting up a virtual classroom using Puppetfactory.

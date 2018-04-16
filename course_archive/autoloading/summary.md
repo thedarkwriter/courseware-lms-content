@@ -1,0 +1,1 @@
+Autoloading in Puppet means that your modules will be loaded by Puppet at compile time, as long as they follow a predictable structure. This course will help you with the basics of Autoloading.

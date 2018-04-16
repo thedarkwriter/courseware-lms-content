@@ -1,0 +1,21 @@
+{
+  "_displayName_": "Testing Puppet",
+  "_keyword_": "learning_pathway",
+  "created": "2015-08-31 11:53:06",
+  "createdById": 9,
+  "deprecatedBy": "",
+  "generateCertificate": "DEFAULT",
+  "generateProofOfCompletion": "DEFAULT",
+  "modified": "2016-05-13 14:30:56",
+  "modifiedById": 38,
+  "name": "Testing Puppet",
+  "orderNumber": 1,
+  "price": "0.0 USD",
+  "primaryCategoryId": 7,
+  "requirementsNeededToPass": 3,
+  "status": "DISABLED",
+  "urlName": "testing-puppet",
+  "visibility": "DEPRECATED",
+  "duration.minutesPerDay": 0,
+  "duration.days": 0
+}

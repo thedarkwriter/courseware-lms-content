@@ -1,0 +1,1 @@
+Quickly get started managing your infrastructure with your existing Puppet Master-agent setup. You'll learn the essential concepts of the Puppet Enterprise ecosystem required to describe and manage your infrastructure using publicly available modules.
