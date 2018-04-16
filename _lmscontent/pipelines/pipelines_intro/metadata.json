@@ -15,7 +15,7 @@
   "duration.minutesPerDay": 15,
   "generateCertificate": "DEFAULT",
   "generateProofOfCompletion": "DEFAULT",
-  "name": "Technical Introduction to Puppet Pipelines",
+  "name": "Puppet Pipelines: Technical Demo",
   "orderNumber": 0,
   "price": "0.00 USD",
   "primaryCategoryId": 10,
