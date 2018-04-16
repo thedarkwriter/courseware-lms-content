@@ -51,9 +51,9 @@ being created on the repo. These must be tagged with a specific name format (see
 1. Tag release in the repository using datevar convention with a numeric suffix and prepended by the letter `v`: __e.g.:__ v2018.03.01.01
 2. Add a description of what the release contains and then publish release. This tag will represent any changes since the LAST push to production. Make your notes as complete as possible.
 3. Ensure you are in the repo folder on your machine to run the following rake tasks.
-3. Run a  diff using either `rake migrate:production` on the command line or using compare in GitHub: __e.g.:__ https://github.com/puppetlabs/courseware-lms-content/compare/v1.1...v2018.03.30.01
-4. On the command line, run `rake download:repo`.
-5. To finish the process and push all your changes live, run `rake release:production`.
-6. Check your content in the [production site](https://learn.puppet.com/).
+4. To ensure you have all required gems, you may need to run `bundle install` the first time you push to production.
+5. Run a  diff using either `rake migrate:production` on the command line or using compare in GitHub: __e.g.:__ https://github.com/puppetlabs/courseware-lms-content/compare/v1.1...v2018.03.30.01
+6. On the command line, run `rake download:repos`.
+7. To finish the process and push all your changes live, run `rake release:production`.
+8. Check your content in the [production site](https://learn.puppet.com/).
 
-/
