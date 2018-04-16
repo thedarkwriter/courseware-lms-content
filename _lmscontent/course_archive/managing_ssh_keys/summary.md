@@ -1,1 +1,0 @@
-Secure Shell (SSH) is a protocol that enables encrypted connections between nodes on a network. This course demonstrates how to use a Puppet Module to manage SSH client and server keys in your environment.

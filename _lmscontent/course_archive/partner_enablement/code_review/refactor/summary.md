@@ -1,1 +1,0 @@
-A training for partners to learn how to deliver engagements containing the Code Review/Refactor work package.

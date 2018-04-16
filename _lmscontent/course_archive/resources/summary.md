@@ -1,1 +1,0 @@
-Understanding Resources is fundamental to understanding how Puppet works. Resources are like building blocks (think Lego). They can be combined to model the expected state of the systems you manage.

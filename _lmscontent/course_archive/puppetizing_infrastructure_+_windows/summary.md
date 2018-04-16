@@ -1,1 +1,0 @@
-This course is a combination of our Puppetizing Infrastructure and Windows Essentials courses.  It is only available as a private engagement; we do not offer it as a public class.

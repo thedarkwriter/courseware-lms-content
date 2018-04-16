@@ -1,1 +1,0 @@
-In this course you will see how to install puppet-lint, use puppet-lint to check a manifest, customize puppet-lint's configuration, and integrate puppet-lint into a Rakefile.

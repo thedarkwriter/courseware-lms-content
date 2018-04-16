@@ -1,1 +1,0 @@
-As your codebase grows in complexity, changing one part of the code without affecting other parts becomes exponentially more difficult. Unit tests are a method for ensuring that individual parts of your codebase continue to work as intended while other parts are improved and refactored as needed.

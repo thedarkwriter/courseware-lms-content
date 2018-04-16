@@ -1,1 +1,0 @@
-A short assessment required for every onboarding consultant.

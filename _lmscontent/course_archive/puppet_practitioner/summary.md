@@ -1,1 +1,0 @@
-Learn how to design and build modules following best practices, extend modules from the Forge and develop best practices for implementing roles and profiles.

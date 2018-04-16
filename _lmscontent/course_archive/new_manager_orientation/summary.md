@@ -1,1 +1,0 @@
-[Confluence Page](https://confluence.puppetlabs.com/display/EmployeeResources/New+Manager+Orientation "")

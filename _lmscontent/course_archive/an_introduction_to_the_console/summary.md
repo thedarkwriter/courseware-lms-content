@@ -1,1 +1,0 @@
-The Puppet Enterprise Console is a web-based graphical user interface for your infrastructure. This course is a high level overview of the Console covering the main functional areas.

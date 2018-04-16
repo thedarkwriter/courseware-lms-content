@@ -1,1 +1,0 @@
-In *Puppet Essentials for Windows* students will learn how to manage Windows systems using Puppet following best practices.

@@ -1,1 +1,0 @@
-Learn core DevOps principles, common tools, methodologies, and how they can be leveraged in your organization.

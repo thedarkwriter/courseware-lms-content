@@ -1,1 +1,0 @@
-Firewall rule management is a critical task that you can automate with Puppet Enterprise.
