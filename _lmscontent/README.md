@@ -11,6 +11,11 @@ and publish the entire contents of the learning component. This means changes
 to `summary.md` also results in `content.md` and any metadata to be
 updated in learndot.
 
+The build server resides on the [Puppet SLICE infrastructure](https://confluence.puppetlabs.com/display/SRE/SLICE) and is named
+`learndoit`. Once connected to the corporate network, log in to the machine
+using the `training.pem` private key like so:
+
+`ssh -l centos -i training.pem 10.32.171.145`
 
 
 ## Folder structure 
@@ -51,3 +56,4 @@ being created on the repo. These must be tagged with a specific name format (see
 5. To finish the process and push all your changes live, run `rake release:production`.
 6. Check your content in the [production site](https://learn.puppet.com/).
 
+/

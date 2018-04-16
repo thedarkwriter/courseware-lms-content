@@ -1,4 +1,9 @@
-# Introduction to Puppet Orchestration 
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+</head>
+# Introduction to Puppet Orchestration: Puppet Tasks 
 
 Puppet Tasks are a way to solve problems that don't fit well into Puppet's
 traditional configuration management model.
@@ -190,9 +195,9 @@ that module's tasks directory along with a `.json` file with the same name.
 
     $ tree packages/
     packages/
-    └── tasks
-        ├── yum.json
-        └── yum.sh
+    +-- tasks
+        +-- yum.json
+        +-- yum.sh
     
 The `yum.json` file simply describes how to interact with the task. The minimum
 useful file might look like the following, but you can describe parameters, data
