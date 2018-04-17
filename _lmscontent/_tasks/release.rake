@@ -137,9 +137,7 @@ namespace :release do
         rake_task_name = File.basename(component_directory)
       end
       
-      if File.directory?(component_directory)
-        Rake::Task["release:#{rake_task_name}"].invoke('production')
-      end
+      Rake::Task["release:#{rake_task_name}"].invoke('production')
     end
   end
 end
