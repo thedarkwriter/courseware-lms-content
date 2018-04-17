@@ -136,8 +136,9 @@ namespace :release do
       else
         rake_task_name = File.basename(component_directory)
       end
-
-      Rake::Task["release:#{rake_task_name}"].invoke('production') 
+      if File.directory?(delta.new_file)
+        Rake::Task["release:#{rake_task_name}"].invoke('production')
+      end
     end
   end
 end
