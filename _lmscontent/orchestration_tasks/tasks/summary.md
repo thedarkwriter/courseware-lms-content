@@ -1,4 +1,4 @@
-# Introduction to Puppet Orchestration and Tasks
+# Introduction to Puppet Orchestration: Tasks
 Puppet Tasks are a way to solve problems that don't fit well into Puppet's traditional declarative configuration management model.
 
 This training has three objectives:
