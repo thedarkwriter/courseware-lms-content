@@ -1,3 +1,2 @@
-# This is an example summary file
-
-Testing Updated foo!!
+In this training, you will get started with **Bolt**: a standalone, agentless open source task runner to execute imperative, ad hoc tasks 
+in smaller infrastructures. The Puppet task runner is driven through a command line interface and executes commands via SSH and WinRM.
