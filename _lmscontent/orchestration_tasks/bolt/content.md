@@ -1,6 +1,7 @@
 
 <i class="fa fa-graduation-cap"></i>
-Lesson</p>
+</p>
+### Lesson
 This training has two objectives:
 
 * You will know how to get started with Puppet Tasks using Bolt.
