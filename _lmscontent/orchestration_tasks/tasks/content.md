@@ -1,8 +1,3 @@
-# Introduction to Puppet Orchestration and Tasks
-
-Puppet Tasks are a way to solve problems that don't fit well into Puppet's
-traditional declarative configuration management model.
-
 As we know, Puppet is great at modeling resources and then enforcing state over
 time. It will check the state of a resource, fix it if it's wrong, and send a
 report back to the Puppet master if it changed anything. But sometimes you don't need to model the state of a resource -- you need to orchestrate
