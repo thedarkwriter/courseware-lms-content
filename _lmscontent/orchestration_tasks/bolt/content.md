@@ -1,6 +1,5 @@
 
 <i class="fa fa-graduation-cap"></i>
-</p>
 ### Lesson
 This training has two objectives:
 
