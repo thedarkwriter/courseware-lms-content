@@ -1,5 +1,7 @@
-<i class="fa fa-desktop" aria-hidden="true"></i>
-<h3>Lesson</h3>
+
+      <p><i class="fa fa-graduation-cap"></i>
+Lesson</p>
+    </div>
 In this training, you will get started with **Bolt**: a standalone, agentless open source task runner to execute imperative, ad hoc tasks in smaller infrastructures. The Puppet task runner is driven through a command line interface and executes commands via SSH and WinRM.
 
 This training has two objectives:
