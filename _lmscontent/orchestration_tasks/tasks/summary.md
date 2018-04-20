@@ -3,8 +3,8 @@ Puppet Tasks are a way to solve problems that don't fit well into Puppet's tradi
 
 This training has three objectives:
 
-* Learn how to run script or task from command line and the console
+* Understand how to choose between using model-driven configuration management or running a Puppet task
+* Learn how to run a task from both the command line and the console
 * Install and use tasks in modules
-* Understand how to choose between using configuration management with Puppet or running a task
 
 
