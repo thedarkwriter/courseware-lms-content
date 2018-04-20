@@ -262,18 +262,3 @@ job of making sure that the node is running the latest version of Apache or
 Postfix is a long term configuration management job and pushing it out via tasks
 would not gain you the benefits and peace of mind that managing the resources
 with Puppet would.
-
-<i class="fa fa-desktop" aria-hidden="true"></i>
-### Practice
-Visit the [Tasks Hands-on Lab](https://github.com/puppetlabs/tasks-hands-on-lab)
-to practice your skills. This covers the full Bolt ecosystem, which is the open source task runner
-subsystem of Puppet Orchestration. Bolt uses SSH and WinRM as transport
-mechanisms, while Puppet Orchestration uses your existing Puppet infrastructure.
-For the most part, where the Hands-on Lab instructs you to run `bolt task`, you
-can also run `puppet task` to accomplish the same results. The tutorial also
-covers writing Puppet plans, which are scripts that can programmatically
-aggregate multiple tasks in sequence, or make conditional runtime decisions about
-them.
-
-We hope you enjoyed this session and are just as excited about running tasks in
-Puppet Enterprise as we are.
