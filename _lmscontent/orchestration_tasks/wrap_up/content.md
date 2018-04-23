@@ -1,5 +1,4 @@
-<i class="fa fa-desktop" aria-hidden="true"></i>
-### Practice
+<div><i class="fa fa-desktop" aria-hidden="true"></i><h3>Practice</h3></div>
 Now that you know more about Bolt and tasks, visit the [Tasks hands-on lab](https://github.com/puppetlabs/tasks-hands-on-lab)
 to practice your skills. This covers the full Bolt ecosystem, the open source task runner
 subsystem of Puppet Orchestration that you learned about in the first module. Bolt uses SSH and WinRM as transport

@@ -14,8 +14,7 @@ or WinRM covered in the open source [Bolt documentation](https://puppet.com/docs
 
 If you are a Puppet Enterprise user, you can follow along with this tutorial and run the commands shown in the examples. You can also choose to review this material first and then move to a hands-on lab for practice. 
 
-<i class="fa fa-graduation-cap" aria-hidden="true"></i> 
-### Lesson 
+<div><i class="fa fa-graduation-cap" aria-hidden="true"></i><h3>Lesson</h3></div>
 Let's get started and run a task across our entire infrastructure. We'll use a task that shows the version of the `openssl` package.
 
 In the *Tasks* tab of the PE Console, type in the name of the task,
@@ -244,8 +243,7 @@ run on multiple nodes and might take untrusted input specified by system
 administrators, you should ensure that you write your scripts to handle untrusted
 data in a safe manner. See the [Writing Tasks](https://puppet.com/docs/bolt/0.x/writing_tasks.html) docs page for some guidelines on writing secure code.
 
-<i class="fa fa-pencil" aria-hidden="true"></i>
-### Use Cases
+<div><i class="fa fa-pencil" aria-hidden="true"></i><h3>Use Cases</h3></div>
 
 Since tasks are so easy to write, you might be tempted to sit down and write
 a lot of them to perform all of your maintenance and configuration. Before
