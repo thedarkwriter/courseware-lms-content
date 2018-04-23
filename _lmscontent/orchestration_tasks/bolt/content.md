@@ -1,5 +1,5 @@
 
-<div><i class="fa fa-graduation-cap"></i> <h3>Lesson</h3></div>
+<div><i class="fa fa-graduation-cap"></i><h3>Lesson</h3></div>
 
 Eric Sorenson, director of product management at Puppet, walks you through how to run tasks via Puppet Bolt. After watching this video, you will know how to turn a script into a task and how and why to add metadata to your tasks. 
 
@@ -8,7 +8,7 @@ Eric Sorenson, director of product management at Puppet, walks you through how t
 
 [Download the transcript](https://puppet.box.com/shared/static/ao0k22gfdwuxkedlsa64ahoxu6eaekvh.pdf) of this video.
 
-<i class="fa fa-pencil" aria-hidden="true"></i> <h3>Resources</h3>
+<div><i class="fa fa-pencil" aria-hidden="true"></i><h3>Resources</h3></div>
 
 * [Bolt website](https://puppet.com/products/puppet-bolt)
 * [Bolt documentation](https://puppet.com/docs/bolt/0.x/bolt.html)
