@@ -21,7 +21,7 @@ Let's get started and run a task across our entire infrastructure. We'll use a t
 In the *Tasks* tab of the PE Console, type in the name of the task,
 `package`. Notice how a list appears and filters down as you type the word.
 
-![PE console task filter showing dropdown options](/static/images/orchestration/pe_console_task_filter.png)
+<img src="/static/images/orchestration/pe_console_task_filter.png" alt="PE console task filter showing dropdown options" height="75%" width="75%">
 
 After selecting the `package` task, the `Task Parameters` interface updates with the parameters accepted by the task. In this case, there are two parameters - `action` and `name`.
 
@@ -29,14 +29,14 @@ Since we want to interrogate all of the servers in the infrastructure for the ve
 
 Next, we need to select a set of nodes on which we will run our task. This is done with the *Inventory* portion of the screen. In order to run the task on all nodes, select **PQL Query**, then the **All nodes** query. Other useful node queries are also shipped with Puppet Enterprise and can be seen in the drop-down box.
 
-![PE console displaying node queries and details for each node](/static/images/orchestration/pe_console_running.png)
+<img src="/static/images/orchestration/pe_console_running.png" alt="PE console displaying node queries and details for each node" height="75%" width="75%">
 
 The job will run on each node selected, and any output will be displayed.
 You'll see nodes that failed on the top of the list. In this example, seven
 nodes weren't connected to the broker. Perhaps they were in the middle of
 restarting. We can use this list to further investigate offline, if needed.
 
-![PE console displaying error messages for each failed node run](/static/images/orchestration/pe_console_failures.png)
+<img src="/static/images/orchestration/pe_console_failures.png" alt="PE console displaying error messages for each failed node run" height="75%" width="75%">
 
 Now that we've run our first task, how do we know how to use this task? Let's
 use the PE Console to find out. We'll go back to that top-level **Tasks** tab.
@@ -44,12 +44,12 @@ Instead of typing a name this time, click in that text box and wait a moment.
 All of the installed tasks will show up in the drop-down, and you can scroll
 through to see what tasks you can run.
 
-![PE console task entry field showing dropdown menu of available tasks](/static/images/orchestration/pe_console_tasklist.png)
+<img src="/static/images/orchestration/pe_console_tasklist.png" alt="PE console task entry field showing dropdown menu of available tasks" height="75%" width="75%">
 
 Pick one out by either clicking its name or typing it out. Directly underneath
 you'll see a **view task metadata** disclosure triangle. Expand it, and you'll find a description of the task and all of its parameters.
 
-![PE console metadata information revealed](/static/images/orchestration/pe_console_task_metadata.png)
+<img src="/static/images/orchestration/pe_console_task_metadata.png" alt="PE console metadata information revealed" height="75%" width="75%">
 
 On the other hand, maybe you don't want to click through the graphical interface
 to run tasks. Or maybe you'd like to invoke tasks as part of a script or a cron
@@ -135,7 +135,7 @@ command. Specify the same job ID as the `puppet task run` command displayed.
 You can also return to the PE Console and see the same information under the
 **Jobs** tab. Just choose the Job ID from the list, and you'll see the report.
 
-![PE console job run results](/static/images/orchestration/pe_console_results.png)
+<img src="/static/images/orchestration/pe_console_results.png" alt="PE console job run results" height="75%" width="75%">
 
 If you had to type out the name of each node you wanted to run on,
 this would be a rather tedious tool to use, especially if you have a large
@@ -149,7 +149,7 @@ query `inventory[certname] { facts.os.name = "CentOS" }`. The PE Console provide
 a list of common queries ready to customize, so most of the time you can simply
 choose a query from the list and then update a parameter.
 
-![PE console displaying nodes filtered by the PQL query](/static/images/orchestration/pe_console_pql.png)
+<img src="/static/images/orchestration/pe_console_pql.png" alt="PE console displaying nodes filtered by the PQL query" height="75%" width="75%">
 
 You could also run that from the command line. A simple workflow to get started
 might be to generate and preview the desired PQL query in the PE Console
