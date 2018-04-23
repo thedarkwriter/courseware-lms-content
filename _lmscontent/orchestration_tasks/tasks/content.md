@@ -1,71 +1,71 @@
-<!DOCTYPE html>
-<html lang="en"> 
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-</head>
-# Introduction to Puppet Orchestration: Puppet Tasks 
+As we know, Puppet is great at modeling resources and then enforcing state over
+time. It will check the state of a resource, fix it if it's wrong, and send a
+report back to the Puppet master if it changed anything. But sometimes you don't need to model the state of a resource -- you need to orchestrate
+"point-in-time" changes. Instead of long-term configuration management, you
+need to make something happen and be done with it. Puppet Tasks are a simple
+and quick way to immediately upgrade packages, restart services, or perform any
+other type of single-action executions on your nodes.
 
-Puppet Tasks are a way to solve problems that don't fit well into Puppet's
-traditional configuration management model.
-
-As we know, Puppet is great at modeling resources, and then enforcing state over
-time. It will check the state of a resource and then fix it if it's wrong. Then
-Puppet will send a report back to the Puppet Master if it changed anything. But
-sometimes you're not modeling the state of a resource. Sometimes you just need
-to orchestrate "point-in-time" changes. Instead of long-term configuration
-management, you just need to make something happen and be done with it. Puppet
-Tasks is a really simple way to do that and are quickest way to immediately
-upgrade packages, restart services, or perform any other type of single-action
-executions on your nodes.
-
-The Puppet Orchestrator uses your existing Puppet Enterprise infrastructure to
+The [Puppet Orchestrator](https://puppet.com/docs/pe/latest/orchestrator/orchestrating_puppet_and_tasks.html) uses your existing Puppet Enterprise infrastructure to
 run tasks everywhere you need them. This allows you to scale up to global
 networks of thousands of nodes with hardly any configuration to start with. If
 you don't have your target nodes Puppetized yet, you can also run tasks via SSH
 or WinRM covered in the open source [Bolt documentation](https://puppet.com/docs/bolt/latest/bolt.html).
 
-Let's get started and run a task across our entire infrastructure. Don't worry,
-it won't be anything fun like `halt`, we'll run something more benign and just
-echo out the string "Hello world!" from each node.
+If you are a Puppet Enterprise user, you can follow along with this tutorial and run the commands shown in the examples. You can also choose to review this material first and then move to a hands-on lab for practice. 
 
-In *Tasks* tab of the PE Console, we'll just type in the name of the task,
-`echo`. Notice how a list appears and filters down as you type the word. We'll
-come back to that in a moment. Now we'll enter the message we'd like it to
-say, choose a Node Group from the Inventory section and run the job!
+<i class="fa fa-graduation-cap" aria-hidden="true"></i> 
+### Lesson 
+Let's get started and run a task across our entire infrastructure. We'll use a task that shows the version of the `openssl` package.
 
-![Hello World task](pe_console_running.png)
+In the *Tasks* tab of the PE Console, type in the name of the task,
+`package`. Notice how a list appears and filters down as you type the word.
 
-The job will run on each node we've selected, and any output will be displayed.
-You'll see any nodes that failed on the top of the list. In this example, three
+![PE console task filter showing dropdown options](/static/images/orchestration/pe_console_task_filter.png)
+
+After selecting the `package` task, the `Task Parameters` interface updates with the parameters accepted by the task. In this case, there are two parameters - `action` and `name`.
+
+Since we want to interrogate all of the servers in the infrastructure for the version of OpenSSL they are running, we'll select `status` for the `action` parameter and enter `openssl` for the `name` parameter.
+
+Next, we need to select a set of nodes on which we will run our task. This is done with the *Inventory* portion of the screen. In order to run the task on all nodes, select **PQL Query**, then the **All nodes** query. Other useful node queries are also shipped with Puppet Enterprise and can be seen in the drop-down box.
+
+![PE console displaying node queries and details for each node](/static/images/orchestration/pe_console_running.png)
+
+The job will run on each node selected, and any output will be displayed.
+You'll see nodes that failed on the top of the list. In this example, seven
 nodes weren't connected to the broker. Perhaps they were in the middle of
 restarting. We can use this list to further investigate offline, if needed.
 
-![Task output with failures](pe_console_failures.png)
+![PE console displaying error messages for each failed node run](/static/images/orchestration/pe_console_failures.png)
 
-Well that was quick and easy. But how do you know how to use this task? Let's
-use the PE Console to find out. We'll go back to that top-level *Tasks* tab.
-Instead of typing a name this time, just click in that text box and wait a
-moment. All the tasks you've got installed will show up in the drop-down and you
-can scroll through to see what tasks you can run.
+Now that we've run our first task, how do we know how to use this task? Let's
+use the PE Console to find out. We'll go back to that top-level **Tasks** tab.
+Instead of typing a name this time, click in that text box and wait a moment.
+All of the installed tasks will show up in the drop-down, and you can scroll
+through to see what tasks you can run.
+
+![PE console task entry field showing dropdown menu of available tasks](/static/images/orchestration/pe_console_tasklist.png)
 
 Pick one out by either clicking its name or typing it out. Directly underneath
-you'll see a *view task metadata* disclosure triangle. Expand it and you'll find
-a quick description of the task and all of its parameters.
+you'll see a **view task metadata** disclosure triangle. Expand it, and you'll find a description of the task and all of its parameters.
 
-![Task description in the console](pe_console_tasks.png)
+![PE console metadata information revealed](/static/images/orchestration/pe_console_task_metadata.png)
 
 On the other hand, maybe you don't want to click through the graphical interface
 to run tasks. Or maybe you'd like to invoke tasks as part of a script or a cron
-job. Luckily, we've designed that capability for you.
+job. There is a way to do it without using the GUI.
 
-![puppet task transcript](cli_transcript.png)
+First make sure that [PE Client Tools](https://puppet.com/docs/pe/latest/installing/installing_pe_client_tools.html)
+have valid tokens to access the API. You want to see the usage instructions of the task you want to run, so first ask
+the Orchestrator. Note that if you don't specify the name of a task, it will list
+all of the installed tasks. In this case, I'll use `facter` as my example.
 
-First we'll need to make sure that our [PE Client Tools](https://puppet.com/docs/pe/latest/installing/installing_pe_client_tools.html)
-have valid access tokens to access the API. Then we can just start using the
-Orchestrator. We'll want to see the usage instructions of the task we want to
-run, so let's ask the Orchestrator. Note that if you don't specify the name of a
-task, it will list all the tasks you've got installed.
+    $ puppet access login
+    Enter your Puppet Enterprise credentials.
+    Username: ben.ford
+    Password:
 
+    Access token saved to: /home/ben.ford/.puppetlabs/token
     $ puppet task show facter
     
     facter - Inspect the value of system facts
@@ -77,10 +77,10 @@ task, it will list all the tasks you've got installed.
     - fact : String
         The name of the fact to retrieve
       
-Then to run a task, just specify the task, any parameters, and a list of nodes
-to run the task on. You'll see that the tasks are all run at the same time, and
-they're not run sequentially. You'll see information coming back from each node
-as soon as the Orchestrator knows about it.
+Then to run a task, specify the task, its parameters, and a list of nodes
+to run the task on. The tasks are all run at the same time, and they're not run
+sequentially. You'll see information coming back from each node as soon as the
+Orchestrator knows about it.
 
     $ puppet task run facter fact=osfamily -n basil-2,basil-4,basil-6
     Starting job ...
@@ -133,27 +133,27 @@ command. Specify the same job ID as the `puppet task run` command displayed.
           RedHat
           
 You can also return to the PE Console and see the same information under the
-*Jobs* tab. Just choose the Job ID from the list, and you'll see the report.
+**Jobs** tab. Just choose the Job ID from the list, and you'll see the report.
 
-![PE task output](pe_console_results.png)
+![PE console job run results](/static/images/orchestration/pe_console_results.png)
 
-If you had to laboriously type out the name of each node you wanted to run on,
+If you had to type out the name of each node you wanted to run on,
 this would be a rather tedious tool to use, especially if you have a large
 infrastructure. An easier way to operate is by filtering your inventory. Let's
-see what that might look like, by running the `facter` task to find the major
+see what that might look like by running the `facter` task to find the major
 release version of all our CentOS machines.
 
-![Filtering inventory with PQL](pe_console_pql.png)
-
-Here, we'll specify that we want the `os.release.major` fact from all the nodes
+For this example, I specify that I want the `os.release.major` fact from all the nodes
 who match the [PQL](https://puppet.com/docs/puppetdb/latest/api/query/v4/pql.html)
 query `inventory[certname] { facts.os.name = "CentOS" }`. The PE Console provides
 a list of common queries ready to customize, so most of the time you can simply
 choose a query from the list and then update a parameter.
 
-We could also run that from the command line. A simple workflow to get started
-might be to use the PE Console to generate and preview the desired PQL query,
-and then copy pasting it into the script you're writing.
+![PE console displaying nodes filtered by the PQL query](/static/images/orchestration/pe_console_pql.png)
+
+You could also run that from the command line. A simple workflow to get started
+might be to generate and preview the desired PQL query in the PE Console
+and then copy/paste it into your script.
 
     $ puppet task run facter fact=os.release.major --query 'inventory[certname] { facts.os.name = "CentOS" }'
     Starting job ...
@@ -176,22 +176,25 @@ and then copy pasting it into the script you're writing.
     
     Job failed. 3 nodes failed, 0 nodes skipped, 81 nodes succeeded.
     Duration: 0 sec
+    
+#### Writing tasks
 
-Of course, the true power of Puppet Tasks comes when you learn how to write your
+The true power of Puppet Tasks comes when you learn how to write your
 own. Tasks are very similar to simple scripts, written in any language you like.
-To turn a shell script into a task, you'd put it in a `tasks` directory of any
-Puppet module and write a metadata file to describe how it works. This allows
-you to reuse and share Tasks quite easily.
+To turn a shell script into a task, you put it in a `tasks` directory of any
+Puppet module and write a metadata file that describes how it works. This
+standardized interface for describing and distributing your scripts using
+Puppet Tasks makes it easier for you to share them and for others to use them.
 
-Let's start with an extraordinarily simple shell script that just calculates how
+Let's start with a simple shell script that calculates how
 many packages are installed on a RedHat family system.
 
     #! /bin/bash
-    # We need to drop the first line, since it's just a header
+    # We need to drop the first line, since it's a header
     expr $(yum list installed --quiet | wc -l) - 1
     
-To make this into a task, we simply create a Puppet module, and put this into
-that module's tasks directory along with a `.json` file with the same name.
+To make this into a task, we create a Puppet module and put this file into
+the module's `tasks` directory along with a `.json` file with the same name.
 
     $ tree packages/
     packages/
@@ -199,7 +202,7 @@ that module's tasks directory along with a `.json` file with the same name.
         +-- yum.json
         +-- yum.sh
     
-The `yum.json` file simply describes how to interact with the task. The minimum
+The `yum.json` file describes how to interact with the task. The minimum
 useful file might look like the following, but you can describe parameters, data
 types, enable noop mode, etc. The [Writing Tasks](https://puppet.com/docs/bolt/0.x/writing_tasks.html)
 docs page has more information.
@@ -209,7 +212,7 @@ docs page has more information.
       "description": "Returns the number of yum packages installed"
     }
 
-As soon as the module is installed in the Puppet Master's you can run it, just
+As soon as the module is installed on the Puppet master, you can run it just
 like any other task and get back the information you requested. Note that the
 name of the task is `{module name}::{script name}`
 
@@ -235,37 +238,27 @@ name of the task is `{module name}::{script name}`
     Job failed. 3 nodes failed, 0 nodes skipped, 81 nodes succeeded.
     Duration: 0 sec
 
-The Puppet Orchestrator will handle distributing the task everywhere it needs to
-be and then executing it and returning the results. Because these scripts will be
+The Puppet Orchestrator handles distributing the task everywhere it needs to
+be, executing it, and returning the results. Because these scripts will be
 run on multiple nodes and might take untrusted input specified by system
 administrators, you should ensure that you write your scripts to handle untrusted
 data in a safe manner. See the [Writing Tasks](https://puppet.com/docs/bolt/0.x/writing_tasks.html) docs page for some guidelines on writing secure code.
 
-So that was sort of a whirlwind introduction to the world of Puppet Tasks. Now,
-you might be tempted to sit down and smash out a lot of tasks to perform all your
-maintenance and configuration tasks. Before you do this, you should take a moment
-to consider long-term maintainability. In many cases, taking the time to update
-shell script methodologies might serve your purposes better.
+<i class="fa fa-pencil" aria-hidden="true"></i>
+### Use Cases
+
+Since tasks are so easy to write, you might be tempted to sit down and write
+a lot of them to perform all of your maintenance and configuration. Before
+you do this, take a moment to consider long-term maintainability. In many
+cases, taking the time to update shell script methodologies might serve your
+purposes better.
 
 Jobs that are simple one-time actions or that must be orchestrated across
 multiple nodes in the correct sequence are great candidates for Puppet Tasks.
-For example, you might want a Task to restart your webserver or clear the
+For example, you might want a task to restart your webserver or clear the
 mailserver outgoing message queue. These are not well suited for Puppet because
 they're a one-time action, but they'd make great tasks. On the other hand, the
 job of making sure that the node is running the latest version of Apache or
-Postfix is a long term configuration management job and pushing it out via Tasks
-would not gein you the benefits and peace of mind that managing the resources
+Postfix is a long term configuration management job and pushing it out via tasks
+would not gain you the benefits and peace of mind that managing the resources
 with Puppet would.
-
-We hope you enjoyed this session and are just as excited about running Tasks in
-Puppet Enterprise as we are. If you'd like to kick the tires and practice your
-Task skills, we invite you to try out the [Hands on Lab](https://github.com/puppetlabs/tasks-hands-on-lab).
-This covers the full Bolt ecosystem, which is the open source task runner
-subsystem of Puppet Orchestration. Bolt uses SSH and WinRM as transport mechanisms,
-while Puppet Orchestration uses your exising Puppet infrastructure. For the most
-part, where the Hands on Lab instructs you to run `bolt task`, you can also run
-`puppet task` to accomplish the same results. This tutorial also covers writing
-Puppet Plans, which are scripts that can programmatically aggregate multiple Tasks
-in sequence, or make conditional runtime decisions about them.
-
-Thanks for checking it out and we'll see you next time!

@@ -1,9 +1,7 @@
-# Puppet Pipelines for Applications
-
 After completing this training, you will be able to:
 
 * Create a software deployment pipeline using the SaaS edition of Pipelines for Applications
-* Understand different product features and explain their value and use to clients
+* Understand different product features and explain their value to clients
 
 ### Lesson
 
@@ -11,14 +9,9 @@ After completing this training, you will be able to:
 <script src="https://fast.wistia.net/assets/external/E-v1.js" async></script>
 
 ### Resources
+
 * [Learn about git branching strategies](https://www.atlassian.com/git/tutorials/using-branches)
-* Read Pipelines documentation {link needed}
+* [Bookmark the Puppet Pipelines official documentation](https://puppet.com/docs/pipelines)
 
-### Task 
-Practice with the Puppet Pipelines for Applications self-paced lab. {Do we want to have a different contact on that lab besides Matt C?}
-
-
-https://github.com/puppetlabs/pipelines-self-paced/blob/master/pipelines-for-applications/pages/prework.md
-
-
-https://github.com/ipcrm/puppet_webapp/tree/puppet_webapp1
+### Practice 
+Get hands-on practice with [Puppet Pipelines for Applications self-paced lab](https://github.com/puppetlabs/pipelines-self-paced/tree/master/pipelines-for-applications)

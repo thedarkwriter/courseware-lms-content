@@ -4,6 +4,8 @@ Imagine you are a new system administrator, hired to help deploy Puppet to event
 
 > "We need to deploy our new internally developed corporate directory intranet application named **Robby**. Robby consists of several pieces including backend database servers and frontend web servers. It serves the worldwide corporate offices and allows employees to publish information about themselves for other employees to see, such as a profile picture, a short bio, notable career achievements and what they like to do for fun. Use Puppet to deploy Robby to our corporate datacenter according to the currently documented manual runbook."
 
+**NOTE:** A *runbook* is a compilation of routine procedures and operations that the system administrator or operator carries out.
+
 With that request, it's time to start figuring out how to achieve it using Puppet. Looking at the runbook, you discover that the following servers, all running the latest version of RedHat Enterprise Linux, must be configured:
 
 * **db1.mycorp.com** - primary database server

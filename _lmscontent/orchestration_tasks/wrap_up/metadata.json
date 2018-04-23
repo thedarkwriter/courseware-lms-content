@@ -12,15 +12,15 @@
   "customField10": "",
   "deprecatedBy": "",
   "duration.days": 0,
-  "duration.minutesPerDay": 30,
+  "duration.minutesPerDay": 10,
   "generateCertificate": "DEFAULT",
   "generateProofOfCompletion": "DEFAULT",
-  "name": "Puppet Bolt",
+  "name": "Bolt and Tasks Wrap-up",
   "orderNumber": 0,
   "price": "0.00 USD",
   "primaryCategoryId": 10,
   "providerId": 1,
   "status": "ENABLED",
-  "urlName": "puppet-bolt",
+  "urlName": "bolt-tasks-wrapup",
   "visibility": "HIDDEN"
 }
