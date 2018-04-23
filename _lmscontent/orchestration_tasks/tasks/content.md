@@ -29,14 +29,14 @@ Since we want to interrogate all of the servers in the infrastructure for the ve
 
 Next, we need to select a set of nodes on which we will run our task. This is done with the *Inventory* portion of the screen. In order to run the task on all nodes, select **PQL Query**, then the **All nodes** query. Other useful node queries are also shipped with Puppet Enterprise and can be seen in the drop-down box.
 
-![PE_console_displaying node queries and details for each node](/static/images/orchestration/pe_console_running.png)
+![PE console displaying node queries and details for each node](/static/images/orchestration/pe_console_running.png)
 
 The job will run on each node selected, and any output will be displayed.
 You'll see nodes that failed on the top of the list. In this example, seven
 nodes weren't connected to the broker. Perhaps they were in the middle of
 restarting. We can use this list to further investigate offline, if needed.
 
-![PE_console_displaying error messages for each failed node run](/static/images/orchestration/pe_console_failures.png)
+![PE console displaying error messages for each failed node run](/static/images/orchestration/pe_console_failures.png)
 
 Now that we've run our first task, how do we know how to use this task? Let's
 use the PE Console to find out. We'll go back to that top-level **Tasks** tab.
@@ -44,12 +44,12 @@ Instead of typing a name this time, click in that text box and wait a moment.
 All of the installed tasks will show up in the drop-down, and you can scroll
 through to see what tasks you can run.
 
-![PE_console_task entry field showing dropdown menu of available tasks](/static/images/orchestration/pe_console_tasklist.png)
+![PE console task entry field showing dropdown menu of available tasks](/static/images/orchestration/pe_console_tasklist.png)
 
 Pick one out by either clicking its name or typing it out. Directly underneath
 you'll see a **view task metadata** disclosure triangle. Expand it, and you'll find a description of the task and all of its parameters.
 
-![PE_console_metadata information revealed](/static/images/orchestration/pe_console_task_metadata.png)
+![PE console metadata information revealed](/static/images/orchestration/pe_console_task_metadata.png)
 
 On the other hand, maybe you don't want to click through the graphical interface
 to run tasks. Or maybe you'd like to invoke tasks as part of a script or a cron
