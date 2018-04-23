@@ -1,0 +1,1862 @@
+/* @todo - Include in documentation how these properties are required! */
+
+*, *:before, *:after {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased !important;
+}
+
+html, body {
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  background-color: #222222;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased !important;
+}
+
+html {
+background-color: #222222;
+}
+
+.lde-core {
+  font-family: 'Calibre Web Regular', Helvetica, Tahoma, Arial, sans-serif;
+  font-size: 1em;
+  color: #222;
+}
+
+.lde-core .container {
+  width: 1140px;
+  max-width: 100%;
+}
+
+.lde-core .hide-text {
+  font: 0/0 a;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0;
+}
+
+.lde-core a {
+  color: #ffae1a;
+  transition: all .2s linear;
+  font-family: 'Calibre Web Medium', Helvetica, Tahoma, Arial, sans-serif;
+}
+
+.lde-core a:hover {
+  outline: none;
+  color: #fed776;
+  text-decoration: none;
+  transition: color .2s linear;
+}
+
+.lde-core p,
+.lde-core #content p,
+.lde-core address {
+  font-family: 'Calibre Web Regular', Helvetica, Tahoma, Arial, sans-serif;
+  font-size: 1.1rem;
+  line-height: 1.5em;
+}
+
+.lde-core p small {
+  font-size: 14px;
+}
+
+.lde-core h1 {
+  font-size: 2em;
+}
+
+.lde-core h2 {
+  font-size: 1.8em;
+}
+
+.lde-core h3 {
+  font-size: 1.6em;
+  line-height: 1em;
+  margin: 0 0 20px;
+}
+
+.lde-core h4 {
+  font-size: 1.4em;
+  line-height: 1.8em;
+  margin: 0 0 20px;
+}
+
+.lde-core h5 {
+  font-family: 'Calibre Web Regular', Helvetica, Tahoma, Arial, sans-serif;
+  font-weight: 400;
+  color: #222;
+  font-size: 1.2em;
+  line-height: 1.2em;
+  margin: 0 0 20px;
+}
+
+.lde-core h6 {
+  font-size: 1em;
+  line-height: 1em;
+  margin: 0 0 20px;
+}
+
+.lde-core dt {
+  font-weight: 700;
+  line-height: 17px;
+}
+
+.lde-core hr {
+  margin: 0 0 15px;
+}
+
+.lde-core code,
+.lde-core pre {
+  font-size: 15px;
+}
+
+.lde-core pre {
+  font-size: 14.8px;
+}
+
+.lde-core form {
+  width: 100%;
+}
+
+.lde-core legend {
+  font-size: 24px;
+}
+
+.lde-core label,
+.lde-core input,
+.lde-core button,
+.lde-core select,
+.lde-core textarea {
+  font-size: 1em;
+  color: #222;
+}
+
+.lde-core input,
+.lde-core textarea,
+.lde-core select,
+.lde-core .uneditable-input {
+  font-size: 16px;
+}
+
+.lde-core input[type="image"],
+.lde-core input[type="checkbox"],
+.lde-core input[type="radio"] {
+  margin: 0 0 3px;
+}
+
+.lde-core input[type="image"] {
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+
+.lde-core input[type="file"] {
+  background-color: initial;
+  line-height: 18px;
+}
+
+.lde-core select {
+  font-family: 'Calibre Web Semibold', Helvetica, Tahoma, Arial, sans-serif;
+  font-size: 13px;
+  color: #555;
+}
+
+.lde-core input[type="file"]:focus,
+.lde-core input[type="radio"]:focus,
+.lde-core input[type="checkbox"]:focus,
+.lde-core select:focus {
+  outline: 5px auto 0;
+}
+
+.lde-core .form-actions {
+  margin-top: 0;
+  background-color: transparent;
+  border-top: none;
+  padding: none;
+}
+
+.lde-core .well {
+  min-height: 0;
+  margin-bottom: 0;
+  border: none;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  padding: 20px;
+}
+
+.lde-core .fade {
+  color: #999;
+}
+
+.lde-core .btn {
+  display: inline;
+  zoom: 1;
+  line-height: 20px;
+  background-color: #e6e6e6;
+  -webkit-font-smoothing: auto;
+  text-shadow: none;
+  color: #fff;
+  text-decoration: none;
+  background-image: none;
+  border: 0;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  -webkit-transition: .25s;
+  -moz-transition: .25s;
+  transition: .25s;
+  background: #cfcdcd;
+  border-radius: 0;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+  padding: 10px 40px;
+  font-size: initial;
+}
+
+.lde-core .btn:hover {
+  background-color: #d9d9d9;
+}
+
+.lde-core .btn-large {
+  font-size: 15px;
+}
+
+.lde-core .btn-small {
+  padding: .6em 1em;
+}
+
+.lde-core .btn-mini {
+  font-size: 14px;
+}
+
+.lde-core .btn.btn-primary {
+  background-repeat: repeat-x;
+  background-color: #ffae1a;
+  filter: progid: DXImageTransform.Microsoft.gradient(enabled=false);
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+}
+
+.lde-core .btn.btn-warning {
+  background-repeat: repeat-x;
+  background-color: #d63700;
+  filter: progid: DXImageTransform.Microsoft.gradient(enabled=false);
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+}
+
+.lde-core .btn.btn-success {
+  background-color: #00d87b;
+}
+
+.lde-core .btn.btn-info {
+  background-color: #59a1f7;
+}
+
+.lde-core .btn.btn-inverse {
+  background-color: #222;
+}
+
+.lde-core .btn.btn-primary:hover,
+.lde-core .btn.btn-primary:active,
+.lde-core .btn.btn-primary.active,
+.lde-core .btn.btn-primary.disabled,
+.lde-core .btn.btn-primary[disabled],
+.lde-core .btn.btn-danger:hover,
+.lde-core .btn.btn-danger:active,
+.lde-core .btn.btn-danger.active,
+.lde-core .btn.btn-danger.disabled,
+.lde-core .btn.btn-danger[disabled],
+.lde-core .btn.btn-warning:hover,
+.lde-core .btn.btn-warning:active,
+.lde-core .btn.btn-warning.active,
+.lde-core .btn.btn-warning.disabled,
+.lde-core .btn.btn-warning[disabled],
+.lde-core .btn.btn-info:hover,
+.lde-core .btn.btn-info:active,
+.lde-core .btn.btn-info.active,
+.lde-core .btn.btn-info.disabled,
+.lde-core .btn.btn-info[disabled] {
+  opacity: .6;
+}
+
+.lde-core .btn.btn-primary:active,
+.lde-core .btn.btn-primary.active {
+  opacity: .6 \9;
+}
+
+.lde-core .btn-group>.dropdown-toggle {
+  padding: 4px 8px;
+}
+
+.lde-core .btn-group.open .btn-primary.dropdown-toggle {
+  background-color: #fec847;
+}
+
+.lde-core .tabs-left>.nav-tabs .active>a,
+.lde-core .tabs-left>.nav-tabs .active>a:hover {
+  border-color: #ddd #fff #ddd #ddd;
+}
+
+.lde-core .tabs-right>.nav-tabs .active>a,
+.lde-core .tabs-right>.nav-tabs .active>a:hover {
+  border-color: #ddd #ddd #ddd #fff;
+}
+
+.lde-core .navbar {
+  color: #999;
+}
+
+.lde-core .navbar-inner {
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+}
+
+.lde-core .navbar-form {
+  zoom: 1;
+}
+
+.lde-core .navbar-search .search-query {
+  font-family: 'Calibre Web Regular', Helvetica, Tahoma, Arial, sans-serif;
+}
+
+.lde-core .navbar .nav.pull-right {
+  margin-left: 10px;
+  margin-right: 0;
+}
+
+.lde-core .navbar .btn-navbar {
+  background-color: #222;
+}
+
+.lde-core .pagination ul {
+  display: inline;
+}
+
+.lde-core #main-content {
+  width: auto;
+  margin: 20px 0;
+  padding: 0 0 40px;
+}
+
+.lde-core #content {
+  width: 66.085%;
+  margin: 0;
+}
+
+#training-course-page .lde-core #content {
+  width: 100%;
+}
+
+.lde-core .form-value-wrapper {
+  padding: 4px;
+}
+
+.lde-core button {
+  font-family: 'Calibre Web Semibold', Helvetica, Tahoma, Arial, sans-serif;
+}
+
+.lde-core #credit-dashboard .transaction-controls .pagination,
+.lde-core #credit-dashboard .redemption-controls .pagination {
+  zoom: 1;
+}
+
+.lde-core .related-info-box {
+  margin: 10px;
+}
+
+.lde-core #content #catalog-items .catalog-item {
+  padding: 20px 25px 20px 0;
+}
+
+.lde-core #content #catalog-items .catalog-item [class^="span"] .item-actions button,
+.lde-core #content #catalog-items .catalog-item [class^="span"] .item-actions .catalog-item-view {
+  display: inline;
+  zoom: 1;
+  margin-bottom: 0;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  border: 0;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  margin-left: .3em;
+  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, .2), 0 1px 2px rgba(0, 0, 0, .05);
+  -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, .2), 0 1px 2px rgba(0, 0, 0, .05);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, .2), 0 1px 2px rgba(0, 0, 0, .05);
+  line-height: 16px;
+  color: #fff;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  background-image: linear-gradient(top, #62c462, #51a351);
+  background-repeat: repeat-x;
+  background-color: #51a351;
+  filter: progid: DXImageTransform.Microsoft.gradient(enabled=false);
+  font-size: 11px;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+  padding: 5px 9px;
+}
+
+.lde-core .lde-hero-banner>.lde-hero-banner-container .lde-hero-banner-container-heading {
+  font-family: 'Calibre Web Regular', Helvetica, Tahoma, Arial, sans-serif;
+  font-weight: 700;
+}
+
+.tooltip {
+  font-family: 'Calibre Web Regular', Helvetica, Tahoma, Arial, sans-serif;
+}
+
+/* TODO: check if element has been removed */
+body.ui-site.training-schedule-page #main #main-outer #main-content #content-section-upcomingClasses h3 {
+  font-size: 22px;
+  font-weight: 100;
+  padding-bottom: 0;
+  margin-bottom: 15px;
+}
+
+body.ui-site.training-e-learning-components-page .lde-core #main #main-outer #main-content #content #catalog-items>h1,
+body.ui-site.training-courses-page .lde-core #main #main-outer #main-content #content #catalog-items>h1,
+body.ui-site.training-learning-pathways-page .lde-core #main #main-outer #main-content #content #catalog-items>h1 {
+  font-size: 2.2em;
+  margin: 0 0 40px;
+}
+
+.lde-core *,
+.lde-core::before,
+.lde-core::after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.lde-core h1,
+.lde-core h2,
+.lde-core h3,
+.lde-core h4,
+.lde-core h6 {
+  font-family: 'Calibre Web Semibold', Helvetica, Tahoma, Arial, sans-serif;
+  font-weight: 400;
+  color: #222;
+}
+
+.lde-core h1,
+.lde-core h2 {
+  margin: 20px 0;
+}
+
+.lde-core h2.split-pane-title {
+  color: #ffae1a;
+  font-family: 'Calibre Web Semibold', Helvetica, Tahoma, Arial, sans-serif;
+  font-size: 3.2em;
+  line-height: 1.1em;
+  font-weight: 400;
+  border-bottom: 2px solid #ffae1a;
+  margin: 0 0 40px;
+  padding: 0 0 40px;
+}
+
+.lde-core strong,
+.lde-core em {
+  font-family: 'Calibre Web Semibold', Helvetica, Tahoma, Arial, sans-serif;
+  font-weight: 400;
+}
+
+.lde-core ul,
+.lde-core ol,
+.lde-core dt {
+  color: #222222;
+  margin: 0 0 40px;
+  padding: 0 0 0 20px;
+}
+
+.lde-core ul li,
+.lde-core ol li,
+.lde-core dt li {
+  font-size: 1.1em;
+  margin: 0 0 10px;
+}
+
+.lde-core p.split-pane-p {
+  font-family: 'Calibre Web Regular', Helvetica, Tahoma, Arial, sans-serif;
+  color: #222222;
+  font-size: 1.5em;
+  line-height: 1.5em;
+  margin: 0 0 40px;
+}
+
+.lde-core #main {
+  overflow: auto;
+  margin: 0;
+}
+
+.lde-core #content .catalog-item-price {
+  font-family: 'Calibre Web Semibold', Helvetica, Tahoma, Arial, sans-serif;
+  color: #777;
+}
+
+.lde-core button,
+.lde-core .btn,
+.lde-core a.btn,
+.lde-core #content #catalog-items .catalog-item [class^="span"] .item-actions button,
+.lde-core #content #catalog-items .catalog-item [class^="span"] .item-actions .catalog-item-view {
+  -webkit-font-smoothing: auto;
+  text-shadow: none;
+  color: #fff;
+  text-decoration: none;
+  background-image: none;
+  border: 0;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  -webkit-transition: .25s;
+  -moz-transition: .25s;
+  transition: .25s;
+  background: #cfcdcd;
+  border-radius: 0;
+}
+
+.lde-core .btn,
+.lde-core a.btn,
+.lde-core #content #catalog-items .catalog-item [class^="span"] .item-actions button,
+.lde-core #content #catalog-items .catalog-item [class^="span"] .item-actions .catalog-item-view {
+  display: inline-block;
+  color: #fff;
+  font-family: 'Calibre Web Regular', Helvetica, Tahoma, Arial, sans-serif;
+  line-height: 18px;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  background: #ffae1a;
+}
+
+.lde-core .btn:hover,
+.lde-core a.btn:hover,
+.lde-core #content #catalog-items .catalog-item [class^="span"] .item-actions button:hover,
+.lde-core #content #catalog-items .catalog-item [class^="span"] .item-actions .catalog-item-view:hover,
+.lde-core .btn:active,
+.lde-core a.btn:active,
+.lde-core #content #catalog-items .catalog-item [class^="span"] .item-actions button:active,
+.lde-core #content #catalog-items .catalog-item [class^="span"] .item-actions .catalog-item-view:active {
+  opacity: .6;
+  box-shadow: none;
+}
+
+.lde-core a.btn-cta,
+.lde-core #content a.btn-cta {
+  color: #fff;
+  font-size: 1.1em;
+  line-height: 1.1em;
+  text-decoration: none;
+  display: inline-block;
+  width: auto;
+  border: 2px solid #ffae1a;
+  background-color: #ffae1a;
+  box-shadow: none!important;
+  transition: none!important;
+  margin: 0 16px 0 0;
+  padding: 16px 25px;
+}
+
+.lde-core a.btn-cta:hover,
+.lde-core #content a.btn-cta:hover {
+  color: #fff;
+  background-color: #fec847;
+  border-color: #fec847;
+}
+
+.lde-core a.btn-cta:active,
+.lde-core #content a.btn-cta:active {
+  background-color: #fed776;
+  border-color: #fed776;
+}
+
+.lde-core a.btn-cta.on-amber-btn,
+.lde-core #content a.btn-cta.on-amber-btn {
+  color: #ffae1a;
+  background-color: #fff;
+  border-color: #fff;
+}
+
+.lde-core a.btn-cta.on-amber-btn:hover,
+.lde-core #content a.btn-cta.on-amber-btn:hover {
+  background-color: #fff2d5;
+  border-color: #fff2d5;
+}
+
+.lde-core a.btn-cta.on-amber-btn:active,
+.lde-core #content a.btn-cta.on-amber-btn:active {
+  background-color: #fee6a9;
+  border-color: #fee6a9;
+}
+
+.lde-core a.btn-cta.secondary-btn,
+.lde-core #content a.btn-cta.secondary-btn {
+  color: #ffae1a;
+  background-color: transparent;
+  border-color: #ffae1a;
+}
+
+.lde-core a.btn-cta.secondary-btn:hover,
+.lde-core #content a.btn-cta.secondary-btn:hover {
+  background-color: transparent;
+  border-color: #fff2d2;
+}
+
+.lde-core a.btn-cta.secondary-btn:active,
+.lde-core #content a.btn-cta.secondary-btn:active {
+  background-color: transparent;
+  border-color: #fee4a2;
+}
+
+.lde-core .btn .secondary-btn-gray,
+.lde-core a.btn-cta.secondary-btn-gray,
+.lde-core #content a.btn-cta.secondary-btn-gray {
+  color: #4e4e4e;
+  background-color: transparent;
+  border-color: #4e4e4e;
+}
+
+.lde-core a.btn-cta.secondary-on-black-btn:hover,
+.lde-core #content a.btn-cta.secondary-on-black-btn:hover {
+  border-color: #404040;
+}
+
+.lde-core a.btn-cta.secondary-on-black-btn:active,
+.lde-core #content a.btn-cta.secondary-on-black-btn:active {
+  border-color: #666;
+}
+
+.lde-core a.btn-cta.secondary-on-amber-btn:hover,
+.lde-core #content a.btn-cta.secondary-on-amber-btn:hover {
+  border-color: #fff2d2;
+}
+
+.lde-core a.btn-cta.secondary-on-amber-btn:active,
+.lde-core #content a.btn-cta.secondary-on-amber-btn:active {
+  border-color: #fee4a2;
+}
+
+.lde-core a.text-btn img {
+  width: 15px;
+  vertical-align: middle;
+  margin-left: 6px;
+}
+
+.lde-core form input,
+.lde-core form select {
+  font-family: 'Calibre Web Regular', Helvetica, Tahoma, Arial, sans-serif;
+  display: inline-block;
+  max-width: 100%;
+  font-size: .9em;
+  line-height: 1em;
+  background: #fff;
+  border: 2px solid #dedede;
+  outline: none;
+  margin: 0 0 3%;
+}
+
+.lde-core form input:focus,
+.lde-core form select:focus {
+  border: 2px solid #ffae1a;
+}
+
+.lde-core form input.error,
+.lde-core form select.error {
+  color: #f99;
+  background-color: #fff7f7;
+  margin-bottom: 0;
+  border-color: #f99;
+}
+
+.lde-core form label .error {
+  color: #ff4545;
+}
+
+.lde-core form .error-text {
+  font-family: 'Calibre Web Regular', Helvetica, Tahoma, Arial, sans-serif;
+  font-size: .8em;
+  color: #f99;
+  text-align: left;
+  width: 100%;
+  margin: 0;
+}
+
+.lde-core form .submit-btn {
+  color: #fff;
+  font-size: 1.1em;
+  line-height: 1.1em;
+  text-decoration: none;
+  display: inline-block;
+  width: auto;
+  border: 2px solid #ffae1a;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  box-shadow: none;
+  transition: none;
+  background-color: #ffae1a;
+  margin: 15px 25px 25px 0;
+  padding: 12px;
+}
+
+.lde-core form .submit-btn:hover {
+  background-color: #fec847;
+  border-color: #fec847;
+}
+
+.lde-core #content #catalog-items .catalog-item:last-child,
+.lde-core .content-section-course:last-child,
+.lde-core .content-section-elearning:last-child,
+.lde-core .content-section-contentComponent:last-child {
+  border-bottom: 1px solid #dedede;
+}
+
+.lde-core .crumbs {
+  padding: 20px 0;
+}
+
+.lde-core .crumbs a {
+  font-family: 'Calibre Web Regular', Helvetica, Tahoma, Arial, sans-serif;
+  color: #aaa;
+}
+
+.lde-core .crumbs img {
+  padding: 0 10px;
+}
+
+.lde-core .cta-banner,
+.lde-core #content .cta-banner {
+  width: 100%;
+  background-color: #ffae1a;
+}
+
+.lde-core .cta-banner .wrapper,
+.lde-core #content .cta-banner .wrapper {
+  width: 100%;
+  max-width: 1140px;
+  text-align: center;
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+.lde-core .cta-banner .wrapper h4,
+.lde-core #content .cta-banner .wrapper h4,
+.lde-core .cta-banner .wrapper p,
+.lde-core #content .cta-banner .wrapper p {
+  color: #fff;
+  margin: 28px 0 0 0;
+}
+
+.lde-core #content .feature {
+  width: 100%;
+  float: left;
+  position: relative;
+}
+
+.lde-core #content .feature .wrapper {
+  width: 100%;
+  max-width: 1140px;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
+.lde-core #content .feature .wrapper .content-block-left {
+  width: 50%;
+  float: left;
+  box-sizing: border-box;
+  padding: 8% 5% 8% 0;
+}
+
+.lde-core #content .feature .wrapper .content-block-left .full-block-img {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 320px;
+  background: url(/css/theme/images/homepage_1.png) center center;
+  background-size: cover;
+}
+
+.lde-core #content .feature .wrapper .content-block-right {
+  width: 50%;
+  float: left;
+  box-sizing: border-box;
+  padding: 8% 0 8% 5%;
+}
+
+.lde-core #content .feature .wrapper .content-block-right .full-block-img {
+  position: relative;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: url(/css/theme/images/homepage_1.png) center center;
+  background-size: cover;
+}
+
+.lde-core #content .feature .wrapper .content-block-full {
+  width: 100%;
+  float: left;
+  box-sizing: border-box;
+  padding: 6% 8%;
+}
+
+.lde-core #content .feature .wrapper .content-block-full .content-block-left {
+  padding: 0 2.5% 0 0;
+}
+
+.lde-core #content .feature .wrapper .content-block-full .content-block-right {
+  padding: 0 0 0 2.5%;
+}
+
+.lde-core #content .feature .wrapper .col-1-3 {
+  width: 33.33%;
+}
+
+.lde-core #content .feature .wrapper .col-2-3 {
+  width: 66.66%;
+}
+
+.lde-core #content .feature .wrapper .col-1-4 {
+  width: 25%;
+}
+
+.lde-core #content .feature .wrapper .col-1-8 {
+  width: 12.5%;
+}
+
+.lde-core #content .feature .wrapper .img-block img {
+  width: 100%;
+  max-height: 100%;
+}
+
+.lde-core #content .feature .wrapper .img-block .overlay {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  text-align: center;
+}
+
+.lde-core #content .feature .wrapper .img-block .overlay img {
+  width: 40%;
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.lde-core #content .feature .wrapper img.img-1-3 {
+  width: 33%;
+}
+
+.lde-core #content .feature.top-border {
+  border-top: 2px solid #dedede;
+}
+
+.lde-core #content .links-block .wrapper .content-block-full {
+  padding: 0;
+}
+
+.lde-core #content .links-block .wrapper .content-block-full ul {
+  margin: 0;
+  padding: 0;
+}
+
+.lde-core #content .links-block .wrapper .content-block-full ul li {
+  font-size: 1em;
+  width: 25%;
+  float: left;
+  display: block;
+  padding-right: 3%;
+  box-sizing: border-box;
+  margin: 0;
+}
+
+.lde-core #content .links-block .wrapper .content-block-full ul li h4 {
+  margin: 20px 0 10px;
+}
+
+.lde-core #content .content-block-full .resources-list {
+  display: block;
+  width: 100%;
+  float: left;
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+
+.lde-core #content .content-block-full .resources-list li {
+  display: block;
+  width: 32%;
+  height: 405px;
+  float: left;
+  background-color: #222;
+  position: relative;
+  margin: 0 2% 2% 0;
+}
+
+.lde-core #content .content-block-full .resources-list li.feature-post {
+  width: 66%;
+  background-size: auto 55%;
+}
+
+.lde-core #content .content-block-full .resources-list li .post-img {
+  width: 100%;
+  height: 200px;
+  float: left;
+  background: url(/css/theme/images/puppet-dags/puppet-dag-white.svg) 30px center no-repeat #ffae1a;
+  background-size: auto 80%;
+}
+
+.lde-core #content .content-block-full .resources-list li .post-img a {
+  font-family: 'Calibre Web Regular', Helvetica, Tahoma, Arial, sans-serif;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.lde-core #content .content-block-full .resources-list li .content {
+  width: auto;
+  height: 170px;
+  float: left;
+  position: relative;
+  padding: 20px;
+}
+
+.lde-core #content .content-block-full .resources-list li .content h5 {
+  color: #ffae1a;
+  font-size: 1.22em;
+  line-height: 1.1em;
+  font-weight: 400;
+  margin-bottom: 15px;
+}
+
+.lde-core #content .content-block-full .resources-list li .content h6 {
+  font-family: 'Calibre Web Regular', Helvetica, Tahoma, Arial, sans-serif;
+  font-size: 1em;
+  line-height: 1em;
+  color: #fff;
+  text-transform: none;
+  margin-bottom: 15px;
+}
+
+.lde-core #content .content-block-full .resources-list li .content h6 a {
+  font-family: 'Calibre Web Regular', Helvetica, Tahoma, Arial, sans-serif;
+  color: #fff;
+}
+
+.lde-core #content .content-block-full .resources-list li .content p {
+  font-family: 'Calibre Web Regular', Helvetica, Tahoma, Arial, sans-serif;
+  color: #fff;
+  font-size: 1em;
+  position: absolute;
+  left: 20px;
+  bottom: 20px;
+  margin: 0;
+}
+
+.lde-core #content .content-block-full .pagination {
+  font-family: 'Calibre Web Regular', Helvetica, Tahoma, Arial, sans-serif;
+  color: #dedede;
+  font-size: 1.5em;
+  width: 100%;
+  float: left;
+  position: relative;
+  margin: 80px 0 0;
+}
+
+.lde-core #content .content-block-full .pagination .pages {
+  font-family: 'Calibre Web Regular', Helvetica, Tahoma, Arial, sans-serif;
+  width: 100%;
+  text-align: center;
+}
+
+.lde-core #content .split-pane-title {
+  color: #ffae1a;
+  font-family: 'Calibre Web Semibold', Helvetica, Tahoma, Arial, sans-serif;
+  font-size: 2em;
+  line-height: 2.2em;
+}
+
+.lde-core #content .page-title {
+  color: #222;
+  font-family: 'Calibre Web Semibold', Helvetica, Tahoma, Arial, sans-serif;
+  font-size: 3.2em;
+  line-height: 3.4em;
+}
+
+.lde-core #content .level-2-title {
+  color: #222;
+  font-family: 'Calibre Web Semibold', Helvetica, Tahoma, Arial, sans-serif;
+  font-size: 2em;
+  line-height: 2.2em;
+}
+
+.lde-core #content .level-3-title {
+  color: #222;
+  font-family: 'Calibre Web Semibold', Helvetica, Tahoma, Arial, sans-serif;
+  font-size: 1.6em;
+  line-height: 1.8em;
+}
+
+.lde-core #content .promo-thin {
+  color: #fff;
+  font-family: 'Calibre Web Semibold', Helvetica, Tahoma, Arial, sans-serif;
+  font-size: 1.3em;
+  line-height: 1.5em;
+}
+
+.lde-core #content .promo-thick {
+  color: #fff;
+  font-family: 'Calibre Web Semibold', Helvetica, Tahoma, Arial, sans-serif;
+  font-size: 2.4em;
+  line-height: 2.6em;
+}
+
+.lde-core #main #main-outer #main-content .dashboard-boxes h2 {
+  font-size: 24px;
+  font-weight: lighter;
+  line-height: 25px;
+  margin-top: 4px;
+  color: #0095dd;
+  border: none;
+  background-image: none!important;
+}
+
+.lde-core .btn.last-child {
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.lde-core a.btn {
+  text-decoration: none;
+  box-shadow: none;
+}
+
+.lde-core div.dashboard-boxes {
+  width: 100%;
+  height: 320px;
+  border: solid 1px #ccc;
+  background-color: #fafafa;
+  font-size: 16pt;
+  position: relative;
+}
+
+.lde-core .dashboard-boxes .inner-content {
+  padding: 10px;
+}
+
+.lde-core .dashboard-boxes span {
+  color: #ccc;
+  font-size: 12px;
+}
+
+.lde-core .dashboard-boxes p {
+  color: #777;
+  line-height: 26px;
+  font-size: 16px;
+  position: absolute;
+  top: 60px;
+  padding-right: 10px;
+  margin: 10px 0;
+}
+
+.lde-core .dashboard-boxes .more {
+  font-size: 16px;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
+
+.lde-core #main #main-outer #main-content #feature-wrapper .address h2 {
+  font-size: 24px;
+  font-weight: lighter;
+  line-height: 25px;
+  margin-top: 15px;
+  color: #0095dd;
+  border: none;
+  background-image: none;
+}
+
+.lde-core #main #main-outer #main-content #feature-wrapper .address h3 {
+  font-weight: 400;
+  margin-top: 0;
+  margin-bottom: 5px;
+  color: #7c6aab;
+  font-size: 22px;
+}
+
+.lde-core #main #main-outer #main-content #feature-wrapper .address h4 {
+  margin-top: 0;
+  margin-bottom: 5px;
+  font-size: 18px;
+  font-weight: 400;
+  color: #7c6aab;
+}
+
+.lde-core #main #main-outer #main-content #feature-wrapper .address p {
+  margin-top: 0;
+  margin-bottom: 5px;
+}
+
+.lde-core #main #main-outer #main-content #feature-wrapper .address .class-details {
+  border-top: solid 1px #ccc;
+  border-bottom: solid 1px #ccc;
+  min-height: 80px;
+  width: 100%;
+  margin: 16px 0;
+  padding: 10px 0;
+}
+
+.lde-core #main #main-outer #main-content #feature-wrapper .address .class-details .details,
+.lde-core #main #main-outer #main-content #feature-wrapper .address .class-details .register-details {
+  float: left;
+  width: 50%;
+}
+
+.lde-core #main #main-outer #main-content #feature-wrapper .address .class-details .register-details {
+  padding-top: 10px;
+  padding-bottom: 0;
+}
+
+.lde-core #main #main-outer #main-content #content .catalog-item-summary {
+  font-family: 'Calibre Web Regular', Helvetica, Tahoma, Arial, sans-serif;
+  color: #222222;
+  font-size: 1.2em;
+  line-height: 1.5em;
+}
+
+.lde-core #main #main-outer #main-content #content .catalog-item-summary p {
+  font-size: inherit;
+  margin: 0;
+}
+
+.lde-core #main #main-outer #main-content #content img.content-photo {
+  float: left;
+  width: 100px;
+  display: none;
+  margin: 15px 15px 15px 0;
+}
+
+.lde-core #main #main-outer #main-content #content #field-coupon {
+  height: 24px;
+}
+
+.lde-core #main #main-outer #main-content #content address {
+  margin-top: 18px;
+}
+
+.lde-core #main #main-outer #main-content #content small {
+  font-size: 14px;
+  font-weight: 400;
+  color: #777;
+}
+
+.lde-core #main #main-outer #main-content #content #content-section-summary .content-section,
+.lde-core #main #main-outer #main-content #content #content-section-prerequisites .content-section,
+.lde-core #main #main-outer #main-content #content #content-section-outline .content-section {
+  font-family: 'Calibre Web Regular', Helvetica, Tahoma, Arial, sans-serif;
+  line-height: 1.5em;
+  margin-bottom: 25px;
+}
+
+.lde-core #main #main-outer #main-content #content div.alert.alert-success-price h3 {
+  margin-top: 5px;
+  text-shadow: none;
+}
+
+.lde-core #courses-wrapper .result-row {
+  min-height: 80px;
+}
+
+.lde-core #main #main-outer #main-content #content .widget {
+  margin: 0;
+  padding: 15px;
+}
+
+.lde-core #main #main-outer #main-content #content .widget .widget {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.lde-core #main #main-outer #main-content #content .widget h2 {
+  font-weight: 700;
+  margin: 0 0 15px;
+  padding: 0;
+}
+
+.lde-core #main-side {
+  margin-right: 0;
+  min-height: 1px;
+  width: 31.915%;
+  float: right;
+  margin-bottom: 25px;
+}
+
+.lde-core #main #main-outer #main-content #main-side .widget {
+  min-height: 20px;
+  margin: 20px 0;
+  padding: 19px;
+}
+
+.lde-core #main #main-outer #main-content #main-side .widget h2 {
+  color: #222;
+  font-family: 'Calibre Web Semibold', Helvetica, Tahoma, Arial, sans-serif;
+  font-size: 2em;
+  line-height: 1em;
+  margin: 0 0 20px;
+}
+
+#shopping-cart-page .dropdown-menu li>a:hover,
+#shopping-cart-page .dropdown-menu .active>a,
+#shopping-cart-page .dropdown-menu .active>a:hover {
+  color: #fff;
+  background-color: #ffae1a;
+}
+
+#shopping-cart-page #content .pageTitle+div {
+  line-height: 17.92px;
+}
+
+.lde-core #main #main-outer #main-content #main-side .widget h2#public-training-info {
+  display: block;
+}
+
+body.ui-site.nosidebar #main #main-outer #main-content #main-side,
+body.ui-site.shopping-cart-page #main #main-outer #main-content #main-side,
+body.ui-site.checkout-flow-page #main #main-outer #main-content #main-side,
+body.ui-site.training-onsite-page #main #main-outer #main-content #main-side,
+body.ui-site.training-request-a-class-page #main #main-outer #main-content #main-side,
+body.ui-site.training-course-page #main #main-outer #main-content #main-side,
+body.ui-site.training-category-page #main #main-outer #main-content #content .pageTitle,
+body.ui-site.training-public-course-event-page #main #main-outer #main-content #content .pageTitle,
+body.ui-site.training-public-course-event-page #related-knowledge-categories,
+body.ui-site.training-public-course-event-page #related-courses-info,
+body.ui-site.training-public-course-event-page #content-section-confirmed,
+body.ui-site.training-public-course-event-page #content-section-language,
+body.ui-site.training-public-course-event-page #content-section-price,
+body.ui-site.training-public-course-event-page #content-section-event-provider,
+body.ui-site.training-public-course-event-page #content-section-provided,
+body.ui-site.training-public-course-event-page #content-section-responsibilities,
+body.ui-site.training-public-course-event-page #content-section-instructors,
+body.ui-site.training-public-course-event-page #content-section-event-class-size,
+body.ui-site.training-public-course-event-page #content-section-references,
+body.ui-site.training-public-course-event-page #content-section-location,
+body.ui-site.training-catalog-page .lde-core #main #main-outer #main-content #main-side,
+body.ui-site.training-catalog-page .lde-core #main #main-outer #main-content .pageTitle,
+.lde-core #content #catalog-items .catalog-item [class^="span"] figure,
+.lde-core .content-section-course [class^="span"] figure,
+.lde-core .content-section-elearning [class^="span"] figure,
+.lde-core .content-section-contentComponent [class^="span"] figure,
+.lde-core #main #main-outer #main-content #main-side #training-locations-info,
+.lde-core #main #main-outer #main-content #main-side #training-locations-info+ul,
+.lde-core #main #main-outer #main-content #content #catalog-items .catalog-item [class^="span"] figure,
+.lde-core #main #main-outer #main-content #content #content-section-category-courses .catalog-item [class^="span"] figure,
+.lde-core #main #main-outer #main-content #content #content-section-category-elearning .catalog-item [class^="span"] figure,
+.lde-core #main #main-outer #main-content #content #content-section-category-course-pathways .catalog-item [class^="span"] figure,
+.lde-core #main #main-outer #main-content #content #content-section-category-components .catalog-item [class^="span"] figure,
+.lde-core #main #main-outer #main-content #content #content-section-category-pathways .catalog-item [class^="span"] figure,
+.lde-core #main #main-outer #main-content #content #catalog-items .content-section-course [class^="span"] figure,
+.lde-core #main #main-outer #main-content #content #content-section-category-courses .content-section-course [class^="span"] figure,
+.lde-core #main #main-outer #main-content #content #content-section-category-elearning .content-section-course [class^="span"] figure,
+.lde-core #main #main-outer #main-content #content #content-section-category-course-pathways .content-section-course [class^="span"] figure,
+.lde-core #main #main-outer #main-content #content #content-section-category-components .content-section-course [class^="span"] figure,
+.lde-core #main #main-outer #main-content #content #content-section-category-pathways .content-section-course [class^="span"] figure,
+.lde-core #main #main-outer #main-content #content #catalog-items .content-section-elearning [class^="span"] figure,
+.lde-core #main #main-outer #main-content #content #content-section-category-courses .content-section-elearning [class^="span"] figure,
+.lde-core #main #main-outer #main-content #content #content-section-category-elearning .content-section-elearning [class^="span"] figure,
+.lde-core #main #main-outer #main-content #content #content-section-category-course-pathways .content-section-elearning [class^="span"] figure,
+.lde-core #main #main-outer #main-content #content #content-section-category-components .content-section-elearning [class^="span"] figure,
+.lde-core #main #main-outer #main-content #content #content-section-category-pathways .content-section-elearning [class^="span"] figure,
+.lde-core #main #main-outer #main-content #content #catalog-items .content-section-contentComponent [class^="span"] figure,
+.lde-core #main #main-outer #main-content #content #content-section-category-courses .content-section-contentComponent [class^="span"] figure,
+.lde-core #main #main-outer #main-content #content #content-section-category-elearning .content-section-contentComponent [class^="span"] figure,
+.lde-core #main #main-outer #main-content #content #content-section-category-course-pathways .content-section-contentComponent [class^="span"] figure,
+.lde-core #main #main-outer #main-content #content #content-section-category-components .content-section-contentComponent [class^="span"] figure,
+.lde-core #main #main-outer #main-content #content #content-section-category-pathways .content-section-contentComponent [class^="span"] figure,
+#shopping-cart-page a.help,
+.training-course-page .pageTitle,
+#course-rating.ratings-widget {
+  display: none;
+}
+
+.lde-core a:focus,
+.lde-core .btn:focus {
+  outline: 5px auto 0;
+  outline-offset: -2px;
+}
+
+.lde-core [class^="icon-"]:last-child,
+.lde-core [class*=" icon-"]:last-child,
+.lde-core .btn-group:first-child,
+.lde-core #content #catalog-items .catalog-item [class^="span"] .item-actions button:first-child,
+.lde-core #content #catalog-items .catalog-item [class^="span"] .item-actions .catalog-item-view:first-child {
+  margin-left: 0;
+}
+
+.lde-core .cta-banner .wrapper .btn,
+.lde-core #content .cta-banner .wrapper .btn {
+  margin-bottom: 0;
+}
+
+.lde-core #main #main-outer #main-content #content .confirmed {
+  font-weight: 700;
+}
+
+.lde-core input,
+.lde-core button,
+.lde-core select,
+.lde-core textarea,
+.lde-core .pagination-default .prev-btn a,
+.lde-core .pagination-default a,
+.lde-core #content .content-block-full .resources-list li .content h5 a {
+  font-family: 'Calibre Web Regular', Helvetica, Tahoma, Arial, sans-serif;
+}
+
+.lde-core .dropdown-menu .divider,
+.lde-core .nav-list .divider {
+  width: 100%;
+  margin: -5px 0 5px;
+}
+
+.lde-core #content #catalog-items .catalog-item [class^="span"] .item-actions button:active,
+.lde-core #content #catalog-items .catalog-item [class^="span"] .item-actions .catalog-item-view:active,
+.lde-core #content #catalog-items .catalog-item [class^="span"] .item-actions button.active,
+.lde-core #content #catalog-items .catalog-item [class^="span"] .item-actions .catalog-item-view.active {
+  background-color: #408140 \9;
+}
+
+.lde-core .btn-inverse:hover,
+.lde-core .btn-inverse:active,
+.lde-core .btn-inverse.active,
+.lde-core .btn-inverse.disabled,
+.lde-core .btn-inverse[disabled],
+.lde-core .navbar .btn-navbar:hover,
+.lde-core .navbar .btn-navbar:active,
+.lde-core .navbar .btn-navbar.active,
+.lde-core .navbar .btn-navbar.disabled,
+.lde-core .navbar .btn-navbar[disabled] {
+  background-color: #151515;
+}
+
+.lde-core #content .feature.black-bg {
+  background-color: #222;
+}
+
+.lde-core #content #catalog-items .catalog-item [class^="span"] .item-actions button .caret,
+.lde-core #content #catalog-items .catalog-item [class^="span"] .item-actions .catalog-item-view .caret {
+  border-top-color: #fff;
+  border-bottom-color: #fff;
+  opacity: .6;
+  filter: alpha(opacity=75);
+}
+
+.lde-core #main #main-outer #main-content #feature-wrapper .address .class-details .details .btn,
+.lde-core #main #main-outer #main-content #feature-wrapper .address .class-details .register-details .btn {
+  float: right;
+}
+
+.lde-core #content .feature .wrapper ul {
+  float: left;
+}
+
+.lde-core #main #main-outer #main-content #content #pathways {
+  margin-bottom: -1px;
+}
+
+.lde-core #content .content-block-full .resources-list li:nth-child(3n+2),
+.lde-core #content .content-block-full .resources-list li:last-child {
+  margin-right: 0;
+}
+
+.lde-core #main #main-outer #main-content #main-side a .btn {
+  text-decoration: none;
+}
+
+.lde-core a.text-btn.white-text-btn,
+.lde-core #content .feature.black-bg p,
+.lde-core #content .feature.black-bg ul,
+.lde-core #content .feature.black-bg ol,
+.lde-core #content .feature.black-bg li,
+.lde-core .btn,
+.lde-core a.btn,
+.lde-core .btn a,
+.lde-core a.btn a {
+  color: #fff;
+}
+
+.lde-core .catalog-item-summary,
+.lde-core #main #main-outer #main-content #content form {
+  margin: 0;
+}
+
+.lde-core #main #main-outer #main-content #main-side #user-widget {
+  margin-top: 0;
+}
+
+.lde-core #content .feature .wrapper .img-block {
+  text-align: center;
+}
+
+.lde-core .modal-open .dropdown.open {
+  z-index: 2050;
+}
+
+#shopping-cart-page a.btn.save-as-quote {
+  display: none!important;
+}
+
+.lde-core #content p.note {
+  margin-bottom: 10px;
+}
+
+.lde-core #catalog-items h1,
+.lde-core #content-section-category-courses h1,
+.lde-core #content-section-category-elearning h1,
+.lde-core #content-section-category-course-pathways h1,
+.lde-core #content-section-category-components h1,
+.lde-core #content-section-category-pathways h1,
+.lde-core #main #main-outer #main-content #content #catalog-items h1,
+.lde-core #main #main-outer #main-content #content #content-section-category-courses h1,
+.lde-core #main #main-outer #main-content #content #content-section-category-elearning h1,
+.lde-core #main #main-outer #main-content #content #content-section-category-course-pathways h1,
+.lde-core #main #main-outer #main-content #content #content-section-category-components h1,
+.lde-core #main #main-outer #main-content #content #content-section-category-pathways h1 {
+  margin-bottom: 15px;
+}
+
+.lde-core #main #main-outer #main-content #content .shoppingCart .shoppingCart-coupon-form,
+.lde-core #main #main-outer #main-content #content #tc-pricing-table {
+  padding: 10px 0;
+}
+
+.lde-core .dashboard-boxes-container,
+#training-public-course-event-page .maps-address {
+  margin-bottom: 20px;
+}
+
+.lde-core .content-section-course [class^="span"] .data,
+.lde-core .content-section-elearning [class^="span"] .data,
+.lde-core .content-section-contentComponent [class^="span"] .data,
+.lde-core #content #catalog-items .catalog-item [class^="span"] .data.logo,
+.lde-core .content-section-course [class^="span"] .data.logo,
+.lde-core .content-section-elearning [class^="span"] .data.logo,
+.lde-core .content-section-contentComponent [class^="span"] .data.logo,
+.lde-core #main #main-outer #main-content #content #catalog-items .catalog-item [class^="span"] .data,
+.lde-core #main #main-outer #main-content #content #content-section-category-courses .catalog-item [class^="span"] .data,
+.lde-core #main #main-outer #main-content #content #content-section-category-elearning .catalog-item [class^="span"] .data,
+.lde-core #main #main-outer #main-content #content #content-section-category-course-pathways .catalog-item [class^="span"] .data,
+.lde-core #main #main-outer #main-content #content #content-section-category-components .catalog-item [class^="span"] .data,
+.lde-core #main #main-outer #main-content #content #content-section-category-pathways .catalog-item [class^="span"] .data,
+.lde-core #main #main-outer #main-content #content #catalog-items .content-section-course [class^="span"] .data,
+.lde-core #main #main-outer #main-content #content #content-section-category-courses .content-section-course [class^="span"] .data,
+.lde-core #main #main-outer #main-content #content #content-section-category-elearning .content-section-course [class^="span"] .data,
+.lde-core #main #main-outer #main-content #content #content-section-category-course-pathways .content-section-course [class^="span"] .data,
+.lde-core #main #main-outer #main-content #content #content-section-category-components .content-section-course [class^="span"] .data,
+.lde-core #main #main-outer #main-content #content #content-section-category-pathways .content-section-course [class^="span"] .data,
+.lde-core #main #main-outer #main-content #content #catalog-items .content-section-elearning [class^="span"] .data,
+.lde-core #main #main-outer #main-content #content #content-section-category-courses .content-section-elearning [class^="span"] .data,
+.lde-core #main #main-outer #main-content #content #content-section-category-elearning .content-section-elearning [class^="span"] .data,
+.lde-core #main #main-outer #main-content #content #content-section-category-course-pathways .content-section-elearning [class^="span"] .data,
+.lde-core #main #main-outer #main-content #content #content-section-category-components .content-section-elearning [class^="span"] .data,
+.lde-core #main #main-outer #main-content #content #content-section-category-pathways .content-section-elearning [class^="span"] .data,
+.lde-core #main #main-outer #main-content #content #catalog-items .content-section-contentComponent [class^="span"] .data,
+.lde-core #main #main-outer #main-content #content #content-section-category-courses .content-section-contentComponent [class^="span"] .data,
+.lde-core #main #main-outer #main-content #content #content-section-category-elearning .content-section-contentComponent [class^="span"] .data,
+.lde-core #main #main-outer #main-content #content #content-section-category-course-pathways .content-section-contentComponent [class^="span"] .data,
+.lde-core #main #main-outer #main-content #content #content-section-category-components .content-section-contentComponent [class^="span"] .data,
+.lde-core #main #main-outer #main-content #content #content-section-category-pathways .content-section-contentComponent [class^="span"] .data {
+  min-height: 35px;
+  padding: 0 150px 0 0;
+}
+
+.lde-core #content h4 {
+  margin-top: 15px;
+}
+
+.nosidebar #main #main-outer #main-content #content,
+.shopping-cart-page #main #main-outer #main-content #content,
+.checkout-flow-page #main #main-outer #main-content #content,
+.training-onsite-page #main #main-outer #main-content #content,
+.training-request-a-class-page #main #main-outer #main-content #content,
+.training-catalog-page .lde-core #main #main-outer #main-content #content {
+  width: 100%;
+}
+
+.lde-core h2.hero-title,
+.lde-core #content .hero-title {
+  color: #fff;
+  font-family: 'Calibre Web Semibold', Helvetica, Tahoma, Arial, sans-serif;
+  font-size: 2.8em;
+  line-height: 3em;
+}
+
+.lde-core h4.hero-sub-title,
+.lde-core #content .hero-sub-title {
+  color: #fff;
+  font-size: 2em;
+  line-height: 2.2em;
+}
+
+.lde-core .pagination-default .pages .active,
+.lde-core .crumbs a.active,
+.lde-core #content .content-block-full .pagination .pages .active {
+  color: #ffae1a;
+}
+
+.lde-core #main-outer,
+.lde-core #main #main-outer {
+  width: 1140px;
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+.lde-core #content p.catalog-item-name,
+.lde-core p.catalog-item-name,
+.lde-core #main #main-outer #main-content #content p.catalog-item-name {
+  margin: 0 0 16px;
+}
+
+.lde-core a.btn-cta.secondary-btn-gray:hover,
+.lde-core #content a.btn-cta.secondary-btn-gray:hover,
+.lde-core a.btn-cta.secondary-btn-gray:active,
+.lde-core #content a.btn-cta.secondary-btn-gray:active {
+  border-color: #dedede;
+}
+
+.lde-core a.btn-cta.secondary-on-black-btn,
+.lde-core #content a.btn-cta.secondary-on-black-btn,
+.lde-core a.btn-cta.secondary-on-amber-btn,
+.lde-core #content a.btn-cta.secondary-on-amber-btn {
+  color: #fff;
+  background-color: transparent;
+  border-color: #fff;
+}
+
+.lde-core #content #catalog-items .catalog-item,
+.lde-core .content-section-course,
+.lde-core .content-section-elearning,
+.lde-core .content-section-contentComponent,
+.lde-core #main #main-outer #main-content #content #catalog-items .catalog-item,
+.lde-core #main #main-outer #main-content #content #content-section-category-courses .catalog-item,
+.lde-core #main #main-outer #main-content #content #content-section-category-elearning .catalog-item,
+.lde-core #main #main-outer #main-content #content #content-section-category-course-pathways .catalog-item,
+.lde-core #main #main-outer #main-content #content #content-section-category-components .catalog-item,
+.lde-core #main #main-outer #main-content #content #content-section-category-pathways .catalog-item,
+.lde-core #main #main-outer #main-content #content #catalog-items .content-section-course,
+.lde-core #main #main-outer #main-content #content #content-section-category-courses .content-section-course,
+.lde-core #main #main-outer #main-content #content #content-section-category-elearning .content-section-course,
+.lde-core #main #main-outer #main-content #content #content-section-category-course-pathways .content-section-course,
+.lde-core #main #main-outer #main-content #content #content-section-category-components .content-section-course,
+.lde-core #main #main-outer #main-content #content #content-section-category-pathways .content-section-course,
+.lde-core #main #main-outer #main-content #content #catalog-items .content-section-elearning,
+.lde-core #main #main-outer #main-content #content #content-section-category-courses .content-section-elearning,
+.lde-core #main #main-outer #main-content #content #content-section-category-elearning .content-section-elearning,
+.lde-core #main #main-outer #main-content #content #content-section-category-course-pathways .content-section-elearning,
+.lde-core #main #main-outer #main-content #content #content-section-category-components .content-section-elearning,
+.lde-core #main #main-outer #main-content #content #content-section-category-pathways .content-section-elearning,
+.lde-core #main #main-outer #main-content #content #catalog-items .content-section-contentComponent,
+.lde-core #main #main-outer #main-content #content #content-section-category-courses .content-section-contentComponent,
+.lde-core #main #main-outer #main-content #content #content-section-category-elearning .content-section-contentComponent,
+.lde-core #main #main-outer #main-content #content #content-section-category-course-pathways .content-section-contentComponent,
+.lde-core #main #main-outer #main-content #content #content-section-category-components .content-section-contentComponent,
+.lde-core #main #main-outer #main-content #content #content-section-category-pathways .content-section-contentComponent {
+  padding: 19px 0;
+  border-bottom: 1px solid #dedede;
+}
+
+.lde-core .pagination-default {
+  font-size: 1.1em;
+  width: 100%;
+  position: relative;
+  margin: 20px 0;
+  text-align: center;
+}
+
+.lde-core .pagination-default .pages a,
+.lde-core #content .content-block-full .pagination .pages a {
+  color: #222222;
+  margin: .2em;
+}
+
+.lde-core .pagination-default .prev-btn,
+.lde-core .pagination-default .next-btn,
+.lde-core .pagination-default .pages {
+  display: inline-block;
+  line-height: 1.5em;
+  vertical-align: middle;
+}
+
+.lde-core #content .feature .wrapper .col-1-2,
+.lde-core #content .feature .wrapper img.img-1-2 {
+  width: 50%;
+}
+
+.lde-core #content .feature .wrapper .col-3-4,
+.lde-core #content .feature .wrapper img.img-3-4 {
+  width: 75%;
+}
+
+@media (max-width: 480px) {
+  .lde-core .form-horizontal .controls,
+  .lde-core .form-horizontal .controls:first-child {
+      padding-left: 0;
+  }
+}
+
+@media (max-width: 979px) {
+  .lde-core .nav-collapse .nav>li>a,
+  .lde-core .nav-collapse .dropdown-menu li+li a {
+      margin-bottom: 2px;
+  }
+}
+
+#shopping-cart-page .btn {
+  padding: 4px 6px;
+}
+
+@media (max-width: 1023px) {
+  .lde-core #content {
+      padding-left: 0;
+      padding-right: 0;
+  }
+  .lde-core #staffbar {
+      display: none;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .lde-core #main-outer {
+      width: 100%;
+  }
+  .lde-core #content .links-block .wrapper .content-block-full ul li {
+      font-size: .8em;
+  }
+
+  #training-public-course-event-page #content,
+  #training-public-course-event-page #main-side {
+      width: 100%;
+      float: none;
+  }
+}
+
+@media (min-width: 960px) {
+  .lde-core .cta-banner .wrapper h4,
+  .lde-core .cta-banner .wrapper p {
+      display: inline-block;
+      width: auto;
+      margin-bottom: 0;
+  }
+  .lde-core .cta-banner .wrapper h4 {
+      margin-bottom: 0;
+      -webkit-transform: translateY(5px);
+      -ms-transform: translateY(5px);
+      transform: translateY(5px);
+  }
+}
+
+@media (max-width: 720px) {
+  .lde-core #content .links-block .wrapper .content-block-full ul li {
+      width: 100%;
+      margin-bottom: 60px;
+  }
+}
+
+/* course-catalog list */
+.flex-w-sidebar { display: flex; }
+.flex-w-sidebar .left-sidebar   { 
+  flex: 1; 
+  border-right: 1px solid #dedede;
+  padding-right: 16px;
+}
+.flex-w-sidebar .right-content  { 
+  flex: 4; 
+  padding-left: 16px;
+}
+
+.lde-core .flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.lde-core .flex-col:nth-child(odd)  { background: #f7f7f7; }
+.lde-core .flex-col:nth-child(even) { background: #ffffff; }
+
+.lde-core .flex-wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.lde-core .flex-spread {
+  display: flex;
+  justify-content: space-between;
+}
+
+.lde-core .flex-row { 
+  display: flex; 
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 16px;
+  background-color: inherit;
+}
+
+.lde-core .flex-row .flex-1  {
+  flex: 0 0 8.33333333%;
+  max-width: 8.33333333%; 
+}
+.lde-core .flex-row .flex-2  {
+  flex: 0 0 16.6666666%;
+  max-width: 16.6666666%; 
+}
+.lde-core .flex-row .flex-3  {
+  flex: 0 0 25%;
+  max-width: 25%; 
+}
+.lde-core .flex-row .flex-4  {
+  flex: 0 0 33.3333333%;
+  max-width: 33.3333333%; 
+}
+.lde-core .flex-row .flex-5  {
+  flex: 0 0 41.6666666%;
+  max-width: 41.6666666%; 
+}
+.lde-core .flex-row .flex-6  {
+  flex: 0 0 50%;
+  max-width: 50%; 
+}
+.lde-core .flex-row .flex-7  {
+  flex: 0 0 58.3333333%;
+  max-width: 58.3333333%; 
+}
+.lde-core .flex-row .flex-8  {
+  flex: 0 0 66.6666666%;
+  max-width: 66.6666666%; 
+}
+.lde-core .flex-row .flex-9  {
+  flex: 0 0 75%;
+  max-width: 75%; 
+}
+.lde-core .flex-row .flex-10 {
+  flex: 0 0 83.3333333%;
+  max-width: 83.3333333%; 
+}
+.lde-core .flex-row .flex-11 {
+  flex: 0 0 91.6666666%;
+  max-width: 91.6666666%; 
+}
+.lde-core .flex-row .flex-12 {
+  flex: 0 0 100%;
+  max-width: 100%; 
+}
+
+.lde-core .flex-row .fa { padding: 0 .5em; }
+
+.lde-core .flex-row .align-right {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.lde-core .flex-col .flex-row:first-child {
+  z-index: 2;
+}
+
+.lde-core #content .flex-row h1,
+.lde-core #content .flex-row h2,
+.lde-core #content .flex-row h3,
+.lde-core #content .flex-row h4,
+.lde-core #content .flex-row h5,
+.lde-core #content .flex-row h6 {
+  display: inline-block;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.lde-core .expand {
+  padding: 8px 16px;
+  max-height: 20em;
+}
+
+.lde-core .expand.closed {
+  overflow-y: hidden;
+  max-height: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.lde-core .expand,
+.fa {
+  transition: all .35s;
+}
+
+.lde-core .flex-row-expand,
+.lde-core .flex-row-expand-all {
+  cursor: pointer;
+}
+
+.lde-core .flex-row-expand-all {
+  padding: 8px 16px;
+}
+
+.lde-core .component-logo img {
+  max-width: 32px;
+  padding-bottom: 8px;
+}
+
+.lde-core .component-tags a {
+  font-family: 'Calibre Web regular', Helvetica, Tahoma, Arial, sans-serif;
+	font-size: .9em;
+	font-weight: normal;
+	color: #4e4e4e;
+	background: #dedede;
+	text-decoration: none;
+	padding: 4px 8px;
+	margin: 4px 4px;
+}
+
+.lde-core .component-tags a:hover {
+  color: #ffae1a;
+}
+
+@media screen and (max-width: 995px) {
+  .lde-core .flex-col {
+    padding: 12px 0;
+  }
+
+  .lde-core .flex-col:nth-child(2n+1) {
+    background: white;
+  }
+  
+  .lde-core .flex-row {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 2px 0;
+  }
+
+  .lde-core .flex-row [class*="flex-"] {
+    min-width: 100%;
+    padding: 2px 0;
+  }
+
+  .lde-core .flex-row .btn {
+    width: 100%;
+  }
+
+  .lde-core .fa + span {
+    font-size: 1.2em;
+  }
+}
