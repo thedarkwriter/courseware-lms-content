@@ -10,7 +10,7 @@ As you start to write and edit your own Puppet code, you want to be sure your sy
 <br>
 For this course, you will only explore the syntax at the resource level. But understanding how this all works together will help you in the future. In the rest of this course, you will work on a scenario that helps you apply this information.
 
-<img src="/static/images/courses/syntax/anatomy-of-a-resource-4.png" alt="Diagram of the parts of a resource" width="100%" height="100%" />
+<img src="/static/images/courses/syntax/anatomy-of-a-resource_4-26-18_5.png" alt="Diagram of the parts of a resource" width="100%" height="100%" />
 
 These are the components of a resource statement in the Puppet language. Every resource is comprised of a type, a title, and list of attributes.
 
