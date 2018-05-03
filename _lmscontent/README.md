@@ -55,5 +55,5 @@ being created on the repo. These must be tagged with a specific name format (see
 5. Run a  diff using either `rake migrate:production` on the command line or using compare in GitHub: __e.g.:__ https://github.com/puppetlabs/courseware-lms-content/compare/v1.1...v2018.03.30.01
 6. On the command line, run `rake download:repos`.
 7. To finish the process and push all your changes live, run `rake release:production`.
-8. Check your content in the [production site](https://learn.puppet.com/).
+8. Check your content in the [production site](https://learn.puppet.com/).  
 
