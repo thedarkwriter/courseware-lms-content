@@ -18,7 +18,7 @@ With Puppet, you'll start with a **resource**. As you learned earlier, a resourc
 
 **Core resource types** are the most essential resource types you will use to interact with Puppet and tell it what to do. They are ready to go when you install Puppet, meaning you don&rsquo;t have to do anything extra to set them up.
 
-One example of a core resource type you have gotten some practice working with previously in this course is the `file` type. The full list of all core resource types is posted on our [type reference page](https://puppet.com/docs/puppet/latest/type.html)
+One example of a core resource type you have gotten some practice working with previously in this course is the `file` type. The full list of all core resource types is posted on our [type reference page](https://puppet.com/docs/puppet/latest/type.html), and the package type reference can found [here](https://puppet.com/docs/puppet/latest/types/package.html).
 
 The `package` type manages software packages. Some important attributes of this type include `name`, `ensure`, `source`, and `provider`. For example:
 
