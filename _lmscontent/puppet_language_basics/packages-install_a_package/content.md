@@ -20,11 +20,18 @@ With Puppet, you'll start with a **resource**. As you learned earlier, a resourc
 
 One example of a core resource type you have gotten some practice working with previously in this course is the `file` type. The full list of all core resource types is posted on our [type reference page](https://puppet.com/docs/puppet/latest/type.html), and the package type reference can found [here](https://puppet.com/docs/puppet/latest/types/package.html).
 
-The `package` type manages software packages. Some important attributes of this type include `name`, `ensure`, `source`, and `provider`. For example:
+The `package` type manages software packages. Often, this type is seen with a simple `ensure` attribute to install a package. Other useful attributes of this type include `source` and `provider`. For example:
 
 <pre>
 package { 'openssh-server':
   ensure => installed,
+}
+</pre>
+
+<pre>
+package { 'ruby-dbus':
+  ensure   => '0.13.0',
+  provider => 'gem',
 }
 </pre>
 
