@@ -12,7 +12,7 @@ With that request, it's time to start figuring out how to achieve it using Puppe
 * **db2.mycorp.com** - secondary database server (failover machine)
 * **web1.mycorp.com** - web/application server
 
-Before Puppet, it was necessary to log into these 3 servers and manually execute commands in order according to the runbook. Now with Puppet, you have to write some code to apply changes automatically on each server, based on the final configuration required by each one to make a fully-functioning deployment of the Robby application.
+Before Puppet, it was necessary to log into these 3 servers and manually execute commands in order according to the runbook. Now with Puppet, you write code to apply changes automatically on each server, based on the final configuration required by each one to make a fully-functioning deployment of the Robby application.
 
 With Puppet, you'll start with a **resource**. As you learned earlier, a resource is Puppet's representation of a characteristic of a server that should be managed or configured, such as a file, a user account, a software package installation and many other possibilities.
 
@@ -49,14 +49,14 @@ The first thing needed for Robby to operate is to install all of the required so
 
 Install the required packages on the database servers and the web server. The first task gives you help with the syntax, but the remaining tasks require you to enter the syntax on your own. Refer to the correct syntax in the first task box below if you get stuck.
 
-db1.mycorp.com:
+**db1.mycorp.com** (PostgreSQL database server):
 
 <iframe src="https://magicbox.classroom.puppet.com/scenario/install_database_package" width="100%" height="500px" frameborder="0"></iframe>
 
-web1.mycorp.com (Apache web server):
+**web1.mycorp.com** (Apache web server):
 
 <iframe src="https://magicbox.classroom.puppet.com/scenario/install_httpd_package" width="100%" height="500px" frameborder="0"></iframe>
 
-web1.mycorp.com (Robby application):
+**web1.mycorp.com** (Robby application):
 
 <iframe src="https://magicbox.classroom.puppet.com/scenario/install_robby_package" width="100%" height="500px" frameborder="0"></iframe>
