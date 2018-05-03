@@ -103,7 +103,7 @@ docker inspect $(docker ps | awk '/discovery_workshop/{print $1}') | \
   + Choose the file `/tmp/discovery_hosts.csv`
   + Type "workshop_csv" in the name field.
 
-> TIP: On macOS in the choose file dialog , you can use the keyboard combination _command (⌘)"_ + _"shift"_ + _"g"_ and the type the path e.g. `/tmp` in the "Go to folder" drop down. 
+> TIP: On macOS in the choose file dialog , you can use the keyboard combination _command (&#8984;)"_ + _"shift"_ + _"g"_ and the type the path e.g. `/tmp` in the "Go to folder" drop down. 
 
 9. Verify your host was added [here](https://localhost:8443/list/all-hosts)
 
