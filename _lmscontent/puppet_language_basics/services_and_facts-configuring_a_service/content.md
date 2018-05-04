@@ -1,14 +1,4 @@
-Once the software packages are installed on the proper servers, the runbook instructs us to modify certain files to configure the software. 
-
-But first, let's learn a little more about how Puppet manages files. Puppet can see a variety of attributes about a file or any resource type. Some examples of other file attributes might include **mode**, **ensure**, **owner**, or **group**. The `puppet resource` command shows you all the attributes Puppet knows about a resource, as well as their values.
-
-## Task:
-
-Enter the `puppet resource` command to see all the attributes of the `file` at `/etc/motd`.
-
-<p><iframe src="https://magicbox.classroom.puppet.com/syntax/querying_the_system" width="100%" height="500px" frameborder="0"></iframe></p>
-
-Now let's move on to configuring the software packages that have been installed on our servers. To start, the database servers must be configured in a primary/secondary configuration. 
+Once the software packages are installed on the proper servers, the runbook instructs us to modify certain files to configure the software. To start, the database servers must be configured in a primary/secondary configuration.
 
 **NOTE:** For the sake of simplicity, not every required PostgreSQL parameter will be configured.
 
