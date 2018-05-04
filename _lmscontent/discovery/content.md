@@ -3,7 +3,7 @@
 ## Workshop requirements
 Download the (macOS) [Docker Community Edition](https://www.docker.com/community-edition)  
 
-In this recorded workshop, Puppet professional services engineer Zack Smith walks through a workshop to get familair with Discovery and support engineer Adam Bottchen provides insight on troubleshooting Puppet Discovery. Follow the workshop details below so you can run through the lab on your system.
+In this recorded workshop, Puppet professional services engineer Zack Smith walks through a workshop to get started with Discovery, and support engineer Adam Bottchen provides insight on troubleshooting Puppet Discovery. Follow the workshop details below so you can run through the lab on your system.
 
 <div class="wistia_responsive_padding" style="padding:56.32% 0 0 0;position:relative;"><div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;"><iframe src="https://fast.wistia.net/embed/iframe/aab5naz1m9?seo=false&videoFoam=true" title="Wistia video player" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" allowfullscreen mozallowfullscreen webkitallowfullscreen oallowfullscreen msallowfullscreen width="100%" height="100%"></iframe></div></div>
 
