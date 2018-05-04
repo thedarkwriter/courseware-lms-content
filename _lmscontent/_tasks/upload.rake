@@ -88,16 +88,16 @@ namespace :upload do
     ].each do |field|
       if File.exist?("#{component_directory}/#{field}.md")
         puts "Converting #{field}.md to html"
-        doc = Kramdown::Document.new(File.read("#{component_directory}/#{field}.md"))
+        markdown = File.read("#{component_directory}/#{field}.md")
 
         # Kramdown can't handle non-ascii characters so we check and "fix" if
         # we can. to_ascii comes from the stringex gem above
-        if doc.force_encoding('UTF-8').ascii_only?
-          metadata[field] = doc.force_encoding('UTF-8').to_html
-        else
+        unless markdown.force_encoding('UTF-8').ascii_only?
           puts "WARNING: Non ascii characters detected attempting to replace them"
-          metadata[field] = doc.convert_to_ascii.force_encoding('UTF-8').to_html
+          markdown = markdown.convert_to_ascii
         end
+        doc = Kramdown::Document.new(markdown)
+        metadata[field] = doc.to_html
       end
     end
 
