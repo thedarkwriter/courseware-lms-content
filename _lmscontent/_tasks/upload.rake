@@ -4,7 +4,6 @@ require 'learndot/learning_components'
 require 'yaml'
 require 'json'
 require 'kramdown'
-require 'stringex'
 
 # This set of tasks are the primary code for uploading content to learndot.
 
@@ -53,16 +52,6 @@ namespace :upload do
     @lms.create_component(conditions)
   end
 
-  def convert_to_ascii(string)
-    string.gsub(/[”“‘’]/,
-      '”' => '"',
-      '“' => '"',
-      '‘' => '\'',
-      '’' => '\''
-    )
-    string.to_ascii
-  end
-
   # Rake Tasks
   task :component,[:component_directory,:target] do  |_t, args|
 
@@ -89,15 +78,7 @@ namespace :upload do
       if File.exist?("#{component_directory}/#{field}.md")
         puts "Converting #{field}.md to html"
         doc = Kramdown::Document.new(File.read("#{component_directory}/#{field}.md"))
-
-        # Kramdown can't handle non-ascii characters so we check and "fix" if
-        # we can. to_ascii comes from the stringex gem above
-        if doc.force_encoding('UTF-8').ascii_only?
-          metadata[field] = doc.force_encoding('UTF-8').to_html
-        else
-          puts "WARNING: Non ascii characters detected attempting to replace them"
-          metadata[field] = doc.convert_to_ascii.force_encoding('UTF-8').to_html
-        end
+        metadata[field] = doc.to_html
       end
     end
 
