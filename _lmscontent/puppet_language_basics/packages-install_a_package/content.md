@@ -12,13 +12,13 @@ With that request, it's time to start figuring out how to achieve it using Puppe
 * **db2.mycorp.com** - secondary database server (failover machine)
 * **web1.mycorp.com** - web/application server
 
-Before Puppet, it was necessary to log into these 3 servers and manually execute commands in order according to the runbook. Now with Puppet, you write code to apply changes automatically on each server, based on the final configuration required by each one to make a fully-functioning deployment of the Robby application.
+Before Puppet, it was necessary to log into these 3 servers and manually execute commands in order according to the runbook. Now with Puppet, you write code to apply changes automatically on each server, based on the final configuration required by each one to make a fully functioning deployment of the Robby application.
 
 With Puppet, you'll start with a **resource**. As you learned earlier, a resource is Puppet's representation of a characteristic of a server that should be managed or configured, such as a file, a user account, a software package installation and many other possibilities.
 
 **Core resource types** are the most essential resource types you will use to interact with Puppet and tell it what to do. They are ready to go when you install Puppet, meaning you don&rsquo;t have to do anything extra to set them up.
 
-One example of a core resource type you have gotten some practice working with previously in this course is the `file` type. The full list of all core resource types is posted on our [type reference page](https://puppet.com/docs/puppet/latest/type.html), and the package type reference can found [here](https://puppet.com/docs/puppet/latest/types/package.html).
+One example of a core resource type you have gotten some practice working with previously in this course is the `file` type. The full list of all core resource types is posted on our [type reference page](https://puppet.com/docs/puppet/latest/type.html), and the package type reference can found [in the Puppet docs](https://puppet.com/docs/puppet/latest/types/package.html).
 
 The `package` type manages software packages. Often, this type is seen with a simple `ensure` attribute to install a package. Other useful attributes of this type include `source` and `provider`. For example:
 
