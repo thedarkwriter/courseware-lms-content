@@ -1,6 +1,6 @@
 # Puppet Discovery enablement workshop
 
-## Workshop Requirements
+## Workshop requirements
 Download the (macOS) [Docker Community Edition](https://www.docker.com/community-edition)  
 
 In this recorded workshop, Puppet professional services engineer Zack Smith walks through a workshop to get familair with Discovery and support engineer Adam Bottchen provides insight on troubleshooting Puppet Discovery. Follow the workshop details below so you can run through the lab on your system.
@@ -9,7 +9,7 @@ In this recorded workshop, Puppet professional services engineer Zack Smith walk
 
 
 
-### Part 1: Installing Discovery in Demo mode.
+### Part 1: Installing Discovery in demo mode
 
 1. Ensure that the Docker engine is running on the target machine (mac).
 2. Download the [`puppet-discovery`](https://storage.googleapis.com/chvwcgv0lwrpc2nvdmvyes1jbgkk/production/latest/darwin-amd64/puppet-discovery) binary for macOS
@@ -132,11 +132,11 @@ docker cp /tmp/vagrant_key discovery_workshop:/root/.ssh/authorized_keys
 
 __You can find the answer [here](https://gist.github.com/acidprime/c2e7c19bf9283334c2e238a8574556bd)__
 
-> TIP: Refer to the [Support Troubleshooting Doc](https://confluence.puppetlabs.com/display/SUP/Troubleshooting)
+> TIP: Refer to the [Support troubleshooting doc](https://confluence.puppetlabs.com/display/SUP/Troubleshooting) **only available to Puppet employees**
 
-## Extra Credit 1: Resetting the installation
+## Extra credit 1: Resetting the installation
 
-### Soft Reset
+### Soft reset
 
 If you still have the administrator password you can reset the current discovery installation using:
 
@@ -145,7 +145,7 @@ If you still have the administrator password you can reset the current discovery
 ```
 
 
-### Hard Reset
+### Hard reset
 
 If you have forgotton the administrator password you can reset the docker files
 
@@ -162,9 +162,9 @@ docker volume rm pd_data_vault_logs
 
 > Then run the "soft reset command above"
 
-## Internal Resources
+## Internal resources
 
-These require access to internal Puppet Resources only avaiable to employees.
+These require access to internal Puppet Resources only available to employees.
 
 [Sample Licence](https://github.com/puppetlabs/cloud-discovery/blob/master/workstation/internal/pkg/license/sample-license.json)  
 [Support Getting Started Doc](https://confluence.puppetlabs.com/display/SUP/Getting+Started+Walkthrough)  
@@ -181,7 +181,7 @@ These require access to internal Puppet Resources only avaiable to employees.
 [System Requirements](https://docs.google.com/document/d/160fkUblzLmzg1YmGpWSAfnGboOZzrH96pGs2uJKrPos/edit)  
 [Slice Environment](https://pdlatest.slice.puppetlabs.net:8443/)  
 
-## External Resources
+## External resources
 
 [Workshop Slide Deck](https://docs.google.com/presentation/d/1tCeaKFgOvWtKwcZ4k644OINt_myyysv5udrFArV_HfA/edit?usp=sharing)  
 [Documentation](https://puppet.com/docs/discovery/preview/introducing_discovery.html)  
@@ -189,7 +189,7 @@ These require access to internal Puppet Resources only avaiable to employees.
 
 
 
-## Platform Installers
+## Platform installers
 | Platform        | Link           | Notes  |
 | ------------- |:-------------:| -----:|
 | Mac     | https://storage.googleapis.com/chvwcgv0lwrpc2nvdmvyes1jbgkk/production/latest/darwin-amd64/puppet-discovery |  |
