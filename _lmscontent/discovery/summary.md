@@ -1,1 +1,1 @@
-Zack Smith from the services portfolio team, Adam Bottchen from support, and representatives from the product team will present on Puppet Discovery followed by a hands-on workshop. They discuss the architecture, support lifecycle, and roadmap during the presentation. The hands-on workshop covers deploying Discovery in demo mode on your Mac laptop. 
+
