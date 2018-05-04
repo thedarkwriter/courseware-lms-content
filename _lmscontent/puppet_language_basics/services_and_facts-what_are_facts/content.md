@@ -16,7 +16,7 @@ file { '/etc/motd':
 }
 </pre>
 
-In this example, any system using this code will have its own hostname written into the file. In this way, you can have server-specific outcomes with a single piece of code. This means you don't have to rewrite your code for every single machine you're managing. Notice that in this example, you use a <pre>$</pre> plus <pre>{ }</pre>to indidcate the name of the variable. You will learn more about formatting variables later in the course, and you can refer to the <a href= "https://puppet.com/docs/puppet/5.2/lang_variables.html#interpolation"> Facts and Built-in Variables</a> section of the Puppet docs for more information.
+In this example, any system using this code will have its own hostname written into the file. In this way, you can have server-specific outcomes with a single piece of code. This means you don't have to rewrite your code for every single machine you're managing. Notice that in this example, you use a `$` plus `{ }` to indidcate the name of the variable. You will learn more about formatting variables later in the course, and you can refer to the <a href= "https://puppet.com/docs/puppet/latest/lang_variables.html#interpolation"> Facts and Built-in Variables</a> section of the Puppet docs for more information.
 
 ## Task:
 

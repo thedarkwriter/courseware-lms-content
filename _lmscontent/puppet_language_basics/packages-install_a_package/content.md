@@ -12,19 +12,26 @@ With that request, it's time to start figuring out how to achieve it using Puppe
 * **db2.mycorp.com** - secondary database server (failover machine)
 * **web1.mycorp.com** - web/application server
 
-Before Puppet, it was necessary to log into these 3 servers and manually execute commands in order according to the runbook. Now with Puppet, you have to write some code to apply changes automatically on each server, based on the final configuration required by each one to make a fully-functioning deployment of the Robby application.
+Before Puppet, it was necessary to log into these 3 servers and manually execute commands in order according to the runbook. Now with Puppet, you write code to apply changes automatically on each server, based on the final configuration required by each one to make a fully functioning deployment of the Robby application.
 
 With Puppet, you'll start with a **resource**. As you learned earlier, a resource is Puppet's representation of a characteristic of a server that should be managed or configured, such as a file, a user account, a software package installation and many other possibilities.
 
 **Core resource types** are the most essential resource types you will use to interact with Puppet and tell it what to do. They are ready to go when you install Puppet, meaning you don&rsquo;t have to do anything extra to set them up.
 
-One example of a core resource type you have gotten some practice working with previously in this course is the `file` type. The full list of all core resource types is posted on our [type reference page](https://puppet.com/docs/puppet/latest/type.html)
+One example of a core resource type you have gotten some practice working with previously in this course is the `file` type. The full list of all core resource types is posted on our [type reference page](https://puppet.com/docs/puppet/latest/type.html), and the package type reference can found [in the Puppet docs](https://puppet.com/docs/puppet/latest/types/package.html).
 
-The `package` type manages software packages. Some important attributes of this type include `name`, `ensure`, `source`, and `provider`. For example:
+The `package` type manages software packages. Often, this type is seen with a simple `ensure` attribute to install a package. Other useful attributes of this type include `source` and `provider`. For example:
 
 <pre>
 package { 'openssh-server':
   ensure => installed,
+}
+</pre>
+
+<pre>
+package { 'ruby-dbus':
+  ensure   => '0.13.0',
+  provider => 'gem',
 }
 </pre>
 
@@ -42,14 +49,14 @@ The first thing needed for Robby to operate is to install all of the required so
 
 Install the required packages on the database servers and the web server. The first task gives you help with the syntax, but the remaining tasks require you to enter the syntax on your own. Refer to the correct syntax in the first task box below if you get stuck.
 
-db1.mycorp.com:
+**db1.mycorp.com** (PostgreSQL database server):
 
 <iframe src="https://magicbox.classroom.puppet.com/scenario/install_database_package" width="100%" height="500px" frameborder="0"></iframe>
 
-web1.mycorp.com (Apache web server):
+**web1.mycorp.com** (Apache web server):
 
 <iframe src="https://magicbox.classroom.puppet.com/scenario/install_httpd_package" width="100%" height="500px" frameborder="0"></iframe>
 
-web1.mycorp.com (Robby application):
+**web1.mycorp.com** (Robby application):
 
 <iframe src="https://magicbox.classroom.puppet.com/scenario/install_robby_package" width="100%" height="500px" frameborder="0"></iframe>
