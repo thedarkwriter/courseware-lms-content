@@ -86,7 +86,12 @@ namespace :upload do
       'description',
       'summary',
     ].each do |field|
-      if File.exist?("#{component_directory}/#{field}.md")
+      # We check if the file exists and do not edit the field if it doesn't
+      next unless File.exist?("#{component_directory}/#{field}.md")
+      markdown = File.read("#{component_directory}/#{field}.md")
+
+      # Check if the file is simply a place holder and just whitespace (blank)
+      if /\A[[:space:]]*\z/.match(markdown).nil?
         puts "Converting #{field}.md to html"
         markdown = File.read("#{component_directory}/#{field}.md")
 
@@ -98,6 +103,8 @@ namespace :upload do
         end
         doc = Kramdown::Document.new(markdown)
         metadata[field] = doc.to_html
+      else
+        puts "NOTICE: #{component_directory}/#{field}.md is blank, skipping"
       end
     end
 
