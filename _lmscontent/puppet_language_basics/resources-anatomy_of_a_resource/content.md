@@ -20,7 +20,7 @@ Every resource is associated with a resource **type** that describes what kind o
 
 **What is a title?**
 
-A **title** is a string that identifies a resource to Puppet. A title doesn't have to match the name of what you're managing on the target system, but you'll often want it to. 
+A **title** is a string that identifies a resource to Puppet, and it is typically the name of the item you are managing on the target system. A title doesn't have to match the name of what you're managing on the target system, but you'll often want it to. For example, a file resource title might be **/etc/motd** or **/etc/yum.conf**, and a service resource title might be **sshd** or **mysqld**.
 
 **What are attributes?**
 
