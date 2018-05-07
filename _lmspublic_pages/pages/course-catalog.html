@@ -1,0 +1,150 @@
+<#function filterVisibleWebsiteBeans beans>
+  <#return websiteBeanVisibilityService.filterVisibleBeans( beans )/>
+</#function>
+
+<#function sortWebsiteBeans beans fields asc=true>
+  <#return websiteBeanUtil.sort(beans, asc, fields)>
+</#function>
+
+<#function formatDuration duration>
+  <#if (duration.days > 1)>
+      <#return "${duration.days} " + i18n("daysLabel")>
+  <#elseif (duration.hoursPerDay > 1)>
+      <#return "${(duration.hoursPerDay)?string('0.#')} " + i18n("hoursLabel")>
+  <#elseif (duration.hoursPerDay == 1)>
+      <#return "1 " + i18n("hourLabel")>
+  <#elseif (duration.minutesPerDay > 1)>
+      <#return "${duration.minutesPerDay?string('0.#')} "+ i18n("minutesLabel")>
+  <#else>
+      <#return "1 "+ i18n("minuteLabel")>
+  </#if>
+</#function>
+
+<#function i18n val default="" suffix="" prefix="" >
+  <#local argIndex = val?index_of("|")/>
+  <#if (argIndex >=0)>
+      <#local key = val?substring(0,argIndex)/>
+      <#local arguments = val?substring(argIndex+1)/>
+  </#if>
+  <#local defaultValue = default/>
+  <#local messageCode = "${prefix}${key!val}${suffix}"/>
+  <#local res>${i18nService.getMessage(messageCode, (arguments!"")?split("|"))}</#local>
+  <#return res>
+</#function>
+
+<#function publicUrl target context="">
+  <#attempt>
+      <#if context?has_content>
+          <#return websiteBeanUrlService.encodeUrl(target context)>
+      <#else>
+          <#return websiteBeanUrlService.encodeUrl(target)>
+      </#if>
+      <#recover>
+          <#return "">
+  </#attempt>
+</#function>
+
+<#function getLogo target>
+  <#return logoReportingService.getLogo(target)?html/>
+</#function>
+
+<#macro top>
+<#-- <a href="#header" onclick="smoothScrollTo('header'); return false;" class="top"><small><@s.message code="goToTopAction"/></small></a> -->
+</#macro>
+
+<#macro renderCatalogItem component renderIgnoreStatus=false>
+
+  <#local price=component.price[2..]?keep_before_last(" ")?number>
+  <#if price=0>
+    <#local btn_class="btn-success" btn_text="Free">
+  <#else>
+    <#local btn_class="btn-primary" btn_text="View">
+  </#if>
+  <#if (component.status == "ENABLED") && publicUrl(component)?has_content>
+  <div class="flex-col">
+    <div class="flex-row category-id-${component.primaryCategory.id}">
+      <div class="flex-4 component-logo" data-component-id="component-${component.id}">
+        <h5>
+          <img src="${getLogo(component)}" alt="logo">
+          <strong>${component.displayName?html}</strong>
+        </h5>
+      </div>
+      <div class="flex-2"><i class="fa fa-clock-o"></i> ${formatDuration(component.duration)}</span>
+      </div>
+      <div class="flex-4">
+        <#if component.tags?? && component.tags?has_content>
+        <div class="flex-wrap component-tags">
+            <#list component.tags as tag>
+            <a href="#">${tag.name}</a>  
+            </#list>
+        </div>
+        </#if>
+      </div>
+      <div class="flex-2 align-right">
+        <a href="${publicUrl(component)}" class="btn ${btn_class}">${btn_text}</a>
+      </div>
+    </div>
+  </div>
+
+  </#if>
+</#macro>
+
+<#macro contentSection id="" name="" arguments="" class="" href="" heading="2">
+  <#local content>
+      <#nested/>
+  </#local>
+  <#if content?trim?has_content>
+      <div id="content-section-${id!}"
+            class="content-section-wrapper <#if class?? && class?has_content>content-section-${class}</#if> clearfix">
+          <#if id?has_content>
+              <a name="${id}" class="content-section-anchor"></a>
+          </#if>
+          <#if name?has_content>
+              <h${heading} class="content-section-title">
+                  <@top/>
+                  <#if href?has_content><a href="${href}"></#if>
+                  <span>${i18n("${name}|${arguments}" "${name}")}</span>
+                  <#if href?has_content></a></#if>
+              </h${heading}>
+          </#if>
+          <div class="content-section">
+              ${content}
+          </div>
+      </div>
+  </#if>
+</#macro>
+
+<#macro renderCategoryChildren category>
+  <#local content>
+      <#-- CATEGORIES -->
+      <#if (filterVisibleWebsiteBeans(category.learningComponents)?size > 0)>
+          <div id="${category.name?html}">
+              <#list sortWebsiteBeans(filterVisibleWebsiteBeans(category.learningComponents), ["orderNumber"]) as component>
+                  <@renderCatalogItem component = component renderIgnoreStatus=true/>
+              </#list>
+          </div>
+      </#if>
+      <#-- SUBCATEGORIES -->
+      <#-- TODO - This displays subcategories at the same level. -->
+      <#list filterVisibleWebsiteBeans(category.children)?sort_by("orderNumber") as subcategory>
+          <#if (filterVisibleWebsiteBeans(subcategory.learningComponents)?size > 0)>
+              <@renderCategoryChildren category=subcategory />
+          </#if>
+      </#list>
+  </#local> 
+  <#if content?trim?has_content>
+    <div class="flex-row">
+        <h2>${i18n("knowledgeCategorySeoName|${category.name}")}</h2>
+    </div>
+    ${content}
+    <br>
+  </#if>
+</#macro>
+
+<#assign categories = filterVisibleWebsiteBeans(categoryReportingService.getRootKnowledgeCategories()) />
+
+<div id="course-catalog" class="right-content">
+<#list categories?sort_by("orderNumber") as category>
+    <@renderCategoryChildren category=category />
+</#list>
+</div>
