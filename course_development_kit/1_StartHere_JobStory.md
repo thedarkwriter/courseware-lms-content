@@ -1,14 +1,15 @@
-###Job story
-Write the job story that describes what a user is doing, or will need to do, that a training will address.
+### Job Story
+Write the [job story](https://confluence.puppetlabs.com/display/UX/Job+Stories) that describes what a user is doing, or will need to do, that a training will address.
 
-####Template:
+#### Template:
+
 |Prompt| You Write|
 |------|----------|
 |When I am| [doing what task or job? or in what situation?]|
-|I need to be able to| [accomplish what?]|
+|I want| [accomplish what?]|
 |so that |[motivation? for what reason?]|
 
-####Example
+#### Example
 When I’m running on a large set of nodes and don't want to have too much output to sift through, I only want to know about failures, so that I can troubleshoot if need be. 
 
 **What Puppet product and feature addresses this story?**
@@ -49,6 +50,6 @@ eg: reading logs; executing scripts;
 
 ---
 
-Next: Prototype the training!
+[Next: Prototype the training!](https://github.com/puppetlabs/courseware-lms-content/blob/master/course_development_kit/2_DesignStrategy.md)
 
 
