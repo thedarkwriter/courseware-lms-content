@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*- #specify UTF-8 (unicode) characters
 require 'learndot'
 require 'learndot/learning_components'
+require 'learndot/courses'
 require 'yaml'
 require 'json'
 require 'kramdown'
@@ -28,20 +29,30 @@ namespace :migrate do
     # Configure the token for the target
     ENV['LEARNDOT_TOKEN'] = @config['credentials']['learndot'][target]['token']
 
-    @lms = @lms || Learndot.new(true, staging).learning_component
+    @lms = @lms || Learndot.new(true, staging)
   end
 
 	# Show learning components
-  def retrieve_all()
-    @lms.retrieve_component({}).to_h
+  def retrieve_all_learning_components()
+    @lms.learning_component.retrieve_component({}).to_h
   rescue => e
     puts "#{e.message}"
     {}
   end
 
   # Show learning components
+  def retrieve_all_courses()
+    @lms = Learndot.new(true, 'staging') 
+    @lms.courses.retrieve({})
+  rescue => e
+    puts "#{e.message}"
+    {}
+  end
+
+
+  # Show learning components
   def retrieve(name)
-    @lms.retrieve_component({
+    @lms.learning_component.retrieve_component({
       'name' => [ name.to_s ]
     }).to_h
   rescue => e
@@ -50,7 +61,7 @@ namespace :migrate do
   end
 
   def normalize_name(name)
-    name.lstrip.downcase.gsub(/(:|"|\.| |&|-)/,'_').squeeze('_')
+    name.lstrip.downcase.gsub(/(,|:|"|\.| |&|-)/,'_').squeeze('_')
   end
 
   def convert_utf8(string)
@@ -165,11 +176,47 @@ namespace :migrate do
     @lms = connect('staging')
 
     nested_lcs = {}
-    retrieve_all.each do |page,lc|
+    retrieve_all_learning_components.each do |page,lc|
       parse_and_build_structure(lc)
     end
 
   end
+
+  # Rake Tasks
+  task :courses do
+    managed_learning_components = {} 
+    Dir.glob('**/*metadata.json').each do |path|
+      json = JSON.parse(File.read(path))
+      managed_learning_components[json['name']] = path
+    end
+    ## Connect to production or staging
+    @lms = connect('staging')
+
+    retrieve_all_courses.each do |course|
+      unless course[:components].nil?
+        course[:components].each do |component|
+          if managed_learning_components.keys.include?(component['name'])
+             puts "#{normalize_name(course[:name])} matches #{managed_learning_components[component['name']]}"
+
+             # Delete top level keys
+             github_json = course.delete_if { |k,v| ['UUID','id'].include? k }
+
+             # Delete duplicate Learning component keys
+             github_json['components'].each do |override_component|
+               unless override_component['component'].nil?
+                 override_component['component'].delete_if { |k,v| !['_keyword_','_displayName_'].include? k }
+                 override_component['component']['path'] = managed_learning_components[component['name']]
+               end
+             end
+
+             File.write("#{normalize_name(course[:name])}.json", JSON.pretty_generate(github_json))
+          end
+        end
+      end
+      #parse_and_build_structure(courseware)
+    end
+  end
+
 
   desc 'Simulate a production deployment'
   task :production do
