@@ -24,10 +24,10 @@ eg: Puppet tasks
 **What does a user need to be able to do with that product?**
 <details>
 <summary>Learn More</summary>
-Be explicit. 
+These are the comptencies and skills required for the user to perform critical tasks and activities in their role with the product or feature. Be explicit. 
 </details>
 ---
-eg: Work in the CLI
+eg: Run tasks in the CLI;
 
 ---
 **What concepts does a user need to understand before using this product?**
