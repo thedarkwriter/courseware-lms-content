@@ -22,7 +22,7 @@ Based on the job story, consider how your audience will learn and apply the need
 Below are some methods to use for each level of training. Text and images and videos are great ways to teach, but consider how we are getting the message across to them based on their skill level and the intended outcome.
 
 <details>
-<summary>Advanced Training Teaching Techniques</summary>
+<summary>Advanced Training Techniques</summary>
 
 * Labs
 * Capstone projects
@@ -33,7 +33,7 @@ Below are some methods to use for each level of training. Text and images and vi
 </details>
 
 <details>
-<summary>Intermediate Training Teaching Techniques</summary>
+<summary>Intermediate Training Techniques</summary>
 
 * Labs
 * Scenario based quizzes
@@ -44,7 +44,7 @@ Below are some methods to use for each level of training. Text and images and vi
 </details>
 
 <details>
-<summary>Beginner Training Teaching Techniques</summary>
+<summary>Beginner Training Techniques</summary>
 
 * Demos
 * Procedural text
@@ -54,4 +54,3 @@ Below are some methods to use for each level of training. Text and images and vi
 * Quizzes
 </details>
 
-Next: Rapid Prototype It!
