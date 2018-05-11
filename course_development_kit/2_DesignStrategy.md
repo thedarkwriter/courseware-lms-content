@@ -54,3 +54,4 @@ Below are some methods to use for each level of training. Text and images and vi
 * Quizzes
 </details>
 
+[Next: Draft your content](https://github.com/puppetlabs/courseware-lms-content/blob/master/course_development_kit/3_CreateDraftContent.md)
