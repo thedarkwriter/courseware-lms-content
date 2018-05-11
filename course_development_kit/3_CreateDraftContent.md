@@ -16,7 +16,7 @@ Your activity allows the user to practice the skills necessary to accomplish tha
 3. How long the lab should take them
 4. What is the completion or pass/fail criteria
 
-### Build only what you and the user needs
+### Build only what you and the user need
 1. Keep the build as simple as possible. 
 2. Avoid adding in tools or technology that the user may not know and does not need to use our product
 3. Automate testing 
