@@ -6,7 +6,7 @@ Write the [job story](https://confluence.puppetlabs.com/display/UX/Job+Stories) 
 |Prompt| You Write|
 |------|----------|
 |When I am| [doing what task or job? or in what situation?]|
-|I want| [accomplish what?]|
+|I want to| [accomplish what?]|
 |so that |[motivation? for what reason?]|
 
 #### Example
@@ -24,10 +24,10 @@ eg: Puppet tasks
 **What does a user need to be able to do with that product?**
 <details>
 <summary>Learn More</summary>
-These are the comptencies and skills required for the user to perform critical tasks and activities in their role with the product or feature. Be explicit. 
+These are the competencies and skills required for the user to perform critical tasks and activities in their role with the product or feature. Be explicit. 
 </details>
 ---
-eg: Run tasks in the CLI;
+eg: Run tasks in the CLI
 
 ---
 **What concepts does a user need to understand before using this product?**
@@ -44,9 +44,8 @@ eg: state based management; git
 <details>
 <summary>Learn More</summary>For beginner skills, this may be as simple as memorizing key terminology or knowing where to find documentation. For more advanced skill training, this should be more analytical and focus on higher-level thinking.
 </details>
-
 ---
-eg: reading logs; executing scripts; 
+eg: reading logs; executing scripts
 
 ---
 
