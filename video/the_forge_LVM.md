@@ -348,20 +348,20 @@ With this new `pasture::db` wrapper class set up and the `db` parameter added to
 main pasture class, a few changes to my `site.pp` classification let me
 create a database server and connect it to my application server.
 
-For now, this is the final video in the series we're recording to accompany
+Thanks for watching this video series on getting started with the Puppet Learning VM
 the Learning VM. If you're following along on your own Learnign VM, you can continue
 following the Quest Guide to complete the remaining content on the Learning VM. This
 content covers topics such as Hiera, a tool used to separate data from your manifests,
 and the Control Repository setup and workflow you can use to manage changes to your
 Puppet infrastruture with a git source control workflow.
 
-I'd also suggest that you check out our free self-paced courses and catalog of
+I also suggest that you check out our free self-paced courses and catalog of
 Instructor-led online and classroom trainings. The self-paced courses are generally
 shorter in length than these videos so they can give a more focused overview of each
 topic. Our instructor-led courses give you a chance to learn live from one of our
 Professional Services Engineers, and try things out hands-on in a live lab environment.
-I'll post links to our training page in the comments below.
+I'll post links to our training page in the description box below.
 
-Thanks for taking the time to look into Puppet and watch this video. I hope this
+Thanks for taking the time to look into Puppet and watch this video series. I hope this
 gives you a good start to using Puppet, and that Puppet can make your life a little
 easier!
