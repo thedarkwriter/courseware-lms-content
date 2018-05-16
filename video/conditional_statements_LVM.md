@@ -2,7 +2,7 @@
 
 # Conditional Statements
 
-In this lesson, I'll discuss **conditional statements.** Conditional statements let
+In this video, I'll discuss **conditional statements.** Conditional statements let
 you write Puppet code that behaves differently in different contexts. I'll 
 show how to use conditional statements to write flexible Puppet code, explain the syntax 
 of the `if` statement, and show how to use an `if` statement to intelligently
@@ -10,7 +10,7 @@ manage a package dependency.
 
 ## Getting started
 
-To start this lesson, I enter the following command:
+To start this lesson, I'll use the quest command to set up the environment on the Learning VM:
 
     quest begin conditional_statements
 
