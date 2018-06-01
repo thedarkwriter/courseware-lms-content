@@ -4,6 +4,7 @@ Here is a quick cheat sheet of skills mapped to training levels:
 
 ### Advanced Trainings
 An advanced training assumes the user understands all foundational concepts and provides a hands-on, challenging approach to learning. Advanced trainings provide a high degree of interactivity and may not have clear-cut exercises with answers. 
+
 | Skill Type | Outcomes/Application|
 |--------------|---------------------|
 |Creation  |  Builds or designs workflows or strategies|
@@ -11,6 +12,7 @@ An advanced training assumes the user understands all foundational concepts and 
 
 ### Intermediate Trainings
 Intermediate trainings combine hands-on practice with more guided instruction. Provide learners with resources for each step of the process and constrain the amount of freedom learners have to limit frustration and mistakes.
+
 | Skill Type | Outcomes/Application|
 |--------------|---------------------|
 | Analysis| Distinguishes between options in technical use cases|
@@ -18,6 +20,7 @@ Intermediate trainings combine hands-on practice with more guided instruction. P
 
 ### Beginner Trainings
 Beginner trainings provide a highly guided experience with frequent checkpoints for learners to self-assess. They should include definitions, explanations of core concepts, and focus on one concept at a time.
+
 | Skill Type | Outcomes/Application|
 |--------------|---------------------|
 |Understanding| Classifies or explains concepts|
