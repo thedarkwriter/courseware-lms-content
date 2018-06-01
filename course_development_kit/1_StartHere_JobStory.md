@@ -1,5 +1,5 @@
 ### Job Story
-Write the [job story](https://confluence.puppetlabs.com/display/UX/Job+Stories) that describes what a user is doing, or will need to do, that a training will address.
+Write the [job story](https://confluence.puppetlabs.com/display/UX/Job+Stories) that describes what a user is doing, or will need to do, that a training will address. Some training projects require multiple job stories. Break down the product into what need it fulfills for the user and what value the user will gain. This step is ideally done with an instructional designer.
 
 #### Template:
 
