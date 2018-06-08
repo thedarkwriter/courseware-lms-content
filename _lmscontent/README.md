@@ -1,5 +1,6 @@
 # LMS Content
 
+
 ## Git workflow
 
 ![Git workflow](README/git_workflow.svg "Content publishing workflow")

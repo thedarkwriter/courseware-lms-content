@@ -4,6 +4,7 @@ require 'learndot/learning_components'
 require 'yaml'
 require 'json'
 require 'kramdown'
+require 'stringex'
 
 # This set of tasks are the primary code for uploading content to learndot.
 
@@ -52,6 +53,16 @@ namespace :upload do
     @lms.create_component(conditions)
   end
 
+  def convert_to_ascii(string)
+    string.gsub(/[”“‘’]/,
+      '”' => '"',
+      '“' => '"',
+      '‘' => '\'',
+      '’' => '\''
+    )
+    string.to_ascii
+  end
+
   # Rake Tasks
   task :component,[:component_directory,:target] do  |_t, args|
 
@@ -75,10 +86,25 @@ namespace :upload do
       'description',
       'summary',
     ].each do |field|
-      if File.exist?("#{component_directory}/#{field}.md")
+      # We check if the file exists and do not edit the field if it doesn't
+      next unless File.exist?("#{component_directory}/#{field}.md")
+      markdown = File.read("#{component_directory}/#{field}.md")
+
+      # Check if the file is simply a place holder and just whitespace (blank)
+      if /\A[[:space:]]*\z/.match(markdown).nil?
         puts "Converting #{field}.md to html"
-        doc = Kramdown::Document.new(File.read("#{component_directory}/#{field}.md"))
+        markdown = File.read("#{component_directory}/#{field}.md")
+
+        # Kramdown can't handle non-ascii characters so we check and "fix" if
+        # we can. to_ascii comes from the stringex gem above
+        unless markdown.force_encoding('UTF-8').ascii_only?
+          puts "WARNING: Non ascii characters detected attempting to replace them"
+          markdown = markdown.convert_to_ascii
+        end
+        doc = Kramdown::Document.new(markdown)
         metadata[field] = doc.to_html
+      else
+        puts "NOTICE: #{component_directory}/#{field}.md is blank, skipping"
       end
     end
 

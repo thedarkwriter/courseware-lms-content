@@ -10,7 +10,7 @@ As you start to write and edit your own Puppet code, you want to be sure your sy
 <br>
 For this course, you will only explore the syntax at the resource level. But understanding how this all works together will help you in the future. In the rest of this course, you will work on a scenario that helps you apply this information.
 
-<img src="/static/images/courses/syntax/363-anatomy-of-a-resource-narrow-2.png" alt="Diagram of the parts of a resource" width="100%" height="100%" />
+<img src="/static/images/courses/syntax/anatomy-of-a-resource-no-title.png" alt="Diagram of the parts of a resource" width="100%" height="100%" />
 
 These are the components of a resource statement in the Puppet language. Every resource is comprised of a type, a title, and list of attributes.
 
@@ -20,7 +20,7 @@ Every resource is associated with a resource **type** that describes what kind o
 
 **What is a title?**
 
-A **title** is a string that identifies a resource to Puppet. A title doesn't have to match the name of what you're managing on the target system, but you'll often want it to. 
+A **title** is a string that identifies a resource to Puppet, and it is typically the name of the item you are managing on the target system. A title doesn't have to match the name of what you're managing on the target system, but you'll often want it to. For example, a file resource title might be **/etc/motd** or **/etc/yum.conf**, and a service resource title might be **sshd** or **mysqld**.
 
 **What are attributes?**
 
@@ -52,10 +52,11 @@ Change the `mode` attribute from `0644` to `0600`.
 <iframe src="https://magicbox.classroom.puppet.com/syntax/modifying_attributes" width="100%" height="400px" frameborder="0"></iframe>
 
 <blockquote>
-<p><strong>Pro Tip</strong>:<br><br>Often you and your peers will want to agree on things like using spaces or tabs in your code, number of indents to use, or whether or not you like the trailing comma. Puppet will interpret your code the same regardless of spaces, tabs, or indents. But to have some consistency to how code is written, you might want to use what is referred to as a <strong>style guide</strong>. Puppet's <a href="https://puppet.com/docs/puppet/latest/style_guide.html" target="_blank">style guide</a> helps Puppet community members write code to be easily shared and read by other community members.</p>
-<p>The <a href="http://puppet-lint.com/">Puppet lint</a> tool is a useful utility for checking your code for compliance with the Puppet style guide. If all of the team members follow the same coding style, it's much easier to read and debug each other's code when necessary.</p>
-<p>There is also a command you can run to check a file containing Puppet code and tell you if the syntax is correct or not. This command is <code>puppet parser validate</code> followed by the name of the file that you want to check. For example, if you have a file called <code>default.pp</code> containing Puppet code that you want to check, you'd type <code>puppet parser validate default.pp</code> on the command line.</p>
-<p>The best place to learn how to correctly write your Puppet code is in the <a href="https://puppet.com/docs/puppet/latest/lang_visual_index.html" target="_blank">Puppet Docs</a>. Be sure&nbsp;to&nbsp;also&nbsp;bookmark the <a href="https://validate.puppet.com/" target="_blank">Puppet Validator</a>&nbsp;where you can paste Puppet code and test its validity.</p>
+<p><strong>Pro Tip</strong>:<br><br>Puppet source code is stored in <strong>manifest</strong> files. These are text files with the file extension "<strong>.pp</strong>". You can find more details about manifest files <a href="https://puppet.com/docs/puppet/latest/lang_summary.html#files">in the official Puppet docs</a>.</p>
+<p>Often you and your peers will want to agree on things like using spaces or tabs in the code stored in your manifest files, number of indents to use, or whether or not you like the trailing comma. Puppet will interpret your code the same regardless of spaces, tabs, or indents. But to have some consistency to how code is written, you might want to use what is referred to as a <strong>style guide</strong>. Puppet's <a href="https://puppet.com/docs/puppet/latest/style_guide.html">style guide</a> helps Puppet community members write code to be easily shared and read by other community members.</p>
+<p>The <a href="http://puppet-lint.com/">Puppet lint tool</a> is a useful utility for checking your code for compliance with the Puppet style guide. If all of the team members follow the same coding style, it's much easier to read and debug each other's code when necessary.</p>
+<p>There is also a command you can run to check a manifest file containing Puppet code and tell you if the syntax is correct or not. This command is <code>puppet parser validate</code> followed by the name of the manifest file that you want to check. For example, if you have a manifest file named <code>default.pp</code> containing Puppet code that you want to check, you'd type <code>puppet parser validate default.pp</code> on the command line.</p>
+<p>The best place to learn how to correctly write your Puppet code is in the <a href="https://puppet.com/docs/puppet/latest/lang_visual_index.html">Puppet documentation</a>. Be sure to also bookmark the <a href="https://validate.puppet.com/">Puppet Validator</a> where you can paste Puppet code and test its validity.</p>
 </blockquote>
 
 ## Task:
